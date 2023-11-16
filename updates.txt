@@ -1,0 +1,81 @@
+в 0.1: 
+	MainActivity: 1033:	invoke-virtual {v1, v2, v3, v4, v5}, Lme/test/calculator/Calculator;->division(DD)D
+						invoke-virtual {v1, v2, v3, v4, v5}, Lme/test/calculator/Calculator;->multiplication(DD)D
+
+в 0.2:
+	MainActivity: 1099: invoke-virtual {v1, v2, v3, v4, v5}, Lme/test/calculator/Calculator;->addition(DD)D
+						invoke-virtual {v1, v2, v3, v4, v5}, Lme/test/calculator/Calculator;->subtraction(DD)D
+	
+	Calculator: 25:		sub-double v0, p1, p3
+						add-double v0, p1, p3
+
+в 0.3:
+	Calculator: 63:
+					.registers 7
+					.param p1, "num1"    # D
+					.param p3, "num2"    # D
+
+					.line 30
+					const-wide/high16 v0, 0x4000000000000000L    # 2.0
+
+					invoke-static {p1, p2, v0, v1}, Ljava/lang/Math;->pow(DD)D
+
+					move-result-wide v0
+
+					return-wide v0
+					||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+					
+					.registers 5
+
+					invoke-static {p1, p2, p3, p4}, Ljava/lang/Math;->pow(DD)D
+
+					move-result-wide p1
+
+					return-wide p1
+
+в 0.4:
+	Calculator: 47:
+					div-double v0, p1, p3
+					||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+					const-wide/high16 v0, 0x4059000000000000L
+	
+					div-double v0, p1, v0
+					
+					mul-double v0, v0, p3
+
+в 0.5:
+	MainActivity: 388:
+					ADD invoke-virtual {p0}, Lme/test/calculator/MainActivity;->clearAll()V
+					
+					
+				
+				
+в final:
+	MainActivity line 211:
+					   move-result-object v0
+						
+
+						const-string v6, "."
+						invoke-virtual {v0, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+						move-result v7
+						
+						if-eqz v7, :notEql
+						const-string v0, "0.0"
+
+						:notEql
+						invoke-static {v0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
+						move-result-wide v0
+						goto :endComparison
+						
+	MainActivity line 212:
+						const-string v6, "."
+						invoke-virtual {v0, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+						move-result v7
+						
+						if-eqz v7, :notEql1
+						const-string v0, "0.0"
+
+						:notEql1
+						invoke-static {v0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
+						move-result-wide v0
+						goto :endComparison1

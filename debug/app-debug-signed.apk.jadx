@@ -1,0 +1,73 @@
+{
+  "projectVersion": 1,
+  "files": [
+    "app-debug-signed.apk"
+  ],
+  "treeExpansions": [
+    [
+      "Код",
+      "app-debug-signed.apk"
+    ],
+    [
+      "me.test.calculator.R",
+      "me.test.calculator",
+      "Код",
+      "app-debug-signed.apk"
+    ],
+    [
+      "android",
+      "Код",
+      "app-debug-signed.apk"
+    ]
+  ],
+  "codeData": {
+    "comments": [],
+    "renames": []
+  },
+  "openTabs": [
+    {
+      "type": "class",
+      "tabPath": "me.test.calculator.Calculator",
+      "subPath": "java",
+      "caret": 767,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "me.test.calculator.MainActivity",
+      "subPath": "java",
+      "caret": 9889,
+      "view": {
+        "x": 0,
+        "y": 4824
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "me.test.calculator.BuildConfig",
+      "subPath": "java",
+      "caret": 164,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "me.test.calculator.R",
+      "subPath": "java",
+      "caret": 156468,
+      "view": {
+        "x": 0,
+        "y": 45954
+      }
+    }
+  ],
+  "activeTab": 0,
+  "cacheDir": "app-debug-signed.apk.cache",
+  "enableLiveReload": false,
+  "searchHistory": []
+}

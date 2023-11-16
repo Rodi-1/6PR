@@ -1,0 +1,29 @@
+{
+  "projectVersion": 1,
+  "files": [
+    "app-release-signed.apk"
+  ],
+  "treeExpansions": [],
+  "codeData": {
+    "comments": [],
+    "renames": []
+  },
+  "openTabs": [
+    {
+      "type": "class",
+      "tabPath": "me.test.calculator.MainActivity",
+      "subPath": "java",
+      "caret": 4286,
+      "view": {
+        "x": 0,
+        "y": 3088
+      }
+    }
+  ],
+  "activeTab": 0,
+  "cacheDir": "app-release-signed.apk.cache",
+  "enableLiveReload": false,
+  "searchHistory": [
+    "\u003d 0.0d;"
+  ]
+}

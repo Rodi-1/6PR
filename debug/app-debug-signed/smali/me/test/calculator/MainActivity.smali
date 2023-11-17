@@ -586,7 +586,7 @@
 .end method
 
 .method public onEqualsClick(Landroid/view/View;)V
-    .locals 10
+    .locals 8
     .param p1, "view"    # Landroid/view/View;
 
     .line 208
@@ -657,21 +657,17 @@
     move-result-object v0
 	
 
-	const-string v6, "."
-	invoke-virtual {v0, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-	move-result v7
+	const-string v5, "."
+	invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	move-result v5
 	
-	if-eqz v7, :notEql
+	if-eqz v5, :notEql
 	const-string v0, "0.0"
 
 	:notEql
     invoke-static {v0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
     move-result-wide v0
-	goto :endComparison
 	
-	
-	
-	:endComparison
     iput-wide v0, p0, Lme/test/calculator/MainActivity;->number_one:D
 
     .line 212
@@ -685,22 +681,17 @@
 
     move-result-object v0
 	
-	const-string v6, "."
-	invoke-virtual {v0, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-	move-result v7
+	const-string v5, "."
+	invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+	move-result v5
 	
-	if-eqz v7, :notEql1
+	if-eqz v5, :notEql1
 	const-string v0, "0.0"
 
 	:notEql1
     invoke-static {v0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
     move-result-wide v0
-	goto :endComparison1
 	
-	
-	
-	:endComparison1
-
     iput-wide v0, p0, Lme/test/calculator/MainActivity;->number_two:D
 
     .line 215

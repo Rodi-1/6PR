@@ -1,12 +1,10 @@
-package p013l;
+package l;
 
 import android.os.Build;
 
-/* renamed from: l.a */
 /* loaded from: classes.dex */
-public class C0425a {
-    /* renamed from: a */
-    public static boolean m609a() {
+public class a {
+    public static boolean a() {
         return Build.VERSION.CODENAME.equals("P");
     }
 }

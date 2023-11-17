@@ -1,59 +1,57 @@
-package android.support.p001v4.app;
+package android.support.v4.app;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
 /* JADX INFO: Access modifiers changed from: package-private */
-/* renamed from: android.support.v4.app.o */
 /* loaded from: classes.dex */
-public final class C0105o implements Parcelable {
-    public static final Parcelable.Creator<C0105o> CREATOR = new C0106a();
+public final class o implements Parcelable {
+    public static final Parcelable.Creator<o> CREATOR = new a();
 
-    /* renamed from: b */
-    C0107p[] f538b;
+    /* renamed from: b  reason: collision with root package name */
+    p[] f394b;
 
-    /* renamed from: c */
-    int[] f539c;
+    /* renamed from: c  reason: collision with root package name */
+    int[] f395c;
 
-    /* renamed from: d */
-    C0069d[] f540d;
+    /* renamed from: d  reason: collision with root package name */
+    d[] f396d;
 
-    /* renamed from: e */
-    int f541e;
+    /* renamed from: e  reason: collision with root package name */
+    int f397e;
 
-    /* renamed from: f */
-    int f542f;
+    /* renamed from: f  reason: collision with root package name */
+    int f398f;
 
-    /* renamed from: android.support.v4.app.o$a */
     /* loaded from: classes.dex */
-    static class C0106a implements Parcelable.Creator<C0105o> {
-        C0106a() {
+    static class a implements Parcelable.Creator<o> {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator
         /* renamed from: a */
-        public C0105o createFromParcel(Parcel parcel) {
-            return new C0105o(parcel);
+        public o createFromParcel(Parcel parcel) {
+            return new o(parcel);
         }
 
         @Override // android.os.Parcelable.Creator
         /* renamed from: b */
-        public C0105o[] newArray(int i) {
-            return new C0105o[i];
+        public o[] newArray(int i2) {
+            return new o[i2];
         }
     }
 
-    public C0105o() {
-        this.f541e = -1;
+    public o() {
+        this.f397e = -1;
     }
 
-    public C0105o(Parcel parcel) {
-        this.f541e = -1;
-        this.f538b = (C0107p[]) parcel.createTypedArray(C0107p.CREATOR);
-        this.f539c = parcel.createIntArray();
-        this.f540d = (C0069d[]) parcel.createTypedArray(C0069d.CREATOR);
-        this.f541e = parcel.readInt();
-        this.f542f = parcel.readInt();
+    public o(Parcel parcel) {
+        this.f397e = -1;
+        this.f394b = (p[]) parcel.createTypedArray(p.CREATOR);
+        this.f395c = parcel.createIntArray();
+        this.f396d = (d[]) parcel.createTypedArray(d.CREATOR);
+        this.f397e = parcel.readInt();
+        this.f398f = parcel.readInt();
     }
 
     @Override // android.os.Parcelable
@@ -62,11 +60,11 @@ public final class C0105o implements Parcelable {
     }
 
     @Override // android.os.Parcelable
-    public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeTypedArray(this.f538b, i);
-        parcel.writeIntArray(this.f539c);
-        parcel.writeTypedArray(this.f540d, i);
-        parcel.writeInt(this.f541e);
-        parcel.writeInt(this.f542f);
+    public void writeToParcel(Parcel parcel, int i2) {
+        parcel.writeTypedArray(this.f394b, i2);
+        parcel.writeIntArray(this.f395c);
+        parcel.writeTypedArray(this.f396d, i2);
+        parcel.writeInt(this.f397e);
+        parcel.writeInt(this.f398f);
     }
 }

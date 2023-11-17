@@ -1,19 +1,15 @@
-package p012k;
+package k;
 
 import android.content.res.ColorStateList;
 import android.graphics.PorterDuff;
 import android.view.MenuItem;
 import android.view.View;
-import p016o.AbstractC0471c;
 
-/* renamed from: k.b */
 /* loaded from: classes.dex */
-public interface InterfaceMenuItemC0423b extends MenuItem {
-    /* renamed from: a */
-    InterfaceMenuItemC0423b mo30a(AbstractC0471c abstractC0471c);
+public interface b extends MenuItem {
+    b a(o.c cVar);
 
-    /* renamed from: b */
-    AbstractC0471c mo29b();
+    o.c b();
 
     @Override // android.view.MenuItem
     boolean collapseActionView();
@@ -46,16 +42,16 @@ public interface InterfaceMenuItemC0423b extends MenuItem {
     boolean isActionViewExpanded();
 
     @Override // android.view.MenuItem
-    MenuItem setActionView(int i);
+    MenuItem setActionView(int i2);
 
     @Override // android.view.MenuItem
     MenuItem setActionView(View view);
 
     @Override // android.view.MenuItem
-    MenuItem setAlphabeticShortcut(char c, int i);
+    MenuItem setAlphabeticShortcut(char c2, int i2);
 
     @Override // android.view.MenuItem
-    InterfaceMenuItemC0423b setContentDescription(CharSequence charSequence);
+    b setContentDescription(CharSequence charSequence);
 
     @Override // android.view.MenuItem
     MenuItem setIconTintList(ColorStateList colorStateList);
@@ -64,17 +60,17 @@ public interface InterfaceMenuItemC0423b extends MenuItem {
     MenuItem setIconTintMode(PorterDuff.Mode mode);
 
     @Override // android.view.MenuItem
-    MenuItem setNumericShortcut(char c, int i);
+    MenuItem setNumericShortcut(char c2, int i2);
 
     @Override // android.view.MenuItem
-    MenuItem setShortcut(char c, char c2, int i, int i2);
+    MenuItem setShortcut(char c2, char c3, int i2, int i3);
 
     @Override // android.view.MenuItem
-    void setShowAsAction(int i);
+    void setShowAsAction(int i2);
 
     @Override // android.view.MenuItem
-    MenuItem setShowAsActionFlags(int i);
+    MenuItem setShowAsActionFlags(int i2);
 
     @Override // android.view.MenuItem
-    InterfaceMenuItemC0423b setTooltipText(CharSequence charSequence);
+    b setTooltipText(CharSequence charSequence);
 }

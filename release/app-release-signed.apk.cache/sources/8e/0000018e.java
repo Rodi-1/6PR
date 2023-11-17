@@ -1,167 +1,163 @@
-package p007f;
+package f;
 
+import f.f;
 import java.util.ArrayList;
-import p007f.C0370f;
 
-/* renamed from: f.d */
 /* loaded from: classes.dex */
-public class C0364d {
+public class d {
 
-    /* renamed from: a */
-    protected C0370f f1822a;
+    /* renamed from: a  reason: collision with root package name */
+    protected f f1393a;
 
-    /* renamed from: b */
-    protected C0370f f1823b;
+    /* renamed from: b  reason: collision with root package name */
+    protected f f1394b;
 
-    /* renamed from: c */
-    protected C0370f f1824c;
+    /* renamed from: c  reason: collision with root package name */
+    protected f f1395c;
 
-    /* renamed from: d */
-    protected C0370f f1825d;
+    /* renamed from: d  reason: collision with root package name */
+    protected f f1396d;
 
-    /* renamed from: e */
-    protected C0370f f1826e;
+    /* renamed from: e  reason: collision with root package name */
+    protected f f1397e;
 
-    /* renamed from: f */
-    protected C0370f f1827f;
+    /* renamed from: f  reason: collision with root package name */
+    protected f f1398f;
 
-    /* renamed from: g */
-    protected C0370f f1828g;
+    /* renamed from: g  reason: collision with root package name */
+    protected f f1399g;
 
-    /* renamed from: h */
-    protected ArrayList<C0370f> f1829h;
+    /* renamed from: h  reason: collision with root package name */
+    protected ArrayList<f> f1400h;
 
-    /* renamed from: i */
-    protected int f1830i;
+    /* renamed from: i  reason: collision with root package name */
+    protected int f1401i;
 
-    /* renamed from: j */
-    protected int f1831j;
+    /* renamed from: j  reason: collision with root package name */
+    protected int f1402j;
 
-    /* renamed from: k */
-    protected float f1832k = 0.0f;
+    /* renamed from: k  reason: collision with root package name */
+    protected float f1403k = 0.0f;
 
-    /* renamed from: l */
-    private int f1833l;
+    /* renamed from: l  reason: collision with root package name */
+    private int f1404l;
 
-    /* renamed from: m */
-    private boolean f1834m;
+    /* renamed from: m  reason: collision with root package name */
+    private boolean f1405m;
 
-    /* renamed from: n */
-    protected boolean f1835n;
+    /* renamed from: n  reason: collision with root package name */
+    protected boolean f1406n;
 
-    /* renamed from: o */
-    protected boolean f1836o;
+    /* renamed from: o  reason: collision with root package name */
+    protected boolean f1407o;
 
-    /* renamed from: p */
-    protected boolean f1837p;
+    /* renamed from: p  reason: collision with root package name */
+    protected boolean f1408p;
 
-    /* renamed from: q */
-    private boolean f1838q;
+    /* renamed from: q  reason: collision with root package name */
+    private boolean f1409q;
 
-    public C0364d(C0370f c0370f, int i, boolean z) {
-        this.f1822a = c0370f;
-        this.f1833l = i;
-        this.f1834m = z;
+    public d(f fVar, int i2, boolean z) {
+        this.f1393a = fVar;
+        this.f1404l = i2;
+        this.f1405m = z;
     }
 
-    /* renamed from: b */
-    private void m903b() {
-        int i = this.f1833l * 2;
-        C0370f c0370f = this.f1822a;
+    private void b() {
+        int i2 = this.f1404l * 2;
+        f fVar = this.f1393a;
         boolean z = false;
-        C0370f c0370f2 = c0370f;
+        f fVar2 = fVar;
         boolean z2 = false;
         while (!z2) {
-            this.f1830i++;
-            C0370f[] c0370fArr = c0370f.f1929r0;
-            int i2 = this.f1833l;
-            C0370f c0370f3 = null;
-            c0370fArr[i2] = null;
-            c0370f.f1927q0[i2] = null;
-            if (c0370f.m883C() != 8) {
-                if (this.f1823b == null) {
-                    this.f1823b = c0370f;
+            this.f1401i++;
+            f[] fVarArr = fVar.r0;
+            int i3 = this.f1404l;
+            f fVar3 = null;
+            fVarArr[i3] = null;
+            fVar.q0[i3] = null;
+            if (fVar.C() != 8) {
+                if (this.f1394b == null) {
+                    this.f1394b = fVar;
                 }
-                this.f1825d = c0370f;
-                C0370f.EnumC0372b[] enumC0372bArr = c0370f.f1872E;
-                int i3 = this.f1833l;
-                if (enumC0372bArr[i3] == C0370f.EnumC0372b.MATCH_CONSTRAINT) {
-                    int[] iArr = c0370f.f1906g;
-                    if (iArr[i3] == 0 || iArr[i3] == 3 || iArr[i3] == 2) {
-                        this.f1831j++;
-                        float[] fArr = c0370f.f1925p0;
-                        float f = fArr[i3];
-                        if (f > 0.0f) {
-                            this.f1832k += fArr[i3];
+                this.f1396d = fVar;
+                f.b[] bVarArr = fVar.E;
+                int i4 = this.f1404l;
+                if (bVarArr[i4] == f.b.MATCH_CONSTRAINT) {
+                    int[] iArr = fVar.f1444g;
+                    if (iArr[i4] == 0 || iArr[i4] == 3 || iArr[i4] == 2) {
+                        this.f1402j++;
+                        float[] fArr = fVar.p0;
+                        float f2 = fArr[i4];
+                        if (f2 > 0.0f) {
+                            this.f1403k += fArr[i4];
                         }
-                        if (m902c(c0370f, i3)) {
-                            if (f < 0.0f) {
-                                this.f1835n = true;
+                        if (c(fVar, i4)) {
+                            if (f2 < 0.0f) {
+                                this.f1406n = true;
                             } else {
-                                this.f1836o = true;
+                                this.f1407o = true;
                             }
-                            if (this.f1829h == null) {
-                                this.f1829h = new ArrayList<>();
+                            if (this.f1400h == null) {
+                                this.f1400h = new ArrayList<>();
                             }
-                            this.f1829h.add(c0370f);
+                            this.f1400h.add(fVar);
                         }
-                        if (this.f1827f == null) {
-                            this.f1827f = c0370f;
+                        if (this.f1398f == null) {
+                            this.f1398f = fVar;
                         }
-                        C0370f c0370f4 = this.f1828g;
-                        if (c0370f4 != null) {
-                            c0370f4.f1927q0[this.f1833l] = c0370f;
+                        f fVar4 = this.f1399g;
+                        if (fVar4 != null) {
+                            fVar4.q0[this.f1404l] = fVar;
                         }
-                        this.f1828g = c0370f;
+                        this.f1399g = fVar;
                     }
                 }
             }
-            if (c0370f2 != c0370f) {
-                c0370f2.f1929r0[this.f1833l] = c0370f;
+            if (fVar2 != fVar) {
+                fVar2.r0[this.f1404l] = fVar;
             }
-            C0365e c0365e = c0370f.f1870C[i + 1].f1842d;
-            if (c0365e != null) {
-                C0370f c0370f5 = c0365e.f1840b;
-                C0365e[] c0365eArr = c0370f5.f1870C;
-                if (c0365eArr[i].f1842d != null && c0365eArr[i].f1842d.f1840b == c0370f) {
-                    c0370f3 = c0370f5;
+            e eVar = fVar.C[i2 + 1].f1413d;
+            if (eVar != null) {
+                f fVar5 = eVar.f1411b;
+                e[] eVarArr = fVar5.C;
+                if (eVarArr[i2].f1413d != null && eVarArr[i2].f1413d.f1411b == fVar) {
+                    fVar3 = fVar5;
                 }
             }
-            if (c0370f3 == null) {
-                c0370f3 = c0370f;
+            if (fVar3 == null) {
+                fVar3 = fVar;
                 z2 = true;
             }
-            c0370f2 = c0370f;
-            c0370f = c0370f3;
+            fVar2 = fVar;
+            fVar = fVar3;
         }
-        this.f1824c = c0370f;
-        if (this.f1833l == 0 && this.f1834m) {
-            this.f1826e = c0370f;
+        this.f1395c = fVar;
+        if (this.f1404l == 0 && this.f1405m) {
+            this.f1397e = fVar;
         } else {
-            this.f1826e = this.f1822a;
+            this.f1397e = this.f1393a;
         }
-        if (this.f1836o && this.f1835n) {
+        if (this.f1407o && this.f1406n) {
             z = true;
         }
-        this.f1837p = z;
+        this.f1408p = z;
     }
 
-    /* renamed from: c */
-    private static boolean m902c(C0370f c0370f, int i) {
-        if (c0370f.m883C() != 8 && c0370f.f1872E[i] == C0370f.EnumC0372b.MATCH_CONSTRAINT) {
-            int[] iArr = c0370f.f1906g;
-            if (iArr[i] == 0 || iArr[i] == 3) {
+    private static boolean c(f fVar, int i2) {
+        if (fVar.C() != 8 && fVar.E[i2] == f.b.MATCH_CONSTRAINT) {
+            int[] iArr = fVar.f1444g;
+            if (iArr[i2] == 0 || iArr[i2] == 3) {
                 return true;
             }
         }
         return false;
     }
 
-    /* renamed from: a */
-    public void m904a() {
-        if (!this.f1838q) {
-            m903b();
+    public void a() {
+        if (!this.f1409q) {
+            b();
         }
-        this.f1838q = true;
+        this.f1409q = true;
     }
 }

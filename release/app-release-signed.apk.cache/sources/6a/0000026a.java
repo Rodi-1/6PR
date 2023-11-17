@@ -1,4 +1,4 @@
-package p022u;
+package u;
 
 import android.content.res.ColorStateList;
 import android.graphics.Canvas;
@@ -7,31 +7,27 @@ import android.graphics.PorterDuff;
 import android.graphics.Rect;
 import android.graphics.Region;
 import android.graphics.drawable.Drawable;
-import p011j.C0413a;
 
-/* renamed from: u.a */
 /* loaded from: classes.dex */
-public class C0583a extends Drawable implements Drawable.Callback {
+public class a extends Drawable implements Drawable.Callback {
 
-    /* renamed from: b */
-    private Drawable f2635b;
+    /* renamed from: b  reason: collision with root package name */
+    private Drawable f1892b;
 
-    public C0583a(Drawable drawable) {
-        m90b(drawable);
+    public a(Drawable drawable) {
+        b(drawable);
     }
 
-    /* renamed from: a */
-    public Drawable m91a() {
-        return this.f2635b;
+    public Drawable a() {
+        return this.f1892b;
     }
 
-    /* renamed from: b */
-    public void m90b(Drawable drawable) {
-        Drawable drawable2 = this.f2635b;
+    public void b(Drawable drawable) {
+        Drawable drawable2 = this.f1892b;
         if (drawable2 != null) {
             drawable2.setCallback(null);
         }
-        this.f2635b = drawable;
+        this.f1892b = drawable;
         if (drawable != null) {
             drawable.setCallback(this);
         }
@@ -39,57 +35,57 @@ public class C0583a extends Drawable implements Drawable.Callback {
 
     @Override // android.graphics.drawable.Drawable
     public void draw(Canvas canvas) {
-        this.f2635b.draw(canvas);
+        this.f1892b.draw(canvas);
     }
 
     @Override // android.graphics.drawable.Drawable
     public int getChangingConfigurations() {
-        return this.f2635b.getChangingConfigurations();
+        return this.f1892b.getChangingConfigurations();
     }
 
     @Override // android.graphics.drawable.Drawable
     public Drawable getCurrent() {
-        return this.f2635b.getCurrent();
+        return this.f1892b.getCurrent();
     }
 
     @Override // android.graphics.drawable.Drawable
     public int getIntrinsicHeight() {
-        return this.f2635b.getIntrinsicHeight();
+        return this.f1892b.getIntrinsicHeight();
     }
 
     @Override // android.graphics.drawable.Drawable
     public int getIntrinsicWidth() {
-        return this.f2635b.getIntrinsicWidth();
+        return this.f1892b.getIntrinsicWidth();
     }
 
     @Override // android.graphics.drawable.Drawable
     public int getMinimumHeight() {
-        return this.f2635b.getMinimumHeight();
+        return this.f1892b.getMinimumHeight();
     }
 
     @Override // android.graphics.drawable.Drawable
     public int getMinimumWidth() {
-        return this.f2635b.getMinimumWidth();
+        return this.f1892b.getMinimumWidth();
     }
 
     @Override // android.graphics.drawable.Drawable
     public int getOpacity() {
-        return this.f2635b.getOpacity();
+        return this.f1892b.getOpacity();
     }
 
     @Override // android.graphics.drawable.Drawable
     public boolean getPadding(Rect rect) {
-        return this.f2635b.getPadding(rect);
+        return this.f1892b.getPadding(rect);
     }
 
     @Override // android.graphics.drawable.Drawable
     public int[] getState() {
-        return this.f2635b.getState();
+        return this.f1892b.getState();
     }
 
     @Override // android.graphics.drawable.Drawable
     public Region getTransparentRegion() {
-        return this.f2635b.getTransparentRegion();
+        return this.f1892b.getTransparentRegion();
     }
 
     @Override // android.graphics.drawable.Drawable.Callback
@@ -99,97 +95,97 @@ public class C0583a extends Drawable implements Drawable.Callback {
 
     @Override // android.graphics.drawable.Drawable
     public boolean isAutoMirrored() {
-        return C0413a.m627g(this.f2635b);
+        return j.a.g(this.f1892b);
     }
 
     @Override // android.graphics.drawable.Drawable
     public boolean isStateful() {
-        return this.f2635b.isStateful();
+        return this.f1892b.isStateful();
     }
 
     @Override // android.graphics.drawable.Drawable
     public void jumpToCurrentState() {
-        C0413a.m626h(this.f2635b);
+        j.a.h(this.f1892b);
     }
 
     @Override // android.graphics.drawable.Drawable
     protected void onBoundsChange(Rect rect) {
-        this.f2635b.setBounds(rect);
+        this.f1892b.setBounds(rect);
     }
 
     @Override // android.graphics.drawable.Drawable
-    protected boolean onLevelChange(int i) {
-        return this.f2635b.setLevel(i);
+    protected boolean onLevelChange(int i2) {
+        return this.f1892b.setLevel(i2);
     }
 
     @Override // android.graphics.drawable.Drawable.Callback
-    public void scheduleDrawable(Drawable drawable, Runnable runnable, long j) {
-        scheduleSelf(runnable, j);
+    public void scheduleDrawable(Drawable drawable, Runnable runnable, long j2) {
+        scheduleSelf(runnable, j2);
     }
 
     @Override // android.graphics.drawable.Drawable
-    public void setAlpha(int i) {
-        this.f2635b.setAlpha(i);
+    public void setAlpha(int i2) {
+        this.f1892b.setAlpha(i2);
     }
 
     @Override // android.graphics.drawable.Drawable
     public void setAutoMirrored(boolean z) {
-        C0413a.m625i(this.f2635b, z);
+        j.a.i(this.f1892b, z);
     }
 
     @Override // android.graphics.drawable.Drawable
-    public void setChangingConfigurations(int i) {
-        this.f2635b.setChangingConfigurations(i);
+    public void setChangingConfigurations(int i2) {
+        this.f1892b.setChangingConfigurations(i2);
     }
 
     @Override // android.graphics.drawable.Drawable
     public void setColorFilter(ColorFilter colorFilter) {
-        this.f2635b.setColorFilter(colorFilter);
+        this.f1892b.setColorFilter(colorFilter);
     }
 
     @Override // android.graphics.drawable.Drawable
     public void setDither(boolean z) {
-        this.f2635b.setDither(z);
+        this.f1892b.setDither(z);
     }
 
     @Override // android.graphics.drawable.Drawable
     public void setFilterBitmap(boolean z) {
-        this.f2635b.setFilterBitmap(z);
+        this.f1892b.setFilterBitmap(z);
     }
 
     @Override // android.graphics.drawable.Drawable
-    public void setHotspot(float f, float f2) {
-        C0413a.m624j(this.f2635b, f, f2);
+    public void setHotspot(float f2, float f3) {
+        j.a.j(this.f1892b, f2, f3);
     }
 
     @Override // android.graphics.drawable.Drawable
-    public void setHotspotBounds(int i, int i2, int i3, int i4) {
-        C0413a.m623k(this.f2635b, i, i2, i3, i4);
+    public void setHotspotBounds(int i2, int i3, int i4, int i5) {
+        j.a.k(this.f1892b, i2, i3, i4, i5);
     }
 
     @Override // android.graphics.drawable.Drawable
     public boolean setState(int[] iArr) {
-        return this.f2635b.setState(iArr);
+        return this.f1892b.setState(iArr);
     }
 
     @Override // android.graphics.drawable.Drawable
-    public void setTint(int i) {
-        C0413a.m621m(this.f2635b, i);
+    public void setTint(int i2) {
+        j.a.m(this.f1892b, i2);
     }
 
     @Override // android.graphics.drawable.Drawable
     public void setTintList(ColorStateList colorStateList) {
-        C0413a.m620n(this.f2635b, colorStateList);
+        j.a.n(this.f1892b, colorStateList);
     }
 
     @Override // android.graphics.drawable.Drawable
     public void setTintMode(PorterDuff.Mode mode) {
-        C0413a.m619o(this.f2635b, mode);
+        j.a.o(this.f1892b, mode);
     }
 
     @Override // android.graphics.drawable.Drawable
     public boolean setVisible(boolean z, boolean z2) {
-        return super.setVisible(z, z2) || this.f2635b.setVisible(z, z2);
+        return super.setVisible(z, z2) || this.f1892b.setVisible(z, z2);
     }
 
     @Override // android.graphics.drawable.Drawable.Callback

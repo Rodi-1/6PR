@@ -1,113 +1,107 @@
-package p007f;
+package f;
 
+import f.e;
 import java.util.ArrayList;
-import p007f.C0365e;
 
-/* renamed from: f.p */
 /* loaded from: classes.dex */
-public class C0383p {
+public class p {
 
-    /* renamed from: a */
-    private int f2009a;
+    /* renamed from: a  reason: collision with root package name */
+    private int f1497a;
 
-    /* renamed from: b */
-    private int f2010b;
+    /* renamed from: b  reason: collision with root package name */
+    private int f1498b;
 
-    /* renamed from: c */
-    private int f2011c;
+    /* renamed from: c  reason: collision with root package name */
+    private int f1499c;
 
-    /* renamed from: d */
-    private int f2012d;
+    /* renamed from: d  reason: collision with root package name */
+    private int f1500d;
 
-    /* renamed from: e */
-    private ArrayList<C0384a> f2013e = new ArrayList<>();
+    /* renamed from: e  reason: collision with root package name */
+    private ArrayList<a> f1501e = new ArrayList<>();
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: f.p$a */
     /* loaded from: classes.dex */
-    public static class C0384a {
+    public static class a {
 
-        /* renamed from: a */
-        private C0365e f2014a;
+        /* renamed from: a  reason: collision with root package name */
+        private e f1502a;
 
-        /* renamed from: b */
-        private C0365e f2015b;
+        /* renamed from: b  reason: collision with root package name */
+        private e f1503b;
 
-        /* renamed from: c */
-        private int f2016c;
+        /* renamed from: c  reason: collision with root package name */
+        private int f1504c;
 
-        /* renamed from: d */
-        private C0365e.EnumC0368c f2017d;
+        /* renamed from: d  reason: collision with root package name */
+        private e.c f1505d;
 
-        /* renamed from: e */
-        private int f2018e;
+        /* renamed from: e  reason: collision with root package name */
+        private int f1506e;
 
-        public C0384a(C0365e c0365e) {
-            this.f2014a = c0365e;
-            this.f2015b = c0365e.m893i();
-            this.f2016c = c0365e.m898d();
-            this.f2017d = c0365e.m894h();
-            this.f2018e = c0365e.m899c();
+        public a(e eVar) {
+            this.f1502a = eVar;
+            this.f1503b = eVar.i();
+            this.f1504c = eVar.d();
+            this.f1505d = eVar.h();
+            this.f1506e = eVar.c();
         }
 
-        /* renamed from: a */
-        public void m746a(C0370f c0370f) {
-            c0370f.mo776h(this.f2014a.m892j()).m900b(this.f2015b, this.f2016c, this.f2017d, this.f2018e);
+        public void a(f fVar) {
+            fVar.h(this.f1502a.j()).b(this.f1503b, this.f1504c, this.f1505d, this.f1506e);
         }
 
-        /* renamed from: b */
-        public void m745b(C0370f c0370f) {
-            int i;
-            C0365e mo776h = c0370f.mo776h(this.f2014a.m892j());
-            this.f2014a = mo776h;
-            if (mo776h != null) {
-                this.f2015b = mo776h.m893i();
-                this.f2016c = this.f2014a.m898d();
-                this.f2017d = this.f2014a.m894h();
-                i = this.f2014a.m899c();
+        public void b(f fVar) {
+            int i2;
+            e h2 = fVar.h(this.f1502a.j());
+            this.f1502a = h2;
+            if (h2 != null) {
+                this.f1503b = h2.i();
+                this.f1504c = this.f1502a.d();
+                this.f1505d = this.f1502a.h();
+                i2 = this.f1502a.c();
             } else {
-                this.f2015b = null;
-                i = 0;
-                this.f2016c = 0;
-                this.f2017d = C0365e.EnumC0368c.STRONG;
+                this.f1503b = null;
+                i2 = 0;
+                this.f1504c = 0;
+                this.f1505d = e.c.STRONG;
             }
-            this.f2018e = i;
+            this.f1506e = i2;
         }
     }
 
-    public C0383p(C0370f c0370f) {
-        this.f2009a = c0370f.m876G();
-        this.f2010b = c0370f.m875H();
-        this.f2011c = c0370f.m881D();
-        this.f2012d = c0370f.m829r();
-        ArrayList<C0365e> mo775i = c0370f.mo775i();
-        int size = mo775i.size();
-        for (int i = 0; i < size; i++) {
-            this.f2013e.add(new C0384a(mo775i.get(i)));
+    public p(f fVar) {
+        this.f1497a = fVar.G();
+        this.f1498b = fVar.H();
+        this.f1499c = fVar.D();
+        this.f1500d = fVar.r();
+        ArrayList<e> i2 = fVar.i();
+        int size = i2.size();
+        for (int i3 = 0; i3 < size; i3++) {
+            this.f1501e.add(new a(i2.get(i3)));
         }
     }
 
-    /* renamed from: a */
-    public void m748a(C0370f c0370f) {
-        c0370f.m882C0(this.f2009a);
-        c0370f.m880D0(this.f2010b);
-        c0370f.m814y0(this.f2011c);
-        c0370f.m855b0(this.f2012d);
-        int size = this.f2013e.size();
-        for (int i = 0; i < size; i++) {
-            this.f2013e.get(i).m746a(c0370f);
+    public void a(f fVar) {
+        fVar.C0(this.f1497a);
+        fVar.D0(this.f1498b);
+        fVar.y0(this.f1499c);
+        fVar.b0(this.f1500d);
+        int size = this.f1501e.size();
+        for (int i2 = 0; i2 < size; i2++) {
+            this.f1501e.get(i2).a(fVar);
         }
     }
 
-    /* renamed from: b */
-    public void m747b(C0370f c0370f) {
-        this.f2009a = c0370f.m876G();
-        this.f2010b = c0370f.m875H();
-        this.f2011c = c0370f.m881D();
-        this.f2012d = c0370f.m829r();
-        int size = this.f2013e.size();
-        for (int i = 0; i < size; i++) {
-            this.f2013e.get(i).m745b(c0370f);
+    public void b(f fVar) {
+        this.f1497a = fVar.G();
+        this.f1498b = fVar.H();
+        this.f1499c = fVar.D();
+        this.f1500d = fVar.r();
+        int size = this.f1501e.size();
+        for (int i2 = 0; i2 < size; i2++) {
+            this.f1501e.get(i2).b(fVar);
         }
     }
 }

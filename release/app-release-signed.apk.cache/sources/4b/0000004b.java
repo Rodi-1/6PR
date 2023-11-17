@@ -1,4 +1,4 @@
-package android.support.p001v4.app;
+package android.support.v4.app;
 
 import android.app.Activity;
 import android.content.ComponentName;
@@ -9,118 +9,106 @@ import android.os.Bundle;
 import android.util.Log;
 import java.util.ArrayList;
 import java.util.Iterator;
-import p008g.C0386a;
 
-/* renamed from: android.support.v4.app.a0 */
 /* loaded from: classes.dex */
-public final class C0062a0 implements Iterable<Intent> {
+public final class a0 implements Iterable<Intent> {
 
-    /* renamed from: d */
-    private static final C0065c f342d = new C0064b();
+    /* renamed from: d  reason: collision with root package name */
+    private static final c f236d = new b();
 
-    /* renamed from: b */
-    private final ArrayList<Intent> f343b = new ArrayList<>();
+    /* renamed from: b  reason: collision with root package name */
+    private final ArrayList<Intent> f237b = new ArrayList<>();
 
-    /* renamed from: c */
-    private final Context f344c;
+    /* renamed from: c  reason: collision with root package name */
+    private final Context f238c;
 
-    /* renamed from: android.support.v4.app.a0$a */
     /* loaded from: classes.dex */
-    public interface InterfaceC0063a {
-        /* renamed from: f */
-        Intent mo286f();
+    public interface a {
+        Intent f();
     }
 
-    /* renamed from: android.support.v4.app.a0$b */
     /* loaded from: classes.dex */
-    static class C0064b extends C0065c {
-        C0064b() {
+    static class b extends c {
+        b() {
         }
     }
 
-    /* renamed from: android.support.v4.app.a0$c */
     /* loaded from: classes.dex */
-    static class C0065c {
-        C0065c() {
+    static class c {
+        c() {
         }
     }
 
-    private C0062a0(Context context) {
-        this.f344c = context;
+    private a0(Context context) {
+        this.f238c = context;
     }
 
-    /* renamed from: d */
-    public static C0062a0 m2221d(Context context) {
-        return new C0062a0(context);
+    public static a0 d(Context context) {
+        return new a0(context);
     }
 
-    /* renamed from: a */
-    public C0062a0 m2224a(Intent intent) {
-        this.f343b.add(intent);
+    public a0 a(Intent intent) {
+        this.f237b.add(intent);
         return this;
     }
 
-    /* renamed from: b */
-    public C0062a0 m2223b(Activity activity) {
-        Intent mo286f = activity instanceof InterfaceC0063a ? ((InterfaceC0063a) activity).mo286f() : null;
-        if (mo286f == null) {
-            mo286f = C0126v.m1827a(activity);
+    public a0 b(Activity activity) {
+        Intent f2 = activity instanceof a ? ((a) activity).f() : null;
+        if (f2 == null) {
+            f2 = v.a(activity);
         }
-        if (mo286f != null) {
-            ComponentName component = mo286f.getComponent();
+        if (f2 != null) {
+            ComponentName component = f2.getComponent();
             if (component == null) {
-                component = mo286f.resolveActivity(this.f344c.getPackageManager());
+                component = f2.resolveActivity(this.f238c.getPackageManager());
             }
-            m2222c(component);
-            m2224a(mo286f);
+            c(component);
+            a(f2);
         }
         return this;
     }
 
-    /* renamed from: c */
-    public C0062a0 m2222c(ComponentName componentName) {
-        int size = this.f343b.size();
+    public a0 c(ComponentName componentName) {
+        int size = this.f237b.size();
         try {
-            Context context = this.f344c;
+            Context context = this.f238c;
             while (true) {
-                Intent m1826b = C0126v.m1826b(context, componentName);
-                if (m1826b == null) {
+                Intent b2 = v.b(context, componentName);
+                if (b2 == null) {
                     return this;
                 }
-                this.f343b.add(size, m1826b);
-                context = this.f344c;
-                componentName = m1826b.getComponent();
+                this.f237b.add(size, b2);
+                context = this.f238c;
+                componentName = b2.getComponent();
             }
-        } catch (PackageManager.NameNotFoundException e) {
+        } catch (PackageManager.NameNotFoundException e2) {
             Log.e("TaskStackBuilder", "Bad ComponentName while traversing activity parent metadata");
-            throw new IllegalArgumentException(e);
+            throw new IllegalArgumentException(e2);
         }
     }
 
-    /* renamed from: e */
-    public void m2220e() {
-        m2219f(null);
+    public void e() {
+        f(null);
     }
 
-    /* renamed from: f */
-    public void m2219f(Bundle bundle) {
-        if (this.f343b.isEmpty()) {
+    public void f(Bundle bundle) {
+        if (this.f237b.isEmpty()) {
             throw new IllegalStateException("No intents added to TaskStackBuilder; cannot startActivities");
         }
-        ArrayList<Intent> arrayList = this.f343b;
+        ArrayList<Intent> arrayList = this.f237b;
         Intent[] intentArr = (Intent[]) arrayList.toArray(new Intent[arrayList.size()]);
         intentArr[0] = new Intent(intentArr[0]).addFlags(268484608);
-        if (C0386a.m733c(this.f344c, intentArr, bundle)) {
+        if (g.a.c(this.f238c, intentArr, bundle)) {
             return;
         }
         Intent intent = new Intent(intentArr[intentArr.length - 1]);
         intent.addFlags(268435456);
-        this.f344c.startActivity(intent);
+        this.f238c.startActivity(intent);
     }
 
     @Override // java.lang.Iterable
     @Deprecated
     public Iterator<Intent> iterator() {
-        return this.f343b.iterator();
+        return this.f237b.iterator();
     }
 }

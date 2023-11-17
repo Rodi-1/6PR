@@ -1,4 +1,4 @@
-package android.support.p002v7.widget;
+package android.support.v7.widget;
 
 import android.text.TextUtils;
 import android.util.Log;
@@ -6,141 +6,130 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.accessibility.AccessibilityManager;
-import p016o.C0490o;
-import p016o.C0502p;
 
-/* renamed from: android.support.v7.widget.y0 */
 /* loaded from: classes.dex */
-class View$OnLongClickListenerC0331y0 implements View.OnLongClickListener, View.OnHoverListener, View.OnAttachStateChangeListener {
+class y0 implements View.OnLongClickListener, View.OnHoverListener, View.OnAttachStateChangeListener {
 
-    /* renamed from: k */
-    private static View$OnLongClickListenerC0331y0 f1569k;
+    /* renamed from: k  reason: collision with root package name */
+    private static y0 f1257k;
 
-    /* renamed from: l */
-    private static View$OnLongClickListenerC0331y0 f1570l;
+    /* renamed from: l  reason: collision with root package name */
+    private static y0 f1258l;
 
-    /* renamed from: b */
-    private final View f1571b;
+    /* renamed from: b  reason: collision with root package name */
+    private final View f1259b;
 
-    /* renamed from: c */
-    private final CharSequence f1572c;
+    /* renamed from: c  reason: collision with root package name */
+    private final CharSequence f1260c;
 
-    /* renamed from: d */
-    private final int f1573d;
+    /* renamed from: d  reason: collision with root package name */
+    private final int f1261d;
 
-    /* renamed from: e */
-    private final Runnable f1574e = new RunnableC0332a();
+    /* renamed from: e  reason: collision with root package name */
+    private final Runnable f1262e = new a();
 
-    /* renamed from: f */
-    private final Runnable f1575f = new RunnableC0333b();
+    /* renamed from: f  reason: collision with root package name */
+    private final Runnable f1263f = new b();
 
-    /* renamed from: g */
-    private int f1576g;
+    /* renamed from: g  reason: collision with root package name */
+    private int f1264g;
 
-    /* renamed from: h */
-    private int f1577h;
+    /* renamed from: h  reason: collision with root package name */
+    private int f1265h;
 
-    /* renamed from: i */
-    private C0335z0 f1578i;
+    /* renamed from: i  reason: collision with root package name */
+    private z0 f1266i;
 
-    /* renamed from: j */
-    private boolean f1579j;
+    /* renamed from: j  reason: collision with root package name */
+    private boolean f1267j;
 
-    /* renamed from: android.support.v7.widget.y0$a */
     /* loaded from: classes.dex */
-    class RunnableC0332a implements Runnable {
-        RunnableC0332a() {
+    class a implements Runnable {
+        a() {
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            View$OnLongClickListenerC0331y0.this.m1023i(false);
+            y0.this.i(false);
         }
     }
 
-    /* renamed from: android.support.v7.widget.y0$b */
     /* loaded from: classes.dex */
-    class RunnableC0333b implements Runnable {
-        RunnableC0333b() {
+    class b implements Runnable {
+        b() {
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            View$OnLongClickListenerC0331y0.this.m1027e();
+            y0.this.e();
         }
     }
 
-    private View$OnLongClickListenerC0331y0(View view, CharSequence charSequence) {
-        this.f1571b = view;
-        this.f1572c = charSequence;
-        this.f1573d = C0502p.m361a(ViewConfiguration.get(view.getContext()));
-        m1028d();
+    private y0(View view, CharSequence charSequence) {
+        this.f1259b = view;
+        this.f1260c = charSequence;
+        this.f1261d = o.p.a(ViewConfiguration.get(view.getContext()));
+        d();
         view.setOnLongClickListener(this);
         view.setOnHoverListener(this);
     }
 
-    /* renamed from: c */
-    private void m1029c() {
-        this.f1571b.removeCallbacks(this.f1574e);
+    private void c() {
+        this.f1259b.removeCallbacks(this.f1262e);
     }
 
-    /* renamed from: d */
-    private void m1028d() {
-        this.f1576g = Integer.MAX_VALUE;
-        this.f1577h = Integer.MAX_VALUE;
+    private void d() {
+        this.f1264g = Integer.MAX_VALUE;
+        this.f1265h = Integer.MAX_VALUE;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: e */
-    public void m1027e() {
-        if (f1570l == this) {
-            f1570l = null;
-            C0335z0 c0335z0 = this.f1578i;
-            if (c0335z0 != null) {
-                c0335z0.m1017c();
-                this.f1578i = null;
-                m1028d();
-                this.f1571b.removeOnAttachStateChangeListener(this);
+    public void e() {
+        if (f1258l == this) {
+            f1258l = null;
+            z0 z0Var = this.f1266i;
+            if (z0Var != null) {
+                z0Var.c();
+                this.f1266i = null;
+                d();
+                this.f1259b.removeOnAttachStateChangeListener(this);
             } else {
                 Log.e("TooltipCompatHandler", "sActiveHandler.mPopup == null");
             }
         }
-        if (f1569k == this) {
-            m1025g(null);
+        if (f1257k == this) {
+            g(null);
         }
-        this.f1571b.removeCallbacks(this.f1575f);
+        this.f1259b.removeCallbacks(this.f1263f);
     }
 
-    /* renamed from: f */
-    private void m1026f() {
-        this.f1571b.postDelayed(this.f1574e, ViewConfiguration.getLongPressTimeout());
+    private void f() {
+        this.f1259b.postDelayed(this.f1262e, ViewConfiguration.getLongPressTimeout());
     }
 
-    /* renamed from: g */
-    private static void m1025g(View$OnLongClickListenerC0331y0 view$OnLongClickListenerC0331y0) {
-        View$OnLongClickListenerC0331y0 view$OnLongClickListenerC0331y02 = f1569k;
-        if (view$OnLongClickListenerC0331y02 != null) {
-            view$OnLongClickListenerC0331y02.m1029c();
+    private static void g(y0 y0Var) {
+        y0 y0Var2 = f1257k;
+        if (y0Var2 != null) {
+            y0Var2.c();
         }
-        f1569k = view$OnLongClickListenerC0331y0;
-        if (view$OnLongClickListenerC0331y0 != null) {
-            view$OnLongClickListenerC0331y0.m1026f();
+        f1257k = y0Var;
+        if (y0Var != null) {
+            y0Var.f();
         }
     }
 
-    /* renamed from: h */
-    public static void m1024h(View view, CharSequence charSequence) {
-        View$OnLongClickListenerC0331y0 view$OnLongClickListenerC0331y0 = f1569k;
-        if (view$OnLongClickListenerC0331y0 != null && view$OnLongClickListenerC0331y0.f1571b == view) {
-            m1025g(null);
+    public static void h(View view, CharSequence charSequence) {
+        y0 y0Var = f1257k;
+        if (y0Var != null && y0Var.f1259b == view) {
+            g(null);
         }
         if (!TextUtils.isEmpty(charSequence)) {
-            new View$OnLongClickListenerC0331y0(view, charSequence);
+            new y0(view, charSequence);
             return;
         }
-        View$OnLongClickListenerC0331y0 view$OnLongClickListenerC0331y02 = f1570l;
-        if (view$OnLongClickListenerC0331y02 != null && view$OnLongClickListenerC0331y02.f1571b == view) {
-            view$OnLongClickListenerC0331y02.m1027e();
+        y0 y0Var2 = f1258l;
+        if (y0Var2 != null && y0Var2.f1259b == view) {
+            y0Var2.e();
         }
         view.setOnLongClickListener(null);
         view.setLongClickable(false);
@@ -148,38 +137,36 @@ class View$OnLongClickListenerC0331y0 implements View.OnLongClickListener, View.
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: i */
-    public void m1023i(boolean z) {
+    public void i(boolean z) {
         long longPressTimeout;
-        if (C0490o.m402j(this.f1571b)) {
-            m1025g(null);
-            View$OnLongClickListenerC0331y0 view$OnLongClickListenerC0331y0 = f1570l;
-            if (view$OnLongClickListenerC0331y0 != null) {
-                view$OnLongClickListenerC0331y0.m1027e();
+        if (o.o.j(this.f1259b)) {
+            g(null);
+            y0 y0Var = f1258l;
+            if (y0Var != null) {
+                y0Var.e();
             }
-            f1570l = this;
-            this.f1579j = z;
-            C0335z0 c0335z0 = new C0335z0(this.f1571b.getContext());
-            this.f1578i = c0335z0;
-            c0335z0.m1015e(this.f1571b, this.f1576g, this.f1577h, this.f1579j, this.f1572c);
-            this.f1571b.addOnAttachStateChangeListener(this);
-            if (this.f1579j) {
+            f1258l = this;
+            this.f1267j = z;
+            z0 z0Var = new z0(this.f1259b.getContext());
+            this.f1266i = z0Var;
+            z0Var.e(this.f1259b, this.f1264g, this.f1265h, this.f1267j, this.f1260c);
+            this.f1259b.addOnAttachStateChangeListener(this);
+            if (this.f1267j) {
                 longPressTimeout = 2500;
             } else {
-                longPressTimeout = ((C0490o.m405g(this.f1571b) & 1) == 1 ? 3000L : 15000L) - ViewConfiguration.getLongPressTimeout();
+                longPressTimeout = ((o.o.g(this.f1259b) & 1) == 1 ? 3000L : 15000L) - ViewConfiguration.getLongPressTimeout();
             }
-            this.f1571b.removeCallbacks(this.f1575f);
-            this.f1571b.postDelayed(this.f1575f, longPressTimeout);
+            this.f1259b.removeCallbacks(this.f1263f);
+            this.f1259b.postDelayed(this.f1263f, longPressTimeout);
         }
     }
 
-    /* renamed from: j */
-    private boolean m1022j(MotionEvent motionEvent) {
+    private boolean j(MotionEvent motionEvent) {
         int x = (int) motionEvent.getX();
         int y = (int) motionEvent.getY();
-        if (Math.abs(x - this.f1576g) > this.f1573d || Math.abs(y - this.f1577h) > this.f1573d) {
-            this.f1576g = x;
-            this.f1577h = y;
+        if (Math.abs(x - this.f1264g) > this.f1261d || Math.abs(y - this.f1265h) > this.f1261d) {
+            this.f1264g = x;
+            this.f1265h = y;
             return true;
         }
         return false;
@@ -187,19 +174,19 @@ class View$OnLongClickListenerC0331y0 implements View.OnLongClickListener, View.
 
     @Override // android.view.View.OnHoverListener
     public boolean onHover(View view, MotionEvent motionEvent) {
-        if (this.f1578i == null || !this.f1579j) {
-            AccessibilityManager accessibilityManager = (AccessibilityManager) this.f1571b.getContext().getSystemService("accessibility");
+        if (this.f1266i == null || !this.f1267j) {
+            AccessibilityManager accessibilityManager = (AccessibilityManager) this.f1259b.getContext().getSystemService("accessibility");
             if (accessibilityManager.isEnabled() && accessibilityManager.isTouchExplorationEnabled()) {
                 return false;
             }
             int action = motionEvent.getAction();
             if (action != 7) {
                 if (action == 10) {
-                    m1028d();
-                    m1027e();
+                    d();
+                    e();
                 }
-            } else if (this.f1571b.isEnabled() && this.f1578i == null && m1022j(motionEvent)) {
-                m1025g(this);
+            } else if (this.f1259b.isEnabled() && this.f1266i == null && j(motionEvent)) {
+                g(this);
             }
             return false;
         }
@@ -208,9 +195,9 @@ class View$OnLongClickListenerC0331y0 implements View.OnLongClickListener, View.
 
     @Override // android.view.View.OnLongClickListener
     public boolean onLongClick(View view) {
-        this.f1576g = view.getWidth() / 2;
-        this.f1577h = view.getHeight() / 2;
-        m1023i(true);
+        this.f1264g = view.getWidth() / 2;
+        this.f1265h = view.getHeight() / 2;
+        i(true);
         return true;
     }
 
@@ -220,6 +207,6 @@ class View$OnLongClickListenerC0331y0 implements View.OnLongClickListener, View.
 
     @Override // android.view.View.OnAttachStateChangeListener
     public void onViewDetachedFromWindow(View view) {
-        m1027e();
+        e();
     }
 }

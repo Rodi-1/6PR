@@ -1,12 +1,11 @@
-package p011j;
+package j;
 
 import android.content.res.ColorStateList;
 import android.graphics.PorterDuff;
 
-/* renamed from: j.b */
 /* loaded from: classes.dex */
-public interface InterfaceC0414b {
-    void setTint(int i);
+public interface b {
+    void setTint(int i2);
 
     void setTintList(ColorStateList colorStateList);
 

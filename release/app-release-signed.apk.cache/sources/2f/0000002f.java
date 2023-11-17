@@ -5,10 +5,9 @@ import android.graphics.Canvas;
 import android.support.constraint.ConstraintLayout;
 import android.view.View;
 
-/* renamed from: android.support.constraint.d */
 /* loaded from: classes.dex */
-public class C0036d extends View {
-    public C0036d(Context context) {
+public class d extends View {
+    public d(Context context) {
         super(context);
         super.setVisibility(8);
     }
@@ -18,29 +17,29 @@ public class C0036d extends View {
     }
 
     @Override // android.view.View
-    protected void onMeasure(int i, int i2) {
+    protected void onMeasure(int i2, int i3) {
         setMeasuredDimension(0, 0);
     }
 
-    public void setGuidelineBegin(int i) {
-        ConstraintLayout.C0028a c0028a = (ConstraintLayout.C0028a) getLayoutParams();
-        c0028a.f94a = i;
-        setLayoutParams(c0028a);
+    public void setGuidelineBegin(int i2) {
+        ConstraintLayout.a aVar = (ConstraintLayout.a) getLayoutParams();
+        aVar.f68a = i2;
+        setLayoutParams(aVar);
     }
 
-    public void setGuidelineEnd(int i) {
-        ConstraintLayout.C0028a c0028a = (ConstraintLayout.C0028a) getLayoutParams();
-        c0028a.f96b = i;
-        setLayoutParams(c0028a);
+    public void setGuidelineEnd(int i2) {
+        ConstraintLayout.a aVar = (ConstraintLayout.a) getLayoutParams();
+        aVar.f69b = i2;
+        setLayoutParams(aVar);
     }
 
-    public void setGuidelinePercent(float f) {
-        ConstraintLayout.C0028a c0028a = (ConstraintLayout.C0028a) getLayoutParams();
-        c0028a.f98c = f;
-        setLayoutParams(c0028a);
+    public void setGuidelinePercent(float f2) {
+        ConstraintLayout.a aVar = (ConstraintLayout.a) getLayoutParams();
+        aVar.f70c = f2;
+        setLayoutParams(aVar);
     }
 
     @Override // android.view.View
-    public void setVisibility(int i) {
+    public void setVisibility(int i2) {
     }
 }

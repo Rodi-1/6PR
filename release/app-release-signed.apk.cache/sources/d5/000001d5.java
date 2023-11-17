@@ -1,4 +1,4 @@
-package p014m;
+package m;
 
 import android.os.Handler;
 import android.os.HandlerThread;
@@ -10,215 +10,204 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
-/* renamed from: m.c */
 /* loaded from: classes.dex */
-public class C0435c {
+public class c {
 
-    /* renamed from: b */
-    private HandlerThread f2099b;
+    /* renamed from: b  reason: collision with root package name */
+    private HandlerThread f1586b;
 
-    /* renamed from: c */
-    private Handler f2100c;
+    /* renamed from: c  reason: collision with root package name */
+    private Handler f1587c;
 
-    /* renamed from: f */
-    private final int f2103f;
+    /* renamed from: f  reason: collision with root package name */
+    private final int f1590f;
 
-    /* renamed from: g */
-    private final int f2104g;
+    /* renamed from: g  reason: collision with root package name */
+    private final int f1591g;
 
-    /* renamed from: h */
-    private final String f2105h;
+    /* renamed from: h  reason: collision with root package name */
+    private final String f1592h;
 
-    /* renamed from: a */
-    private final Object f2098a = new Object();
+    /* renamed from: a  reason: collision with root package name */
+    private final Object f1585a = new Object();
 
-    /* renamed from: e */
-    private Handler.Callback f2102e = new C0436a();
+    /* renamed from: e  reason: collision with root package name */
+    private Handler.Callback f1589e = new a();
 
-    /* renamed from: d */
-    private int f2101d = 0;
+    /* renamed from: d  reason: collision with root package name */
+    private int f1588d = 0;
 
-    /* renamed from: m.c$a */
     /* loaded from: classes.dex */
-    class C0436a implements Handler.Callback {
-        C0436a() {
+    class a implements Handler.Callback {
+        a() {
         }
 
         @Override // android.os.Handler.Callback
         public boolean handleMessage(Message message) {
-            int i = message.what;
-            if (i == 0) {
-                C0435c.this.m576c();
+            int i2 = message.what;
+            if (i2 == 0) {
+                c.this.c();
                 return true;
-            } else if (i != 1) {
+            } else if (i2 != 1) {
                 return true;
             } else {
-                C0435c.this.m575d((Runnable) message.obj);
+                c.this.d((Runnable) message.obj);
                 return true;
             }
         }
     }
 
-    /* renamed from: m.c$b */
     /* loaded from: classes.dex */
-    class RunnableC0437b implements Runnable {
+    class b implements Runnable {
 
-        /* renamed from: b */
-        final /* synthetic */ Callable f2107b;
+        /* renamed from: b  reason: collision with root package name */
+        final /* synthetic */ Callable f1594b;
 
-        /* renamed from: c */
-        final /* synthetic */ Handler f2108c;
+        /* renamed from: c  reason: collision with root package name */
+        final /* synthetic */ Handler f1595c;
 
-        /* renamed from: d */
-        final /* synthetic */ InterfaceC0440d f2109d;
+        /* renamed from: d  reason: collision with root package name */
+        final /* synthetic */ d f1596d;
 
-        /* renamed from: m.c$b$a */
         /* loaded from: classes.dex */
-        class RunnableC0438a implements Runnable {
+        class a implements Runnable {
 
-            /* renamed from: b */
-            final /* synthetic */ Object f2111b;
+            /* renamed from: b  reason: collision with root package name */
+            final /* synthetic */ Object f1598b;
 
-            RunnableC0438a(Object obj) {
-                this.f2111b = obj;
+            a(Object obj) {
+                this.f1598b = obj;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                RunnableC0437b.this.f2109d.mo571a(this.f2111b);
+                b.this.f1596d.a(this.f1598b);
             }
         }
 
-        RunnableC0437b(Callable callable, Handler handler, InterfaceC0440d interfaceC0440d) {
-            this.f2107b = callable;
-            this.f2108c = handler;
-            this.f2109d = interfaceC0440d;
+        b(Callable callable, Handler handler, d dVar) {
+            this.f1594b = callable;
+            this.f1595c = handler;
+            this.f1596d = dVar;
         }
 
         @Override // java.lang.Runnable
         public void run() {
             Object obj;
             try {
-                obj = this.f2107b.call();
+                obj = this.f1594b.call();
             } catch (Exception unused) {
                 obj = null;
             }
-            this.f2108c.post(new RunnableC0438a(obj));
+            this.f1595c.post(new a(obj));
         }
     }
 
-    /* renamed from: m.c$c */
+    /* renamed from: m.c$c  reason: collision with other inner class name */
     /* loaded from: classes.dex */
-    class RunnableC0439c implements Runnable {
+    class RunnableC0018c implements Runnable {
 
-        /* renamed from: b */
-        final /* synthetic */ AtomicReference f2113b;
+        /* renamed from: b  reason: collision with root package name */
+        final /* synthetic */ AtomicReference f1600b;
 
-        /* renamed from: c */
-        final /* synthetic */ Callable f2114c;
+        /* renamed from: c  reason: collision with root package name */
+        final /* synthetic */ Callable f1601c;
 
-        /* renamed from: d */
-        final /* synthetic */ ReentrantLock f2115d;
+        /* renamed from: d  reason: collision with root package name */
+        final /* synthetic */ ReentrantLock f1602d;
 
-        /* renamed from: e */
-        final /* synthetic */ AtomicBoolean f2116e;
+        /* renamed from: e  reason: collision with root package name */
+        final /* synthetic */ AtomicBoolean f1603e;
 
-        /* renamed from: f */
-        final /* synthetic */ Condition f2117f;
+        /* renamed from: f  reason: collision with root package name */
+        final /* synthetic */ Condition f1604f;
 
-        RunnableC0439c(AtomicReference atomicReference, Callable callable, ReentrantLock reentrantLock, AtomicBoolean atomicBoolean, Condition condition) {
-            this.f2113b = atomicReference;
-            this.f2114c = callable;
-            this.f2115d = reentrantLock;
-            this.f2116e = atomicBoolean;
-            this.f2117f = condition;
+        RunnableC0018c(AtomicReference atomicReference, Callable callable, ReentrantLock reentrantLock, AtomicBoolean atomicBoolean, Condition condition) {
+            this.f1600b = atomicReference;
+            this.f1601c = callable;
+            this.f1602d = reentrantLock;
+            this.f1603e = atomicBoolean;
+            this.f1604f = condition;
         }
 
         @Override // java.lang.Runnable
         public void run() {
             try {
-                this.f2113b.set(this.f2114c.call());
+                this.f1600b.set(this.f1601c.call());
             } catch (Exception unused) {
             }
-            this.f2115d.lock();
+            this.f1602d.lock();
             try {
-                this.f2116e.set(false);
-                this.f2117f.signal();
+                this.f1603e.set(false);
+                this.f1604f.signal();
             } finally {
-                this.f2115d.unlock();
+                this.f1602d.unlock();
             }
         }
     }
 
-    /* renamed from: m.c$d */
     /* loaded from: classes.dex */
-    public interface InterfaceC0440d<T> {
-        /* renamed from: a */
-        void mo571a(T t);
+    public interface d<T> {
+        void a(T t2);
     }
 
-    public C0435c(String str, int i, int i2) {
-        this.f2105h = str;
-        this.f2104g = i;
-        this.f2103f = i2;
+    public c(String str, int i2, int i3) {
+        this.f1592h = str;
+        this.f1591g = i2;
+        this.f1590f = i3;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: c */
-    public void m576c() {
-        synchronized (this.f2098a) {
-            if (this.f2100c.hasMessages(1)) {
+    public void c() {
+        synchronized (this.f1585a) {
+            if (this.f1587c.hasMessages(1)) {
                 return;
             }
-            this.f2099b.quit();
-            this.f2099b = null;
-            this.f2100c = null;
+            this.f1586b.quit();
+            this.f1586b = null;
+            this.f1587c = null;
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: d */
-    public void m575d(Runnable runnable) {
+    public void d(Runnable runnable) {
         runnable.run();
-        synchronized (this.f2098a) {
-            this.f2100c.removeMessages(0);
-            Handler handler = this.f2100c;
-            handler.sendMessageDelayed(handler.obtainMessage(0), this.f2103f);
+        synchronized (this.f1585a) {
+            this.f1587c.removeMessages(0);
+            Handler handler = this.f1587c;
+            handler.sendMessageDelayed(handler.obtainMessage(0), this.f1590f);
         }
     }
 
-    /* renamed from: e */
-    private void m574e(Runnable runnable) {
-        synchronized (this.f2098a) {
-            if (this.f2099b == null) {
-                HandlerThread handlerThread = new HandlerThread(this.f2105h, this.f2104g);
-                this.f2099b = handlerThread;
+    private void e(Runnable runnable) {
+        synchronized (this.f1585a) {
+            if (this.f1586b == null) {
+                HandlerThread handlerThread = new HandlerThread(this.f1592h, this.f1591g);
+                this.f1586b = handlerThread;
                 handlerThread.start();
-                this.f2100c = new Handler(this.f2099b.getLooper(), this.f2102e);
-                this.f2101d++;
+                this.f1587c = new Handler(this.f1586b.getLooper(), this.f1589e);
+                this.f1588d++;
             }
-            this.f2100c.removeMessages(0);
-            Handler handler = this.f2100c;
+            this.f1587c.removeMessages(0);
+            Handler handler = this.f1587c;
             handler.sendMessage(handler.obtainMessage(1, runnable));
         }
     }
 
-    /* renamed from: f */
-    public <T> void m573f(Callable<T> callable, InterfaceC0440d<T> interfaceC0440d) {
-        m574e(new RunnableC0437b(callable, new Handler(), interfaceC0440d));
+    public <T> void f(Callable<T> callable, d<T> dVar) {
+        e(new b(callable, new Handler(), dVar));
     }
 
-    /* renamed from: g */
-    public <T> T m572g(Callable<T> callable, int i) {
+    public <T> T g(Callable<T> callable, int i2) {
         ReentrantLock reentrantLock = new ReentrantLock();
         Condition newCondition = reentrantLock.newCondition();
         AtomicReference atomicReference = new AtomicReference();
         AtomicBoolean atomicBoolean = new AtomicBoolean(true);
-        m574e(new RunnableC0439c(atomicReference, callable, reentrantLock, atomicBoolean, newCondition));
+        e(new RunnableC0018c(atomicReference, callable, reentrantLock, atomicBoolean, newCondition));
         reentrantLock.lock();
         try {
             if (atomicBoolean.get()) {
-                long nanos = TimeUnit.MILLISECONDS.toNanos(i);
+                long nanos = TimeUnit.MILLISECONDS.toNanos(i2);
                 do {
                     try {
                         nanos = newCondition.awaitNanos(nanos);

@@ -1,4 +1,4 @@
-package android.support.p001v4.app;
+package android.support.v4.app;
 
 import android.graphics.Rect;
 import android.os.Build;
@@ -8,358 +8,342 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import p015n.C0445a;
-import p016o.C0490o;
 
 /* JADX INFO: Access modifiers changed from: package-private */
-/* renamed from: android.support.v4.app.r */
 /* loaded from: classes.dex */
-public class C0110r {
+public class r {
 
-    /* renamed from: a */
-    private static final int[] f555a = {0, 3, 0, 1, 5, 4, 7, 6, 9, 8};
+    /* renamed from: a  reason: collision with root package name */
+    private static final int[] f411a = {0, 3, 0, 1, 5, 4, 7, 6, 9, 8};
 
-    /* renamed from: b */
-    private static final AbstractC0121t f556b;
+    /* renamed from: b  reason: collision with root package name */
+    private static final t f412b;
 
-    /* renamed from: c */
-    private static final AbstractC0121t f557c;
+    /* renamed from: c  reason: collision with root package name */
+    private static final t f413c;
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: android.support.v4.app.r$a */
     /* loaded from: classes.dex */
-    public static class RunnableC0111a implements Runnable {
+    public static class a implements Runnable {
 
-        /* renamed from: b */
-        final /* synthetic */ ArrayList f558b;
+        /* renamed from: b  reason: collision with root package name */
+        final /* synthetic */ ArrayList f414b;
 
-        RunnableC0111a(ArrayList arrayList) {
-            this.f558b = arrayList;
+        a(ArrayList arrayList) {
+            this.f414b = arrayList;
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            C0110r.m1886F(this.f558b, 4);
+            r.F(this.f414b, 4);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: android.support.v4.app.r$b */
     /* loaded from: classes.dex */
-    public static class RunnableC0112b implements Runnable {
+    public static class b implements Runnable {
 
-        /* renamed from: b */
-        final /* synthetic */ Object f559b;
+        /* renamed from: b  reason: collision with root package name */
+        final /* synthetic */ Object f415b;
 
-        /* renamed from: c */
-        final /* synthetic */ AbstractC0121t f560c;
+        /* renamed from: c  reason: collision with root package name */
+        final /* synthetic */ t f416c;
 
-        /* renamed from: d */
-        final /* synthetic */ View f561d;
+        /* renamed from: d  reason: collision with root package name */
+        final /* synthetic */ View f417d;
 
-        /* renamed from: e */
-        final /* synthetic */ ComponentCallbacksC0073g f562e;
+        /* renamed from: e  reason: collision with root package name */
+        final /* synthetic */ g f418e;
 
-        /* renamed from: f */
-        final /* synthetic */ ArrayList f563f;
+        /* renamed from: f  reason: collision with root package name */
+        final /* synthetic */ ArrayList f419f;
 
-        /* renamed from: g */
-        final /* synthetic */ ArrayList f564g;
+        /* renamed from: g  reason: collision with root package name */
+        final /* synthetic */ ArrayList f420g;
 
-        /* renamed from: h */
-        final /* synthetic */ ArrayList f565h;
+        /* renamed from: h  reason: collision with root package name */
+        final /* synthetic */ ArrayList f421h;
 
-        /* renamed from: i */
-        final /* synthetic */ Object f566i;
+        /* renamed from: i  reason: collision with root package name */
+        final /* synthetic */ Object f422i;
 
-        RunnableC0112b(Object obj, AbstractC0121t abstractC0121t, View view, ComponentCallbacksC0073g componentCallbacksC0073g, ArrayList arrayList, ArrayList arrayList2, ArrayList arrayList3, Object obj2) {
-            this.f559b = obj;
-            this.f560c = abstractC0121t;
-            this.f561d = view;
-            this.f562e = componentCallbacksC0073g;
-            this.f563f = arrayList;
-            this.f564g = arrayList2;
-            this.f565h = arrayList3;
-            this.f566i = obj2;
+        b(Object obj, t tVar, View view, g gVar, ArrayList arrayList, ArrayList arrayList2, ArrayList arrayList3, Object obj2) {
+            this.f415b = obj;
+            this.f416c = tVar;
+            this.f417d = view;
+            this.f418e = gVar;
+            this.f419f = arrayList;
+            this.f420g = arrayList2;
+            this.f421h = arrayList3;
+            this.f422i = obj2;
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            Object obj = this.f559b;
+            Object obj = this.f415b;
             if (obj != null) {
-                this.f560c.mo1841p(obj, this.f561d);
-                this.f564g.addAll(C0110r.m1869p(this.f560c, this.f559b, this.f562e, this.f563f, this.f561d));
+                this.f416c.p(obj, this.f417d);
+                this.f420g.addAll(r.p(this.f416c, this.f415b, this.f418e, this.f419f, this.f417d));
             }
-            if (this.f565h != null) {
-                if (this.f566i != null) {
+            if (this.f421h != null) {
+                if (this.f422i != null) {
                     ArrayList<View> arrayList = new ArrayList<>();
-                    arrayList.add(this.f561d);
-                    this.f560c.mo1840q(this.f566i, this.f565h, arrayList);
+                    arrayList.add(this.f417d);
+                    this.f416c.q(this.f422i, this.f421h, arrayList);
                 }
-                this.f565h.clear();
-                this.f565h.add(this.f561d);
+                this.f421h.clear();
+                this.f421h.add(this.f417d);
             }
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: android.support.v4.app.r$c */
     /* loaded from: classes.dex */
-    public static class RunnableC0113c implements Runnable {
+    public static class c implements Runnable {
 
-        /* renamed from: b */
-        final /* synthetic */ ComponentCallbacksC0073g f567b;
+        /* renamed from: b  reason: collision with root package name */
+        final /* synthetic */ g f423b;
 
-        /* renamed from: c */
-        final /* synthetic */ ComponentCallbacksC0073g f568c;
+        /* renamed from: c  reason: collision with root package name */
+        final /* synthetic */ g f424c;
 
-        /* renamed from: d */
-        final /* synthetic */ boolean f569d;
+        /* renamed from: d  reason: collision with root package name */
+        final /* synthetic */ boolean f425d;
 
-        /* renamed from: e */
-        final /* synthetic */ C0445a f570e;
+        /* renamed from: e  reason: collision with root package name */
+        final /* synthetic */ n.a f426e;
 
-        /* renamed from: f */
-        final /* synthetic */ View f571f;
+        /* renamed from: f  reason: collision with root package name */
+        final /* synthetic */ View f427f;
 
-        /* renamed from: g */
-        final /* synthetic */ AbstractC0121t f572g;
+        /* renamed from: g  reason: collision with root package name */
+        final /* synthetic */ t f428g;
 
-        /* renamed from: h */
-        final /* synthetic */ Rect f573h;
+        /* renamed from: h  reason: collision with root package name */
+        final /* synthetic */ Rect f429h;
 
-        RunnableC0113c(ComponentCallbacksC0073g componentCallbacksC0073g, ComponentCallbacksC0073g componentCallbacksC0073g2, boolean z, C0445a c0445a, View view, AbstractC0121t abstractC0121t, Rect rect) {
-            this.f567b = componentCallbacksC0073g;
-            this.f568c = componentCallbacksC0073g2;
-            this.f569d = z;
-            this.f570e = c0445a;
-            this.f571f = view;
-            this.f572g = abstractC0121t;
-            this.f573h = rect;
+        c(g gVar, g gVar2, boolean z, n.a aVar, View view, t tVar, Rect rect) {
+            this.f423b = gVar;
+            this.f424c = gVar2;
+            this.f425d = z;
+            this.f426e = aVar;
+            this.f427f = view;
+            this.f428g = tVar;
+            this.f429h = rect;
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            C0110r.m1874k(this.f567b, this.f568c, this.f569d, this.f570e, false);
-            View view = this.f571f;
+            r.k(this.f423b, this.f424c, this.f425d, this.f426e, false);
+            View view = this.f427f;
             if (view != null) {
-                this.f572g.m1846k(view, this.f573h);
+                this.f428g.k(view, this.f429h);
             }
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: android.support.v4.app.r$d */
     /* loaded from: classes.dex */
-    public static class RunnableC0114d implements Runnable {
+    public static class d implements Runnable {
 
-        /* renamed from: b */
-        final /* synthetic */ AbstractC0121t f574b;
+        /* renamed from: b  reason: collision with root package name */
+        final /* synthetic */ t f430b;
 
-        /* renamed from: c */
-        final /* synthetic */ C0445a f575c;
+        /* renamed from: c  reason: collision with root package name */
+        final /* synthetic */ n.a f431c;
 
-        /* renamed from: d */
-        final /* synthetic */ Object f576d;
+        /* renamed from: d  reason: collision with root package name */
+        final /* synthetic */ Object f432d;
 
-        /* renamed from: e */
-        final /* synthetic */ C0115e f577e;
+        /* renamed from: e  reason: collision with root package name */
+        final /* synthetic */ e f433e;
 
-        /* renamed from: f */
-        final /* synthetic */ ArrayList f578f;
+        /* renamed from: f  reason: collision with root package name */
+        final /* synthetic */ ArrayList f434f;
 
-        /* renamed from: g */
-        final /* synthetic */ View f579g;
+        /* renamed from: g  reason: collision with root package name */
+        final /* synthetic */ View f435g;
 
-        /* renamed from: h */
-        final /* synthetic */ ComponentCallbacksC0073g f580h;
+        /* renamed from: h  reason: collision with root package name */
+        final /* synthetic */ g f436h;
 
-        /* renamed from: i */
-        final /* synthetic */ ComponentCallbacksC0073g f581i;
+        /* renamed from: i  reason: collision with root package name */
+        final /* synthetic */ g f437i;
 
-        /* renamed from: j */
-        final /* synthetic */ boolean f582j;
+        /* renamed from: j  reason: collision with root package name */
+        final /* synthetic */ boolean f438j;
 
-        /* renamed from: k */
-        final /* synthetic */ ArrayList f583k;
+        /* renamed from: k  reason: collision with root package name */
+        final /* synthetic */ ArrayList f439k;
 
-        /* renamed from: l */
-        final /* synthetic */ Object f584l;
+        /* renamed from: l  reason: collision with root package name */
+        final /* synthetic */ Object f440l;
 
-        /* renamed from: m */
-        final /* synthetic */ Rect f585m;
+        /* renamed from: m  reason: collision with root package name */
+        final /* synthetic */ Rect f441m;
 
-        RunnableC0114d(AbstractC0121t abstractC0121t, C0445a c0445a, Object obj, C0115e c0115e, ArrayList arrayList, View view, ComponentCallbacksC0073g componentCallbacksC0073g, ComponentCallbacksC0073g componentCallbacksC0073g2, boolean z, ArrayList arrayList2, Object obj2, Rect rect) {
-            this.f574b = abstractC0121t;
-            this.f575c = c0445a;
-            this.f576d = obj;
-            this.f577e = c0115e;
-            this.f578f = arrayList;
-            this.f579g = view;
-            this.f580h = componentCallbacksC0073g;
-            this.f581i = componentCallbacksC0073g2;
-            this.f582j = z;
-            this.f583k = arrayList2;
-            this.f584l = obj2;
-            this.f585m = rect;
+        d(t tVar, n.a aVar, Object obj, e eVar, ArrayList arrayList, View view, g gVar, g gVar2, boolean z, ArrayList arrayList2, Object obj2, Rect rect) {
+            this.f430b = tVar;
+            this.f431c = aVar;
+            this.f432d = obj;
+            this.f433e = eVar;
+            this.f434f = arrayList;
+            this.f435g = view;
+            this.f436h = gVar;
+            this.f437i = gVar2;
+            this.f438j = z;
+            this.f439k = arrayList2;
+            this.f440l = obj2;
+            this.f441m = rect;
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            C0445a m1872m = C0110r.m1872m(this.f574b, this.f575c, this.f576d, this.f577e);
-            if (m1872m != null) {
-                this.f578f.addAll(m1872m.values());
-                this.f578f.add(this.f579g);
+            n.a m2 = r.m(this.f430b, this.f431c, this.f432d, this.f433e);
+            if (m2 != null) {
+                this.f434f.addAll(m2.values());
+                this.f434f.add(this.f435g);
             }
-            C0110r.m1874k(this.f580h, this.f581i, this.f582j, m1872m, false);
-            Object obj = this.f576d;
+            r.k(this.f436h, this.f437i, this.f438j, m2, false);
+            Object obj = this.f432d;
             if (obj != null) {
-                this.f574b.mo1831z(obj, this.f583k, this.f578f);
-                View m1861x = C0110r.m1861x(m1872m, this.f577e, this.f584l, this.f582j);
-                if (m1861x != null) {
-                    this.f574b.m1846k(m1861x, this.f585m);
+                this.f430b.z(obj, this.f439k, this.f434f);
+                View x = r.x(m2, this.f433e, this.f440l, this.f438j);
+                if (x != null) {
+                    this.f430b.k(x, this.f441m);
                 }
             }
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: android.support.v4.app.r$e */
     /* loaded from: classes.dex */
-    public static class C0115e {
+    public static class e {
 
-        /* renamed from: a */
-        public ComponentCallbacksC0073g f586a;
+        /* renamed from: a  reason: collision with root package name */
+        public g f442a;
 
-        /* renamed from: b */
-        public boolean f587b;
+        /* renamed from: b  reason: collision with root package name */
+        public boolean f443b;
 
-        /* renamed from: c */
-        public C0067c f588c;
+        /* renamed from: c  reason: collision with root package name */
+        public android.support.v4.app.c f444c;
 
-        /* renamed from: d */
-        public ComponentCallbacksC0073g f589d;
+        /* renamed from: d  reason: collision with root package name */
+        public g f445d;
 
-        /* renamed from: e */
-        public boolean f590e;
+        /* renamed from: e  reason: collision with root package name */
+        public boolean f446e;
 
-        /* renamed from: f */
-        public C0067c f591f;
+        /* renamed from: f  reason: collision with root package name */
+        public android.support.v4.app.c f447f;
 
-        C0115e() {
+        e() {
         }
     }
 
     static {
-        f556b = Build.VERSION.SDK_INT >= 21 ? new C0116s() : null;
-        f557c = m1890B();
+        f412b = Build.VERSION.SDK_INT >= 21 ? new s() : null;
+        f413c = B();
     }
 
-    /* renamed from: A */
-    private static void m1891A(AbstractC0121t abstractC0121t, Object obj, ComponentCallbacksC0073g componentCallbacksC0073g, ArrayList<View> arrayList) {
-        if (componentCallbacksC0073g != null && obj != null && componentCallbacksC0073g.f416k && componentCallbacksC0073g.f388A && componentCallbacksC0073g.f402O) {
-            componentCallbacksC0073g.m2152W0(true);
-            abstractC0121t.mo1839r(obj, componentCallbacksC0073g.m2191D(), arrayList);
-            ViewTreeObserver$OnPreDrawListenerC0127w.m1821a(componentCallbacksC0073g.f395H, new RunnableC0111a(arrayList));
+    private static void A(t tVar, Object obj, g gVar, ArrayList<View> arrayList) {
+        if (gVar != null && obj != null && gVar.f289k && gVar.A && gVar.O) {
+            gVar.W0(true);
+            tVar.r(obj, gVar.D(), arrayList);
+            w.a(gVar.H, new a(arrayList));
         }
     }
 
-    /* renamed from: B */
-    private static AbstractC0121t m1890B() {
+    private static t B() {
         try {
-            return (AbstractC0121t) Class.forName("android.support.transition.FragmentTransitionSupport").getDeclaredConstructor(new Class[0]).newInstance(new Object[0]);
+            return (t) Class.forName("android.support.transition.FragmentTransitionSupport").getDeclaredConstructor(new Class[0]).newInstance(new Object[0]);
         } catch (Exception unused) {
             return null;
         }
     }
 
-    /* renamed from: C */
-    private static void m1889C(C0445a<String, String> c0445a, C0445a<String, View> c0445a2) {
-        for (int size = c0445a.size() - 1; size >= 0; size--) {
-            if (!c0445a2.containsKey(c0445a.m488l(size))) {
-                c0445a.m490j(size);
+    private static void C(n.a<String, String> aVar, n.a<String, View> aVar2) {
+        for (int size = aVar.size() - 1; size >= 0; size--) {
+            if (!aVar2.containsKey(aVar.l(size))) {
+                aVar.j(size);
             }
         }
     }
 
-    /* renamed from: D */
-    private static void m1888D(AbstractC0121t abstractC0121t, ViewGroup viewGroup, ComponentCallbacksC0073g componentCallbacksC0073g, View view, ArrayList<View> arrayList, Object obj, ArrayList<View> arrayList2, Object obj2, ArrayList<View> arrayList3) {
-        ViewTreeObserver$OnPreDrawListenerC0127w.m1821a(viewGroup, new RunnableC0112b(obj, abstractC0121t, view, componentCallbacksC0073g, arrayList, arrayList2, arrayList3, obj2));
+    private static void D(t tVar, ViewGroup viewGroup, g gVar, View view, ArrayList<View> arrayList, Object obj, ArrayList<View> arrayList2, Object obj2, ArrayList<View> arrayList3) {
+        w.a(viewGroup, new b(obj, tVar, view, gVar, arrayList, arrayList2, arrayList3, obj2));
     }
 
-    /* renamed from: E */
-    private static void m1887E(AbstractC0121t abstractC0121t, Object obj, Object obj2, C0445a<String, View> c0445a, boolean z, C0067c c0067c) {
-        ArrayList<String> arrayList = c0067c.f362r;
+    private static void E(t tVar, Object obj, Object obj2, n.a<String, View> aVar, boolean z, android.support.v4.app.c cVar) {
+        ArrayList<String> arrayList = cVar.f256r;
         if (arrayList == null || arrayList.isEmpty()) {
             return;
         }
-        View view = c0445a.get((z ? c0067c.f363s : c0067c.f362r).get(0));
-        abstractC0121t.mo1835v(obj, view);
+        View view = aVar.get((z ? cVar.f257s : cVar.f256r).get(0));
+        tVar.v(obj, view);
         if (obj2 != null) {
-            abstractC0121t.mo1835v(obj2, view);
+            tVar.v(obj2, view);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: F */
-    public static void m1886F(ArrayList<View> arrayList, int i) {
+    public static void F(ArrayList<View> arrayList, int i2) {
         if (arrayList == null) {
             return;
         }
         for (int size = arrayList.size() - 1; size >= 0; size--) {
-            arrayList.get(size).setVisibility(i);
+            arrayList.get(size).setVisibility(i2);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: G */
-    public static void m1885G(LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m, ArrayList<C0067c> arrayList, ArrayList<Boolean> arrayList2, int i, int i2, boolean z) {
-        if (layoutInflater$Factory2C0089m.f494m < 1) {
+    public static void G(m mVar, ArrayList<android.support.v4.app.c> arrayList, ArrayList<Boolean> arrayList2, int i2, int i3, boolean z) {
+        if (mVar.f353m < 1) {
             return;
         }
         SparseArray sparseArray = new SparseArray();
-        for (int i3 = i; i3 < i2; i3++) {
-            C0067c c0067c = arrayList.get(i3);
-            if (arrayList2.get(i3).booleanValue()) {
-                m1875j(c0067c, sparseArray, z);
+        for (int i4 = i2; i4 < i3; i4++) {
+            android.support.v4.app.c cVar = arrayList.get(i4);
+            if (arrayList2.get(i4).booleanValue()) {
+                j(cVar, sparseArray, z);
             } else {
-                m1877h(c0067c, sparseArray, z);
+                h(cVar, sparseArray, z);
             }
         }
         if (sparseArray.size() != 0) {
-            View view = new View(layoutInflater$Factory2C0089m.f495n.m2042e());
+            View view = new View(mVar.f354n.e());
             int size = sparseArray.size();
-            for (int i4 = 0; i4 < size; i4++) {
-                int keyAt = sparseArray.keyAt(i4);
-                C0445a<String, String> m1876i = m1876i(keyAt, arrayList, arrayList2, i, i2);
-                C0115e c0115e = (C0115e) sparseArray.valueAt(i4);
+            for (int i5 = 0; i5 < size; i5++) {
+                int keyAt = sparseArray.keyAt(i5);
+                n.a<String, String> i6 = i(keyAt, arrayList, arrayList2, i2, i3);
+                e eVar = (e) sparseArray.valueAt(i5);
                 if (z) {
-                    m1865t(layoutInflater$Factory2C0089m, keyAt, c0115e, view, m1876i);
+                    t(mVar, keyAt, eVar, view, i6);
                 } else {
-                    m1866s(layoutInflater$Factory2C0089m, keyAt, c0115e, view, m1876i);
+                    s(mVar, keyAt, eVar, view, i6);
                 }
             }
         }
     }
 
-    /* renamed from: f */
-    private static void m1879f(ArrayList<View> arrayList, C0445a<String, View> c0445a, Collection<String> collection) {
-        for (int size = c0445a.size() - 1; size >= 0; size--) {
-            View m488l = c0445a.m488l(size);
-            if (collection.contains(C0490o.m406f(m488l))) {
-                arrayList.add(m488l);
+    private static void f(ArrayList<View> arrayList, n.a<String, View> aVar, Collection<String> collection) {
+        for (int size = aVar.size() - 1; size >= 0; size--) {
+            View l2 = aVar.l(size);
+            if (collection.contains(o.o.f(l2))) {
+                arrayList.add(l2);
             }
         }
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:31:0x0041, code lost:
-        if (r10.f416k != false) goto L64;
+        if (r10.f289k != false) goto L64;
      */
     /* JADX WARN: Code restructure failed: missing block: B:56:0x0076, code lost:
         r1 = true;
      */
     /* JADX WARN: Code restructure failed: missing block: B:68:0x0090, code lost:
-        if (r10.f388A == false) goto L64;
+        if (r10.A == false) goto L64;
      */
     /* JADX WARN: Code restructure failed: missing block: B:69:0x0092, code lost:
         r1 = true;
@@ -369,87 +353,81 @@ public class C0110r {
     /* JADX WARN: Removed duplicated region for block: B:77:0x00ae A[ADDED_TO_REGION] */
     /* JADX WARN: Removed duplicated region for block: B:90:0x00d3 A[ADDED_TO_REGION] */
     /* JADX WARN: Removed duplicated region for block: B:95:0x00e5 A[ADDED_TO_REGION] */
-    /* renamed from: g */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private static void m1878g(android.support.p001v4.app.C0067c r16, android.support.p001v4.app.C0067c.C0068a r17, android.util.SparseArray<android.support.p001v4.app.C0110r.C0115e> r18, boolean r19, boolean r20) {
+    private static void g(android.support.v4.app.c r16, android.support.v4.app.c.a r17, android.util.SparseArray<android.support.v4.app.r.e> r18, boolean r19, boolean r20) {
         /*
             Method dump skipped, instructions count: 240
             To view this dump change 'Code comments level' option to 'DEBUG'
         */
-        throw new UnsupportedOperationException("Method not decompiled: android.support.p001v4.app.C0110r.m1878g(android.support.v4.app.c, android.support.v4.app.c$a, android.util.SparseArray, boolean, boolean):void");
+        throw new UnsupportedOperationException("Method not decompiled: android.support.v4.app.r.g(android.support.v4.app.c, android.support.v4.app.c$a, android.util.SparseArray, boolean, boolean):void");
     }
 
-    /* renamed from: h */
-    public static void m1877h(C0067c c0067c, SparseArray<C0115e> sparseArray, boolean z) {
-        int size = c0067c.f346b.size();
-        for (int i = 0; i < size; i++) {
-            m1878g(c0067c, c0067c.f346b.get(i), sparseArray, false, z);
+    public static void h(android.support.v4.app.c cVar, SparseArray<e> sparseArray, boolean z) {
+        int size = cVar.f240b.size();
+        for (int i2 = 0; i2 < size; i2++) {
+            g(cVar, cVar.f240b.get(i2), sparseArray, false, z);
         }
     }
 
-    /* renamed from: i */
-    private static C0445a<String, String> m1876i(int i, ArrayList<C0067c> arrayList, ArrayList<Boolean> arrayList2, int i2, int i3) {
+    private static n.a<String, String> i(int i2, ArrayList<android.support.v4.app.c> arrayList, ArrayList<Boolean> arrayList2, int i3, int i4) {
         ArrayList<String> arrayList3;
         ArrayList<String> arrayList4;
-        C0445a<String, String> c0445a = new C0445a<>();
-        for (int i4 = i3 - 1; i4 >= i2; i4--) {
-            C0067c c0067c = arrayList.get(i4);
-            if (c0067c.m2208j(i)) {
-                boolean booleanValue = arrayList2.get(i4).booleanValue();
-                ArrayList<String> arrayList5 = c0067c.f362r;
+        n.a<String, String> aVar = new n.a<>();
+        for (int i5 = i4 - 1; i5 >= i3; i5--) {
+            android.support.v4.app.c cVar = arrayList.get(i5);
+            if (cVar.j(i2)) {
+                boolean booleanValue = arrayList2.get(i5).booleanValue();
+                ArrayList<String> arrayList5 = cVar.f256r;
                 if (arrayList5 != null) {
                     int size = arrayList5.size();
                     if (booleanValue) {
-                        arrayList3 = c0067c.f362r;
-                        arrayList4 = c0067c.f363s;
+                        arrayList3 = cVar.f256r;
+                        arrayList4 = cVar.f257s;
                     } else {
-                        ArrayList<String> arrayList6 = c0067c.f362r;
-                        arrayList3 = c0067c.f363s;
+                        ArrayList<String> arrayList6 = cVar.f256r;
+                        arrayList3 = cVar.f257s;
                         arrayList4 = arrayList6;
                     }
-                    for (int i5 = 0; i5 < size; i5++) {
-                        String str = arrayList4.get(i5);
-                        String str2 = arrayList3.get(i5);
-                        String remove = c0445a.remove(str2);
+                    for (int i6 = 0; i6 < size; i6++) {
+                        String str = arrayList4.get(i6);
+                        String str2 = arrayList3.get(i6);
+                        String remove = aVar.remove(str2);
                         if (remove != null) {
-                            c0445a.put(str, remove);
+                            aVar.put(str, remove);
                         } else {
-                            c0445a.put(str, str2);
+                            aVar.put(str, str2);
                         }
                     }
                 }
             }
         }
-        return c0445a;
+        return aVar;
     }
 
-    /* renamed from: j */
-    public static void m1875j(C0067c c0067c, SparseArray<C0115e> sparseArray, boolean z) {
-        if (c0067c.f345a.f496o.mo2071c()) {
-            for (int size = c0067c.f346b.size() - 1; size >= 0; size--) {
-                m1878g(c0067c, c0067c.f346b.get(size), sparseArray, true, z);
+    public static void j(android.support.v4.app.c cVar, SparseArray<e> sparseArray, boolean z) {
+        if (cVar.f239a.f355o.c()) {
+            for (int size = cVar.f240b.size() - 1; size >= 0; size--) {
+                g(cVar, cVar.f240b.get(size), sparseArray, true, z);
             }
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: k */
-    public static void m1874k(ComponentCallbacksC0073g componentCallbacksC0073g, ComponentCallbacksC0073g componentCallbacksC0073g2, boolean z, C0445a<String, View> c0445a, boolean z2) {
+    public static void k(g gVar, g gVar2, boolean z, n.a<String, View> aVar, boolean z2) {
         if (z) {
-            componentCallbacksC0073g2.m2114p();
+            gVar2.p();
         } else {
-            componentCallbacksC0073g.m2114p();
+            gVar.p();
         }
     }
 
-    /* renamed from: l */
-    private static boolean m1873l(AbstractC0121t abstractC0121t, List<Object> list) {
+    private static boolean l(t tVar, List<Object> list) {
         int size = list.size();
-        for (int i = 0; i < size; i++) {
-            if (!abstractC0121t.mo1852e(list.get(i))) {
+        for (int i2 = 0; i2 < size; i2++) {
+            if (!tVar.e(list.get(i2))) {
                 return false;
             }
         }
@@ -457,112 +435,108 @@ public class C0110r {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: m */
-    public static C0445a<String, View> m1872m(AbstractC0121t abstractC0121t, C0445a<String, String> c0445a, Object obj, C0115e c0115e) {
+    public static n.a<String, View> m(t tVar, n.a<String, String> aVar, Object obj, e eVar) {
         ArrayList<String> arrayList;
-        ComponentCallbacksC0073g componentCallbacksC0073g = c0115e.f586a;
-        View m2191D = componentCallbacksC0073g.m2191D();
-        if (c0445a.isEmpty() || obj == null || m2191D == null) {
-            c0445a.clear();
+        g gVar = eVar.f442a;
+        View D = gVar.D();
+        if (aVar.isEmpty() || obj == null || D == null) {
+            aVar.clear();
             return null;
         }
-        C0445a<String, View> c0445a2 = new C0445a<>();
-        abstractC0121t.m1847j(c0445a2, m2191D);
-        C0067c c0067c = c0115e.f588c;
-        if (c0115e.f587b) {
-            componentCallbacksC0073g.m2110r();
-            arrayList = c0067c.f362r;
+        n.a<String, View> aVar2 = new n.a<>();
+        tVar.j(aVar2, D);
+        android.support.v4.app.c cVar = eVar.f444c;
+        if (eVar.f443b) {
+            gVar.r();
+            arrayList = cVar.f256r;
         } else {
-            componentCallbacksC0073g.m2114p();
-            arrayList = c0067c.f363s;
+            gVar.p();
+            arrayList = cVar.f257s;
         }
         if (arrayList != null) {
-            c0445a2.m558n(arrayList);
-            c0445a2.m558n(c0445a.values());
+            aVar2.n(arrayList);
+            aVar2.n(aVar.values());
         }
-        m1889C(c0445a, c0445a2);
-        return c0445a2;
+        C(aVar, aVar2);
+        return aVar2;
     }
 
-    /* renamed from: n */
-    private static C0445a<String, View> m1871n(AbstractC0121t abstractC0121t, C0445a<String, String> c0445a, Object obj, C0115e c0115e) {
+    private static n.a<String, View> n(t tVar, n.a<String, String> aVar, Object obj, e eVar) {
         ArrayList<String> arrayList;
-        if (c0445a.isEmpty() || obj == null) {
-            c0445a.clear();
+        if (aVar.isEmpty() || obj == null) {
+            aVar.clear();
             return null;
         }
-        ComponentCallbacksC0073g componentCallbacksC0073g = c0115e.f589d;
-        C0445a<String, View> c0445a2 = new C0445a<>();
-        abstractC0121t.m1847j(c0445a2, componentCallbacksC0073g.m2191D());
-        C0067c c0067c = c0115e.f591f;
-        if (c0115e.f590e) {
-            componentCallbacksC0073g.m2114p();
-            arrayList = c0067c.f363s;
+        g gVar = eVar.f445d;
+        n.a<String, View> aVar2 = new n.a<>();
+        tVar.j(aVar2, gVar.D());
+        android.support.v4.app.c cVar = eVar.f447f;
+        if (eVar.f446e) {
+            gVar.p();
+            arrayList = cVar.f257s;
         } else {
-            componentCallbacksC0073g.m2110r();
-            arrayList = c0067c.f362r;
+            gVar.r();
+            arrayList = cVar.f256r;
         }
-        c0445a2.m558n(arrayList);
-        c0445a.m558n(c0445a2.keySet());
-        return c0445a2;
+        aVar2.n(arrayList);
+        aVar.n(aVar2.keySet());
+        return aVar2;
     }
 
-    /* renamed from: o */
-    private static AbstractC0121t m1870o(ComponentCallbacksC0073g componentCallbacksC0073g, ComponentCallbacksC0073g componentCallbacksC0073g2) {
+    private static t o(g gVar, g gVar2) {
         ArrayList arrayList = new ArrayList();
-        if (componentCallbacksC0073g != null) {
-            Object m2112q = componentCallbacksC0073g.m2112q();
-            if (m2112q != null) {
-                arrayList.add(m2112q);
+        if (gVar != null) {
+            Object q2 = gVar.q();
+            if (q2 != null) {
+                arrayList.add(q2);
             }
-            Object m2094z = componentCallbacksC0073g.m2094z();
-            if (m2094z != null) {
-                arrayList.add(m2094z);
+            Object z = gVar.z();
+            if (z != null) {
+                arrayList.add(z);
             }
-            Object m2195B = componentCallbacksC0073g.m2195B();
-            if (m2195B != null) {
-                arrayList.add(m2195B);
+            Object B = gVar.B();
+            if (B != null) {
+                arrayList.add(B);
             }
         }
-        if (componentCallbacksC0073g2 != null) {
-            Object m2116o = componentCallbacksC0073g2.m2116o();
-            if (m2116o != null) {
-                arrayList.add(m2116o);
+        if (gVar2 != null) {
+            Object o2 = gVar2.o();
+            if (o2 != null) {
+                arrayList.add(o2);
             }
-            Object m2098x = componentCallbacksC0073g2.m2098x();
-            if (m2098x != null) {
-                arrayList.add(m2098x);
+            Object x = gVar2.x();
+            if (x != null) {
+                arrayList.add(x);
             }
-            Object m2197A = componentCallbacksC0073g2.m2197A();
-            if (m2197A != null) {
-                arrayList.add(m2197A);
+            Object A = gVar2.A();
+            if (A != null) {
+                arrayList.add(A);
             }
         }
         if (arrayList.isEmpty()) {
             return null;
         }
-        AbstractC0121t abstractC0121t = f556b;
-        if (abstractC0121t == null || !m1873l(abstractC0121t, arrayList)) {
-            AbstractC0121t abstractC0121t2 = f557c;
-            if (abstractC0121t2 == null || !m1873l(abstractC0121t2, arrayList)) {
-                if (abstractC0121t == null && abstractC0121t2 == null) {
+        t tVar = f412b;
+        if (tVar == null || !l(tVar, arrayList)) {
+            t tVar2 = f413c;
+            if (tVar2 == null || !l(tVar2, arrayList)) {
+                if (tVar == null && tVar2 == null) {
                     return null;
                 }
                 throw new IllegalArgumentException("Invalid Transition types");
             }
-            return abstractC0121t2;
+            return tVar2;
         }
-        return abstractC0121t;
+        return tVar;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: p */
-    public static ArrayList<View> m1869p(AbstractC0121t abstractC0121t, Object obj, ComponentCallbacksC0073g componentCallbacksC0073g, ArrayList<View> arrayList, View view) {
+    public static ArrayList<View> p(t tVar, Object obj, g gVar, ArrayList<View> arrayList, View view) {
         if (obj != null) {
             ArrayList<View> arrayList2 = new ArrayList<>();
-            View m2191D = componentCallbacksC0073g.m2191D();
-            if (m2191D != null) {
-                abstractC0121t.m1851f(arrayList2, m2191D);
+            View D = gVar.D();
+            if (D != null) {
+                tVar.f(arrayList2, D);
             }
             if (arrayList != null) {
                 arrayList2.removeAll(arrayList);
@@ -571,235 +545,225 @@ public class C0110r {
                 return arrayList2;
             }
             arrayList2.add(view);
-            abstractC0121t.mo1855b(obj, arrayList2);
+            tVar.b(obj, arrayList2);
             return arrayList2;
         }
         return null;
     }
 
-    /* renamed from: q */
-    private static Object m1868q(AbstractC0121t abstractC0121t, ViewGroup viewGroup, View view, C0445a<String, String> c0445a, C0115e c0115e, ArrayList<View> arrayList, ArrayList<View> arrayList2, Object obj, Object obj2) {
-        Object m1860y;
-        C0445a<String, String> c0445a2;
+    private static Object q(t tVar, ViewGroup viewGroup, View view, n.a<String, String> aVar, e eVar, ArrayList<View> arrayList, ArrayList<View> arrayList2, Object obj, Object obj2) {
+        Object y;
+        n.a<String, String> aVar2;
         Object obj3;
         Rect rect;
-        ComponentCallbacksC0073g componentCallbacksC0073g = c0115e.f586a;
-        ComponentCallbacksC0073g componentCallbacksC0073g2 = c0115e.f589d;
-        if (componentCallbacksC0073g == null || componentCallbacksC0073g2 == null) {
+        g gVar = eVar.f442a;
+        g gVar2 = eVar.f445d;
+        if (gVar == null || gVar2 == null) {
             return null;
         }
-        boolean z = c0115e.f587b;
-        if (c0445a.isEmpty()) {
-            c0445a2 = c0445a;
-            m1860y = null;
+        boolean z = eVar.f443b;
+        if (aVar.isEmpty()) {
+            aVar2 = aVar;
+            y = null;
         } else {
-            m1860y = m1860y(abstractC0121t, componentCallbacksC0073g, componentCallbacksC0073g2, z);
-            c0445a2 = c0445a;
+            y = y(tVar, gVar, gVar2, z);
+            aVar2 = aVar;
         }
-        C0445a<String, View> m1871n = m1871n(abstractC0121t, c0445a2, m1860y, c0115e);
-        if (c0445a.isEmpty()) {
+        n.a<String, View> n2 = n(tVar, aVar2, y, eVar);
+        if (aVar.isEmpty()) {
             obj3 = null;
         } else {
-            arrayList.addAll(m1871n.values());
-            obj3 = m1860y;
+            arrayList.addAll(n2.values());
+            obj3 = y;
         }
         if (obj == null && obj2 == null && obj3 == null) {
             return null;
         }
-        m1874k(componentCallbacksC0073g, componentCallbacksC0073g2, z, m1871n, true);
+        k(gVar, gVar2, z, n2, true);
         if (obj3 != null) {
             rect = new Rect();
-            abstractC0121t.mo1832y(obj3, view, arrayList);
-            m1887E(abstractC0121t, obj3, obj2, m1871n, c0115e.f590e, c0115e.f591f);
+            tVar.y(obj3, view, arrayList);
+            E(tVar, obj3, obj2, n2, eVar.f446e, eVar.f447f);
             if (obj != null) {
-                abstractC0121t.mo1836u(obj, rect);
+                tVar.u(obj, rect);
             }
         } else {
             rect = null;
         }
-        ViewTreeObserver$OnPreDrawListenerC0127w.m1821a(viewGroup, new RunnableC0114d(abstractC0121t, c0445a, obj3, c0115e, arrayList2, view, componentCallbacksC0073g, componentCallbacksC0073g2, z, arrayList, obj, rect));
+        w.a(viewGroup, new d(tVar, aVar, obj3, eVar, arrayList2, view, gVar, gVar2, z, arrayList, obj, rect));
         return obj3;
     }
 
-    /* renamed from: r */
-    private static Object m1867r(AbstractC0121t abstractC0121t, ViewGroup viewGroup, View view, C0445a<String, String> c0445a, C0115e c0115e, ArrayList<View> arrayList, ArrayList<View> arrayList2, Object obj, Object obj2) {
+    private static Object r(t tVar, ViewGroup viewGroup, View view, n.a<String, String> aVar, e eVar, ArrayList<View> arrayList, ArrayList<View> arrayList2, Object obj, Object obj2) {
         Object obj3;
         View view2;
         Rect rect;
-        ComponentCallbacksC0073g componentCallbacksC0073g = c0115e.f586a;
-        ComponentCallbacksC0073g componentCallbacksC0073g2 = c0115e.f589d;
-        if (componentCallbacksC0073g != null) {
-            componentCallbacksC0073g.m2191D().setVisibility(0);
+        g gVar = eVar.f442a;
+        g gVar2 = eVar.f445d;
+        if (gVar != null) {
+            gVar.D().setVisibility(0);
         }
-        if (componentCallbacksC0073g == null || componentCallbacksC0073g2 == null) {
+        if (gVar == null || gVar2 == null) {
             return null;
         }
-        boolean z = c0115e.f587b;
-        Object m1860y = c0445a.isEmpty() ? null : m1860y(abstractC0121t, componentCallbacksC0073g, componentCallbacksC0073g2, z);
-        C0445a<String, View> m1871n = m1871n(abstractC0121t, c0445a, m1860y, c0115e);
-        C0445a<String, View> m1872m = m1872m(abstractC0121t, c0445a, m1860y, c0115e);
-        if (c0445a.isEmpty()) {
-            if (m1871n != null) {
-                m1871n.clear();
+        boolean z = eVar.f443b;
+        Object y = aVar.isEmpty() ? null : y(tVar, gVar, gVar2, z);
+        n.a<String, View> n2 = n(tVar, aVar, y, eVar);
+        n.a<String, View> m2 = m(tVar, aVar, y, eVar);
+        if (aVar.isEmpty()) {
+            if (n2 != null) {
+                n2.clear();
             }
-            if (m1872m != null) {
-                m1872m.clear();
+            if (m2 != null) {
+                m2.clear();
             }
             obj3 = null;
         } else {
-            m1879f(arrayList, m1871n, c0445a.keySet());
-            m1879f(arrayList2, m1872m, c0445a.values());
-            obj3 = m1860y;
+            f(arrayList, n2, aVar.keySet());
+            f(arrayList2, m2, aVar.values());
+            obj3 = y;
         }
         if (obj == null && obj2 == null && obj3 == null) {
             return null;
         }
-        m1874k(componentCallbacksC0073g, componentCallbacksC0073g2, z, m1871n, true);
+        k(gVar, gVar2, z, n2, true);
         if (obj3 != null) {
             arrayList2.add(view);
-            abstractC0121t.mo1832y(obj3, view, arrayList);
-            m1887E(abstractC0121t, obj3, obj2, m1871n, c0115e.f590e, c0115e.f591f);
+            tVar.y(obj3, view, arrayList);
+            E(tVar, obj3, obj2, n2, eVar.f446e, eVar.f447f);
             Rect rect2 = new Rect();
-            View m1861x = m1861x(m1872m, c0115e, obj, z);
-            if (m1861x != null) {
-                abstractC0121t.mo1836u(obj, rect2);
+            View x = x(m2, eVar, obj, z);
+            if (x != null) {
+                tVar.u(obj, rect2);
             }
             rect = rect2;
-            view2 = m1861x;
+            view2 = x;
         } else {
             view2 = null;
             rect = null;
         }
-        ViewTreeObserver$OnPreDrawListenerC0127w.m1821a(viewGroup, new RunnableC0113c(componentCallbacksC0073g, componentCallbacksC0073g2, z, m1872m, view2, abstractC0121t, rect));
+        w.a(viewGroup, new c(gVar, gVar2, z, m2, view2, tVar, rect));
         return obj3;
     }
 
-    /* renamed from: s */
-    private static void m1866s(LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m, int i, C0115e c0115e, View view, C0445a<String, String> c0445a) {
-        ComponentCallbacksC0073g componentCallbacksC0073g;
-        ComponentCallbacksC0073g componentCallbacksC0073g2;
-        AbstractC0121t m1870o;
+    private static void s(m mVar, int i2, e eVar, View view, n.a<String, String> aVar) {
+        g gVar;
+        g gVar2;
+        t o2;
         Object obj;
-        ViewGroup viewGroup = layoutInflater$Factory2C0089m.f496o.mo2071c() ? (ViewGroup) layoutInflater$Factory2C0089m.f496o.mo2072b(i) : null;
-        if (viewGroup == null || (m1870o = m1870o((componentCallbacksC0073g2 = c0115e.f589d), (componentCallbacksC0073g = c0115e.f586a))) == null) {
+        ViewGroup viewGroup = mVar.f355o.c() ? (ViewGroup) mVar.f355o.b(i2) : null;
+        if (viewGroup == null || (o2 = o((gVar2 = eVar.f445d), (gVar = eVar.f442a))) == null) {
             return;
         }
-        boolean z = c0115e.f587b;
-        boolean z2 = c0115e.f590e;
-        Object m1863v = m1863v(m1870o, componentCallbacksC0073g, z);
-        Object m1862w = m1862w(m1870o, componentCallbacksC0073g2, z2);
+        boolean z = eVar.f443b;
+        boolean z2 = eVar.f446e;
+        Object v2 = v(o2, gVar, z);
+        Object w2 = w(o2, gVar2, z2);
         ArrayList arrayList = new ArrayList();
         ArrayList<View> arrayList2 = new ArrayList<>();
-        Object m1868q = m1868q(m1870o, viewGroup, view, c0445a, c0115e, arrayList, arrayList2, m1863v, m1862w);
-        if (m1863v == null && m1868q == null) {
-            obj = m1862w;
+        Object q2 = q(o2, viewGroup, view, aVar, eVar, arrayList, arrayList2, v2, w2);
+        if (v2 == null && q2 == null) {
+            obj = w2;
             if (obj == null) {
                 return;
             }
         } else {
-            obj = m1862w;
+            obj = w2;
         }
-        ArrayList<View> m1869p = m1869p(m1870o, obj, componentCallbacksC0073g2, arrayList, view);
-        Object obj2 = (m1869p == null || m1869p.isEmpty()) ? null : obj;
-        m1870o.mo1856a(m1863v, view);
-        Object m1859z = m1859z(m1870o, m1863v, obj2, m1868q, componentCallbacksC0073g, c0115e.f587b);
-        if (m1859z != null) {
+        ArrayList<View> p2 = p(o2, obj, gVar2, arrayList, view);
+        Object obj2 = (p2 == null || p2.isEmpty()) ? null : obj;
+        o2.a(v2, view);
+        Object z3 = z(o2, v2, obj2, q2, gVar, eVar.f443b);
+        if (z3 != null) {
             ArrayList<View> arrayList3 = new ArrayList<>();
-            m1870o.mo1837t(m1859z, m1863v, arrayList3, obj2, m1869p, m1868q, arrayList2);
-            m1888D(m1870o, viewGroup, componentCallbacksC0073g, view, arrayList2, m1863v, arrayList3, obj2, m1869p);
-            m1870o.m1834w(viewGroup, arrayList2, c0445a);
-            m1870o.mo1854c(viewGroup, m1859z);
-            m1870o.m1838s(viewGroup, arrayList2, c0445a);
+            o2.t(z3, v2, arrayList3, obj2, p2, q2, arrayList2);
+            D(o2, viewGroup, gVar, view, arrayList2, v2, arrayList3, obj2, p2);
+            o2.w(viewGroup, arrayList2, aVar);
+            o2.c(viewGroup, z3);
+            o2.s(viewGroup, arrayList2, aVar);
         }
     }
 
-    /* renamed from: t */
-    private static void m1865t(LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m, int i, C0115e c0115e, View view, C0445a<String, String> c0445a) {
-        ComponentCallbacksC0073g componentCallbacksC0073g;
-        ComponentCallbacksC0073g componentCallbacksC0073g2;
-        AbstractC0121t m1870o;
+    private static void t(m mVar, int i2, e eVar, View view, n.a<String, String> aVar) {
+        g gVar;
+        g gVar2;
+        t o2;
         Object obj;
-        ViewGroup viewGroup = layoutInflater$Factory2C0089m.f496o.mo2071c() ? (ViewGroup) layoutInflater$Factory2C0089m.f496o.mo2072b(i) : null;
-        if (viewGroup == null || (m1870o = m1870o((componentCallbacksC0073g2 = c0115e.f589d), (componentCallbacksC0073g = c0115e.f586a))) == null) {
+        ViewGroup viewGroup = mVar.f355o.c() ? (ViewGroup) mVar.f355o.b(i2) : null;
+        if (viewGroup == null || (o2 = o((gVar2 = eVar.f445d), (gVar = eVar.f442a))) == null) {
             return;
         }
-        boolean z = c0115e.f587b;
-        boolean z2 = c0115e.f590e;
+        boolean z = eVar.f443b;
+        boolean z2 = eVar.f446e;
         ArrayList<View> arrayList = new ArrayList<>();
         ArrayList<View> arrayList2 = new ArrayList<>();
-        Object m1863v = m1863v(m1870o, componentCallbacksC0073g, z);
-        Object m1862w = m1862w(m1870o, componentCallbacksC0073g2, z2);
-        Object m1867r = m1867r(m1870o, viewGroup, view, c0445a, c0115e, arrayList2, arrayList, m1863v, m1862w);
-        if (m1863v == null && m1867r == null) {
-            obj = m1862w;
+        Object v2 = v(o2, gVar, z);
+        Object w2 = w(o2, gVar2, z2);
+        Object r2 = r(o2, viewGroup, view, aVar, eVar, arrayList2, arrayList, v2, w2);
+        if (v2 == null && r2 == null) {
+            obj = w2;
             if (obj == null) {
                 return;
             }
         } else {
-            obj = m1862w;
+            obj = w2;
         }
-        ArrayList<View> m1869p = m1869p(m1870o, obj, componentCallbacksC0073g2, arrayList2, view);
-        ArrayList<View> m1869p2 = m1869p(m1870o, m1863v, componentCallbacksC0073g, arrayList, view);
-        m1886F(m1869p2, 4);
-        Object m1859z = m1859z(m1870o, m1863v, obj, m1867r, componentCallbacksC0073g, z);
-        if (m1859z != null) {
-            m1891A(m1870o, obj, componentCallbacksC0073g2, m1869p);
-            ArrayList<String> m1842o = m1870o.m1842o(arrayList);
-            m1870o.mo1837t(m1859z, m1863v, m1869p2, obj, m1869p, m1867r, arrayList);
-            m1870o.mo1854c(viewGroup, m1859z);
-            m1870o.m1833x(viewGroup, arrayList2, arrayList, m1842o, c0445a);
-            m1886F(m1869p2, 0);
-            m1870o.mo1831z(m1867r, arrayList2, arrayList);
+        ArrayList<View> p2 = p(o2, obj, gVar2, arrayList2, view);
+        ArrayList<View> p3 = p(o2, v2, gVar, arrayList, view);
+        F(p3, 4);
+        Object z3 = z(o2, v2, obj, r2, gVar, z);
+        if (z3 != null) {
+            A(o2, obj, gVar2, p2);
+            ArrayList<String> o3 = o2.o(arrayList);
+            o2.t(z3, v2, p3, obj, p2, r2, arrayList);
+            o2.c(viewGroup, z3);
+            o2.x(viewGroup, arrayList2, arrayList, o3, aVar);
+            F(p3, 0);
+            o2.z(r2, arrayList2, arrayList);
         }
     }
 
-    /* renamed from: u */
-    private static C0115e m1864u(C0115e c0115e, SparseArray<C0115e> sparseArray, int i) {
-        if (c0115e == null) {
-            C0115e c0115e2 = new C0115e();
-            sparseArray.put(i, c0115e2);
-            return c0115e2;
+    private static e u(e eVar, SparseArray<e> sparseArray, int i2) {
+        if (eVar == null) {
+            e eVar2 = new e();
+            sparseArray.put(i2, eVar2);
+            return eVar2;
         }
-        return c0115e;
+        return eVar;
     }
 
-    /* renamed from: v */
-    private static Object m1863v(AbstractC0121t abstractC0121t, ComponentCallbacksC0073g componentCallbacksC0073g, boolean z) {
-        if (componentCallbacksC0073g == null) {
+    private static Object v(t tVar, g gVar, boolean z) {
+        if (gVar == null) {
             return null;
         }
-        return abstractC0121t.mo1850g(z ? componentCallbacksC0073g.m2098x() : componentCallbacksC0073g.m2116o());
+        return tVar.g(z ? gVar.x() : gVar.o());
     }
 
-    /* renamed from: w */
-    private static Object m1862w(AbstractC0121t abstractC0121t, ComponentCallbacksC0073g componentCallbacksC0073g, boolean z) {
-        if (componentCallbacksC0073g == null) {
+    private static Object w(t tVar, g gVar, boolean z) {
+        if (gVar == null) {
             return null;
         }
-        return abstractC0121t.mo1850g(z ? componentCallbacksC0073g.m2094z() : componentCallbacksC0073g.m2112q());
+        return tVar.g(z ? gVar.z() : gVar.q());
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: x */
-    public static View m1861x(C0445a<String, View> c0445a, C0115e c0115e, Object obj, boolean z) {
+    public static View x(n.a<String, View> aVar, e eVar, Object obj, boolean z) {
         ArrayList<String> arrayList;
-        C0067c c0067c = c0115e.f588c;
-        if (obj == null || c0445a == null || (arrayList = c0067c.f362r) == null || arrayList.isEmpty()) {
+        android.support.v4.app.c cVar = eVar.f444c;
+        if (obj == null || aVar == null || (arrayList = cVar.f256r) == null || arrayList.isEmpty()) {
             return null;
         }
-        return c0445a.get((z ? c0067c.f362r : c0067c.f363s).get(0));
+        return aVar.get((z ? cVar.f256r : cVar.f257s).get(0));
     }
 
-    /* renamed from: y */
-    private static Object m1860y(AbstractC0121t abstractC0121t, ComponentCallbacksC0073g componentCallbacksC0073g, ComponentCallbacksC0073g componentCallbacksC0073g2, boolean z) {
-        if (componentCallbacksC0073g == null || componentCallbacksC0073g2 == null) {
+    private static Object y(t tVar, g gVar, g gVar2, boolean z) {
+        if (gVar == null || gVar2 == null) {
             return null;
         }
-        return abstractC0121t.mo1857A(abstractC0121t.mo1850g(z ? componentCallbacksC0073g2.m2195B() : componentCallbacksC0073g.m2197A()));
+        return tVar.A(tVar.g(z ? gVar2.B() : gVar.A()));
     }
 
-    /* renamed from: z */
-    private static Object m1859z(AbstractC0121t abstractC0121t, Object obj, Object obj2, Object obj3, ComponentCallbacksC0073g componentCallbacksC0073g, boolean z) {
-        return (obj == null || obj2 == null || componentCallbacksC0073g == null) ? true : z ? componentCallbacksC0073g.m2126j() : componentCallbacksC0073g.m2128i() ? abstractC0121t.mo1843n(obj2, obj, obj3) : abstractC0121t.mo1844m(obj2, obj, obj3);
+    private static Object z(t tVar, Object obj, Object obj2, Object obj3, g gVar, boolean z) {
+        return (obj == null || obj2 == null || gVar == null) ? true : z ? gVar.j() : gVar.i() ? tVar.n(obj2, obj, obj3) : tVar.m(obj2, obj, obj3);
     }
 }

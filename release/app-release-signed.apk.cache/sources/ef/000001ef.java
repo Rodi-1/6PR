@@ -1,36 +1,34 @@
-package p015n;
+package n;
 
-/* renamed from: n.i */
 /* loaded from: classes.dex */
-public class C0460i<F, S> {
+public class i<F, S> {
 
-    /* renamed from: a */
-    public final F f2186a;
+    /* renamed from: a  reason: collision with root package name */
+    public final F f1668a;
 
-    /* renamed from: b */
-    public final S f2187b;
+    /* renamed from: b  reason: collision with root package name */
+    public final S f1669b;
 
-    /* renamed from: a */
-    private static boolean m501a(Object obj, Object obj2) {
+    private static boolean a(Object obj, Object obj2) {
         return obj == obj2 || (obj != null && obj.equals(obj2));
     }
 
     public boolean equals(Object obj) {
-        if (obj instanceof C0460i) {
-            C0460i c0460i = (C0460i) obj;
-            return m501a(c0460i.f2186a, this.f2186a) && m501a(c0460i.f2187b, this.f2187b);
+        if (obj instanceof i) {
+            i iVar = (i) obj;
+            return a(iVar.f1668a, this.f1668a) && a(iVar.f1669b, this.f1669b);
         }
         return false;
     }
 
     public int hashCode() {
-        F f = this.f2186a;
-        int hashCode = f == null ? 0 : f.hashCode();
-        S s = this.f2187b;
-        return hashCode ^ (s != null ? s.hashCode() : 0);
+        F f2 = this.f1668a;
+        int hashCode = f2 == null ? 0 : f2.hashCode();
+        S s2 = this.f1669b;
+        return hashCode ^ (s2 != null ? s2.hashCode() : 0);
     }
 
     public String toString() {
-        return "Pair{" + String.valueOf(this.f2186a) + " " + String.valueOf(this.f2187b) + "}";
+        return "Pair{" + String.valueOf(this.f1668a) + " " + String.valueOf(this.f1669b) + "}";
     }
 }

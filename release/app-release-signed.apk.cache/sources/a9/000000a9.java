@@ -1,41 +1,38 @@
-package android.support.p001v4.widget;
+package android.support.v4.widget;
 
 import android.widget.ListView;
 
-/* renamed from: android.support.v4.widget.h */
 /* loaded from: classes.dex */
-public class C0155h extends AbstractView$OnTouchListenerC0135a {
+public class h extends a {
 
-    /* renamed from: t */
-    private final ListView f699t;
+    /* renamed from: t  reason: collision with root package name */
+    private final ListView f549t;
 
-    public C0155h(ListView listView) {
+    public h(ListView listView) {
         super(listView);
-        this.f699t = listView;
+        this.f549t = listView;
     }
 
-    @Override // android.support.p001v4.widget.AbstractView$OnTouchListenerC0135a
-    /* renamed from: a */
-    public boolean mo1732a(int i) {
+    @Override // android.support.v4.widget.a
+    public boolean a(int i2) {
         return false;
     }
 
-    @Override // android.support.p001v4.widget.AbstractView$OnTouchListenerC0135a
-    /* renamed from: b */
-    public boolean mo1731b(int i) {
-        ListView listView = this.f699t;
+    @Override // android.support.v4.widget.a
+    public boolean b(int i2) {
+        ListView listView = this.f549t;
         int count = listView.getCount();
         if (count == 0) {
             return false;
         }
         int childCount = listView.getChildCount();
         int firstVisiblePosition = listView.getFirstVisiblePosition();
-        int i2 = firstVisiblePosition + childCount;
-        if (i > 0) {
-            if (i2 >= count && listView.getChildAt(childCount - 1).getBottom() <= listView.getHeight()) {
+        int i3 = firstVisiblePosition + childCount;
+        if (i2 > 0) {
+            if (i3 >= count && listView.getChildAt(childCount - 1).getBottom() <= listView.getHeight()) {
                 return false;
             }
-        } else if (i >= 0) {
+        } else if (i2 >= 0) {
             return false;
         } else {
             if (firstVisiblePosition <= 0 && listView.getChildAt(0).getTop() >= 0) {
@@ -45,9 +42,8 @@ public class C0155h extends AbstractView$OnTouchListenerC0135a {
         return true;
     }
 
-    @Override // android.support.p001v4.widget.AbstractView$OnTouchListenerC0135a
-    /* renamed from: j */
-    public void mo1730j(int i, int i2) {
-        C0156i.m1729a(this.f699t, i2);
+    @Override // android.support.v4.widget.a
+    public void j(int i2, int i3) {
+        i.a(this.f549t, i3);
     }
 }

@@ -1,57 +1,54 @@
-package android.support.p002v7.view.menu;
+package android.support.v7.view.menu;
 
 import android.content.Context;
-import android.support.p002v7.view.menu.C0192e;
-import android.support.p002v7.widget.C0316v0;
+import android.support.v7.view.menu.e;
+import android.support.v7.widget.v0;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-/* renamed from: android.support.v7.view.menu.ExpandedMenuView */
 /* loaded from: classes.dex */
-public final class ExpandedMenuView extends ListView implements C0192e.InterfaceC0194b, InterfaceC0203k, AdapterView.OnItemClickListener {
+public final class ExpandedMenuView extends ListView implements e.b, k, AdapterView.OnItemClickListener {
 
-    /* renamed from: d */
-    private static final int[] f837d = {16842964, 16843049};
+    /* renamed from: d  reason: collision with root package name */
+    private static final int[] f646d = {16842964, 16843049};
 
-    /* renamed from: b */
-    private C0192e f838b;
+    /* renamed from: b  reason: collision with root package name */
+    private e f647b;
 
-    /* renamed from: c */
-    private int f839c;
+    /* renamed from: c  reason: collision with root package name */
+    private int f648c;
 
     public ExpandedMenuView(Context context, AttributeSet attributeSet) {
         this(context, attributeSet, 16842868);
     }
 
-    public ExpandedMenuView(Context context, AttributeSet attributeSet, int i) {
+    public ExpandedMenuView(Context context, AttributeSet attributeSet, int i2) {
         super(context, attributeSet);
         setOnItemClickListener(this);
-        C0316v0 m1108t = C0316v0.m1108t(context, attributeSet, f837d, i, 0);
-        if (m1108t.m1111q(0)) {
-            setBackgroundDrawable(m1108t.m1122f(0));
+        v0 t2 = v0.t(context, attributeSet, f646d, i2, 0);
+        if (t2.q(0)) {
+            setBackgroundDrawable(t2.f(0));
         }
-        if (m1108t.m1111q(1)) {
-            setDivider(m1108t.m1122f(1));
+        if (t2.q(1)) {
+            setDivider(t2.f(1));
         }
-        m1108t.m1107u();
+        t2.u();
     }
 
-    @Override // android.support.p002v7.view.menu.InterfaceC0203k
-    /* renamed from: b */
-    public void mo1499b(C0192e c0192e) {
-        this.f838b = c0192e;
+    @Override // android.support.v7.view.menu.k
+    public void b(e eVar) {
+        this.f647b = eVar;
     }
 
-    @Override // android.support.p002v7.view.menu.C0192e.InterfaceC0194b
-    /* renamed from: c */
-    public boolean mo1498c(C0196g c0196g) {
-        return this.f838b.m1644L(c0196g, 0);
+    @Override // android.support.v7.view.menu.e.b
+    public boolean c(g gVar) {
+        return this.f647b.L(gVar, 0);
     }
 
     public int getWindowAnimations() {
-        return this.f839c;
+        return this.f648c;
     }
 
     @Override // android.widget.ListView, android.widget.AbsListView, android.widget.AdapterView, android.view.ViewGroup, android.view.View
@@ -61,7 +58,7 @@ public final class ExpandedMenuView extends ListView implements C0192e.Interface
     }
 
     @Override // android.widget.AdapterView.OnItemClickListener
-    public void onItemClick(AdapterView adapterView, View view, int i, long j) {
-        mo1498c((C0196g) getAdapter().getItem(i));
+    public void onItemClick(AdapterView adapterView, View view, int i2, long j2) {
+        c((g) getAdapter().getItem(i2));
     }
 }

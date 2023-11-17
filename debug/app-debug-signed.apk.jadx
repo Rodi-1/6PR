@@ -27,22 +27,12 @@
   "openTabs": [
     {
       "type": "class",
-      "tabPath": "me.test.calculator.Calculator",
-      "subPath": "java",
-      "caret": 767,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
       "tabPath": "me.test.calculator.MainActivity",
       "subPath": "java",
-      "caret": 9889,
+      "caret": 15202,
       "view": {
         "x": 0,
-        "y": 4824
+        "y": 6896
       }
     },
     {

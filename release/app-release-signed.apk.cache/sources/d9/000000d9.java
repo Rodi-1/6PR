@@ -1,4 +1,4 @@
-package android.support.p002v7.view.menu;
+package android.support.v7.view.menu;
 
 import android.content.Context;
 import android.graphics.Rect;
@@ -10,53 +10,49 @@ import android.widget.FrameLayout;
 import android.widget.HeaderViewListAdapter;
 import android.widget.ListAdapter;
 import android.widget.PopupWindow;
-import p024w.InterfaceC0610h;
 
 /* JADX INFO: Access modifiers changed from: package-private */
-/* renamed from: android.support.v7.view.menu.h */
 /* loaded from: classes.dex */
-public abstract class AbstractC0198h implements InterfaceC0610h, InterfaceC0201j, AdapterView.OnItemClickListener {
+public abstract class h implements w.h, j, AdapterView.OnItemClickListener {
 
-    /* renamed from: b */
-    private Rect f988b;
+    /* renamed from: b  reason: collision with root package name */
+    private Rect f776b;
 
     /* JADX INFO: Access modifiers changed from: protected */
-    /* renamed from: o */
-    public static int m1576o(ListAdapter listAdapter, ViewGroup viewGroup, Context context, int i) {
+    public static int o(ListAdapter listAdapter, ViewGroup viewGroup, Context context, int i2) {
         int makeMeasureSpec = View.MeasureSpec.makeMeasureSpec(0, 0);
         int makeMeasureSpec2 = View.MeasureSpec.makeMeasureSpec(0, 0);
         int count = listAdapter.getCount();
         View view = null;
-        int i2 = 0;
         int i3 = 0;
-        for (int i4 = 0; i4 < count; i4++) {
-            int itemViewType = listAdapter.getItemViewType(i4);
-            if (itemViewType != i3) {
+        int i4 = 0;
+        for (int i5 = 0; i5 < count; i5++) {
+            int itemViewType = listAdapter.getItemViewType(i5);
+            if (itemViewType != i4) {
                 view = null;
-                i3 = itemViewType;
+                i4 = itemViewType;
             }
             if (viewGroup == null) {
                 viewGroup = new FrameLayout(context);
             }
-            view = listAdapter.getView(i4, view, viewGroup);
+            view = listAdapter.getView(i5, view, viewGroup);
             view.measure(makeMeasureSpec, makeMeasureSpec2);
             int measuredWidth = view.getMeasuredWidth();
-            if (measuredWidth >= i) {
-                return i;
+            if (measuredWidth >= i2) {
+                return i2;
             }
-            if (measuredWidth > i2) {
-                i2 = measuredWidth;
+            if (measuredWidth > i3) {
+                i3 = measuredWidth;
             }
         }
-        return i2;
+        return i3;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    /* renamed from: x */
-    public static boolean m1574x(C0192e c0192e) {
-        int size = c0192e.size();
-        for (int i = 0; i < size; i++) {
-            MenuItem item = c0192e.getItem(i);
+    public static boolean x(e eVar) {
+        int size = eVar.size();
+        for (int i2 = 0; i2 < size; i2++) {
+            MenuItem item = eVar.getItem(i2);
             if (item.isVisible() && item.getIcon() != null) {
                 return true;
             }
@@ -65,70 +61,55 @@ public abstract class AbstractC0198h implements InterfaceC0610h, InterfaceC0201j
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    /* renamed from: y */
-    public static C0191d m1573y(ListAdapter listAdapter) {
-        return listAdapter instanceof HeaderViewListAdapter ? (C0191d) ((HeaderViewListAdapter) listAdapter).getWrappedAdapter() : (C0191d) listAdapter;
+    public static d y(ListAdapter listAdapter) {
+        return listAdapter instanceof HeaderViewListAdapter ? (d) ((HeaderViewListAdapter) listAdapter).getWrappedAdapter() : (d) listAdapter;
     }
 
-    @Override // android.support.p002v7.view.menu.InterfaceC0201j
-    /* renamed from: e */
-    public boolean mo1413e(C0192e c0192e, C0196g c0196g) {
+    @Override // android.support.v7.view.menu.j
+    public boolean e(e eVar, g gVar) {
         return false;
     }
 
-    @Override // android.support.p002v7.view.menu.InterfaceC0201j
-    /* renamed from: h */
-    public boolean mo1412h(C0192e c0192e, C0196g c0196g) {
+    @Override // android.support.v7.view.menu.j
+    public boolean h(e eVar, g gVar) {
         return false;
     }
 
-    @Override // android.support.p002v7.view.menu.InterfaceC0201j
-    /* renamed from: k */
-    public void mo1342k(Context context, C0192e c0192e) {
+    @Override // android.support.v7.view.menu.j
+    public void k(Context context, e eVar) {
     }
 
-    /* renamed from: l */
-    public abstract void mo1553l(C0192e c0192e);
+    public abstract void l(e eVar);
 
-    /* renamed from: m */
-    protected boolean mo1578m() {
+    protected boolean m() {
         return true;
     }
 
-    /* renamed from: n */
-    public Rect m1577n() {
-        return this.f988b;
+    public Rect n() {
+        return this.f776b;
     }
 
     @Override // android.widget.AdapterView.OnItemClickListener
-    public void onItemClick(AdapterView<?> adapterView, View view, int i, long j) {
+    public void onItemClick(AdapterView<?> adapterView, View view, int i2, long j2) {
         ListAdapter listAdapter = (ListAdapter) adapterView.getAdapter();
-        m1573y(listAdapter).f916b.m1643M((MenuItem) listAdapter.getItem(i), this, mo1578m() ? 0 : 4);
+        y(listAdapter).f720b.M((MenuItem) listAdapter.getItem(i2), this, m() ? 0 : 4);
     }
 
-    /* renamed from: p */
-    public abstract void mo1552p(View view);
+    public abstract void p(View view);
 
-    /* renamed from: q */
-    public void m1575q(Rect rect) {
-        this.f988b = rect;
+    public void q(Rect rect) {
+        this.f776b = rect;
     }
 
-    /* renamed from: r */
-    public abstract void mo1551r(boolean z);
+    public abstract void r(boolean z);
 
-    /* renamed from: s */
-    public abstract void mo1550s(int i);
+    public abstract void s(int i2);
 
-    /* renamed from: t */
-    public abstract void mo1549t(int i);
+    public abstract void t(int i2);
 
-    /* renamed from: u */
-    public abstract void mo1548u(PopupWindow.OnDismissListener onDismissListener);
+    public abstract void u(PopupWindow.OnDismissListener onDismissListener);
 
-    /* renamed from: v */
-    public abstract void mo1547v(boolean z);
+    public abstract void v(boolean z);
 
-    /* renamed from: w */
-    public abstract void mo1546w(int i);
+    public abstract void w(int i2);
 }

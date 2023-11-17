@@ -1,160 +1,147 @@
-package p023v;
+package v;
 
 import android.view.View;
 import android.view.animation.Interpolator;
 import java.util.ArrayList;
 import java.util.Iterator;
-import p016o.C0511s;
-import p016o.C0515u;
-import p016o.InterfaceC0514t;
+import o.s;
+import o.t;
+import o.u;
 
-/* renamed from: v.h */
 /* loaded from: classes.dex */
-public class C0595h {
+public class h {
 
-    /* renamed from: c */
-    private Interpolator f2700c;
+    /* renamed from: c  reason: collision with root package name */
+    private Interpolator f1948c;
 
-    /* renamed from: d */
-    InterfaceC0514t f2701d;
+    /* renamed from: d  reason: collision with root package name */
+    t f1949d;
 
-    /* renamed from: e */
-    private boolean f2702e;
+    /* renamed from: e  reason: collision with root package name */
+    private boolean f1950e;
 
-    /* renamed from: b */
-    private long f2699b = -1;
+    /* renamed from: b  reason: collision with root package name */
+    private long f1947b = -1;
 
-    /* renamed from: f */
-    private final C0515u f2703f = new C0596a();
+    /* renamed from: f  reason: collision with root package name */
+    private final u f1951f = new a();
 
-    /* renamed from: a */
-    final ArrayList<C0511s> f2698a = new ArrayList<>();
+    /* renamed from: a  reason: collision with root package name */
+    final ArrayList<s> f1946a = new ArrayList<>();
 
-    /* renamed from: v.h$a */
     /* loaded from: classes.dex */
-    class C0596a extends C0515u {
+    class a extends u {
 
-        /* renamed from: a */
-        private boolean f2704a = false;
+        /* renamed from: a  reason: collision with root package name */
+        private boolean f1952a = false;
 
-        /* renamed from: b */
-        private int f2705b = 0;
+        /* renamed from: b  reason: collision with root package name */
+        private int f1953b = 0;
 
-        C0596a() {
+        a() {
         }
 
-        @Override // p016o.InterfaceC0514t
-        /* renamed from: a */
-        public void mo33a(View view) {
-            int i = this.f2705b + 1;
-            this.f2705b = i;
-            if (i == C0595h.this.f2698a.size()) {
-                InterfaceC0514t interfaceC0514t = C0595h.this.f2701d;
-                if (interfaceC0514t != null) {
-                    interfaceC0514t.mo33a(null);
+        @Override // o.t
+        public void a(View view) {
+            int i2 = this.f1953b + 1;
+            this.f1953b = i2;
+            if (i2 == h.this.f1946a.size()) {
+                t tVar = h.this.f1949d;
+                if (tVar != null) {
+                    tVar.a(null);
                 }
-                m31d();
+                d();
             }
         }
 
-        @Override // p016o.C0515u, p016o.InterfaceC0514t
-        /* renamed from: b */
-        public void mo32b(View view) {
-            if (this.f2704a) {
+        @Override // o.u, o.t
+        public void b(View view) {
+            if (this.f1952a) {
                 return;
             }
-            this.f2704a = true;
-            InterfaceC0514t interfaceC0514t = C0595h.this.f2701d;
-            if (interfaceC0514t != null) {
-                interfaceC0514t.mo32b(null);
+            this.f1952a = true;
+            t tVar = h.this.f1949d;
+            if (tVar != null) {
+                tVar.b(null);
             }
         }
 
-        /* renamed from: d */
-        void m31d() {
-            this.f2705b = 0;
-            this.f2704a = false;
-            C0595h.this.m40b();
+        void d() {
+            this.f1953b = 0;
+            this.f1952a = false;
+            h.this.b();
         }
     }
 
-    /* renamed from: a */
-    public void m41a() {
-        if (this.f2702e) {
-            Iterator<C0511s> it = this.f2698a.iterator();
+    public void a() {
+        if (this.f1950e) {
+            Iterator<s> it = this.f1946a.iterator();
             while (it.hasNext()) {
-                it.next().m343b();
+                it.next().b();
             }
-            this.f2702e = false;
+            this.f1950e = false;
         }
     }
 
-    /* renamed from: b */
-    void m40b() {
-        this.f2702e = false;
+    void b() {
+        this.f1950e = false;
     }
 
-    /* renamed from: c */
-    public C0595h m39c(C0511s c0511s) {
-        if (!this.f2702e) {
-            this.f2698a.add(c0511s);
+    public h c(s sVar) {
+        if (!this.f1950e) {
+            this.f1946a.add(sVar);
         }
         return this;
     }
 
-    /* renamed from: d */
-    public C0595h m38d(C0511s c0511s, C0511s c0511s2) {
-        this.f2698a.add(c0511s);
-        c0511s2.m337h(c0511s.m342c());
-        this.f2698a.add(c0511s2);
+    public h d(s sVar, s sVar2) {
+        this.f1946a.add(sVar);
+        sVar2.h(sVar.c());
+        this.f1946a.add(sVar2);
         return this;
     }
 
-    /* renamed from: e */
-    public C0595h m37e(long j) {
-        if (!this.f2702e) {
-            this.f2699b = j;
+    public h e(long j2) {
+        if (!this.f1950e) {
+            this.f1947b = j2;
         }
         return this;
     }
 
-    /* renamed from: f */
-    public C0595h m36f(Interpolator interpolator) {
-        if (!this.f2702e) {
-            this.f2700c = interpolator;
+    public h f(Interpolator interpolator) {
+        if (!this.f1950e) {
+            this.f1948c = interpolator;
         }
         return this;
     }
 
-    /* renamed from: g */
-    public C0595h m35g(InterfaceC0514t interfaceC0514t) {
-        if (!this.f2702e) {
-            this.f2701d = interfaceC0514t;
+    public h g(t tVar) {
+        if (!this.f1950e) {
+            this.f1949d = tVar;
         }
         return this;
     }
 
-    /* renamed from: h */
-    public void m34h() {
-        if (this.f2702e) {
+    public void h() {
+        if (this.f1950e) {
             return;
         }
-        Iterator<C0511s> it = this.f2698a.iterator();
+        Iterator<s> it = this.f1946a.iterator();
         while (it.hasNext()) {
-            C0511s next = it.next();
-            long j = this.f2699b;
-            if (j >= 0) {
-                next.m341d(j);
+            s next = it.next();
+            long j2 = this.f1947b;
+            if (j2 >= 0) {
+                next.d(j2);
             }
-            Interpolator interpolator = this.f2700c;
+            Interpolator interpolator = this.f1948c;
             if (interpolator != null) {
-                next.m340e(interpolator);
+                next.e(interpolator);
             }
-            if (this.f2701d != null) {
-                next.m339f(this.f2703f);
+            if (this.f1949d != null) {
+                next.f(this.f1951f);
             }
-            next.m335j();
+            next.j();
         }
-        this.f2702e = true;
+        this.f1950e = true;
     }
 }

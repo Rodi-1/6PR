@@ -1,175 +1,161 @@
-package android.support.p002v7.widget;
+package android.support.v7.widget;
 
 import android.content.res.ColorStateList;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.RippleDrawable;
 import android.os.Build;
-import android.support.p001v4.widget.C0151g;
 import android.util.AttributeSet;
 import android.widget.ImageView;
-import p020s.C0578j;
-import p021t.C0580b;
 
-/* renamed from: android.support.v7.widget.o */
 /* loaded from: classes.dex */
-public class C0296o {
+public class o {
 
-    /* renamed from: a */
-    private final ImageView f1428a;
+    /* renamed from: a  reason: collision with root package name */
+    private final ImageView f1124a;
 
-    /* renamed from: b */
-    private C0312t0 f1429b;
+    /* renamed from: b  reason: collision with root package name */
+    private t0 f1125b;
 
-    /* renamed from: c */
-    private C0312t0 f1430c;
+    /* renamed from: c  reason: collision with root package name */
+    private t0 f1126c;
 
-    /* renamed from: d */
-    private C0312t0 f1431d;
+    /* renamed from: d  reason: collision with root package name */
+    private t0 f1127d;
 
-    public C0296o(ImageView imageView) {
-        this.f1428a = imageView;
+    public o(ImageView imageView) {
+        this.f1124a = imageView;
     }
 
-    /* renamed from: a */
-    private boolean m1180a(Drawable drawable) {
-        if (this.f1431d == null) {
-            this.f1431d = new C0312t0();
+    private boolean a(Drawable drawable) {
+        if (this.f1127d == null) {
+            this.f1127d = new t0();
         }
-        C0312t0 c0312t0 = this.f1431d;
-        c0312t0.m1128a();
-        ColorStateList m1740a = C0151g.m1740a(this.f1428a);
-        if (m1740a != null) {
-            c0312t0.f1501d = true;
-            c0312t0.f1498a = m1740a;
+        t0 t0Var = this.f1127d;
+        t0Var.a();
+        ColorStateList a2 = android.support.v4.widget.g.a(this.f1124a);
+        if (a2 != null) {
+            t0Var.f1193d = true;
+            t0Var.f1190a = a2;
         }
-        PorterDuff.Mode m1739b = C0151g.m1739b(this.f1428a);
-        if (m1739b != null) {
-            c0312t0.f1500c = true;
-            c0312t0.f1499b = m1739b;
+        PorterDuff.Mode b2 = android.support.v4.widget.g.b(this.f1124a);
+        if (b2 != null) {
+            t0Var.f1192c = true;
+            t0Var.f1191b = b2;
         }
-        if (c0312t0.f1501d || c0312t0.f1500c) {
-            C0283k.m1229C(drawable, c0312t0, this.f1428a.getDrawableState());
+        if (t0Var.f1193d || t0Var.f1192c) {
+            k.C(drawable, t0Var, this.f1124a.getDrawableState());
             return true;
         }
         return false;
     }
 
-    /* renamed from: j */
-    private boolean m1171j() {
-        int i = Build.VERSION.SDK_INT;
-        return i > 21 ? this.f1429b != null : i == 21;
+    private boolean j() {
+        int i2 = Build.VERSION.SDK_INT;
+        return i2 > 21 ? this.f1125b != null : i2 == 21;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: b */
-    public void m1179b() {
-        Drawable drawable = this.f1428a.getDrawable();
+    public void b() {
+        Drawable drawable = this.f1124a.getDrawable();
         if (drawable != null) {
-            C0258e0.m1323b(drawable);
+            e0.b(drawable);
         }
         if (drawable != null) {
-            if (m1171j() && m1180a(drawable)) {
+            if (j() && a(drawable)) {
                 return;
             }
-            C0312t0 c0312t0 = this.f1430c;
-            if (c0312t0 != null) {
-                C0283k.m1229C(drawable, c0312t0, this.f1428a.getDrawableState());
+            t0 t0Var = this.f1126c;
+            if (t0Var != null) {
+                k.C(drawable, t0Var, this.f1124a.getDrawableState());
                 return;
             }
-            C0312t0 c0312t02 = this.f1429b;
-            if (c0312t02 != null) {
-                C0283k.m1229C(drawable, c0312t02, this.f1428a.getDrawableState());
+            t0 t0Var2 = this.f1125b;
+            if (t0Var2 != null) {
+                k.C(drawable, t0Var2, this.f1124a.getDrawableState());
             }
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: c */
-    public ColorStateList m1178c() {
-        C0312t0 c0312t0 = this.f1430c;
-        if (c0312t0 != null) {
-            return c0312t0.f1498a;
+    public ColorStateList c() {
+        t0 t0Var = this.f1126c;
+        if (t0Var != null) {
+            return t0Var.f1190a;
         }
         return null;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: d */
-    public PorterDuff.Mode m1177d() {
-        C0312t0 c0312t0 = this.f1430c;
-        if (c0312t0 != null) {
-            return c0312t0.f1499b;
+    public PorterDuff.Mode d() {
+        t0 t0Var = this.f1126c;
+        if (t0Var != null) {
+            return t0Var.f1191b;
         }
         return null;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: e */
-    public boolean m1176e() {
-        return Build.VERSION.SDK_INT < 21 || !(this.f1428a.getBackground() instanceof RippleDrawable);
+    public boolean e() {
+        return Build.VERSION.SDK_INT < 21 || !(this.f1124a.getBackground() instanceof RippleDrawable);
     }
 
-    /* renamed from: f */
-    public void m1175f(AttributeSet attributeSet, int i) {
-        int m1115m;
-        C0316v0 m1108t = C0316v0.m1108t(this.f1428a.getContext(), attributeSet, C0578j.f2473N, i, 0);
+    public void f(AttributeSet attributeSet, int i2) {
+        int m2;
+        v0 t2 = v0.t(this.f1124a.getContext(), attributeSet, s.j.N, i2, 0);
         try {
-            Drawable drawable = this.f1428a.getDrawable();
-            if (drawable == null && (m1115m = m1108t.m1115m(C0578j.f2477O, -1)) != -1 && (drawable = C0580b.m98d(this.f1428a.getContext(), m1115m)) != null) {
-                this.f1428a.setImageDrawable(drawable);
+            Drawable drawable = this.f1124a.getDrawable();
+            if (drawable == null && (m2 = t2.m(s.j.O, -1)) != -1 && (drawable = t.b.d(this.f1124a.getContext(), m2)) != null) {
+                this.f1124a.setImageDrawable(drawable);
             }
             if (drawable != null) {
-                C0258e0.m1323b(drawable);
+                e0.b(drawable);
             }
-            int i2 = C0578j.f2481P;
-            if (m1108t.m1111q(i2)) {
-                C0151g.m1738c(this.f1428a, m1108t.m1125c(i2));
+            int i3 = s.j.P;
+            if (t2.q(i3)) {
+                android.support.v4.widget.g.c(this.f1124a, t2.c(i3));
             }
-            int i3 = C0578j.f2485Q;
-            if (m1108t.m1111q(i3)) {
-                C0151g.m1737d(this.f1428a, C0258e0.m1321d(m1108t.m1118j(i3, -1), null));
+            int i4 = s.j.Q;
+            if (t2.q(i4)) {
+                android.support.v4.widget.g.d(this.f1124a, e0.d(t2.j(i4, -1), null));
             }
         } finally {
-            m1108t.m1107u();
+            t2.u();
         }
     }
 
-    /* renamed from: g */
-    public void m1174g(int i) {
-        if (i != 0) {
-            Drawable m98d = C0580b.m98d(this.f1428a.getContext(), i);
-            if (m98d != null) {
-                C0258e0.m1323b(m98d);
+    public void g(int i2) {
+        if (i2 != 0) {
+            Drawable d2 = t.b.d(this.f1124a.getContext(), i2);
+            if (d2 != null) {
+                e0.b(d2);
             }
-            this.f1428a.setImageDrawable(m98d);
+            this.f1124a.setImageDrawable(d2);
         } else {
-            this.f1428a.setImageDrawable(null);
+            this.f1124a.setImageDrawable(null);
         }
-        m1179b();
+        b();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: h */
-    public void m1173h(ColorStateList colorStateList) {
-        if (this.f1430c == null) {
-            this.f1430c = new C0312t0();
+    public void h(ColorStateList colorStateList) {
+        if (this.f1126c == null) {
+            this.f1126c = new t0();
         }
-        C0312t0 c0312t0 = this.f1430c;
-        c0312t0.f1498a = colorStateList;
-        c0312t0.f1501d = true;
-        m1179b();
+        t0 t0Var = this.f1126c;
+        t0Var.f1190a = colorStateList;
+        t0Var.f1193d = true;
+        b();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: i */
-    public void m1172i(PorterDuff.Mode mode) {
-        if (this.f1430c == null) {
-            this.f1430c = new C0312t0();
+    public void i(PorterDuff.Mode mode) {
+        if (this.f1126c == null) {
+            this.f1126c = new t0();
         }
-        C0312t0 c0312t0 = this.f1430c;
-        c0312t0.f1499b = mode;
-        c0312t0.f1500c = true;
-        m1179b();
+        t0 t0Var = this.f1126c;
+        t0Var.f1191b = mode;
+        t0Var.f1192c = true;
+        b();
     }
 }

@@ -1,18 +1,16 @@
-package p017p;
+package p;
 
-/* renamed from: p.b */
 /* loaded from: classes.dex */
-public class C0519b {
+public class b {
 
-    /* renamed from: a */
-    private final Object f2244a;
+    /* renamed from: a  reason: collision with root package name */
+    private final Object f1726a;
 
-    public C0519b(Object obj) {
-        this.f2244a = obj;
+    public b(Object obj) {
+        this.f1726a = obj;
     }
 
-    /* renamed from: a */
-    public Object m301a() {
-        return this.f2244a;
+    public Object a() {
+        return this.f1726a;
     }
 }

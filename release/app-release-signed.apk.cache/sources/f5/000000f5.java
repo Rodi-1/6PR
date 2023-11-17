@@ -1,57 +1,51 @@
-package android.support.p002v7.widget;
+package android.support.v7.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
-import p016o.C0490o;
-import p020s.C0574f;
-import p020s.C0578j;
 
-/* renamed from: android.support.v7.widget.ButtonBarLayout */
 /* loaded from: classes.dex */
 public class ButtonBarLayout extends LinearLayout {
 
-    /* renamed from: b */
-    private boolean f1100b;
+    /* renamed from: b  reason: collision with root package name */
+    private boolean f875b;
 
-    /* renamed from: c */
-    private int f1101c;
+    /* renamed from: c  reason: collision with root package name */
+    private int f876c;
 
-    /* renamed from: d */
-    private int f1102d;
+    /* renamed from: d  reason: collision with root package name */
+    private int f877d;
 
     public ButtonBarLayout(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        this.f1101c = -1;
-        this.f1102d = 0;
-        TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C0578j.f2627z0);
-        this.f1100b = obtainStyledAttributes.getBoolean(C0578j.f2422A0, true);
+        this.f876c = -1;
+        this.f877d = 0;
+        TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, s.j.z0);
+        this.f875b = obtainStyledAttributes.getBoolean(s.j.A0, true);
         obtainStyledAttributes.recycle();
     }
 
-    /* renamed from: a */
-    private int m1492a(int i) {
+    private int a(int i2) {
         int childCount = getChildCount();
-        while (i < childCount) {
-            if (getChildAt(i).getVisibility() == 0) {
-                return i;
+        while (i2 < childCount) {
+            if (getChildAt(i2).getVisibility() == 0) {
+                return i2;
             }
-            i++;
+            i2++;
         }
         return -1;
     }
 
-    /* renamed from: b */
-    private boolean m1491b() {
+    private boolean b() {
         return getOrientation() == 1;
     }
 
     private void setStacked(boolean z) {
         setOrientation(z ? 1 : 0);
         setGravity(z ? 5 : 80);
-        View findViewById = findViewById(C0574f.spacer);
+        View findViewById = findViewById(s.f.spacer);
         if (findViewById != null) {
             findViewById.setVisibility(z ? 8 : 4);
         }
@@ -62,61 +56,61 @@ public class ButtonBarLayout extends LinearLayout {
 
     @Override // android.view.View
     public int getMinimumHeight() {
-        return Math.max(this.f1102d, super.getMinimumHeight());
+        return Math.max(this.f877d, super.getMinimumHeight());
     }
 
     @Override // android.widget.LinearLayout, android.view.View
-    protected void onMeasure(int i, int i2) {
-        int i3;
+    protected void onMeasure(int i2, int i3) {
+        int i4;
         boolean z;
-        int size = View.MeasureSpec.getSize(i);
-        int i4 = 0;
-        if (this.f1100b) {
-            if (size > this.f1101c && m1491b()) {
+        int size = View.MeasureSpec.getSize(i2);
+        int i5 = 0;
+        if (this.f875b) {
+            if (size > this.f876c && b()) {
                 setStacked(false);
             }
-            this.f1101c = size;
+            this.f876c = size;
         }
-        if (m1491b() || View.MeasureSpec.getMode(i) != 1073741824) {
-            i3 = i;
+        if (b() || View.MeasureSpec.getMode(i2) != 1073741824) {
+            i4 = i2;
             z = false;
         } else {
-            i3 = View.MeasureSpec.makeMeasureSpec(size, Integer.MIN_VALUE);
+            i4 = View.MeasureSpec.makeMeasureSpec(size, Integer.MIN_VALUE);
             z = true;
         }
-        super.onMeasure(i3, i2);
-        if (this.f1100b && !m1491b()) {
+        super.onMeasure(i4, i3);
+        if (this.f875b && !b()) {
             if ((getMeasuredWidthAndState() & (-16777216)) == 16777216) {
                 setStacked(true);
                 z = true;
             }
         }
         if (z) {
-            super.onMeasure(i, i2);
+            super.onMeasure(i2, i3);
         }
-        int m1492a = m1492a(0);
-        if (m1492a >= 0) {
-            View childAt = getChildAt(m1492a);
+        int a2 = a(0);
+        if (a2 >= 0) {
+            View childAt = getChildAt(a2);
             LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) childAt.getLayoutParams();
             int paddingTop = getPaddingTop() + childAt.getMeasuredHeight() + layoutParams.topMargin + layoutParams.bottomMargin + 0;
-            if (m1491b()) {
-                int m1492a2 = m1492a(m1492a + 1);
-                if (m1492a2 >= 0) {
-                    paddingTop += getChildAt(m1492a2).getPaddingTop() + ((int) (getResources().getDisplayMetrics().density * 16.0f));
+            if (b()) {
+                int a3 = a(a2 + 1);
+                if (a3 >= 0) {
+                    paddingTop += getChildAt(a3).getPaddingTop() + ((int) (getResources().getDisplayMetrics().density * 16.0f));
                 }
-                i4 = paddingTop;
+                i5 = paddingTop;
             } else {
-                i4 = paddingTop + getPaddingBottom();
+                i5 = paddingTop + getPaddingBottom();
             }
         }
-        if (C0490o.m407e(this) != i4) {
-            setMinimumHeight(i4);
+        if (o.o.e(this) != i5) {
+            setMinimumHeight(i5);
         }
     }
 
     public void setAllowStacking(boolean z) {
-        if (this.f1100b != z) {
-            this.f1100b = z;
+        if (this.f875b != z) {
+            this.f875b = z;
             if (!z && getOrientation() == 1) {
                 setStacked(false);
             }

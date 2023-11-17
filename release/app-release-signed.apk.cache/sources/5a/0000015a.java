@@ -1,30 +1,28 @@
-package android.support.p002v7.widget;
+package android.support.v7.widget;
 
 import android.content.res.ColorStateList;
 import android.graphics.PorterDuff;
 
-/* renamed from: android.support.v7.widget.t0 */
 /* loaded from: classes.dex */
-class C0312t0 {
+class t0 {
 
-    /* renamed from: a */
-    public ColorStateList f1498a;
+    /* renamed from: a  reason: collision with root package name */
+    public ColorStateList f1190a;
 
-    /* renamed from: b */
-    public PorterDuff.Mode f1499b;
+    /* renamed from: b  reason: collision with root package name */
+    public PorterDuff.Mode f1191b;
 
-    /* renamed from: c */
-    public boolean f1500c;
+    /* renamed from: c  reason: collision with root package name */
+    public boolean f1192c;
 
-    /* renamed from: d */
-    public boolean f1501d;
+    /* renamed from: d  reason: collision with root package name */
+    public boolean f1193d;
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: a */
-    public void m1128a() {
-        this.f1498a = null;
-        this.f1501d = false;
-        this.f1499b = null;
-        this.f1500c = false;
+    public void a() {
+        this.f1190a = null;
+        this.f1193d = false;
+        this.f1191b = null;
+        this.f1192c = false;
     }
 }

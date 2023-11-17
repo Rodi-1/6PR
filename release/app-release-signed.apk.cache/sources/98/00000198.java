@@ -1,101 +1,99 @@
-package p007f;
+package f;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-/* renamed from: f.h */
 /* loaded from: classes.dex */
-public class C0374h {
+public class h {
 
-    /* renamed from: a */
-    public List<C0370f> f1969a;
+    /* renamed from: a  reason: collision with root package name */
+    public List<f> f1468a;
 
-    /* renamed from: b */
-    int f1970b;
+    /* renamed from: b  reason: collision with root package name */
+    int f1469b;
 
-    /* renamed from: c */
-    int f1971c;
+    /* renamed from: c  reason: collision with root package name */
+    int f1470c;
 
-    /* renamed from: d */
-    public boolean f1972d;
+    /* renamed from: d  reason: collision with root package name */
+    public boolean f1471d;
 
-    /* renamed from: e */
-    public final int[] f1973e;
+    /* renamed from: e  reason: collision with root package name */
+    public final int[] f1472e;
 
-    /* renamed from: f */
-    List<C0370f> f1974f;
+    /* renamed from: f  reason: collision with root package name */
+    List<f> f1473f;
 
-    /* renamed from: g */
-    List<C0370f> f1975g;
+    /* renamed from: g  reason: collision with root package name */
+    List<f> f1474g;
 
-    /* renamed from: h */
-    HashSet<C0370f> f1976h;
+    /* renamed from: h  reason: collision with root package name */
+    HashSet<f> f1475h;
 
-    /* renamed from: i */
-    HashSet<C0370f> f1977i;
+    /* renamed from: i  reason: collision with root package name */
+    HashSet<f> f1476i;
 
-    /* renamed from: j */
-    List<C0370f> f1978j;
+    /* renamed from: j  reason: collision with root package name */
+    List<f> f1477j;
 
-    /* renamed from: k */
-    List<C0370f> f1979k;
+    /* renamed from: k  reason: collision with root package name */
+    List<f> f1478k;
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public C0374h(List<C0370f> list) {
-        this.f1970b = -1;
-        this.f1971c = -1;
-        this.f1972d = false;
-        this.f1973e = new int[]{-1, -1};
-        this.f1974f = new ArrayList();
-        this.f1975g = new ArrayList();
-        this.f1976h = new HashSet<>();
-        this.f1977i = new HashSet<>();
-        this.f1978j = new ArrayList();
-        this.f1979k = new ArrayList();
-        this.f1969a = list;
+    public h(List<f> list) {
+        this.f1469b = -1;
+        this.f1470c = -1;
+        this.f1471d = false;
+        this.f1472e = new int[]{-1, -1};
+        this.f1473f = new ArrayList();
+        this.f1474g = new ArrayList();
+        this.f1475h = new HashSet<>();
+        this.f1476i = new HashSet<>();
+        this.f1477j = new ArrayList();
+        this.f1478k = new ArrayList();
+        this.f1468a = list;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public C0374h(List<C0370f> list, boolean z) {
-        this.f1970b = -1;
-        this.f1971c = -1;
-        this.f1972d = false;
-        this.f1973e = new int[]{-1, -1};
-        this.f1974f = new ArrayList();
-        this.f1975g = new ArrayList();
-        this.f1976h = new HashSet<>();
-        this.f1977i = new HashSet<>();
-        this.f1978j = new ArrayList();
-        this.f1979k = new ArrayList();
-        this.f1969a = list;
-        this.f1972d = z;
+    public h(List<f> list, boolean z) {
+        this.f1469b = -1;
+        this.f1470c = -1;
+        this.f1471d = false;
+        this.f1472e = new int[]{-1, -1};
+        this.f1473f = new ArrayList();
+        this.f1474g = new ArrayList();
+        this.f1475h = new HashSet<>();
+        this.f1476i = new HashSet<>();
+        this.f1477j = new ArrayList();
+        this.f1478k = new ArrayList();
+        this.f1468a = list;
+        this.f1471d = z;
     }
 
-    /* renamed from: e */
-    private void m788e(ArrayList<C0370f> arrayList, C0370f c0370f) {
-        C0370f c0370f2;
-        if (c0370f.f1915k0) {
+    private void e(ArrayList<f> arrayList, f fVar) {
+        f fVar2;
+        if (fVar.k0) {
             return;
         }
-        arrayList.add(c0370f);
-        c0370f.f1915k0 = true;
-        if (c0370f.m870L()) {
+        arrayList.add(fVar);
+        fVar.k0 = true;
+        if (fVar.L()) {
             return;
         }
-        if (c0370f instanceof C0377j) {
-            C0377j c0377j = (C0377j) c0370f;
-            int i = c0377j.f1991w0;
-            for (int i2 = 0; i2 < i; i2++) {
-                m788e(arrayList, c0377j.f1990v0[i2]);
+        if (fVar instanceof j) {
+            j jVar = (j) fVar;
+            int i2 = jVar.w0;
+            for (int i3 = 0; i3 < i2; i3++) {
+                e(arrayList, jVar.v0[i3]);
             }
         }
-        int length = c0370f.f1870C.length;
-        for (int i3 = 0; i3 < length; i3++) {
-            C0365e c0365e = c0370f.f1870C[i3].f1842d;
-            if (c0365e != null && (c0370f2 = c0365e.f1840b) != c0370f.m823u()) {
-                m788e(arrayList, c0370f2);
+        int length = fVar.C.length;
+        for (int i4 = 0; i4 < length; i4++) {
+            e eVar = fVar.C[i4].f1413d;
+            if (eVar != null && (fVar2 = eVar.f1411b) != fVar.u()) {
+                e(arrayList, fVar2);
             }
         }
     }
@@ -104,81 +102,75 @@ public class C0374h {
     /* JADX WARN: Removed duplicated region for block: B:27:0x004c  */
     /* JADX WARN: Removed duplicated region for block: B:30:0x0067  */
     /* JADX WARN: Removed duplicated region for block: B:35:0x0083  */
-    /* renamed from: f */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private void m787f(p007f.C0370f r7) {
+    private void f(f.f r7) {
         /*
             Method dump skipped, instructions count: 215
             To view this dump change 'Code comments level' option to 'DEBUG'
         */
-        throw new UnsupportedOperationException("Method not decompiled: p007f.C0374h.m787f(f.f):void");
+        throw new UnsupportedOperationException("Method not decompiled: f.h.f(f.f):void");
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: a */
-    public void m792a(C0370f c0370f, int i) {
-        HashSet<C0370f> hashSet;
-        if (i == 0) {
-            hashSet = this.f1976h;
-        } else if (i != 1) {
+    public void a(f fVar, int i2) {
+        HashSet<f> hashSet;
+        if (i2 == 0) {
+            hashSet = this.f1475h;
+        } else if (i2 != 1) {
             return;
         } else {
-            hashSet = this.f1977i;
+            hashSet = this.f1476i;
         }
-        hashSet.add(c0370f);
+        hashSet.add(fVar);
     }
 
-    /* renamed from: b */
-    public List<C0370f> m791b(int i) {
-        if (i == 0) {
-            return this.f1974f;
+    public List<f> b(int i2) {
+        if (i2 == 0) {
+            return this.f1473f;
         }
-        if (i == 1) {
-            return this.f1975g;
+        if (i2 == 1) {
+            return this.f1474g;
         }
         return null;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: c */
-    public Set<C0370f> m790c(int i) {
-        if (i == 0) {
-            return this.f1976h;
+    public Set<f> c(int i2) {
+        if (i2 == 0) {
+            return this.f1475h;
         }
-        if (i == 1) {
-            return this.f1977i;
+        if (i2 == 1) {
+            return this.f1476i;
         }
         return null;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: d */
-    public List<C0370f> m789d() {
-        if (this.f1978j.isEmpty()) {
-            int size = this.f1969a.size();
-            for (int i = 0; i < size; i++) {
-                C0370f c0370f = this.f1969a.get(i);
-                if (!c0370f.f1911i0) {
-                    m788e((ArrayList) this.f1978j, c0370f);
+    public List<f> d() {
+        if (this.f1477j.isEmpty()) {
+            int size = this.f1468a.size();
+            for (int i2 = 0; i2 < size; i2++) {
+                f fVar = this.f1468a.get(i2);
+                if (!fVar.i0) {
+                    e((ArrayList) this.f1477j, fVar);
                 }
             }
-            this.f1979k.clear();
-            this.f1979k.addAll(this.f1969a);
-            this.f1979k.removeAll(this.f1978j);
-            return this.f1978j;
+            this.f1478k.clear();
+            this.f1478k.addAll(this.f1468a);
+            this.f1478k.removeAll(this.f1477j);
+            return this.f1477j;
         }
-        return this.f1978j;
+        return this.f1477j;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: g */
-    public void m786g() {
-        int size = this.f1979k.size();
-        for (int i = 0; i < size; i++) {
-            m787f(this.f1979k.get(i));
+    public void g() {
+        int size = this.f1478k.size();
+        for (int i2 = 0; i2 < size; i2++) {
+            f(this.f1478k.get(i2));
         }
     }
 }

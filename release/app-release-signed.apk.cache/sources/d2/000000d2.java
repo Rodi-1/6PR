@@ -1,112 +1,107 @@
-package android.support.p002v7.view.menu;
+package android.support.v7.view.menu;
 
-import android.support.p002v7.view.menu.InterfaceC0203k;
+import android.support.v7.view.menu.k;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import java.util.ArrayList;
-import p020s.C0575g;
 
-/* renamed from: android.support.v7.view.menu.d */
 /* loaded from: classes.dex */
-public class C0191d extends BaseAdapter {
+public class d extends BaseAdapter {
 
-    /* renamed from: g */
-    static final int f915g = C0575g.abc_popup_menu_item_layout;
+    /* renamed from: g  reason: collision with root package name */
+    static final int f719g = s.g.abc_popup_menu_item_layout;
 
-    /* renamed from: b */
-    C0192e f916b;
+    /* renamed from: b  reason: collision with root package name */
+    e f720b;
 
-    /* renamed from: c */
-    private int f917c = -1;
+    /* renamed from: c  reason: collision with root package name */
+    private int f721c = -1;
 
-    /* renamed from: d */
-    private boolean f918d;
+    /* renamed from: d  reason: collision with root package name */
+    private boolean f722d;
 
-    /* renamed from: e */
-    private final boolean f919e;
+    /* renamed from: e  reason: collision with root package name */
+    private final boolean f723e;
 
-    /* renamed from: f */
-    private final LayoutInflater f920f;
+    /* renamed from: f  reason: collision with root package name */
+    private final LayoutInflater f724f;
 
-    public C0191d(C0192e c0192e, LayoutInflater layoutInflater, boolean z) {
-        this.f919e = z;
-        this.f920f = layoutInflater;
-        this.f916b = c0192e;
-        m1655a();
+    public d(e eVar, LayoutInflater layoutInflater, boolean z) {
+        this.f723e = z;
+        this.f724f = layoutInflater;
+        this.f720b = eVar;
+        a();
     }
 
-    /* renamed from: a */
-    void m1655a() {
-        C0196g m1609v = this.f916b.m1609v();
-        if (m1609v != null) {
-            ArrayList<C0196g> m1605z = this.f916b.m1605z();
-            int size = m1605z.size();
-            for (int i = 0; i < size; i++) {
-                if (m1605z.get(i) == m1609v) {
-                    this.f917c = i;
+    void a() {
+        g v2 = this.f720b.v();
+        if (v2 != null) {
+            ArrayList<g> z = this.f720b.z();
+            int size = z.size();
+            for (int i2 = 0; i2 < size; i2++) {
+                if (z.get(i2) == v2) {
+                    this.f721c = i2;
                     return;
                 }
             }
         }
-        this.f917c = -1;
+        this.f721c = -1;
     }
 
-    /* renamed from: b */
-    public C0192e m1654b() {
-        return this.f916b;
+    public e b() {
+        return this.f720b;
     }
 
     @Override // android.widget.Adapter
     /* renamed from: c */
-    public C0196g getItem(int i) {
-        ArrayList<C0196g> m1605z = this.f919e ? this.f916b.m1605z() : this.f916b.m1648E();
-        int i2 = this.f917c;
-        if (i2 >= 0 && i >= i2) {
-            i++;
+    public g getItem(int i2) {
+        ArrayList<g> z = this.f723e ? this.f720b.z() : this.f720b.E();
+        int i3 = this.f721c;
+        if (i3 >= 0 && i2 >= i3) {
+            i2++;
         }
-        return m1605z.get(i);
+        return z.get(i2);
     }
 
-    /* renamed from: d */
-    public void m1652d(boolean z) {
-        this.f918d = z;
+    public void d(boolean z) {
+        this.f722d = z;
     }
 
     @Override // android.widget.Adapter
     public int getCount() {
-        ArrayList<C0196g> m1605z = this.f919e ? this.f916b.m1605z() : this.f916b.m1648E();
-        int i = this.f917c;
-        int size = m1605z.size();
-        return i < 0 ? size : size - 1;
+        ArrayList<g> z = this.f723e ? this.f720b.z() : this.f720b.E();
+        int i2 = this.f721c;
+        int size = z.size();
+        return i2 < 0 ? size : size - 1;
     }
 
     @Override // android.widget.Adapter
-    public long getItemId(int i) {
-        return i;
+    public long getItemId(int i2) {
+        return i2;
     }
 
     @Override // android.widget.Adapter
-    public View getView(int i, View view, ViewGroup viewGroup) {
+    public View getView(int i2, View view, ViewGroup viewGroup) {
         if (view == null) {
-            view = this.f920f.inflate(f915g, viewGroup, false);
+            view = this.f724f.inflate(f719g, viewGroup, false);
         }
-        int groupId = getItem(i).getGroupId();
-        int i2 = i - 1;
+        int groupId = getItem(i2).getGroupId();
+        int i3 = i2 - 1;
         ListMenuItemView listMenuItemView = (ListMenuItemView) view;
-        listMenuItemView.setGroupDividerEnabled(this.f916b.mo1543F() && groupId != (i2 >= 0 ? getItem(i2).getGroupId() : groupId));
-        InterfaceC0203k.InterfaceC0204a interfaceC0204a = (InterfaceC0203k.InterfaceC0204a) view;
-        if (this.f918d) {
+        listMenuItemView.setGroupDividerEnabled(this.f720b.F() && groupId != (i3 >= 0 ? getItem(i3).getGroupId() : groupId));
+        k.a aVar = (k.a) view;
+        if (this.f722d) {
             listMenuItemView.setForceShowIcon(true);
         }
-        interfaceC0204a.mo1558d(getItem(i), 0);
+        aVar.d(getItem(i2), 0);
         return view;
     }
 
     @Override // android.widget.BaseAdapter
     public void notifyDataSetChanged() {
-        m1655a();
+        a();
         super.notifyDataSetChanged();
     }
 }

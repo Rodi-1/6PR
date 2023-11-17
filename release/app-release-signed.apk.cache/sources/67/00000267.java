@@ -1,4 +1,4 @@
-package p021t;
+package t;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -6,96 +6,88 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.support.p002v7.widget.C0283k;
+import android.support.v7.widget.k;
 import android.util.Log;
 import android.util.SparseArray;
 import android.util.TypedValue;
 import java.util.WeakHashMap;
-import p008g.C0386a;
 
-/* renamed from: t.b */
 /* loaded from: classes.dex */
-public final class C0580b {
+public final class b {
 
-    /* renamed from: a */
-    private static final ThreadLocal<TypedValue> f2630a = new ThreadLocal<>();
+    /* renamed from: a  reason: collision with root package name */
+    private static final ThreadLocal<TypedValue> f1887a = new ThreadLocal<>();
 
-    /* renamed from: b */
-    private static final WeakHashMap<Context, SparseArray<C0581a>> f2631b = new WeakHashMap<>(0);
+    /* renamed from: b  reason: collision with root package name */
+    private static final WeakHashMap<Context, SparseArray<a>> f1888b = new WeakHashMap<>(0);
 
-    /* renamed from: c */
-    private static final Object f2632c = new Object();
+    /* renamed from: c  reason: collision with root package name */
+    private static final Object f1889c = new Object();
 
     /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: t.b$a */
     /* loaded from: classes.dex */
-    public static class C0581a {
+    public static class a {
 
-        /* renamed from: a */
-        final ColorStateList f2633a;
+        /* renamed from: a  reason: collision with root package name */
+        final ColorStateList f1890a;
 
-        /* renamed from: b */
-        final Configuration f2634b;
+        /* renamed from: b  reason: collision with root package name */
+        final Configuration f1891b;
 
-        C0581a(ColorStateList colorStateList, Configuration configuration) {
-            this.f2633a = colorStateList;
-            this.f2634b = configuration;
+        a(ColorStateList colorStateList, Configuration configuration) {
+            this.f1890a = colorStateList;
+            this.f1891b = configuration;
         }
     }
 
-    /* renamed from: a */
-    private static void m101a(Context context, int i, ColorStateList colorStateList) {
-        synchronized (f2632c) {
-            WeakHashMap<Context, SparseArray<C0581a>> weakHashMap = f2631b;
-            SparseArray<C0581a> sparseArray = weakHashMap.get(context);
+    private static void a(Context context, int i2, ColorStateList colorStateList) {
+        synchronized (f1889c) {
+            WeakHashMap<Context, SparseArray<a>> weakHashMap = f1888b;
+            SparseArray<a> sparseArray = weakHashMap.get(context);
             if (sparseArray == null) {
                 sparseArray = new SparseArray<>();
                 weakHashMap.put(context, sparseArray);
             }
-            sparseArray.append(i, new C0581a(colorStateList, context.getResources().getConfiguration()));
+            sparseArray.append(i2, new a(colorStateList, context.getResources().getConfiguration()));
         }
     }
 
-    /* renamed from: b */
-    private static ColorStateList m100b(Context context, int i) {
-        C0581a c0581a;
-        synchronized (f2632c) {
-            SparseArray<C0581a> sparseArray = f2631b.get(context);
-            if (sparseArray != null && sparseArray.size() > 0 && (c0581a = sparseArray.get(i)) != null) {
-                if (c0581a.f2634b.equals(context.getResources().getConfiguration())) {
-                    return c0581a.f2633a;
+    private static ColorStateList b(Context context, int i2) {
+        a aVar;
+        synchronized (f1889c) {
+            SparseArray<a> sparseArray = f1888b.get(context);
+            if (sparseArray != null && sparseArray.size() > 0 && (aVar = sparseArray.get(i2)) != null) {
+                if (aVar.f1891b.equals(context.getResources().getConfiguration())) {
+                    return aVar.f1890a;
                 }
-                sparseArray.remove(i);
+                sparseArray.remove(i2);
             }
             return null;
         }
     }
 
-    /* renamed from: c */
-    public static ColorStateList m99c(Context context, int i) {
+    public static ColorStateList c(Context context, int i2) {
         if (Build.VERSION.SDK_INT >= 23) {
-            return context.getColorStateList(i);
+            return context.getColorStateList(i2);
         }
-        ColorStateList m100b = m100b(context, i);
-        if (m100b != null) {
-            return m100b;
+        ColorStateList b2 = b(context, i2);
+        if (b2 != null) {
+            return b2;
         }
-        ColorStateList m96f = m96f(context, i);
-        if (m96f != null) {
-            m101a(context, i, m96f);
-            return m96f;
+        ColorStateList f2 = f(context, i2);
+        if (f2 != null) {
+            a(context, i2, f2);
+            return f2;
         }
-        return C0386a.m735a(context, i);
+        return g.a.a(context, i2);
     }
 
-    /* renamed from: d */
-    public static Drawable m98d(Context context, int i) {
-        return C0283k.m1214n().m1212p(context, i);
+    public static Drawable d(Context context, int i2) {
+        return k.n().p(context, i2);
     }
 
-    /* renamed from: e */
-    private static TypedValue m97e() {
-        ThreadLocal<TypedValue> threadLocal = f2630a;
+    private static TypedValue e() {
+        ThreadLocal<TypedValue> threadLocal = f1887a;
         TypedValue typedValue = threadLocal.get();
         if (typedValue == null) {
             TypedValue typedValue2 = new TypedValue();
@@ -105,26 +97,24 @@ public final class C0580b {
         return typedValue;
     }
 
-    /* renamed from: f */
-    private static ColorStateList m96f(Context context, int i) {
-        if (m95g(context, i)) {
+    private static ColorStateList f(Context context, int i2) {
+        if (g(context, i2)) {
             return null;
         }
         Resources resources = context.getResources();
         try {
-            return C0579a.m106a(resources, resources.getXml(i), context.getTheme());
-        } catch (Exception e) {
-            Log.e("AppCompatResources", "Failed to inflate ColorStateList, leaving it to the framework", e);
+            return t.a.a(resources, resources.getXml(i2), context.getTheme());
+        } catch (Exception e2) {
+            Log.e("AppCompatResources", "Failed to inflate ColorStateList, leaving it to the framework", e2);
             return null;
         }
     }
 
-    /* renamed from: g */
-    private static boolean m95g(Context context, int i) {
+    private static boolean g(Context context, int i2) {
         Resources resources = context.getResources();
-        TypedValue m97e = m97e();
-        resources.getValue(i, m97e, true);
-        int i2 = m97e.type;
-        return i2 >= 28 && i2 <= 31;
+        TypedValue e2 = e();
+        resources.getValue(i2, e2, true);
+        int i3 = e2.type;
+        return i3 >= 28 && i3 <= 31;
     }
 }

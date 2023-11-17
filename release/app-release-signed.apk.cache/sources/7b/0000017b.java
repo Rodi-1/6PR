@@ -1,8 +1,7 @@
-package p004c;
+package c;
 
-/* renamed from: c.a */
 /* loaded from: classes.dex */
-public final class C0345a {
+public final class a {
 
     /* renamed from: a */
     public static final int tag_transition_group = 2131165342;

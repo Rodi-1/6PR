@@ -6,27 +6,24 @@ import android.graphics.PorterDuff;
 import android.graphics.Rect;
 import android.graphics.Region;
 import android.graphics.drawable.Drawable;
-import p011j.C0413a;
-import p011j.InterfaceC0414b;
 
-/* renamed from: android.support.graphics.drawable.g */
 /* loaded from: classes.dex */
-abstract class AbstractC0049g extends Drawable implements InterfaceC0414b {
+abstract class g extends Drawable implements j.b {
 
-    /* renamed from: b */
-    Drawable f263b;
+    /* renamed from: b  reason: collision with root package name */
+    Drawable f157b;
 
     @Override // android.graphics.drawable.Drawable
     public void applyTheme(Resources.Theme theme) {
-        Drawable drawable = this.f263b;
+        Drawable drawable = this.f157b;
         if (drawable != null) {
-            C0413a.m633a(drawable, theme);
+            j.a.a(drawable, theme);
         }
     }
 
     @Override // android.graphics.drawable.Drawable
     public void clearColorFilter() {
-        Drawable drawable = this.f263b;
+        Drawable drawable = this.f157b;
         if (drawable != null) {
             drawable.clearColorFilter();
         } else {
@@ -36,110 +33,110 @@ abstract class AbstractC0049g extends Drawable implements InterfaceC0414b {
 
     @Override // android.graphics.drawable.Drawable
     public ColorFilter getColorFilter() {
-        Drawable drawable = this.f263b;
+        Drawable drawable = this.f157b;
         if (drawable != null) {
-            return C0413a.m630d(drawable);
+            return j.a.d(drawable);
         }
         return null;
     }
 
     @Override // android.graphics.drawable.Drawable
     public Drawable getCurrent() {
-        Drawable drawable = this.f263b;
+        Drawable drawable = this.f157b;
         return drawable != null ? drawable.getCurrent() : super.getCurrent();
     }
 
     @Override // android.graphics.drawable.Drawable
     public int getMinimumHeight() {
-        Drawable drawable = this.f263b;
+        Drawable drawable = this.f157b;
         return drawable != null ? drawable.getMinimumHeight() : super.getMinimumHeight();
     }
 
     @Override // android.graphics.drawable.Drawable
     public int getMinimumWidth() {
-        Drawable drawable = this.f263b;
+        Drawable drawable = this.f157b;
         return drawable != null ? drawable.getMinimumWidth() : super.getMinimumWidth();
     }
 
     @Override // android.graphics.drawable.Drawable
     public boolean getPadding(Rect rect) {
-        Drawable drawable = this.f263b;
+        Drawable drawable = this.f157b;
         return drawable != null ? drawable.getPadding(rect) : super.getPadding(rect);
     }
 
     @Override // android.graphics.drawable.Drawable
     public int[] getState() {
-        Drawable drawable = this.f263b;
+        Drawable drawable = this.f157b;
         return drawable != null ? drawable.getState() : super.getState();
     }
 
     @Override // android.graphics.drawable.Drawable
     public Region getTransparentRegion() {
-        Drawable drawable = this.f263b;
+        Drawable drawable = this.f157b;
         return drawable != null ? drawable.getTransparentRegion() : super.getTransparentRegion();
     }
 
     @Override // android.graphics.drawable.Drawable
     public void jumpToCurrentState() {
-        Drawable drawable = this.f263b;
+        Drawable drawable = this.f157b;
         if (drawable != null) {
-            C0413a.m626h(drawable);
+            j.a.h(drawable);
         }
     }
 
     @Override // android.graphics.drawable.Drawable
-    protected boolean onLevelChange(int i) {
-        Drawable drawable = this.f263b;
-        return drawable != null ? drawable.setLevel(i) : super.onLevelChange(i);
+    protected boolean onLevelChange(int i2) {
+        Drawable drawable = this.f157b;
+        return drawable != null ? drawable.setLevel(i2) : super.onLevelChange(i2);
     }
 
     @Override // android.graphics.drawable.Drawable
-    public void setChangingConfigurations(int i) {
-        Drawable drawable = this.f263b;
+    public void setChangingConfigurations(int i2) {
+        Drawable drawable = this.f157b;
         if (drawable != null) {
-            drawable.setChangingConfigurations(i);
+            drawable.setChangingConfigurations(i2);
         } else {
-            super.setChangingConfigurations(i);
+            super.setChangingConfigurations(i2);
         }
     }
 
     @Override // android.graphics.drawable.Drawable
-    public void setColorFilter(int i, PorterDuff.Mode mode) {
-        Drawable drawable = this.f263b;
+    public void setColorFilter(int i2, PorterDuff.Mode mode) {
+        Drawable drawable = this.f157b;
         if (drawable != null) {
-            drawable.setColorFilter(i, mode);
+            drawable.setColorFilter(i2, mode);
         } else {
-            super.setColorFilter(i, mode);
+            super.setColorFilter(i2, mode);
         }
     }
 
     @Override // android.graphics.drawable.Drawable
     public void setFilterBitmap(boolean z) {
-        Drawable drawable = this.f263b;
+        Drawable drawable = this.f157b;
         if (drawable != null) {
             drawable.setFilterBitmap(z);
         }
     }
 
     @Override // android.graphics.drawable.Drawable
-    public void setHotspot(float f, float f2) {
-        Drawable drawable = this.f263b;
+    public void setHotspot(float f2, float f3) {
+        Drawable drawable = this.f157b;
         if (drawable != null) {
-            C0413a.m624j(drawable, f, f2);
+            j.a.j(drawable, f2, f3);
         }
     }
 
     @Override // android.graphics.drawable.Drawable
-    public void setHotspotBounds(int i, int i2, int i3, int i4) {
-        Drawable drawable = this.f263b;
+    public void setHotspotBounds(int i2, int i3, int i4, int i5) {
+        Drawable drawable = this.f157b;
         if (drawable != null) {
-            C0413a.m623k(drawable, i, i2, i3, i4);
+            j.a.k(drawable, i2, i3, i4, i5);
         }
     }
 
     @Override // android.graphics.drawable.Drawable
     public boolean setState(int[] iArr) {
-        Drawable drawable = this.f263b;
+        Drawable drawable = this.f157b;
         return drawable != null ? drawable.setState(iArr) : super.setState(iArr);
     }
 }

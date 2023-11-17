@@ -1,4 +1,4 @@
-package android.support.p001v4.widget;
+package android.support.v4.widget;
 
 import android.os.Build;
 import android.util.Log;
@@ -7,139 +7,124 @@ import android.widget.PopupWindow;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-/* renamed from: android.support.v4.widget.j */
 /* loaded from: classes.dex */
-public final class C0157j {
+public final class j {
 
-    /* renamed from: a */
-    static final C0161d f700a;
+    /* renamed from: a  reason: collision with root package name */
+    static final d f550a;
 
-    /* renamed from: android.support.v4.widget.j$a */
     /* loaded from: classes.dex */
-    static class C0158a extends C0161d {
-        C0158a() {
+    static class a extends d {
+        a() {
         }
 
-        @Override // android.support.p001v4.widget.C0157j.C0161d
-        /* renamed from: c */
-        public void mo1723c(PopupWindow popupWindow, View view, int i, int i2, int i3) {
-            popupWindow.showAsDropDown(view, i, i2, i3);
+        @Override // android.support.v4.widget.j.d
+        public void c(PopupWindow popupWindow, View view, int i2, int i3, int i4) {
+            popupWindow.showAsDropDown(view, i2, i3, i4);
         }
     }
 
-    /* renamed from: android.support.v4.widget.j$b */
     /* loaded from: classes.dex */
-    static class C0159b extends C0158a {
+    static class b extends a {
 
-        /* renamed from: c */
-        private static Field f701c;
+        /* renamed from: c  reason: collision with root package name */
+        private static Field f551c;
 
         static {
             try {
                 Field declaredField = PopupWindow.class.getDeclaredField("mOverlapAnchor");
-                f701c = declaredField;
+                f551c = declaredField;
                 declaredField.setAccessible(true);
-            } catch (NoSuchFieldException e) {
-                Log.i("PopupWindowCompatApi21", "Could not fetch mOverlapAnchor field from PopupWindow", e);
+            } catch (NoSuchFieldException e2) {
+                Log.i("PopupWindowCompatApi21", "Could not fetch mOverlapAnchor field from PopupWindow", e2);
             }
         }
 
-        C0159b() {
+        b() {
         }
 
-        @Override // android.support.p001v4.widget.C0157j.C0161d
-        /* renamed from: a */
-        public void mo1725a(PopupWindow popupWindow, boolean z) {
-            Field field = f701c;
+        @Override // android.support.v4.widget.j.d
+        public void a(PopupWindow popupWindow, boolean z) {
+            Field field = f551c;
             if (field != null) {
                 try {
                     field.set(popupWindow, Boolean.valueOf(z));
-                } catch (IllegalAccessException e) {
-                    Log.i("PopupWindowCompatApi21", "Could not set overlap anchor field in PopupWindow", e);
+                } catch (IllegalAccessException e2) {
+                    Log.i("PopupWindowCompatApi21", "Could not set overlap anchor field in PopupWindow", e2);
                 }
             }
         }
     }
 
-    /* renamed from: android.support.v4.widget.j$c */
     /* loaded from: classes.dex */
-    static class C0160c extends C0159b {
-        C0160c() {
+    static class c extends b {
+        c() {
         }
 
-        @Override // android.support.p001v4.widget.C0157j.C0159b, android.support.p001v4.widget.C0157j.C0161d
-        /* renamed from: a */
-        public void mo1725a(PopupWindow popupWindow, boolean z) {
+        @Override // android.support.v4.widget.j.b, android.support.v4.widget.j.d
+        public void a(PopupWindow popupWindow, boolean z) {
             popupWindow.setOverlapAnchor(z);
         }
 
-        @Override // android.support.p001v4.widget.C0157j.C0161d
-        /* renamed from: b */
-        public void mo1724b(PopupWindow popupWindow, int i) {
-            popupWindow.setWindowLayoutType(i);
+        @Override // android.support.v4.widget.j.d
+        public void b(PopupWindow popupWindow, int i2) {
+            popupWindow.setWindowLayoutType(i2);
         }
     }
 
-    /* renamed from: android.support.v4.widget.j$d */
     /* loaded from: classes.dex */
-    static class C0161d {
+    static class d {
 
-        /* renamed from: a */
-        private static Method f702a;
+        /* renamed from: a  reason: collision with root package name */
+        private static Method f552a;
 
-        /* renamed from: b */
-        private static boolean f703b;
+        /* renamed from: b  reason: collision with root package name */
+        private static boolean f553b;
 
-        C0161d() {
+        d() {
         }
 
-        /* renamed from: a */
-        public void mo1725a(PopupWindow popupWindow, boolean z) {
+        public void a(PopupWindow popupWindow, boolean z) {
         }
 
-        /* renamed from: b */
-        public void mo1724b(PopupWindow popupWindow, int i) {
-            if (!f703b) {
+        public void b(PopupWindow popupWindow, int i2) {
+            if (!f553b) {
                 try {
                     Method declaredMethod = PopupWindow.class.getDeclaredMethod("setWindowLayoutType", Integer.TYPE);
-                    f702a = declaredMethod;
+                    f552a = declaredMethod;
                     declaredMethod.setAccessible(true);
                 } catch (Exception unused) {
                 }
-                f703b = true;
+                f553b = true;
             }
-            Method method = f702a;
+            Method method = f552a;
             if (method != null) {
                 try {
-                    method.invoke(popupWindow, Integer.valueOf(i));
+                    method.invoke(popupWindow, Integer.valueOf(i2));
                 } catch (Exception unused2) {
                 }
             }
         }
 
-        /* renamed from: c */
-        public void mo1723c(PopupWindow popupWindow, View view, int i, int i2, int i3) {
+        public void c(PopupWindow popupWindow, View view, int i2, int i3, int i4) {
             throw null;
         }
     }
 
     static {
-        int i = Build.VERSION.SDK_INT;
-        f700a = i >= 23 ? new C0160c() : i >= 21 ? new C0159b() : new C0158a();
+        int i2 = Build.VERSION.SDK_INT;
+        f550a = i2 >= 23 ? new c() : i2 >= 21 ? new b() : new a();
     }
 
-    /* renamed from: a */
-    public static void m1728a(PopupWindow popupWindow, boolean z) {
-        f700a.mo1725a(popupWindow, z);
+    public static void a(PopupWindow popupWindow, boolean z) {
+        f550a.a(popupWindow, z);
     }
 
-    /* renamed from: b */
-    public static void m1727b(PopupWindow popupWindow, int i) {
-        f700a.mo1724b(popupWindow, i);
+    public static void b(PopupWindow popupWindow, int i2) {
+        f550a.b(popupWindow, i2);
     }
 
-    /* renamed from: c */
-    public static void m1726c(PopupWindow popupWindow, View view, int i, int i2, int i3) {
-        f700a.mo1723c(popupWindow, view, i, i2, i3);
+    public static void c(PopupWindow popupWindow, View view, int i2, int i3, int i4) {
+        f550a.c(popupWindow, view, i2, i3, i4);
     }
 }

@@ -1,230 +1,222 @@
-package android.support.p001v4.app;
+package android.support.v4.app;
 
-import android.support.p001v4.app.ComponentCallbacksC0073g;
-import android.support.p001v4.app.LayoutInflater$Factory2C0089m;
+import android.support.v4.app.g;
+import android.support.v4.app.m;
 import android.util.Log;
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
 /* JADX INFO: Access modifiers changed from: package-private */
-/* renamed from: android.support.v4.app.c */
 /* loaded from: classes.dex */
-public final class C0067c extends AbstractC0109q implements LayoutInflater$Factory2C0089m.InterfaceC0102k {
+public final class c extends q implements m.k {
 
-    /* renamed from: a */
-    final LayoutInflater$Factory2C0089m f345a;
+    /* renamed from: a  reason: collision with root package name */
+    final m f239a;
 
-    /* renamed from: c */
-    int f347c;
+    /* renamed from: c  reason: collision with root package name */
+    int f241c;
 
-    /* renamed from: d */
-    int f348d;
+    /* renamed from: d  reason: collision with root package name */
+    int f242d;
 
-    /* renamed from: e */
-    int f349e;
+    /* renamed from: e  reason: collision with root package name */
+    int f243e;
 
-    /* renamed from: f */
-    int f350f;
+    /* renamed from: f  reason: collision with root package name */
+    int f244f;
 
-    /* renamed from: g */
-    int f351g;
+    /* renamed from: g  reason: collision with root package name */
+    int f245g;
 
-    /* renamed from: h */
-    int f352h;
+    /* renamed from: h  reason: collision with root package name */
+    int f246h;
 
-    /* renamed from: i */
-    boolean f353i;
+    /* renamed from: i  reason: collision with root package name */
+    boolean f247i;
 
-    /* renamed from: k */
-    String f355k;
+    /* renamed from: k  reason: collision with root package name */
+    String f249k;
 
-    /* renamed from: l */
-    boolean f356l;
+    /* renamed from: l  reason: collision with root package name */
+    boolean f250l;
 
-    /* renamed from: n */
-    int f358n;
+    /* renamed from: n  reason: collision with root package name */
+    int f252n;
 
-    /* renamed from: o */
-    CharSequence f359o;
+    /* renamed from: o  reason: collision with root package name */
+    CharSequence f253o;
 
-    /* renamed from: p */
-    int f360p;
+    /* renamed from: p  reason: collision with root package name */
+    int f254p;
 
-    /* renamed from: q */
-    CharSequence f361q;
+    /* renamed from: q  reason: collision with root package name */
+    CharSequence f255q;
 
-    /* renamed from: r */
-    ArrayList<String> f362r;
+    /* renamed from: r  reason: collision with root package name */
+    ArrayList<String> f256r;
 
-    /* renamed from: s */
-    ArrayList<String> f363s;
+    /* renamed from: s  reason: collision with root package name */
+    ArrayList<String> f257s;
 
-    /* renamed from: u */
-    ArrayList<Runnable> f365u;
+    /* renamed from: u  reason: collision with root package name */
+    ArrayList<Runnable> f259u;
 
-    /* renamed from: b */
-    ArrayList<C0068a> f346b = new ArrayList<>();
+    /* renamed from: b  reason: collision with root package name */
+    ArrayList<a> f240b = new ArrayList<>();
 
-    /* renamed from: j */
-    boolean f354j = true;
+    /* renamed from: j  reason: collision with root package name */
+    boolean f248j = true;
 
-    /* renamed from: m */
-    int f357m = -1;
+    /* renamed from: m  reason: collision with root package name */
+    int f251m = -1;
 
-    /* renamed from: t */
-    boolean f364t = false;
+    /* renamed from: t  reason: collision with root package name */
+    boolean f258t = false;
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: android.support.v4.app.c$a */
     /* loaded from: classes.dex */
-    public static final class C0068a {
+    public static final class a {
 
-        /* renamed from: a */
-        int f366a;
+        /* renamed from: a  reason: collision with root package name */
+        int f260a;
 
-        /* renamed from: b */
-        ComponentCallbacksC0073g f367b;
+        /* renamed from: b  reason: collision with root package name */
+        g f261b;
 
-        /* renamed from: c */
-        int f368c;
+        /* renamed from: c  reason: collision with root package name */
+        int f262c;
 
-        /* renamed from: d */
-        int f369d;
+        /* renamed from: d  reason: collision with root package name */
+        int f263d;
 
-        /* renamed from: e */
-        int f370e;
+        /* renamed from: e  reason: collision with root package name */
+        int f264e;
 
-        /* renamed from: f */
-        int f371f;
+        /* renamed from: f  reason: collision with root package name */
+        int f265f;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public C0068a() {
+        public a() {
         }
 
-        C0068a(int i, ComponentCallbacksC0073g componentCallbacksC0073g) {
-            this.f366a = i;
-            this.f367b = componentCallbacksC0073g;
+        a(int i2, g gVar) {
+            this.f260a = i2;
+            this.f261b = gVar;
         }
     }
 
-    public C0067c(LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m) {
-        this.f345a = layoutInflater$Factory2C0089m;
+    public c(m mVar) {
+        this.f239a = mVar;
     }
 
-    /* renamed from: l */
-    private static boolean m2206l(C0068a c0068a) {
-        ComponentCallbacksC0073g componentCallbacksC0073g = c0068a.f367b;
-        return (componentCallbacksC0073g == null || !componentCallbacksC0073g.f416k || componentCallbacksC0073g.f396I == null || componentCallbacksC0073g.f389B || componentCallbacksC0073g.f388A || !componentCallbacksC0073g.m2179J()) ? false : true;
+    private static boolean l(a aVar) {
+        g gVar = aVar.f261b;
+        return (gVar == null || !gVar.f289k || gVar.I == null || gVar.B || gVar.A || !gVar.J()) ? false : true;
     }
 
-    @Override // android.support.p001v4.app.LayoutInflater$Factory2C0089m.InterfaceC0102k
-    /* renamed from: a */
-    public boolean mo1907a(ArrayList<C0067c> arrayList, ArrayList<Boolean> arrayList2) {
-        if (LayoutInflater$Factory2C0089m.f472F) {
+    @Override // android.support.v4.app.m.k
+    public boolean a(ArrayList<c> arrayList, ArrayList<Boolean> arrayList2) {
+        if (m.F) {
             Log.v("FragmentManager", "Run: " + this);
         }
         arrayList.add(this);
         arrayList2.add(Boolean.FALSE);
-        if (this.f353i) {
-            this.f345a.m1945h(this);
+        if (this.f247i) {
+            this.f239a.h(this);
             return true;
         }
         return true;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: b */
-    public void m2216b(C0068a c0068a) {
-        this.f346b.add(c0068a);
-        c0068a.f368c = this.f347c;
-        c0068a.f369d = this.f348d;
-        c0068a.f370e = this.f349e;
-        c0068a.f371f = this.f350f;
+    public void b(a aVar) {
+        this.f240b.add(aVar);
+        aVar.f262c = this.f241c;
+        aVar.f263d = this.f242d;
+        aVar.f264e = this.f243e;
+        aVar.f265f = this.f244f;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: c */
-    public void m2215c(int i) {
-        C0068a c0068a;
-        if (this.f353i) {
-            if (LayoutInflater$Factory2C0089m.f472F) {
-                Log.v("FragmentManager", "Bump nesting in " + this + " by " + i);
+    public void c(int i2) {
+        a aVar;
+        if (this.f247i) {
+            if (m.F) {
+                Log.v("FragmentManager", "Bump nesting in " + this + " by " + i2);
             }
-            int size = this.f346b.size();
-            for (int i2 = 0; i2 < size; i2++) {
-                ComponentCallbacksC0073g componentCallbacksC0073g = this.f346b.get(i2).f367b;
-                if (componentCallbacksC0073g != null) {
-                    componentCallbacksC0073g.f422q += i;
-                    if (LayoutInflater$Factory2C0089m.f472F) {
-                        Log.v("FragmentManager", "Bump nesting of " + c0068a.f367b + " to " + c0068a.f367b.f422q);
+            int size = this.f240b.size();
+            for (int i3 = 0; i3 < size; i3++) {
+                g gVar = this.f240b.get(i3).f261b;
+                if (gVar != null) {
+                    gVar.f295q += i2;
+                    if (m.F) {
+                        Log.v("FragmentManager", "Bump nesting of " + aVar.f261b + " to " + aVar.f261b.f295q);
                     }
                 }
             }
         }
     }
 
-    /* renamed from: d */
-    public void m2214d(String str, FileDescriptor fileDescriptor, PrintWriter printWriter, String[] strArr) {
-        m2213e(str, printWriter, true);
+    public void d(String str, FileDescriptor fileDescriptor, PrintWriter printWriter, String[] strArr) {
+        e(str, printWriter, true);
     }
 
-    /* renamed from: e */
-    public void m2213e(String str, PrintWriter printWriter, boolean z) {
+    public void e(String str, PrintWriter printWriter, boolean z) {
         String str2;
         if (z) {
             printWriter.print(str);
             printWriter.print("mName=");
-            printWriter.print(this.f355k);
+            printWriter.print(this.f249k);
             printWriter.print(" mIndex=");
-            printWriter.print(this.f357m);
+            printWriter.print(this.f251m);
             printWriter.print(" mCommitted=");
-            printWriter.println(this.f356l);
-            if (this.f351g != 0) {
+            printWriter.println(this.f250l);
+            if (this.f245g != 0) {
                 printWriter.print(str);
                 printWriter.print("mTransition=#");
-                printWriter.print(Integer.toHexString(this.f351g));
+                printWriter.print(Integer.toHexString(this.f245g));
                 printWriter.print(" mTransitionStyle=#");
-                printWriter.println(Integer.toHexString(this.f352h));
+                printWriter.println(Integer.toHexString(this.f246h));
             }
-            if (this.f347c != 0 || this.f348d != 0) {
+            if (this.f241c != 0 || this.f242d != 0) {
                 printWriter.print(str);
                 printWriter.print("mEnterAnim=#");
-                printWriter.print(Integer.toHexString(this.f347c));
+                printWriter.print(Integer.toHexString(this.f241c));
                 printWriter.print(" mExitAnim=#");
-                printWriter.println(Integer.toHexString(this.f348d));
+                printWriter.println(Integer.toHexString(this.f242d));
             }
-            if (this.f349e != 0 || this.f350f != 0) {
+            if (this.f243e != 0 || this.f244f != 0) {
                 printWriter.print(str);
                 printWriter.print("mPopEnterAnim=#");
-                printWriter.print(Integer.toHexString(this.f349e));
+                printWriter.print(Integer.toHexString(this.f243e));
                 printWriter.print(" mPopExitAnim=#");
-                printWriter.println(Integer.toHexString(this.f350f));
+                printWriter.println(Integer.toHexString(this.f244f));
             }
-            if (this.f358n != 0 || this.f359o != null) {
+            if (this.f252n != 0 || this.f253o != null) {
                 printWriter.print(str);
                 printWriter.print("mBreadCrumbTitleRes=#");
-                printWriter.print(Integer.toHexString(this.f358n));
+                printWriter.print(Integer.toHexString(this.f252n));
                 printWriter.print(" mBreadCrumbTitleText=");
-                printWriter.println(this.f359o);
+                printWriter.println(this.f253o);
             }
-            if (this.f360p != 0 || this.f361q != null) {
+            if (this.f254p != 0 || this.f255q != null) {
                 printWriter.print(str);
                 printWriter.print("mBreadCrumbShortTitleRes=#");
-                printWriter.print(Integer.toHexString(this.f360p));
+                printWriter.print(Integer.toHexString(this.f254p));
                 printWriter.print(" mBreadCrumbShortTitleText=");
-                printWriter.println(this.f361q);
+                printWriter.println(this.f255q);
             }
         }
-        if (this.f346b.isEmpty()) {
+        if (this.f240b.isEmpty()) {
             return;
         }
         printWriter.print(str);
         printWriter.println("Operations:");
-        int size = this.f346b.size();
-        for (int i = 0; i < size; i++) {
-            C0068a c0068a = this.f346b.get(i);
-            switch (c0068a.f366a) {
+        int size = this.f240b.size();
+        for (int i2 = 0; i2 < size; i2++) {
+            a aVar = this.f240b.get(i2);
+            switch (aVar.f260a) {
                 case 0:
                     str2 = "NULL";
                     break;
@@ -256,224 +248,219 @@ public final class C0067c extends AbstractC0109q implements LayoutInflater$Facto
                     str2 = "UNSET_PRIMARY_NAV";
                     break;
                 default:
-                    str2 = "cmd=" + c0068a.f366a;
+                    str2 = "cmd=" + aVar.f260a;
                     break;
             }
             printWriter.print(str);
             printWriter.print("  Op #");
-            printWriter.print(i);
+            printWriter.print(i2);
             printWriter.print(": ");
             printWriter.print(str2);
             printWriter.print(" ");
-            printWriter.println(c0068a.f367b);
+            printWriter.println(aVar.f261b);
             if (z) {
-                if (c0068a.f368c != 0 || c0068a.f369d != 0) {
+                if (aVar.f262c != 0 || aVar.f263d != 0) {
                     printWriter.print(str);
                     printWriter.print("enterAnim=#");
-                    printWriter.print(Integer.toHexString(c0068a.f368c));
+                    printWriter.print(Integer.toHexString(aVar.f262c));
                     printWriter.print(" exitAnim=#");
-                    printWriter.println(Integer.toHexString(c0068a.f369d));
+                    printWriter.println(Integer.toHexString(aVar.f263d));
                 }
-                if (c0068a.f370e != 0 || c0068a.f371f != 0) {
+                if (aVar.f264e != 0 || aVar.f265f != 0) {
                     printWriter.print(str);
                     printWriter.print("popEnterAnim=#");
-                    printWriter.print(Integer.toHexString(c0068a.f370e));
+                    printWriter.print(Integer.toHexString(aVar.f264e));
                     printWriter.print(" popExitAnim=#");
-                    printWriter.println(Integer.toHexString(c0068a.f371f));
+                    printWriter.println(Integer.toHexString(aVar.f265f));
                 }
             }
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: f */
-    public void m2212f() {
-        int size = this.f346b.size();
-        for (int i = 0; i < size; i++) {
-            C0068a c0068a = this.f346b.get(i);
-            ComponentCallbacksC0073g componentCallbacksC0073g = c0068a.f367b;
-            if (componentCallbacksC0073g != null) {
-                componentCallbacksC0073g.m2146Z0(this.f351g, this.f352h);
+    public void f() {
+        int size = this.f240b.size();
+        for (int i2 = 0; i2 < size; i2++) {
+            a aVar = this.f240b.get(i2);
+            g gVar = aVar.f261b;
+            if (gVar != null) {
+                gVar.Z0(this.f245g, this.f246h);
             }
-            switch (c0068a.f366a) {
+            switch (aVar.f260a) {
                 case 1:
-                    componentCallbacksC0073g.m2148Y0(c0068a.f368c);
-                    this.f345a.m1943i(componentCallbacksC0073g, false);
+                    gVar.Y0(aVar.f262c);
+                    this.f239a.i(gVar, false);
                     break;
                 case 2:
                 default:
-                    throw new IllegalArgumentException("Unknown cmd: " + c0068a.f366a);
+                    throw new IllegalArgumentException("Unknown cmd: " + aVar.f260a);
                 case 3:
-                    componentCallbacksC0073g.m2148Y0(c0068a.f369d);
-                    this.f345a.m1992M0(componentCallbacksC0073g);
+                    gVar.Y0(aVar.f263d);
+                    this.f239a.M0(gVar);
                     break;
                 case 4:
-                    componentCallbacksC0073g.m2148Y0(c0068a.f369d);
-                    this.f345a.m1922s0(componentCallbacksC0073g);
+                    gVar.Y0(aVar.f263d);
+                    this.f239a.s0(gVar);
                     break;
                 case 5:
-                    componentCallbacksC0073g.m2148Y0(c0068a.f368c);
-                    this.f345a.m1957c1(componentCallbacksC0073g);
+                    gVar.Y0(aVar.f262c);
+                    this.f239a.c1(gVar);
                     break;
                 case 6:
-                    componentCallbacksC0073g.m2148Y0(c0068a.f369d);
-                    this.f345a.m1925r(componentCallbacksC0073g);
+                    gVar.Y0(aVar.f263d);
+                    this.f239a.r(gVar);
                     break;
                 case 7:
-                    componentCallbacksC0073g.m2148Y0(c0068a.f368c);
-                    this.f345a.m1937l(componentCallbacksC0073g);
+                    gVar.Y0(aVar.f262c);
+                    this.f239a.l(gVar);
                     break;
                 case 8:
-                    this.f345a.m1966Z0(componentCallbacksC0073g);
+                    this.f239a.Z0(gVar);
                     break;
                 case 9:
-                    this.f345a.m1966Z0(null);
+                    this.f239a.Z0(null);
                     break;
             }
-            if (!this.f364t && c0068a.f366a != 1 && componentCallbacksC0073g != null) {
-                this.f345a.m2012C0(componentCallbacksC0073g);
+            if (!this.f258t && aVar.f260a != 1 && gVar != null) {
+                this.f239a.C0(gVar);
             }
         }
-        if (this.f364t) {
+        if (this.f258t) {
             return;
         }
-        LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m = this.f345a;
-        layoutInflater$Factory2C0089m.m2010D0(layoutInflater$Factory2C0089m.f494m, true);
+        m mVar = this.f239a;
+        mVar.D0(mVar.f353m, true);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: g */
-    public void m2211g(boolean z) {
-        for (int size = this.f346b.size() - 1; size >= 0; size--) {
-            C0068a c0068a = this.f346b.get(size);
-            ComponentCallbacksC0073g componentCallbacksC0073g = c0068a.f367b;
-            if (componentCallbacksC0073g != null) {
-                componentCallbacksC0073g.m2146Z0(LayoutInflater$Factory2C0089m.m1982R0(this.f351g), this.f352h);
+    public void g(boolean z) {
+        for (int size = this.f240b.size() - 1; size >= 0; size--) {
+            a aVar = this.f240b.get(size);
+            g gVar = aVar.f261b;
+            if (gVar != null) {
+                gVar.Z0(m.R0(this.f245g), this.f246h);
             }
-            switch (c0068a.f366a) {
+            switch (aVar.f260a) {
                 case 1:
-                    componentCallbacksC0073g.m2148Y0(c0068a.f371f);
-                    this.f345a.m1992M0(componentCallbacksC0073g);
+                    gVar.Y0(aVar.f265f);
+                    this.f239a.M0(gVar);
                     break;
                 case 2:
                 default:
-                    throw new IllegalArgumentException("Unknown cmd: " + c0068a.f366a);
+                    throw new IllegalArgumentException("Unknown cmd: " + aVar.f260a);
                 case 3:
-                    componentCallbacksC0073g.m2148Y0(c0068a.f370e);
-                    this.f345a.m1943i(componentCallbacksC0073g, false);
+                    gVar.Y0(aVar.f264e);
+                    this.f239a.i(gVar, false);
                     break;
                 case 4:
-                    componentCallbacksC0073g.m2148Y0(c0068a.f370e);
-                    this.f345a.m1957c1(componentCallbacksC0073g);
+                    gVar.Y0(aVar.f264e);
+                    this.f239a.c1(gVar);
                     break;
                 case 5:
-                    componentCallbacksC0073g.m2148Y0(c0068a.f371f);
-                    this.f345a.m1922s0(componentCallbacksC0073g);
+                    gVar.Y0(aVar.f265f);
+                    this.f239a.s0(gVar);
                     break;
                 case 6:
-                    componentCallbacksC0073g.m2148Y0(c0068a.f370e);
-                    this.f345a.m1937l(componentCallbacksC0073g);
+                    gVar.Y0(aVar.f264e);
+                    this.f239a.l(gVar);
                     break;
                 case 7:
-                    componentCallbacksC0073g.m2148Y0(c0068a.f371f);
-                    this.f345a.m1925r(componentCallbacksC0073g);
+                    gVar.Y0(aVar.f265f);
+                    this.f239a.r(gVar);
                     break;
                 case 8:
-                    this.f345a.m1966Z0(null);
+                    this.f239a.Z0(null);
                     break;
                 case 9:
-                    this.f345a.m1966Z0(componentCallbacksC0073g);
+                    this.f239a.Z0(gVar);
                     break;
             }
-            if (!this.f364t && c0068a.f366a != 3 && componentCallbacksC0073g != null) {
-                this.f345a.m2012C0(componentCallbacksC0073g);
+            if (!this.f258t && aVar.f260a != 3 && gVar != null) {
+                this.f239a.C0(gVar);
             }
         }
-        if (this.f364t || !z) {
+        if (this.f258t || !z) {
             return;
         }
-        LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m = this.f345a;
-        layoutInflater$Factory2C0089m.m2010D0(layoutInflater$Factory2C0089m.f494m, true);
+        m mVar = this.f239a;
+        mVar.D0(mVar.f353m, true);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: h */
-    public ComponentCallbacksC0073g m2210h(ArrayList<ComponentCallbacksC0073g> arrayList, ComponentCallbacksC0073g componentCallbacksC0073g) {
-        ComponentCallbacksC0073g componentCallbacksC0073g2 = componentCallbacksC0073g;
-        int i = 0;
-        while (i < this.f346b.size()) {
-            C0068a c0068a = this.f346b.get(i);
-            int i2 = c0068a.f366a;
-            if (i2 != 1) {
-                if (i2 == 2) {
-                    ComponentCallbacksC0073g componentCallbacksC0073g3 = c0068a.f367b;
-                    int i3 = componentCallbacksC0073g3.f430y;
+    public g h(ArrayList<g> arrayList, g gVar) {
+        g gVar2 = gVar;
+        int i2 = 0;
+        while (i2 < this.f240b.size()) {
+            a aVar = this.f240b.get(i2);
+            int i3 = aVar.f260a;
+            if (i3 != 1) {
+                if (i3 == 2) {
+                    g gVar3 = aVar.f261b;
+                    int i4 = gVar3.y;
                     boolean z = false;
                     for (int size = arrayList.size() - 1; size >= 0; size--) {
-                        ComponentCallbacksC0073g componentCallbacksC0073g4 = arrayList.get(size);
-                        if (componentCallbacksC0073g4.f430y == i3) {
-                            if (componentCallbacksC0073g4 == componentCallbacksC0073g3) {
+                        g gVar4 = arrayList.get(size);
+                        if (gVar4.y == i4) {
+                            if (gVar4 == gVar3) {
                                 z = true;
                             } else {
-                                if (componentCallbacksC0073g4 == componentCallbacksC0073g2) {
-                                    this.f346b.add(i, new C0068a(9, componentCallbacksC0073g4));
-                                    i++;
-                                    componentCallbacksC0073g2 = null;
+                                if (gVar4 == gVar2) {
+                                    this.f240b.add(i2, new a(9, gVar4));
+                                    i2++;
+                                    gVar2 = null;
                                 }
-                                C0068a c0068a2 = new C0068a(3, componentCallbacksC0073g4);
-                                c0068a2.f368c = c0068a.f368c;
-                                c0068a2.f370e = c0068a.f370e;
-                                c0068a2.f369d = c0068a.f369d;
-                                c0068a2.f371f = c0068a.f371f;
-                                this.f346b.add(i, c0068a2);
-                                arrayList.remove(componentCallbacksC0073g4);
-                                i++;
+                                a aVar2 = new a(3, gVar4);
+                                aVar2.f262c = aVar.f262c;
+                                aVar2.f264e = aVar.f264e;
+                                aVar2.f263d = aVar.f263d;
+                                aVar2.f265f = aVar.f265f;
+                                this.f240b.add(i2, aVar2);
+                                arrayList.remove(gVar4);
+                                i2++;
                             }
                         }
                     }
                     if (z) {
-                        this.f346b.remove(i);
-                        i--;
+                        this.f240b.remove(i2);
+                        i2--;
                     } else {
-                        c0068a.f366a = 1;
-                        arrayList.add(componentCallbacksC0073g3);
+                        aVar.f260a = 1;
+                        arrayList.add(gVar3);
                     }
-                } else if (i2 == 3 || i2 == 6) {
-                    arrayList.remove(c0068a.f367b);
-                    ComponentCallbacksC0073g componentCallbacksC0073g5 = c0068a.f367b;
-                    if (componentCallbacksC0073g5 == componentCallbacksC0073g2) {
-                        this.f346b.add(i, new C0068a(9, componentCallbacksC0073g5));
-                        i++;
-                        componentCallbacksC0073g2 = null;
+                } else if (i3 == 3 || i3 == 6) {
+                    arrayList.remove(aVar.f261b);
+                    g gVar5 = aVar.f261b;
+                    if (gVar5 == gVar2) {
+                        this.f240b.add(i2, new a(9, gVar5));
+                        i2++;
+                        gVar2 = null;
                     }
-                } else if (i2 != 7) {
-                    if (i2 == 8) {
-                        this.f346b.add(i, new C0068a(9, componentCallbacksC0073g2));
-                        i++;
-                        componentCallbacksC0073g2 = c0068a.f367b;
+                } else if (i3 != 7) {
+                    if (i3 == 8) {
+                        this.f240b.add(i2, new a(9, gVar2));
+                        i2++;
+                        gVar2 = aVar.f261b;
                     }
                 }
-                i++;
+                i2++;
             }
-            arrayList.add(c0068a.f367b);
-            i++;
+            arrayList.add(aVar.f261b);
+            i2++;
         }
-        return componentCallbacksC0073g2;
+        return gVar2;
     }
 
-    /* renamed from: i */
-    public String m2209i() {
-        return this.f355k;
+    public String i() {
+        return this.f249k;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: j */
-    public boolean m2208j(int i) {
-        int size = this.f346b.size();
-        for (int i2 = 0; i2 < size; i2++) {
-            ComponentCallbacksC0073g componentCallbacksC0073g = this.f346b.get(i2).f367b;
-            int i3 = componentCallbacksC0073g != null ? componentCallbacksC0073g.f430y : 0;
-            if (i3 != 0 && i3 == i) {
+    public boolean j(int i2) {
+        int size = this.f240b.size();
+        for (int i3 = 0; i3 < size; i3++) {
+            g gVar = this.f240b.get(i3).f261b;
+            int i4 = gVar != null ? gVar.y : 0;
+            if (i4 != 0 && i4 == i2) {
                 return true;
             }
         }
@@ -481,102 +468,97 @@ public final class C0067c extends AbstractC0109q implements LayoutInflater$Facto
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: k */
-    public boolean m2207k(ArrayList<C0067c> arrayList, int i, int i2) {
-        if (i2 == i) {
+    public boolean k(ArrayList<c> arrayList, int i2, int i3) {
+        if (i3 == i2) {
             return false;
         }
-        int size = this.f346b.size();
-        int i3 = -1;
-        for (int i4 = 0; i4 < size; i4++) {
-            ComponentCallbacksC0073g componentCallbacksC0073g = this.f346b.get(i4).f367b;
-            int i5 = componentCallbacksC0073g != null ? componentCallbacksC0073g.f430y : 0;
-            if (i5 != 0 && i5 != i3) {
-                for (int i6 = i; i6 < i2; i6++) {
-                    C0067c c0067c = arrayList.get(i6);
-                    int size2 = c0067c.f346b.size();
-                    for (int i7 = 0; i7 < size2; i7++) {
-                        ComponentCallbacksC0073g componentCallbacksC0073g2 = c0067c.f346b.get(i7).f367b;
-                        if ((componentCallbacksC0073g2 != null ? componentCallbacksC0073g2.f430y : 0) == i5) {
+        int size = this.f240b.size();
+        int i4 = -1;
+        for (int i5 = 0; i5 < size; i5++) {
+            g gVar = this.f240b.get(i5).f261b;
+            int i6 = gVar != null ? gVar.y : 0;
+            if (i6 != 0 && i6 != i4) {
+                for (int i7 = i2; i7 < i3; i7++) {
+                    c cVar = arrayList.get(i7);
+                    int size2 = cVar.f240b.size();
+                    for (int i8 = 0; i8 < size2; i8++) {
+                        g gVar2 = cVar.f240b.get(i8).f261b;
+                        if ((gVar2 != null ? gVar2.y : 0) == i6) {
                             return true;
                         }
                     }
                 }
-                i3 = i5;
+                i4 = i6;
             }
         }
         return false;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: m */
-    public boolean m2205m() {
-        for (int i = 0; i < this.f346b.size(); i++) {
-            if (m2206l(this.f346b.get(i))) {
+    public boolean m() {
+        for (int i2 = 0; i2 < this.f240b.size(); i2++) {
+            if (l(this.f240b.get(i2))) {
                 return true;
             }
         }
         return false;
     }
 
-    /* renamed from: n */
-    public void m2204n() {
-        ArrayList<Runnable> arrayList = this.f365u;
+    public void n() {
+        ArrayList<Runnable> arrayList = this.f259u;
         if (arrayList != null) {
             int size = arrayList.size();
-            for (int i = 0; i < size; i++) {
-                this.f365u.get(i).run();
+            for (int i2 = 0; i2 < size; i2++) {
+                this.f259u.get(i2).run();
             }
-            this.f365u = null;
+            this.f259u = null;
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: o */
-    public void m2203o(ComponentCallbacksC0073g.InterfaceC0078e interfaceC0078e) {
-        for (int i = 0; i < this.f346b.size(); i++) {
-            C0068a c0068a = this.f346b.get(i);
-            if (m2206l(c0068a)) {
-                c0068a.f367b.m2144a1(interfaceC0078e);
+    public void o(g.e eVar) {
+        for (int i2 = 0; i2 < this.f240b.size(); i2++) {
+            a aVar = this.f240b.get(i2);
+            if (l(aVar)) {
+                aVar.f261b.a1(eVar);
             }
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: p */
-    public ComponentCallbacksC0073g m2202p(ArrayList<ComponentCallbacksC0073g> arrayList, ComponentCallbacksC0073g componentCallbacksC0073g) {
-        for (int i = 0; i < this.f346b.size(); i++) {
-            C0068a c0068a = this.f346b.get(i);
-            int i2 = c0068a.f366a;
-            if (i2 != 1) {
-                if (i2 != 3) {
-                    switch (i2) {
+    public g p(ArrayList<g> arrayList, g gVar) {
+        for (int i2 = 0; i2 < this.f240b.size(); i2++) {
+            a aVar = this.f240b.get(i2);
+            int i3 = aVar.f260a;
+            if (i3 != 1) {
+                if (i3 != 3) {
+                    switch (i3) {
                         case 8:
-                            componentCallbacksC0073g = null;
+                            gVar = null;
                             break;
                         case 9:
-                            componentCallbacksC0073g = c0068a.f367b;
+                            gVar = aVar.f261b;
                             break;
                     }
                 }
-                arrayList.add(c0068a.f367b);
+                arrayList.add(aVar.f261b);
             }
-            arrayList.remove(c0068a.f367b);
+            arrayList.remove(aVar.f261b);
         }
-        return componentCallbacksC0073g;
+        return gVar;
     }
 
     public String toString() {
         StringBuilder sb = new StringBuilder(128);
         sb.append("BackStackEntry{");
         sb.append(Integer.toHexString(System.identityHashCode(this)));
-        if (this.f357m >= 0) {
+        if (this.f251m >= 0) {
             sb.append(" #");
-            sb.append(this.f357m);
+            sb.append(this.f251m);
         }
-        if (this.f355k != null) {
+        if (this.f249k != null) {
             sb.append(" ");
-            sb.append(this.f355k);
+            sb.append(this.f249k);
         }
         sb.append("}");
         return sb.toString();

@@ -1,107 +1,94 @@
-package p007f;
+package f;
 
 import java.util.ArrayList;
-import p006e.C0352c;
 
-/* renamed from: f.q */
 /* loaded from: classes.dex */
-public class C0385q extends C0370f {
+public class q extends f {
+    protected ArrayList<f> v0 = new ArrayList<>();
 
-    /* renamed from: v0 */
-    protected ArrayList<C0370f> f2019v0 = new ArrayList<>();
-
-    @Override // p007f.C0370f
-    /* renamed from: F0 */
-    public void mo744F0() {
-        super.mo744F0();
-        ArrayList<C0370f> arrayList = this.f2019v0;
+    @Override // f.f
+    public void F0() {
+        super.F0();
+        ArrayList<f> arrayList = this.v0;
         if (arrayList == null) {
             return;
         }
         int size = arrayList.size();
-        for (int i = 0; i < size; i++) {
-            C0370f c0370f = this.f2019v0.get(i);
-            c0370f.mo736n0(m833p(), m831q());
-            if (!(c0370f instanceof C0373g)) {
-                c0370f.mo744F0();
+        for (int i2 = 0; i2 < size; i2++) {
+            f fVar = this.v0.get(i2);
+            fVar.n0(p(), q());
+            if (!(fVar instanceof g)) {
+                fVar.F0();
             }
         }
     }
 
-    /* renamed from: I0 */
-    public void m743I0(C0370f c0370f) {
-        this.f2019v0.add(c0370f);
-        if (c0370f.m823u() != null) {
-            ((C0385q) c0370f.m823u()).m740L0(c0370f);
+    public void I0(f fVar) {
+        this.v0.add(fVar);
+        if (fVar.u() != null) {
+            ((q) fVar.u()).L0(fVar);
         }
-        c0370f.m832p0(this);
+        fVar.p0(this);
     }
 
-    /* renamed from: J0 */
-    public C0373g m742J0() {
-        C0370f m823u = m823u();
-        C0373g c0373g = this instanceof C0373g ? (C0373g) this : null;
-        while (m823u != null) {
-            C0370f m823u2 = m823u.m823u();
-            if (m823u instanceof C0373g) {
-                c0373g = (C0373g) m823u;
+    public g J0() {
+        f u2 = u();
+        g gVar = this instanceof g ? (g) this : null;
+        while (u2 != null) {
+            f u3 = u2.u();
+            if (u2 instanceof g) {
+                gVar = (g) u2;
             }
-            m823u = m823u2;
+            u2 = u3;
         }
-        return c0373g;
+        return gVar;
     }
 
-    /* renamed from: K0 */
-    public void mo741K0() {
-        mo744F0();
-        ArrayList<C0370f> arrayList = this.f2019v0;
+    public void K0() {
+        F0();
+        ArrayList<f> arrayList = this.v0;
         if (arrayList == null) {
             return;
         }
         int size = arrayList.size();
-        for (int i = 0; i < size; i++) {
-            C0370f c0370f = this.f2019v0.get(i);
-            if (c0370f instanceof C0385q) {
-                ((C0385q) c0370f).mo741K0();
+        for (int i2 = 0; i2 < size; i2++) {
+            f fVar = this.v0.get(i2);
+            if (fVar instanceof q) {
+                ((q) fVar).K0();
             }
         }
     }
 
-    /* renamed from: L0 */
-    public void m740L0(C0370f c0370f) {
-        this.f2019v0.remove(c0370f);
-        c0370f.m832p0(null);
+    public void L0(f fVar) {
+        this.v0.remove(fVar);
+        fVar.p0(null);
     }
 
-    /* renamed from: M0 */
-    public void m739M0() {
-        this.f2019v0.clear();
+    public void M0() {
+        this.v0.clear();
     }
 
-    @Override // p007f.C0370f
-    /* renamed from: Q */
-    public void mo738Q() {
-        this.f2019v0.clear();
-        super.mo738Q();
+    @Override // f.f
+    public void Q() {
+        this.v0.clear();
+        super.Q();
     }
 
-    @Override // p007f.C0370f
-    /* renamed from: T */
-    public void mo737T(C0352c c0352c) {
-        super.mo737T(c0352c);
-        int size = this.f2019v0.size();
-        for (int i = 0; i < size; i++) {
-            this.f2019v0.get(i).mo737T(c0352c);
+    @Override // f.f
+    public void T(e.c cVar) {
+        super.T(cVar);
+        int size = this.v0.size();
+        for (int i2 = 0; i2 < size; i2++) {
+            this.v0.get(i2).T(cVar);
         }
     }
 
-    @Override // p007f.C0370f
-    /* renamed from: n0 */
-    public void mo736n0(int i, int i2) {
-        super.mo736n0(i, i2);
-        int size = this.f2019v0.size();
-        for (int i3 = 0; i3 < size; i3++) {
-            this.f2019v0.get(i3).mo736n0(m813z(), m887A());
+    @Override // f.f
+    public void n0(int i2, int i3) {
+        super.n0(i2, i3);
+        int size = this.v0.size();
+        for (int i4 = 0; i4 < size; i4++) {
+            this.v0.get(i4).n0(z(), A());
         }
     }
 }

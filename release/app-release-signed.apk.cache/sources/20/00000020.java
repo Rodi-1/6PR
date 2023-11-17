@@ -1,10 +1,8 @@
 package android.arch.lifecycle;
 
-/* renamed from: android.arch.lifecycle.l */
 /* loaded from: classes.dex */
-public abstract class AbstractC0023l {
+public abstract class l {
     /* JADX INFO: Access modifiers changed from: protected */
-    /* renamed from: a */
-    public void mo2238a() {
+    public void a() {
     }
 }

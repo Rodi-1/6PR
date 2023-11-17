@@ -1,4 +1,4 @@
-package android.support.p002v7.widget;
+package android.support.v7.widget;
 
 import android.content.Context;
 import android.content.res.Configuration;
@@ -9,166 +9,152 @@ import android.view.ContextThemeWrapper;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import p016o.C0490o;
-import p016o.C0511s;
-import p016o.InterfaceC0514t;
-import p020s.C0569a;
-import p020s.C0578j;
 
 /* JADX INFO: Access modifiers changed from: package-private */
-/* renamed from: android.support.v7.widget.a */
 /* loaded from: classes.dex */
-public abstract class AbstractC0238a extends ViewGroup {
+public abstract class a extends ViewGroup {
 
-    /* renamed from: b */
-    protected final C0239a f1225b;
+    /* renamed from: b  reason: collision with root package name */
+    protected final C0009a f946b;
 
-    /* renamed from: c */
-    protected final Context f1226c;
+    /* renamed from: c  reason: collision with root package name */
+    protected final Context f947c;
 
-    /* renamed from: d */
-    protected ActionMenuView f1227d;
+    /* renamed from: d  reason: collision with root package name */
+    protected ActionMenuView f948d;
 
-    /* renamed from: e */
-    protected C0248d f1228e;
+    /* renamed from: e  reason: collision with root package name */
+    protected d f949e;
 
-    /* renamed from: f */
-    protected int f1229f;
+    /* renamed from: f  reason: collision with root package name */
+    protected int f950f;
 
-    /* renamed from: g */
-    protected C0511s f1230g;
+    /* renamed from: g  reason: collision with root package name */
+    protected o.s f951g;
 
-    /* renamed from: h */
-    private boolean f1231h;
+    /* renamed from: h  reason: collision with root package name */
+    private boolean f952h;
 
-    /* renamed from: i */
-    private boolean f1232i;
+    /* renamed from: i  reason: collision with root package name */
+    private boolean f953i;
 
-    /* renamed from: android.support.v7.widget.a$a */
+    /* renamed from: android.support.v7.widget.a$a  reason: collision with other inner class name */
     /* loaded from: classes.dex */
-    protected class C0239a implements InterfaceC0514t {
+    protected class C0009a implements o.t {
 
-        /* renamed from: a */
-        private boolean f1233a = false;
+        /* renamed from: a  reason: collision with root package name */
+        private boolean f954a = false;
 
-        /* renamed from: b */
-        int f1234b;
+        /* renamed from: b  reason: collision with root package name */
+        int f955b;
 
-        protected C0239a() {
+        protected C0009a() {
         }
 
-        @Override // p016o.InterfaceC0514t
-        /* renamed from: a */
-        public void mo33a(View view) {
-            if (this.f1233a) {
+        @Override // o.t
+        public void a(View view) {
+            if (this.f954a) {
                 return;
             }
-            AbstractC0238a abstractC0238a = AbstractC0238a.this;
-            abstractC0238a.f1230g = null;
-            AbstractC0238a.super.setVisibility(this.f1234b);
+            a aVar = a.this;
+            aVar.f951g = null;
+            a.super.setVisibility(this.f955b);
         }
 
-        @Override // p016o.InterfaceC0514t
-        /* renamed from: b */
-        public void mo32b(View view) {
-            AbstractC0238a.super.setVisibility(0);
-            this.f1233a = false;
+        @Override // o.t
+        public void b(View view) {
+            a.super.setVisibility(0);
+            this.f954a = false;
         }
 
-        @Override // p016o.InterfaceC0514t
-        /* renamed from: c */
-        public void mo333c(View view) {
-            this.f1233a = true;
+        @Override // o.t
+        public void c(View view) {
+            this.f954a = true;
         }
 
-        /* renamed from: d */
-        public C0239a m1399d(C0511s c0511s, int i) {
-            AbstractC0238a.this.f1230g = c0511s;
-            this.f1234b = i;
+        public C0009a d(o.s sVar, int i2) {
+            a.this.f951g = sVar;
+            this.f955b = i2;
             return this;
         }
     }
 
-    AbstractC0238a(Context context, AttributeSet attributeSet) {
+    a(Context context, AttributeSet attributeSet) {
         this(context, attributeSet, 0);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public AbstractC0238a(Context context, AttributeSet attributeSet, int i) {
-        super(context, attributeSet, i);
-        this.f1225b = new C0239a();
+    public a(Context context, AttributeSet attributeSet, int i2) {
+        super(context, attributeSet, i2);
+        this.f946b = new C0009a();
         TypedValue typedValue = new TypedValue();
-        if (!context.getTheme().resolveAttribute(C0569a.actionBarPopupTheme, typedValue, true) || typedValue.resourceId == 0) {
-            this.f1226c = context;
+        if (!context.getTheme().resolveAttribute(s.a.actionBarPopupTheme, typedValue, true) || typedValue.resourceId == 0) {
+            this.f947c = context;
         } else {
-            this.f1226c = new ContextThemeWrapper(context, typedValue.resourceId);
+            this.f947c = new ContextThemeWrapper(context, typedValue.resourceId);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    /* renamed from: d */
-    public static int m1402d(int i, int i2, boolean z) {
-        return z ? i - i2 : i + i2;
+    public static int d(int i2, int i3, boolean z) {
+        return z ? i2 - i3 : i2 + i3;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    /* renamed from: c */
-    public int m1403c(View view, int i, int i2, int i3) {
-        view.measure(View.MeasureSpec.makeMeasureSpec(i, Integer.MIN_VALUE), i2);
-        return Math.max(0, (i - view.getMeasuredWidth()) - i3);
+    public int c(View view, int i2, int i3, int i4) {
+        view.measure(View.MeasureSpec.makeMeasureSpec(i2, Integer.MIN_VALUE), i3);
+        return Math.max(0, (i2 - view.getMeasuredWidth()) - i4);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    /* renamed from: e */
-    public int m1401e(View view, int i, int i2, int i3, boolean z) {
+    public int e(View view, int i2, int i3, int i4, boolean z) {
         int measuredWidth = view.getMeasuredWidth();
         int measuredHeight = view.getMeasuredHeight();
-        int i4 = i2 + ((i3 - measuredHeight) / 2);
+        int i5 = i3 + ((i4 - measuredHeight) / 2);
         if (z) {
-            view.layout(i - measuredWidth, i4, i, measuredHeight + i4);
+            view.layout(i2 - measuredWidth, i5, i2, measuredHeight + i5);
         } else {
-            view.layout(i, i4, i + measuredWidth, measuredHeight + i4);
+            view.layout(i2, i5, i2 + measuredWidth, measuredHeight + i5);
         }
         return z ? -measuredWidth : measuredWidth;
     }
 
-    /* renamed from: f */
-    public C0511s mo1400f(int i, long j) {
-        C0511s m344a;
-        C0511s c0511s = this.f1230g;
-        if (c0511s != null) {
-            c0511s.m343b();
+    public o.s f(int i2, long j2) {
+        o.s a2;
+        o.s sVar = this.f951g;
+        if (sVar != null) {
+            sVar.b();
         }
-        if (i == 0) {
+        if (i2 == 0) {
             if (getVisibility() != 0) {
                 setAlpha(0.0f);
             }
-            m344a = C0490o.m411a(this).m344a(1.0f);
+            a2 = o.o.a(this).a(1.0f);
         } else {
-            m344a = C0490o.m411a(this).m344a(0.0f);
+            a2 = o.o.a(this).a(0.0f);
         }
-        m344a.m341d(j);
-        m344a.m339f(this.f1225b.m1399d(m344a, i));
-        return m344a;
+        a2.d(j2);
+        a2.f(this.f946b.d(a2, i2));
+        return a2;
     }
 
     public int getAnimatedVisibility() {
-        return this.f1230g != null ? this.f1225b.f1234b : getVisibility();
+        return this.f951g != null ? this.f946b.f955b : getVisibility();
     }
 
     public int getContentHeight() {
-        return this.f1229f;
+        return this.f950f;
     }
 
     @Override // android.view.View
     protected void onConfigurationChanged(Configuration configuration) {
         super.onConfigurationChanged(configuration);
-        TypedArray obtainStyledAttributes = getContext().obtainStyledAttributes(null, C0578j.f2525a, C0569a.actionBarStyle, 0);
-        setContentHeight(obtainStyledAttributes.getLayoutDimension(C0578j.f2562j, 0));
+        TypedArray obtainStyledAttributes = getContext().obtainStyledAttributes(null, s.j.f1864a, s.a.actionBarStyle, 0);
+        setContentHeight(obtainStyledAttributes.getLayoutDimension(s.j.f1873j, 0));
         obtainStyledAttributes.recycle();
-        C0248d c0248d = this.f1228e;
-        if (c0248d != null) {
-            c0248d.m1353E(configuration);
+        d dVar = this.f949e;
+        if (dVar != null) {
+            dVar.E(configuration);
         }
     }
 
@@ -176,16 +162,16 @@ public abstract class AbstractC0238a extends ViewGroup {
     public boolean onHoverEvent(MotionEvent motionEvent) {
         int actionMasked = motionEvent.getActionMasked();
         if (actionMasked == 9) {
-            this.f1232i = false;
+            this.f953i = false;
         }
-        if (!this.f1232i) {
+        if (!this.f953i) {
             boolean onHoverEvent = super.onHoverEvent(motionEvent);
             if (actionMasked == 9 && !onHoverEvent) {
-                this.f1232i = true;
+                this.f953i = true;
             }
         }
         if (actionMasked == 10 || actionMasked == 3) {
-            this.f1232i = false;
+            this.f953i = false;
         }
         return true;
     }
@@ -194,33 +180,33 @@ public abstract class AbstractC0238a extends ViewGroup {
     public boolean onTouchEvent(MotionEvent motionEvent) {
         int actionMasked = motionEvent.getActionMasked();
         if (actionMasked == 0) {
-            this.f1231h = false;
+            this.f952h = false;
         }
-        if (!this.f1231h) {
+        if (!this.f952h) {
             boolean onTouchEvent = super.onTouchEvent(motionEvent);
             if (actionMasked == 0 && !onTouchEvent) {
-                this.f1231h = true;
+                this.f952h = true;
             }
         }
         if (actionMasked == 1 || actionMasked == 3) {
-            this.f1231h = false;
+            this.f952h = false;
         }
         return true;
     }
 
-    public void setContentHeight(int i) {
-        this.f1229f = i;
+    public void setContentHeight(int i2) {
+        this.f950f = i2;
         requestLayout();
     }
 
     @Override // android.view.View
-    public void setVisibility(int i) {
-        if (i != getVisibility()) {
-            C0511s c0511s = this.f1230g;
-            if (c0511s != null) {
-                c0511s.m343b();
+    public void setVisibility(int i2) {
+        if (i2 != getVisibility()) {
+            o.s sVar = this.f951g;
+            if (sVar != null) {
+                sVar.b();
             }
-            super.setVisibility(i);
+            super.setVisibility(i2);
         }
     }
 }

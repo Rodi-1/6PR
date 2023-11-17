@@ -1,15 +1,14 @@
-package android.support.p001v4.widget;
+package android.support.v4.widget;
 
 import android.os.Build;
 
-/* renamed from: android.support.v4.widget.b */
 /* loaded from: classes.dex */
-public interface InterfaceC0138b {
+public interface b {
 
-    /* renamed from: a */
-    public static final boolean f682a;
+    /* renamed from: a  reason: collision with root package name */
+    public static final boolean f532a;
 
     static {
-        f682a = Build.VERSION.SDK_INT >= 27;
+        f532a = Build.VERSION.SDK_INT >= 27;
     }
 }

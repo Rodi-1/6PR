@@ -1,4 +1,4 @@
-package p009h;
+package h;
 
 import android.content.res.Resources;
 import android.content.res.TypedArray;
@@ -9,134 +9,117 @@ import java.util.Collections;
 import java.util.List;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
-import p004c.C0346b;
-import p014m.C0426a;
 
-/* renamed from: h.a */
 /* loaded from: classes.dex */
-public class C0388a {
+public class a {
 
-    /* renamed from: h.a$a */
+    /* renamed from: h.a$a  reason: collision with other inner class name */
     /* loaded from: classes.dex */
-    public interface InterfaceC0389a {
+    public interface InterfaceC0013a {
     }
 
-    /* renamed from: h.a$b */
     /* loaded from: classes.dex */
-    public static final class C0390b implements InterfaceC0389a {
+    public static final class b implements InterfaceC0013a {
 
-        /* renamed from: a */
-        private final C0391c[] f2021a;
+        /* renamed from: a  reason: collision with root package name */
+        private final c[] f1508a;
 
-        public C0390b(C0391c[] c0391cArr) {
-            this.f2021a = c0391cArr;
+        public b(c[] cVarArr) {
+            this.f1508a = cVarArr;
         }
 
-        /* renamed from: a */
-        public C0391c[] m723a() {
-            return this.f2021a;
-        }
-    }
-
-    /* renamed from: h.a$c */
-    /* loaded from: classes.dex */
-    public static final class C0391c {
-
-        /* renamed from: a */
-        private final String f2022a;
-
-        /* renamed from: b */
-        private int f2023b;
-
-        /* renamed from: c */
-        private boolean f2024c;
-
-        /* renamed from: d */
-        private String f2025d;
-
-        /* renamed from: e */
-        private int f2026e;
-
-        /* renamed from: f */
-        private int f2027f;
-
-        public C0391c(String str, int i, boolean z, String str2, int i2, int i3) {
-            this.f2022a = str;
-            this.f2023b = i;
-            this.f2024c = z;
-            this.f2025d = str2;
-            this.f2026e = i2;
-            this.f2027f = i3;
-        }
-
-        /* renamed from: a */
-        public String m722a() {
-            return this.f2022a;
-        }
-
-        /* renamed from: b */
-        public int m721b() {
-            return this.f2027f;
-        }
-
-        /* renamed from: c */
-        public int m720c() {
-            return this.f2026e;
-        }
-
-        /* renamed from: d */
-        public String m719d() {
-            return this.f2025d;
-        }
-
-        /* renamed from: e */
-        public int m718e() {
-            return this.f2023b;
-        }
-
-        /* renamed from: f */
-        public boolean m717f() {
-            return this.f2024c;
+        public c[] a() {
+            return this.f1508a;
         }
     }
 
-    /* renamed from: h.a$d */
     /* loaded from: classes.dex */
-    public static final class C0392d implements InterfaceC0389a {
+    public static final class c {
 
-        /* renamed from: a */
-        private final C0426a f2028a;
+        /* renamed from: a  reason: collision with root package name */
+        private final String f1509a;
 
-        /* renamed from: b */
-        private final int f2029b;
+        /* renamed from: b  reason: collision with root package name */
+        private int f1510b;
 
-        /* renamed from: c */
-        private final int f2030c;
+        /* renamed from: c  reason: collision with root package name */
+        private boolean f1511c;
 
-        public C0392d(C0426a c0426a, int i, int i2) {
-            this.f2028a = c0426a;
-            this.f2030c = i;
-            this.f2029b = i2;
+        /* renamed from: d  reason: collision with root package name */
+        private String f1512d;
+
+        /* renamed from: e  reason: collision with root package name */
+        private int f1513e;
+
+        /* renamed from: f  reason: collision with root package name */
+        private int f1514f;
+
+        public c(String str, int i2, boolean z, String str2, int i3, int i4) {
+            this.f1509a = str;
+            this.f1510b = i2;
+            this.f1511c = z;
+            this.f1512d = str2;
+            this.f1513e = i3;
+            this.f1514f = i4;
         }
 
-        /* renamed from: a */
-        public int m716a() {
-            return this.f2030c;
+        public String a() {
+            return this.f1509a;
         }
 
-        /* renamed from: b */
-        public C0426a m715b() {
-            return this.f2028a;
+        public int b() {
+            return this.f1514f;
         }
 
-        /* renamed from: c */
-        public int m714c() {
-            return this.f2029b;
+        public int c() {
+            return this.f1513e;
+        }
+
+        public String d() {
+            return this.f1512d;
+        }
+
+        public int e() {
+            return this.f1510b;
+        }
+
+        public boolean f() {
+            return this.f1511c;
         }
     }
 
-    /* renamed from: a */
-    public static InterfaceC0389a m730a(XmlPullParser xmlPullParser, Resources resources) {
+    /* loaded from: classes.dex */
+    public static final class d implements InterfaceC0013a {
+
+        /* renamed from: a  reason: collision with root package name */
+        private final m.a f1515a;
+
+        /* renamed from: b  reason: collision with root package name */
+        private final int f1516b;
+
+        /* renamed from: c  reason: collision with root package name */
+        private final int f1517c;
+
+        public d(m.a aVar, int i2, int i3) {
+            this.f1515a = aVar;
+            this.f1517c = i2;
+            this.f1516b = i3;
+        }
+
+        public int a() {
+            return this.f1517c;
+        }
+
+        public m.a b() {
+            return this.f1515a;
+        }
+
+        public int c() {
+            return this.f1516b;
+        }
+    }
+
+    public static InterfaceC0013a a(XmlPullParser xmlPullParser, Resources resources) {
         int next;
         do {
             next = xmlPullParser.next();
@@ -145,24 +128,23 @@ public class C0388a {
             }
         } while (next != 1);
         if (next == 2) {
-            return m728c(xmlPullParser, resources);
+            return c(xmlPullParser, resources);
         }
         throw new XmlPullParserException("No start tag found");
     }
 
-    /* renamed from: b */
-    public static List<List<byte[]>> m729b(Resources resources, int i) {
+    public static List<List<byte[]>> b(Resources resources, int i2) {
         ArrayList arrayList = null;
-        if (i != 0) {
-            TypedArray obtainTypedArray = resources.obtainTypedArray(i);
+        if (i2 != 0) {
+            TypedArray obtainTypedArray = resources.obtainTypedArray(i2);
             if (obtainTypedArray.length() > 0) {
                 arrayList = new ArrayList();
                 if (obtainTypedArray.getResourceId(0, 0) != 0) {
-                    for (int i2 = 0; i2 < obtainTypedArray.length(); i2++) {
-                        arrayList.add(m724g(resources.getStringArray(obtainTypedArray.getResourceId(i2, 0))));
+                    for (int i3 = 0; i3 < obtainTypedArray.length(); i3++) {
+                        arrayList.add(g(resources.getStringArray(obtainTypedArray.getResourceId(i3, 0))));
                     }
                 } else {
-                    arrayList.add(m724g(resources.getStringArray(i)));
+                    arrayList.add(g(resources.getStringArray(i2)));
                 }
             }
             obtainTypedArray.recycle();
@@ -170,99 +152,94 @@ public class C0388a {
         return arrayList != null ? arrayList : Collections.emptyList();
     }
 
-    /* renamed from: c */
-    private static InterfaceC0389a m728c(XmlPullParser xmlPullParser, Resources resources) {
+    private static InterfaceC0013a c(XmlPullParser xmlPullParser, Resources resources) {
         xmlPullParser.require(2, null, "font-family");
         if (xmlPullParser.getName().equals("font-family")) {
-            return m727d(xmlPullParser, resources);
+            return d(xmlPullParser, resources);
         }
-        m725f(xmlPullParser);
+        f(xmlPullParser);
         return null;
     }
 
-    /* renamed from: d */
-    private static InterfaceC0389a m727d(XmlPullParser xmlPullParser, Resources resources) {
-        TypedArray obtainAttributes = resources.obtainAttributes(Xml.asAttributeSet(xmlPullParser), C0346b.f1605a);
-        String string = obtainAttributes.getString(C0346b.f1606b);
-        String string2 = obtainAttributes.getString(C0346b.f1610f);
-        String string3 = obtainAttributes.getString(C0346b.f1611g);
-        int resourceId = obtainAttributes.getResourceId(C0346b.f1607c, 0);
-        int integer = obtainAttributes.getInteger(C0346b.f1608d, 1);
-        int integer2 = obtainAttributes.getInteger(C0346b.f1609e, 500);
+    private static InterfaceC0013a d(XmlPullParser xmlPullParser, Resources resources) {
+        TypedArray obtainAttributes = resources.obtainAttributes(Xml.asAttributeSet(xmlPullParser), c.b.f1293a);
+        String string = obtainAttributes.getString(c.b.f1294b);
+        String string2 = obtainAttributes.getString(c.b.f1298f);
+        String string3 = obtainAttributes.getString(c.b.f1299g);
+        int resourceId = obtainAttributes.getResourceId(c.b.f1295c, 0);
+        int integer = obtainAttributes.getInteger(c.b.f1296d, 1);
+        int integer2 = obtainAttributes.getInteger(c.b.f1297e, 500);
         obtainAttributes.recycle();
         if (string != null && string2 != null && string3 != null) {
             while (xmlPullParser.next() != 3) {
-                m725f(xmlPullParser);
+                f(xmlPullParser);
             }
-            return new C0392d(new C0426a(string, string2, string3, m729b(resources, resourceId)), integer, integer2);
+            return new d(new m.a(string, string2, string3, b(resources, resourceId)), integer, integer2);
         }
         ArrayList arrayList = new ArrayList();
         while (xmlPullParser.next() != 3) {
             if (xmlPullParser.getEventType() == 2) {
                 if (xmlPullParser.getName().equals("font")) {
-                    arrayList.add(m726e(xmlPullParser, resources));
+                    arrayList.add(e(xmlPullParser, resources));
                 } else {
-                    m725f(xmlPullParser);
+                    f(xmlPullParser);
                 }
             }
         }
         if (arrayList.isEmpty()) {
             return null;
         }
-        return new C0390b((C0391c[]) arrayList.toArray(new C0391c[arrayList.size()]));
+        return new b((c[]) arrayList.toArray(new c[arrayList.size()]));
     }
 
-    /* renamed from: e */
-    private static C0391c m726e(XmlPullParser xmlPullParser, Resources resources) {
-        TypedArray obtainAttributes = resources.obtainAttributes(Xml.asAttributeSet(xmlPullParser), C0346b.f1612h);
-        int i = C0346b.f1621q;
-        if (!obtainAttributes.hasValue(i)) {
-            i = C0346b.f1614j;
+    private static c e(XmlPullParser xmlPullParser, Resources resources) {
+        TypedArray obtainAttributes = resources.obtainAttributes(Xml.asAttributeSet(xmlPullParser), c.b.f1300h);
+        int i2 = c.b.f1309q;
+        if (!obtainAttributes.hasValue(i2)) {
+            i2 = c.b.f1302j;
         }
-        int i2 = obtainAttributes.getInt(i, 400);
-        int i3 = C0346b.f1619o;
-        if (!obtainAttributes.hasValue(i3)) {
-            i3 = C0346b.f1615k;
-        }
-        boolean z = 1 == obtainAttributes.getInt(i3, 0);
-        int i4 = C0346b.f1622r;
+        int i3 = obtainAttributes.getInt(i2, 400);
+        int i4 = c.b.f1307o;
         if (!obtainAttributes.hasValue(i4)) {
-            i4 = C0346b.f1616l;
+            i4 = c.b.f1303k;
         }
-        int i5 = C0346b.f1620p;
+        boolean z = 1 == obtainAttributes.getInt(i4, 0);
+        int i5 = c.b.f1310r;
         if (!obtainAttributes.hasValue(i5)) {
-            i5 = C0346b.f1617m;
+            i5 = c.b.f1304l;
         }
-        String string = obtainAttributes.getString(i5);
-        int i6 = obtainAttributes.getInt(i4, 0);
-        int i7 = C0346b.f1618n;
-        if (!obtainAttributes.hasValue(i7)) {
-            i7 = C0346b.f1613i;
+        int i6 = c.b.f1308p;
+        if (!obtainAttributes.hasValue(i6)) {
+            i6 = c.b.f1305m;
         }
-        int resourceId = obtainAttributes.getResourceId(i7, 0);
-        String string2 = obtainAttributes.getString(i7);
+        String string = obtainAttributes.getString(i6);
+        int i7 = obtainAttributes.getInt(i5, 0);
+        int i8 = c.b.f1306n;
+        if (!obtainAttributes.hasValue(i8)) {
+            i8 = c.b.f1301i;
+        }
+        int resourceId = obtainAttributes.getResourceId(i8, 0);
+        String string2 = obtainAttributes.getString(i8);
         obtainAttributes.recycle();
         while (xmlPullParser.next() != 3) {
-            m725f(xmlPullParser);
+            f(xmlPullParser);
         }
-        return new C0391c(string2, i2, z, string, i6, resourceId);
+        return new c(string2, i3, z, string, i7, resourceId);
     }
 
-    /* renamed from: f */
-    private static void m725f(XmlPullParser xmlPullParser) {
-        int i = 1;
-        while (i > 0) {
+    private static void f(XmlPullParser xmlPullParser) {
+        int i2 = 1;
+        while (i2 > 0) {
             int next = xmlPullParser.next();
             if (next == 2) {
-                i++;
+                i2++;
             } else if (next == 3) {
-                i--;
+                i2--;
             }
         }
     }
 
-    /* renamed from: g */
-    private static List<byte[]> m724g(String[] strArr) {
+    private static List<byte[]> g(String[] strArr) {
         ArrayList arrayList = new ArrayList();
         for (String str : strArr) {
             arrayList.add(Base64.decode(str, 0));

@@ -1,302 +1,286 @@
-package p007f;
+package f;
 
-import p006e.C0354e;
-import p006e.C0359i;
-import p007f.C0365e;
+import f.e;
 
-/* renamed from: f.m */
 /* loaded from: classes.dex */
-public class C0380m extends C0382o {
+public class m extends o {
 
-    /* renamed from: c */
-    C0365e f1993c;
+    /* renamed from: c  reason: collision with root package name */
+    e f1481c;
 
-    /* renamed from: d */
-    float f1994d;
+    /* renamed from: d  reason: collision with root package name */
+    float f1482d;
 
-    /* renamed from: e */
-    C0380m f1995e;
+    /* renamed from: e  reason: collision with root package name */
+    m f1483e;
 
-    /* renamed from: f */
-    float f1996f;
+    /* renamed from: f  reason: collision with root package name */
+    float f1484f;
 
-    /* renamed from: g */
-    C0380m f1997g;
+    /* renamed from: g  reason: collision with root package name */
+    m f1485g;
 
-    /* renamed from: h */
-    float f1998h;
+    /* renamed from: h  reason: collision with root package name */
+    float f1486h;
 
-    /* renamed from: j */
-    private C0380m f2000j;
+    /* renamed from: j  reason: collision with root package name */
+    private m f1488j;
 
-    /* renamed from: k */
-    private float f2001k;
+    /* renamed from: k  reason: collision with root package name */
+    private float f1489k;
 
-    /* renamed from: i */
-    int f1999i = 0;
+    /* renamed from: i  reason: collision with root package name */
+    int f1487i = 0;
 
-    /* renamed from: l */
-    private C0381n f2002l = null;
+    /* renamed from: l  reason: collision with root package name */
+    private n f1490l = null;
 
-    /* renamed from: m */
-    private int f2003m = 1;
+    /* renamed from: m  reason: collision with root package name */
+    private int f1491m = 1;
 
-    /* renamed from: n */
-    private C0381n f2004n = null;
+    /* renamed from: n  reason: collision with root package name */
+    private n f1492n = null;
 
-    /* renamed from: o */
-    private int f2005o = 1;
+    /* renamed from: o  reason: collision with root package name */
+    private int f1493o = 1;
 
-    public C0380m(C0365e c0365e) {
-        this.f1993c = c0365e;
+    public m(e eVar) {
+        this.f1481c = eVar;
     }
 
-    @Override // p007f.C0382o
-    /* renamed from: e */
-    public void mo750e() {
-        super.mo750e();
-        this.f1995e = null;
-        this.f1996f = 0.0f;
-        this.f2002l = null;
-        this.f2003m = 1;
-        this.f2004n = null;
-        this.f2005o = 1;
-        this.f1997g = null;
-        this.f1998h = 0.0f;
-        this.f1994d = 0.0f;
-        this.f2000j = null;
-        this.f2001k = 0.0f;
-        this.f1999i = 0;
+    @Override // f.o
+    public void e() {
+        super.e();
+        this.f1483e = null;
+        this.f1484f = 0.0f;
+        this.f1490l = null;
+        this.f1491m = 1;
+        this.f1492n = null;
+        this.f1493o = 1;
+        this.f1485g = null;
+        this.f1486h = 0.0f;
+        this.f1482d = 0.0f;
+        this.f1488j = null;
+        this.f1489k = 0.0f;
+        this.f1487i = 0;
     }
 
-    @Override // p007f.C0382o
-    /* renamed from: f */
-    public void mo749f() {
-        int i;
-        C0380m c0380m;
-        C0380m c0380m2;
-        C0380m c0380m3;
-        C0380m c0380m4;
-        C0380m c0380m5;
-        C0380m c0380m6;
-        C0365e c0365e;
-        float m881D;
-        float f;
-        C0380m c0380m7;
+    @Override // f.o
+    public void f() {
+        int i2;
+        m mVar;
+        m mVar2;
+        m mVar3;
+        m mVar4;
+        m mVar5;
+        m mVar6;
+        e eVar;
+        float D;
         float f2;
+        m mVar7;
+        float f3;
         boolean z = true;
-        if (this.f2008b == 1 || (i = this.f1999i) == 4) {
+        if (this.f1496b == 1 || (i2 = this.f1487i) == 4) {
             return;
         }
-        C0381n c0381n = this.f2002l;
-        if (c0381n != null) {
-            if (c0381n.f2008b != 1) {
+        n nVar = this.f1490l;
+        if (nVar != null) {
+            if (nVar.f1496b != 1) {
                 return;
             }
-            this.f1996f = this.f2003m * c0381n.f2006c;
+            this.f1484f = this.f1491m * nVar.f1494c;
         }
-        C0381n c0381n2 = this.f2004n;
-        if (c0381n2 != null) {
-            if (c0381n2.f2008b != 1) {
+        n nVar2 = this.f1492n;
+        if (nVar2 != null) {
+            if (nVar2.f1496b != 1) {
                 return;
             }
-            this.f2001k = this.f2005o * c0381n2.f2006c;
+            this.f1489k = this.f1493o * nVar2.f1494c;
         }
-        if (i == 1 && ((c0380m7 = this.f1995e) == null || c0380m7.f2008b == 1)) {
-            if (c0380m7 == null) {
-                this.f1997g = this;
-                f2 = this.f1996f;
+        if (i2 == 1 && ((mVar7 = this.f1483e) == null || mVar7.f1496b == 1)) {
+            if (mVar7 == null) {
+                this.f1485g = this;
+                f3 = this.f1484f;
             } else {
-                this.f1997g = c0380m7.f1997g;
-                f2 = c0380m7.f1998h + this.f1996f;
+                this.f1485g = mVar7.f1485g;
+                f3 = mVar7.f1486h + this.f1484f;
             }
-            this.f1998h = f2;
-            m753b();
+            this.f1486h = f3;
+            b();
             return;
         }
-        if (i == 2 && (c0380m4 = this.f1995e) != null && c0380m4.f2008b == 1 && (c0380m5 = this.f2000j) != null && (c0380m6 = c0380m5.f1995e) != null && c0380m6.f2008b == 1) {
-            C0354e.m935x();
-            C0380m c0380m8 = this.f1995e;
-            this.f1997g = c0380m8.f1997g;
-            C0380m c0380m9 = this.f2000j;
-            C0380m c0380m10 = c0380m9.f1995e;
-            c0380m9.f1997g = c0380m10.f1997g;
-            C0365e.EnumC0369d enumC0369d = this.f1993c.f1841c;
-            C0365e.EnumC0369d enumC0369d2 = C0365e.EnumC0369d.RIGHT;
-            int i2 = 0;
-            if (enumC0369d != enumC0369d2 && enumC0369d != C0365e.EnumC0369d.BOTTOM) {
+        if (i2 == 2 && (mVar4 = this.f1483e) != null && mVar4.f1496b == 1 && (mVar5 = this.f1488j) != null && (mVar6 = mVar5.f1483e) != null && mVar6.f1496b == 1) {
+            e.e.x();
+            m mVar8 = this.f1483e;
+            this.f1485g = mVar8.f1485g;
+            m mVar9 = this.f1488j;
+            m mVar10 = mVar9.f1483e;
+            mVar9.f1485g = mVar10.f1485g;
+            e.d dVar = this.f1481c.f1412c;
+            e.d dVar2 = e.d.RIGHT;
+            int i3 = 0;
+            if (dVar != dVar2 && dVar != e.d.BOTTOM) {
                 z = false;
             }
-            float f3 = z ? c0380m8.f1998h - c0380m10.f1998h : c0380m10.f1998h - c0380m8.f1998h;
-            if (enumC0369d == C0365e.EnumC0369d.LEFT || enumC0369d == enumC0369d2) {
-                m881D = f3 - c0365e.f1840b.m881D();
-                f = this.f1993c.f1840b.f1893Z;
+            float f4 = z ? mVar8.f1486h - mVar10.f1486h : mVar10.f1486h - mVar8.f1486h;
+            if (dVar == e.d.LEFT || dVar == dVar2) {
+                D = f4 - eVar.f1411b.D();
+                f2 = this.f1481c.f1411b.Z;
             } else {
-                m881D = f3 - c0365e.f1840b.m829r();
-                f = this.f1993c.f1840b.f1895a0;
+                D = f4 - eVar.f1411b.r();
+                f2 = this.f1481c.f1411b.a0;
             }
-            int m898d = this.f1993c.m898d();
-            int m898d2 = this.f2000j.f1993c.m898d();
-            if (this.f1993c.m893i() == this.f2000j.f1993c.m893i()) {
-                f = 0.5f;
-                m898d2 = 0;
+            int d2 = this.f1481c.d();
+            int d3 = this.f1488j.f1481c.d();
+            if (this.f1481c.i() == this.f1488j.f1481c.i()) {
+                f2 = 0.5f;
+                d3 = 0;
             } else {
-                i2 = m898d;
+                i3 = d2;
             }
-            float f4 = i2;
-            float f5 = m898d2;
-            float f6 = (m881D - f4) - f5;
+            float f5 = i3;
+            float f6 = d3;
+            float f7 = (D - f5) - f6;
             if (z) {
-                C0380m c0380m11 = this.f2000j;
-                c0380m11.f1998h = c0380m11.f1995e.f1998h + f5 + (f6 * f);
-                this.f1998h = (this.f1995e.f1998h - f4) - (f6 * (1.0f - f));
+                m mVar11 = this.f1488j;
+                mVar11.f1486h = mVar11.f1483e.f1486h + f6 + (f7 * f2);
+                this.f1486h = (this.f1483e.f1486h - f5) - (f7 * (1.0f - f2));
             } else {
-                this.f1998h = this.f1995e.f1998h + f4 + (f6 * f);
-                C0380m c0380m12 = this.f2000j;
-                c0380m12.f1998h = (c0380m12.f1995e.f1998h - f5) - (f6 * (1.0f - f));
+                this.f1486h = this.f1483e.f1486h + f5 + (f7 * f2);
+                m mVar12 = this.f1488j;
+                mVar12.f1486h = (mVar12.f1483e.f1486h - f6) - (f7 * (1.0f - f2));
             }
-        } else if (i != 3 || (c0380m = this.f1995e) == null || c0380m.f2008b != 1 || (c0380m2 = this.f2000j) == null || (c0380m3 = c0380m2.f1995e) == null || c0380m3.f2008b != 1) {
-            if (i == 5) {
-                this.f1993c.f1840b.mo863U();
+        } else if (i2 != 3 || (mVar = this.f1483e) == null || mVar.f1496b != 1 || (mVar2 = this.f1488j) == null || (mVar3 = mVar2.f1483e) == null || mVar3.f1496b != 1) {
+            if (i2 == 5) {
+                this.f1481c.f1411b.U();
                 return;
             }
             return;
         } else {
-            C0354e.m935x();
-            C0380m c0380m13 = this.f1995e;
-            this.f1997g = c0380m13.f1997g;
-            C0380m c0380m14 = this.f2000j;
-            C0380m c0380m15 = c0380m14.f1995e;
-            c0380m14.f1997g = c0380m15.f1997g;
-            this.f1998h = c0380m13.f1998h + this.f1996f;
-            c0380m14.f1998h = c0380m15.f1998h + c0380m14.f1996f;
+            e.e.x();
+            m mVar13 = this.f1483e;
+            this.f1485g = mVar13.f1485g;
+            m mVar14 = this.f1488j;
+            m mVar15 = mVar14.f1483e;
+            mVar14.f1485g = mVar15.f1485g;
+            this.f1486h = mVar13.f1486h + this.f1484f;
+            mVar14.f1486h = mVar15.f1486h + mVar14.f1484f;
         }
-        m753b();
-        this.f2000j.m753b();
+        b();
+        this.f1488j.b();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: g */
-    public void m767g(C0354e c0354e) {
-        C0359i m895g = this.f1993c.m895g();
-        C0380m c0380m = this.f1997g;
-        if (c0380m == null) {
-            c0354e.m953f(m895g, (int) (this.f1998h + 0.5f));
+    public void g(e.e eVar) {
+        e.i g2 = this.f1481c.g();
+        m mVar = this.f1485g;
+        if (mVar == null) {
+            eVar.f(g2, (int) (this.f1486h + 0.5f));
         } else {
-            c0354e.m954e(m895g, c0354e.m941r(c0380m.f1993c), (int) (this.f1998h + 0.5f), 6);
+            eVar.e(g2, eVar.r(mVar.f1481c), (int) (this.f1486h + 0.5f), 6);
         }
     }
 
-    /* renamed from: h */
-    public void m766h(int i, C0380m c0380m, int i2) {
-        this.f1999i = i;
-        this.f1995e = c0380m;
-        this.f1996f = i2;
-        c0380m.m754a(this);
+    public void h(int i2, m mVar, int i3) {
+        this.f1487i = i2;
+        this.f1483e = mVar;
+        this.f1484f = i3;
+        mVar.a(this);
     }
 
-    /* renamed from: i */
-    public void m765i(C0380m c0380m, int i) {
-        this.f1995e = c0380m;
-        this.f1996f = i;
-        c0380m.m754a(this);
+    public void i(m mVar, int i2) {
+        this.f1483e = mVar;
+        this.f1484f = i2;
+        mVar.a(this);
     }
 
-    /* renamed from: j */
-    public void m764j(C0380m c0380m, int i, C0381n c0381n) {
-        this.f1995e = c0380m;
-        c0380m.m754a(this);
-        this.f2002l = c0381n;
-        this.f2003m = i;
-        c0381n.m754a(this);
+    public void j(m mVar, int i2, n nVar) {
+        this.f1483e = mVar;
+        mVar.a(this);
+        this.f1490l = nVar;
+        this.f1491m = i2;
+        nVar.a(this);
     }
 
-    /* renamed from: k */
-    public float m763k() {
-        return this.f1998h;
+    public float k() {
+        return this.f1486h;
     }
 
-    /* renamed from: l */
-    public void m762l(C0380m c0380m, float f) {
-        int i = this.f2008b;
-        if (i == 0 || !(this.f1997g == c0380m || this.f1998h == f)) {
-            this.f1997g = c0380m;
-            this.f1998h = f;
-            if (i == 1) {
-                m752c();
+    public void l(m mVar, float f2) {
+        int i2 = this.f1496b;
+        if (i2 == 0 || !(this.f1485g == mVar || this.f1486h == f2)) {
+            this.f1485g = mVar;
+            this.f1486h = f2;
+            if (i2 == 1) {
+                c();
             }
-            m753b();
+            b();
         }
     }
 
-    /* renamed from: m */
-    String m761m(int i) {
-        return i == 1 ? "DIRECT" : i == 2 ? "CENTER" : i == 3 ? "MATCH" : i == 4 ? "CHAIN" : i == 5 ? "BARRIER" : "UNCONNECTED";
+    String m(int i2) {
+        return i2 == 1 ? "DIRECT" : i2 == 2 ? "CENTER" : i2 == 3 ? "MATCH" : i2 == 4 ? "CHAIN" : i2 == 5 ? "BARRIER" : "UNCONNECTED";
     }
 
-    /* renamed from: n */
-    public void m760n(C0380m c0380m, float f) {
-        this.f2000j = c0380m;
-        this.f2001k = f;
+    public void n(m mVar, float f2) {
+        this.f1488j = mVar;
+        this.f1489k = f2;
     }
 
-    /* renamed from: o */
-    public void m759o(C0380m c0380m, int i, C0381n c0381n) {
-        this.f2000j = c0380m;
-        this.f2004n = c0381n;
-        this.f2005o = i;
+    public void o(m mVar, int i2, n nVar) {
+        this.f1488j = mVar;
+        this.f1492n = nVar;
+        this.f1493o = i2;
     }
 
-    /* renamed from: p */
-    public void m758p(int i) {
-        this.f1999i = i;
+    public void p(int i2) {
+        this.f1487i = i2;
     }
 
-    /* renamed from: q */
-    public void m757q() {
-        C0365e m893i = this.f1993c.m893i();
-        if (m893i == null) {
+    public void q() {
+        e i2 = this.f1481c.i();
+        if (i2 == null) {
             return;
         }
-        if (m893i.m893i() == this.f1993c) {
-            this.f1999i = 4;
-            m893i.m896f().f1999i = 4;
+        if (i2.i() == this.f1481c) {
+            this.f1487i = 4;
+            i2.f().f1487i = 4;
         }
-        int m898d = this.f1993c.m898d();
-        C0365e.EnumC0369d enumC0369d = this.f1993c.f1841c;
-        if (enumC0369d == C0365e.EnumC0369d.RIGHT || enumC0369d == C0365e.EnumC0369d.BOTTOM) {
-            m898d = -m898d;
+        int d2 = this.f1481c.d();
+        e.d dVar = this.f1481c.f1412c;
+        if (dVar == e.d.RIGHT || dVar == e.d.BOTTOM) {
+            d2 = -d2;
         }
-        m765i(m893i.m896f(), m898d);
+        i(i2.f(), d2);
     }
 
     public String toString() {
         StringBuilder sb;
         String str;
-        if (this.f2008b != 1) {
+        if (this.f1496b != 1) {
             sb = new StringBuilder();
             sb.append("{ ");
-            sb.append(this.f1993c);
+            sb.append(this.f1481c);
             str = " UNRESOLVED} type: ";
-        } else if (this.f1997g == this) {
+        } else if (this.f1485g == this) {
             sb = new StringBuilder();
             sb.append("[");
-            sb.append(this.f1993c);
+            sb.append(this.f1481c);
             sb.append(", RESOLVED: ");
-            sb.append(this.f1998h);
+            sb.append(this.f1486h);
             str = "]  type: ";
         } else {
             sb = new StringBuilder();
             sb.append("[");
-            sb.append(this.f1993c);
+            sb.append(this.f1481c);
             sb.append(", RESOLVED: ");
-            sb.append(this.f1997g);
+            sb.append(this.f1485g);
             sb.append(":");
-            sb.append(this.f1998h);
+            sb.append(this.f1486h);
             str = "] type: ";
         }
         sb.append(str);
-        sb.append(m761m(this.f1999i));
+        sb.append(m(this.f1487i));
         return sb.toString();
     }
 }

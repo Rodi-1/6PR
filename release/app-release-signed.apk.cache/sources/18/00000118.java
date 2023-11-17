@@ -1,38 +1,28 @@
-package android.support.p002v7.widget;
+package android.support.v7.widget;
 
-import android.support.p002v7.view.menu.InterfaceC0201j;
+import android.support.v7.view.menu.j;
 import android.view.Menu;
 import android.view.Window;
 
-/* renamed from: android.support.v7.widget.c0 */
 /* loaded from: classes.dex */
-public interface InterfaceC0246c0 {
-    /* renamed from: a */
-    boolean mo1367a();
+public interface c0 {
+    boolean a();
 
-    /* renamed from: b */
-    boolean mo1366b();
+    boolean b();
 
-    /* renamed from: c */
-    void mo1365c();
+    void c();
 
-    /* renamed from: d */
-    boolean mo1364d();
+    boolean d();
 
-    /* renamed from: e */
-    boolean mo1363e();
+    boolean e();
 
-    /* renamed from: f */
-    void mo1362f(Menu menu, InterfaceC0201j.InterfaceC0202a interfaceC0202a);
+    void f(Menu menu, j.a aVar);
 
-    /* renamed from: g */
-    boolean mo1361g();
+    boolean g();
 
-    /* renamed from: h */
-    void mo1360h(int i);
+    void h(int i2);
 
-    /* renamed from: j */
-    void mo1359j();
+    void j();
 
     void setWindowCallback(Window.Callback callback);
 

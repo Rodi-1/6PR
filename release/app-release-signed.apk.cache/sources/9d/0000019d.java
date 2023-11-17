@@ -1,6 +1,5 @@
-package p007f;
+package f;
 
-/* renamed from: f.l */
 /* loaded from: classes.dex */
-public class C0379l {
+public class l {
 }

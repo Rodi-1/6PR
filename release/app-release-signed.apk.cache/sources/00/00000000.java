@@ -1,84 +1,78 @@
-package p000a;
+package a;
 
 import java.util.concurrent.Executor;
 
-/* renamed from: a.a */
 /* loaded from: classes.dex */
-public class C0000a extends AbstractC0004c {
+public class a extends c {
 
-    /* renamed from: c */
-    private static volatile C0000a f0c;
+    /* renamed from: c  reason: collision with root package name */
+    private static volatile a f0c;
 
-    /* renamed from: d */
-    private static final Executor f1d = new ExecutorC0001a();
+    /* renamed from: d  reason: collision with root package name */
+    private static final Executor f1d = new ExecutorC0000a();
 
-    /* renamed from: e */
-    private static final Executor f2e = new ExecutorC0002b();
+    /* renamed from: e  reason: collision with root package name */
+    private static final Executor f2e = new b();
 
-    /* renamed from: a */
-    private AbstractC0004c f3a;
+    /* renamed from: a  reason: collision with root package name */
+    private c f3a;
 
-    /* renamed from: b */
-    private AbstractC0004c f4b;
+    /* renamed from: b  reason: collision with root package name */
+    private c f4b;
 
-    /* renamed from: a.a$a */
+    /* renamed from: a.a$a  reason: collision with other inner class name */
     /* loaded from: classes.dex */
-    static class ExecutorC0001a implements Executor {
-        ExecutorC0001a() {
+    static class ExecutorC0000a implements Executor {
+        ExecutorC0000a() {
         }
 
         @Override // java.util.concurrent.Executor
         public void execute(Runnable runnable) {
-            C0000a.m2402d().mo2399c(runnable);
+            a.d().c(runnable);
         }
     }
 
-    /* renamed from: a.a$b */
     /* loaded from: classes.dex */
-    static class ExecutorC0002b implements Executor {
-        ExecutorC0002b() {
+    static class b implements Executor {
+        b() {
         }
 
         @Override // java.util.concurrent.Executor
         public void execute(Runnable runnable) {
-            C0000a.m2402d().mo2401a(runnable);
+            a.d().a(runnable);
         }
     }
 
-    private C0000a() {
-        C0003b c0003b = new C0003b();
-        this.f4b = c0003b;
-        this.f3a = c0003b;
+    private a() {
+        a.b bVar = new a.b();
+        this.f4b = bVar;
+        this.f3a = bVar;
     }
 
-    /* renamed from: d */
-    public static C0000a m2402d() {
+    public static a d() {
         if (f0c != null) {
             return f0c;
         }
-        synchronized (C0000a.class) {
+        synchronized (a.class) {
             if (f0c == null) {
-                f0c = new C0000a();
+                f0c = new a();
             }
         }
         return f0c;
     }
 
-    @Override // p000a.AbstractC0004c
-    /* renamed from: a */
-    public void mo2401a(Runnable runnable) {
-        this.f3a.mo2401a(runnable);
+    @Override // a.c
+    public void a(Runnable runnable) {
+        this.f3a.a(runnable);
     }
 
-    @Override // p000a.AbstractC0004c
-    /* renamed from: b */
-    public boolean mo2400b() {
-        return this.f3a.mo2400b();
+    @Override // a.c
+    public boolean b() {
+        return this.f3a.b();
     }
 
-    @Override // p000a.AbstractC0004c
-    /* renamed from: c */
-    public void mo2399c(Runnable runnable) {
-        this.f3a.mo2399c(runnable);
+    @Override // a.c
+    public void c(Runnable runnable) {
+        this.f3a.c(runnable);
     }
 }

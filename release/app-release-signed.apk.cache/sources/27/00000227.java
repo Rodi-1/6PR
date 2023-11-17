@@ -1,10 +1,8 @@
-package p016o;
+package o;
 
 import android.view.View;
 
-/* renamed from: o.v */
 /* loaded from: classes.dex */
-public interface InterfaceC0516v {
-    /* renamed from: a */
-    void mo108a(View view);
+public interface v {
+    void a(View view);
 }

@@ -1,8 +1,7 @@
-package p020s;
+package s;
 
-/* renamed from: s.b */
 /* loaded from: classes.dex */
-public final class C0570b {
+public final class b {
 
     /* renamed from: a */
     public static final int abc_action_bar_embed_tabs = 2130903040;

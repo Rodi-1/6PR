@@ -1,4 +1,4 @@
-package p019r;
+package r;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -6,114 +6,106 @@ import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
-import p020s.C0569a;
-import p023v.AbstractC0585b;
+import v.b;
 
-/* renamed from: r.j */
 /* loaded from: classes.dex */
-public class DialogC0557j extends Dialog implements InterfaceC0530c {
+public class j extends Dialog implements c {
 
-    /* renamed from: b */
-    private AbstractC0531d f2348b;
+    /* renamed from: b  reason: collision with root package name */
+    private d f1801b;
 
-    public DialogC0557j(Context context, int i) {
-        super(context, m181b(context, i));
-        m182a().mo208p(null);
-        m182a().mo260d();
+    public j(Context context, int i2) {
+        super(context, b(context, i2));
+        a().p(null);
+        a().d();
     }
 
-    /* renamed from: b */
-    private static int m181b(Context context, int i) {
-        if (i == 0) {
+    private static int b(Context context, int i2) {
+        if (i2 == 0) {
             TypedValue typedValue = new TypedValue();
-            context.getTheme().resolveAttribute(C0569a.dialogTheme, typedValue, true);
+            context.getTheme().resolveAttribute(s.a.dialogTheme, typedValue, true);
             return typedValue.resourceId;
         }
-        return i;
+        return i2;
     }
 
-    /* renamed from: a */
-    public AbstractC0531d m182a() {
-        if (this.f2348b == null) {
-            this.f2348b = AbstractC0531d.m275f(this, this);
+    public d a() {
+        if (this.f1801b == null) {
+            this.f1801b = d.f(this, this);
         }
-        return this.f2348b;
+        return this.f1801b;
     }
 
     @Override // android.app.Dialog
     public void addContentView(View view, ViewGroup.LayoutParams layoutParams) {
-        m182a().mo226c(view, layoutParams);
+        a().c(view, layoutParams);
     }
 
-    @Override // p019r.InterfaceC0530c
-    /* renamed from: c */
-    public void mo180c(AbstractC0585b abstractC0585b) {
+    @Override // r.c
+    public void c(v.b bVar) {
     }
 
-    @Override // p019r.InterfaceC0530c
-    /* renamed from: d */
-    public void mo179d(AbstractC0585b abstractC0585b) {
+    @Override // r.c
+    public void d(v.b bVar) {
     }
 
-    @Override // p019r.InterfaceC0530c
-    /* renamed from: e */
-    public AbstractC0585b mo178e(AbstractC0585b.InterfaceC0586a interfaceC0586a) {
+    @Override // r.c
+    public v.b e(b.a aVar) {
         return null;
     }
 
-    /* renamed from: f */
-    public boolean m177f(int i) {
-        return m182a().mo196w(i);
+    public boolean f(int i2) {
+        return a().w(i2);
     }
 
     @Override // android.app.Dialog
-    public <T extends View> T findViewById(int i) {
-        return (T) m182a().mo220h(i);
+    public <T extends View> T findViewById(int i2) {
+        return (T) a().h(i2);
     }
 
     @Override // android.app.Dialog
     public void invalidateOptionsMenu() {
-        m182a().mo213m();
+        a().m();
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // android.app.Dialog
     public void onCreate(Bundle bundle) {
-        m182a().mo215l();
+        a().l();
         super.onCreate(bundle);
-        m182a().mo208p(bundle);
+        a().p(bundle);
     }
 
     @Override // android.app.Dialog
     protected void onStop() {
         super.onStop();
-        m182a().mo198v();
+        a().v();
     }
 
     @Override // android.app.Dialog
-    public void setContentView(int i) {
-        m182a().mo195x(i);
+    public void setContentView(int i2) {
+        a().x(i2);
     }
 
     @Override // android.app.Dialog
     public void setContentView(View view) {
-        m182a().mo194y(view);
+        a().y(view);
     }
 
     @Override // android.app.Dialog
     public void setContentView(View view, ViewGroup.LayoutParams layoutParams) {
-        m182a().mo193z(view, layoutParams);
+        a().z(view, layoutParams);
     }
 
     @Override // android.app.Dialog
-    public void setTitle(int i) {
-        super.setTitle(i);
-        m182a().mo271A(getContext().getString(i));
+    public void setTitle(int i2) {
+        super.setTitle(i2);
+        a().A(getContext().getString(i2));
     }
 
     @Override // android.app.Dialog
     public void setTitle(CharSequence charSequence) {
         super.setTitle(charSequence);
-        m182a().mo271A(charSequence);
+        a().A(charSequence);
     }
 }

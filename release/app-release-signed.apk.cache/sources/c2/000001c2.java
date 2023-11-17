@@ -1,4 +1,4 @@
-package p011j;
+package j;
 
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
@@ -9,70 +9,67 @@ import android.graphics.Rect;
 import android.graphics.Region;
 import android.graphics.drawable.Drawable;
 
-/* renamed from: j.d */
 /* loaded from: classes.dex */
-class C0416d extends Drawable implements Drawable.Callback, InterfaceC0415c, InterfaceC0414b {
+class d extends Drawable implements Drawable.Callback, c, b {
 
-    /* renamed from: h */
-    static final PorterDuff.Mode f2059h = PorterDuff.Mode.SRC_IN;
+    /* renamed from: h  reason: collision with root package name */
+    static final PorterDuff.Mode f1546h = PorterDuff.Mode.SRC_IN;
 
-    /* renamed from: b */
-    private int f2060b;
+    /* renamed from: b  reason: collision with root package name */
+    private int f1547b;
 
-    /* renamed from: c */
-    private PorterDuff.Mode f2061c;
+    /* renamed from: c  reason: collision with root package name */
+    private PorterDuff.Mode f1548c;
 
-    /* renamed from: d */
-    private boolean f2062d;
+    /* renamed from: d  reason: collision with root package name */
+    private boolean f1549d;
 
-    /* renamed from: e */
-    AbstractC0417a f2063e;
+    /* renamed from: e  reason: collision with root package name */
+    a f1550e;
 
-    /* renamed from: f */
-    private boolean f2064f;
+    /* renamed from: f  reason: collision with root package name */
+    private boolean f1551f;
 
-    /* renamed from: g */
-    Drawable f2065g;
+    /* renamed from: g  reason: collision with root package name */
+    Drawable f1552g;
 
     /* JADX INFO: Access modifiers changed from: protected */
-    /* renamed from: j.d$a */
     /* loaded from: classes.dex */
-    public static abstract class AbstractC0417a extends Drawable.ConstantState {
+    public static abstract class a extends Drawable.ConstantState {
 
-        /* renamed from: a */
-        int f2066a;
+        /* renamed from: a  reason: collision with root package name */
+        int f1553a;
 
-        /* renamed from: b */
-        Drawable.ConstantState f2067b;
+        /* renamed from: b  reason: collision with root package name */
+        Drawable.ConstantState f1554b;
 
-        /* renamed from: c */
-        ColorStateList f2068c;
+        /* renamed from: c  reason: collision with root package name */
+        ColorStateList f1555c;
 
-        /* renamed from: d */
-        PorterDuff.Mode f2069d;
+        /* renamed from: d  reason: collision with root package name */
+        PorterDuff.Mode f1556d;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        public AbstractC0417a(AbstractC0417a abstractC0417a, Resources resources) {
-            this.f2068c = null;
-            this.f2069d = C0416d.f2059h;
-            if (abstractC0417a != null) {
-                this.f2066a = abstractC0417a.f2066a;
-                this.f2067b = abstractC0417a.f2067b;
-                this.f2068c = abstractC0417a.f2068c;
-                this.f2069d = abstractC0417a.f2069d;
+        public a(a aVar, Resources resources) {
+            this.f1555c = null;
+            this.f1556d = d.f1546h;
+            if (aVar != null) {
+                this.f1553a = aVar.f1553a;
+                this.f1554b = aVar.f1554b;
+                this.f1555c = aVar.f1555c;
+                this.f1556d = aVar.f1556d;
             }
         }
 
-        /* renamed from: a */
-        boolean m613a() {
-            return this.f2067b != null;
+        boolean a() {
+            return this.f1554b != null;
         }
 
         @Override // android.graphics.drawable.Drawable.ConstantState
         public int getChangingConfigurations() {
-            int i = this.f2066a;
-            Drawable.ConstantState constantState = this.f2067b;
-            return i | (constantState != null ? constantState.getChangingConfigurations() : 0);
+            int i2 = this.f1553a;
+            Drawable.ConstantState constantState = this.f1554b;
+            return i2 | (constantState != null ? constantState.getChangingConfigurations() : 0);
         }
 
         @Override // android.graphics.drawable.Drawable.ConstantState
@@ -85,43 +82,41 @@ class C0416d extends Drawable implements Drawable.Callback, InterfaceC0415c, Int
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public C0416d(Drawable drawable) {
-        this.f2063e = mo611d();
-        mo616b(drawable);
+    public d(Drawable drawable) {
+        this.f1550e = d();
+        b(drawable);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public C0416d(AbstractC0417a abstractC0417a, Resources resources) {
-        this.f2063e = abstractC0417a;
-        m615e(resources);
+    public d(a aVar, Resources resources) {
+        this.f1550e = aVar;
+        e(resources);
     }
 
-    /* renamed from: e */
-    private void m615e(Resources resources) {
+    private void e(Resources resources) {
         Drawable.ConstantState constantState;
-        AbstractC0417a abstractC0417a = this.f2063e;
-        if (abstractC0417a == null || (constantState = abstractC0417a.f2067b) == null) {
+        a aVar = this.f1550e;
+        if (aVar == null || (constantState = aVar.f1554b) == null) {
             return;
         }
-        mo616b(constantState.newDrawable(resources));
+        b(constantState.newDrawable(resources));
     }
 
-    /* renamed from: f */
-    private boolean m614f(int[] iArr) {
-        if (mo612c()) {
-            AbstractC0417a abstractC0417a = this.f2063e;
-            ColorStateList colorStateList = abstractC0417a.f2068c;
-            PorterDuff.Mode mode = abstractC0417a.f2069d;
+    private boolean f(int[] iArr) {
+        if (c()) {
+            a aVar = this.f1550e;
+            ColorStateList colorStateList = aVar.f1555c;
+            PorterDuff.Mode mode = aVar.f1556d;
             if (colorStateList == null || mode == null) {
-                this.f2062d = false;
+                this.f1549d = false;
                 clearColorFilter();
             } else {
                 int colorForState = colorStateList.getColorForState(iArr, colorStateList.getDefaultColor());
-                if (!this.f2062d || colorForState != this.f2060b || mode != this.f2061c) {
+                if (!this.f1549d || colorForState != this.f1547b || mode != this.f1548c) {
                     setColorFilter(colorForState, mode);
-                    this.f2060b = colorForState;
-                    this.f2061c = mode;
-                    this.f2062d = true;
+                    this.f1547b = colorForState;
+                    this.f1548c = mode;
+                    this.f1549d = true;
                     return true;
                 }
             }
@@ -130,109 +125,105 @@ class C0416d extends Drawable implements Drawable.Callback, InterfaceC0415c, Int
         return false;
     }
 
-    @Override // p011j.InterfaceC0415c
-    /* renamed from: a */
-    public final Drawable mo617a() {
-        return this.f2065g;
+    @Override // j.c
+    public final Drawable a() {
+        return this.f1552g;
     }
 
-    @Override // p011j.InterfaceC0415c
-    /* renamed from: b */
-    public final void mo616b(Drawable drawable) {
-        Drawable drawable2 = this.f2065g;
+    @Override // j.c
+    public final void b(Drawable drawable) {
+        Drawable drawable2 = this.f1552g;
         if (drawable2 != null) {
             drawable2.setCallback(null);
         }
-        this.f2065g = drawable;
+        this.f1552g = drawable;
         if (drawable != null) {
             drawable.setCallback(this);
             setVisible(drawable.isVisible(), true);
             setState(drawable.getState());
             setLevel(drawable.getLevel());
             setBounds(drawable.getBounds());
-            AbstractC0417a abstractC0417a = this.f2063e;
-            if (abstractC0417a != null) {
-                abstractC0417a.f2067b = drawable.getConstantState();
+            a aVar = this.f1550e;
+            if (aVar != null) {
+                aVar.f1554b = drawable.getConstantState();
             }
         }
         invalidateSelf();
     }
 
-    /* renamed from: c */
-    protected boolean mo612c() {
+    protected boolean c() {
         return true;
     }
 
-    /* renamed from: d */
-    AbstractC0417a mo611d() {
+    a d() {
         throw null;
     }
 
     @Override // android.graphics.drawable.Drawable
     public void draw(Canvas canvas) {
-        this.f2065g.draw(canvas);
+        this.f1552g.draw(canvas);
     }
 
     @Override // android.graphics.drawable.Drawable
     public int getChangingConfigurations() {
         int changingConfigurations = super.getChangingConfigurations();
-        AbstractC0417a abstractC0417a = this.f2063e;
-        return changingConfigurations | (abstractC0417a != null ? abstractC0417a.getChangingConfigurations() : 0) | this.f2065g.getChangingConfigurations();
+        a aVar = this.f1550e;
+        return changingConfigurations | (aVar != null ? aVar.getChangingConfigurations() : 0) | this.f1552g.getChangingConfigurations();
     }
 
     @Override // android.graphics.drawable.Drawable
     public Drawable.ConstantState getConstantState() {
-        AbstractC0417a abstractC0417a = this.f2063e;
-        if (abstractC0417a == null || !abstractC0417a.m613a()) {
+        a aVar = this.f1550e;
+        if (aVar == null || !aVar.a()) {
             return null;
         }
-        this.f2063e.f2066a = getChangingConfigurations();
-        return this.f2063e;
+        this.f1550e.f1553a = getChangingConfigurations();
+        return this.f1550e;
     }
 
     @Override // android.graphics.drawable.Drawable
     public Drawable getCurrent() {
-        return this.f2065g.getCurrent();
+        return this.f1552g.getCurrent();
     }
 
     @Override // android.graphics.drawable.Drawable
     public int getIntrinsicHeight() {
-        return this.f2065g.getIntrinsicHeight();
+        return this.f1552g.getIntrinsicHeight();
     }
 
     @Override // android.graphics.drawable.Drawable
     public int getIntrinsicWidth() {
-        return this.f2065g.getIntrinsicWidth();
+        return this.f1552g.getIntrinsicWidth();
     }
 
     @Override // android.graphics.drawable.Drawable
     public int getMinimumHeight() {
-        return this.f2065g.getMinimumHeight();
+        return this.f1552g.getMinimumHeight();
     }
 
     @Override // android.graphics.drawable.Drawable
     public int getMinimumWidth() {
-        return this.f2065g.getMinimumWidth();
+        return this.f1552g.getMinimumWidth();
     }
 
     @Override // android.graphics.drawable.Drawable
     public int getOpacity() {
-        return this.f2065g.getOpacity();
+        return this.f1552g.getOpacity();
     }
 
     @Override // android.graphics.drawable.Drawable
     public boolean getPadding(Rect rect) {
-        return this.f2065g.getPadding(rect);
+        return this.f1552g.getPadding(rect);
     }
 
     @Override // android.graphics.drawable.Drawable
     public int[] getState() {
-        return this.f2065g.getState();
+        return this.f1552g.getState();
     }
 
     @Override // android.graphics.drawable.Drawable
     public Region getTransparentRegion() {
-        return this.f2065g.getTransparentRegion();
+        return this.f1552g.getTransparentRegion();
     }
 
     @Override // android.graphics.drawable.Drawable.Callback
@@ -242,102 +233,102 @@ class C0416d extends Drawable implements Drawable.Callback, InterfaceC0415c, Int
 
     @Override // android.graphics.drawable.Drawable
     public boolean isStateful() {
-        AbstractC0417a abstractC0417a;
-        ColorStateList colorStateList = (!mo612c() || (abstractC0417a = this.f2063e) == null) ? null : abstractC0417a.f2068c;
-        return (colorStateList != null && colorStateList.isStateful()) || this.f2065g.isStateful();
+        a aVar;
+        ColorStateList colorStateList = (!c() || (aVar = this.f1550e) == null) ? null : aVar.f1555c;
+        return (colorStateList != null && colorStateList.isStateful()) || this.f1552g.isStateful();
     }
 
     @Override // android.graphics.drawable.Drawable
     public void jumpToCurrentState() {
-        this.f2065g.jumpToCurrentState();
+        this.f1552g.jumpToCurrentState();
     }
 
     @Override // android.graphics.drawable.Drawable
     public Drawable mutate() {
-        if (!this.f2064f && super.mutate() == this) {
-            this.f2063e = mo611d();
-            Drawable drawable = this.f2065g;
+        if (!this.f1551f && super.mutate() == this) {
+            this.f1550e = d();
+            Drawable drawable = this.f1552g;
             if (drawable != null) {
                 drawable.mutate();
             }
-            AbstractC0417a abstractC0417a = this.f2063e;
-            if (abstractC0417a != null) {
-                Drawable drawable2 = this.f2065g;
-                abstractC0417a.f2067b = drawable2 != null ? drawable2.getConstantState() : null;
+            a aVar = this.f1550e;
+            if (aVar != null) {
+                Drawable drawable2 = this.f1552g;
+                aVar.f1554b = drawable2 != null ? drawable2.getConstantState() : null;
             }
-            this.f2064f = true;
+            this.f1551f = true;
         }
         return this;
     }
 
     @Override // android.graphics.drawable.Drawable
     protected void onBoundsChange(Rect rect) {
-        Drawable drawable = this.f2065g;
+        Drawable drawable = this.f1552g;
         if (drawable != null) {
             drawable.setBounds(rect);
         }
     }
 
     @Override // android.graphics.drawable.Drawable
-    protected boolean onLevelChange(int i) {
-        return this.f2065g.setLevel(i);
+    protected boolean onLevelChange(int i2) {
+        return this.f1552g.setLevel(i2);
     }
 
     @Override // android.graphics.drawable.Drawable.Callback
-    public void scheduleDrawable(Drawable drawable, Runnable runnable, long j) {
-        scheduleSelf(runnable, j);
+    public void scheduleDrawable(Drawable drawable, Runnable runnable, long j2) {
+        scheduleSelf(runnable, j2);
     }
 
     @Override // android.graphics.drawable.Drawable
-    public void setAlpha(int i) {
-        this.f2065g.setAlpha(i);
+    public void setAlpha(int i2) {
+        this.f1552g.setAlpha(i2);
     }
 
     @Override // android.graphics.drawable.Drawable
-    public void setChangingConfigurations(int i) {
-        this.f2065g.setChangingConfigurations(i);
+    public void setChangingConfigurations(int i2) {
+        this.f1552g.setChangingConfigurations(i2);
     }
 
     @Override // android.graphics.drawable.Drawable
     public void setColorFilter(ColorFilter colorFilter) {
-        this.f2065g.setColorFilter(colorFilter);
+        this.f1552g.setColorFilter(colorFilter);
     }
 
     @Override // android.graphics.drawable.Drawable
     public void setDither(boolean z) {
-        this.f2065g.setDither(z);
+        this.f1552g.setDither(z);
     }
 
     @Override // android.graphics.drawable.Drawable
     public void setFilterBitmap(boolean z) {
-        this.f2065g.setFilterBitmap(z);
+        this.f1552g.setFilterBitmap(z);
     }
 
     @Override // android.graphics.drawable.Drawable
     public boolean setState(int[] iArr) {
-        return m614f(iArr) || this.f2065g.setState(iArr);
+        return f(iArr) || this.f1552g.setState(iArr);
     }
 
-    @Override // android.graphics.drawable.Drawable, p011j.InterfaceC0414b
-    public void setTint(int i) {
-        setTintList(ColorStateList.valueOf(i));
+    @Override // android.graphics.drawable.Drawable, j.b
+    public void setTint(int i2) {
+        setTintList(ColorStateList.valueOf(i2));
     }
 
-    @Override // android.graphics.drawable.Drawable, p011j.InterfaceC0414b
+    @Override // android.graphics.drawable.Drawable, j.b
     public void setTintList(ColorStateList colorStateList) {
-        this.f2063e.f2068c = colorStateList;
-        m614f(getState());
+        this.f1550e.f1555c = colorStateList;
+        f(getState());
     }
 
-    @Override // android.graphics.drawable.Drawable, p011j.InterfaceC0414b
+    @Override // android.graphics.drawable.Drawable, j.b
     public void setTintMode(PorterDuff.Mode mode) {
-        this.f2063e.f2069d = mode;
-        m614f(getState());
+        this.f1550e.f1556d = mode;
+        f(getState());
     }
 
     @Override // android.graphics.drawable.Drawable
     public boolean setVisible(boolean z, boolean z2) {
-        return super.setVisible(z, z2) || this.f2065g.setVisible(z, z2);
+        return super.setVisible(z, z2) || this.f1552g.setVisible(z, z2);
     }
 
     @Override // android.graphics.drawable.Drawable.Callback

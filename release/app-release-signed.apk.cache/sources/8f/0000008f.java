@@ -1,39 +1,33 @@
-package android.support.p001v4.app;
+package android.support.v4.app;
 
 import android.app.Activity;
-import android.arch.lifecycle.AbstractC0009c;
-import android.arch.lifecycle.C0014f;
-import android.arch.lifecycle.FragmentC0021k;
-import android.arch.lifecycle.InterfaceC0013e;
+import android.arch.lifecycle.c;
 import android.os.Bundle;
-import p015n.C0462k;
 
-/* renamed from: android.support.v4.app.z */
 /* loaded from: classes.dex */
-public class ActivityC0130z extends Activity implements InterfaceC0013e {
+public class z extends Activity implements android.arch.lifecycle.e {
 
-    /* renamed from: b */
-    private C0462k<Class<Object>, Object> f621b = new C0462k<>();
+    /* renamed from: b  reason: collision with root package name */
+    private n.k<Class<Object>, Object> f477b = new n.k<>();
 
-    /* renamed from: c */
-    private C0014f f622c = new C0014f(this);
+    /* renamed from: c  reason: collision with root package name */
+    private android.arch.lifecycle.f f478c = new android.arch.lifecycle.f(this);
 
-    /* renamed from: a */
-    public AbstractC0009c mo1819a() {
-        return this.f622c;
+    public android.arch.lifecycle.c a() {
+        return this.f478c;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // android.app.Activity
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        FragmentC0021k.m2358e(this);
+        android.arch.lifecycle.k.e(this);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // android.app.Activity
     public void onSaveInstanceState(Bundle bundle) {
-        this.f622c.m2371i(AbstractC0009c.EnumC0011b.CREATED);
+        this.f478c.i(c.b.CREATED);
         super.onSaveInstanceState(bundle);
     }
 }

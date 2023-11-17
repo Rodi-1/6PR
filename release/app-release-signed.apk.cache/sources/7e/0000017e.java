@@ -1,8 +1,7 @@
-package p005d;
+package d;
 
-/* renamed from: d.b */
 /* loaded from: classes.dex */
-public final class C0348b {
-    private C0348b() {
+public final class b {
+    private b() {
     }
 }

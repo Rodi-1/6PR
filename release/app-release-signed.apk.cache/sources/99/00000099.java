@@ -1,4 +1,4 @@
-package android.support.p001v4.widget;
+package android.support.v4.widget;
 
 import android.content.res.ColorStateList;
 import android.graphics.PorterDuff;
@@ -8,114 +8,102 @@ import android.util.Log;
 import android.widget.CompoundButton;
 import java.lang.reflect.Field;
 
-/* renamed from: android.support.v4.widget.c */
 /* loaded from: classes.dex */
-public final class C0139c {
+public final class c {
 
-    /* renamed from: a */
-    private static final C0142c f683a;
+    /* renamed from: a  reason: collision with root package name */
+    private static final C0006c f533a;
 
-    /* renamed from: android.support.v4.widget.c$a */
     /* loaded from: classes.dex */
-    static class C0140a extends C0142c {
-        C0140a() {
+    static class a extends C0006c {
+        a() {
         }
 
-        @Override // android.support.p001v4.widget.C0139c.C0142c
-        /* renamed from: b */
-        public void mo1747b(CompoundButton compoundButton, ColorStateList colorStateList) {
+        @Override // android.support.v4.widget.c.C0006c
+        public void b(CompoundButton compoundButton, ColorStateList colorStateList) {
             compoundButton.setButtonTintList(colorStateList);
         }
 
-        @Override // android.support.p001v4.widget.C0139c.C0142c
-        /* renamed from: c */
-        public void mo1746c(CompoundButton compoundButton, PorterDuff.Mode mode) {
+        @Override // android.support.v4.widget.c.C0006c
+        public void c(CompoundButton compoundButton, PorterDuff.Mode mode) {
             compoundButton.setButtonTintMode(mode);
         }
     }
 
-    /* renamed from: android.support.v4.widget.c$b */
     /* loaded from: classes.dex */
-    static class C0141b extends C0140a {
-        C0141b() {
+    static class b extends a {
+        b() {
         }
 
-        @Override // android.support.p001v4.widget.C0139c.C0142c
-        /* renamed from: a */
-        public Drawable mo1748a(CompoundButton compoundButton) {
+        @Override // android.support.v4.widget.c.C0006c
+        public Drawable a(CompoundButton compoundButton) {
             return compoundButton.getButtonDrawable();
         }
     }
 
-    /* renamed from: android.support.v4.widget.c$c */
+    /* renamed from: android.support.v4.widget.c$c  reason: collision with other inner class name */
     /* loaded from: classes.dex */
-    static class C0142c {
+    static class C0006c {
 
-        /* renamed from: a */
-        private static Field f684a;
+        /* renamed from: a  reason: collision with root package name */
+        private static Field f534a;
 
-        /* renamed from: b */
-        private static boolean f685b;
+        /* renamed from: b  reason: collision with root package name */
+        private static boolean f535b;
 
-        C0142c() {
+        C0006c() {
         }
 
-        /* renamed from: a */
-        public Drawable mo1748a(CompoundButton compoundButton) {
-            if (!f685b) {
+        public Drawable a(CompoundButton compoundButton) {
+            if (!f535b) {
                 try {
                     Field declaredField = CompoundButton.class.getDeclaredField("mButtonDrawable");
-                    f684a = declaredField;
+                    f534a = declaredField;
                     declaredField.setAccessible(true);
-                } catch (NoSuchFieldException e) {
-                    Log.i("CompoundButtonCompat", "Failed to retrieve mButtonDrawable field", e);
+                } catch (NoSuchFieldException e2) {
+                    Log.i("CompoundButtonCompat", "Failed to retrieve mButtonDrawable field", e2);
                 }
-                f685b = true;
+                f535b = true;
             }
-            Field field = f684a;
+            Field field = f534a;
             if (field != null) {
                 try {
                     return (Drawable) field.get(compoundButton);
-                } catch (IllegalAccessException e2) {
-                    Log.i("CompoundButtonCompat", "Failed to get button drawable via reflection", e2);
-                    f684a = null;
+                } catch (IllegalAccessException e3) {
+                    Log.i("CompoundButtonCompat", "Failed to get button drawable via reflection", e3);
+                    f534a = null;
                 }
             }
             return null;
         }
 
-        /* renamed from: b */
-        public void mo1747b(CompoundButton compoundButton, ColorStateList colorStateList) {
-            if (compoundButton instanceof InterfaceC0163l) {
-                ((InterfaceC0163l) compoundButton).setSupportButtonTintList(colorStateList);
+        public void b(CompoundButton compoundButton, ColorStateList colorStateList) {
+            if (compoundButton instanceof l) {
+                ((l) compoundButton).setSupportButtonTintList(colorStateList);
             }
         }
 
-        /* renamed from: c */
-        public void mo1746c(CompoundButton compoundButton, PorterDuff.Mode mode) {
-            if (compoundButton instanceof InterfaceC0163l) {
-                ((InterfaceC0163l) compoundButton).setSupportButtonTintMode(mode);
+        public void c(CompoundButton compoundButton, PorterDuff.Mode mode) {
+            if (compoundButton instanceof l) {
+                ((l) compoundButton).setSupportButtonTintMode(mode);
             }
         }
     }
 
     static {
-        int i = Build.VERSION.SDK_INT;
-        f683a = i >= 23 ? new C0141b() : i >= 21 ? new C0140a() : new C0142c();
+        int i2 = Build.VERSION.SDK_INT;
+        f533a = i2 >= 23 ? new b() : i2 >= 21 ? new a() : new C0006c();
     }
 
-    /* renamed from: a */
-    public static Drawable m1751a(CompoundButton compoundButton) {
-        return f683a.mo1748a(compoundButton);
+    public static Drawable a(CompoundButton compoundButton) {
+        return f533a.a(compoundButton);
     }
 
-    /* renamed from: b */
-    public static void m1750b(CompoundButton compoundButton, ColorStateList colorStateList) {
-        f683a.mo1747b(compoundButton, colorStateList);
+    public static void b(CompoundButton compoundButton, ColorStateList colorStateList) {
+        f533a.b(compoundButton, colorStateList);
     }
 
-    /* renamed from: c */
-    public static void m1749c(CompoundButton compoundButton, PorterDuff.Mode mode) {
-        f683a.mo1746c(compoundButton, mode);
+    public static void c(CompoundButton compoundButton, PorterDuff.Mode mode) {
+        f533a.c(compoundButton, mode);
     }
 }

@@ -1,39 +1,35 @@
-package p021t;
+package t;
 
 import java.lang.reflect.Array;
 
-/* renamed from: t.c */
 /* loaded from: classes.dex */
-final class C0582c {
-    /* renamed from: a */
-    public static int[] m94a(int[] iArr, int i, int i2) {
-        if (i + 1 > iArr.length) {
-            int[] iArr2 = new int[m92c(i)];
-            System.arraycopy(iArr, 0, iArr2, 0, i);
+final class c {
+    public static int[] a(int[] iArr, int i2, int i3) {
+        if (i2 + 1 > iArr.length) {
+            int[] iArr2 = new int[c(i2)];
+            System.arraycopy(iArr, 0, iArr2, 0, i2);
             iArr = iArr2;
         }
-        iArr[i] = i2;
+        iArr[i2] = i3;
         return iArr;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Type inference failed for: r0v4, types: [java.lang.Object[], java.lang.Object] */
-    /* renamed from: b */
-    public static <T> T[] m93b(T[] tArr, int i, T t) {
-        if (i + 1 > tArr.length) {
-            ?? r0 = (Object[]) Array.newInstance(tArr.getClass().getComponentType(), m92c(i));
-            System.arraycopy(tArr, 0, r0, 0, i);
+    public static <T> T[] b(T[] tArr, int i2, T t2) {
+        if (i2 + 1 > tArr.length) {
+            ?? r0 = (Object[]) Array.newInstance(tArr.getClass().getComponentType(), c(i2));
+            System.arraycopy(tArr, 0, r0, 0, i2);
             tArr = r0;
         }
-        tArr[i] = t;
+        tArr[i2] = t2;
         return tArr;
     }
 
-    /* renamed from: c */
-    public static int m92c(int i) {
-        if (i <= 4) {
+    public static int c(int i2) {
+        if (i2 <= 4) {
             return 8;
         }
-        return i * 2;
+        return i2 * 2;
     }
 }

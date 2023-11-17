@@ -1,4 +1,4 @@
-package android.support.p002v7.view.menu;
+package android.support.v7.view.menu;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -6,9 +6,9 @@ import android.graphics.Rect;
 import android.os.Build;
 import android.os.Handler;
 import android.os.SystemClock;
-import android.support.p002v7.view.menu.InterfaceC0201j;
-import android.support.p002v7.widget.C0290l0;
-import android.support.p002v7.widget.InterfaceC0288k0;
+import android.support.v7.view.menu.j;
+import android.support.v7.widget.k0;
+import android.support.v7.widget.l0;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -23,120 +23,105 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
-import p016o.C0474d;
-import p016o.C0490o;
-import p020s.C0572d;
-import p020s.C0575g;
+import o.o;
 
 /* JADX INFO: Access modifiers changed from: package-private */
-/* renamed from: android.support.v7.view.menu.b */
 /* loaded from: classes.dex */
-public final class View$OnKeyListenerC0183b extends AbstractC0198h implements View.OnKeyListener, PopupWindow.OnDismissListener {
+public final class b extends h implements View.OnKeyListener, PopupWindow.OnDismissListener {
+    private PopupWindow.OnDismissListener A;
+    boolean B;
 
-    /* renamed from: A */
-    private PopupWindow.OnDismissListener f868A;
+    /* renamed from: c  reason: collision with root package name */
+    private final Context f677c;
 
-    /* renamed from: B */
-    boolean f869B;
+    /* renamed from: d  reason: collision with root package name */
+    private final int f678d;
 
-    /* renamed from: c */
-    private final Context f870c;
+    /* renamed from: e  reason: collision with root package name */
+    private final int f679e;
 
-    /* renamed from: d */
-    private final int f871d;
+    /* renamed from: f  reason: collision with root package name */
+    private final int f680f;
 
-    /* renamed from: e */
-    private final int f872e;
+    /* renamed from: g  reason: collision with root package name */
+    private final boolean f681g;
 
-    /* renamed from: f */
-    private final int f873f;
+    /* renamed from: h  reason: collision with root package name */
+    final Handler f682h;
 
-    /* renamed from: g */
-    private final boolean f874g;
+    /* renamed from: p  reason: collision with root package name */
+    private View f690p;
 
-    /* renamed from: h */
-    final Handler f875h;
+    /* renamed from: q  reason: collision with root package name */
+    View f691q;
 
-    /* renamed from: p */
-    private View f883p;
+    /* renamed from: s  reason: collision with root package name */
+    private boolean f693s;
 
-    /* renamed from: q */
-    View f884q;
+    /* renamed from: t  reason: collision with root package name */
+    private boolean f694t;
 
-    /* renamed from: s */
-    private boolean f886s;
+    /* renamed from: u  reason: collision with root package name */
+    private int f695u;
 
-    /* renamed from: t */
-    private boolean f887t;
+    /* renamed from: v  reason: collision with root package name */
+    private int f696v;
+    private boolean x;
+    private j.a y;
+    private ViewTreeObserver z;
 
-    /* renamed from: u */
-    private int f888u;
+    /* renamed from: i  reason: collision with root package name */
+    private final List<e> f683i = new ArrayList();
 
-    /* renamed from: v */
-    private int f889v;
+    /* renamed from: j  reason: collision with root package name */
+    final List<d> f684j = new ArrayList();
 
-    /* renamed from: x */
-    private boolean f891x;
+    /* renamed from: k  reason: collision with root package name */
+    private final ViewTreeObserver.OnGlobalLayoutListener f685k = new a();
 
-    /* renamed from: y */
-    private InterfaceC0201j.InterfaceC0202a f892y;
+    /* renamed from: l  reason: collision with root package name */
+    private final View.OnAttachStateChangeListener f686l = new View$OnAttachStateChangeListenerC0008b();
 
-    /* renamed from: z */
-    private ViewTreeObserver f893z;
+    /* renamed from: m  reason: collision with root package name */
+    private final k0 f687m = new c();
 
-    /* renamed from: i */
-    private final List<C0192e> f876i = new ArrayList();
+    /* renamed from: n  reason: collision with root package name */
+    private int f688n = 0;
 
-    /* renamed from: j */
-    final List<C0188d> f877j = new ArrayList();
+    /* renamed from: o  reason: collision with root package name */
+    private int f689o = 0;
 
-    /* renamed from: k */
-    private final ViewTreeObserver.OnGlobalLayoutListener f878k = new ViewTreeObserver$OnGlobalLayoutListenerC0184a();
+    /* renamed from: w  reason: collision with root package name */
+    private boolean f697w = false;
 
-    /* renamed from: l */
-    private final View.OnAttachStateChangeListener f879l = new View$OnAttachStateChangeListenerC0185b();
+    /* renamed from: r  reason: collision with root package name */
+    private int f692r = G();
 
-    /* renamed from: m */
-    private final InterfaceC0288k0 f880m = new C0186c();
-
-    /* renamed from: n */
-    private int f881n = 0;
-
-    /* renamed from: o */
-    private int f882o = 0;
-
-    /* renamed from: w */
-    private boolean f890w = false;
-
-    /* renamed from: r */
-    private int f885r = m1664G();
-
-    /* renamed from: android.support.v7.view.menu.b$a */
     /* loaded from: classes.dex */
-    class ViewTreeObserver$OnGlobalLayoutListenerC0184a implements ViewTreeObserver.OnGlobalLayoutListener {
-        ViewTreeObserver$OnGlobalLayoutListenerC0184a() {
+    class a implements ViewTreeObserver.OnGlobalLayoutListener {
+        a() {
         }
 
         @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
         public void onGlobalLayout() {
-            if (!View$OnKeyListenerC0183b.this.mo3c() || View$OnKeyListenerC0183b.this.f877j.size() <= 0 || View$OnKeyListenerC0183b.this.f877j.get(0).f901a.m1241p()) {
+            if (!b.this.c() || b.this.f684j.size() <= 0 || b.this.f684j.get(0).f705a.p()) {
                 return;
             }
-            View view = View$OnKeyListenerC0183b.this.f884q;
+            View view = b.this.f691q;
             if (view == null || !view.isShown()) {
-                View$OnKeyListenerC0183b.this.dismiss();
+                b.this.dismiss();
                 return;
             }
-            for (C0188d c0188d : View$OnKeyListenerC0183b.this.f877j) {
-                c0188d.f901a.mo1f();
+            for (d dVar : b.this.f684j) {
+                dVar.f705a.f();
             }
         }
     }
 
-    /* renamed from: android.support.v7.view.menu.b$b */
+    /* renamed from: android.support.v7.view.menu.b$b  reason: collision with other inner class name */
     /* loaded from: classes.dex */
-    class View$OnAttachStateChangeListenerC0185b implements View.OnAttachStateChangeListener {
-        View$OnAttachStateChangeListenerC0185b() {
+    class View$OnAttachStateChangeListenerC0008b implements View.OnAttachStateChangeListener {
+        View$OnAttachStateChangeListenerC0008b() {
         }
 
         @Override // android.view.View.OnAttachStateChangeListener
@@ -145,529 +130,499 @@ public final class View$OnKeyListenerC0183b extends AbstractC0198h implements Vi
 
         @Override // android.view.View.OnAttachStateChangeListener
         public void onViewDetachedFromWindow(View view) {
-            if (View$OnKeyListenerC0183b.this.f893z != null) {
-                if (!View$OnKeyListenerC0183b.this.f893z.isAlive()) {
-                    View$OnKeyListenerC0183b.this.f893z = view.getViewTreeObserver();
+            if (b.this.z != null) {
+                if (!b.this.z.isAlive()) {
+                    b.this.z = view.getViewTreeObserver();
                 }
-                View$OnKeyListenerC0183b.this.f893z.removeGlobalOnLayoutListener(View$OnKeyListenerC0183b.this.f878k);
+                b.this.z.removeGlobalOnLayoutListener(b.this.f685k);
             }
             view.removeOnAttachStateChangeListener(this);
         }
     }
 
-    /* renamed from: android.support.v7.view.menu.b$c */
     /* loaded from: classes.dex */
-    class C0186c implements InterfaceC0288k0 {
+    class c implements k0 {
 
-        /* renamed from: android.support.v7.view.menu.b$c$a */
         /* loaded from: classes.dex */
-        class RunnableC0187a implements Runnable {
+        class a implements Runnable {
 
-            /* renamed from: b */
-            final /* synthetic */ C0188d f897b;
+            /* renamed from: b  reason: collision with root package name */
+            final /* synthetic */ d f701b;
 
-            /* renamed from: c */
-            final /* synthetic */ MenuItem f898c;
+            /* renamed from: c  reason: collision with root package name */
+            final /* synthetic */ MenuItem f702c;
 
-            /* renamed from: d */
-            final /* synthetic */ C0192e f899d;
+            /* renamed from: d  reason: collision with root package name */
+            final /* synthetic */ e f703d;
 
-            RunnableC0187a(C0188d c0188d, MenuItem menuItem, C0192e c0192e) {
-                this.f897b = c0188d;
-                this.f898c = menuItem;
-                this.f899d = c0192e;
+            a(d dVar, MenuItem menuItem, e eVar) {
+                this.f701b = dVar;
+                this.f702c = menuItem;
+                this.f703d = eVar;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                C0188d c0188d = this.f897b;
-                if (c0188d != null) {
-                    View$OnKeyListenerC0183b.this.f869B = true;
-                    c0188d.f902b.m1622e(false);
-                    View$OnKeyListenerC0183b.this.f869B = false;
+                d dVar = this.f701b;
+                if (dVar != null) {
+                    b.this.B = true;
+                    dVar.f706b.e(false);
+                    b.this.B = false;
                 }
-                if (this.f898c.isEnabled() && this.f898c.hasSubMenu()) {
-                    this.f899d.m1644L(this.f898c, 4);
+                if (this.f702c.isEnabled() && this.f702c.hasSubMenu()) {
+                    this.f703d.L(this.f702c, 4);
                 }
             }
         }
 
-        C0186c() {
+        c() {
         }
 
-        @Override // android.support.p002v7.widget.InterfaceC0288k0
-        /* renamed from: a */
-        public void mo1193a(C0192e c0192e, MenuItem menuItem) {
-            View$OnKeyListenerC0183b.this.f875h.removeCallbacksAndMessages(null);
-            int size = View$OnKeyListenerC0183b.this.f877j.size();
-            int i = 0;
+        @Override // android.support.v7.widget.k0
+        public void a(e eVar, MenuItem menuItem) {
+            b.this.f682h.removeCallbacksAndMessages(null);
+            int size = b.this.f684j.size();
+            int i2 = 0;
             while (true) {
-                if (i >= size) {
-                    i = -1;
+                if (i2 >= size) {
+                    i2 = -1;
                     break;
-                } else if (c0192e == View$OnKeyListenerC0183b.this.f877j.get(i).f902b) {
+                } else if (eVar == b.this.f684j.get(i2).f706b) {
                     break;
                 } else {
-                    i++;
+                    i2++;
                 }
             }
-            if (i == -1) {
+            if (i2 == -1) {
                 return;
             }
-            int i2 = i + 1;
-            View$OnKeyListenerC0183b.this.f875h.postAtTime(new RunnableC0187a(i2 < View$OnKeyListenerC0183b.this.f877j.size() ? View$OnKeyListenerC0183b.this.f877j.get(i2) : null, menuItem, c0192e), c0192e, SystemClock.uptimeMillis() + 200);
+            int i3 = i2 + 1;
+            b.this.f682h.postAtTime(new a(i3 < b.this.f684j.size() ? b.this.f684j.get(i3) : null, menuItem, eVar), eVar, SystemClock.uptimeMillis() + 200);
         }
 
-        @Override // android.support.p002v7.widget.InterfaceC0288k0
-        /* renamed from: b */
-        public void mo1192b(C0192e c0192e, MenuItem menuItem) {
-            View$OnKeyListenerC0183b.this.f875h.removeCallbacksAndMessages(c0192e);
+        @Override // android.support.v7.widget.k0
+        public void b(e eVar, MenuItem menuItem) {
+            b.this.f682h.removeCallbacksAndMessages(eVar);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: android.support.v7.view.menu.b$d */
     /* loaded from: classes.dex */
-    public static class C0188d {
+    public static class d {
 
-        /* renamed from: a */
-        public final C0290l0 f901a;
+        /* renamed from: a  reason: collision with root package name */
+        public final l0 f705a;
 
-        /* renamed from: b */
-        public final C0192e f902b;
+        /* renamed from: b  reason: collision with root package name */
+        public final e f706b;
 
-        /* renamed from: c */
-        public final int f903c;
+        /* renamed from: c  reason: collision with root package name */
+        public final int f707c;
 
-        public C0188d(C0290l0 c0290l0, C0192e c0192e, int i) {
-            this.f901a = c0290l0;
-            this.f902b = c0192e;
-            this.f903c = i;
+        public d(l0 l0Var, e eVar, int i2) {
+            this.f705a = l0Var;
+            this.f706b = eVar;
+            this.f707c = i2;
         }
 
-        /* renamed from: a */
-        public ListView m1660a() {
-            return this.f901a.mo2d();
+        public ListView a() {
+            return this.f705a.d();
         }
     }
 
-    public View$OnKeyListenerC0183b(Context context, View view, int i, int i2, boolean z) {
-        this.f870c = context;
-        this.f883p = view;
-        this.f872e = i;
-        this.f873f = i2;
-        this.f874g = z;
+    public b(Context context, View view, int i2, int i3, boolean z) {
+        this.f677c = context;
+        this.f690p = view;
+        this.f679e = i2;
+        this.f680f = i3;
+        this.f681g = z;
         Resources resources = context.getResources();
-        this.f871d = Math.max(resources.getDisplayMetrics().widthPixels / 2, resources.getDimensionPixelSize(C0572d.abc_config_prefDialogWidth));
-        this.f875h = new Handler();
+        this.f678d = Math.max(resources.getDisplayMetrics().widthPixels / 2, resources.getDimensionPixelSize(s.d.abc_config_prefDialogWidth));
+        this.f682h = new Handler();
     }
 
-    /* renamed from: C */
-    private C0290l0 m1668C() {
-        C0290l0 c0290l0 = new C0290l0(this.f870c, null, this.f872e, this.f873f);
-        c0290l0.m1195L(this.f880m);
-        c0290l0.m1257C(this);
-        c0290l0.m1258B(this);
-        c0290l0.m1239s(this.f883p);
-        c0290l0.m1235w(this.f882o);
-        c0290l0.m1259A(true);
-        c0290l0.m1232z(2);
-        return c0290l0;
+    private l0 C() {
+        l0 l0Var = new l0(this.f677c, null, this.f679e, this.f680f);
+        l0Var.L(this.f687m);
+        l0Var.C(this);
+        l0Var.B(this);
+        l0Var.s(this.f690p);
+        l0Var.w(this.f689o);
+        l0Var.A(true);
+        l0Var.z(2);
+        return l0Var;
     }
 
-    /* renamed from: D */
-    private int m1667D(C0192e c0192e) {
-        int size = this.f877j.size();
-        for (int i = 0; i < size; i++) {
-            if (c0192e == this.f877j.get(i).f902b) {
-                return i;
+    private int D(e eVar) {
+        int size = this.f684j.size();
+        for (int i2 = 0; i2 < size; i2++) {
+            if (eVar == this.f684j.get(i2).f706b) {
+                return i2;
             }
         }
         return -1;
     }
 
-    /* renamed from: E */
-    private MenuItem m1666E(C0192e c0192e, C0192e c0192e2) {
-        int size = c0192e.size();
-        for (int i = 0; i < size; i++) {
-            MenuItem item = c0192e.getItem(i);
-            if (item.hasSubMenu() && c0192e2 == item.getSubMenu()) {
+    private MenuItem E(e eVar, e eVar2) {
+        int size = eVar.size();
+        for (int i2 = 0; i2 < size; i2++) {
+            MenuItem item = eVar.getItem(i2);
+            if (item.hasSubMenu() && eVar2 == item.getSubMenu()) {
                 return item;
             }
         }
         return null;
     }
 
-    /* renamed from: F */
-    private View m1665F(C0188d c0188d, C0192e c0192e) {
-        C0191d c0191d;
-        int i;
+    private View F(d dVar, e eVar) {
+        android.support.v7.view.menu.d dVar2;
+        int i2;
         int firstVisiblePosition;
-        MenuItem m1666E = m1666E(c0188d.f902b, c0192e);
-        if (m1666E == null) {
+        MenuItem E = E(dVar.f706b, eVar);
+        if (E == null) {
             return null;
         }
-        ListView m1660a = c0188d.m1660a();
-        ListAdapter adapter = m1660a.getAdapter();
-        int i2 = 0;
+        ListView a2 = dVar.a();
+        ListAdapter adapter = a2.getAdapter();
+        int i3 = 0;
         if (adapter instanceof HeaderViewListAdapter) {
             HeaderViewListAdapter headerViewListAdapter = (HeaderViewListAdapter) adapter;
-            i = headerViewListAdapter.getHeadersCount();
-            c0191d = (C0191d) headerViewListAdapter.getWrappedAdapter();
+            i2 = headerViewListAdapter.getHeadersCount();
+            dVar2 = (android.support.v7.view.menu.d) headerViewListAdapter.getWrappedAdapter();
         } else {
-            c0191d = (C0191d) adapter;
-            i = 0;
+            dVar2 = (android.support.v7.view.menu.d) adapter;
+            i2 = 0;
         }
-        int count = c0191d.getCount();
+        int count = dVar2.getCount();
         while (true) {
-            if (i2 >= count) {
-                i2 = -1;
+            if (i3 >= count) {
+                i3 = -1;
                 break;
-            } else if (m1666E == c0191d.getItem(i2)) {
+            } else if (E == dVar2.getItem(i3)) {
                 break;
             } else {
-                i2++;
+                i3++;
             }
         }
-        if (i2 != -1 && (firstVisiblePosition = (i2 + i) - m1660a.getFirstVisiblePosition()) >= 0 && firstVisiblePosition < m1660a.getChildCount()) {
-            return m1660a.getChildAt(firstVisiblePosition);
+        if (i3 != -1 && (firstVisiblePosition = (i3 + i2) - a2.getFirstVisiblePosition()) >= 0 && firstVisiblePosition < a2.getChildCount()) {
+            return a2.getChildAt(firstVisiblePosition);
         }
         return null;
     }
 
-    /* renamed from: G */
-    private int m1664G() {
-        return C0490o.m408d(this.f883p) == 1 ? 0 : 1;
+    private int G() {
+        return o.d(this.f690p) == 1 ? 0 : 1;
     }
 
-    /* renamed from: H */
-    private int m1663H(int i) {
-        List<C0188d> list = this.f877j;
-        ListView m1660a = list.get(list.size() - 1).m1660a();
+    private int H(int i2) {
+        List<d> list = this.f684j;
+        ListView a2 = list.get(list.size() - 1).a();
         int[] iArr = new int[2];
-        m1660a.getLocationOnScreen(iArr);
+        a2.getLocationOnScreen(iArr);
         Rect rect = new Rect();
-        this.f884q.getWindowVisibleDisplayFrame(rect);
-        return this.f885r == 1 ? (iArr[0] + m1660a.getWidth()) + i > rect.right ? 0 : 1 : iArr[0] - i < 0 ? 1 : 0;
+        this.f691q.getWindowVisibleDisplayFrame(rect);
+        return this.f692r == 1 ? (iArr[0] + a2.getWidth()) + i2 > rect.right ? 0 : 1 : iArr[0] - i2 < 0 ? 1 : 0;
     }
 
-    /* renamed from: I */
-    private void m1662I(C0192e c0192e) {
-        C0188d c0188d;
+    private void I(e eVar) {
+        d dVar;
         View view;
-        int i;
         int i2;
         int i3;
-        LayoutInflater from = LayoutInflater.from(this.f870c);
-        C0191d c0191d = new C0191d(c0192e, from, this.f874g);
-        if (!mo3c() && this.f890w) {
-            c0191d.m1652d(true);
-        } else if (mo3c()) {
-            c0191d.m1652d(AbstractC0198h.m1574x(c0192e));
+        int i4;
+        LayoutInflater from = LayoutInflater.from(this.f677c);
+        android.support.v7.view.menu.d dVar2 = new android.support.v7.view.menu.d(eVar, from, this.f681g);
+        if (!c() && this.f697w) {
+            dVar2.d(true);
+        } else if (c()) {
+            dVar2.d(h.x(eVar));
         }
-        int m1576o = AbstractC0198h.m1576o(c0191d, null, this.f870c, this.f871d);
-        C0290l0 m1668C = m1668C();
-        m1668C.mo1054r(c0191d);
-        m1668C.m1236v(m1576o);
-        m1668C.m1235w(this.f882o);
-        if (this.f877j.size() > 0) {
-            List<C0188d> list = this.f877j;
-            c0188d = list.get(list.size() - 1);
-            view = m1665F(c0188d, c0192e);
+        int o2 = h.o(dVar2, null, this.f677c, this.f678d);
+        l0 C = C();
+        C.r(dVar2);
+        C.v(o2);
+        C.w(this.f689o);
+        if (this.f684j.size() > 0) {
+            List<d> list = this.f684j;
+            dVar = list.get(list.size() - 1);
+            view = F(dVar, eVar);
         } else {
-            c0188d = null;
+            dVar = null;
             view = null;
         }
         if (view != null) {
-            m1668C.m1194M(false);
-            m1668C.m1197J(null);
-            int m1663H = m1663H(m1576o);
-            boolean z = m1663H == 1;
-            this.f885r = m1663H;
+            C.M(false);
+            C.J(null);
+            int H = H(o2);
+            boolean z = H == 1;
+            this.f692r = H;
             if (Build.VERSION.SDK_INT >= 26) {
-                m1668C.m1239s(view);
+                C.s(view);
+                i3 = 0;
                 i2 = 0;
-                i = 0;
             } else {
                 int[] iArr = new int[2];
-                this.f883p.getLocationOnScreen(iArr);
+                this.f690p.getLocationOnScreen(iArr);
                 int[] iArr2 = new int[2];
                 view.getLocationOnScreen(iArr2);
-                if ((this.f882o & 7) == 5) {
-                    iArr[0] = iArr[0] + this.f883p.getWidth();
+                if ((this.f689o & 7) == 5) {
+                    iArr[0] = iArr[0] + this.f690p.getWidth();
                     iArr2[0] = iArr2[0] + view.getWidth();
                 }
-                i = iArr2[0] - iArr[0];
-                i2 = iArr2[1] - iArr[1];
+                i2 = iArr2[0] - iArr[0];
+                i3 = iArr2[1] - iArr[1];
             }
-            if ((this.f882o & 5) == 5) {
+            if ((this.f689o & 5) == 5) {
                 if (!z) {
-                    m1576o = view.getWidth();
-                    i3 = i - m1576o;
+                    o2 = view.getWidth();
+                    i4 = i2 - o2;
                 }
-                i3 = i + m1576o;
+                i4 = i2 + o2;
             } else {
                 if (z) {
-                    m1576o = view.getWidth();
-                    i3 = i + m1576o;
+                    o2 = view.getWidth();
+                    i4 = i2 + o2;
                 }
-                i3 = i - m1576o;
+                i4 = i2 - o2;
             }
-            m1668C.m1233y(i3);
-            m1668C.m1256D(true);
-            m1668C.m1252H(i2);
+            C.y(i4);
+            C.D(true);
+            C.H(i3);
         } else {
-            if (this.f886s) {
-                m1668C.m1233y(this.f888u);
+            if (this.f693s) {
+                C.y(this.f695u);
             }
-            if (this.f887t) {
-                m1668C.m1252H(this.f889v);
+            if (this.f694t) {
+                C.H(this.f696v);
             }
-            m1668C.m1234x(m1577n());
+            C.x(n());
         }
-        this.f877j.add(new C0188d(m1668C, c0192e, this.f885r));
-        m1668C.mo1f();
-        ListView mo2d = m1668C.mo2d();
-        mo2d.setOnKeyListener(this);
-        if (c0188d == null && this.f891x && c0192e.m1607x() != null) {
-            FrameLayout frameLayout = (FrameLayout) from.inflate(C0575g.abc_popup_menu_header_item_layout, (ViewGroup) mo2d, false);
+        this.f684j.add(new d(C, eVar, this.f692r));
+        C.f();
+        ListView d2 = C.d();
+        d2.setOnKeyListener(this);
+        if (dVar == null && this.x && eVar.x() != null) {
+            FrameLayout frameLayout = (FrameLayout) from.inflate(s.g.abc_popup_menu_header_item_layout, (ViewGroup) d2, false);
             frameLayout.setEnabled(false);
-            ((TextView) frameLayout.findViewById(16908310)).setText(c0192e.m1607x());
-            mo2d.addHeaderView(frameLayout, null, false);
-            m1668C.mo1f();
+            ((TextView) frameLayout.findViewById(16908310)).setText(eVar.x());
+            d2.addHeaderView(frameLayout, null, false);
+            C.f();
         }
     }
 
-    @Override // android.support.p002v7.view.menu.InterfaceC0201j
-    /* renamed from: a */
-    public void mo1347a(C0192e c0192e, boolean z) {
-        int m1667D = m1667D(c0192e);
-        if (m1667D < 0) {
+    @Override // android.support.v7.view.menu.j
+    public void a(e eVar, boolean z) {
+        int D = D(eVar);
+        if (D < 0) {
             return;
         }
-        int i = m1667D + 1;
-        if (i < this.f877j.size()) {
-            this.f877j.get(i).f902b.m1622e(false);
+        int i2 = D + 1;
+        if (i2 < this.f684j.size()) {
+            this.f684j.get(i2).f706b.e(false);
         }
-        C0188d remove = this.f877j.remove(m1667D);
-        remove.f902b.m1641O(this);
-        if (this.f869B) {
-            remove.f901a.m1196K(null);
-            remove.f901a.m1238t(0);
+        d remove = this.f684j.remove(D);
+        remove.f706b.O(this);
+        if (this.B) {
+            remove.f705a.K(null);
+            remove.f705a.t(0);
         }
-        remove.f901a.dismiss();
-        int size = this.f877j.size();
-        this.f885r = size > 0 ? this.f877j.get(size - 1).f903c : m1664G();
+        remove.f705a.dismiss();
+        int size = this.f684j.size();
+        this.f692r = size > 0 ? this.f684j.get(size - 1).f707c : G();
         if (size != 0) {
             if (z) {
-                this.f877j.get(0).f902b.m1622e(false);
+                this.f684j.get(0).f706b.e(false);
                 return;
             }
             return;
         }
         dismiss();
-        InterfaceC0201j.InterfaceC0202a interfaceC0202a = this.f892y;
-        if (interfaceC0202a != null) {
-            interfaceC0202a.mo184a(c0192e, true);
+        j.a aVar = this.y;
+        if (aVar != null) {
+            aVar.a(eVar, true);
         }
-        ViewTreeObserver viewTreeObserver = this.f893z;
+        ViewTreeObserver viewTreeObserver = this.z;
         if (viewTreeObserver != null) {
             if (viewTreeObserver.isAlive()) {
-                this.f893z.removeGlobalOnLayoutListener(this.f878k);
+                this.z.removeGlobalOnLayoutListener(this.f685k);
             }
-            this.f893z = null;
+            this.z = null;
         }
-        this.f884q.removeOnAttachStateChangeListener(this.f879l);
-        this.f868A.onDismiss();
+        this.f691q.removeOnAttachStateChangeListener(this.f686l);
+        this.A.onDismiss();
     }
 
-    @Override // android.support.p002v7.view.menu.InterfaceC0201j
-    /* renamed from: b */
-    public boolean mo1346b(SubMenuC0208m subMenuC0208m) {
-        for (C0188d c0188d : this.f877j) {
-            if (subMenuC0208m == c0188d.f902b) {
-                c0188d.m1660a().requestFocus();
+    @Override // android.support.v7.view.menu.j
+    public boolean b(m mVar) {
+        for (d dVar : this.f684j) {
+            if (mVar == dVar.f706b) {
+                dVar.a().requestFocus();
                 return true;
             }
         }
-        if (subMenuC0208m.hasVisibleItems()) {
-            mo1553l(subMenuC0208m);
-            InterfaceC0201j.InterfaceC0202a interfaceC0202a = this.f892y;
-            if (interfaceC0202a != null) {
-                interfaceC0202a.mo183b(subMenuC0208m);
+        if (mVar.hasVisibleItems()) {
+            l(mVar);
+            j.a aVar = this.y;
+            if (aVar != null) {
+                aVar.b(mVar);
             }
             return true;
         }
         return false;
     }
 
-    @Override // p024w.InterfaceC0610h
-    /* renamed from: c */
-    public boolean mo3c() {
-        return this.f877j.size() > 0 && this.f877j.get(0).f901a.mo3c();
+    @Override // w.h
+    public boolean c() {
+        return this.f684j.size() > 0 && this.f684j.get(0).f705a.c();
     }
 
-    @Override // p024w.InterfaceC0610h
-    /* renamed from: d */
-    public ListView mo2d() {
-        if (this.f877j.isEmpty()) {
+    @Override // w.h
+    public ListView d() {
+        if (this.f684j.isEmpty()) {
             return null;
         }
-        List<C0188d> list = this.f877j;
-        return list.get(list.size() - 1).m1660a();
+        List<d> list = this.f684j;
+        return list.get(list.size() - 1).a();
     }
 
-    @Override // p024w.InterfaceC0610h
+    @Override // w.h
     public void dismiss() {
-        int size = this.f877j.size();
+        int size = this.f684j.size();
         if (size > 0) {
-            C0188d[] c0188dArr = (C0188d[]) this.f877j.toArray(new C0188d[size]);
-            for (int i = size - 1; i >= 0; i--) {
-                C0188d c0188d = c0188dArr[i];
-                if (c0188d.f901a.mo3c()) {
-                    c0188d.f901a.dismiss();
+            d[] dVarArr = (d[]) this.f684j.toArray(new d[size]);
+            for (int i2 = size - 1; i2 >= 0; i2--) {
+                d dVar = dVarArr[i2];
+                if (dVar.f705a.c()) {
+                    dVar.f705a.dismiss();
                 }
             }
         }
     }
 
-    @Override // p024w.InterfaceC0610h
-    /* renamed from: f */
-    public void mo1f() {
-        if (mo3c()) {
+    @Override // w.h
+    public void f() {
+        if (c()) {
             return;
         }
-        for (C0192e c0192e : this.f876i) {
-            m1662I(c0192e);
+        for (e eVar : this.f683i) {
+            I(eVar);
         }
-        this.f876i.clear();
-        View view = this.f883p;
-        this.f884q = view;
+        this.f683i.clear();
+        View view = this.f690p;
+        this.f691q = view;
         if (view != null) {
-            boolean z = this.f893z == null;
+            boolean z = this.z == null;
             ViewTreeObserver viewTreeObserver = view.getViewTreeObserver();
-            this.f893z = viewTreeObserver;
+            this.z = viewTreeObserver;
             if (z) {
-                viewTreeObserver.addOnGlobalLayoutListener(this.f878k);
+                viewTreeObserver.addOnGlobalLayoutListener(this.f685k);
             }
-            this.f884q.addOnAttachStateChangeListener(this.f879l);
+            this.f691q.addOnAttachStateChangeListener(this.f686l);
         }
     }
 
-    @Override // android.support.p002v7.view.menu.InterfaceC0201j
-    /* renamed from: g */
-    public boolean mo1344g() {
+    @Override // android.support.v7.view.menu.j
+    public boolean g() {
         return false;
     }
 
-    @Override // android.support.p002v7.view.menu.InterfaceC0201j
-    /* renamed from: i */
-    public void mo1343i(boolean z) {
-        for (C0188d c0188d : this.f877j) {
-            AbstractC0198h.m1573y(c0188d.m1660a().getAdapter()).notifyDataSetChanged();
+    @Override // android.support.v7.view.menu.j
+    public void i(boolean z) {
+        for (d dVar : this.f684j) {
+            h.y(dVar.a().getAdapter()).notifyDataSetChanged();
         }
     }
 
-    @Override // android.support.p002v7.view.menu.InterfaceC0201j
-    /* renamed from: j */
-    public void mo1554j(InterfaceC0201j.InterfaceC0202a interfaceC0202a) {
-        this.f892y = interfaceC0202a;
+    @Override // android.support.v7.view.menu.j
+    public void j(j.a aVar) {
+        this.y = aVar;
     }
 
-    @Override // android.support.p002v7.view.menu.AbstractC0198h
-    /* renamed from: l */
-    public void mo1553l(C0192e c0192e) {
-        c0192e.m1626c(this, this.f870c);
-        if (mo3c()) {
-            m1662I(c0192e);
+    @Override // android.support.v7.view.menu.h
+    public void l(e eVar) {
+        eVar.c(this, this.f677c);
+        if (c()) {
+            I(eVar);
         } else {
-            this.f876i.add(c0192e);
+            this.f683i.add(eVar);
         }
     }
 
-    @Override // android.support.p002v7.view.menu.AbstractC0198h
-    /* renamed from: m */
-    protected boolean mo1578m() {
+    @Override // android.support.v7.view.menu.h
+    protected boolean m() {
         return false;
     }
 
     @Override // android.widget.PopupWindow.OnDismissListener
     public void onDismiss() {
-        C0188d c0188d;
-        int size = this.f877j.size();
-        int i = 0;
+        d dVar;
+        int size = this.f684j.size();
+        int i2 = 0;
         while (true) {
-            if (i >= size) {
-                c0188d = null;
+            if (i2 >= size) {
+                dVar = null;
                 break;
             }
-            c0188d = this.f877j.get(i);
-            if (!c0188d.f901a.mo3c()) {
+            dVar = this.f684j.get(i2);
+            if (!dVar.f705a.c()) {
                 break;
             }
-            i++;
+            i2++;
         }
-        if (c0188d != null) {
-            c0188d.f902b.m1622e(false);
+        if (dVar != null) {
+            dVar.f706b.e(false);
         }
     }
 
     @Override // android.view.View.OnKeyListener
-    public boolean onKey(View view, int i, KeyEvent keyEvent) {
-        if (keyEvent.getAction() == 1 && i == 82) {
+    public boolean onKey(View view, int i2, KeyEvent keyEvent) {
+        if (keyEvent.getAction() == 1 && i2 == 82) {
             dismiss();
             return true;
         }
         return false;
     }
 
-    @Override // android.support.p002v7.view.menu.AbstractC0198h
-    /* renamed from: p */
-    public void mo1552p(View view) {
-        if (this.f883p != view) {
-            this.f883p = view;
-            this.f882o = C0474d.m456a(this.f881n, C0490o.m408d(view));
+    @Override // android.support.v7.view.menu.h
+    public void p(View view) {
+        if (this.f690p != view) {
+            this.f690p = view;
+            this.f689o = o.d.a(this.f688n, o.d(view));
         }
     }
 
-    @Override // android.support.p002v7.view.menu.AbstractC0198h
-    /* renamed from: r */
-    public void mo1551r(boolean z) {
-        this.f890w = z;
+    @Override // android.support.v7.view.menu.h
+    public void r(boolean z) {
+        this.f697w = z;
     }
 
-    @Override // android.support.p002v7.view.menu.AbstractC0198h
-    /* renamed from: s */
-    public void mo1550s(int i) {
-        if (this.f881n != i) {
-            this.f881n = i;
-            this.f882o = C0474d.m456a(i, C0490o.m408d(this.f883p));
+    @Override // android.support.v7.view.menu.h
+    public void s(int i2) {
+        if (this.f688n != i2) {
+            this.f688n = i2;
+            this.f689o = o.d.a(i2, o.d(this.f690p));
         }
     }
 
-    @Override // android.support.p002v7.view.menu.AbstractC0198h
-    /* renamed from: t */
-    public void mo1549t(int i) {
-        this.f886s = true;
-        this.f888u = i;
+    @Override // android.support.v7.view.menu.h
+    public void t(int i2) {
+        this.f693s = true;
+        this.f695u = i2;
     }
 
-    @Override // android.support.p002v7.view.menu.AbstractC0198h
-    /* renamed from: u */
-    public void mo1548u(PopupWindow.OnDismissListener onDismissListener) {
-        this.f868A = onDismissListener;
+    @Override // android.support.v7.view.menu.h
+    public void u(PopupWindow.OnDismissListener onDismissListener) {
+        this.A = onDismissListener;
     }
 
-    @Override // android.support.p002v7.view.menu.AbstractC0198h
-    /* renamed from: v */
-    public void mo1547v(boolean z) {
-        this.f891x = z;
+    @Override // android.support.v7.view.menu.h
+    public void v(boolean z) {
+        this.x = z;
     }
 
-    @Override // android.support.p002v7.view.menu.AbstractC0198h
-    /* renamed from: w */
-    public void mo1546w(int i) {
-        this.f887t = true;
-        this.f889v = i;
+    @Override // android.support.v7.view.menu.h
+    public void w(int i2) {
+        this.f694t = true;
+        this.f696v = i2;
     }
 }

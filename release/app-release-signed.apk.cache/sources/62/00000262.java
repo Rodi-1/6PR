@@ -1,8 +1,7 @@
-package p020s;
+package s;
 
-/* renamed from: s.g */
 /* loaded from: classes.dex */
-public final class C0575g {
+public final class g {
 
     /* renamed from: a */
     public static final int abc_action_bar_title_item = 2131296256;

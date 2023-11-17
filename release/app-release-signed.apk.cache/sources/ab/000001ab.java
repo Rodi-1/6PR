@@ -1,4 +1,4 @@
-package p009h;
+package h;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -9,104 +9,94 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.TypedValue;
 
-/* renamed from: h.b */
 /* loaded from: classes.dex */
-public final class C0393b {
+public final class b {
 
-    /* renamed from: h.b$a */
     /* loaded from: classes.dex */
-    public static abstract class AbstractC0394a {
+    public static abstract class a {
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        /* renamed from: h.b$a$a */
+        /* renamed from: h.b$a$a  reason: collision with other inner class name */
         /* loaded from: classes.dex */
-        public class RunnableC0395a implements Runnable {
+        public class RunnableC0014a implements Runnable {
 
-            /* renamed from: b */
-            final /* synthetic */ Typeface f2031b;
+            /* renamed from: b  reason: collision with root package name */
+            final /* synthetic */ Typeface f1518b;
 
-            RunnableC0395a(Typeface typeface) {
-                this.f2031b = typeface;
+            RunnableC0014a(Typeface typeface) {
+                this.f1518b = typeface;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                AbstractC0394a.this.mo706d(this.f2031b);
+                a.this.d(this.f1518b);
             }
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        /* renamed from: h.b$a$b */
+        /* renamed from: h.b$a$b  reason: collision with other inner class name */
         /* loaded from: classes.dex */
-        public class RunnableC0396b implements Runnable {
+        public class RunnableC0015b implements Runnable {
 
-            /* renamed from: b */
-            final /* synthetic */ int f2033b;
+            /* renamed from: b  reason: collision with root package name */
+            final /* synthetic */ int f1520b;
 
-            RunnableC0396b(int i) {
-                this.f2033b = i;
+            RunnableC0015b(int i2) {
+                this.f1520b = i2;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                AbstractC0394a.this.mo707c(this.f2033b);
+                a.this.c(this.f1520b);
             }
         }
 
-        /* renamed from: a */
-        public final void m709a(int i, Handler handler) {
+        public final void a(int i2, Handler handler) {
             if (handler == null) {
                 handler = new Handler(Looper.getMainLooper());
             }
-            handler.post(new RunnableC0396b(i));
+            handler.post(new RunnableC0015b(i2));
         }
 
-        /* renamed from: b */
-        public final void m708b(Typeface typeface, Handler handler) {
+        public final void b(Typeface typeface, Handler handler) {
             if (handler == null) {
                 handler = new Handler(Looper.getMainLooper());
             }
-            handler.post(new RunnableC0395a(typeface));
+            handler.post(new RunnableC0014a(typeface));
         }
 
-        /* renamed from: c */
-        public abstract void mo707c(int i);
+        public abstract void c(int i2);
 
-        /* renamed from: d */
-        public abstract void mo706d(Typeface typeface);
+        public abstract void d(Typeface typeface);
     }
 
-    /* renamed from: a */
-    public static Drawable m713a(Resources resources, int i, Resources.Theme theme) {
-        return Build.VERSION.SDK_INT >= 21 ? resources.getDrawable(i, theme) : resources.getDrawable(i);
+    public static Drawable a(Resources resources, int i2, Resources.Theme theme) {
+        return Build.VERSION.SDK_INT >= 21 ? resources.getDrawable(i2, theme) : resources.getDrawable(i2);
     }
 
-    /* renamed from: b */
-    public static Typeface m712b(Context context, int i, TypedValue typedValue, int i2, AbstractC0394a abstractC0394a) {
+    public static Typeface b(Context context, int i2, TypedValue typedValue, int i3, a aVar) {
         if (context.isRestricted()) {
             return null;
         }
-        return m711c(context, i, typedValue, i2, abstractC0394a, null, true);
+        return c(context, i2, typedValue, i3, aVar, null, true);
     }
 
-    /* renamed from: c */
-    private static Typeface m711c(Context context, int i, TypedValue typedValue, int i2, AbstractC0394a abstractC0394a, Handler handler, boolean z) {
+    private static Typeface c(Context context, int i2, TypedValue typedValue, int i3, a aVar, Handler handler, boolean z) {
         Resources resources = context.getResources();
-        resources.getValue(i, typedValue, true);
-        Typeface m710d = m710d(context, resources, typedValue, i, i2, abstractC0394a, handler, z);
-        if (m710d == null && abstractC0394a == null) {
-            throw new Resources.NotFoundException("Font resource ID #0x" + Integer.toHexString(i) + " could not be retrieved.");
+        resources.getValue(i2, typedValue, true);
+        Typeface d2 = d(context, resources, typedValue, i2, i3, aVar, handler, z);
+        if (d2 == null && aVar == null) {
+            throw new Resources.NotFoundException("Font resource ID #0x" + Integer.toHexString(i2) + " could not be retrieved.");
         }
-        return m710d;
+        return d2;
     }
 
     /* JADX WARN: Removed duplicated region for block: B:36:0x0096  */
-    /* renamed from: d */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private static android.graphics.Typeface m710d(android.content.Context r15, android.content.res.Resources r16, android.util.TypedValue r17, int r18, int r19, p009h.C0393b.AbstractC0394a r20, android.os.Handler r21, boolean r22) {
+    private static android.graphics.Typeface d(android.content.Context r15, android.content.res.Resources r16, android.util.TypedValue r17, int r18, int r19, h.b.a r20, android.os.Handler r21, boolean r22) {
         /*
             r0 = r16
             r1 = r17
@@ -124,14 +114,14 @@ public final class C0393b {
             r14 = -3
             if (r1 != 0) goto L26
             if (r9 == 0) goto L25
-            r9.m709a(r14, r10)
+            r9.a(r14, r10)
         L25:
             return r13
         L26:
-            android.graphics.Typeface r1 = p010i.C0402c.m673e(r0, r4, r5)
+            android.graphics.Typeface r1 = i.c.e(r0, r4, r5)
             if (r1 == 0) goto L32
             if (r9 == 0) goto L31
-            r9.m708b(r1, r10)
+            r9.b(r1, r10)
         L31:
             return r1
         L32:
@@ -140,12 +130,12 @@ public final class C0393b {
             boolean r1 = r1.endsWith(r2)     // Catch: java.io.IOException -> L76 org.xmlpull.v1.XmlPullParserException -> L7f
             if (r1 == 0) goto L65
             android.content.res.XmlResourceParser r1 = r0.getXml(r4)     // Catch: java.io.IOException -> L76 org.xmlpull.v1.XmlPullParserException -> L7f
-            h.a$a r2 = p009h.C0388a.m730a(r1, r0)     // Catch: java.io.IOException -> L76 org.xmlpull.v1.XmlPullParserException -> L7f
+            h.a$a r2 = h.a.a(r1, r0)     // Catch: java.io.IOException -> L76 org.xmlpull.v1.XmlPullParserException -> L7f
             if (r2 != 0) goto L53
             java.lang.String r0 = "Failed to find font-family tag"
             android.util.Log.e(r11, r0)     // Catch: java.io.IOException -> L76 org.xmlpull.v1.XmlPullParserException -> L7f
             if (r9 == 0) goto L52
-            r9.m709a(r14, r10)     // Catch: java.io.IOException -> L76 org.xmlpull.v1.XmlPullParserException -> L7f
+            r9.a(r14, r10)     // Catch: java.io.IOException -> L76 org.xmlpull.v1.XmlPullParserException -> L7f
         L52:
             return r13
         L53:
@@ -156,17 +146,17 @@ public final class C0393b {
             r6 = r20
             r7 = r21
             r8 = r22
-            android.graphics.Typeface r0 = p010i.C0402c.m676b(r1, r2, r3, r4, r5, r6, r7, r8)     // Catch: java.io.IOException -> L76 org.xmlpull.v1.XmlPullParserException -> L7f
+            android.graphics.Typeface r0 = i.c.b(r1, r2, r3, r4, r5, r6, r7, r8)     // Catch: java.io.IOException -> L76 org.xmlpull.v1.XmlPullParserException -> L7f
             return r0
         L65:
             r1 = r15
-            android.graphics.Typeface r0 = p010i.C0402c.m675c(r15, r0, r4, r12, r5)     // Catch: java.io.IOException -> L76 org.xmlpull.v1.XmlPullParserException -> L7f
+            android.graphics.Typeface r0 = i.c.c(r15, r0, r4, r12, r5)     // Catch: java.io.IOException -> L76 org.xmlpull.v1.XmlPullParserException -> L7f
             if (r9 == 0) goto L75
             if (r0 == 0) goto L72
-            r9.m708b(r0, r10)     // Catch: java.io.IOException -> L76 org.xmlpull.v1.XmlPullParserException -> L7f
+            r9.b(r0, r10)     // Catch: java.io.IOException -> L76 org.xmlpull.v1.XmlPullParserException -> L7f
             goto L75
         L72:
-            r9.m709a(r14, r10)     // Catch: java.io.IOException -> L76 org.xmlpull.v1.XmlPullParserException -> L7f
+            r9.a(r14, r10)     // Catch: java.io.IOException -> L76 org.xmlpull.v1.XmlPullParserException -> L7f
         L75:
             return r0
         L76:
@@ -186,7 +176,7 @@ public final class C0393b {
             java.lang.String r1 = r1.toString()
             android.util.Log.e(r11, r1, r0)
             if (r9 == 0) goto L99
-            r9.m709a(r14, r10)
+            r9.a(r14, r10)
         L99:
             return r13
         L9a:
@@ -208,6 +198,6 @@ public final class C0393b {
             r2.<init>(r0)
             throw r2
         */
-        throw new UnsupportedOperationException("Method not decompiled: p009h.C0393b.m710d(android.content.Context, android.content.res.Resources, android.util.TypedValue, int, int, h.b$a, android.os.Handler, boolean):android.graphics.Typeface");
+        throw new UnsupportedOperationException("Method not decompiled: h.b.d(android.content.Context, android.content.res.Resources, android.util.TypedValue, int, int, h.b$a, android.os.Handler, boolean):android.graphics.Typeface");
     }
 }

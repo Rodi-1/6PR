@@ -1,18 +1,16 @@
-package android.support.p001v4.widget;
+package android.support.v4.widget;
 
 import android.database.Cursor;
 import android.widget.Filter;
 
-/* renamed from: android.support.v4.widget.e */
 /* loaded from: classes.dex */
-class C0146e extends Filter {
+class e extends Filter {
 
-    /* renamed from: a */
-    InterfaceC0147a f696a;
+    /* renamed from: a  reason: collision with root package name */
+    a f546a;
 
-    /* renamed from: android.support.v4.widget.e$a */
     /* loaded from: classes.dex */
-    interface InterfaceC0147a {
+    interface a {
         void changeCursor(Cursor cursor);
 
         CharSequence convertToString(Cursor cursor);
@@ -23,18 +21,18 @@ class C0146e extends Filter {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public C0146e(InterfaceC0147a interfaceC0147a) {
-        this.f696a = interfaceC0147a;
+    public e(a aVar) {
+        this.f546a = aVar;
     }
 
     @Override // android.widget.Filter
     public CharSequence convertResultToString(Object obj) {
-        return this.f696a.convertToString((Cursor) obj);
+        return this.f546a.convertToString((Cursor) obj);
     }
 
     @Override // android.widget.Filter
     protected Filter.FilterResults performFiltering(CharSequence charSequence) {
-        Cursor runQueryOnBackgroundThread = this.f696a.runQueryOnBackgroundThread(charSequence);
+        Cursor runQueryOnBackgroundThread = this.f546a.runQueryOnBackgroundThread(charSequence);
         Filter.FilterResults filterResults = new Filter.FilterResults();
         if (runQueryOnBackgroundThread != null) {
             filterResults.count = runQueryOnBackgroundThread.getCount();
@@ -48,11 +46,11 @@ class C0146e extends Filter {
 
     @Override // android.widget.Filter
     protected void publishResults(CharSequence charSequence, Filter.FilterResults filterResults) {
-        Cursor cursor = this.f696a.getCursor();
+        Cursor cursor = this.f546a.getCursor();
         Object obj = filterResults.values;
         if (obj == null || obj == cursor) {
             return;
         }
-        this.f696a.changeCursor((Cursor) obj);
+        this.f546a.changeCursor((Cursor) obj);
     }
 }

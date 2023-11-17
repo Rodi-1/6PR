@@ -1,14 +1,10 @@
-package p000a;
+package a;
 
-/* renamed from: a.c */
 /* loaded from: classes.dex */
-public abstract class AbstractC0004c {
-    /* renamed from: a */
-    public abstract void mo2401a(Runnable runnable);
+public abstract class c {
+    public abstract void a(Runnable runnable);
 
-    /* renamed from: b */
-    public abstract boolean mo2400b();
+    public abstract boolean b();
 
-    /* renamed from: c */
-    public abstract void mo2399c(Runnable runnable);
+    public abstract void c(Runnable runnable);
 }

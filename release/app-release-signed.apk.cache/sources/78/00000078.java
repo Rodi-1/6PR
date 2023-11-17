@@ -1,6 +1,5 @@
-package android.support.p001v4.app;
+package android.support.v4.app;
 
-import android.arch.lifecycle.C0026n;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Parcel;
@@ -8,127 +7,124 @@ import android.os.Parcelable;
 import android.util.Log;
 
 /* JADX INFO: Access modifiers changed from: package-private */
-/* renamed from: android.support.v4.app.p */
 /* loaded from: classes.dex */
-public final class C0107p implements Parcelable {
-    public static final Parcelable.Creator<C0107p> CREATOR = new C0108a();
+public final class p implements Parcelable {
+    public static final Parcelable.Creator<p> CREATOR = new a();
 
-    /* renamed from: b */
-    final String f543b;
+    /* renamed from: b  reason: collision with root package name */
+    final String f399b;
 
-    /* renamed from: c */
-    final int f544c;
+    /* renamed from: c  reason: collision with root package name */
+    final int f400c;
 
-    /* renamed from: d */
-    final boolean f545d;
+    /* renamed from: d  reason: collision with root package name */
+    final boolean f401d;
 
-    /* renamed from: e */
-    final int f546e;
+    /* renamed from: e  reason: collision with root package name */
+    final int f402e;
 
-    /* renamed from: f */
-    final int f547f;
+    /* renamed from: f  reason: collision with root package name */
+    final int f403f;
 
-    /* renamed from: g */
-    final String f548g;
+    /* renamed from: g  reason: collision with root package name */
+    final String f404g;
 
-    /* renamed from: h */
-    final boolean f549h;
+    /* renamed from: h  reason: collision with root package name */
+    final boolean f405h;
 
-    /* renamed from: i */
-    final boolean f550i;
+    /* renamed from: i  reason: collision with root package name */
+    final boolean f406i;
 
-    /* renamed from: j */
-    final Bundle f551j;
+    /* renamed from: j  reason: collision with root package name */
+    final Bundle f407j;
 
-    /* renamed from: k */
-    final boolean f552k;
+    /* renamed from: k  reason: collision with root package name */
+    final boolean f408k;
 
-    /* renamed from: l */
-    Bundle f553l;
+    /* renamed from: l  reason: collision with root package name */
+    Bundle f409l;
 
-    /* renamed from: m */
-    ComponentCallbacksC0073g f554m;
+    /* renamed from: m  reason: collision with root package name */
+    g f410m;
 
-    /* renamed from: android.support.v4.app.p$a */
     /* loaded from: classes.dex */
-    static class C0108a implements Parcelable.Creator<C0107p> {
-        C0108a() {
+    static class a implements Parcelable.Creator<p> {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator
         /* renamed from: a */
-        public C0107p createFromParcel(Parcel parcel) {
-            return new C0107p(parcel);
+        public p createFromParcel(Parcel parcel) {
+            return new p(parcel);
         }
 
         @Override // android.os.Parcelable.Creator
         /* renamed from: b */
-        public C0107p[] newArray(int i) {
-            return new C0107p[i];
+        public p[] newArray(int i2) {
+            return new p[i2];
         }
     }
 
-    C0107p(Parcel parcel) {
-        this.f543b = parcel.readString();
-        this.f544c = parcel.readInt();
-        this.f545d = parcel.readInt() != 0;
-        this.f546e = parcel.readInt();
-        this.f547f = parcel.readInt();
-        this.f548g = parcel.readString();
-        this.f549h = parcel.readInt() != 0;
-        this.f550i = parcel.readInt() != 0;
-        this.f551j = parcel.readBundle();
-        this.f552k = parcel.readInt() != 0;
-        this.f553l = parcel.readBundle();
+    p(Parcel parcel) {
+        this.f399b = parcel.readString();
+        this.f400c = parcel.readInt();
+        this.f401d = parcel.readInt() != 0;
+        this.f402e = parcel.readInt();
+        this.f403f = parcel.readInt();
+        this.f404g = parcel.readString();
+        this.f405h = parcel.readInt() != 0;
+        this.f406i = parcel.readInt() != 0;
+        this.f407j = parcel.readBundle();
+        this.f408k = parcel.readInt() != 0;
+        this.f409l = parcel.readBundle();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public C0107p(ComponentCallbacksC0073g componentCallbacksC0073g) {
-        this.f543b = componentCallbacksC0073g.getClass().getName();
-        this.f544c = componentCallbacksC0073g.f410e;
-        this.f545d = componentCallbacksC0073g.f418m;
-        this.f546e = componentCallbacksC0073g.f429x;
-        this.f547f = componentCallbacksC0073g.f430y;
-        this.f548g = componentCallbacksC0073g.f431z;
-        this.f549h = componentCallbacksC0073g.f390C;
-        this.f550i = componentCallbacksC0073g.f389B;
-        this.f551j = componentCallbacksC0073g.f412g;
-        this.f552k = componentCallbacksC0073g.f388A;
+    public p(g gVar) {
+        this.f399b = gVar.getClass().getName();
+        this.f400c = gVar.f283e;
+        this.f401d = gVar.f291m;
+        this.f402e = gVar.x;
+        this.f403f = gVar.y;
+        this.f404g = gVar.z;
+        this.f405h = gVar.C;
+        this.f406i = gVar.B;
+        this.f407j = gVar.f285g;
+        this.f408k = gVar.A;
     }
 
-    /* renamed from: a */
-    public ComponentCallbacksC0073g m1894a(AbstractC0085k abstractC0085k, AbstractC0083i abstractC0083i, ComponentCallbacksC0073g componentCallbacksC0073g, C0104n c0104n, C0026n c0026n) {
-        if (this.f554m == null) {
-            Context m2042e = abstractC0085k.m2042e();
-            Bundle bundle = this.f551j;
+    public g a(k kVar, i iVar, g gVar, n nVar, android.arch.lifecycle.n nVar2) {
+        if (this.f410m == null) {
+            Context e2 = kVar.e();
+            Bundle bundle = this.f407j;
             if (bundle != null) {
-                bundle.setClassLoader(m2042e.getClassLoader());
+                bundle.setClassLoader(e2.getClassLoader());
             }
-            this.f554m = abstractC0083i != null ? abstractC0083i.mo2073a(m2042e, this.f543b, this.f551j) : ComponentCallbacksC0073g.m2187F(m2042e, this.f543b, this.f551j);
-            Bundle bundle2 = this.f553l;
+            this.f410m = iVar != null ? iVar.a(e2, this.f399b, this.f407j) : g.F(e2, this.f399b, this.f407j);
+            Bundle bundle2 = this.f409l;
             if (bundle2 != null) {
-                bundle2.setClassLoader(m2042e.getClassLoader());
-                this.f554m.f408c = this.f553l;
+                bundle2.setClassLoader(e2.getClassLoader());
+                this.f410m.f281c = this.f409l;
             }
-            this.f554m.m2150X0(this.f544c, componentCallbacksC0073g);
-            ComponentCallbacksC0073g componentCallbacksC0073g2 = this.f554m;
-            componentCallbacksC0073g2.f418m = this.f545d;
-            componentCallbacksC0073g2.f420o = true;
-            componentCallbacksC0073g2.f429x = this.f546e;
-            componentCallbacksC0073g2.f430y = this.f547f;
-            componentCallbacksC0073g2.f431z = this.f548g;
-            componentCallbacksC0073g2.f390C = this.f549h;
-            componentCallbacksC0073g2.f389B = this.f550i;
-            componentCallbacksC0073g2.f388A = this.f552k;
-            componentCallbacksC0073g2.f423r = abstractC0085k.f471e;
-            if (LayoutInflater$Factory2C0089m.f472F) {
-                Log.v("FragmentManager", "Instantiated fragment " + this.f554m);
+            this.f410m.X0(this.f400c, gVar);
+            g gVar2 = this.f410m;
+            gVar2.f291m = this.f401d;
+            gVar2.f293o = true;
+            gVar2.x = this.f402e;
+            gVar2.y = this.f403f;
+            gVar2.z = this.f404g;
+            gVar2.C = this.f405h;
+            gVar2.B = this.f406i;
+            gVar2.A = this.f408k;
+            gVar2.f296r = kVar.f341e;
+            if (m.F) {
+                Log.v("FragmentManager", "Instantiated fragment " + this.f410m);
             }
         }
-        ComponentCallbacksC0073g componentCallbacksC0073g3 = this.f554m;
-        componentCallbacksC0073g3.f426u = c0104n;
-        componentCallbacksC0073g3.f427v = c0026n;
-        return componentCallbacksC0073g3;
+        g gVar3 = this.f410m;
+        gVar3.f299u = nVar;
+        gVar3.f300v = nVar2;
+        return gVar3;
     }
 
     @Override // android.os.Parcelable
@@ -137,17 +133,17 @@ public final class C0107p implements Parcelable {
     }
 
     @Override // android.os.Parcelable
-    public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(this.f543b);
-        parcel.writeInt(this.f544c);
-        parcel.writeInt(this.f545d ? 1 : 0);
-        parcel.writeInt(this.f546e);
-        parcel.writeInt(this.f547f);
-        parcel.writeString(this.f548g);
-        parcel.writeInt(this.f549h ? 1 : 0);
-        parcel.writeInt(this.f550i ? 1 : 0);
-        parcel.writeBundle(this.f551j);
-        parcel.writeInt(this.f552k ? 1 : 0);
-        parcel.writeBundle(this.f553l);
+    public void writeToParcel(Parcel parcel, int i2) {
+        parcel.writeString(this.f399b);
+        parcel.writeInt(this.f400c);
+        parcel.writeInt(this.f401d ? 1 : 0);
+        parcel.writeInt(this.f402e);
+        parcel.writeInt(this.f403f);
+        parcel.writeString(this.f404g);
+        parcel.writeInt(this.f405h ? 1 : 0);
+        parcel.writeInt(this.f406i ? 1 : 0);
+        parcel.writeBundle(this.f407j);
+        parcel.writeInt(this.f408k ? 1 : 0);
+        parcel.writeBundle(this.f409l);
     }
 }

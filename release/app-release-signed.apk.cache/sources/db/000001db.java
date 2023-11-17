@@ -4,103 +4,89 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-import p019r.ActivityC0529b;
 
 /* loaded from: classes.dex */
-public class MainActivity extends ActivityC0529b {
+public class MainActivity extends r.b {
+    private static int B = 10;
+    private String A;
 
-    /* renamed from: B */
-    private static int f2119B = 10;
+    /* renamed from: s  reason: collision with root package name */
+    private me.test.calculator.a f1606s;
 
-    /* renamed from: A */
-    private String f2120A;
+    /* renamed from: t  reason: collision with root package name */
+    private TextView f1607t;
 
-    /* renamed from: s */
-    private C0444a f2121s;
+    /* renamed from: u  reason: collision with root package name */
+    private TextView f1608u;
 
-    /* renamed from: t */
-    private TextView f2122t;
+    /* renamed from: v  reason: collision with root package name */
+    private TextView f1609v;
 
-    /* renamed from: u */
-    private TextView f2123u;
+    /* renamed from: w  reason: collision with root package name */
+    private TextView f1610w;
+    private TextView x;
+    private double y;
+    private double z;
 
-    /* renamed from: v */
-    private TextView f2124v;
-
-    /* renamed from: w */
-    private TextView f2125w;
-
-    /* renamed from: x */
-    private TextView f2126x;
-
-    /* renamed from: y */
-    private double f2127y;
-
-    /* renamed from: z */
-    private double f2128z;
-
-    /* renamed from: me.test.calculator.MainActivity$a */
     /* loaded from: classes.dex */
-    class View$OnLongClickListenerC0441a implements View.OnLongClickListener {
-        View$OnLongClickListenerC0441a() {
+    class a implements View.OnLongClickListener {
+        a() {
         }
 
         @Override // android.view.View.OnLongClickListener
         public boolean onLongClick(View view) {
-            MainActivity.this.m569C();
+            MainActivity.this.C();
             return false;
         }
     }
 
-    /* renamed from: me.test.calculator.MainActivity$b */
     /* loaded from: classes.dex */
-    static /* synthetic */ class C0442b {
+    static /* synthetic */ class b {
 
-        /* renamed from: a */
-        static final /* synthetic */ int[] f2130a;
+        /* renamed from: a  reason: collision with root package name */
+        static final /* synthetic */ int[] f1612a;
 
         static {
-            int[] iArr = new int[EnumC0443c.values().length];
-            f2130a = iArr;
+            int[] iArr = new int[c.values().length];
+            f1612a = iArr;
             try {
-                iArr[EnumC0443c.ADD.ordinal()] = 1;
+                iArr[c.ADD.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                f2130a[EnumC0443c.SUB.ordinal()] = 2;
+                f1612a[c.SUB.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
             try {
-                f2130a[EnumC0443c.MUL.ordinal()] = 3;
+                f1612a[c.MUL.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
             try {
-                f2130a[EnumC0443c.DIV.ordinal()] = 4;
+                f1612a[c.DIV.ordinal()] = 4;
             } catch (NoSuchFieldError unused4) {
             }
             try {
-                f2130a[EnumC0443c.MOD.ordinal()] = 5;
+                f1612a[c.MOD.ordinal()] = 5;
             } catch (NoSuchFieldError unused5) {
             }
             try {
-                f2130a[EnumC0443c.ROOT.ordinal()] = 6;
+                f1612a[c.ROOT.ordinal()] = 6;
             } catch (NoSuchFieldError unused6) {
             }
             try {
-                f2130a[EnumC0443c.POW.ordinal()] = 7;
+                f1612a[c.POW.ordinal()] = 7;
             } catch (NoSuchFieldError unused7) {
             }
             try {
-                f2130a[EnumC0443c.NULL.ordinal()] = 8;
+                f1612a[c.NULL.ordinal()] = 8;
             } catch (NoSuchFieldError unused8) {
             }
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: me.test.calculator.MainActivity$c */
     /* loaded from: classes.dex */
-    public enum EnumC0443c {
+    public enum c {
         ADD,
         SUB,
         MUL,
@@ -111,199 +97,196 @@ public class MainActivity extends ActivityC0529b {
         NULL
     }
 
-    /* renamed from: B */
-    private void m570B(TextView textView) {
+    private void B(TextView textView) {
         String charSequence = textView.getText().toString();
         textView.setText(charSequence.substring(0, charSequence.length() - 1));
     }
 
-    /* renamed from: D */
-    private void m568D(String str) {
+    private void D(String str) {
         TextView textView;
-        if (this.f2120A.equals(EnumC0443c.NULL.name())) {
-            if (this.f2122t.getText().toString().contains(".")) {
-                f2119B++;
+        if (this.A.equals(c.NULL.name())) {
+            if (this.f1607t.getText().toString().contains(".")) {
+                B++;
             }
-            if (this.f2122t.getText().length() < f2119B) {
-                textView = this.f2122t;
+            if (this.f1607t.getText().length() < B) {
+                textView = this.f1607t;
                 textView.append(str);
-                f2119B = 10;
+                B = 10;
                 return;
             }
-            f2119B = 10;
+            B = 10;
             Toast.makeText(this, "Cannot have more than 10 numbers", 1).show();
         }
-        if (this.f2122t.getText().toString().contains(".")) {
-            f2119B++;
+        if (this.f1607t.getText().toString().contains(".")) {
+            B++;
         }
-        if (this.f2123u.getText().length() < f2119B) {
-            textView = this.f2123u;
+        if (this.f1608u.getText().length() < B) {
+            textView = this.f1608u;
             textView.append(str);
-            f2119B = 10;
+            B = 10;
             return;
         }
-        f2119B = 10;
+        B = 10;
         Toast.makeText(this, "Cannot have more than 10 numbers", 1).show();
     }
 
-    /* renamed from: C */
-    public void m569C() {
-        this.f2122t.setText("");
-        this.f2124v.setText("");
-        this.f2123u.setText("");
-        this.f2127y = 0.0d;
-        this.f2128z = 0.0d;
-        this.f2120A = EnumC0443c.NULL.name();
+    public void C() {
+        this.f1607t.setText("");
+        this.f1609v.setText("");
+        this.f1608u.setText("");
+        this.y = 0.0d;
+        this.z = 0.0d;
+        this.A = c.NULL.name();
     }
 
     public void onBackspaceClick(View view) {
         TextView textView;
-        view.setOnLongClickListener(new View$OnLongClickListenerC0441a());
-        if (!this.f2123u.getText().toString().equals("")) {
-            textView = this.f2123u;
-        } else if (!this.f2124v.getText().toString().equals("")) {
-            textView = this.f2124v;
-        } else if (this.f2122t.getText().toString().equals("")) {
+        view.setOnLongClickListener(new a());
+        if (!this.f1608u.getText().toString().equals("")) {
+            textView = this.f1608u;
+        } else if (!this.f1609v.getText().toString().equals("")) {
+            textView = this.f1609v;
+        } else if (this.f1607t.getText().toString().equals("")) {
             return;
         } else {
-            textView = this.f2122t;
+            textView = this.f1607t;
         }
-        m570B(textView);
+        B(textView);
     }
 
     public void onClearClick(View view) {
-        m569C();
-        this.f2125w.setText("");
-        this.f2126x.setText("");
+        C();
+        this.f1610w.setText("");
+        this.x.setText("");
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // p019r.ActivityC0529b, android.support.p001v4.app.ActivityC0079h, android.support.p001v4.app.ActivityC0130z, android.app.Activity
+    @Override // r.b, android.support.v4.app.h, android.support.v4.app.z, android.app.Activity
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(R.layout.activity_main);
-        this.f2121s = new C0444a();
-        this.f2122t = (TextView) findViewById(R.id.input_value_1);
-        this.f2123u = (TextView) findViewById(R.id.input_value_2);
-        this.f2124v = (TextView) findViewById(R.id.input_operation);
-        this.f2125w = (TextView) findViewById(R.id.textView_result);
-        this.f2126x = (TextView) findViewById(R.id.complete_operation);
-        EnumC0443c enumC0443c = EnumC0443c.NULL;
-        this.f2120A = enumC0443c.name();
+        this.f1606s = new me.test.calculator.a();
+        this.f1607t = (TextView) findViewById(R.id.input_value_1);
+        this.f1608u = (TextView) findViewById(R.id.input_value_2);
+        this.f1609v = (TextView) findViewById(R.id.input_operation);
+        this.f1610w = (TextView) findViewById(R.id.textView_result);
+        this.x = (TextView) findViewById(R.id.complete_operation);
+        c cVar = c.NULL;
+        this.A = cVar.name();
         if (bundle != null) {
-            this.f2122t.setText(bundle.getString("First_number", ""));
-            this.f2123u.setText(bundle.getString("Second_number", ""));
-            this.f2124v.setText(bundle.getString("Operation", ""));
-            this.f2125w.setText(bundle.getString("Final_result", ""));
-            this.f2126x.setText(bundle.getString("Complete_operation", ""));
-            this.f2120A = bundle.getString("Operation_string", enumC0443c.name());
-            this.f2127y = bundle.getDouble("Number_one", 0.0d);
-            this.f2128z = bundle.getDouble("Number_two", 0.0d);
+            this.f1607t.setText(bundle.getString("First_number", ""));
+            this.f1608u.setText(bundle.getString("Second_number", ""));
+            this.f1609v.setText(bundle.getString("Operation", ""));
+            this.f1610w.setText(bundle.getString("Final_result", ""));
+            this.x.setText(bundle.getString("Complete_operation", ""));
+            this.A = bundle.getString("Operation_string", cVar.name());
+            this.y = bundle.getDouble("Number_one", 0.0d);
+            this.z = bundle.getDouble("Number_two", 0.0d);
         }
     }
 
     public void onEqualsClick(View view) {
         StringBuilder sb;
-        int i;
+        int i2;
         String str = "";
-        if (this.f2122t.getText().toString().equals("") || this.f2124v.getText().toString().equals("") || this.f2123u.getText().toString().equals("")) {
+        if (this.f1607t.getText().toString().equals("") || this.f1609v.getText().toString().equals("") || this.f1608u.getText().toString().equals("")) {
             Toast.makeText(this, "Enter the numbers and the operation", 1).show();
             return;
         }
-        this.f2127y = Double.parseDouble(this.f2122t.getText().toString());
-        this.f2128z = Double.parseDouble(this.f2123u.getText().toString());
-        switch (C0442b.f2130a[EnumC0443c.valueOf(this.f2120A).ordinal()]) {
+        this.y = Double.parseDouble(this.f1607t.getText().toString());
+        this.z = Double.parseDouble(this.f1608u.getText().toString());
+        switch (b.f1612a[c.valueOf(this.A).ordinal()]) {
             case 1:
-                this.f2125w.setText(String.valueOf(this.f2121s.m566a(this.f2127y, this.f2128z)));
+                this.f1610w.setText(String.valueOf(this.f1606s.a(this.y, this.z)));
                 sb = new StringBuilder();
-                sb.append(this.f2122t.getText().toString());
-                i = R.string.button_plus;
-                sb.append(getString(i));
-                sb.append(this.f2123u.getText().toString());
+                sb.append(this.f1607t.getText().toString());
+                i2 = R.string.button_plus;
+                sb.append(getString(i2));
+                sb.append(this.f1608u.getText().toString());
                 str = sb.toString();
                 break;
             case 2:
-                this.f2125w.setText(String.valueOf(this.f2121s.m560g(this.f2127y, this.f2128z)));
+                this.f1610w.setText(String.valueOf(this.f1606s.g(this.y, this.z)));
                 sb = new StringBuilder();
-                sb.append(this.f2122t.getText().toString());
-                i = R.string.button_minus;
-                sb.append(getString(i));
-                sb.append(this.f2123u.getText().toString());
+                sb.append(this.f1607t.getText().toString());
+                i2 = R.string.button_minus;
+                sb.append(getString(i2));
+                sb.append(this.f1608u.getText().toString());
                 str = sb.toString();
                 break;
             case 3:
-                this.f2125w.setText(String.valueOf(this.f2121s.m563d(this.f2127y, this.f2128z)));
+                this.f1610w.setText(String.valueOf(this.f1606s.d(this.y, this.z)));
                 sb = new StringBuilder();
-                sb.append(this.f2122t.getText().toString());
-                i = R.string.button_mul;
-                sb.append(getString(i));
-                sb.append(this.f2123u.getText().toString());
+                sb.append(this.f1607t.getText().toString());
+                i2 = R.string.button_mul;
+                sb.append(getString(i2));
+                sb.append(this.f1608u.getText().toString());
                 str = sb.toString();
                 break;
             case 4:
                 try {
-                    this.f2125w.setText(String.valueOf(this.f2121s.m565b(this.f2127y, this.f2128z)));
-                    str = this.f2122t.getText().toString() + getString(R.string.button_div) + this.f2123u.getText().toString();
+                    this.f1610w.setText(String.valueOf(this.f1606s.b(this.y, this.z)));
+                    str = this.f1607t.getText().toString() + getString(R.string.button_div) + this.f1608u.getText().toString();
                     break;
                 } catch (IllegalArgumentException unused) {
                     Toast.makeText(this, getString(R.string.error), 1).show();
-                    m569C();
+                    C();
                     break;
                 }
             case 5:
-                this.f2125w.setText(String.valueOf(this.f2121s.m564c(this.f2127y, this.f2128z)));
+                this.f1610w.setText(String.valueOf(this.f1606s.c(this.y, this.z)));
                 sb = new StringBuilder();
-                sb.append(this.f2122t.getText().toString());
-                i = R.string.button_mod;
-                sb.append(getString(i));
-                sb.append(this.f2123u.getText().toString());
+                sb.append(this.f1607t.getText().toString());
+                i2 = R.string.button_mod;
+                sb.append(getString(i2));
+                sb.append(this.f1608u.getText().toString());
                 str = sb.toString();
                 break;
             case 6:
-                this.f2125w.setText(String.valueOf(this.f2121s.m561f(this.f2127y, this.f2128z)));
+                this.f1610w.setText(String.valueOf(this.f1606s.f(this.y, this.z)));
                 sb = new StringBuilder();
-                sb.append(this.f2122t.getText().toString());
-                i = R.string.button_root;
-                sb.append(getString(i));
-                sb.append(this.f2123u.getText().toString());
+                sb.append(this.f1607t.getText().toString());
+                i2 = R.string.button_root;
+                sb.append(getString(i2));
+                sb.append(this.f1608u.getText().toString());
                 str = sb.toString();
                 break;
             case 7:
-                this.f2125w.setText(String.valueOf(this.f2121s.m562e(this.f2127y, this.f2128z)));
+                this.f1610w.setText(String.valueOf(this.f1606s.e(this.y, this.z)));
                 sb = new StringBuilder();
-                sb.append(this.f2122t.getText().toString());
-                i = R.string.button_pow;
-                sb.append(getString(i));
-                sb.append(this.f2123u.getText().toString());
+                sb.append(this.f1607t.getText().toString());
+                i2 = R.string.button_pow;
+                sb.append(getString(i2));
+                sb.append(this.f1608u.getText().toString());
                 str = sb.toString();
                 break;
             case 8:
-                this.f2125w.setText(getString(R.string.error));
+                this.f1610w.setText(getString(R.string.error));
                 break;
         }
-        this.f2126x.setText(str);
-        m569C();
+        this.x.setText(str);
+        C();
     }
 
     public void onNumClick(View view) {
         TextView textView;
         String str;
-        if (!this.f2125w.getText().toString().equals("")) {
+        if (!this.f1610w.getText().toString().equals("")) {
             onClearClick(view);
         }
         switch (view.getId()) {
             case R.id.button_dot /* 2131165224 */:
-                if (this.f2120A.equals(EnumC0443c.NULL.name())) {
-                    if (!this.f2122t.getText().toString().contains(".")) {
-                        textView = this.f2122t;
+                if (this.A.equals(c.NULL.name())) {
+                    if (!this.f1607t.getText().toString().contains(".")) {
+                        textView = this.f1607t;
                         textView.append(".");
                         return;
                     }
                     Toast.makeText(this, "Cannot have more than one decimal point in a number", 1).show();
                     return;
                 }
-                if (!this.f2123u.getText().toString().contains(".")) {
-                    textView = this.f2123u;
+                if (!this.f1608u.getText().toString().contains(".")) {
+                    textView = this.f1608u;
                     textView.append(".");
                     return;
                 }
@@ -349,54 +332,54 @@ public class MainActivity extends ActivityC0529b {
                 str = "0";
                 break;
         }
-        m568D(str);
+        D(str);
     }
 
     public void onOperatorClick(View view) {
         TextView textView;
         String str;
-        boolean equals = this.f2122t.getText().toString().equals("");
+        boolean equals = this.f1607t.getText().toString().equals("");
         int id = view.getId();
         if (!equals) {
             if (id != R.id.button_divide) {
                 switch (id) {
                     case R.id.button_minus /* 2131165229 */:
-                        this.f2120A = EnumC0443c.SUB.name();
-                        textView = this.f2124v;
+                        this.A = c.SUB.name();
+                        textView = this.f1609v;
                         str = "-";
                         break;
                     case R.id.button_mod /* 2131165230 */:
-                        this.f2120A = EnumC0443c.MOD.name();
-                        textView = this.f2124v;
+                        this.A = c.MOD.name();
+                        textView = this.f1609v;
                         str = "%";
                         break;
                     case R.id.button_multiply /* 2131165231 */:
-                        this.f2120A = EnumC0443c.MUL.name();
-                        textView = this.f2124v;
+                        this.A = c.MUL.name();
+                        textView = this.f1609v;
                         str = "x";
                         break;
                     default:
                         switch (id) {
                             case R.id.button_plus /* 2131165234 */:
-                                this.f2120A = EnumC0443c.ADD.name();
-                                textView = this.f2124v;
+                                this.A = c.ADD.name();
+                                textView = this.f1609v;
                                 str = "+";
                                 break;
                             case R.id.button_pow /* 2131165235 */:
-                                this.f2120A = EnumC0443c.POW.name();
-                                textView = this.f2124v;
+                                this.A = c.POW.name();
+                                textView = this.f1609v;
                                 str = "^";
                                 break;
                             case R.id.button_root /* 2131165236 */:
                                 break;
                             default:
-                                this.f2120A = EnumC0443c.NULL.name();
+                                this.A = c.NULL.name();
                                 return;
                         }
                 }
             } else {
-                this.f2120A = EnumC0443c.DIV.name();
-                textView = this.f2124v;
+                this.A = c.DIV.name();
+                textView = this.f1609v;
                 str = "/";
             }
             textView.setText(str);
@@ -405,23 +388,23 @@ public class MainActivity extends ActivityC0529b {
             Toast.makeText(this, "Enter first number before operation", 1).show();
             return;
         } else {
-            this.f2122t.setText("1");
+            this.f1607t.setText("1");
         }
-        this.f2120A = EnumC0443c.ROOT.name();
-        this.f2124v.setText("√");
+        this.A = c.ROOT.name();
+        this.f1609v.setText("√");
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // p019r.ActivityC0529b, android.support.p001v4.app.ActivityC0079h, android.support.p001v4.app.ActivityC0130z, android.app.Activity
+    @Override // r.b, android.support.v4.app.h, android.support.v4.app.z, android.app.Activity
     public void onSaveInstanceState(Bundle bundle) {
         super.onSaveInstanceState(bundle);
-        bundle.putString("First_number", this.f2122t.getText().toString());
-        bundle.putString("Operation", this.f2124v.getText().toString());
-        bundle.putString("Second_number", this.f2123u.getText().toString());
-        bundle.putString("Final_result", this.f2125w.getText().toString());
-        bundle.putString("Complete_operation", this.f2126x.getText().toString());
-        bundle.putString("Operation_string", this.f2120A);
-        bundle.putDouble("Number_one", this.f2127y);
-        bundle.putDouble("Number_two", this.f2128z);
+        bundle.putString("First_number", this.f1607t.getText().toString());
+        bundle.putString("Operation", this.f1609v.getText().toString());
+        bundle.putString("Second_number", this.f1608u.getText().toString());
+        bundle.putString("Final_result", this.f1610w.getText().toString());
+        bundle.putString("Complete_operation", this.x.getText().toString());
+        bundle.putString("Operation_string", this.A);
+        bundle.putDouble("Number_one", this.y);
+        bundle.putDouble("Number_two", this.z);
     }
 }

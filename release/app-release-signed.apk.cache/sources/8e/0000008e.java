@@ -1,11 +1,10 @@
-package android.support.p001v4.app;
+package android.support.v4.app;
 
 import android.util.AndroidRuntimeException;
 
-/* renamed from: android.support.v4.app.y */
 /* loaded from: classes.dex */
-final class C0129y extends AndroidRuntimeException {
-    public C0129y(String str) {
+final class y extends AndroidRuntimeException {
+    public y(String str) {
         super(str);
     }
 }

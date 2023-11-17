@@ -1,84 +1,77 @@
 package android.arch.lifecycle;
 
-import android.arch.lifecycle.AbstractC0009c;
-import p000a.C0000a;
-import p003b.C0337b;
+import android.arch.lifecycle.c;
 
 /* loaded from: classes.dex */
 public abstract class LiveData<T> {
 
-    /* renamed from: g */
+    /* renamed from: g  reason: collision with root package name */
     private static final Object f11g = new Object();
 
-    /* renamed from: a */
-    private C0337b<InterfaceC0020j<T>, LiveData<T>.AbstractC0006a> f12a;
+    /* renamed from: a  reason: collision with root package name */
+    private b.b<j<T>, LiveData<T>.a> f12a;
 
-    /* renamed from: b */
+    /* renamed from: b  reason: collision with root package name */
     private int f13b;
 
-    /* renamed from: c */
+    /* renamed from: c  reason: collision with root package name */
     private volatile Object f14c;
 
-    /* renamed from: d */
+    /* renamed from: d  reason: collision with root package name */
     private int f15d;
 
-    /* renamed from: e */
+    /* renamed from: e  reason: collision with root package name */
     private boolean f16e;
 
-    /* renamed from: f */
+    /* renamed from: f  reason: collision with root package name */
     private boolean f17f;
 
     /* loaded from: classes.dex */
-    class LifecycleBoundObserver extends LiveData<T>.AbstractC0006a implements GenericLifecycleObserver {
+    class LifecycleBoundObserver extends LiveData<T>.a implements GenericLifecycleObserver {
 
-        /* renamed from: e */
-        final InterfaceC0013e f18e;
+        /* renamed from: e  reason: collision with root package name */
+        final e f18e;
 
-        /* renamed from: f */
+        /* renamed from: f  reason: collision with root package name */
         final /* synthetic */ LiveData f19f;
 
         @Override // android.arch.lifecycle.GenericLifecycleObserver
-        /* renamed from: g */
-        public void mo2383g(InterfaceC0013e interfaceC0013e, AbstractC0009c.EnumC0010a enumC0010a) {
-            if (this.f18e.mo1819a().mo2379a() == AbstractC0009c.EnumC0011b.DESTROYED) {
-                this.f19f.mo2231i(this.f20a);
+        public void g(e eVar, c.a aVar) {
+            if (this.f18e.a().a() == c.b.DESTROYED) {
+                this.f19f.i(this.f20a);
             } else {
-                m2386h(mo2384j());
+                h(j());
             }
         }
 
-        @Override // android.arch.lifecycle.LiveData.AbstractC0006a
-        /* renamed from: i */
-        void mo2385i() {
-            this.f18e.mo1819a().mo2378b(this);
+        @Override // android.arch.lifecycle.LiveData.a
+        void i() {
+            this.f18e.a().b(this);
         }
 
-        @Override // android.arch.lifecycle.LiveData.AbstractC0006a
-        /* renamed from: j */
-        boolean mo2384j() {
-            return this.f18e.mo1819a().mo2379a().m2380a(AbstractC0009c.EnumC0011b.STARTED);
+        @Override // android.arch.lifecycle.LiveData.a
+        boolean j() {
+            return this.f18e.a().a().a(c.b.STARTED);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: android.arch.lifecycle.LiveData$a */
     /* loaded from: classes.dex */
-    public abstract class AbstractC0006a {
+    public abstract class a {
 
-        /* renamed from: a */
-        final InterfaceC0020j<T> f20a;
+        /* renamed from: a  reason: collision with root package name */
+        final j<T> f20a;
 
-        /* renamed from: b */
+        /* renamed from: b  reason: collision with root package name */
         boolean f21b;
 
-        /* renamed from: c */
+        /* renamed from: c  reason: collision with root package name */
         int f22c;
 
-        /* renamed from: d */
+        /* renamed from: d  reason: collision with root package name */
         final /* synthetic */ LiveData f23d;
 
-        /* renamed from: h */
-        void m2386h(boolean z) {
+        void h(boolean z) {
             if (z == this.f21b) {
                 return;
             }
@@ -86,53 +79,48 @@ public abstract class LiveData<T> {
             boolean z2 = this.f23d.f13b == 0;
             this.f23d.f13b += this.f21b ? 1 : -1;
             if (z2 && this.f21b) {
-                this.f23d.mo2233g();
+                this.f23d.g();
             }
             if (this.f23d.f13b == 0 && !this.f21b) {
-                this.f23d.mo2232h();
+                this.f23d.h();
             }
             if (this.f21b) {
-                this.f23d.m2387f(this);
+                this.f23d.f(this);
             }
         }
 
-        /* renamed from: i */
-        void mo2385i() {
+        void i() {
         }
 
-        /* renamed from: j */
-        abstract boolean mo2384j();
+        abstract boolean j();
     }
 
-    /* renamed from: d */
-    private static void m2389d(String str) {
-        if (C0000a.m2402d().mo2400b()) {
+    private static void d(String str) {
+        if (a.a.d().b()) {
             return;
         }
         throw new IllegalStateException("Cannot invoke " + str + " on a background thread");
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: e */
-    private void m2388e(LiveData<T>.AbstractC0006a abstractC0006a) {
-        if (abstractC0006a.f21b) {
-            if (!abstractC0006a.mo2384j()) {
-                abstractC0006a.m2386h(false);
+    private void e(LiveData<T>.a aVar) {
+        if (aVar.f21b) {
+            if (!aVar.j()) {
+                aVar.h(false);
                 return;
             }
-            int i = abstractC0006a.f22c;
-            int i2 = this.f15d;
-            if (i >= i2) {
+            int i2 = aVar.f22c;
+            int i3 = this.f15d;
+            if (i2 >= i3) {
                 return;
             }
-            abstractC0006a.f22c = i2;
-            abstractC0006a.f20a.m2363a(this.f14c);
+            aVar.f22c = i3;
+            aVar.f20a.a(this.f14c);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: f */
-    public void m2387f(LiveData<T>.AbstractC0006a abstractC0006a) {
+    public void f(LiveData<T>.a aVar) {
         if (this.f16e) {
             this.f17f = true;
             return;
@@ -140,36 +128,33 @@ public abstract class LiveData<T> {
         this.f16e = true;
         do {
             this.f17f = false;
-            if (abstractC0006a == null) {
-                C0337b<InterfaceC0020j<T>, LiveData<T>.AbstractC0006a>.C0342e m1010e = this.f12a.m1010e();
-                while (m1010e.hasNext()) {
-                    m2388e((AbstractC0006a) m1010e.next().getValue());
+            if (aVar == null) {
+                b.b<j<T>, LiveData<T>.a>.e e2 = this.f12a.e();
+                while (e2.hasNext()) {
+                    e((a) e2.next().getValue());
                     if (this.f17f) {
                         break;
                     }
                 }
             } else {
-                m2388e(abstractC0006a);
-                abstractC0006a = null;
+                e(aVar);
+                aVar = null;
             }
         } while (this.f17f);
         this.f16e = false;
     }
 
-    /* renamed from: g */
-    protected abstract void mo2233g();
+    protected abstract void g();
 
-    /* renamed from: h */
-    protected abstract void mo2232h();
+    protected abstract void h();
 
-    /* renamed from: i */
-    public void mo2231i(InterfaceC0020j<T> interfaceC0020j) {
-        m2389d("removeObserver");
-        LiveData<T>.AbstractC0006a mo1008g = this.f12a.mo1008g(interfaceC0020j);
-        if (mo1008g == null) {
+    public void i(j<T> jVar) {
+        d("removeObserver");
+        LiveData<T>.a g2 = this.f12a.g(jVar);
+        if (g2 == null) {
             return;
         }
-        mo1008g.mo2385i();
-        mo1008g.m2386h(false);
+        g2.i();
+        g2.h(false);
     }
 }

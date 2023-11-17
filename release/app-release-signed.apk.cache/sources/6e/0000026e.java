@@ -1,11 +1,8 @@
-package p023v;
+package v;
 
-/* renamed from: v.c */
 /* loaded from: classes.dex */
-public interface InterfaceC0587c {
-    /* renamed from: a */
-    void mo14a();
+public interface c {
+    void a();
 
-    /* renamed from: d */
-    void mo12d();
+    void d();
 }

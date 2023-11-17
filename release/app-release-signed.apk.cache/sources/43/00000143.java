@@ -1,4 +1,4 @@
-package android.support.p002v7.widget;
+package android.support.v7.widget;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -9,116 +9,112 @@ import android.util.AttributeSet;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputConnection;
 import android.widget.EditText;
-import p013l.C0425a;
-import p016o.InterfaceC0489n;
-import p020s.C0569a;
 
-/* renamed from: android.support.v7.widget.l */
 /* loaded from: classes.dex */
-public class C0289l extends EditText implements InterfaceC0489n {
+public class l extends EditText implements o.n {
 
-    /* renamed from: b */
-    private final C0259f f1409b;
+    /* renamed from: b  reason: collision with root package name */
+    private final f f1107b;
 
-    /* renamed from: c */
-    private final C0329y f1410c;
+    /* renamed from: c  reason: collision with root package name */
+    private final y f1108c;
 
-    public C0289l(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, C0569a.editTextStyle);
+    public l(Context context, AttributeSet attributeSet) {
+        this(context, attributeSet, s.a.editTextStyle);
     }
 
-    public C0289l(Context context, AttributeSet attributeSet, int i) {
-        super(C0310s0.m1129b(context), attributeSet, i);
-        C0259f c0259f = new C0259f(this);
-        this.f1409b = c0259f;
-        c0259f.m1316e(attributeSet, i);
-        C0329y m1049e = C0329y.m1049e(this);
-        this.f1410c = m1049e;
-        m1049e.mo1020m(attributeSet, i);
-        m1049e.mo1021c();
+    public l(Context context, AttributeSet attributeSet, int i2) {
+        super(s0.b(context), attributeSet, i2);
+        f fVar = new f(this);
+        this.f1107b = fVar;
+        fVar.e(attributeSet, i2);
+        y e2 = y.e(this);
+        this.f1108c = e2;
+        e2.m(attributeSet, i2);
+        e2.c();
     }
 
     @Override // android.widget.TextView, android.view.View
     protected void drawableStateChanged() {
         super.drawableStateChanged();
-        C0259f c0259f = this.f1409b;
-        if (c0259f != null) {
-            c0259f.m1319b();
+        f fVar = this.f1107b;
+        if (fVar != null) {
+            fVar.b();
         }
-        C0329y c0329y = this.f1410c;
-        if (c0329y != null) {
-            c0329y.mo1021c();
+        y yVar = this.f1108c;
+        if (yVar != null) {
+            yVar.c();
         }
     }
 
-    @Override // p016o.InterfaceC0489n
+    @Override // o.n
     public ColorStateList getSupportBackgroundTintList() {
-        C0259f c0259f = this.f1409b;
-        if (c0259f != null) {
-            return c0259f.m1318c();
+        f fVar = this.f1107b;
+        if (fVar != null) {
+            return fVar.c();
         }
         return null;
     }
 
-    @Override // p016o.InterfaceC0489n
+    @Override // o.n
     public PorterDuff.Mode getSupportBackgroundTintMode() {
-        C0259f c0259f = this.f1409b;
-        if (c0259f != null) {
-            return c0259f.m1317d();
+        f fVar = this.f1107b;
+        if (fVar != null) {
+            return fVar.d();
         }
         return null;
     }
 
     @Override // android.widget.EditText, android.widget.TextView
     public Editable getText() {
-        return C0425a.m609a() ? super.getText() : super.getEditableText();
+        return l.a.a() ? super.getText() : super.getEditableText();
     }
 
     @Override // android.widget.TextView, android.view.View
     public InputConnection onCreateInputConnection(EditorInfo editorInfo) {
-        return C0292m.m1188a(super.onCreateInputConnection(editorInfo), editorInfo, this);
+        return m.a(super.onCreateInputConnection(editorInfo), editorInfo, this);
     }
 
     @Override // android.view.View
     public void setBackgroundDrawable(Drawable drawable) {
         super.setBackgroundDrawable(drawable);
-        C0259f c0259f = this.f1409b;
-        if (c0259f != null) {
-            c0259f.m1315f(drawable);
+        f fVar = this.f1107b;
+        if (fVar != null) {
+            fVar.f(drawable);
         }
     }
 
     @Override // android.view.View
-    public void setBackgroundResource(int i) {
-        super.setBackgroundResource(i);
-        C0259f c0259f = this.f1409b;
-        if (c0259f != null) {
-            c0259f.m1314g(i);
+    public void setBackgroundResource(int i2) {
+        super.setBackgroundResource(i2);
+        f fVar = this.f1107b;
+        if (fVar != null) {
+            fVar.g(i2);
         }
     }
 
-    @Override // p016o.InterfaceC0489n
+    @Override // o.n
     public void setSupportBackgroundTintList(ColorStateList colorStateList) {
-        C0259f c0259f = this.f1409b;
-        if (c0259f != null) {
-            c0259f.m1312i(colorStateList);
+        f fVar = this.f1107b;
+        if (fVar != null) {
+            fVar.i(colorStateList);
         }
     }
 
-    @Override // p016o.InterfaceC0489n
+    @Override // o.n
     public void setSupportBackgroundTintMode(PorterDuff.Mode mode) {
-        C0259f c0259f = this.f1409b;
-        if (c0259f != null) {
-            c0259f.m1311j(mode);
+        f fVar = this.f1107b;
+        if (fVar != null) {
+            fVar.j(mode);
         }
     }
 
     @Override // android.widget.TextView
-    public void setTextAppearance(Context context, int i) {
-        super.setTextAppearance(context, i);
-        C0329y c0329y = this.f1410c;
-        if (c0329y != null) {
-            c0329y.m1039p(context, i);
+    public void setTextAppearance(Context context, int i2) {
+        super.setTextAppearance(context, i2);
+        y yVar = this.f1108c;
+        if (yVar != null) {
+            yVar.p(context, i2);
         }
     }
 }

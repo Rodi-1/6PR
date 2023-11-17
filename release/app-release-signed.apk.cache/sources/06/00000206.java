@@ -1,7 +1,6 @@
-package p016o;
+package o;
 
-/* renamed from: o.h */
 /* loaded from: classes.dex */
-public interface InterfaceC0483h {
+public interface h {
     void stopNestedScroll();
 }

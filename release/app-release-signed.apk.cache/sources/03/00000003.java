@@ -1,38 +1,34 @@
-package p000a;
+package a;
 
 import android.os.Handler;
 import android.os.Looper;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-/* renamed from: a.b */
 /* loaded from: classes.dex */
-public class C0003b extends AbstractC0004c {
+public class b extends c {
 
-    /* renamed from: a */
+    /* renamed from: a  reason: collision with root package name */
     private final Object f5a = new Object();
 
-    /* renamed from: b */
+    /* renamed from: b  reason: collision with root package name */
     private ExecutorService f6b = Executors.newFixedThreadPool(2);
 
-    /* renamed from: c */
+    /* renamed from: c  reason: collision with root package name */
     private volatile Handler f7c;
 
-    @Override // p000a.AbstractC0004c
-    /* renamed from: a */
-    public void mo2401a(Runnable runnable) {
+    @Override // a.c
+    public void a(Runnable runnable) {
         this.f6b.execute(runnable);
     }
 
-    @Override // p000a.AbstractC0004c
-    /* renamed from: b */
-    public boolean mo2400b() {
+    @Override // a.c
+    public boolean b() {
         return Looper.getMainLooper().getThread() == Thread.currentThread();
     }
 
-    @Override // p000a.AbstractC0004c
-    /* renamed from: c */
-    public void mo2399c(Runnable runnable) {
+    @Override // a.c
+    public void c(Runnable runnable) {
         if (this.f7c == null) {
             synchronized (this.f5a) {
                 if (this.f7c == null) {

@@ -1,4 +1,4 @@
-package p019r;
+package r;
 
 import android.content.Context;
 import android.content.res.Configuration;
@@ -8,124 +8,99 @@ import android.util.AttributeSet;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import p020s.C0578j;
-import p023v.AbstractC0585b;
+import v.b;
 
-/* renamed from: r.a */
 /* loaded from: classes.dex */
-public abstract class AbstractC0525a {
+public abstract class a {
 
-    /* renamed from: r.a$a */
+    /* renamed from: r.a$a  reason: collision with other inner class name */
     /* loaded from: classes.dex */
-    public static class C0526a extends ViewGroup.MarginLayoutParams {
+    public static class C0023a extends ViewGroup.MarginLayoutParams {
 
-        /* renamed from: a */
-        public int f2250a;
+        /* renamed from: a  reason: collision with root package name */
+        public int f1732a;
 
-        public C0526a(int i, int i2) {
-            super(i, i2);
-            this.f2250a = 8388627;
+        public C0023a(int i2, int i3) {
+            super(i2, i3);
+            this.f1732a = 8388627;
         }
 
-        public C0526a(Context context, AttributeSet attributeSet) {
+        public C0023a(Context context, AttributeSet attributeSet) {
             super(context, attributeSet);
-            this.f2250a = 0;
-            TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C0578j.f2602t);
-            this.f2250a = obtainStyledAttributes.getInt(C0578j.f2606u, 0);
+            this.f1732a = 0;
+            TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, s.j.f1883t);
+            this.f1732a = obtainStyledAttributes.getInt(s.j.f1884u, 0);
             obtainStyledAttributes.recycle();
         }
 
-        public C0526a(ViewGroup.LayoutParams layoutParams) {
+        public C0023a(ViewGroup.LayoutParams layoutParams) {
             super(layoutParams);
-            this.f2250a = 0;
+            this.f1732a = 0;
         }
 
-        public C0526a(C0526a c0526a) {
-            super((ViewGroup.MarginLayoutParams) c0526a);
-            this.f2250a = 0;
-            this.f2250a = c0526a.f2250a;
+        public C0023a(C0023a c0023a) {
+            super((ViewGroup.MarginLayoutParams) c0023a);
+            this.f1732a = 0;
+            this.f1732a = c0023a.f1732a;
         }
     }
 
-    /* renamed from: r.a$b */
     /* loaded from: classes.dex */
-    public interface InterfaceC0527b {
-        /* renamed from: a */
-        void m293a(boolean z);
+    public interface b {
+        void a(boolean z);
     }
 
     @Deprecated
-    /* renamed from: r.a$c */
     /* loaded from: classes.dex */
-    public static abstract class AbstractC0528c {
-        /* renamed from: a */
-        public abstract CharSequence m292a();
+    public static abstract class c {
+        public abstract CharSequence a();
 
-        /* renamed from: b */
-        public abstract View m291b();
+        public abstract View b();
 
-        /* renamed from: c */
-        public abstract Drawable m290c();
+        public abstract Drawable c();
 
-        /* renamed from: d */
-        public abstract CharSequence m289d();
+        public abstract CharSequence d();
 
-        /* renamed from: e */
-        public abstract void m288e();
+        public abstract void e();
     }
 
-    /* renamed from: g */
-    public boolean m298g() {
+    public boolean g() {
         return false;
     }
 
-    /* renamed from: h */
-    public abstract boolean mo123h();
+    public abstract boolean h();
 
-    /* renamed from: i */
-    public abstract void mo122i(boolean z);
+    public abstract void i(boolean z);
 
-    /* renamed from: j */
-    public abstract int mo121j();
+    public abstract int j();
 
-    /* renamed from: k */
-    public abstract Context mo120k();
+    public abstract Context k();
 
-    /* renamed from: l */
-    public boolean m297l() {
+    public boolean l() {
         return false;
     }
 
-    /* renamed from: m */
-    public abstract void mo119m(Configuration configuration);
+    public abstract void m(Configuration configuration);
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: n */
-    public void m296n() {
+    public void n() {
     }
 
-    /* renamed from: o */
-    public abstract boolean mo118o(int i, KeyEvent keyEvent);
+    public abstract boolean o(int i2, KeyEvent keyEvent);
 
-    /* renamed from: p */
-    public boolean m295p(KeyEvent keyEvent) {
+    public boolean p(KeyEvent keyEvent) {
         return false;
     }
 
-    /* renamed from: q */
-    public boolean m294q() {
+    public boolean q() {
         return false;
     }
 
-    /* renamed from: r */
-    public abstract void mo117r(boolean z);
+    public abstract void r(boolean z);
 
-    /* renamed from: s */
-    public abstract void mo116s(boolean z);
+    public abstract void s(boolean z);
 
-    /* renamed from: t */
-    public abstract void mo115t(CharSequence charSequence);
+    public abstract void t(CharSequence charSequence);
 
-    /* renamed from: u */
-    public abstract AbstractC0585b mo114u(AbstractC0585b.InterfaceC0586a interfaceC0586a);
+    public abstract v.b u(b.a aVar);
 }

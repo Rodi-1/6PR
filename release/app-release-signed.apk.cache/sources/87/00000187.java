@@ -1,14 +1,10 @@
-package p006e;
+package e;
 
-/* renamed from: e.g */
 /* loaded from: classes.dex */
-interface InterfaceC0357g<T> {
-    /* renamed from: a */
-    void mo929a(T[] tArr, int i);
+interface g<T> {
+    void a(T[] tArr, int i2);
 
-    /* renamed from: b */
-    boolean mo928b(T t);
+    boolean b(T t2);
 
-    /* renamed from: c */
-    T mo927c();
+    T c();
 }

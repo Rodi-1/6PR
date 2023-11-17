@@ -1,174 +1,171 @@
-package android.support.p001v4.app;
+package android.support.v4.app;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.support.p001v4.app.C0067c;
+import android.support.v4.app.c;
 import android.text.TextUtils;
 import android.util.Log;
 import java.util.ArrayList;
 
 /* JADX INFO: Access modifiers changed from: package-private */
-/* renamed from: android.support.v4.app.d */
 /* loaded from: classes.dex */
-public final class C0069d implements Parcelable {
-    public static final Parcelable.Creator<C0069d> CREATOR = new C0070a();
+public final class d implements Parcelable {
+    public static final Parcelable.Creator<d> CREATOR = new a();
 
-    /* renamed from: b */
-    final int[] f372b;
+    /* renamed from: b  reason: collision with root package name */
+    final int[] f266b;
 
-    /* renamed from: c */
-    final int f373c;
+    /* renamed from: c  reason: collision with root package name */
+    final int f267c;
 
-    /* renamed from: d */
-    final int f374d;
+    /* renamed from: d  reason: collision with root package name */
+    final int f268d;
 
-    /* renamed from: e */
-    final String f375e;
+    /* renamed from: e  reason: collision with root package name */
+    final String f269e;
 
-    /* renamed from: f */
-    final int f376f;
+    /* renamed from: f  reason: collision with root package name */
+    final int f270f;
 
-    /* renamed from: g */
-    final int f377g;
+    /* renamed from: g  reason: collision with root package name */
+    final int f271g;
 
-    /* renamed from: h */
-    final CharSequence f378h;
+    /* renamed from: h  reason: collision with root package name */
+    final CharSequence f272h;
 
-    /* renamed from: i */
-    final int f379i;
+    /* renamed from: i  reason: collision with root package name */
+    final int f273i;
 
-    /* renamed from: j */
-    final CharSequence f380j;
+    /* renamed from: j  reason: collision with root package name */
+    final CharSequence f274j;
 
-    /* renamed from: k */
-    final ArrayList<String> f381k;
+    /* renamed from: k  reason: collision with root package name */
+    final ArrayList<String> f275k;
 
-    /* renamed from: l */
-    final ArrayList<String> f382l;
+    /* renamed from: l  reason: collision with root package name */
+    final ArrayList<String> f276l;
 
-    /* renamed from: m */
-    final boolean f383m;
+    /* renamed from: m  reason: collision with root package name */
+    final boolean f277m;
 
-    /* renamed from: android.support.v4.app.d$a */
     /* loaded from: classes.dex */
-    static class C0070a implements Parcelable.Creator<C0069d> {
-        C0070a() {
+    static class a implements Parcelable.Creator<d> {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator
         /* renamed from: a */
-        public C0069d createFromParcel(Parcel parcel) {
-            return new C0069d(parcel);
+        public d createFromParcel(Parcel parcel) {
+            return new d(parcel);
         }
 
         @Override // android.os.Parcelable.Creator
         /* renamed from: b */
-        public C0069d[] newArray(int i) {
-            return new C0069d[i];
+        public d[] newArray(int i2) {
+            return new d[i2];
         }
     }
 
-    public C0069d(Parcel parcel) {
-        this.f372b = parcel.createIntArray();
-        this.f373c = parcel.readInt();
-        this.f374d = parcel.readInt();
-        this.f375e = parcel.readString();
-        this.f376f = parcel.readInt();
-        this.f377g = parcel.readInt();
-        this.f378h = (CharSequence) TextUtils.CHAR_SEQUENCE_CREATOR.createFromParcel(parcel);
-        this.f379i = parcel.readInt();
-        this.f380j = (CharSequence) TextUtils.CHAR_SEQUENCE_CREATOR.createFromParcel(parcel);
-        this.f381k = parcel.createStringArrayList();
-        this.f382l = parcel.createStringArrayList();
-        this.f383m = parcel.readInt() != 0;
+    public d(Parcel parcel) {
+        this.f266b = parcel.createIntArray();
+        this.f267c = parcel.readInt();
+        this.f268d = parcel.readInt();
+        this.f269e = parcel.readString();
+        this.f270f = parcel.readInt();
+        this.f271g = parcel.readInt();
+        this.f272h = (CharSequence) TextUtils.CHAR_SEQUENCE_CREATOR.createFromParcel(parcel);
+        this.f273i = parcel.readInt();
+        this.f274j = (CharSequence) TextUtils.CHAR_SEQUENCE_CREATOR.createFromParcel(parcel);
+        this.f275k = parcel.createStringArrayList();
+        this.f276l = parcel.createStringArrayList();
+        this.f277m = parcel.readInt() != 0;
     }
 
-    public C0069d(C0067c c0067c) {
-        int size = c0067c.f346b.size();
-        this.f372b = new int[size * 6];
-        if (!c0067c.f353i) {
+    public d(c cVar) {
+        int size = cVar.f240b.size();
+        this.f266b = new int[size * 6];
+        if (!cVar.f247i) {
             throw new IllegalStateException("Not on back stack");
         }
-        int i = 0;
-        for (int i2 = 0; i2 < size; i2++) {
-            C0067c.C0068a c0068a = c0067c.f346b.get(i2);
-            int[] iArr = this.f372b;
-            int i3 = i + 1;
-            iArr[i] = c0068a.f366a;
-            int i4 = i3 + 1;
-            ComponentCallbacksC0073g componentCallbacksC0073g = c0068a.f367b;
-            iArr[i3] = componentCallbacksC0073g != null ? componentCallbacksC0073g.f410e : -1;
+        int i2 = 0;
+        for (int i3 = 0; i3 < size; i3++) {
+            c.a aVar = cVar.f240b.get(i3);
+            int[] iArr = this.f266b;
+            int i4 = i2 + 1;
+            iArr[i2] = aVar.f260a;
             int i5 = i4 + 1;
-            iArr[i4] = c0068a.f368c;
+            g gVar = aVar.f261b;
+            iArr[i4] = gVar != null ? gVar.f283e : -1;
             int i6 = i5 + 1;
-            iArr[i5] = c0068a.f369d;
+            iArr[i5] = aVar.f262c;
             int i7 = i6 + 1;
-            iArr[i6] = c0068a.f370e;
-            i = i7 + 1;
-            iArr[i7] = c0068a.f371f;
+            iArr[i6] = aVar.f263d;
+            int i8 = i7 + 1;
+            iArr[i7] = aVar.f264e;
+            i2 = i8 + 1;
+            iArr[i8] = aVar.f265f;
         }
-        this.f373c = c0067c.f351g;
-        this.f374d = c0067c.f352h;
-        this.f375e = c0067c.f355k;
-        this.f376f = c0067c.f357m;
-        this.f377g = c0067c.f358n;
-        this.f378h = c0067c.f359o;
-        this.f379i = c0067c.f360p;
-        this.f380j = c0067c.f361q;
-        this.f381k = c0067c.f362r;
-        this.f382l = c0067c.f363s;
-        this.f383m = c0067c.f364t;
+        this.f267c = cVar.f245g;
+        this.f268d = cVar.f246h;
+        this.f269e = cVar.f249k;
+        this.f270f = cVar.f251m;
+        this.f271g = cVar.f252n;
+        this.f272h = cVar.f253o;
+        this.f273i = cVar.f254p;
+        this.f274j = cVar.f255q;
+        this.f275k = cVar.f256r;
+        this.f276l = cVar.f257s;
+        this.f277m = cVar.f258t;
     }
 
-    /* renamed from: a */
-    public C0067c m2201a(LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m) {
-        C0067c c0067c = new C0067c(layoutInflater$Factory2C0089m);
-        int i = 0;
+    public c a(m mVar) {
+        c cVar = new c(mVar);
         int i2 = 0;
-        while (i < this.f372b.length) {
-            C0067c.C0068a c0068a = new C0067c.C0068a();
-            int i3 = i + 1;
-            c0068a.f366a = this.f372b[i];
-            if (LayoutInflater$Factory2C0089m.f472F) {
-                Log.v("FragmentManager", "Instantiate " + c0067c + " op #" + i2 + " base fragment #" + this.f372b[i3]);
+        int i3 = 0;
+        while (i2 < this.f266b.length) {
+            c.a aVar = new c.a();
+            int i4 = i2 + 1;
+            aVar.f260a = this.f266b[i2];
+            if (m.F) {
+                Log.v("FragmentManager", "Instantiate " + cVar + " op #" + i3 + " base fragment #" + this.f266b[i4]);
             }
-            int i4 = i3 + 1;
-            int i5 = this.f372b[i3];
-            c0068a.f367b = i5 >= 0 ? layoutInflater$Factory2C0089m.f487f.get(i5) : null;
-            int[] iArr = this.f372b;
-            int i6 = i4 + 1;
-            int i7 = iArr[i4];
-            c0068a.f368c = i7;
-            int i8 = i6 + 1;
-            int i9 = iArr[i6];
-            c0068a.f369d = i9;
-            int i10 = i8 + 1;
-            int i11 = iArr[i8];
-            c0068a.f370e = i11;
-            int i12 = iArr[i10];
-            c0068a.f371f = i12;
-            c0067c.f347c = i7;
-            c0067c.f348d = i9;
-            c0067c.f349e = i11;
-            c0067c.f350f = i12;
-            c0067c.m2216b(c0068a);
-            i2++;
-            i = i10 + 1;
+            int i5 = i4 + 1;
+            int i6 = this.f266b[i4];
+            aVar.f261b = i6 >= 0 ? mVar.f346f.get(i6) : null;
+            int[] iArr = this.f266b;
+            int i7 = i5 + 1;
+            int i8 = iArr[i5];
+            aVar.f262c = i8;
+            int i9 = i7 + 1;
+            int i10 = iArr[i7];
+            aVar.f263d = i10;
+            int i11 = i9 + 1;
+            int i12 = iArr[i9];
+            aVar.f264e = i12;
+            int i13 = iArr[i11];
+            aVar.f265f = i13;
+            cVar.f241c = i8;
+            cVar.f242d = i10;
+            cVar.f243e = i12;
+            cVar.f244f = i13;
+            cVar.b(aVar);
+            i3++;
+            i2 = i11 + 1;
         }
-        c0067c.f351g = this.f373c;
-        c0067c.f352h = this.f374d;
-        c0067c.f355k = this.f375e;
-        c0067c.f357m = this.f376f;
-        c0067c.f353i = true;
-        c0067c.f358n = this.f377g;
-        c0067c.f359o = this.f378h;
-        c0067c.f360p = this.f379i;
-        c0067c.f361q = this.f380j;
-        c0067c.f362r = this.f381k;
-        c0067c.f363s = this.f382l;
-        c0067c.f364t = this.f383m;
-        c0067c.m2215c(1);
-        return c0067c;
+        cVar.f245g = this.f267c;
+        cVar.f246h = this.f268d;
+        cVar.f249k = this.f269e;
+        cVar.f251m = this.f270f;
+        cVar.f247i = true;
+        cVar.f252n = this.f271g;
+        cVar.f253o = this.f272h;
+        cVar.f254p = this.f273i;
+        cVar.f255q = this.f274j;
+        cVar.f256r = this.f275k;
+        cVar.f257s = this.f276l;
+        cVar.f258t = this.f277m;
+        cVar.c(1);
+        return cVar;
     }
 
     @Override // android.os.Parcelable
@@ -177,18 +174,18 @@ public final class C0069d implements Parcelable {
     }
 
     @Override // android.os.Parcelable
-    public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeIntArray(this.f372b);
-        parcel.writeInt(this.f373c);
-        parcel.writeInt(this.f374d);
-        parcel.writeString(this.f375e);
-        parcel.writeInt(this.f376f);
-        parcel.writeInt(this.f377g);
-        TextUtils.writeToParcel(this.f378h, parcel, 0);
-        parcel.writeInt(this.f379i);
-        TextUtils.writeToParcel(this.f380j, parcel, 0);
-        parcel.writeStringList(this.f381k);
-        parcel.writeStringList(this.f382l);
-        parcel.writeInt(this.f383m ? 1 : 0);
+    public void writeToParcel(Parcel parcel, int i2) {
+        parcel.writeIntArray(this.f266b);
+        parcel.writeInt(this.f267c);
+        parcel.writeInt(this.f268d);
+        parcel.writeString(this.f269e);
+        parcel.writeInt(this.f270f);
+        parcel.writeInt(this.f271g);
+        TextUtils.writeToParcel(this.f272h, parcel, 0);
+        parcel.writeInt(this.f273i);
+        TextUtils.writeToParcel(this.f274j, parcel, 0);
+        parcel.writeStringList(this.f275k);
+        parcel.writeStringList(this.f276l);
+        parcel.writeInt(this.f277m ? 1 : 0);
     }
 }

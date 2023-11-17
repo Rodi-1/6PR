@@ -1,207 +1,197 @@
-package p015n;
+package n;
 
-/* renamed from: n.f */
 /* loaded from: classes.dex */
-public class C0452f<E> implements Cloneable {
+public class f<E> implements Cloneable {
 
-    /* renamed from: f */
-    private static final Object f2158f = new Object();
+    /* renamed from: f  reason: collision with root package name */
+    private static final Object f1640f = new Object();
 
-    /* renamed from: b */
-    private boolean f2159b;
+    /* renamed from: b  reason: collision with root package name */
+    private boolean f1641b;
 
-    /* renamed from: c */
-    private long[] f2160c;
+    /* renamed from: c  reason: collision with root package name */
+    private long[] f1642c;
 
-    /* renamed from: d */
-    private Object[] f2161d;
+    /* renamed from: d  reason: collision with root package name */
+    private Object[] f1643d;
 
-    /* renamed from: e */
-    private int f2162e;
+    /* renamed from: e  reason: collision with root package name */
+    private int f1644e;
 
-    public C0452f() {
+    public f() {
         this(10);
     }
 
-    public C0452f(int i) {
-        this.f2159b = false;
-        if (i == 0) {
-            this.f2160c = C0449c.f2154b;
-            this.f2161d = C0449c.f2155c;
+    public f(int i2) {
+        this.f1641b = false;
+        if (i2 == 0) {
+            this.f1642c = c.f1636b;
+            this.f1643d = c.f1637c;
         } else {
-            int m541f = C0449c.m541f(i);
-            this.f2160c = new long[m541f];
-            this.f2161d = new Object[m541f];
+            int f2 = c.f(i2);
+            this.f1642c = new long[f2];
+            this.f1643d = new Object[f2];
         }
-        this.f2162e = 0;
+        this.f1644e = 0;
     }
 
-    /* renamed from: d */
-    private void m535d() {
-        int i = this.f2162e;
-        long[] jArr = this.f2160c;
-        Object[] objArr = this.f2161d;
-        int i2 = 0;
-        for (int i3 = 0; i3 < i; i3++) {
-            Object obj = objArr[i3];
-            if (obj != f2158f) {
-                if (i3 != i2) {
-                    jArr[i2] = jArr[i3];
-                    objArr[i2] = obj;
-                    objArr[i3] = null;
+    private void d() {
+        int i2 = this.f1644e;
+        long[] jArr = this.f1642c;
+        Object[] objArr = this.f1643d;
+        int i3 = 0;
+        for (int i4 = 0; i4 < i2; i4++) {
+            Object obj = objArr[i4];
+            if (obj != f1640f) {
+                if (i4 != i3) {
+                    jArr[i3] = jArr[i4];
+                    objArr[i3] = obj;
+                    objArr[i4] = null;
                 }
-                i2++;
+                i3++;
             }
         }
-        this.f2159b = false;
-        this.f2162e = i2;
+        this.f1641b = false;
+        this.f1644e = i3;
     }
 
-    /* renamed from: a */
-    public void m538a() {
-        int i = this.f2162e;
-        Object[] objArr = this.f2161d;
-        for (int i2 = 0; i2 < i; i2++) {
-            objArr[i2] = null;
+    public void a() {
+        int i2 = this.f1644e;
+        Object[] objArr = this.f1643d;
+        for (int i3 = 0; i3 < i2; i3++) {
+            objArr[i3] = null;
         }
-        this.f2162e = 0;
-        this.f2159b = false;
+        this.f1644e = 0;
+        this.f1641b = false;
     }
 
     /* renamed from: b */
-    public C0452f<E> clone() {
-        C0452f<E> c0452f;
-        C0452f<E> c0452f2 = null;
+    public f<E> clone() {
+        f<E> fVar;
+        f<E> fVar2 = null;
         try {
-            c0452f = (C0452f) super.clone();
+            fVar = (f) super.clone();
         } catch (CloneNotSupportedException unused) {
         }
         try {
-            c0452f.f2160c = (long[]) this.f2160c.clone();
-            c0452f.f2161d = (Object[]) this.f2161d.clone();
-            return c0452f;
+            fVar.f1642c = (long[]) this.f1642c.clone();
+            fVar.f1643d = (Object[]) this.f1643d.clone();
+            return fVar;
         } catch (CloneNotSupportedException unused2) {
-            c0452f2 = c0452f;
-            return c0452f2;
+            fVar2 = fVar;
+            return fVar2;
         }
     }
 
-    /* renamed from: c */
-    public void m536c(long j) {
-        int m545b = C0449c.m545b(this.f2160c, this.f2162e, j);
-        if (m545b >= 0) {
-            Object[] objArr = this.f2161d;
-            Object obj = objArr[m545b];
-            Object obj2 = f2158f;
+    public void c(long j2) {
+        int b2 = c.b(this.f1642c, this.f1644e, j2);
+        if (b2 >= 0) {
+            Object[] objArr = this.f1643d;
+            Object obj = objArr[b2];
+            Object obj2 = f1640f;
             if (obj != obj2) {
-                objArr[m545b] = obj2;
-                this.f2159b = true;
+                objArr[b2] = obj2;
+                this.f1641b = true;
             }
         }
     }
 
-    /* renamed from: e */
-    public E m534e(long j) {
-        return m533f(j, null);
+    public E e(long j2) {
+        return f(j2, null);
     }
 
-    /* renamed from: f */
-    public E m533f(long j, E e) {
-        int m545b = C0449c.m545b(this.f2160c, this.f2162e, j);
-        if (m545b >= 0) {
-            Object[] objArr = this.f2161d;
-            if (objArr[m545b] != f2158f) {
-                return (E) objArr[m545b];
+    public E f(long j2, E e2) {
+        int b2 = c.b(this.f1642c, this.f1644e, j2);
+        if (b2 >= 0) {
+            Object[] objArr = this.f1643d;
+            if (objArr[b2] != f1640f) {
+                return (E) objArr[b2];
             }
         }
-        return e;
+        return e2;
     }
 
-    /* renamed from: g */
-    public long m532g(int i) {
-        if (this.f2159b) {
-            m535d();
+    public long g(int i2) {
+        if (this.f1641b) {
+            d();
         }
-        return this.f2160c[i];
+        return this.f1642c[i2];
     }
 
-    /* renamed from: h */
-    public void m531h(long j, E e) {
-        int m545b = C0449c.m545b(this.f2160c, this.f2162e, j);
-        if (m545b >= 0) {
-            this.f2161d[m545b] = e;
+    public void h(long j2, E e2) {
+        int b2 = c.b(this.f1642c, this.f1644e, j2);
+        if (b2 >= 0) {
+            this.f1643d[b2] = e2;
             return;
         }
-        int i = m545b ^ (-1);
-        int i2 = this.f2162e;
-        if (i < i2) {
-            Object[] objArr = this.f2161d;
-            if (objArr[i] == f2158f) {
-                this.f2160c[i] = j;
-                objArr[i] = e;
+        int i2 = b2 ^ (-1);
+        int i3 = this.f1644e;
+        if (i2 < i3) {
+            Object[] objArr = this.f1643d;
+            if (objArr[i2] == f1640f) {
+                this.f1642c[i2] = j2;
+                objArr[i2] = e2;
                 return;
             }
         }
-        if (this.f2159b && i2 >= this.f2160c.length) {
-            m535d();
-            i = C0449c.m545b(this.f2160c, this.f2162e, j) ^ (-1);
+        if (this.f1641b && i3 >= this.f1642c.length) {
+            d();
+            i2 = c.b(this.f1642c, this.f1644e, j2) ^ (-1);
         }
-        int i3 = this.f2162e;
-        if (i3 >= this.f2160c.length) {
-            int m541f = C0449c.m541f(i3 + 1);
-            long[] jArr = new long[m541f];
-            Object[] objArr2 = new Object[m541f];
-            long[] jArr2 = this.f2160c;
+        int i4 = this.f1644e;
+        if (i4 >= this.f1642c.length) {
+            int f2 = c.f(i4 + 1);
+            long[] jArr = new long[f2];
+            Object[] objArr2 = new Object[f2];
+            long[] jArr2 = this.f1642c;
             System.arraycopy(jArr2, 0, jArr, 0, jArr2.length);
-            Object[] objArr3 = this.f2161d;
+            Object[] objArr3 = this.f1643d;
             System.arraycopy(objArr3, 0, objArr2, 0, objArr3.length);
-            this.f2160c = jArr;
-            this.f2161d = objArr2;
+            this.f1642c = jArr;
+            this.f1643d = objArr2;
         }
-        int i4 = this.f2162e;
-        if (i4 - i != 0) {
-            long[] jArr3 = this.f2160c;
-            int i5 = i + 1;
-            System.arraycopy(jArr3, i, jArr3, i5, i4 - i);
-            Object[] objArr4 = this.f2161d;
-            System.arraycopy(objArr4, i, objArr4, i5, this.f2162e - i);
+        int i5 = this.f1644e;
+        if (i5 - i2 != 0) {
+            long[] jArr3 = this.f1642c;
+            int i6 = i2 + 1;
+            System.arraycopy(jArr3, i2, jArr3, i6, i5 - i2);
+            Object[] objArr4 = this.f1643d;
+            System.arraycopy(objArr4, i2, objArr4, i6, this.f1644e - i2);
         }
-        this.f2160c[i] = j;
-        this.f2161d[i] = e;
-        this.f2162e++;
+        this.f1642c[i2] = j2;
+        this.f1643d[i2] = e2;
+        this.f1644e++;
     }
 
-    /* renamed from: i */
-    public int m530i() {
-        if (this.f2159b) {
-            m535d();
+    public int i() {
+        if (this.f1641b) {
+            d();
         }
-        return this.f2162e;
+        return this.f1644e;
     }
 
-    /* renamed from: j */
-    public E m529j(int i) {
-        if (this.f2159b) {
-            m535d();
+    public E j(int i2) {
+        if (this.f1641b) {
+            d();
         }
-        return (E) this.f2161d[i];
+        return (E) this.f1643d[i2];
     }
 
     public String toString() {
-        if (m530i() <= 0) {
+        if (i() <= 0) {
             return "{}";
         }
-        StringBuilder sb = new StringBuilder(this.f2162e * 28);
+        StringBuilder sb = new StringBuilder(this.f1644e * 28);
         sb.append('{');
-        for (int i = 0; i < this.f2162e; i++) {
-            if (i > 0) {
+        for (int i2 = 0; i2 < this.f1644e; i2++) {
+            if (i2 > 0) {
                 sb.append(", ");
             }
-            sb.append(m532g(i));
+            sb.append(g(i2));
             sb.append('=');
-            E m529j = m529j(i);
-            if (m529j != this) {
-                sb.append(m529j);
+            E j2 = j(i2);
+            if (j2 != this) {
+                sb.append(j2);
             } else {
                 sb.append("(this Map)");
             }

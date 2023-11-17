@@ -1,6 +1,5 @@
-package p006e;
+package e;
 
-/* renamed from: e.f */
 /* loaded from: classes.dex */
-public class C0356f {
+public class f {
 }

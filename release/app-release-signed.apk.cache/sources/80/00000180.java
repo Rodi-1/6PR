@@ -1,188 +1,184 @@
-package p006e;
+package e;
 
+import e.i;
 import java.util.Arrays;
-import p006e.C0359i;
 
-/* renamed from: e.a */
 /* loaded from: classes.dex */
-public class C0350a {
+public class a {
 
-    /* renamed from: b */
-    private final C0351b f1764b;
+    /* renamed from: b  reason: collision with root package name */
+    private final b f1338b;
 
-    /* renamed from: c */
-    private final C0352c f1765c;
+    /* renamed from: c  reason: collision with root package name */
+    private final c f1339c;
 
-    /* renamed from: a */
-    int f1763a = 0;
+    /* renamed from: a  reason: collision with root package name */
+    int f1337a = 0;
 
-    /* renamed from: d */
-    private int f1766d = 8;
+    /* renamed from: d  reason: collision with root package name */
+    private int f1340d = 8;
 
-    /* renamed from: e */
-    private C0359i f1767e = null;
+    /* renamed from: e  reason: collision with root package name */
+    private i f1341e = null;
 
-    /* renamed from: f */
-    private int[] f1768f = new int[8];
+    /* renamed from: f  reason: collision with root package name */
+    private int[] f1342f = new int[8];
 
-    /* renamed from: g */
-    private int[] f1769g = new int[8];
+    /* renamed from: g  reason: collision with root package name */
+    private int[] f1343g = new int[8];
 
-    /* renamed from: h */
-    private float[] f1770h = new float[8];
+    /* renamed from: h  reason: collision with root package name */
+    private float[] f1344h = new float[8];
 
-    /* renamed from: i */
-    private int f1771i = -1;
+    /* renamed from: i  reason: collision with root package name */
+    private int f1345i = -1;
 
-    /* renamed from: j */
-    private int f1772j = -1;
+    /* renamed from: j  reason: collision with root package name */
+    private int f1346j = -1;
 
-    /* renamed from: k */
-    private boolean f1773k = false;
-
-    /* JADX INFO: Access modifiers changed from: package-private */
-    public C0350a(C0351b c0351b, C0352c c0352c) {
-        this.f1764b = c0351b;
-        this.f1765c = c0352c;
-    }
-
-    /* renamed from: k */
-    private boolean m990k(C0359i c0359i, C0354e c0354e) {
-        return c0359i.f1812j <= 1;
-    }
+    /* renamed from: k  reason: collision with root package name */
+    private boolean f1347k = false;
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: a */
-    public final void m1000a(C0359i c0359i, float f, boolean z) {
-        if (f == 0.0f) {
+    public a(b bVar, c cVar) {
+        this.f1338b = bVar;
+        this.f1339c = cVar;
+    }
+
+    private boolean k(i iVar, e eVar) {
+        return iVar.f1386j <= 1;
+    }
+
+    /* JADX INFO: Access modifiers changed from: package-private */
+    public final void a(i iVar, float f2, boolean z) {
+        if (f2 == 0.0f) {
             return;
         }
-        int i = this.f1771i;
-        if (i == -1) {
-            this.f1771i = 0;
-            this.f1770h[0] = f;
-            this.f1768f[0] = c0359i.f1804b;
-            this.f1769g[0] = -1;
-            c0359i.f1812j++;
-            c0359i.m926a(this.f1764b);
-            this.f1763a++;
-            if (this.f1773k) {
+        int i2 = this.f1345i;
+        if (i2 == -1) {
+            this.f1345i = 0;
+            this.f1344h[0] = f2;
+            this.f1342f[0] = iVar.f1378b;
+            this.f1343g[0] = -1;
+            iVar.f1386j++;
+            iVar.a(this.f1338b);
+            this.f1337a++;
+            if (this.f1347k) {
                 return;
             }
-            int i2 = this.f1772j + 1;
-            this.f1772j = i2;
-            int[] iArr = this.f1768f;
-            if (i2 >= iArr.length) {
-                this.f1773k = true;
-                this.f1772j = iArr.length - 1;
+            int i3 = this.f1346j + 1;
+            this.f1346j = i3;
+            int[] iArr = this.f1342f;
+            if (i3 >= iArr.length) {
+                this.f1347k = true;
+                this.f1346j = iArr.length - 1;
                 return;
             }
             return;
         }
-        int i3 = -1;
-        for (int i4 = 0; i != -1 && i4 < this.f1763a; i4++) {
-            int[] iArr2 = this.f1768f;
-            int i5 = iArr2[i];
-            int i6 = c0359i.f1804b;
-            if (i5 == i6) {
-                float[] fArr = this.f1770h;
-                fArr[i] = fArr[i] + f;
-                if (fArr[i] == 0.0f) {
-                    if (i == this.f1771i) {
-                        this.f1771i = this.f1769g[i];
+        int i4 = -1;
+        for (int i5 = 0; i2 != -1 && i5 < this.f1337a; i5++) {
+            int[] iArr2 = this.f1342f;
+            int i6 = iArr2[i2];
+            int i7 = iVar.f1378b;
+            if (i6 == i7) {
+                float[] fArr = this.f1344h;
+                fArr[i2] = fArr[i2] + f2;
+                if (fArr[i2] == 0.0f) {
+                    if (i2 == this.f1345i) {
+                        this.f1345i = this.f1343g[i2];
                     } else {
-                        int[] iArr3 = this.f1769g;
-                        iArr3[i3] = iArr3[i];
+                        int[] iArr3 = this.f1343g;
+                        iArr3[i4] = iArr3[i2];
                     }
                     if (z) {
-                        c0359i.m924c(this.f1764b);
+                        iVar.c(this.f1338b);
                     }
-                    if (this.f1773k) {
-                        this.f1772j = i;
+                    if (this.f1347k) {
+                        this.f1346j = i2;
                     }
-                    c0359i.f1812j--;
-                    this.f1763a--;
+                    iVar.f1386j--;
+                    this.f1337a--;
                     return;
                 }
                 return;
             }
-            if (iArr2[i] < i6) {
-                i3 = i;
+            if (iArr2[i2] < i7) {
+                i4 = i2;
             }
-            i = this.f1769g[i];
+            i2 = this.f1343g[i2];
         }
-        int i7 = this.f1772j;
-        int i8 = i7 + 1;
-        if (this.f1773k) {
-            int[] iArr4 = this.f1768f;
-            if (iArr4[i7] != -1) {
-                i7 = iArr4.length;
+        int i8 = this.f1346j;
+        int i9 = i8 + 1;
+        if (this.f1347k) {
+            int[] iArr4 = this.f1342f;
+            if (iArr4[i8] != -1) {
+                i8 = iArr4.length;
             }
         } else {
-            i7 = i8;
+            i8 = i9;
         }
-        int[] iArr5 = this.f1768f;
-        if (i7 >= iArr5.length && this.f1763a < iArr5.length) {
-            int i9 = 0;
+        int[] iArr5 = this.f1342f;
+        if (i8 >= iArr5.length && this.f1337a < iArr5.length) {
+            int i10 = 0;
             while (true) {
-                int[] iArr6 = this.f1768f;
-                if (i9 >= iArr6.length) {
+                int[] iArr6 = this.f1342f;
+                if (i10 >= iArr6.length) {
                     break;
-                } else if (iArr6[i9] == -1) {
-                    i7 = i9;
+                } else if (iArr6[i10] == -1) {
+                    i8 = i10;
                     break;
                 } else {
-                    i9++;
+                    i10++;
                 }
             }
         }
-        int[] iArr7 = this.f1768f;
-        if (i7 >= iArr7.length) {
-            i7 = iArr7.length;
-            int i10 = this.f1766d * 2;
-            this.f1766d = i10;
-            this.f1773k = false;
-            this.f1772j = i7 - 1;
-            this.f1770h = Arrays.copyOf(this.f1770h, i10);
-            this.f1768f = Arrays.copyOf(this.f1768f, this.f1766d);
-            this.f1769g = Arrays.copyOf(this.f1769g, this.f1766d);
+        int[] iArr7 = this.f1342f;
+        if (i8 >= iArr7.length) {
+            i8 = iArr7.length;
+            int i11 = this.f1340d * 2;
+            this.f1340d = i11;
+            this.f1347k = false;
+            this.f1346j = i8 - 1;
+            this.f1344h = Arrays.copyOf(this.f1344h, i11);
+            this.f1342f = Arrays.copyOf(this.f1342f, this.f1340d);
+            this.f1343g = Arrays.copyOf(this.f1343g, this.f1340d);
         }
-        this.f1768f[i7] = c0359i.f1804b;
-        this.f1770h[i7] = f;
-        int[] iArr8 = this.f1769g;
-        if (i3 != -1) {
-            iArr8[i7] = iArr8[i3];
-            iArr8[i3] = i7;
+        this.f1342f[i8] = iVar.f1378b;
+        this.f1344h[i8] = f2;
+        int[] iArr8 = this.f1343g;
+        if (i4 != -1) {
+            iArr8[i8] = iArr8[i4];
+            iArr8[i4] = i8;
         } else {
-            iArr8[i7] = this.f1771i;
-            this.f1771i = i7;
+            iArr8[i8] = this.f1345i;
+            this.f1345i = i8;
         }
-        c0359i.f1812j++;
-        c0359i.m926a(this.f1764b);
-        this.f1763a++;
-        if (!this.f1773k) {
-            this.f1772j++;
+        iVar.f1386j++;
+        iVar.a(this.f1338b);
+        this.f1337a++;
+        if (!this.f1347k) {
+            this.f1346j++;
         }
-        int i11 = this.f1772j;
-        int[] iArr9 = this.f1768f;
-        if (i11 >= iArr9.length) {
-            this.f1773k = true;
-            this.f1772j = iArr9.length - 1;
+        int i12 = this.f1346j;
+        int[] iArr9 = this.f1342f;
+        if (i12 >= iArr9.length) {
+            this.f1347k = true;
+            this.f1346j = iArr9.length - 1;
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* JADX WARN: Removed duplicated region for block: B:18:0x0042  */
     /* JADX WARN: Removed duplicated region for block: B:48:0x0083 A[SYNTHETIC] */
-    /* renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    public p006e.C0359i m999b(p006e.C0354e r15) {
+    public e.i b(e.e r15) {
         /*
             r14 = this;
-            int r0 = r14.f1771i
+            int r0 = r14.f1345i
             r1 = 0
             r2 = 0
             r3 = 0
@@ -195,14 +191,14 @@ public class C0350a {
         Lb:
             r9 = -1
             if (r0 == r9) goto L8a
-            int r9 = r14.f1763a
+            int r9 = r14.f1337a
             if (r4 >= r9) goto L8a
-            float[] r9 = r14.f1770h
+            float[] r9 = r14.f1344h
             r10 = r9[r0]
             r11 = 981668463(0x3a83126f, float:0.001)
-            e.c r12 = r14.f1765c
-            e.i[] r12 = r12.f1781c
-            int[] r13 = r14.f1768f
+            e.c r12 = r14.f1339c
+            e.i[] r12 = r12.f1355c
+            int[] r13 = r14.f1342f
             r13 = r13[r0]
             r12 = r12[r13]
             int r13 = (r10 > r3 ? 1 : (r10 == r3 ? 0 : -1))
@@ -217,19 +213,19 @@ public class C0350a {
             if (r11 >= 0) goto L3d
             r9[r0] = r3
         L37:
-            e.b r9 = r14.f1764b
-            r12.m924c(r9)
+            e.b r9 = r14.f1338b
+            r12.c(r9)
             r10 = 0
         L3d:
             r9 = 1
             int r11 = (r10 > r3 ? 1 : (r10 == r3 ? 0 : -1))
             if (r11 == 0) goto L83
-            e.i$a r11 = r12.f1809g
-            e.i$a r13 = p006e.C0359i.EnumC0360a.UNRESTRICTED
+            e.i$a r11 = r12.f1383g
+            e.i$a r13 = e.i.a.UNRESTRICTED
             if (r11 != r13) goto L63
             if (r2 != 0) goto L52
         L4a:
-            boolean r2 = r14.m990k(r12, r15)
+            boolean r2 = r14.k(r12, r15)
             r5 = r2
             r7 = r10
             r2 = r12
@@ -240,7 +236,7 @@ public class C0350a {
             goto L4a
         L57:
             if (r5 != 0) goto L83
-            boolean r11 = r14.m990k(r12, r15)
+            boolean r11 = r14.k(r12, r15)
             if (r11 == 0) goto L83
             r7 = r10
             r2 = r12
@@ -252,7 +248,7 @@ public class C0350a {
             if (r11 >= 0) goto L83
             if (r1 != 0) goto L73
         L6b:
-            boolean r1 = r14.m990k(r12, r15)
+            boolean r1 = r14.k(r12, r15)
             r6 = r1
             r8 = r10
             r1 = r12
@@ -263,13 +259,13 @@ public class C0350a {
             goto L6b
         L78:
             if (r6 != 0) goto L83
-            boolean r11 = r14.m990k(r12, r15)
+            boolean r11 = r14.k(r12, r15)
             if (r11 == 0) goto L83
             r8 = r10
             r1 = r12
             r6 = 1
         L83:
-            int[] r9 = r14.f1769g
+            int[] r9 = r14.f1343g
             r0 = r9[r0]
             int r4 = r4 + 1
             goto Lb
@@ -279,291 +275,280 @@ public class C0350a {
         L8d:
             return r1
         */
-        throw new UnsupportedOperationException("Method not decompiled: p006e.C0350a.m999b(e.e):e.i");
+        throw new UnsupportedOperationException("Method not decompiled: e.a.b(e.e):e.i");
     }
 
-    /* renamed from: c */
-    public final void m998c() {
-        int i = this.f1771i;
-        for (int i2 = 0; i != -1 && i2 < this.f1763a; i2++) {
-            C0359i c0359i = this.f1765c.f1781c[this.f1768f[i]];
-            if (c0359i != null) {
-                c0359i.m924c(this.f1764b);
+    public final void c() {
+        int i2 = this.f1345i;
+        for (int i3 = 0; i2 != -1 && i3 < this.f1337a; i3++) {
+            i iVar = this.f1339c.f1355c[this.f1342f[i2]];
+            if (iVar != null) {
+                iVar.c(this.f1338b);
             }
-            i = this.f1769g[i];
+            i2 = this.f1343g[i2];
         }
-        this.f1771i = -1;
-        this.f1772j = -1;
-        this.f1773k = false;
-        this.f1763a = 0;
+        this.f1345i = -1;
+        this.f1346j = -1;
+        this.f1347k = false;
+        this.f1337a = 0;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: d */
-    public final boolean m997d(C0359i c0359i) {
-        int i = this.f1771i;
-        if (i == -1) {
+    public final boolean d(i iVar) {
+        int i2 = this.f1345i;
+        if (i2 == -1) {
             return false;
         }
-        for (int i2 = 0; i != -1 && i2 < this.f1763a; i2++) {
-            if (this.f1768f[i] == c0359i.f1804b) {
+        for (int i3 = 0; i2 != -1 && i3 < this.f1337a; i3++) {
+            if (this.f1342f[i2] == iVar.f1378b) {
                 return true;
             }
-            i = this.f1769g[i];
+            i2 = this.f1343g[i2];
         }
         return false;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: e */
-    public void m996e(float f) {
-        int i = this.f1771i;
-        for (int i2 = 0; i != -1 && i2 < this.f1763a; i2++) {
-            float[] fArr = this.f1770h;
-            fArr[i] = fArr[i] / f;
-            i = this.f1769g[i];
+    public void e(float f2) {
+        int i2 = this.f1345i;
+        for (int i3 = 0; i2 != -1 && i3 < this.f1337a; i3++) {
+            float[] fArr = this.f1344h;
+            fArr[i2] = fArr[i2] / f2;
+            i2 = this.f1343g[i2];
         }
     }
 
-    /* renamed from: f */
-    public final float m995f(C0359i c0359i) {
-        int i = this.f1771i;
-        for (int i2 = 0; i != -1 && i2 < this.f1763a; i2++) {
-            if (this.f1768f[i] == c0359i.f1804b) {
-                return this.f1770h[i];
+    public final float f(i iVar) {
+        int i2 = this.f1345i;
+        for (int i3 = 0; i2 != -1 && i3 < this.f1337a; i3++) {
+            if (this.f1342f[i2] == iVar.f1378b) {
+                return this.f1344h[i2];
             }
-            i = this.f1769g[i];
+            i2 = this.f1343g[i2];
         }
         return 0.0f;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: g */
-    public C0359i m994g(boolean[] zArr, C0359i c0359i) {
-        C0359i.EnumC0360a enumC0360a;
-        int i = this.f1771i;
-        C0359i c0359i2 = null;
-        float f = 0.0f;
-        for (int i2 = 0; i != -1 && i2 < this.f1763a; i2++) {
-            float[] fArr = this.f1770h;
-            if (fArr[i] < 0.0f) {
-                C0359i c0359i3 = this.f1765c.f1781c[this.f1768f[i]];
-                if ((zArr == null || !zArr[c0359i3.f1804b]) && c0359i3 != c0359i && ((enumC0360a = c0359i3.f1809g) == C0359i.EnumC0360a.SLACK || enumC0360a == C0359i.EnumC0360a.ERROR)) {
-                    float f2 = fArr[i];
-                    if (f2 < f) {
-                        f = f2;
-                        c0359i2 = c0359i3;
+    public i g(boolean[] zArr, i iVar) {
+        i.a aVar;
+        int i2 = this.f1345i;
+        i iVar2 = null;
+        float f2 = 0.0f;
+        for (int i3 = 0; i2 != -1 && i3 < this.f1337a; i3++) {
+            float[] fArr = this.f1344h;
+            if (fArr[i2] < 0.0f) {
+                i iVar3 = this.f1339c.f1355c[this.f1342f[i2]];
+                if ((zArr == null || !zArr[iVar3.f1378b]) && iVar3 != iVar && ((aVar = iVar3.f1383g) == i.a.SLACK || aVar == i.a.ERROR)) {
+                    float f3 = fArr[i2];
+                    if (f3 < f2) {
+                        f2 = f3;
+                        iVar2 = iVar3;
                     }
                 }
             }
-            i = this.f1769g[i];
+            i2 = this.f1343g[i2];
         }
-        return c0359i2;
+        return iVar2;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: h */
-    public final C0359i m993h(int i) {
-        int i2 = this.f1771i;
-        for (int i3 = 0; i2 != -1 && i3 < this.f1763a; i3++) {
-            if (i3 == i) {
-                return this.f1765c.f1781c[this.f1768f[i2]];
+    public final i h(int i2) {
+        int i3 = this.f1345i;
+        for (int i4 = 0; i3 != -1 && i4 < this.f1337a; i4++) {
+            if (i4 == i2) {
+                return this.f1339c.f1355c[this.f1342f[i3]];
             }
-            i2 = this.f1769g[i2];
+            i3 = this.f1343g[i3];
         }
         return null;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: i */
-    public final float m992i(int i) {
-        int i2 = this.f1771i;
-        for (int i3 = 0; i2 != -1 && i3 < this.f1763a; i3++) {
-            if (i3 == i) {
-                return this.f1770h[i2];
+    public final float i(int i2) {
+        int i3 = this.f1345i;
+        for (int i4 = 0; i3 != -1 && i4 < this.f1337a; i4++) {
+            if (i4 == i2) {
+                return this.f1344h[i3];
             }
-            i2 = this.f1769g[i2];
+            i3 = this.f1343g[i3];
         }
         return 0.0f;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: j */
-    public void m991j() {
-        int i = this.f1771i;
-        for (int i2 = 0; i != -1 && i2 < this.f1763a; i2++) {
-            float[] fArr = this.f1770h;
-            fArr[i] = fArr[i] * (-1.0f);
-            i = this.f1769g[i];
+    public void j() {
+        int i2 = this.f1345i;
+        for (int i3 = 0; i2 != -1 && i3 < this.f1337a; i3++) {
+            float[] fArr = this.f1344h;
+            fArr[i2] = fArr[i2] * (-1.0f);
+            i2 = this.f1343g[i2];
         }
     }
 
-    /* renamed from: l */
-    public final void m989l(C0359i c0359i, float f) {
-        if (f == 0.0f) {
-            m988m(c0359i, true);
+    public final void l(i iVar, float f2) {
+        if (f2 == 0.0f) {
+            m(iVar, true);
             return;
         }
-        int i = this.f1771i;
-        if (i == -1) {
-            this.f1771i = 0;
-            this.f1770h[0] = f;
-            this.f1768f[0] = c0359i.f1804b;
-            this.f1769g[0] = -1;
-            c0359i.f1812j++;
-            c0359i.m926a(this.f1764b);
-            this.f1763a++;
-            if (this.f1773k) {
+        int i2 = this.f1345i;
+        if (i2 == -1) {
+            this.f1345i = 0;
+            this.f1344h[0] = f2;
+            this.f1342f[0] = iVar.f1378b;
+            this.f1343g[0] = -1;
+            iVar.f1386j++;
+            iVar.a(this.f1338b);
+            this.f1337a++;
+            if (this.f1347k) {
                 return;
             }
-            int i2 = this.f1772j + 1;
-            this.f1772j = i2;
-            int[] iArr = this.f1768f;
-            if (i2 >= iArr.length) {
-                this.f1773k = true;
-                this.f1772j = iArr.length - 1;
+            int i3 = this.f1346j + 1;
+            this.f1346j = i3;
+            int[] iArr = this.f1342f;
+            if (i3 >= iArr.length) {
+                this.f1347k = true;
+                this.f1346j = iArr.length - 1;
                 return;
             }
             return;
         }
-        int i3 = -1;
-        for (int i4 = 0; i != -1 && i4 < this.f1763a; i4++) {
-            int[] iArr2 = this.f1768f;
-            int i5 = iArr2[i];
-            int i6 = c0359i.f1804b;
-            if (i5 == i6) {
-                this.f1770h[i] = f;
+        int i4 = -1;
+        for (int i5 = 0; i2 != -1 && i5 < this.f1337a; i5++) {
+            int[] iArr2 = this.f1342f;
+            int i6 = iArr2[i2];
+            int i7 = iVar.f1378b;
+            if (i6 == i7) {
+                this.f1344h[i2] = f2;
                 return;
             }
-            if (iArr2[i] < i6) {
-                i3 = i;
+            if (iArr2[i2] < i7) {
+                i4 = i2;
             }
-            i = this.f1769g[i];
+            i2 = this.f1343g[i2];
         }
-        int i7 = this.f1772j;
-        int i8 = i7 + 1;
-        if (this.f1773k) {
-            int[] iArr3 = this.f1768f;
-            if (iArr3[i7] != -1) {
-                i7 = iArr3.length;
+        int i8 = this.f1346j;
+        int i9 = i8 + 1;
+        if (this.f1347k) {
+            int[] iArr3 = this.f1342f;
+            if (iArr3[i8] != -1) {
+                i8 = iArr3.length;
             }
         } else {
-            i7 = i8;
+            i8 = i9;
         }
-        int[] iArr4 = this.f1768f;
-        if (i7 >= iArr4.length && this.f1763a < iArr4.length) {
-            int i9 = 0;
+        int[] iArr4 = this.f1342f;
+        if (i8 >= iArr4.length && this.f1337a < iArr4.length) {
+            int i10 = 0;
             while (true) {
-                int[] iArr5 = this.f1768f;
-                if (i9 >= iArr5.length) {
+                int[] iArr5 = this.f1342f;
+                if (i10 >= iArr5.length) {
                     break;
-                } else if (iArr5[i9] == -1) {
-                    i7 = i9;
+                } else if (iArr5[i10] == -1) {
+                    i8 = i10;
                     break;
                 } else {
-                    i9++;
+                    i10++;
                 }
             }
         }
-        int[] iArr6 = this.f1768f;
-        if (i7 >= iArr6.length) {
-            i7 = iArr6.length;
-            int i10 = this.f1766d * 2;
-            this.f1766d = i10;
-            this.f1773k = false;
-            this.f1772j = i7 - 1;
-            this.f1770h = Arrays.copyOf(this.f1770h, i10);
-            this.f1768f = Arrays.copyOf(this.f1768f, this.f1766d);
-            this.f1769g = Arrays.copyOf(this.f1769g, this.f1766d);
+        int[] iArr6 = this.f1342f;
+        if (i8 >= iArr6.length) {
+            i8 = iArr6.length;
+            int i11 = this.f1340d * 2;
+            this.f1340d = i11;
+            this.f1347k = false;
+            this.f1346j = i8 - 1;
+            this.f1344h = Arrays.copyOf(this.f1344h, i11);
+            this.f1342f = Arrays.copyOf(this.f1342f, this.f1340d);
+            this.f1343g = Arrays.copyOf(this.f1343g, this.f1340d);
         }
-        this.f1768f[i7] = c0359i.f1804b;
-        this.f1770h[i7] = f;
-        int[] iArr7 = this.f1769g;
-        if (i3 != -1) {
-            iArr7[i7] = iArr7[i3];
-            iArr7[i3] = i7;
+        this.f1342f[i8] = iVar.f1378b;
+        this.f1344h[i8] = f2;
+        int[] iArr7 = this.f1343g;
+        if (i4 != -1) {
+            iArr7[i8] = iArr7[i4];
+            iArr7[i4] = i8;
         } else {
-            iArr7[i7] = this.f1771i;
-            this.f1771i = i7;
+            iArr7[i8] = this.f1345i;
+            this.f1345i = i8;
         }
-        c0359i.f1812j++;
-        c0359i.m926a(this.f1764b);
-        int i11 = this.f1763a + 1;
-        this.f1763a = i11;
-        if (!this.f1773k) {
-            this.f1772j++;
+        iVar.f1386j++;
+        iVar.a(this.f1338b);
+        int i12 = this.f1337a + 1;
+        this.f1337a = i12;
+        if (!this.f1347k) {
+            this.f1346j++;
         }
-        int[] iArr8 = this.f1768f;
-        if (i11 >= iArr8.length) {
-            this.f1773k = true;
+        int[] iArr8 = this.f1342f;
+        if (i12 >= iArr8.length) {
+            this.f1347k = true;
         }
-        if (this.f1772j >= iArr8.length) {
-            this.f1773k = true;
-            this.f1772j = iArr8.length - 1;
+        if (this.f1346j >= iArr8.length) {
+            this.f1347k = true;
+            this.f1346j = iArr8.length - 1;
         }
     }
 
-    /* renamed from: m */
-    public final float m988m(C0359i c0359i, boolean z) {
-        if (this.f1767e == c0359i) {
-            this.f1767e = null;
+    public final float m(i iVar, boolean z) {
+        if (this.f1341e == iVar) {
+            this.f1341e = null;
         }
-        int i = this.f1771i;
-        if (i == -1) {
+        int i2 = this.f1345i;
+        if (i2 == -1) {
             return 0.0f;
         }
-        int i2 = 0;
-        int i3 = -1;
-        while (i != -1 && i2 < this.f1763a) {
-            if (this.f1768f[i] == c0359i.f1804b) {
-                if (i == this.f1771i) {
-                    this.f1771i = this.f1769g[i];
+        int i3 = 0;
+        int i4 = -1;
+        while (i2 != -1 && i3 < this.f1337a) {
+            if (this.f1342f[i2] == iVar.f1378b) {
+                if (i2 == this.f1345i) {
+                    this.f1345i = this.f1343g[i2];
                 } else {
-                    int[] iArr = this.f1769g;
-                    iArr[i3] = iArr[i];
+                    int[] iArr = this.f1343g;
+                    iArr[i4] = iArr[i2];
                 }
                 if (z) {
-                    c0359i.m924c(this.f1764b);
+                    iVar.c(this.f1338b);
                 }
-                c0359i.f1812j--;
-                this.f1763a--;
-                this.f1768f[i] = -1;
-                if (this.f1773k) {
-                    this.f1772j = i;
+                iVar.f1386j--;
+                this.f1337a--;
+                this.f1342f[i2] = -1;
+                if (this.f1347k) {
+                    this.f1346j = i2;
                 }
-                return this.f1770h[i];
+                return this.f1344h[i2];
             }
-            i2++;
-            i3 = i;
-            i = this.f1769g[i];
+            i3++;
+            i4 = i2;
+            i2 = this.f1343g[i2];
         }
         return 0.0f;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: n */
-    public final void m987n(C0351b c0351b, C0351b c0351b2, boolean z) {
-        int i = this.f1771i;
+    public final void n(b bVar, b bVar2, boolean z) {
+        int i2 = this.f1345i;
         while (true) {
-            for (int i2 = 0; i != -1 && i2 < this.f1763a; i2++) {
-                int i3 = this.f1768f[i];
-                C0359i c0359i = c0351b2.f1774a;
-                if (i3 == c0359i.f1804b) {
-                    float f = this.f1770h[i];
-                    m988m(c0359i, z);
-                    C0350a c0350a = c0351b2.f1777d;
-                    int i4 = c0350a.f1771i;
-                    for (int i5 = 0; i4 != -1 && i5 < c0350a.f1763a; i5++) {
-                        m1000a(this.f1765c.f1781c[c0350a.f1768f[i4]], c0350a.f1770h[i4] * f, z);
-                        i4 = c0350a.f1769g[i4];
+            for (int i3 = 0; i2 != -1 && i3 < this.f1337a; i3++) {
+                int i4 = this.f1342f[i2];
+                i iVar = bVar2.f1348a;
+                if (i4 == iVar.f1378b) {
+                    float f2 = this.f1344h[i2];
+                    m(iVar, z);
+                    a aVar = bVar2.f1351d;
+                    int i5 = aVar.f1345i;
+                    for (int i6 = 0; i5 != -1 && i6 < aVar.f1337a; i6++) {
+                        a(this.f1339c.f1355c[aVar.f1342f[i5]], aVar.f1344h[i5] * f2, z);
+                        i5 = aVar.f1343g[i5];
                     }
-                    c0351b.f1775b += c0351b2.f1775b * f;
+                    bVar.f1349b += bVar2.f1349b * f2;
                     if (z) {
-                        c0351b2.f1774a.m924c(c0351b);
+                        bVar2.f1348a.c(bVar);
                     }
-                    i = this.f1771i;
+                    i2 = this.f1345i;
                 } else {
-                    i = this.f1769g[i];
+                    i2 = this.f1343g[i2];
                 }
             }
             return;
@@ -571,29 +556,28 @@ public class C0350a {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: o */
-    public void m986o(C0351b c0351b, C0351b[] c0351bArr) {
-        int i = this.f1771i;
+    public void o(b bVar, b[] bVarArr) {
+        int i2 = this.f1345i;
         while (true) {
-            for (int i2 = 0; i != -1 && i2 < this.f1763a; i2++) {
-                C0359i c0359i = this.f1765c.f1781c[this.f1768f[i]];
-                if (c0359i.f1805c != -1) {
-                    float f = this.f1770h[i];
-                    m988m(c0359i, true);
-                    C0351b c0351b2 = c0351bArr[c0359i.f1805c];
-                    if (!c0351b2.f1778e) {
-                        C0350a c0350a = c0351b2.f1777d;
-                        int i3 = c0350a.f1771i;
-                        for (int i4 = 0; i3 != -1 && i4 < c0350a.f1763a; i4++) {
-                            m1000a(this.f1765c.f1781c[c0350a.f1768f[i3]], c0350a.f1770h[i3] * f, true);
-                            i3 = c0350a.f1769g[i3];
+            for (int i3 = 0; i2 != -1 && i3 < this.f1337a; i3++) {
+                i iVar = this.f1339c.f1355c[this.f1342f[i2]];
+                if (iVar.f1379c != -1) {
+                    float f2 = this.f1344h[i2];
+                    m(iVar, true);
+                    b bVar2 = bVarArr[iVar.f1379c];
+                    if (!bVar2.f1352e) {
+                        a aVar = bVar2.f1351d;
+                        int i4 = aVar.f1345i;
+                        for (int i5 = 0; i4 != -1 && i5 < aVar.f1337a; i5++) {
+                            a(this.f1339c.f1355c[aVar.f1342f[i4]], aVar.f1344h[i4] * f2, true);
+                            i4 = aVar.f1343g[i4];
                         }
                     }
-                    c0351b.f1775b += c0351b2.f1775b * f;
-                    c0351b2.f1774a.m924c(c0351b);
-                    i = this.f1771i;
+                    bVar.f1349b += bVar2.f1349b * f2;
+                    bVar2.f1348a.c(bVar);
+                    i2 = this.f1345i;
                 } else {
-                    i = this.f1769g[i];
+                    i2 = this.f1343g[i2];
                 }
             }
             return;
@@ -601,11 +585,11 @@ public class C0350a {
     }
 
     public String toString() {
-        int i = this.f1771i;
+        int i2 = this.f1345i;
         String str = "";
-        for (int i2 = 0; i != -1 && i2 < this.f1763a; i2++) {
-            str = ((str + " -> ") + this.f1770h[i] + " : ") + this.f1765c.f1781c[this.f1768f[i]];
-            i = this.f1769g[i];
+        for (int i3 = 0; i2 != -1 && i3 < this.f1337a; i3++) {
+            str = ((str + " -> ") + this.f1344h[i2] + " : ") + this.f1339c.f1355c[this.f1342f[i2]];
+            i2 = this.f1343g[i2];
         }
         return str;
     }

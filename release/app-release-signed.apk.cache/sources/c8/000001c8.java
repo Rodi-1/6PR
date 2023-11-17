@@ -1,8 +1,7 @@
-package p012k;
+package k;
 
 import android.view.Menu;
 
-/* renamed from: k.a */
 /* loaded from: classes.dex */
-public interface InterfaceMenuC0422a extends Menu {
+public interface a extends Menu {
 }

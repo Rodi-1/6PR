@@ -1,13 +1,10 @@
-package p011j;
+package j;
 
 import android.graphics.drawable.Drawable;
 
-/* renamed from: j.c */
 /* loaded from: classes.dex */
-public interface InterfaceC0415c {
-    /* renamed from: a */
-    Drawable mo617a();
+public interface c {
+    Drawable a();
 
-    /* renamed from: b */
-    void mo616b(Drawable drawable);
+    void b(Drawable drawable);
 }

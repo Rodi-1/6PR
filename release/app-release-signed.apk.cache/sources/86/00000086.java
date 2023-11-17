@@ -1,4 +1,4 @@
-package android.support.p001v4.app;
+package android.support.v4.app;
 
 import android.graphics.Rect;
 import android.view.View;
@@ -6,118 +6,111 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import p016o.C0490o;
-import p016o.C0503q;
 
-/* renamed from: android.support.v4.app.t */
 /* loaded from: classes.dex */
-public abstract class AbstractC0121t {
+public abstract class t {
 
-    /* renamed from: android.support.v4.app.t$a */
     /* loaded from: classes.dex */
-    class RunnableC0122a implements Runnable {
+    class a implements Runnable {
 
-        /* renamed from: b */
-        final /* synthetic */ int f606b;
+        /* renamed from: b  reason: collision with root package name */
+        final /* synthetic */ int f462b;
 
-        /* renamed from: c */
-        final /* synthetic */ ArrayList f607c;
+        /* renamed from: c  reason: collision with root package name */
+        final /* synthetic */ ArrayList f463c;
 
-        /* renamed from: d */
-        final /* synthetic */ ArrayList f608d;
+        /* renamed from: d  reason: collision with root package name */
+        final /* synthetic */ ArrayList f464d;
 
-        /* renamed from: e */
-        final /* synthetic */ ArrayList f609e;
+        /* renamed from: e  reason: collision with root package name */
+        final /* synthetic */ ArrayList f465e;
 
-        /* renamed from: f */
-        final /* synthetic */ ArrayList f610f;
+        /* renamed from: f  reason: collision with root package name */
+        final /* synthetic */ ArrayList f466f;
 
-        RunnableC0122a(int i, ArrayList arrayList, ArrayList arrayList2, ArrayList arrayList3, ArrayList arrayList4) {
-            this.f606b = i;
-            this.f607c = arrayList;
-            this.f608d = arrayList2;
-            this.f609e = arrayList3;
-            this.f610f = arrayList4;
+        a(int i2, ArrayList arrayList, ArrayList arrayList2, ArrayList arrayList3, ArrayList arrayList4) {
+            this.f462b = i2;
+            this.f463c = arrayList;
+            this.f464d = arrayList2;
+            this.f465e = arrayList3;
+            this.f466f = arrayList4;
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            for (int i = 0; i < this.f606b; i++) {
-                C0490o.m388x((View) this.f607c.get(i), (String) this.f608d.get(i));
-                C0490o.m388x((View) this.f609e.get(i), (String) this.f610f.get(i));
+            for (int i2 = 0; i2 < this.f462b; i2++) {
+                o.o.x((View) this.f463c.get(i2), (String) this.f464d.get(i2));
+                o.o.x((View) this.f465e.get(i2), (String) this.f466f.get(i2));
             }
         }
     }
 
-    /* renamed from: android.support.v4.app.t$b */
     /* loaded from: classes.dex */
-    class RunnableC0123b implements Runnable {
+    class b implements Runnable {
 
-        /* renamed from: b */
-        final /* synthetic */ ArrayList f612b;
+        /* renamed from: b  reason: collision with root package name */
+        final /* synthetic */ ArrayList f468b;
 
-        /* renamed from: c */
-        final /* synthetic */ Map f613c;
+        /* renamed from: c  reason: collision with root package name */
+        final /* synthetic */ Map f469c;
 
-        RunnableC0123b(ArrayList arrayList, Map map) {
-            this.f612b = arrayList;
-            this.f613c = map;
+        b(ArrayList arrayList, Map map) {
+            this.f468b = arrayList;
+            this.f469c = map;
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            int size = this.f612b.size();
-            for (int i = 0; i < size; i++) {
-                View view = (View) this.f612b.get(i);
-                String m406f = C0490o.m406f(view);
-                if (m406f != null) {
-                    C0490o.m388x(view, AbstractC0121t.m1848i(this.f613c, m406f));
+            int size = this.f468b.size();
+            for (int i2 = 0; i2 < size; i2++) {
+                View view = (View) this.f468b.get(i2);
+                String f2 = o.o.f(view);
+                if (f2 != null) {
+                    o.o.x(view, t.i(this.f469c, f2));
                 }
             }
         }
     }
 
-    /* renamed from: android.support.v4.app.t$c */
     /* loaded from: classes.dex */
-    class RunnableC0124c implements Runnable {
+    class c implements Runnable {
 
-        /* renamed from: b */
-        final /* synthetic */ ArrayList f615b;
+        /* renamed from: b  reason: collision with root package name */
+        final /* synthetic */ ArrayList f471b;
 
-        /* renamed from: c */
-        final /* synthetic */ Map f616c;
+        /* renamed from: c  reason: collision with root package name */
+        final /* synthetic */ Map f472c;
 
-        RunnableC0124c(ArrayList arrayList, Map map) {
-            this.f615b = arrayList;
-            this.f616c = map;
+        c(ArrayList arrayList, Map map) {
+            this.f471b = arrayList;
+            this.f472c = map;
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            int size = this.f615b.size();
-            for (int i = 0; i < size; i++) {
-                View view = (View) this.f615b.get(i);
-                C0490o.m388x(view, (String) this.f616c.get(C0490o.m406f(view)));
+            int size = this.f471b.size();
+            for (int i2 = 0; i2 < size; i2++) {
+                View view = (View) this.f471b.get(i2);
+                o.o.x(view, (String) this.f472c.get(o.o.f(view)));
             }
         }
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    /* renamed from: d */
-    public static void m1853d(List<View> list, View view) {
+    public static void d(List<View> list, View view) {
         int size = list.size();
-        if (m1849h(list, view, size)) {
+        if (h(list, view, size)) {
             return;
         }
         list.add(view);
-        for (int i = size; i < list.size(); i++) {
-            View view2 = list.get(i);
+        for (int i2 = size; i2 < list.size(); i2++) {
+            View view2 = list.get(i2);
             if (view2 instanceof ViewGroup) {
                 ViewGroup viewGroup = (ViewGroup) view2;
                 int childCount = viewGroup.getChildCount();
-                for (int i2 = 0; i2 < childCount; i2++) {
-                    View childAt = viewGroup.getChildAt(i2);
-                    if (!m1849h(list, childAt, size)) {
+                for (int i3 = 0; i3 < childCount; i3++) {
+                    View childAt = viewGroup.getChildAt(i3);
+                    if (!h(list, childAt, size)) {
                         list.add(childAt);
                     }
                 }
@@ -125,18 +118,16 @@ public abstract class AbstractC0121t {
         }
     }
 
-    /* renamed from: h */
-    private static boolean m1849h(List<View> list, View view, int i) {
-        for (int i2 = 0; i2 < i; i2++) {
-            if (list.get(i2) == view) {
+    private static boolean h(List<View> list, View view, int i2) {
+        for (int i3 = 0; i3 < i2; i3++) {
+            if (list.get(i3) == view) {
                 return true;
             }
         }
         return false;
     }
 
-    /* renamed from: i */
-    static String m1848i(Map<String, String> map, String str) {
+    static String i(Map<String, String> map, String str) {
         for (Map.Entry<String, String> entry : map.entrySet()) {
             if (str.equals(entry.getValue())) {
                 return entry.getKey();
@@ -146,40 +137,33 @@ public abstract class AbstractC0121t {
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    /* renamed from: l */
-    public static boolean m1845l(List list) {
+    public static boolean l(List list) {
         return list == null || list.isEmpty();
     }
 
-    /* renamed from: A */
-    public abstract Object mo1857A(Object obj);
+    public abstract Object A(Object obj);
 
-    /* renamed from: a */
-    public abstract void mo1856a(Object obj, View view);
+    public abstract void a(Object obj, View view);
 
-    /* renamed from: b */
-    public abstract void mo1855b(Object obj, ArrayList<View> arrayList);
+    public abstract void b(Object obj, ArrayList<View> arrayList);
 
-    /* renamed from: c */
-    public abstract void mo1854c(ViewGroup viewGroup, Object obj);
+    public abstract void c(ViewGroup viewGroup, Object obj);
 
-    /* renamed from: e */
-    public abstract boolean mo1852e(Object obj);
+    public abstract boolean e(Object obj);
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: f */
-    public void m1851f(ArrayList<View> arrayList, View view) {
+    public void f(ArrayList<View> arrayList, View view) {
         if (view.getVisibility() == 0) {
             boolean z = view instanceof ViewGroup;
             ViewGroup viewGroup = view;
             if (z) {
                 ViewGroup viewGroup2 = (ViewGroup) view;
-                boolean m360a = C0503q.m360a(viewGroup2);
+                boolean a2 = o.q.a(viewGroup2);
                 viewGroup = viewGroup2;
-                if (!m360a) {
+                if (!a2) {
                     int childCount = viewGroup2.getChildCount();
-                    for (int i = 0; i < childCount; i++) {
-                        m1851f(arrayList, viewGroup2.getChildAt(i));
+                    for (int i2 = 0; i2 < childCount; i2++) {
+                        f(arrayList, viewGroup2.getChildAt(i2));
                     }
                     return;
                 }
@@ -188,115 +172,98 @@ public abstract class AbstractC0121t {
         }
     }
 
-    /* renamed from: g */
-    public abstract Object mo1850g(Object obj);
+    public abstract Object g(Object obj);
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: j */
-    public void m1847j(Map<String, View> map, View view) {
+    public void j(Map<String, View> map, View view) {
         if (view.getVisibility() == 0) {
-            String m406f = C0490o.m406f(view);
-            if (m406f != null) {
-                map.put(m406f, view);
+            String f2 = o.o.f(view);
+            if (f2 != null) {
+                map.put(f2, view);
             }
             if (view instanceof ViewGroup) {
                 ViewGroup viewGroup = (ViewGroup) view;
                 int childCount = viewGroup.getChildCount();
-                for (int i = 0; i < childCount; i++) {
-                    m1847j(map, viewGroup.getChildAt(i));
+                for (int i2 = 0; i2 < childCount; i2++) {
+                    j(map, viewGroup.getChildAt(i2));
                 }
             }
         }
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    /* renamed from: k */
-    public void m1846k(View view, Rect rect) {
+    public void k(View view, Rect rect) {
         int[] iArr = new int[2];
         view.getLocationOnScreen(iArr);
         rect.set(iArr[0], iArr[1], iArr[0] + view.getWidth(), iArr[1] + view.getHeight());
     }
 
-    /* renamed from: m */
-    public abstract Object mo1844m(Object obj, Object obj2, Object obj3);
+    public abstract Object m(Object obj, Object obj2, Object obj3);
 
-    /* renamed from: n */
-    public abstract Object mo1843n(Object obj, Object obj2, Object obj3);
+    public abstract Object n(Object obj, Object obj2, Object obj3);
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: o */
-    public ArrayList<String> m1842o(ArrayList<View> arrayList) {
+    public ArrayList<String> o(ArrayList<View> arrayList) {
         ArrayList<String> arrayList2 = new ArrayList<>();
         int size = arrayList.size();
-        for (int i = 0; i < size; i++) {
-            View view = arrayList.get(i);
-            arrayList2.add(C0490o.m406f(view));
-            C0490o.m388x(view, null);
+        for (int i2 = 0; i2 < size; i2++) {
+            View view = arrayList.get(i2);
+            arrayList2.add(o.o.f(view));
+            o.o.x(view, null);
         }
         return arrayList2;
     }
 
-    /* renamed from: p */
-    public abstract void mo1841p(Object obj, View view);
+    public abstract void p(Object obj, View view);
 
-    /* renamed from: q */
-    public abstract void mo1840q(Object obj, ArrayList<View> arrayList, ArrayList<View> arrayList2);
+    public abstract void q(Object obj, ArrayList<View> arrayList, ArrayList<View> arrayList2);
 
-    /* renamed from: r */
-    public abstract void mo1839r(Object obj, View view, ArrayList<View> arrayList);
+    public abstract void r(Object obj, View view, ArrayList<View> arrayList);
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: s */
-    public void m1838s(ViewGroup viewGroup, ArrayList<View> arrayList, Map<String, String> map) {
-        ViewTreeObserver$OnPreDrawListenerC0127w.m1821a(viewGroup, new RunnableC0124c(arrayList, map));
+    public void s(ViewGroup viewGroup, ArrayList<View> arrayList, Map<String, String> map) {
+        w.a(viewGroup, new c(arrayList, map));
     }
 
-    /* renamed from: t */
-    public abstract void mo1837t(Object obj, Object obj2, ArrayList<View> arrayList, Object obj3, ArrayList<View> arrayList2, Object obj4, ArrayList<View> arrayList3);
+    public abstract void t(Object obj, Object obj2, ArrayList<View> arrayList, Object obj3, ArrayList<View> arrayList2, Object obj4, ArrayList<View> arrayList3);
 
-    /* renamed from: u */
-    public abstract void mo1836u(Object obj, Rect rect);
+    public abstract void u(Object obj, Rect rect);
 
-    /* renamed from: v */
-    public abstract void mo1835v(Object obj, View view);
+    public abstract void v(Object obj, View view);
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: w */
-    public void m1834w(View view, ArrayList<View> arrayList, Map<String, String> map) {
-        ViewTreeObserver$OnPreDrawListenerC0127w.m1821a(view, new RunnableC0123b(arrayList, map));
+    public void w(View view, ArrayList<View> arrayList, Map<String, String> map) {
+        w.a(view, new b(arrayList, map));
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: x */
-    public void m1833x(View view, ArrayList<View> arrayList, ArrayList<View> arrayList2, ArrayList<String> arrayList3, Map<String, String> map) {
+    public void x(View view, ArrayList<View> arrayList, ArrayList<View> arrayList2, ArrayList<String> arrayList3, Map<String, String> map) {
         int size = arrayList2.size();
         ArrayList arrayList4 = new ArrayList();
-        for (int i = 0; i < size; i++) {
-            View view2 = arrayList.get(i);
-            String m406f = C0490o.m406f(view2);
-            arrayList4.add(m406f);
-            if (m406f != null) {
-                C0490o.m388x(view2, null);
-                String str = map.get(m406f);
-                int i2 = 0;
+        for (int i2 = 0; i2 < size; i2++) {
+            View view2 = arrayList.get(i2);
+            String f2 = o.o.f(view2);
+            arrayList4.add(f2);
+            if (f2 != null) {
+                o.o.x(view2, null);
+                String str = map.get(f2);
+                int i3 = 0;
                 while (true) {
-                    if (i2 >= size) {
+                    if (i3 >= size) {
                         break;
-                    } else if (str.equals(arrayList3.get(i2))) {
-                        C0490o.m388x(arrayList2.get(i2), m406f);
+                    } else if (str.equals(arrayList3.get(i3))) {
+                        o.o.x(arrayList2.get(i3), f2);
                         break;
                     } else {
-                        i2++;
+                        i3++;
                     }
                 }
             }
         }
-        ViewTreeObserver$OnPreDrawListenerC0127w.m1821a(view, new RunnableC0122a(size, arrayList2, arrayList3, arrayList, arrayList4));
+        w.a(view, new a(size, arrayList2, arrayList3, arrayList, arrayList4));
     }
 
-    /* renamed from: y */
-    public abstract void mo1832y(Object obj, View view, ArrayList<View> arrayList);
+    public abstract void y(Object obj, View view, ArrayList<View> arrayList);
 
-    /* renamed from: z */
-    public abstract void mo1831z(Object obj, ArrayList<View> arrayList, ArrayList<View> arrayList2);
+    public abstract void z(Object obj, ArrayList<View> arrayList, ArrayList<View> arrayList2);
 }

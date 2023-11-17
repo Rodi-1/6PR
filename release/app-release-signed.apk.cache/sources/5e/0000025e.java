@@ -1,8 +1,7 @@
-package p020s;
+package s;
 
-/* renamed from: s.c */
 /* loaded from: classes.dex */
-public final class C0571c {
+public final class c {
 
     /* renamed from: a */
     public static final int abc_input_method_navigation_guard = 2130968583;

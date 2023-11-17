@@ -1,4 +1,4 @@
-package android.support.p002v7.widget;
+package android.support.v7.widget;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -10,66 +10,61 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 import java.lang.ref.WeakReference;
-import p020s.C0578j;
 
-/* renamed from: android.support.v7.widget.ViewStubCompat */
 /* loaded from: classes.dex */
 public final class ViewStubCompat extends View {
 
-    /* renamed from: b */
-    private int f1220b;
+    /* renamed from: b  reason: collision with root package name */
+    private int f941b;
 
-    /* renamed from: c */
-    private int f1221c;
+    /* renamed from: c  reason: collision with root package name */
+    private int f942c;
 
-    /* renamed from: d */
-    private WeakReference<View> f1222d;
+    /* renamed from: d  reason: collision with root package name */
+    private WeakReference<View> f943d;
 
-    /* renamed from: e */
-    private LayoutInflater f1223e;
+    /* renamed from: e  reason: collision with root package name */
+    private LayoutInflater f944e;
 
-    /* renamed from: f */
-    private InterfaceC0237a f1224f;
+    /* renamed from: f  reason: collision with root package name */
+    private a f945f;
 
-    /* renamed from: android.support.v7.widget.ViewStubCompat$a */
     /* loaded from: classes.dex */
-    public interface InterfaceC0237a {
-        /* renamed from: a */
-        void m1406a(ViewStubCompat viewStubCompat, View view);
+    public interface a {
+        void a(ViewStubCompat viewStubCompat, View view);
     }
 
     public ViewStubCompat(Context context, AttributeSet attributeSet) {
         this(context, attributeSet, 0);
     }
 
-    public ViewStubCompat(Context context, AttributeSet attributeSet, int i) {
-        super(context, attributeSet, i);
-        this.f1220b = 0;
-        TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C0578j.f2516X2, i, 0);
-        this.f1221c = obtainStyledAttributes.getResourceId(C0578j.f2529a3, -1);
-        this.f1220b = obtainStyledAttributes.getResourceId(C0578j.f2524Z2, 0);
-        setId(obtainStyledAttributes.getResourceId(C0578j.f2520Y2, -1));
+    public ViewStubCompat(Context context, AttributeSet attributeSet, int i2) {
+        super(context, attributeSet, i2);
+        this.f941b = 0;
+        TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, s.j.X2, i2, 0);
+        this.f942c = obtainStyledAttributes.getResourceId(s.j.a3, -1);
+        this.f941b = obtainStyledAttributes.getResourceId(s.j.Z2, 0);
+        setId(obtainStyledAttributes.getResourceId(s.j.Y2, -1));
         obtainStyledAttributes.recycle();
         setVisibility(8);
         setWillNotDraw(true);
     }
 
-    /* renamed from: a */
-    public View m1407a() {
+    public View a() {
         ViewParent parent = getParent();
         if (parent == null || !(parent instanceof ViewGroup)) {
             throw new IllegalStateException("ViewStub must have a non-null ViewGroup viewParent");
         }
-        if (this.f1220b != 0) {
+        if (this.f941b != 0) {
             ViewGroup viewGroup = (ViewGroup) parent;
-            LayoutInflater layoutInflater = this.f1223e;
+            LayoutInflater layoutInflater = this.f944e;
             if (layoutInflater == null) {
                 layoutInflater = LayoutInflater.from(getContext());
             }
-            View inflate = layoutInflater.inflate(this.f1220b, viewGroup, false);
-            int i = this.f1221c;
-            if (i != -1) {
-                inflate.setId(i);
+            View inflate = layoutInflater.inflate(this.f941b, viewGroup, false);
+            int i2 = this.f942c;
+            if (i2 != -1) {
+                inflate.setId(i2);
             }
             int indexOfChild = viewGroup.indexOfChild(this);
             viewGroup.removeViewInLayout(this);
@@ -79,10 +74,10 @@ public final class ViewStubCompat extends View {
             } else {
                 viewGroup.addView(inflate, indexOfChild);
             }
-            this.f1222d = new WeakReference<>(inflate);
-            InterfaceC0237a interfaceC0237a = this.f1224f;
-            if (interfaceC0237a != null) {
-                interfaceC0237a.m1406a(this, inflate);
+            this.f943d = new WeakReference<>(inflate);
+            a aVar = this.f945f;
+            if (aVar != null) {
+                aVar.a(this, inflate);
             }
             return inflate;
         }
@@ -99,52 +94,52 @@ public final class ViewStubCompat extends View {
     }
 
     public int getInflatedId() {
-        return this.f1221c;
+        return this.f942c;
     }
 
     public LayoutInflater getLayoutInflater() {
-        return this.f1223e;
+        return this.f944e;
     }
 
     public int getLayoutResource() {
-        return this.f1220b;
+        return this.f941b;
     }
 
     @Override // android.view.View
-    protected void onMeasure(int i, int i2) {
+    protected void onMeasure(int i2, int i3) {
         setMeasuredDimension(0, 0);
     }
 
-    public void setInflatedId(int i) {
-        this.f1221c = i;
+    public void setInflatedId(int i2) {
+        this.f942c = i2;
     }
 
     public void setLayoutInflater(LayoutInflater layoutInflater) {
-        this.f1223e = layoutInflater;
+        this.f944e = layoutInflater;
     }
 
-    public void setLayoutResource(int i) {
-        this.f1220b = i;
+    public void setLayoutResource(int i2) {
+        this.f941b = i2;
     }
 
-    public void setOnInflateListener(InterfaceC0237a interfaceC0237a) {
-        this.f1224f = interfaceC0237a;
+    public void setOnInflateListener(a aVar) {
+        this.f945f = aVar;
     }
 
     @Override // android.view.View
-    public void setVisibility(int i) {
-        WeakReference<View> weakReference = this.f1222d;
+    public void setVisibility(int i2) {
+        WeakReference<View> weakReference = this.f943d;
         if (weakReference != null) {
             View view = weakReference.get();
             if (view == null) {
                 throw new IllegalStateException("setVisibility called on un-referenced view");
             }
-            view.setVisibility(i);
+            view.setVisibility(i2);
             return;
         }
-        super.setVisibility(i);
-        if (i == 0 || i == 4) {
-            m1407a();
+        super.setVisibility(i2);
+        if (i2 == 0 || i2 == 4) {
+            a();
         }
     }
 }

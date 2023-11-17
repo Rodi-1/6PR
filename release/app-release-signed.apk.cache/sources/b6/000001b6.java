@@ -1,4 +1,4 @@
-package p010i;
+package i;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -10,13 +10,11 @@ import android.system.OsConstants;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import p014m.C0427b;
+import m.b;
 
-/* renamed from: i.d */
 /* loaded from: classes.dex */
-class C0404d extends C0408h {
-    /* renamed from: h */
-    private File m672h(ParcelFileDescriptor parcelFileDescriptor) {
+class d extends h {
+    private File h(ParcelFileDescriptor parcelFileDescriptor) {
         try {
             String readlink = Os.readlink("/proc/self/fd/" + parcelFileDescriptor.getFd());
             if (OsConstants.S_ISREG(Os.stat(readlink).st_mode)) {
@@ -27,18 +25,17 @@ class C0404d extends C0408h {
         return null;
     }
 
-    @Override // p010i.C0408h, p010i.C0402c.InterfaceC0403a
-    /* renamed from: c */
-    public Typeface mo651c(Context context, CancellationSignal cancellationSignal, C0427b.C0433f[] c0433fArr, int i) {
-        if (c0433fArr.length < 1) {
+    @Override // i.h, i.c.a
+    public Typeface c(Context context, CancellationSignal cancellationSignal, b.f[] fVarArr, int i2) {
+        if (fVarArr.length < 1) {
             return null;
         }
-        C0427b.C0433f m647g = m647g(c0433fArr, i);
+        b.f g2 = g(fVarArr, i2);
         try {
-            ParcelFileDescriptor openFileDescriptor = context.getContentResolver().openFileDescriptor(m647g.m581c(), "r", cancellationSignal);
-            File m672h = m672h(openFileDescriptor);
-            if (m672h != null && m672h.canRead()) {
-                Typeface createFromFile = Typeface.createFromFile(m672h);
+            ParcelFileDescriptor openFileDescriptor = context.getContentResolver().openFileDescriptor(g2.c(), "r", cancellationSignal);
+            File h2 = h(openFileDescriptor);
+            if (h2 != null && h2.canRead()) {
+                Typeface createFromFile = Typeface.createFromFile(h2);
                 if (openFileDescriptor != null) {
                     openFileDescriptor.close();
                 }
@@ -46,10 +43,10 @@ class C0404d extends C0408h {
             }
             FileInputStream fileInputStream = new FileInputStream(openFileDescriptor.getFileDescriptor());
             try {
-                Typeface m650d = super.m650d(context, fileInputStream);
+                Typeface d2 = super.d(context, fileInputStream);
                 fileInputStream.close();
                 openFileDescriptor.close();
-                return m650d;
+                return d2;
             } finally {
             }
         } catch (IOException unused) {

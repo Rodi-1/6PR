@@ -1,4 +1,4 @@
-package p024w;
+package w;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,291 +14,275 @@ import android.view.SubMenu;
 import android.view.View;
 import android.widget.FrameLayout;
 import java.lang.reflect.Method;
-import p012k.InterfaceMenuItemC0423b;
-import p016o.AbstractC0471c;
-import p023v.InterfaceC0587c;
 
-/* renamed from: w.d */
 /* loaded from: classes.dex */
-public class MenuItemC0601d extends AbstractC0599b<InterfaceMenuItemC0423b> implements MenuItem {
+public class d extends w.b<k.b> implements MenuItem {
 
-    /* renamed from: e */
-    private Method f2734e;
+    /* renamed from: e  reason: collision with root package name */
+    private Method f1982e;
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: w.d$a */
     /* loaded from: classes.dex */
-    public class C0602a extends AbstractC0471c {
+    public class a extends o.c {
 
-        /* renamed from: d */
-        final ActionProvider f2735d;
+        /* renamed from: d  reason: collision with root package name */
+        final ActionProvider f1983d;
 
-        public C0602a(Context context, ActionProvider actionProvider) {
+        public a(Context context, ActionProvider actionProvider) {
             super(context);
-            this.f2735d = actionProvider;
+            this.f1983d = actionProvider;
         }
 
-        @Override // p016o.AbstractC0471c
-        /* renamed from: a */
-        public boolean mo18a() {
-            return this.f2735d.hasSubMenu();
+        @Override // o.c
+        public boolean a() {
+            return this.f1983d.hasSubMenu();
         }
 
-        @Override // p016o.AbstractC0471c
-        /* renamed from: c */
-        public View mo17c() {
-            return this.f2735d.onCreateActionView();
+        @Override // o.c
+        public View c() {
+            return this.f1983d.onCreateActionView();
         }
 
-        @Override // p016o.AbstractC0471c
-        /* renamed from: e */
-        public boolean mo16e() {
-            return this.f2735d.onPerformDefaultAction();
+        @Override // o.c
+        public boolean e() {
+            return this.f1983d.onPerformDefaultAction();
         }
 
-        @Override // p016o.AbstractC0471c
-        /* renamed from: f */
-        public void mo15f(SubMenu subMenu) {
-            this.f2735d.onPrepareSubMenu(MenuItemC0601d.this.m23d(subMenu));
+        @Override // o.c
+        public void f(SubMenu subMenu) {
+            this.f1983d.onPrepareSubMenu(d.this.d(subMenu));
         }
     }
 
-    /* renamed from: w.d$b */
     /* loaded from: classes.dex */
-    static class C0603b extends FrameLayout implements InterfaceC0587c {
+    static class b extends FrameLayout implements v.c {
 
-        /* renamed from: b */
-        final CollapsibleActionView f2737b;
+        /* renamed from: b  reason: collision with root package name */
+        final CollapsibleActionView f1985b;
 
-        C0603b(View view) {
+        b(View view) {
             super(view.getContext());
-            this.f2737b = (CollapsibleActionView) view;
+            this.f1985b = (CollapsibleActionView) view;
             addView(view);
         }
 
-        @Override // p023v.InterfaceC0587c
-        /* renamed from: a */
-        public void mo14a() {
-            this.f2737b.onActionViewExpanded();
+        @Override // v.c
+        public void a() {
+            this.f1985b.onActionViewExpanded();
         }
 
-        /* renamed from: b */
-        View m13b() {
-            return (View) this.f2737b;
+        View b() {
+            return (View) this.f1985b;
         }
 
-        @Override // p023v.InterfaceC0587c
-        /* renamed from: d */
-        public void mo12d() {
-            this.f2737b.onActionViewCollapsed();
+        @Override // v.c
+        public void d() {
+            this.f1985b.onActionViewCollapsed();
         }
     }
 
-    /* renamed from: w.d$c */
     /* loaded from: classes.dex */
-    private class MenuItem$OnActionExpandListenerC0604c extends C0600c<MenuItem.OnActionExpandListener> implements MenuItem.OnActionExpandListener {
-        MenuItem$OnActionExpandListenerC0604c(MenuItem.OnActionExpandListener onActionExpandListener) {
+    private class c extends w.c<MenuItem.OnActionExpandListener> implements MenuItem.OnActionExpandListener {
+        c(MenuItem.OnActionExpandListener onActionExpandListener) {
             super(onActionExpandListener);
         }
 
         @Override // android.view.MenuItem.OnActionExpandListener
         public boolean onMenuItemActionCollapse(MenuItem menuItem) {
-            return ((MenuItem.OnActionExpandListener) this.f2733a).onMenuItemActionCollapse(MenuItemC0601d.this.m24c(menuItem));
+            return ((MenuItem.OnActionExpandListener) this.f1981a).onMenuItemActionCollapse(d.this.c(menuItem));
         }
 
         @Override // android.view.MenuItem.OnActionExpandListener
         public boolean onMenuItemActionExpand(MenuItem menuItem) {
-            return ((MenuItem.OnActionExpandListener) this.f2733a).onMenuItemActionExpand(MenuItemC0601d.this.m24c(menuItem));
+            return ((MenuItem.OnActionExpandListener) this.f1981a).onMenuItemActionExpand(d.this.c(menuItem));
         }
     }
 
-    /* renamed from: w.d$d */
+    /* renamed from: w.d$d  reason: collision with other inner class name */
     /* loaded from: classes.dex */
-    private class MenuItem$OnMenuItemClickListenerC0605d extends C0600c<MenuItem.OnMenuItemClickListener> implements MenuItem.OnMenuItemClickListener {
-        MenuItem$OnMenuItemClickListenerC0605d(MenuItem.OnMenuItemClickListener onMenuItemClickListener) {
+    private class MenuItem$OnMenuItemClickListenerC0025d extends w.c<MenuItem.OnMenuItemClickListener> implements MenuItem.OnMenuItemClickListener {
+        MenuItem$OnMenuItemClickListenerC0025d(MenuItem.OnMenuItemClickListener onMenuItemClickListener) {
             super(onMenuItemClickListener);
         }
 
         @Override // android.view.MenuItem.OnMenuItemClickListener
         public boolean onMenuItemClick(MenuItem menuItem) {
-            return ((MenuItem.OnMenuItemClickListener) this.f2733a).onMenuItemClick(MenuItemC0601d.this.m24c(menuItem));
+            return ((MenuItem.OnMenuItemClickListener) this.f1981a).onMenuItemClick(d.this.c(menuItem));
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public MenuItemC0601d(Context context, InterfaceMenuItemC0423b interfaceMenuItemC0423b) {
-        super(context, interfaceMenuItemC0423b);
+    public d(Context context, k.b bVar) {
+        super(context, bVar);
     }
 
     @Override // android.view.MenuItem
     public boolean collapseActionView() {
-        return ((InterfaceMenuItemC0423b) this.f2733a).collapseActionView();
+        return ((k.b) this.f1981a).collapseActionView();
     }
 
     @Override // android.view.MenuItem
     public boolean expandActionView() {
-        return ((InterfaceMenuItemC0423b) this.f2733a).expandActionView();
+        return ((k.b) this.f1981a).expandActionView();
     }
 
     @Override // android.view.MenuItem
     public ActionProvider getActionProvider() {
-        AbstractC0471c mo29b = ((InterfaceMenuItemC0423b) this.f2733a).mo29b();
-        if (mo29b instanceof C0602a) {
-            return ((C0602a) mo29b).f2735d;
+        o.c b2 = ((k.b) this.f1981a).b();
+        if (b2 instanceof a) {
+            return ((a) b2).f1983d;
         }
         return null;
     }
 
     @Override // android.view.MenuItem
     public View getActionView() {
-        View actionView = ((InterfaceMenuItemC0423b) this.f2733a).getActionView();
-        return actionView instanceof C0603b ? ((C0603b) actionView).m13b() : actionView;
+        View actionView = ((k.b) this.f1981a).getActionView();
+        return actionView instanceof b ? ((b) actionView).b() : actionView;
     }
 
     @Override // android.view.MenuItem
     public int getAlphabeticModifiers() {
-        return ((InterfaceMenuItemC0423b) this.f2733a).getAlphabeticModifiers();
+        return ((k.b) this.f1981a).getAlphabeticModifiers();
     }
 
     @Override // android.view.MenuItem
     public char getAlphabeticShortcut() {
-        return ((InterfaceMenuItemC0423b) this.f2733a).getAlphabeticShortcut();
+        return ((k.b) this.f1981a).getAlphabeticShortcut();
     }
 
     @Override // android.view.MenuItem
     public CharSequence getContentDescription() {
-        return ((InterfaceMenuItemC0423b) this.f2733a).getContentDescription();
+        return ((k.b) this.f1981a).getContentDescription();
     }
 
     @Override // android.view.MenuItem
     public int getGroupId() {
-        return ((InterfaceMenuItemC0423b) this.f2733a).getGroupId();
+        return ((k.b) this.f1981a).getGroupId();
     }
 
     @Override // android.view.MenuItem
     public Drawable getIcon() {
-        return ((InterfaceMenuItemC0423b) this.f2733a).getIcon();
+        return ((k.b) this.f1981a).getIcon();
     }
 
     @Override // android.view.MenuItem
     public ColorStateList getIconTintList() {
-        return ((InterfaceMenuItemC0423b) this.f2733a).getIconTintList();
+        return ((k.b) this.f1981a).getIconTintList();
     }
 
     @Override // android.view.MenuItem
     public PorterDuff.Mode getIconTintMode() {
-        return ((InterfaceMenuItemC0423b) this.f2733a).getIconTintMode();
+        return ((k.b) this.f1981a).getIconTintMode();
     }
 
     @Override // android.view.MenuItem
     public Intent getIntent() {
-        return ((InterfaceMenuItemC0423b) this.f2733a).getIntent();
+        return ((k.b) this.f1981a).getIntent();
     }
 
     @Override // android.view.MenuItem
     public int getItemId() {
-        return ((InterfaceMenuItemC0423b) this.f2733a).getItemId();
+        return ((k.b) this.f1981a).getItemId();
     }
 
     @Override // android.view.MenuItem
     public ContextMenu.ContextMenuInfo getMenuInfo() {
-        return ((InterfaceMenuItemC0423b) this.f2733a).getMenuInfo();
+        return ((k.b) this.f1981a).getMenuInfo();
     }
 
     @Override // android.view.MenuItem
     public int getNumericModifiers() {
-        return ((InterfaceMenuItemC0423b) this.f2733a).getNumericModifiers();
+        return ((k.b) this.f1981a).getNumericModifiers();
     }
 
     @Override // android.view.MenuItem
     public char getNumericShortcut() {
-        return ((InterfaceMenuItemC0423b) this.f2733a).getNumericShortcut();
+        return ((k.b) this.f1981a).getNumericShortcut();
     }
 
     @Override // android.view.MenuItem
     public int getOrder() {
-        return ((InterfaceMenuItemC0423b) this.f2733a).getOrder();
+        return ((k.b) this.f1981a).getOrder();
     }
 
     @Override // android.view.MenuItem
     public SubMenu getSubMenu() {
-        return m23d(((InterfaceMenuItemC0423b) this.f2733a).getSubMenu());
+        return d(((k.b) this.f1981a).getSubMenu());
     }
 
     @Override // android.view.MenuItem
     public CharSequence getTitle() {
-        return ((InterfaceMenuItemC0423b) this.f2733a).getTitle();
+        return ((k.b) this.f1981a).getTitle();
     }
 
     @Override // android.view.MenuItem
     public CharSequence getTitleCondensed() {
-        return ((InterfaceMenuItemC0423b) this.f2733a).getTitleCondensed();
+        return ((k.b) this.f1981a).getTitleCondensed();
     }
 
     @Override // android.view.MenuItem
     public CharSequence getTooltipText() {
-        return ((InterfaceMenuItemC0423b) this.f2733a).getTooltipText();
+        return ((k.b) this.f1981a).getTooltipText();
     }
 
-    /* renamed from: h */
-    C0602a mo11h(ActionProvider actionProvider) {
-        return new C0602a(this.f2730b, actionProvider);
+    a h(ActionProvider actionProvider) {
+        return new a(this.f1978b, actionProvider);
     }
 
     @Override // android.view.MenuItem
     public boolean hasSubMenu() {
-        return ((InterfaceMenuItemC0423b) this.f2733a).hasSubMenu();
+        return ((k.b) this.f1981a).hasSubMenu();
     }
 
-    /* renamed from: i */
-    public void m19i(boolean z) {
+    public void i(boolean z) {
         try {
-            if (this.f2734e == null) {
-                this.f2734e = ((InterfaceMenuItemC0423b) this.f2733a).getClass().getDeclaredMethod("setExclusiveCheckable", Boolean.TYPE);
+            if (this.f1982e == null) {
+                this.f1982e = ((k.b) this.f1981a).getClass().getDeclaredMethod("setExclusiveCheckable", Boolean.TYPE);
             }
-            this.f2734e.invoke(this.f2733a, Boolean.valueOf(z));
-        } catch (Exception e) {
-            Log.w("MenuItemWrapper", "Error while calling setExclusiveCheckable", e);
+            this.f1982e.invoke(this.f1981a, Boolean.valueOf(z));
+        } catch (Exception e2) {
+            Log.w("MenuItemWrapper", "Error while calling setExclusiveCheckable", e2);
         }
     }
 
     @Override // android.view.MenuItem
     public boolean isActionViewExpanded() {
-        return ((InterfaceMenuItemC0423b) this.f2733a).isActionViewExpanded();
+        return ((k.b) this.f1981a).isActionViewExpanded();
     }
 
     @Override // android.view.MenuItem
     public boolean isCheckable() {
-        return ((InterfaceMenuItemC0423b) this.f2733a).isCheckable();
+        return ((k.b) this.f1981a).isCheckable();
     }
 
     @Override // android.view.MenuItem
     public boolean isChecked() {
-        return ((InterfaceMenuItemC0423b) this.f2733a).isChecked();
+        return ((k.b) this.f1981a).isChecked();
     }
 
     @Override // android.view.MenuItem
     public boolean isEnabled() {
-        return ((InterfaceMenuItemC0423b) this.f2733a).isEnabled();
+        return ((k.b) this.f1981a).isEnabled();
     }
 
     @Override // android.view.MenuItem
     public boolean isVisible() {
-        return ((InterfaceMenuItemC0423b) this.f2733a).isVisible();
+        return ((k.b) this.f1981a).isVisible();
     }
 
     @Override // android.view.MenuItem
     public MenuItem setActionProvider(ActionProvider actionProvider) {
-        ((InterfaceMenuItemC0423b) this.f2733a).mo30a(actionProvider != null ? mo11h(actionProvider) : null);
+        ((k.b) this.f1981a).a(actionProvider != null ? h(actionProvider) : null);
         return this;
     }
 
     @Override // android.view.MenuItem
-    public MenuItem setActionView(int i) {
-        ((InterfaceMenuItemC0423b) this.f2733a).setActionView(i);
-        View actionView = ((InterfaceMenuItemC0423b) this.f2733a).getActionView();
+    public MenuItem setActionView(int i2) {
+        ((k.b) this.f1981a).setActionView(i2);
+        View actionView = ((k.b) this.f1981a).getActionView();
         if (actionView instanceof CollapsibleActionView) {
-            ((InterfaceMenuItemC0423b) this.f2733a).setActionView(new C0603b(actionView));
+            ((k.b) this.f1981a).setActionView(new b(actionView));
         }
         return this;
     }
@@ -306,151 +290,151 @@ public class MenuItemC0601d extends AbstractC0599b<InterfaceMenuItemC0423b> impl
     @Override // android.view.MenuItem
     public MenuItem setActionView(View view) {
         if (view instanceof CollapsibleActionView) {
-            view = new C0603b(view);
+            view = new b(view);
         }
-        ((InterfaceMenuItemC0423b) this.f2733a).setActionView(view);
+        ((k.b) this.f1981a).setActionView(view);
         return this;
     }
 
     @Override // android.view.MenuItem
-    public MenuItem setAlphabeticShortcut(char c) {
-        ((InterfaceMenuItemC0423b) this.f2733a).setAlphabeticShortcut(c);
+    public MenuItem setAlphabeticShortcut(char c2) {
+        ((k.b) this.f1981a).setAlphabeticShortcut(c2);
         return this;
     }
 
     @Override // android.view.MenuItem
-    public MenuItem setAlphabeticShortcut(char c, int i) {
-        ((InterfaceMenuItemC0423b) this.f2733a).setAlphabeticShortcut(c, i);
+    public MenuItem setAlphabeticShortcut(char c2, int i2) {
+        ((k.b) this.f1981a).setAlphabeticShortcut(c2, i2);
         return this;
     }
 
     @Override // android.view.MenuItem
     public MenuItem setCheckable(boolean z) {
-        ((InterfaceMenuItemC0423b) this.f2733a).setCheckable(z);
+        ((k.b) this.f1981a).setCheckable(z);
         return this;
     }
 
     @Override // android.view.MenuItem
     public MenuItem setChecked(boolean z) {
-        ((InterfaceMenuItemC0423b) this.f2733a).setChecked(z);
+        ((k.b) this.f1981a).setChecked(z);
         return this;
     }
 
     @Override // android.view.MenuItem
     public MenuItem setContentDescription(CharSequence charSequence) {
-        ((InterfaceMenuItemC0423b) this.f2733a).setContentDescription(charSequence);
+        ((k.b) this.f1981a).setContentDescription(charSequence);
         return this;
     }
 
     @Override // android.view.MenuItem
     public MenuItem setEnabled(boolean z) {
-        ((InterfaceMenuItemC0423b) this.f2733a).setEnabled(z);
+        ((k.b) this.f1981a).setEnabled(z);
         return this;
     }
 
     @Override // android.view.MenuItem
-    public MenuItem setIcon(int i) {
-        ((InterfaceMenuItemC0423b) this.f2733a).setIcon(i);
+    public MenuItem setIcon(int i2) {
+        ((k.b) this.f1981a).setIcon(i2);
         return this;
     }
 
     @Override // android.view.MenuItem
     public MenuItem setIcon(Drawable drawable) {
-        ((InterfaceMenuItemC0423b) this.f2733a).setIcon(drawable);
+        ((k.b) this.f1981a).setIcon(drawable);
         return this;
     }
 
     @Override // android.view.MenuItem
     public MenuItem setIconTintList(ColorStateList colorStateList) {
-        ((InterfaceMenuItemC0423b) this.f2733a).setIconTintList(colorStateList);
+        ((k.b) this.f1981a).setIconTintList(colorStateList);
         return this;
     }
 
     @Override // android.view.MenuItem
     public MenuItem setIconTintMode(PorterDuff.Mode mode) {
-        ((InterfaceMenuItemC0423b) this.f2733a).setIconTintMode(mode);
+        ((k.b) this.f1981a).setIconTintMode(mode);
         return this;
     }
 
     @Override // android.view.MenuItem
     public MenuItem setIntent(Intent intent) {
-        ((InterfaceMenuItemC0423b) this.f2733a).setIntent(intent);
+        ((k.b) this.f1981a).setIntent(intent);
         return this;
     }
 
     @Override // android.view.MenuItem
-    public MenuItem setNumericShortcut(char c) {
-        ((InterfaceMenuItemC0423b) this.f2733a).setNumericShortcut(c);
+    public MenuItem setNumericShortcut(char c2) {
+        ((k.b) this.f1981a).setNumericShortcut(c2);
         return this;
     }
 
     @Override // android.view.MenuItem
-    public MenuItem setNumericShortcut(char c, int i) {
-        ((InterfaceMenuItemC0423b) this.f2733a).setNumericShortcut(c, i);
+    public MenuItem setNumericShortcut(char c2, int i2) {
+        ((k.b) this.f1981a).setNumericShortcut(c2, i2);
         return this;
     }
 
     @Override // android.view.MenuItem
     public MenuItem setOnActionExpandListener(MenuItem.OnActionExpandListener onActionExpandListener) {
-        ((InterfaceMenuItemC0423b) this.f2733a).setOnActionExpandListener(onActionExpandListener != null ? new MenuItem$OnActionExpandListenerC0604c(onActionExpandListener) : null);
+        ((k.b) this.f1981a).setOnActionExpandListener(onActionExpandListener != null ? new c(onActionExpandListener) : null);
         return this;
     }
 
     @Override // android.view.MenuItem
     public MenuItem setOnMenuItemClickListener(MenuItem.OnMenuItemClickListener onMenuItemClickListener) {
-        ((InterfaceMenuItemC0423b) this.f2733a).setOnMenuItemClickListener(onMenuItemClickListener != null ? new MenuItem$OnMenuItemClickListenerC0605d(onMenuItemClickListener) : null);
+        ((k.b) this.f1981a).setOnMenuItemClickListener(onMenuItemClickListener != null ? new MenuItem$OnMenuItemClickListenerC0025d(onMenuItemClickListener) : null);
         return this;
     }
 
     @Override // android.view.MenuItem
-    public MenuItem setShortcut(char c, char c2) {
-        ((InterfaceMenuItemC0423b) this.f2733a).setShortcut(c, c2);
+    public MenuItem setShortcut(char c2, char c3) {
+        ((k.b) this.f1981a).setShortcut(c2, c3);
         return this;
     }
 
     @Override // android.view.MenuItem
-    public MenuItem setShortcut(char c, char c2, int i, int i2) {
-        ((InterfaceMenuItemC0423b) this.f2733a).setShortcut(c, c2, i, i2);
+    public MenuItem setShortcut(char c2, char c3, int i2, int i3) {
+        ((k.b) this.f1981a).setShortcut(c2, c3, i2, i3);
         return this;
     }
 
     @Override // android.view.MenuItem
-    public void setShowAsAction(int i) {
-        ((InterfaceMenuItemC0423b) this.f2733a).setShowAsAction(i);
+    public void setShowAsAction(int i2) {
+        ((k.b) this.f1981a).setShowAsAction(i2);
     }
 
     @Override // android.view.MenuItem
-    public MenuItem setShowAsActionFlags(int i) {
-        ((InterfaceMenuItemC0423b) this.f2733a).setShowAsActionFlags(i);
+    public MenuItem setShowAsActionFlags(int i2) {
+        ((k.b) this.f1981a).setShowAsActionFlags(i2);
         return this;
     }
 
     @Override // android.view.MenuItem
-    public MenuItem setTitle(int i) {
-        ((InterfaceMenuItemC0423b) this.f2733a).setTitle(i);
+    public MenuItem setTitle(int i2) {
+        ((k.b) this.f1981a).setTitle(i2);
         return this;
     }
 
     @Override // android.view.MenuItem
     public MenuItem setTitle(CharSequence charSequence) {
-        ((InterfaceMenuItemC0423b) this.f2733a).setTitle(charSequence);
+        ((k.b) this.f1981a).setTitle(charSequence);
         return this;
     }
 
     @Override // android.view.MenuItem
     public MenuItem setTitleCondensed(CharSequence charSequence) {
-        ((InterfaceMenuItemC0423b) this.f2733a).setTitleCondensed(charSequence);
+        ((k.b) this.f1981a).setTitleCondensed(charSequence);
         return this;
     }
 
     @Override // android.view.MenuItem
     public MenuItem setTooltipText(CharSequence charSequence) {
-        ((InterfaceMenuItemC0423b) this.f2733a).setTooltipText(charSequence);
+        ((k.b) this.f1981a).setTooltipText(charSequence);
         return this;
     }
 
     @Override // android.view.MenuItem
     public MenuItem setVisible(boolean z) {
-        return ((InterfaceMenuItemC0423b) this.f2733a).setVisible(z);
+        return ((k.b) this.f1981a).setVisible(z);
     }
 }

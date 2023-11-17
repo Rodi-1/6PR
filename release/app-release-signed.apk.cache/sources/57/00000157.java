@@ -1,4 +1,4 @@
-package android.support.p002v7.widget;
+package android.support.v7.widget;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapShader;
@@ -13,59 +13,55 @@ import android.graphics.drawable.shapes.RoundRectShape;
 import android.graphics.drawable.shapes.Shape;
 import android.util.AttributeSet;
 import android.widget.ProgressBar;
-import p011j.InterfaceC0415c;
 
-/* renamed from: android.support.v7.widget.s */
 /* loaded from: classes.dex */
-class C0309s {
+class s {
 
-    /* renamed from: c */
-    private static final int[] f1489c = {16843067, 16843068};
+    /* renamed from: c  reason: collision with root package name */
+    private static final int[] f1181c = {16843067, 16843068};
 
-    /* renamed from: a */
-    private final ProgressBar f1490a;
+    /* renamed from: a  reason: collision with root package name */
+    private final ProgressBar f1182a;
 
-    /* renamed from: b */
-    private Bitmap f1491b;
+    /* renamed from: b  reason: collision with root package name */
+    private Bitmap f1183b;
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public C0309s(ProgressBar progressBar) {
-        this.f1490a = progressBar;
+    public s(ProgressBar progressBar) {
+        this.f1182a = progressBar;
     }
 
-    /* renamed from: a */
-    private Shape m1134a() {
+    private Shape a() {
         return new RoundRectShape(new float[]{5.0f, 5.0f, 5.0f, 5.0f, 5.0f, 5.0f, 5.0f, 5.0f}, null, null);
     }
 
-    /* renamed from: d */
-    private Drawable m1132d(Drawable drawable, boolean z) {
-        if (drawable instanceof InterfaceC0415c) {
-            InterfaceC0415c interfaceC0415c = (InterfaceC0415c) drawable;
-            Drawable mo617a = interfaceC0415c.mo617a();
-            if (mo617a != null) {
-                interfaceC0415c.mo616b(m1132d(mo617a, z));
+    private Drawable d(Drawable drawable, boolean z) {
+        if (drawable instanceof j.c) {
+            j.c cVar = (j.c) drawable;
+            Drawable a2 = cVar.a();
+            if (a2 != null) {
+                cVar.b(d(a2, z));
             }
         } else if (drawable instanceof LayerDrawable) {
             LayerDrawable layerDrawable = (LayerDrawable) drawable;
             int numberOfLayers = layerDrawable.getNumberOfLayers();
             Drawable[] drawableArr = new Drawable[numberOfLayers];
-            for (int i = 0; i < numberOfLayers; i++) {
-                int id = layerDrawable.getId(i);
-                drawableArr[i] = m1132d(layerDrawable.getDrawable(i), id == 16908301 || id == 16908303);
+            for (int i2 = 0; i2 < numberOfLayers; i2++) {
+                int id = layerDrawable.getId(i2);
+                drawableArr[i2] = d(layerDrawable.getDrawable(i2), id == 16908301 || id == 16908303);
             }
             LayerDrawable layerDrawable2 = new LayerDrawable(drawableArr);
-            for (int i2 = 0; i2 < numberOfLayers; i2++) {
-                layerDrawable2.setId(i2, layerDrawable.getId(i2));
+            for (int i3 = 0; i3 < numberOfLayers; i3++) {
+                layerDrawable2.setId(i3, layerDrawable.getId(i3));
             }
             return layerDrawable2;
         } else if (drawable instanceof BitmapDrawable) {
             BitmapDrawable bitmapDrawable = (BitmapDrawable) drawable;
             Bitmap bitmap = bitmapDrawable.getBitmap();
-            if (this.f1491b == null) {
-                this.f1491b = bitmap;
+            if (this.f1183b == null) {
+                this.f1183b = bitmap;
             }
-            ShapeDrawable shapeDrawable = new ShapeDrawable(m1134a());
+            ShapeDrawable shapeDrawable = new ShapeDrawable(a());
             shapeDrawable.getPaint().setShader(new BitmapShader(bitmap, Shader.TileMode.REPEAT, Shader.TileMode.CLAMP));
             shapeDrawable.getPaint().setColorFilter(bitmapDrawable.getPaint().getColorFilter());
             return z ? new ClipDrawable(shapeDrawable, 3, 1) : shapeDrawable;
@@ -73,17 +69,16 @@ class C0309s {
         return drawable;
     }
 
-    /* renamed from: e */
-    private Drawable m1131e(Drawable drawable) {
+    private Drawable e(Drawable drawable) {
         if (drawable instanceof AnimationDrawable) {
             AnimationDrawable animationDrawable = (AnimationDrawable) drawable;
             int numberOfFrames = animationDrawable.getNumberOfFrames();
             AnimationDrawable animationDrawable2 = new AnimationDrawable();
             animationDrawable2.setOneShot(animationDrawable.isOneShot());
-            for (int i = 0; i < numberOfFrames; i++) {
-                Drawable m1132d = m1132d(animationDrawable.getFrame(i), true);
-                m1132d.setLevel(10000);
-                animationDrawable2.addFrame(m1132d, animationDrawable.getDuration(i));
+            for (int i2 = 0; i2 < numberOfFrames; i2++) {
+                Drawable d2 = d(animationDrawable.getFrame(i2), true);
+                d2.setLevel(10000);
+                animationDrawable2.addFrame(d2, animationDrawable.getDuration(i2));
             }
             animationDrawable2.setLevel(10000);
             return animationDrawable2;
@@ -92,23 +87,21 @@ class C0309s {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: b */
-    public Bitmap m1133b() {
-        return this.f1491b;
+    public Bitmap b() {
+        return this.f1183b;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: c */
-    public void mo1106c(AttributeSet attributeSet, int i) {
-        C0316v0 m1108t = C0316v0.m1108t(this.f1490a.getContext(), attributeSet, f1489c, i, 0);
-        Drawable m1121g = m1108t.m1121g(0);
-        if (m1121g != null) {
-            this.f1490a.setIndeterminateDrawable(m1131e(m1121g));
+    public void c(AttributeSet attributeSet, int i2) {
+        v0 t2 = v0.t(this.f1182a.getContext(), attributeSet, f1181c, i2, 0);
+        Drawable g2 = t2.g(0);
+        if (g2 != null) {
+            this.f1182a.setIndeterminateDrawable(e(g2));
         }
-        Drawable m1121g2 = m1108t.m1121g(1);
-        if (m1121g2 != null) {
-            this.f1490a.setProgressDrawable(m1132d(m1121g2, false));
+        Drawable g3 = t2.g(1);
+        if (g3 != null) {
+            this.f1182a.setProgressDrawable(d(g3, false));
         }
-        m1108t.m1107u();
+        t2.u();
     }
 }

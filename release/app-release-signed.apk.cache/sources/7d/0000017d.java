@@ -1,57 +1,53 @@
-package p005d;
+package d;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.constraint.AbstractC0030a;
 import android.util.AttributeSet;
-import p007f.C0362b;
 
-/* renamed from: d.a */
 /* loaded from: classes.dex */
-public class C0347a extends AbstractC0030a {
+public class a extends android.support.constraint.a {
 
-    /* renamed from: h */
-    private int f1623h;
+    /* renamed from: h  reason: collision with root package name */
+    private int f1311h;
 
-    /* renamed from: i */
-    private int f1624i;
+    /* renamed from: i  reason: collision with root package name */
+    private int f1312i;
 
-    /* renamed from: j */
-    private C0362b f1625j;
+    /* renamed from: j  reason: collision with root package name */
+    private f.b f1313j;
 
-    public C0347a(Context context) {
+    public a(Context context) {
         super(context);
         super.setVisibility(8);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // android.support.constraint.AbstractC0030a
-    /* renamed from: b */
-    public void mo1001b(AttributeSet attributeSet) {
-        super.mo1001b(attributeSet);
-        this.f1625j = new C0362b();
+    @Override // android.support.constraint.a
+    public void b(AttributeSet attributeSet) {
+        super.b(attributeSet);
+        this.f1313j = new f.b();
         if (attributeSet != null) {
-            TypedArray obtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, C0349c.f1685a);
+            TypedArray obtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, c.f1314a);
             int indexCount = obtainStyledAttributes.getIndexCount();
-            for (int i = 0; i < indexCount; i++) {
-                int index = obtainStyledAttributes.getIndex(i);
-                if (index == C0349c.f1706h) {
+            for (int i2 = 0; i2 < indexCount; i2++) {
+                int index = obtainStyledAttributes.getIndex(i2);
+                if (index == c.f1321h) {
                     setType(obtainStyledAttributes.getInt(index, 0));
-                } else if (index == C0349c.f1703g) {
-                    this.f1625j.m908K0(obtainStyledAttributes.getBoolean(index, true));
+                } else if (index == c.f1320g) {
+                    this.f1313j.K0(obtainStyledAttributes.getBoolean(index, true));
                 }
             }
         }
-        this.f137e = this.f1625j;
-        m2329f();
+        this.f95e = this.f1313j;
+        f();
     }
 
     public int getType() {
-        return this.f1623h;
+        return this.f1311h;
     }
 
     public void setAllowsGoneWidget(boolean z) {
-        this.f1625j.m908K0(z);
+        this.f1313j.K0(z);
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:11:0x0022, code lost:
@@ -67,8 +63,8 @@ public class C0347a extends AbstractC0030a {
     public void setType(int r5) {
         /*
             r4 = this;
-            r4.f1623h = r5
-            r4.f1624i = r5
+            r4.f1311h = r5
+            r4.f1312i = r5
             android.content.res.Resources r5 = r4.getResources()
             android.content.res.Configuration r5 = r5.getConfiguration()
             int r5 = r5.getLayoutDirection()
@@ -83,29 +79,29 @@ public class C0347a extends AbstractC0030a {
             r2 = 6
             r3 = 5
             if (r5 == 0) goto L25
-            int r5 = r4.f1623h
+            int r5 = r4.f1311h
             if (r5 != r3) goto L22
         L1f:
-            r4.f1624i = r1
+            r4.f1312i = r1
             goto L2f
         L22:
             if (r5 != r2) goto L2f
             goto L29
         L25:
-            int r5 = r4.f1623h
+            int r5 = r4.f1311h
             if (r5 != r3) goto L2c
         L29:
-            r4.f1624i = r0
+            r4.f1312i = r0
             goto L2f
         L2c:
             if (r5 != r2) goto L2f
             goto L1f
         L2f:
-            f.b r5 = r4.f1625j
-            int r0 = r4.f1624i
-            r5.m907L0(r0)
+            f.b r5 = r4.f1313j
+            int r0 = r4.f1312i
+            r5.L0(r0)
             return
         */
-        throw new UnsupportedOperationException("Method not decompiled: p005d.C0347a.setType(int):void");
+        throw new UnsupportedOperationException("Method not decompiled: d.a.setType(int):void");
     }
 }

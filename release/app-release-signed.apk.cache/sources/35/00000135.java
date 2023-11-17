@@ -1,4 +1,4 @@
-package android.support.p002v7.widget;
+package android.support.v7.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -6,7 +6,6 @@ import android.database.DataSetObserver;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.Handler;
-import android.support.p001v4.widget.C0157j;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -19,153 +18,119 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 import java.lang.reflect.Method;
-import p016o.C0490o;
-import p020s.C0578j;
-import p024w.InterfaceC0610h;
 
-/* renamed from: android.support.v7.widget.j0 */
 /* loaded from: classes.dex */
-public class C0275j0 implements InterfaceC0610h {
+public class j0 implements w.h {
+    private static Method I;
+    private static Method J;
+    private static Method K;
+    private final e A;
+    private final c B;
+    private Runnable C;
+    final Handler D;
+    private final Rect E;
+    private Rect F;
+    private boolean G;
+    PopupWindow H;
 
-    /* renamed from: I */
-    private static Method f1350I;
+    /* renamed from: b  reason: collision with root package name */
+    private Context f1062b;
 
-    /* renamed from: J */
-    private static Method f1351J;
+    /* renamed from: c  reason: collision with root package name */
+    private ListAdapter f1063c;
 
-    /* renamed from: K */
-    private static Method f1352K;
+    /* renamed from: d  reason: collision with root package name */
+    f0 f1064d;
 
-    /* renamed from: A */
-    private final C0280e f1353A;
+    /* renamed from: e  reason: collision with root package name */
+    private int f1065e;
 
-    /* renamed from: B */
-    private final RunnableC0278c f1354B;
+    /* renamed from: f  reason: collision with root package name */
+    private int f1066f;
 
-    /* renamed from: C */
-    private Runnable f1355C;
+    /* renamed from: g  reason: collision with root package name */
+    private int f1067g;
 
-    /* renamed from: D */
-    final Handler f1356D;
+    /* renamed from: h  reason: collision with root package name */
+    private int f1068h;
 
-    /* renamed from: E */
-    private final Rect f1357E;
+    /* renamed from: i  reason: collision with root package name */
+    private int f1069i;
 
-    /* renamed from: F */
-    private Rect f1358F;
+    /* renamed from: j  reason: collision with root package name */
+    private boolean f1070j;
 
-    /* renamed from: G */
-    private boolean f1359G;
+    /* renamed from: k  reason: collision with root package name */
+    private boolean f1071k;
 
-    /* renamed from: H */
-    PopupWindow f1360H;
+    /* renamed from: l  reason: collision with root package name */
+    private boolean f1072l;
 
-    /* renamed from: b */
-    private Context f1361b;
+    /* renamed from: m  reason: collision with root package name */
+    private boolean f1073m;
 
-    /* renamed from: c */
-    private ListAdapter f1362c;
+    /* renamed from: n  reason: collision with root package name */
+    private int f1074n;
 
-    /* renamed from: d */
-    C0260f0 f1363d;
+    /* renamed from: o  reason: collision with root package name */
+    private boolean f1075o;
 
-    /* renamed from: e */
-    private int f1364e;
+    /* renamed from: p  reason: collision with root package name */
+    private boolean f1076p;
 
-    /* renamed from: f */
-    private int f1365f;
+    /* renamed from: q  reason: collision with root package name */
+    int f1077q;
 
-    /* renamed from: g */
-    private int f1366g;
+    /* renamed from: r  reason: collision with root package name */
+    private View f1078r;
 
-    /* renamed from: h */
-    private int f1367h;
+    /* renamed from: s  reason: collision with root package name */
+    private int f1079s;
 
-    /* renamed from: i */
-    private int f1368i;
+    /* renamed from: t  reason: collision with root package name */
+    private DataSetObserver f1080t;
 
-    /* renamed from: j */
-    private boolean f1369j;
+    /* renamed from: u  reason: collision with root package name */
+    private View f1081u;
 
-    /* renamed from: k */
-    private boolean f1370k;
+    /* renamed from: v  reason: collision with root package name */
+    private Drawable f1082v;
 
-    /* renamed from: l */
-    private boolean f1371l;
-
-    /* renamed from: m */
-    private boolean f1372m;
-
-    /* renamed from: n */
-    private int f1373n;
-
-    /* renamed from: o */
-    private boolean f1374o;
-
-    /* renamed from: p */
-    private boolean f1375p;
-
-    /* renamed from: q */
-    int f1376q;
-
-    /* renamed from: r */
-    private View f1377r;
-
-    /* renamed from: s */
-    private int f1378s;
-
-    /* renamed from: t */
-    private DataSetObserver f1379t;
-
-    /* renamed from: u */
-    private View f1380u;
-
-    /* renamed from: v */
-    private Drawable f1381v;
-
-    /* renamed from: w */
-    private AdapterView.OnItemClickListener f1382w;
-
-    /* renamed from: x */
-    private AdapterView.OnItemSelectedListener f1383x;
-
-    /* renamed from: y */
-    final RunnableC0282g f1384y;
-
-    /* renamed from: z */
-    private final View$OnTouchListenerC0281f f1385z;
+    /* renamed from: w  reason: collision with root package name */
+    private AdapterView.OnItemClickListener f1083w;
+    private AdapterView.OnItemSelectedListener x;
+    final g y;
+    private final f z;
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: android.support.v7.widget.j0$a */
     /* loaded from: classes.dex */
-    public class RunnableC0276a implements Runnable {
-        RunnableC0276a() {
+    public class a implements Runnable {
+        a() {
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            View m1248i = C0275j0.this.m1248i();
-            if (m1248i == null || m1248i.getWindowToken() == null) {
+            View i2 = j0.this.i();
+            if (i2 == null || i2.getWindowToken() == null) {
                 return;
             }
-            C0275j0.this.mo1f();
+            j0.this.f();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: android.support.v7.widget.j0$b */
     /* loaded from: classes.dex */
-    public class C0277b implements AdapterView.OnItemSelectedListener {
-        C0277b() {
+    public class b implements AdapterView.OnItemSelectedListener {
+        b() {
         }
 
         @Override // android.widget.AdapterView.OnItemSelectedListener
-        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long j) {
-            C0260f0 c0260f0;
-            if (i == -1 || (c0260f0 = C0275j0.this.f1363d) == null) {
+        public void onItemSelected(AdapterView<?> adapterView, View view, int i2, long j2) {
+            f0 f0Var;
+            if (i2 == -1 || (f0Var = j0.this.f1064d) == null) {
                 return;
             }
-            c0260f0.setListSelectionHidden(false);
+            f0Var.setListSelectionHidden(false);
         }
 
         @Override // android.widget.AdapterView.OnItemSelectedListener
@@ -174,65 +139,61 @@ public class C0275j0 implements InterfaceC0610h {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: android.support.v7.widget.j0$c */
     /* loaded from: classes.dex */
-    public class RunnableC0278c implements Runnable {
-        RunnableC0278c() {
+    public class c implements Runnable {
+        c() {
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            C0275j0.this.m1249g();
+            j0.this.g();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: android.support.v7.widget.j0$d */
     /* loaded from: classes.dex */
-    public class C0279d extends DataSetObserver {
-        C0279d() {
+    public class d extends DataSetObserver {
+        d() {
         }
 
         @Override // android.database.DataSetObserver
         public void onChanged() {
-            if (C0275j0.this.mo3c()) {
-                C0275j0.this.mo1f();
+            if (j0.this.c()) {
+                j0.this.f();
             }
         }
 
         @Override // android.database.DataSetObserver
         public void onInvalidated() {
-            C0275j0.this.dismiss();
+            j0.this.dismiss();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: android.support.v7.widget.j0$e */
     /* loaded from: classes.dex */
-    public class C0280e implements AbsListView.OnScrollListener {
-        C0280e() {
+    public class e implements AbsListView.OnScrollListener {
+        e() {
         }
 
         @Override // android.widget.AbsListView.OnScrollListener
-        public void onScroll(AbsListView absListView, int i, int i2, int i3) {
+        public void onScroll(AbsListView absListView, int i2, int i3, int i4) {
         }
 
         @Override // android.widget.AbsListView.OnScrollListener
-        public void onScrollStateChanged(AbsListView absListView, int i) {
-            if (i != 1 || C0275j0.this.m1242o() || C0275j0.this.f1360H.getContentView() == null) {
+        public void onScrollStateChanged(AbsListView absListView, int i2) {
+            if (i2 != 1 || j0.this.o() || j0.this.H.getContentView() == null) {
                 return;
             }
-            C0275j0 c0275j0 = C0275j0.this;
-            c0275j0.f1356D.removeCallbacks(c0275j0.f1384y);
-            C0275j0.this.f1384y.run();
+            j0 j0Var = j0.this;
+            j0Var.D.removeCallbacks(j0Var.y);
+            j0.this.y.run();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: android.support.v7.widget.j0$f */
     /* loaded from: classes.dex */
-    public class View$OnTouchListenerC0281f implements View.OnTouchListener {
-        View$OnTouchListenerC0281f() {
+    public class f implements View.OnTouchListener {
+        f() {
         }
 
         @Override // android.view.View.OnTouchListener
@@ -241,13 +202,13 @@ public class C0275j0 implements InterfaceC0610h {
             int action = motionEvent.getAction();
             int x = (int) motionEvent.getX();
             int y = (int) motionEvent.getY();
-            if (action == 0 && (popupWindow = C0275j0.this.f1360H) != null && popupWindow.isShowing() && x >= 0 && x < C0275j0.this.f1360H.getWidth() && y >= 0 && y < C0275j0.this.f1360H.getHeight()) {
-                C0275j0 c0275j0 = C0275j0.this;
-                c0275j0.f1356D.postDelayed(c0275j0.f1384y, 250L);
+            if (action == 0 && (popupWindow = j0.this.H) != null && popupWindow.isShowing() && x >= 0 && x < j0.this.H.getWidth() && y >= 0 && y < j0.this.H.getHeight()) {
+                j0 j0Var = j0.this;
+                j0Var.D.postDelayed(j0Var.y, 250L);
                 return false;
             } else if (action == 1) {
-                C0275j0 c0275j02 = C0275j0.this;
-                c0275j02.f1356D.removeCallbacks(c0275j02.f1384y);
+                j0 j0Var2 = j0.this;
+                j0Var2.D.removeCallbacks(j0Var2.y);
                 return false;
             } else {
                 return false;
@@ -256,85 +217,83 @@ public class C0275j0 implements InterfaceC0610h {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: android.support.v7.widget.j0$g */
     /* loaded from: classes.dex */
-    public class RunnableC0282g implements Runnable {
-        RunnableC0282g() {
+    public class g implements Runnable {
+        g() {
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            C0260f0 c0260f0 = C0275j0.this.f1363d;
-            if (c0260f0 == null || !C0490o.m402j(c0260f0) || C0275j0.this.f1363d.getCount() <= C0275j0.this.f1363d.getChildCount()) {
+            f0 f0Var = j0.this.f1064d;
+            if (f0Var == null || !o.o.j(f0Var) || j0.this.f1064d.getCount() <= j0.this.f1064d.getChildCount()) {
                 return;
             }
-            int childCount = C0275j0.this.f1363d.getChildCount();
-            C0275j0 c0275j0 = C0275j0.this;
-            if (childCount <= c0275j0.f1376q) {
-                c0275j0.f1360H.setInputMethodMode(2);
-                C0275j0.this.mo1f();
+            int childCount = j0.this.f1064d.getChildCount();
+            j0 j0Var = j0.this;
+            if (childCount <= j0Var.f1077q) {
+                j0Var.H.setInputMethodMode(2);
+                j0.this.f();
             }
         }
     }
 
     static {
         try {
-            f1350I = PopupWindow.class.getDeclaredMethod("setClipToScreenEnabled", Boolean.TYPE);
+            I = PopupWindow.class.getDeclaredMethod("setClipToScreenEnabled", Boolean.TYPE);
         } catch (NoSuchMethodException unused) {
             Log.i("ListPopupWindow", "Could not find method setClipToScreenEnabled() on PopupWindow. Oh well.");
         }
         try {
-            f1351J = PopupWindow.class.getDeclaredMethod("getMaxAvailableHeight", View.class, Integer.TYPE, Boolean.TYPE);
+            J = PopupWindow.class.getDeclaredMethod("getMaxAvailableHeight", View.class, Integer.TYPE, Boolean.TYPE);
         } catch (NoSuchMethodException unused2) {
             Log.i("ListPopupWindow", "Could not find method getMaxAvailableHeight(View, int, boolean) on PopupWindow. Oh well.");
         }
         try {
-            f1352K = PopupWindow.class.getDeclaredMethod("setEpicenterBounds", Rect.class);
+            K = PopupWindow.class.getDeclaredMethod("setEpicenterBounds", Rect.class);
         } catch (NoSuchMethodException unused3) {
             Log.i("ListPopupWindow", "Could not find method setEpicenterBounds(Rect) on PopupWindow. Oh well.");
         }
     }
 
-    public C0275j0(Context context, AttributeSet attributeSet, int i) {
-        this(context, attributeSet, i, 0);
+    public j0(Context context, AttributeSet attributeSet, int i2) {
+        this(context, attributeSet, i2, 0);
     }
 
-    public C0275j0(Context context, AttributeSet attributeSet, int i, int i2) {
-        this.f1364e = -2;
-        this.f1365f = -2;
-        this.f1368i = 1002;
-        this.f1370k = true;
-        this.f1373n = 0;
-        this.f1374o = false;
-        this.f1375p = false;
-        this.f1376q = Integer.MAX_VALUE;
-        this.f1378s = 0;
-        this.f1384y = new RunnableC0282g();
-        this.f1385z = new View$OnTouchListenerC0281f();
-        this.f1353A = new C0280e();
-        this.f1354B = new RunnableC0278c();
-        this.f1357E = new Rect();
-        this.f1361b = context;
-        this.f1356D = new Handler(context.getMainLooper());
-        TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C0578j.f2532b1, i, i2);
-        this.f1366g = obtainStyledAttributes.getDimensionPixelOffset(C0578j.f2536c1, 0);
-        int dimensionPixelOffset = obtainStyledAttributes.getDimensionPixelOffset(C0578j.f2540d1, 0);
-        this.f1367h = dimensionPixelOffset;
+    public j0(Context context, AttributeSet attributeSet, int i2, int i3) {
+        this.f1065e = -2;
+        this.f1066f = -2;
+        this.f1069i = 1002;
+        this.f1071k = true;
+        this.f1074n = 0;
+        this.f1075o = false;
+        this.f1076p = false;
+        this.f1077q = Integer.MAX_VALUE;
+        this.f1079s = 0;
+        this.y = new g();
+        this.z = new f();
+        this.A = new e();
+        this.B = new c();
+        this.E = new Rect();
+        this.f1062b = context;
+        this.D = new Handler(context.getMainLooper());
+        TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, s.j.b1, i2, i3);
+        this.f1067g = obtainStyledAttributes.getDimensionPixelOffset(s.j.c1, 0);
+        int dimensionPixelOffset = obtainStyledAttributes.getDimensionPixelOffset(s.j.d1, 0);
+        this.f1068h = dimensionPixelOffset;
         if (dimensionPixelOffset != 0) {
-            this.f1369j = true;
+            this.f1070j = true;
         }
         obtainStyledAttributes.recycle();
-        C0307r c0307r = new C0307r(context, attributeSet, i, i2);
-        this.f1360H = c0307r;
-        c0307r.setInputMethodMode(1);
+        r rVar = new r(context, attributeSet, i2, i3);
+        this.H = rVar;
+        rVar.setInputMethodMode(1);
     }
 
-    /* renamed from: E */
-    private void m1255E(boolean z) {
-        Method method = f1350I;
+    private void E(boolean z) {
+        Method method = I;
         if (method != null) {
             try {
-                method.invoke(this.f1360H, Boolean.valueOf(z));
+                method.invoke(this.H, Boolean.valueOf(z));
             } catch (Exception unused) {
                 Log.i("ListPopupWindow", "Could not call setClipToScreenEnabled() on PopupWindow. Oh well.");
             }
@@ -343,307 +302,275 @@ public class C0275j0 implements InterfaceC0610h {
 
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Removed duplicated region for block: B:52:0x0151  */
-    /* renamed from: e */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private int m1250e() {
+    private int e() {
         /*
             Method dump skipped, instructions count: 356
             To view this dump change 'Code comments level' option to 'DEBUG'
         */
-        throw new UnsupportedOperationException("Method not decompiled: android.support.p002v7.widget.C0275j0.m1250e():int");
+        throw new UnsupportedOperationException("Method not decompiled: android.support.v7.widget.j0.e():int");
     }
 
-    /* renamed from: l */
-    private int m1245l(View view, int i, boolean z) {
-        Method method = f1351J;
+    private int l(View view, int i2, boolean z) {
+        Method method = J;
         if (method != null) {
             try {
-                return ((Integer) method.invoke(this.f1360H, view, Integer.valueOf(i), Boolean.valueOf(z))).intValue();
+                return ((Integer) method.invoke(this.H, view, Integer.valueOf(i2), Boolean.valueOf(z))).intValue();
             } catch (Exception unused) {
                 Log.i("ListPopupWindow", "Could not call getMaxAvailableHeightMethod(View, int, boolean) on PopupWindow. Using the public version.");
             }
         }
-        return this.f1360H.getMaxAvailableHeight(view, i);
+        return this.H.getMaxAvailableHeight(view, i2);
     }
 
-    /* renamed from: q */
-    private void m1240q() {
-        View view = this.f1377r;
+    private void q() {
+        View view = this.f1078r;
         if (view != null) {
             ViewParent parent = view.getParent();
             if (parent instanceof ViewGroup) {
-                ((ViewGroup) parent).removeView(this.f1377r);
+                ((ViewGroup) parent).removeView(this.f1078r);
             }
         }
     }
 
-    /* renamed from: A */
-    public void m1259A(boolean z) {
-        this.f1359G = z;
-        this.f1360H.setFocusable(z);
+    public void A(boolean z) {
+        this.G = z;
+        this.H.setFocusable(z);
     }
 
-    /* renamed from: B */
-    public void m1258B(PopupWindow.OnDismissListener onDismissListener) {
-        this.f1360H.setOnDismissListener(onDismissListener);
+    public void B(PopupWindow.OnDismissListener onDismissListener) {
+        this.H.setOnDismissListener(onDismissListener);
     }
 
-    /* renamed from: C */
-    public void m1257C(AdapterView.OnItemClickListener onItemClickListener) {
-        this.f1382w = onItemClickListener;
+    public void C(AdapterView.OnItemClickListener onItemClickListener) {
+        this.f1083w = onItemClickListener;
     }
 
-    /* renamed from: D */
-    public void m1256D(boolean z) {
-        this.f1372m = true;
-        this.f1371l = z;
+    public void D(boolean z) {
+        this.f1073m = true;
+        this.f1072l = z;
     }
 
-    /* renamed from: F */
-    public void m1254F(int i) {
-        this.f1378s = i;
+    public void F(int i2) {
+        this.f1079s = i2;
     }
 
-    /* renamed from: G */
-    public void m1253G(int i) {
-        C0260f0 c0260f0 = this.f1363d;
-        if (!mo3c() || c0260f0 == null) {
+    public void G(int i2) {
+        f0 f0Var = this.f1064d;
+        if (!c() || f0Var == null) {
             return;
         }
-        c0260f0.setListSelectionHidden(false);
-        c0260f0.setSelection(i);
-        if (c0260f0.getChoiceMode() != 0) {
-            c0260f0.setItemChecked(i, true);
+        f0Var.setListSelectionHidden(false);
+        f0Var.setSelection(i2);
+        if (f0Var.getChoiceMode() != 0) {
+            f0Var.setItemChecked(i2, true);
         }
     }
 
-    /* renamed from: H */
-    public void m1252H(int i) {
-        this.f1367h = i;
-        this.f1369j = true;
+    public void H(int i2) {
+        this.f1068h = i2;
+        this.f1070j = true;
     }
 
-    /* renamed from: I */
-    public void m1251I(int i) {
-        this.f1365f = i;
+    public void I(int i2) {
+        this.f1066f = i2;
     }
 
-    @Override // p024w.InterfaceC0610h
-    /* renamed from: c */
-    public boolean mo3c() {
-        return this.f1360H.isShowing();
+    @Override // w.h
+    public boolean c() {
+        return this.H.isShowing();
     }
 
-    @Override // p024w.InterfaceC0610h
-    /* renamed from: d */
-    public ListView mo2d() {
-        return this.f1363d;
+    @Override // w.h
+    public ListView d() {
+        return this.f1064d;
     }
 
-    @Override // p024w.InterfaceC0610h
+    @Override // w.h
     public void dismiss() {
-        this.f1360H.dismiss();
-        m1240q();
-        this.f1360H.setContentView(null);
-        this.f1363d = null;
-        this.f1356D.removeCallbacks(this.f1384y);
+        this.H.dismiss();
+        q();
+        this.H.setContentView(null);
+        this.f1064d = null;
+        this.D.removeCallbacks(this.y);
     }
 
-    @Override // p024w.InterfaceC0610h
-    /* renamed from: f */
-    public void mo1f() {
-        int m1250e = m1250e();
-        boolean m1242o = m1242o();
-        C0157j.m1727b(this.f1360H, this.f1368i);
+    @Override // w.h
+    public void f() {
+        int e2 = e();
+        boolean o2 = o();
+        android.support.v4.widget.j.b(this.H, this.f1069i);
         boolean z = true;
-        if (this.f1360H.isShowing()) {
-            if (C0490o.m402j(m1248i())) {
-                int i = this.f1365f;
-                if (i == -1) {
-                    i = -1;
-                } else if (i == -2) {
-                    i = m1248i().getWidth();
-                }
-                int i2 = this.f1364e;
+        if (this.H.isShowing()) {
+            if (o.o.j(i())) {
+                int i2 = this.f1066f;
                 if (i2 == -1) {
-                    if (!m1242o) {
-                        m1250e = -1;
-                    }
-                    if (m1242o) {
-                        this.f1360H.setWidth(this.f1365f == -1 ? -1 : 0);
-                        this.f1360H.setHeight(0);
-                    } else {
-                        this.f1360H.setWidth(this.f1365f == -1 ? -1 : 0);
-                        this.f1360H.setHeight(-1);
-                    }
-                } else if (i2 != -2) {
-                    m1250e = i2;
+                    i2 = -1;
+                } else if (i2 == -2) {
+                    i2 = i().getWidth();
                 }
-                this.f1360H.setOutsideTouchable((this.f1375p || this.f1374o) ? false : false);
-                this.f1360H.update(m1248i(), this.f1366g, this.f1367h, i < 0 ? -1 : i, m1250e < 0 ? -1 : m1250e);
+                int i3 = this.f1065e;
+                if (i3 == -1) {
+                    if (!o2) {
+                        e2 = -1;
+                    }
+                    if (o2) {
+                        this.H.setWidth(this.f1066f == -1 ? -1 : 0);
+                        this.H.setHeight(0);
+                    } else {
+                        this.H.setWidth(this.f1066f == -1 ? -1 : 0);
+                        this.H.setHeight(-1);
+                    }
+                } else if (i3 != -2) {
+                    e2 = i3;
+                }
+                this.H.setOutsideTouchable((this.f1076p || this.f1075o) ? false : false);
+                this.H.update(i(), this.f1067g, this.f1068h, i2 < 0 ? -1 : i2, e2 < 0 ? -1 : e2);
                 return;
             }
             return;
         }
-        int i3 = this.f1365f;
-        if (i3 == -1) {
-            i3 = -1;
-        } else if (i3 == -2) {
-            i3 = m1248i().getWidth();
-        }
-        int i4 = this.f1364e;
+        int i4 = this.f1066f;
         if (i4 == -1) {
-            m1250e = -1;
-        } else if (i4 != -2) {
-            m1250e = i4;
+            i4 = -1;
+        } else if (i4 == -2) {
+            i4 = i().getWidth();
         }
-        this.f1360H.setWidth(i3);
-        this.f1360H.setHeight(m1250e);
-        m1255E(true);
-        this.f1360H.setOutsideTouchable((this.f1375p || this.f1374o) ? false : true);
-        this.f1360H.setTouchInterceptor(this.f1385z);
-        if (this.f1372m) {
-            C0157j.m1728a(this.f1360H, this.f1371l);
+        int i5 = this.f1065e;
+        if (i5 == -1) {
+            e2 = -1;
+        } else if (i5 != -2) {
+            e2 = i5;
         }
-        Method method = f1352K;
+        this.H.setWidth(i4);
+        this.H.setHeight(e2);
+        E(true);
+        this.H.setOutsideTouchable((this.f1076p || this.f1075o) ? false : true);
+        this.H.setTouchInterceptor(this.z);
+        if (this.f1073m) {
+            android.support.v4.widget.j.a(this.H, this.f1072l);
+        }
+        Method method = K;
         if (method != null) {
             try {
-                method.invoke(this.f1360H, this.f1358F);
-            } catch (Exception e) {
-                Log.e("ListPopupWindow", "Could not invoke setEpicenterBounds on PopupWindow", e);
+                method.invoke(this.H, this.F);
+            } catch (Exception e3) {
+                Log.e("ListPopupWindow", "Could not invoke setEpicenterBounds on PopupWindow", e3);
             }
         }
-        C0157j.m1726c(this.f1360H, m1248i(), this.f1366g, this.f1367h, this.f1373n);
-        this.f1363d.setSelection(-1);
-        if (!this.f1359G || this.f1363d.isInTouchMode()) {
-            m1249g();
+        android.support.v4.widget.j.c(this.H, i(), this.f1067g, this.f1068h, this.f1074n);
+        this.f1064d.setSelection(-1);
+        if (!this.G || this.f1064d.isInTouchMode()) {
+            g();
         }
-        if (this.f1359G) {
+        if (this.G) {
             return;
         }
-        this.f1356D.post(this.f1354B);
+        this.D.post(this.B);
     }
 
-    /* renamed from: g */
-    public void m1249g() {
-        C0260f0 c0260f0 = this.f1363d;
-        if (c0260f0 != null) {
-            c0260f0.setListSelectionHidden(true);
-            c0260f0.requestLayout();
+    public void g() {
+        f0 f0Var = this.f1064d;
+        if (f0Var != null) {
+            f0Var.setListSelectionHidden(true);
+            f0Var.requestLayout();
         }
     }
 
-    /* renamed from: h */
-    C0260f0 mo1191h(Context context, boolean z) {
-        return new C0260f0(context, z);
+    f0 h(Context context, boolean z) {
+        return new f0(context, z);
     }
 
-    /* renamed from: i */
-    public View m1248i() {
-        return this.f1380u;
+    public View i() {
+        return this.f1081u;
     }
 
-    /* renamed from: j */
-    public Drawable m1247j() {
-        return this.f1360H.getBackground();
+    public Drawable j() {
+        return this.H.getBackground();
     }
 
-    /* renamed from: k */
-    public int m1246k() {
-        return this.f1366g;
+    public int k() {
+        return this.f1067g;
     }
 
-    /* renamed from: m */
-    public int m1244m() {
-        if (this.f1369j) {
-            return this.f1367h;
+    public int m() {
+        if (this.f1070j) {
+            return this.f1068h;
         }
         return 0;
     }
 
-    /* renamed from: n */
-    public int m1243n() {
-        return this.f1365f;
+    public int n() {
+        return this.f1066f;
     }
 
-    /* renamed from: o */
-    public boolean m1242o() {
-        return this.f1360H.getInputMethodMode() == 2;
+    public boolean o() {
+        return this.H.getInputMethodMode() == 2;
     }
 
-    /* renamed from: p */
-    public boolean m1241p() {
-        return this.f1359G;
+    public boolean p() {
+        return this.G;
     }
 
-    /* renamed from: r */
-    public void mo1054r(ListAdapter listAdapter) {
-        DataSetObserver dataSetObserver = this.f1379t;
+    public void r(ListAdapter listAdapter) {
+        DataSetObserver dataSetObserver = this.f1080t;
         if (dataSetObserver == null) {
-            this.f1379t = new C0279d();
+            this.f1080t = new d();
         } else {
-            ListAdapter listAdapter2 = this.f1362c;
+            ListAdapter listAdapter2 = this.f1063c;
             if (listAdapter2 != null) {
                 listAdapter2.unregisterDataSetObserver(dataSetObserver);
             }
         }
-        this.f1362c = listAdapter;
+        this.f1063c = listAdapter;
         if (listAdapter != null) {
-            listAdapter.registerDataSetObserver(this.f1379t);
+            listAdapter.registerDataSetObserver(this.f1080t);
         }
-        C0260f0 c0260f0 = this.f1363d;
-        if (c0260f0 != null) {
-            c0260f0.setAdapter(this.f1362c);
+        f0 f0Var = this.f1064d;
+        if (f0Var != null) {
+            f0Var.setAdapter(this.f1063c);
         }
     }
 
-    /* renamed from: s */
-    public void m1239s(View view) {
-        this.f1380u = view;
+    public void s(View view) {
+        this.f1081u = view;
     }
 
-    /* renamed from: t */
-    public void m1238t(int i) {
-        this.f1360H.setAnimationStyle(i);
+    public void t(int i2) {
+        this.H.setAnimationStyle(i2);
     }
 
-    /* renamed from: u */
-    public void m1237u(Drawable drawable) {
-        this.f1360H.setBackgroundDrawable(drawable);
+    public void u(Drawable drawable) {
+        this.H.setBackgroundDrawable(drawable);
     }
 
-    /* renamed from: v */
-    public void m1236v(int i) {
-        Drawable background = this.f1360H.getBackground();
+    public void v(int i2) {
+        Drawable background = this.H.getBackground();
         if (background == null) {
-            m1251I(i);
+            I(i2);
             return;
         }
-        background.getPadding(this.f1357E);
-        Rect rect = this.f1357E;
-        this.f1365f = rect.left + rect.right + i;
+        background.getPadding(this.E);
+        Rect rect = this.E;
+        this.f1066f = rect.left + rect.right + i2;
     }
 
-    /* renamed from: w */
-    public void m1235w(int i) {
-        this.f1373n = i;
+    public void w(int i2) {
+        this.f1074n = i2;
     }
 
-    /* renamed from: x */
-    public void m1234x(Rect rect) {
-        this.f1358F = rect;
+    public void x(Rect rect) {
+        this.F = rect;
     }
 
-    /* renamed from: y */
-    public void m1233y(int i) {
-        this.f1366g = i;
+    public void y(int i2) {
+        this.f1067g = i2;
     }
 
-    /* renamed from: z */
-    public void m1232z(int i) {
-        this.f1360H.setInputMethodMode(i);
+    public void z(int i2) {
+        this.H.setInputMethodMode(i2);
     }
 }

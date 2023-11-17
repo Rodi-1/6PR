@@ -1,110 +1,104 @@
-package p007f;
+package f;
 
-import p006e.C0352c;
-import p006e.C0359i;
+import e.i;
 
-/* renamed from: f.e */
 /* loaded from: classes.dex */
-public class C0365e {
+public class e {
 
-    /* renamed from: b */
-    final C0370f f1840b;
+    /* renamed from: b  reason: collision with root package name */
+    final f f1411b;
 
-    /* renamed from: c */
-    final EnumC0369d f1841c;
+    /* renamed from: c  reason: collision with root package name */
+    final d f1412c;
 
-    /* renamed from: d */
-    C0365e f1842d;
+    /* renamed from: d  reason: collision with root package name */
+    e f1413d;
 
-    /* renamed from: j */
-    C0359i f1848j;
+    /* renamed from: j  reason: collision with root package name */
+    e.i f1419j;
 
-    /* renamed from: a */
-    private C0380m f1839a = new C0380m(this);
+    /* renamed from: a  reason: collision with root package name */
+    private m f1410a = new m(this);
 
-    /* renamed from: e */
-    public int f1843e = 0;
+    /* renamed from: e  reason: collision with root package name */
+    public int f1414e = 0;
 
-    /* renamed from: f */
-    int f1844f = -1;
+    /* renamed from: f  reason: collision with root package name */
+    int f1415f = -1;
 
-    /* renamed from: g */
-    private EnumC0368c f1845g = EnumC0368c.NONE;
+    /* renamed from: g  reason: collision with root package name */
+    private c f1416g = c.NONE;
 
-    /* renamed from: h */
-    private EnumC0367b f1846h = EnumC0367b.RELAXED;
+    /* renamed from: h  reason: collision with root package name */
+    private b f1417h = b.RELAXED;
 
-    /* renamed from: i */
-    private int f1847i = 0;
+    /* renamed from: i  reason: collision with root package name */
+    private int f1418i = 0;
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: f.e$a */
     /* loaded from: classes.dex */
-    public static /* synthetic */ class C0366a {
+    public static /* synthetic */ class a {
 
-        /* renamed from: a */
-        static final /* synthetic */ int[] f1849a;
+        /* renamed from: a  reason: collision with root package name */
+        static final /* synthetic */ int[] f1420a;
 
         static {
-            int[] iArr = new int[EnumC0369d.values().length];
-            f1849a = iArr;
+            int[] iArr = new int[d.values().length];
+            f1420a = iArr;
             try {
-                iArr[EnumC0369d.CENTER.ordinal()] = 1;
+                iArr[d.CENTER.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                f1849a[EnumC0369d.LEFT.ordinal()] = 2;
+                f1420a[d.LEFT.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
             try {
-                f1849a[EnumC0369d.RIGHT.ordinal()] = 3;
+                f1420a[d.RIGHT.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
             try {
-                f1849a[EnumC0369d.TOP.ordinal()] = 4;
+                f1420a[d.TOP.ordinal()] = 4;
             } catch (NoSuchFieldError unused4) {
             }
             try {
-                f1849a[EnumC0369d.BOTTOM.ordinal()] = 5;
+                f1420a[d.BOTTOM.ordinal()] = 5;
             } catch (NoSuchFieldError unused5) {
             }
             try {
-                f1849a[EnumC0369d.BASELINE.ordinal()] = 6;
+                f1420a[d.BASELINE.ordinal()] = 6;
             } catch (NoSuchFieldError unused6) {
             }
             try {
-                f1849a[EnumC0369d.CENTER_X.ordinal()] = 7;
+                f1420a[d.CENTER_X.ordinal()] = 7;
             } catch (NoSuchFieldError unused7) {
             }
             try {
-                f1849a[EnumC0369d.CENTER_Y.ordinal()] = 8;
+                f1420a[d.CENTER_Y.ordinal()] = 8;
             } catch (NoSuchFieldError unused8) {
             }
             try {
-                f1849a[EnumC0369d.NONE.ordinal()] = 9;
+                f1420a[d.NONE.ordinal()] = 9;
             } catch (NoSuchFieldError unused9) {
             }
         }
     }
 
-    /* renamed from: f.e$b */
     /* loaded from: classes.dex */
-    public enum EnumC0367b {
+    public enum b {
         RELAXED,
         STRICT
     }
 
-    /* renamed from: f.e$c */
     /* loaded from: classes.dex */
-    public enum EnumC0368c {
+    public enum c {
         NONE,
         STRONG,
         WEAK
     }
 
-    /* renamed from: f.e$d */
     /* loaded from: classes.dex */
-    public enum EnumC0369d {
+    public enum d {
         NONE,
         LEFT,
         TOP,
@@ -116,116 +110,104 @@ public class C0365e {
         CENTER_Y
     }
 
-    public C0365e(C0370f c0370f, EnumC0369d enumC0369d) {
-        this.f1840b = c0370f;
-        this.f1841c = enumC0369d;
+    public e(f fVar, d dVar) {
+        this.f1411b = fVar;
+        this.f1412c = dVar;
     }
 
-    /* renamed from: a */
-    public boolean m901a(C0365e c0365e, int i, int i2, EnumC0368c enumC0368c, int i3, boolean z) {
-        if (c0365e == null) {
-            this.f1842d = null;
-            this.f1843e = 0;
-            this.f1844f = -1;
-            this.f1845g = EnumC0368c.NONE;
-            this.f1847i = 2;
+    public boolean a(e eVar, int i2, int i3, c cVar, int i4, boolean z) {
+        if (eVar == null) {
+            this.f1413d = null;
+            this.f1414e = 0;
+            this.f1415f = -1;
+            this.f1416g = c.NONE;
+            this.f1418i = 2;
             return true;
-        } else if (z || m890l(c0365e)) {
-            this.f1842d = c0365e;
-            if (i > 0) {
-                this.f1843e = i;
+        } else if (z || l(eVar)) {
+            this.f1413d = eVar;
+            if (i2 > 0) {
+                this.f1414e = i2;
             } else {
-                this.f1843e = 0;
+                this.f1414e = 0;
             }
-            this.f1844f = i2;
-            this.f1845g = enumC0368c;
-            this.f1847i = i3;
+            this.f1415f = i3;
+            this.f1416g = cVar;
+            this.f1418i = i4;
             return true;
         } else {
             return false;
         }
     }
 
-    /* renamed from: b */
-    public boolean m900b(C0365e c0365e, int i, EnumC0368c enumC0368c, int i2) {
-        return m901a(c0365e, i, -1, enumC0368c, i2, false);
+    public boolean b(e eVar, int i2, c cVar, int i3) {
+        return a(eVar, i2, -1, cVar, i3, false);
     }
 
-    /* renamed from: c */
-    public int m899c() {
-        return this.f1847i;
+    public int c() {
+        return this.f1418i;
     }
 
-    /* renamed from: d */
-    public int m898d() {
-        C0365e c0365e;
-        if (this.f1840b.m883C() == 8) {
+    public int d() {
+        e eVar;
+        if (this.f1411b.C() == 8) {
             return 0;
         }
-        return (this.f1844f <= -1 || (c0365e = this.f1842d) == null || c0365e.f1840b.m883C() != 8) ? this.f1843e : this.f1844f;
+        return (this.f1415f <= -1 || (eVar = this.f1413d) == null || eVar.f1411b.C() != 8) ? this.f1414e : this.f1415f;
     }
 
-    /* renamed from: e */
-    public C0370f m897e() {
-        return this.f1840b;
+    public f e() {
+        return this.f1411b;
     }
 
-    /* renamed from: f */
-    public C0380m m896f() {
-        return this.f1839a;
+    public m f() {
+        return this.f1410a;
     }
 
-    /* renamed from: g */
-    public C0359i m895g() {
-        return this.f1848j;
+    public e.i g() {
+        return this.f1419j;
     }
 
-    /* renamed from: h */
-    public EnumC0368c m894h() {
-        return this.f1845g;
+    public c h() {
+        return this.f1416g;
     }
 
-    /* renamed from: i */
-    public C0365e m893i() {
-        return this.f1842d;
+    public e i() {
+        return this.f1413d;
     }
 
-    /* renamed from: j */
-    public EnumC0369d m892j() {
-        return this.f1841c;
+    public d j() {
+        return this.f1412c;
     }
 
-    /* renamed from: k */
-    public boolean m891k() {
-        return this.f1842d != null;
+    public boolean k() {
+        return this.f1413d != null;
     }
 
-    /* renamed from: l */
-    public boolean m890l(C0365e c0365e) {
+    public boolean l(e eVar) {
         boolean z = false;
-        if (c0365e == null) {
+        if (eVar == null) {
             return false;
         }
-        EnumC0369d m892j = c0365e.m892j();
-        EnumC0369d enumC0369d = this.f1841c;
-        if (m892j == enumC0369d) {
-            return enumC0369d != EnumC0369d.BASELINE || (c0365e.m897e().m873I() && m897e().m873I());
+        d j2 = eVar.j();
+        d dVar = this.f1412c;
+        if (j2 == dVar) {
+            return dVar != d.BASELINE || (eVar.e().I() && e().I());
         }
-        switch (C0366a.f1849a[enumC0369d.ordinal()]) {
+        switch (a.f1420a[dVar.ordinal()]) {
             case 1:
-                return (m892j == EnumC0369d.BASELINE || m892j == EnumC0369d.CENTER_X || m892j == EnumC0369d.CENTER_Y) ? false : true;
+                return (j2 == d.BASELINE || j2 == d.CENTER_X || j2 == d.CENTER_Y) ? false : true;
             case 2:
             case 3:
-                boolean z2 = m892j == EnumC0369d.LEFT || m892j == EnumC0369d.RIGHT;
-                if (c0365e.m897e() instanceof C0375i) {
-                    return (z2 || m892j == EnumC0369d.CENTER_X) ? true : true;
+                boolean z2 = j2 == d.LEFT || j2 == d.RIGHT;
+                if (eVar.e() instanceof i) {
+                    return (z2 || j2 == d.CENTER_X) ? true : true;
                 }
                 return z2;
             case 4:
             case 5:
-                boolean z3 = m892j == EnumC0369d.TOP || m892j == EnumC0369d.BOTTOM;
-                if (c0365e.m897e() instanceof C0375i) {
-                    return (z3 || m892j == EnumC0369d.CENTER_Y) ? true : true;
+                boolean z3 = j2 == d.TOP || j2 == d.BOTTOM;
+                if (eVar.e() instanceof i) {
+                    return (z3 || j2 == d.CENTER_Y) ? true : true;
                 }
                 return z3;
             case 6:
@@ -234,32 +216,30 @@ public class C0365e {
             case 9:
                 return false;
             default:
-                throw new AssertionError(this.f1841c.name());
+                throw new AssertionError(this.f1412c.name());
         }
     }
 
-    /* renamed from: m */
-    public void m889m() {
-        this.f1842d = null;
-        this.f1843e = 0;
-        this.f1844f = -1;
-        this.f1845g = EnumC0368c.STRONG;
-        this.f1847i = 0;
-        this.f1846h = EnumC0367b.RELAXED;
-        this.f1839a.mo750e();
+    public void m() {
+        this.f1413d = null;
+        this.f1414e = 0;
+        this.f1415f = -1;
+        this.f1416g = c.STRONG;
+        this.f1418i = 0;
+        this.f1417h = b.RELAXED;
+        this.f1410a.e();
     }
 
-    /* renamed from: n */
-    public void m888n(C0352c c0352c) {
-        C0359i c0359i = this.f1848j;
-        if (c0359i == null) {
-            this.f1848j = new C0359i(C0359i.EnumC0360a.UNRESTRICTED, null);
+    public void n(e.c cVar) {
+        e.i iVar = this.f1419j;
+        if (iVar == null) {
+            this.f1419j = new e.i(i.a.UNRESTRICTED, null);
         } else {
-            c0359i.m923d();
+            iVar.d();
         }
     }
 
     public String toString() {
-        return this.f1840b.m836n() + ":" + this.f1841c.toString();
+        return this.f1411b.n() + ":" + this.f1412c.toString();
     }
 }

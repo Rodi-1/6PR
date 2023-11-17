@@ -1,4 +1,4 @@
-package p015n;
+package n;
 
 import java.lang.reflect.Array;
 import java.util.Collection;
@@ -6,308 +6,292 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-/* renamed from: n.b */
 /* loaded from: classes.dex */
-public final class C0447b<E> implements Collection<E>, Set<E> {
+public final class b<E> implements Collection<E>, Set<E> {
 
-    /* renamed from: f */
-    private static final int[] f2142f = new int[0];
+    /* renamed from: f  reason: collision with root package name */
+    private static final int[] f1624f = new int[0];
 
-    /* renamed from: g */
-    private static final Object[] f2143g = new Object[0];
+    /* renamed from: g  reason: collision with root package name */
+    private static final Object[] f1625g = new Object[0];
 
-    /* renamed from: h */
-    private static Object[] f2144h;
+    /* renamed from: h  reason: collision with root package name */
+    private static Object[] f1626h;
 
-    /* renamed from: i */
-    private static int f2145i;
+    /* renamed from: i  reason: collision with root package name */
+    private static int f1627i;
 
-    /* renamed from: j */
-    private static Object[] f2146j;
+    /* renamed from: j  reason: collision with root package name */
+    private static Object[] f1628j;
 
-    /* renamed from: k */
-    private static int f2147k;
+    /* renamed from: k  reason: collision with root package name */
+    private static int f1629k;
 
-    /* renamed from: b */
-    private int[] f2148b;
+    /* renamed from: b  reason: collision with root package name */
+    private int[] f1630b;
 
-    /* renamed from: c */
-    private Object[] f2149c;
+    /* renamed from: c  reason: collision with root package name */
+    private Object[] f1631c;
 
-    /* renamed from: d */
-    private int f2150d;
+    /* renamed from: d  reason: collision with root package name */
+    private int f1632d;
 
-    /* renamed from: e */
-    private AbstractC0454h<E, E> f2151e;
+    /* renamed from: e  reason: collision with root package name */
+    private h<E, E> f1633e;
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: n.b$a */
     /* loaded from: classes.dex */
-    public class C0448a extends AbstractC0454h<E, E> {
-        C0448a() {
+    public class a extends h<E, E> {
+        a() {
         }
 
-        @Override // p015n.AbstractC0454h
-        /* renamed from: a */
-        protected void mo521a() {
-            C0447b.this.clear();
+        @Override // n.h
+        protected void a() {
+            b.this.clear();
         }
 
-        @Override // p015n.AbstractC0454h
-        /* renamed from: b */
-        protected Object mo520b(int i, int i2) {
-            return C0447b.this.f2149c[i];
+        @Override // n.h
+        protected Object b(int i2, int i3) {
+            return b.this.f1631c[i2];
         }
 
-        @Override // p015n.AbstractC0454h
-        /* renamed from: c */
-        protected Map<E, E> mo519c() {
+        @Override // n.h
+        protected Map<E, E> c() {
             throw new UnsupportedOperationException("not a map");
         }
 
-        @Override // p015n.AbstractC0454h
-        /* renamed from: d */
-        protected int mo518d() {
-            return C0447b.this.f2150d;
+        @Override // n.h
+        protected int d() {
+            return b.this.f1632d;
         }
 
-        @Override // p015n.AbstractC0454h
-        /* renamed from: e */
-        protected int mo517e(Object obj) {
-            return C0447b.this.m551g(obj);
+        @Override // n.h
+        protected int e(Object obj) {
+            return b.this.g(obj);
         }
 
-        @Override // p015n.AbstractC0454h
-        /* renamed from: f */
-        protected int mo516f(Object obj) {
-            return C0447b.this.m551g(obj);
+        @Override // n.h
+        protected int f(Object obj) {
+            return b.this.g(obj);
         }
 
-        @Override // p015n.AbstractC0454h
-        /* renamed from: g */
-        protected void mo515g(E e, E e2) {
-            C0447b.this.add(e);
+        @Override // n.h
+        protected void g(E e2, E e3) {
+            b.this.add(e2);
         }
 
-        @Override // p015n.AbstractC0454h
-        /* renamed from: h */
-        protected void mo514h(int i) {
-            C0447b.this.m548j(i);
+        @Override // n.h
+        protected void h(int i2) {
+            b.this.j(i2);
         }
 
-        @Override // p015n.AbstractC0454h
-        /* renamed from: i */
-        protected E mo513i(int i, E e) {
+        @Override // n.h
+        protected E i(int i2, E e2) {
             throw new UnsupportedOperationException("not a map");
         }
     }
 
-    public C0447b() {
+    public b() {
         this(0);
     }
 
-    public C0447b(int i) {
-        if (i == 0) {
-            this.f2148b = f2142f;
-            this.f2149c = f2143g;
+    public b(int i2) {
+        if (i2 == 0) {
+            this.f1630b = f1624f;
+            this.f1631c = f1625g;
         } else {
-            m555c(i);
+            c(i2);
         }
-        this.f2150d = 0;
+        this.f1632d = 0;
     }
 
-    /* renamed from: c */
-    private void m555c(int i) {
-        if (i == 8) {
-            synchronized (C0447b.class) {
-                Object[] objArr = f2146j;
+    private void c(int i2) {
+        if (i2 == 8) {
+            synchronized (b.class) {
+                Object[] objArr = f1628j;
                 if (objArr != null) {
-                    this.f2149c = objArr;
-                    f2146j = (Object[]) objArr[0];
-                    this.f2148b = (int[]) objArr[1];
+                    this.f1631c = objArr;
+                    f1628j = (Object[]) objArr[0];
+                    this.f1630b = (int[]) objArr[1];
                     objArr[1] = null;
                     objArr[0] = null;
-                    f2147k--;
+                    f1629k--;
                     return;
                 }
             }
-        } else if (i == 4) {
-            synchronized (C0447b.class) {
-                Object[] objArr2 = f2144h;
+        } else if (i2 == 4) {
+            synchronized (b.class) {
+                Object[] objArr2 = f1626h;
                 if (objArr2 != null) {
-                    this.f2149c = objArr2;
-                    f2144h = (Object[]) objArr2[0];
-                    this.f2148b = (int[]) objArr2[1];
+                    this.f1631c = objArr2;
+                    f1626h = (Object[]) objArr2[0];
+                    this.f1630b = (int[]) objArr2[1];
                     objArr2[1] = null;
                     objArr2[0] = null;
-                    f2145i--;
+                    f1627i--;
                     return;
                 }
             }
         }
-        this.f2148b = new int[i];
-        this.f2149c = new Object[i];
+        this.f1630b = new int[i2];
+        this.f1631c = new Object[i2];
     }
 
-    /* renamed from: e */
-    private static void m553e(int[] iArr, Object[] objArr, int i) {
+    private static void e(int[] iArr, Object[] objArr, int i2) {
         if (iArr.length == 8) {
-            synchronized (C0447b.class) {
-                if (f2147k < 10) {
-                    objArr[0] = f2146j;
+            synchronized (b.class) {
+                if (f1629k < 10) {
+                    objArr[0] = f1628j;
                     objArr[1] = iArr;
-                    for (int i2 = i - 1; i2 >= 2; i2--) {
-                        objArr[i2] = null;
+                    for (int i3 = i2 - 1; i3 >= 2; i3--) {
+                        objArr[i3] = null;
                     }
-                    f2146j = objArr;
-                    f2147k++;
+                    f1628j = objArr;
+                    f1629k++;
                 }
             }
         } else if (iArr.length == 4) {
-            synchronized (C0447b.class) {
-                if (f2145i < 10) {
-                    objArr[0] = f2144h;
+            synchronized (b.class) {
+                if (f1627i < 10) {
+                    objArr[0] = f1626h;
                     objArr[1] = iArr;
-                    for (int i3 = i - 1; i3 >= 2; i3--) {
-                        objArr[i3] = null;
+                    for (int i4 = i2 - 1; i4 >= 2; i4--) {
+                        objArr[i4] = null;
                     }
-                    f2144h = objArr;
-                    f2145i++;
+                    f1626h = objArr;
+                    f1627i++;
                 }
             }
         }
     }
 
-    /* renamed from: f */
-    private AbstractC0454h<E, E> m552f() {
-        if (this.f2151e == null) {
-            this.f2151e = new C0448a();
+    private h<E, E> f() {
+        if (this.f1633e == null) {
+            this.f1633e = new a();
         }
-        return this.f2151e;
+        return this.f1633e;
     }
 
-    /* renamed from: h */
-    private int m550h(Object obj, int i) {
-        int i2 = this.f2150d;
+    private int h(Object obj, int i2) {
+        int i3 = this.f1632d;
+        if (i3 == 0) {
+            return -1;
+        }
+        int a2 = c.a(this.f1630b, i3, i2);
+        if (a2 >= 0 && !obj.equals(this.f1631c[a2])) {
+            int i4 = a2 + 1;
+            while (i4 < i3 && this.f1630b[i4] == i2) {
+                if (obj.equals(this.f1631c[i4])) {
+                    return i4;
+                }
+                i4++;
+            }
+            for (int i5 = a2 - 1; i5 >= 0 && this.f1630b[i5] == i2; i5--) {
+                if (obj.equals(this.f1631c[i5])) {
+                    return i5;
+                }
+            }
+            return i4 ^ (-1);
+        }
+        return a2;
+    }
+
+    private int i() {
+        int i2 = this.f1632d;
         if (i2 == 0) {
             return -1;
         }
-        int m546a = C0449c.m546a(this.f2148b, i2, i);
-        if (m546a >= 0 && !obj.equals(this.f2149c[m546a])) {
-            int i3 = m546a + 1;
-            while (i3 < i2 && this.f2148b[i3] == i) {
-                if (obj.equals(this.f2149c[i3])) {
+        int a2 = c.a(this.f1630b, i2, 0);
+        if (a2 >= 0 && this.f1631c[a2] != null) {
+            int i3 = a2 + 1;
+            while (i3 < i2 && this.f1630b[i3] == 0) {
+                if (this.f1631c[i3] == null) {
                     return i3;
                 }
                 i3++;
             }
-            for (int i4 = m546a - 1; i4 >= 0 && this.f2148b[i4] == i; i4--) {
-                if (obj.equals(this.f2149c[i4])) {
+            for (int i4 = a2 - 1; i4 >= 0 && this.f1630b[i4] == 0; i4--) {
+                if (this.f1631c[i4] == null) {
                     return i4;
                 }
             }
             return i3 ^ (-1);
         }
-        return m546a;
-    }
-
-    /* renamed from: i */
-    private int m549i() {
-        int i = this.f2150d;
-        if (i == 0) {
-            return -1;
-        }
-        int m546a = C0449c.m546a(this.f2148b, i, 0);
-        if (m546a >= 0 && this.f2149c[m546a] != null) {
-            int i2 = m546a + 1;
-            while (i2 < i && this.f2148b[i2] == 0) {
-                if (this.f2149c[i2] == null) {
-                    return i2;
-                }
-                i2++;
-            }
-            for (int i3 = m546a - 1; i3 >= 0 && this.f2148b[i3] == 0; i3--) {
-                if (this.f2149c[i3] == null) {
-                    return i3;
-                }
-            }
-            return i2 ^ (-1);
-        }
-        return m546a;
+        return a2;
     }
 
     @Override // java.util.Collection, java.util.Set
-    public boolean add(E e) {
-        int i;
-        int m550h;
-        if (e == null) {
-            m550h = m549i();
-            i = 0;
+    public boolean add(E e2) {
+        int i2;
+        int h2;
+        if (e2 == null) {
+            h2 = i();
+            i2 = 0;
         } else {
-            int hashCode = e.hashCode();
-            i = hashCode;
-            m550h = m550h(e, hashCode);
+            int hashCode = e2.hashCode();
+            i2 = hashCode;
+            h2 = h(e2, hashCode);
         }
-        if (m550h >= 0) {
+        if (h2 >= 0) {
             return false;
         }
-        int i2 = m550h ^ (-1);
-        int i3 = this.f2150d;
-        int[] iArr = this.f2148b;
-        if (i3 >= iArr.length) {
-            int i4 = 4;
-            if (i3 >= 8) {
-                i4 = (i3 >> 1) + i3;
-            } else if (i3 >= 4) {
-                i4 = 8;
+        int i3 = h2 ^ (-1);
+        int i4 = this.f1632d;
+        int[] iArr = this.f1630b;
+        if (i4 >= iArr.length) {
+            int i5 = 4;
+            if (i4 >= 8) {
+                i5 = (i4 >> 1) + i4;
+            } else if (i4 >= 4) {
+                i5 = 8;
             }
-            Object[] objArr = this.f2149c;
-            m555c(i4);
-            int[] iArr2 = this.f2148b;
+            Object[] objArr = this.f1631c;
+            c(i5);
+            int[] iArr2 = this.f1630b;
             if (iArr2.length > 0) {
                 System.arraycopy(iArr, 0, iArr2, 0, iArr.length);
-                System.arraycopy(objArr, 0, this.f2149c, 0, objArr.length);
+                System.arraycopy(objArr, 0, this.f1631c, 0, objArr.length);
             }
-            m553e(iArr, objArr, this.f2150d);
+            e(iArr, objArr, this.f1632d);
         }
-        int i5 = this.f2150d;
-        if (i2 < i5) {
-            int[] iArr3 = this.f2148b;
-            int i6 = i2 + 1;
-            System.arraycopy(iArr3, i2, iArr3, i6, i5 - i2);
-            Object[] objArr2 = this.f2149c;
-            System.arraycopy(objArr2, i2, objArr2, i6, this.f2150d - i2);
+        int i6 = this.f1632d;
+        if (i3 < i6) {
+            int[] iArr3 = this.f1630b;
+            int i7 = i3 + 1;
+            System.arraycopy(iArr3, i3, iArr3, i7, i6 - i3);
+            Object[] objArr2 = this.f1631c;
+            System.arraycopy(objArr2, i3, objArr2, i7, this.f1632d - i3);
         }
-        this.f2148b[i2] = i;
-        this.f2149c[i2] = e;
-        this.f2150d++;
+        this.f1630b[i3] = i2;
+        this.f1631c[i3] = e2;
+        this.f1632d++;
         return true;
     }
 
     @Override // java.util.Collection, java.util.Set
     public boolean addAll(Collection<? extends E> collection) {
-        m554d(this.f2150d + collection.size());
+        d(this.f1632d + collection.size());
         boolean z = false;
-        for (E e : collection) {
-            z |= add(e);
+        for (E e2 : collection) {
+            z |= add(e2);
         }
         return z;
     }
 
     @Override // java.util.Collection, java.util.Set
     public void clear() {
-        int i = this.f2150d;
-        if (i != 0) {
-            m553e(this.f2148b, this.f2149c, i);
-            this.f2148b = f2142f;
-            this.f2149c = f2143g;
-            this.f2150d = 0;
+        int i2 = this.f1632d;
+        if (i2 != 0) {
+            e(this.f1630b, this.f1631c, i2);
+            this.f1630b = f1624f;
+            this.f1631c = f1625g;
+            this.f1632d = 0;
         }
     }
 
     @Override // java.util.Collection, java.util.Set
     public boolean contains(Object obj) {
-        return m551g(obj) >= 0;
+        return g(obj) >= 0;
     }
 
     @Override // java.util.Collection, java.util.Set
@@ -321,18 +305,17 @@ public final class C0447b<E> implements Collection<E>, Set<E> {
         return true;
     }
 
-    /* renamed from: d */
-    public void m554d(int i) {
-        int[] iArr = this.f2148b;
-        if (iArr.length < i) {
-            Object[] objArr = this.f2149c;
-            m555c(i);
-            int i2 = this.f2150d;
-            if (i2 > 0) {
-                System.arraycopy(iArr, 0, this.f2148b, 0, i2);
-                System.arraycopy(objArr, 0, this.f2149c, 0, this.f2150d);
+    public void d(int i2) {
+        int[] iArr = this.f1630b;
+        if (iArr.length < i2) {
+            Object[] objArr = this.f1631c;
+            c(i2);
+            int i3 = this.f1632d;
+            if (i3 > 0) {
+                System.arraycopy(iArr, 0, this.f1630b, 0, i3);
+                System.arraycopy(objArr, 0, this.f1631c, 0, this.f1632d);
             }
-            m553e(iArr, objArr, this.f2150d);
+            e(iArr, objArr, this.f1632d);
         }
     }
 
@@ -346,9 +329,9 @@ public final class C0447b<E> implements Collection<E>, Set<E> {
             if (size() != set.size()) {
                 return false;
             }
-            for (int i = 0; i < this.f2150d; i++) {
+            for (int i2 = 0; i2 < this.f1632d; i2++) {
                 try {
-                    if (!set.contains(m547k(i))) {
+                    if (!set.contains(k(i2))) {
                         return false;
                     }
                 } catch (ClassCastException | NullPointerException unused) {
@@ -359,82 +342,79 @@ public final class C0447b<E> implements Collection<E>, Set<E> {
         return false;
     }
 
-    /* renamed from: g */
-    public int m551g(Object obj) {
-        return obj == null ? m549i() : m550h(obj, obj.hashCode());
+    public int g(Object obj) {
+        return obj == null ? i() : h(obj, obj.hashCode());
     }
 
     @Override // java.util.Collection, java.util.Set
     public int hashCode() {
-        int[] iArr = this.f2148b;
-        int i = this.f2150d;
-        int i2 = 0;
-        for (int i3 = 0; i3 < i; i3++) {
-            i2 += iArr[i3];
+        int[] iArr = this.f1630b;
+        int i2 = this.f1632d;
+        int i3 = 0;
+        for (int i4 = 0; i4 < i2; i4++) {
+            i3 += iArr[i4];
         }
-        return i2;
+        return i3;
     }
 
     @Override // java.util.Collection, java.util.Set
     public boolean isEmpty() {
-        return this.f2150d <= 0;
+        return this.f1632d <= 0;
     }
 
     @Override // java.util.Collection, java.lang.Iterable, java.util.Set
     public Iterator<E> iterator() {
-        return m552f().m509m().iterator();
+        return f().m().iterator();
     }
 
-    /* renamed from: j */
-    public E m548j(int i) {
-        Object[] objArr = this.f2149c;
-        E e = (E) objArr[i];
-        int i2 = this.f2150d;
-        if (i2 <= 1) {
-            m553e(this.f2148b, objArr, i2);
-            this.f2148b = f2142f;
-            this.f2149c = f2143g;
-            this.f2150d = 0;
+    public E j(int i2) {
+        Object[] objArr = this.f1631c;
+        E e2 = (E) objArr[i2];
+        int i3 = this.f1632d;
+        if (i3 <= 1) {
+            e(this.f1630b, objArr, i3);
+            this.f1630b = f1624f;
+            this.f1631c = f1625g;
+            this.f1632d = 0;
         } else {
-            int[] iArr = this.f2148b;
-            if (iArr.length <= 8 || i2 >= iArr.length / 3) {
-                int i3 = i2 - 1;
-                this.f2150d = i3;
-                if (i < i3) {
-                    int i4 = i + 1;
-                    System.arraycopy(iArr, i4, iArr, i, i3 - i);
-                    Object[] objArr2 = this.f2149c;
-                    System.arraycopy(objArr2, i4, objArr2, i, this.f2150d - i);
+            int[] iArr = this.f1630b;
+            if (iArr.length <= 8 || i3 >= iArr.length / 3) {
+                int i4 = i3 - 1;
+                this.f1632d = i4;
+                if (i2 < i4) {
+                    int i5 = i2 + 1;
+                    System.arraycopy(iArr, i5, iArr, i2, i4 - i2);
+                    Object[] objArr2 = this.f1631c;
+                    System.arraycopy(objArr2, i5, objArr2, i2, this.f1632d - i2);
                 }
-                this.f2149c[this.f2150d] = null;
+                this.f1631c[this.f1632d] = null;
             } else {
-                m555c(i2 > 8 ? i2 + (i2 >> 1) : 8);
-                this.f2150d--;
-                if (i > 0) {
-                    System.arraycopy(iArr, 0, this.f2148b, 0, i);
-                    System.arraycopy(objArr, 0, this.f2149c, 0, i);
+                c(i3 > 8 ? i3 + (i3 >> 1) : 8);
+                this.f1632d--;
+                if (i2 > 0) {
+                    System.arraycopy(iArr, 0, this.f1630b, 0, i2);
+                    System.arraycopy(objArr, 0, this.f1631c, 0, i2);
                 }
-                int i5 = this.f2150d;
-                if (i < i5) {
-                    int i6 = i + 1;
-                    System.arraycopy(iArr, i6, this.f2148b, i, i5 - i);
-                    System.arraycopy(objArr, i6, this.f2149c, i, this.f2150d - i);
+                int i6 = this.f1632d;
+                if (i2 < i6) {
+                    int i7 = i2 + 1;
+                    System.arraycopy(iArr, i7, this.f1630b, i2, i6 - i2);
+                    System.arraycopy(objArr, i7, this.f1631c, i2, this.f1632d - i2);
                 }
             }
         }
-        return e;
+        return e2;
     }
 
-    /* renamed from: k */
-    public E m547k(int i) {
-        return (E) this.f2149c[i];
+    public E k(int i2) {
+        return (E) this.f1631c[i2];
     }
 
     @Override // java.util.Collection, java.util.Set
     public boolean remove(Object obj) {
-        int m551g = m551g(obj);
-        if (m551g >= 0) {
-            m548j(m551g);
+        int g2 = g(obj);
+        if (g2 >= 0) {
+            j(g2);
             return true;
         }
         return false;
@@ -453,9 +433,9 @@ public final class C0447b<E> implements Collection<E>, Set<E> {
     @Override // java.util.Collection, java.util.Set
     public boolean retainAll(Collection<?> collection) {
         boolean z = false;
-        for (int i = this.f2150d - 1; i >= 0; i--) {
-            if (!collection.contains(this.f2149c[i])) {
-                m548j(i);
+        for (int i2 = this.f1632d - 1; i2 >= 0; i2--) {
+            if (!collection.contains(this.f1631c[i2])) {
+                j(i2);
                 z = true;
             }
         }
@@ -464,27 +444,27 @@ public final class C0447b<E> implements Collection<E>, Set<E> {
 
     @Override // java.util.Collection, java.util.Set
     public int size() {
-        return this.f2150d;
+        return this.f1632d;
     }
 
     @Override // java.util.Collection, java.util.Set
     public Object[] toArray() {
-        int i = this.f2150d;
-        Object[] objArr = new Object[i];
-        System.arraycopy(this.f2149c, 0, objArr, 0, i);
+        int i2 = this.f1632d;
+        Object[] objArr = new Object[i2];
+        System.arraycopy(this.f1631c, 0, objArr, 0, i2);
         return objArr;
     }
 
     @Override // java.util.Collection, java.util.Set
     public <T> T[] toArray(T[] tArr) {
-        if (tArr.length < this.f2150d) {
-            tArr = (T[]) ((Object[]) Array.newInstance(tArr.getClass().getComponentType(), this.f2150d));
+        if (tArr.length < this.f1632d) {
+            tArr = (T[]) ((Object[]) Array.newInstance(tArr.getClass().getComponentType(), this.f1632d));
         }
-        System.arraycopy(this.f2149c, 0, tArr, 0, this.f2150d);
+        System.arraycopy(this.f1631c, 0, tArr, 0, this.f1632d);
         int length = tArr.length;
-        int i = this.f2150d;
-        if (length > i) {
-            tArr[i] = null;
+        int i2 = this.f1632d;
+        if (length > i2) {
+            tArr[i2] = null;
         }
         return tArr;
     }
@@ -493,15 +473,15 @@ public final class C0447b<E> implements Collection<E>, Set<E> {
         if (isEmpty()) {
             return "{}";
         }
-        StringBuilder sb = new StringBuilder(this.f2150d * 14);
+        StringBuilder sb = new StringBuilder(this.f1632d * 14);
         sb.append('{');
-        for (int i = 0; i < this.f2150d; i++) {
-            if (i > 0) {
+        for (int i2 = 0; i2 < this.f1632d; i2++) {
+            if (i2 > 0) {
                 sb.append(", ");
             }
-            E m547k = m547k(i);
-            if (m547k != this) {
-                sb.append(m547k);
+            E k2 = k(i2);
+            if (k2 != this) {
+                sb.append(k2);
             } else {
                 sb.append("(this Set)");
             }

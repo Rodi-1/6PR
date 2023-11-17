@@ -1,82 +1,75 @@
-package p016o;
+package o;
 
 import android.os.Build;
 import android.util.Log;
 import android.view.LayoutInflater;
 import java.lang.reflect.Field;
 
-/* renamed from: o.e */
 /* loaded from: classes.dex */
-public final class C0475e {
+public final class e {
 
-    /* renamed from: a */
-    private static Field f2210a;
+    /* renamed from: a  reason: collision with root package name */
+    private static Field f1692a;
 
-    /* renamed from: b */
-    private static boolean f2211b;
+    /* renamed from: b  reason: collision with root package name */
+    private static boolean f1693b;
 
-    /* renamed from: c */
-    static final C0477b f2212c;
+    /* renamed from: c  reason: collision with root package name */
+    static final b f1694c;
 
-    /* renamed from: o.e$a */
     /* loaded from: classes.dex */
-    static class C0476a extends C0477b {
-        C0476a() {
+    static class a extends b {
+        a() {
         }
 
-        @Override // p016o.C0475e.C0477b
-        /* renamed from: a */
-        public void mo453a(LayoutInflater layoutInflater, LayoutInflater.Factory2 factory2) {
+        @Override // o.e.b
+        public void a(LayoutInflater layoutInflater, LayoutInflater.Factory2 factory2) {
             layoutInflater.setFactory2(factory2);
         }
     }
 
-    /* renamed from: o.e$b */
     /* loaded from: classes.dex */
-    static class C0477b {
-        C0477b() {
+    static class b {
+        b() {
         }
 
-        /* renamed from: a */
-        public void mo453a(LayoutInflater layoutInflater, LayoutInflater.Factory2 factory2) {
+        public void a(LayoutInflater layoutInflater, LayoutInflater.Factory2 factory2) {
             layoutInflater.setFactory2(factory2);
             LayoutInflater.Factory factory = layoutInflater.getFactory();
             if (factory instanceof LayoutInflater.Factory2) {
-                C0475e.m455a(layoutInflater, (LayoutInflater.Factory2) factory);
+                e.a(layoutInflater, (LayoutInflater.Factory2) factory);
             } else {
-                C0475e.m455a(layoutInflater, factory2);
+                e.a(layoutInflater, factory2);
             }
         }
     }
 
     static {
-        f2212c = Build.VERSION.SDK_INT >= 21 ? new C0476a() : new C0477b();
+        f1694c = Build.VERSION.SDK_INT >= 21 ? new a() : new b();
     }
 
-    /* renamed from: a */
-    static void m455a(LayoutInflater layoutInflater, LayoutInflater.Factory2 factory2) {
-        if (!f2211b) {
+    static void a(LayoutInflater layoutInflater, LayoutInflater.Factory2 factory2) {
+        if (!f1693b) {
             try {
                 Field declaredField = LayoutInflater.class.getDeclaredField("mFactory2");
-                f2210a = declaredField;
+                f1692a = declaredField;
                 declaredField.setAccessible(true);
-            } catch (NoSuchFieldException e) {
-                Log.e("LayoutInflaterCompatHC", "forceSetFactory2 Could not find field 'mFactory2' on class " + LayoutInflater.class.getName() + "; inflation may have unexpected results.", e);
+            } catch (NoSuchFieldException e2) {
+                Log.e("LayoutInflaterCompatHC", "forceSetFactory2 Could not find field 'mFactory2' on class " + LayoutInflater.class.getName() + "; inflation may have unexpected results.", e2);
             }
-            f2211b = true;
+            f1693b = true;
         }
-        Field field = f2210a;
+        Field field = f1692a;
         if (field != null) {
             try {
                 field.set(layoutInflater, factory2);
-            } catch (IllegalAccessException e2) {
-                Log.e("LayoutInflaterCompatHC", "forceSetFactory2 could not set the Factory2 on LayoutInflater " + layoutInflater + "; inflation may have unexpected results.", e2);
+            } catch (IllegalAccessException e3) {
+                Log.e("LayoutInflaterCompatHC", "forceSetFactory2 could not set the Factory2 on LayoutInflater " + layoutInflater + "; inflation may have unexpected results.", e3);
             }
         }
     }
 
-    /* renamed from: b */
-    public static void m454b(LayoutInflater layoutInflater, LayoutInflater.Factory2 factory2) {
-        f2212c.mo453a(layoutInflater, factory2);
+    public static void b(LayoutInflater layoutInflater, LayoutInflater.Factory2 factory2) {
+        f1694c.a(layoutInflater, factory2);
     }
 }

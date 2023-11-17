@@ -4,8 +4,8 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.content.res.XmlResourceParser;
 import android.os.Build;
-import android.support.constraint.C0034c;
 import android.support.constraint.ConstraintLayout;
+import android.support.constraint.c;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.util.SparseIntArray;
@@ -18,882 +18,768 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import org.xmlpull.v1.XmlPullParserException;
-import p005d.C0347a;
-import p005d.C0348b;
-import p005d.C0349c;
 
-/* renamed from: android.support.constraint.b */
 /* loaded from: classes.dex */
-public class C0031b {
+public class b {
 
-    /* renamed from: b */
-    private static final int[] f140b = {0, 4, 8};
+    /* renamed from: b  reason: collision with root package name */
+    private static final int[] f98b = {0, 4, 8};
 
-    /* renamed from: c */
-    private static SparseIntArray f141c;
+    /* renamed from: c  reason: collision with root package name */
+    private static SparseIntArray f99c;
 
-    /* renamed from: a */
-    private HashMap<Integer, C0033b> f142a = new HashMap<>();
+    /* renamed from: a  reason: collision with root package name */
+    private HashMap<Integer, C0002b> f100a = new HashMap<>();
 
     /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: android.support.constraint.b$b */
+    /* renamed from: android.support.constraint.b$b  reason: collision with other inner class name */
     /* loaded from: classes.dex */
-    public static class C0033b {
-
-        /* renamed from: A */
-        public int f143A;
-
-        /* renamed from: B */
-        public int f144B;
-
-        /* renamed from: C */
-        public int f145C;
-
-        /* renamed from: D */
-        public int f146D;
-
-        /* renamed from: E */
-        public int f147E;
-
-        /* renamed from: F */
-        public int f148F;
-
-        /* renamed from: G */
-        public int f149G;
-
-        /* renamed from: H */
-        public int f150H;
-
-        /* renamed from: I */
-        public int f151I;
-
-        /* renamed from: J */
-        public int f152J;
-
-        /* renamed from: K */
-        public int f153K;
-
-        /* renamed from: L */
-        public int f154L;
-
-        /* renamed from: M */
-        public int f155M;
-
-        /* renamed from: N */
-        public int f156N;
-
-        /* renamed from: O */
-        public int f157O;
-
-        /* renamed from: P */
-        public int f158P;
-
-        /* renamed from: Q */
-        public float f159Q;
-
-        /* renamed from: R */
-        public float f160R;
-
-        /* renamed from: S */
-        public int f161S;
-
-        /* renamed from: T */
-        public int f162T;
-
-        /* renamed from: U */
-        public float f163U;
-
-        /* renamed from: V */
-        public boolean f164V;
-
-        /* renamed from: W */
-        public float f165W;
-
-        /* renamed from: X */
-        public float f166X;
-
-        /* renamed from: Y */
-        public float f167Y;
-
-        /* renamed from: Z */
-        public float f168Z;
-
-        /* renamed from: a */
-        boolean f169a;
-
-        /* renamed from: a0 */
-        public float f170a0;
-
-        /* renamed from: b */
-        public int f171b;
-
-        /* renamed from: b0 */
-        public float f172b0;
-
-        /* renamed from: c */
-        public int f173c;
-
-        /* renamed from: c0 */
-        public float f174c0;
-
-        /* renamed from: d */
-        int f175d;
-
-        /* renamed from: d0 */
-        public float f176d0;
-
-        /* renamed from: e */
-        public int f177e;
-
-        /* renamed from: e0 */
-        public float f178e0;
-
-        /* renamed from: f */
-        public int f179f;
-
-        /* renamed from: f0 */
-        public float f180f0;
-
-        /* renamed from: g */
-        public float f181g;
-
-        /* renamed from: g0 */
-        public float f182g0;
-
-        /* renamed from: h */
-        public int f183h;
-
-        /* renamed from: h0 */
-        public boolean f184h0;
-
-        /* renamed from: i */
-        public int f185i;
-
-        /* renamed from: i0 */
-        public boolean f186i0;
-
-        /* renamed from: j */
-        public int f187j;
-
-        /* renamed from: j0 */
-        public int f188j0;
-
-        /* renamed from: k */
-        public int f189k;
-
-        /* renamed from: k0 */
-        public int f190k0;
-
-        /* renamed from: l */
-        public int f191l;
-
-        /* renamed from: l0 */
-        public int f192l0;
-
-        /* renamed from: m */
-        public int f193m;
-
-        /* renamed from: m0 */
-        public int f194m0;
-
-        /* renamed from: n */
-        public int f195n;
-
-        /* renamed from: n0 */
-        public int f196n0;
-
-        /* renamed from: o */
-        public int f197o;
-
-        /* renamed from: o0 */
-        public int f198o0;
-
-        /* renamed from: p */
-        public int f199p;
-
-        /* renamed from: p0 */
-        public float f200p0;
-
-        /* renamed from: q */
-        public int f201q;
-
-        /* renamed from: q0 */
-        public float f202q0;
-
-        /* renamed from: r */
-        public int f203r;
-
-        /* renamed from: r0 */
-        public boolean f204r0;
-
-        /* renamed from: s */
-        public int f205s;
-
-        /* renamed from: s0 */
-        public int f206s0;
-
-        /* renamed from: t */
-        public int f207t;
-
-        /* renamed from: t0 */
-        public int f208t0;
-
-        /* renamed from: u */
-        public float f209u;
-
-        /* renamed from: u0 */
-        public int[] f210u0;
-
-        /* renamed from: v */
-        public float f211v;
-
-        /* renamed from: v0 */
-        public String f212v0;
-
-        /* renamed from: w */
-        public String f213w;
-
-        /* renamed from: x */
-        public int f214x;
-
-        /* renamed from: y */
-        public int f215y;
-
-        /* renamed from: z */
-        public float f216z;
-
-        private C0033b() {
-            this.f169a = false;
-            this.f177e = -1;
-            this.f179f = -1;
-            this.f181g = -1.0f;
-            this.f183h = -1;
-            this.f185i = -1;
-            this.f187j = -1;
-            this.f189k = -1;
-            this.f191l = -1;
-            this.f193m = -1;
-            this.f195n = -1;
-            this.f197o = -1;
-            this.f199p = -1;
-            this.f201q = -1;
-            this.f203r = -1;
-            this.f205s = -1;
-            this.f207t = -1;
-            this.f209u = 0.5f;
-            this.f211v = 0.5f;
-            this.f213w = null;
-            this.f214x = -1;
-            this.f215y = 0;
-            this.f216z = 0.0f;
-            this.f143A = -1;
-            this.f144B = -1;
-            this.f145C = -1;
-            this.f146D = -1;
-            this.f147E = -1;
-            this.f148F = -1;
-            this.f149G = -1;
-            this.f150H = -1;
-            this.f151I = -1;
-            this.f152J = 0;
-            this.f153K = -1;
-            this.f154L = -1;
-            this.f155M = -1;
-            this.f156N = -1;
-            this.f157O = -1;
-            this.f158P = -1;
-            this.f159Q = 0.0f;
-            this.f160R = 0.0f;
-            this.f161S = 0;
-            this.f162T = 0;
-            this.f163U = 1.0f;
-            this.f164V = false;
-            this.f165W = 0.0f;
-            this.f166X = 0.0f;
-            this.f167Y = 0.0f;
-            this.f168Z = 0.0f;
-            this.f170a0 = 1.0f;
-            this.f172b0 = 1.0f;
-            this.f174c0 = Float.NaN;
-            this.f176d0 = Float.NaN;
-            this.f178e0 = 0.0f;
-            this.f180f0 = 0.0f;
-            this.f182g0 = 0.0f;
-            this.f184h0 = false;
-            this.f186i0 = false;
-            this.f188j0 = 0;
-            this.f190k0 = 0;
-            this.f192l0 = -1;
-            this.f194m0 = -1;
-            this.f196n0 = -1;
-            this.f198o0 = -1;
-            this.f200p0 = 1.0f;
-            this.f202q0 = 1.0f;
-            this.f204r0 = false;
-            this.f206s0 = -1;
-            this.f208t0 = -1;
+    public static class C0002b {
+        public int A;
+        public int B;
+        public int C;
+        public int D;
+        public int E;
+        public int F;
+        public int G;
+        public int H;
+        public int I;
+        public int J;
+        public int K;
+        public int L;
+        public int M;
+        public int N;
+        public int O;
+        public int P;
+        public float Q;
+        public float R;
+        public int S;
+        public int T;
+        public float U;
+        public boolean V;
+        public float W;
+        public float X;
+        public float Y;
+        public float Z;
+
+        /* renamed from: a  reason: collision with root package name */
+        boolean f101a;
+        public float a0;
+
+        /* renamed from: b  reason: collision with root package name */
+        public int f102b;
+        public float b0;
+
+        /* renamed from: c  reason: collision with root package name */
+        public int f103c;
+        public float c0;
+
+        /* renamed from: d  reason: collision with root package name */
+        int f104d;
+        public float d0;
+
+        /* renamed from: e  reason: collision with root package name */
+        public int f105e;
+        public float e0;
+
+        /* renamed from: f  reason: collision with root package name */
+        public int f106f;
+        public float f0;
+
+        /* renamed from: g  reason: collision with root package name */
+        public float f107g;
+        public float g0;
+
+        /* renamed from: h  reason: collision with root package name */
+        public int f108h;
+        public boolean h0;
+
+        /* renamed from: i  reason: collision with root package name */
+        public int f109i;
+        public boolean i0;
+
+        /* renamed from: j  reason: collision with root package name */
+        public int f110j;
+        public int j0;
+
+        /* renamed from: k  reason: collision with root package name */
+        public int f111k;
+        public int k0;
+
+        /* renamed from: l  reason: collision with root package name */
+        public int f112l;
+        public int l0;
+
+        /* renamed from: m  reason: collision with root package name */
+        public int f113m;
+        public int m0;
+
+        /* renamed from: n  reason: collision with root package name */
+        public int f114n;
+        public int n0;
+
+        /* renamed from: o  reason: collision with root package name */
+        public int f115o;
+        public int o0;
+
+        /* renamed from: p  reason: collision with root package name */
+        public int f116p;
+        public float p0;
+
+        /* renamed from: q  reason: collision with root package name */
+        public int f117q;
+        public float q0;
+
+        /* renamed from: r  reason: collision with root package name */
+        public int f118r;
+        public boolean r0;
+
+        /* renamed from: s  reason: collision with root package name */
+        public int f119s;
+        public int s0;
+
+        /* renamed from: t  reason: collision with root package name */
+        public int f120t;
+        public int t0;
+
+        /* renamed from: u  reason: collision with root package name */
+        public float f121u;
+        public int[] u0;
+
+        /* renamed from: v  reason: collision with root package name */
+        public float f122v;
+        public String v0;
+
+        /* renamed from: w  reason: collision with root package name */
+        public String f123w;
+        public int x;
+        public int y;
+        public float z;
+
+        private C0002b() {
+            this.f101a = false;
+            this.f105e = -1;
+            this.f106f = -1;
+            this.f107g = -1.0f;
+            this.f108h = -1;
+            this.f109i = -1;
+            this.f110j = -1;
+            this.f111k = -1;
+            this.f112l = -1;
+            this.f113m = -1;
+            this.f114n = -1;
+            this.f115o = -1;
+            this.f116p = -1;
+            this.f117q = -1;
+            this.f118r = -1;
+            this.f119s = -1;
+            this.f120t = -1;
+            this.f121u = 0.5f;
+            this.f122v = 0.5f;
+            this.f123w = null;
+            this.x = -1;
+            this.y = 0;
+            this.z = 0.0f;
+            this.A = -1;
+            this.B = -1;
+            this.C = -1;
+            this.D = -1;
+            this.E = -1;
+            this.F = -1;
+            this.G = -1;
+            this.H = -1;
+            this.I = -1;
+            this.J = 0;
+            this.K = -1;
+            this.L = -1;
+            this.M = -1;
+            this.N = -1;
+            this.O = -1;
+            this.P = -1;
+            this.Q = 0.0f;
+            this.R = 0.0f;
+            this.S = 0;
+            this.T = 0;
+            this.U = 1.0f;
+            this.V = false;
+            this.W = 0.0f;
+            this.X = 0.0f;
+            this.Y = 0.0f;
+            this.Z = 0.0f;
+            this.a0 = 1.0f;
+            this.b0 = 1.0f;
+            this.c0 = Float.NaN;
+            this.d0 = Float.NaN;
+            this.e0 = 0.0f;
+            this.f0 = 0.0f;
+            this.g0 = 0.0f;
+            this.h0 = false;
+            this.i0 = false;
+            this.j0 = 0;
+            this.k0 = 0;
+            this.l0 = -1;
+            this.m0 = -1;
+            this.n0 = -1;
+            this.o0 = -1;
+            this.p0 = 1.0f;
+            this.q0 = 1.0f;
+            this.r0 = false;
+            this.s0 = -1;
+            this.t0 = -1;
         }
 
-        /* renamed from: e */
-        private void m2317e(int i, ConstraintLayout.C0028a c0028a) {
-            this.f175d = i;
-            this.f183h = c0028a.f100d;
-            this.f185i = c0028a.f102e;
-            this.f187j = c0028a.f104f;
-            this.f189k = c0028a.f106g;
-            this.f191l = c0028a.f108h;
-            this.f193m = c0028a.f110i;
-            this.f195n = c0028a.f112j;
-            this.f197o = c0028a.f114k;
-            this.f199p = c0028a.f116l;
-            this.f201q = c0028a.f122p;
-            this.f203r = c0028a.f123q;
-            this.f205s = c0028a.f124r;
-            this.f207t = c0028a.f125s;
-            this.f209u = c0028a.f132z;
-            this.f211v = c0028a.f68A;
-            this.f213w = c0028a.f69B;
-            this.f214x = c0028a.f118m;
-            this.f215y = c0028a.f120n;
-            this.f216z = c0028a.f121o;
-            this.f143A = c0028a.f84Q;
-            this.f144B = c0028a.f85R;
-            this.f145C = c0028a.f86S;
-            this.f181g = c0028a.f98c;
-            this.f177e = c0028a.f94a;
-            this.f179f = c0028a.f96b;
-            this.f171b = ((ViewGroup.MarginLayoutParams) c0028a).width;
-            this.f173c = ((ViewGroup.MarginLayoutParams) c0028a).height;
-            this.f146D = ((ViewGroup.MarginLayoutParams) c0028a).leftMargin;
-            this.f147E = ((ViewGroup.MarginLayoutParams) c0028a).rightMargin;
-            this.f148F = ((ViewGroup.MarginLayoutParams) c0028a).topMargin;
-            this.f149G = ((ViewGroup.MarginLayoutParams) c0028a).bottomMargin;
-            this.f159Q = c0028a.f73F;
-            this.f160R = c0028a.f72E;
-            this.f162T = c0028a.f75H;
-            this.f161S = c0028a.f74G;
-            boolean z = c0028a.f87T;
-            this.f186i0 = c0028a.f88U;
-            this.f188j0 = c0028a.f76I;
-            this.f190k0 = c0028a.f77J;
-            this.f184h0 = z;
-            this.f192l0 = c0028a.f80M;
-            this.f194m0 = c0028a.f81N;
-            this.f196n0 = c0028a.f78K;
-            this.f198o0 = c0028a.f79L;
-            this.f200p0 = c0028a.f82O;
-            this.f202q0 = c0028a.f83P;
-            this.f150H = c0028a.getMarginEnd();
-            this.f151I = c0028a.getMarginStart();
+        private void e(int i2, ConstraintLayout.a aVar) {
+            this.f104d = i2;
+            this.f108h = aVar.f71d;
+            this.f109i = aVar.f72e;
+            this.f110j = aVar.f73f;
+            this.f111k = aVar.f74g;
+            this.f112l = aVar.f75h;
+            this.f113m = aVar.f76i;
+            this.f114n = aVar.f77j;
+            this.f115o = aVar.f78k;
+            this.f116p = aVar.f79l;
+            this.f117q = aVar.f83p;
+            this.f118r = aVar.f84q;
+            this.f119s = aVar.f85r;
+            this.f120t = aVar.f86s;
+            this.f121u = aVar.z;
+            this.f122v = aVar.A;
+            this.f123w = aVar.B;
+            this.x = aVar.f80m;
+            this.y = aVar.f81n;
+            this.z = aVar.f82o;
+            this.A = aVar.Q;
+            this.B = aVar.R;
+            this.C = aVar.S;
+            this.f107g = aVar.f70c;
+            this.f105e = aVar.f68a;
+            this.f106f = aVar.f69b;
+            this.f102b = ((ViewGroup.MarginLayoutParams) aVar).width;
+            this.f103c = ((ViewGroup.MarginLayoutParams) aVar).height;
+            this.D = ((ViewGroup.MarginLayoutParams) aVar).leftMargin;
+            this.E = ((ViewGroup.MarginLayoutParams) aVar).rightMargin;
+            this.F = ((ViewGroup.MarginLayoutParams) aVar).topMargin;
+            this.G = ((ViewGroup.MarginLayoutParams) aVar).bottomMargin;
+            this.Q = aVar.F;
+            this.R = aVar.E;
+            this.T = aVar.H;
+            this.S = aVar.G;
+            boolean z = aVar.T;
+            this.i0 = aVar.U;
+            this.j0 = aVar.I;
+            this.k0 = aVar.J;
+            this.h0 = z;
+            this.l0 = aVar.M;
+            this.m0 = aVar.N;
+            this.n0 = aVar.K;
+            this.o0 = aVar.L;
+            this.p0 = aVar.O;
+            this.q0 = aVar.P;
+            this.H = aVar.getMarginEnd();
+            this.I = aVar.getMarginStart();
         }
 
         /* JADX INFO: Access modifiers changed from: private */
-        /* renamed from: f */
-        public void m2316f(int i, C0034c.C0035a c0035a) {
-            m2317e(i, c0035a);
-            this.f163U = c0035a.f218n0;
-            this.f166X = c0035a.f221q0;
-            this.f167Y = c0035a.f222r0;
-            this.f168Z = c0035a.f223s0;
-            this.f170a0 = c0035a.f224t0;
-            this.f172b0 = c0035a.f225u0;
-            this.f174c0 = c0035a.f226v0;
-            this.f176d0 = c0035a.f227w0;
-            this.f178e0 = c0035a.f228x0;
-            this.f180f0 = c0035a.f229y0;
-            this.f182g0 = c0035a.f230z0;
-            this.f165W = c0035a.f220p0;
-            this.f164V = c0035a.f219o0;
+        public void f(int i2, c.a aVar) {
+            e(i2, aVar);
+            this.U = aVar.n0;
+            this.X = aVar.q0;
+            this.Y = aVar.r0;
+            this.Z = aVar.s0;
+            this.a0 = aVar.t0;
+            this.b0 = aVar.u0;
+            this.c0 = aVar.v0;
+            this.d0 = aVar.w0;
+            this.e0 = aVar.x0;
+            this.f0 = aVar.y0;
+            this.g0 = aVar.z0;
+            this.W = aVar.p0;
+            this.V = aVar.o0;
         }
 
         /* JADX INFO: Access modifiers changed from: private */
-        /* renamed from: g */
-        public void m2315g(AbstractC0030a abstractC0030a, int i, C0034c.C0035a c0035a) {
-            m2316f(i, c0035a);
-            if (abstractC0030a instanceof C0347a) {
-                this.f208t0 = 1;
-                C0347a c0347a = (C0347a) abstractC0030a;
-                this.f206s0 = c0347a.getType();
-                this.f210u0 = c0347a.getReferencedIds();
+        public void g(android.support.constraint.a aVar, int i2, c.a aVar2) {
+            f(i2, aVar2);
+            if (aVar instanceof d.a) {
+                this.t0 = 1;
+                d.a aVar3 = (d.a) aVar;
+                this.s0 = aVar3.getType();
+                this.u0 = aVar3.getReferencedIds();
             }
         }
 
-        /* renamed from: c */
-        public void m2319c(ConstraintLayout.C0028a c0028a) {
-            c0028a.f100d = this.f183h;
-            c0028a.f102e = this.f185i;
-            c0028a.f104f = this.f187j;
-            c0028a.f106g = this.f189k;
-            c0028a.f108h = this.f191l;
-            c0028a.f110i = this.f193m;
-            c0028a.f112j = this.f195n;
-            c0028a.f114k = this.f197o;
-            c0028a.f116l = this.f199p;
-            c0028a.f122p = this.f201q;
-            c0028a.f123q = this.f203r;
-            c0028a.f124r = this.f205s;
-            c0028a.f125s = this.f207t;
-            ((ViewGroup.MarginLayoutParams) c0028a).leftMargin = this.f146D;
-            ((ViewGroup.MarginLayoutParams) c0028a).rightMargin = this.f147E;
-            ((ViewGroup.MarginLayoutParams) c0028a).topMargin = this.f148F;
-            ((ViewGroup.MarginLayoutParams) c0028a).bottomMargin = this.f149G;
-            c0028a.f130x = this.f158P;
-            c0028a.f131y = this.f157O;
-            c0028a.f132z = this.f209u;
-            c0028a.f68A = this.f211v;
-            c0028a.f118m = this.f214x;
-            c0028a.f120n = this.f215y;
-            c0028a.f121o = this.f216z;
-            c0028a.f69B = this.f213w;
-            c0028a.f84Q = this.f143A;
-            c0028a.f85R = this.f144B;
-            c0028a.f73F = this.f159Q;
-            c0028a.f72E = this.f160R;
-            c0028a.f75H = this.f162T;
-            c0028a.f74G = this.f161S;
-            c0028a.f87T = this.f184h0;
-            c0028a.f88U = this.f186i0;
-            c0028a.f76I = this.f188j0;
-            c0028a.f77J = this.f190k0;
-            c0028a.f80M = this.f192l0;
-            c0028a.f81N = this.f194m0;
-            c0028a.f78K = this.f196n0;
-            c0028a.f79L = this.f198o0;
-            c0028a.f82O = this.f200p0;
-            c0028a.f83P = this.f202q0;
-            c0028a.f86S = this.f145C;
-            c0028a.f98c = this.f181g;
-            c0028a.f94a = this.f177e;
-            c0028a.f96b = this.f179f;
-            ((ViewGroup.MarginLayoutParams) c0028a).width = this.f171b;
-            ((ViewGroup.MarginLayoutParams) c0028a).height = this.f173c;
-            c0028a.setMarginStart(this.f151I);
-            c0028a.setMarginEnd(this.f150H);
-            c0028a.m2334a();
+        public void c(ConstraintLayout.a aVar) {
+            aVar.f71d = this.f108h;
+            aVar.f72e = this.f109i;
+            aVar.f73f = this.f110j;
+            aVar.f74g = this.f111k;
+            aVar.f75h = this.f112l;
+            aVar.f76i = this.f113m;
+            aVar.f77j = this.f114n;
+            aVar.f78k = this.f115o;
+            aVar.f79l = this.f116p;
+            aVar.f83p = this.f117q;
+            aVar.f84q = this.f118r;
+            aVar.f85r = this.f119s;
+            aVar.f86s = this.f120t;
+            ((ViewGroup.MarginLayoutParams) aVar).leftMargin = this.D;
+            ((ViewGroup.MarginLayoutParams) aVar).rightMargin = this.E;
+            ((ViewGroup.MarginLayoutParams) aVar).topMargin = this.F;
+            ((ViewGroup.MarginLayoutParams) aVar).bottomMargin = this.G;
+            aVar.x = this.P;
+            aVar.y = this.O;
+            aVar.z = this.f121u;
+            aVar.A = this.f122v;
+            aVar.f80m = this.x;
+            aVar.f81n = this.y;
+            aVar.f82o = this.z;
+            aVar.B = this.f123w;
+            aVar.Q = this.A;
+            aVar.R = this.B;
+            aVar.F = this.Q;
+            aVar.E = this.R;
+            aVar.H = this.T;
+            aVar.G = this.S;
+            aVar.T = this.h0;
+            aVar.U = this.i0;
+            aVar.I = this.j0;
+            aVar.J = this.k0;
+            aVar.M = this.l0;
+            aVar.N = this.m0;
+            aVar.K = this.n0;
+            aVar.L = this.o0;
+            aVar.O = this.p0;
+            aVar.P = this.q0;
+            aVar.S = this.C;
+            aVar.f70c = this.f107g;
+            aVar.f68a = this.f105e;
+            aVar.f69b = this.f106f;
+            ((ViewGroup.MarginLayoutParams) aVar).width = this.f102b;
+            ((ViewGroup.MarginLayoutParams) aVar).height = this.f103c;
+            aVar.setMarginStart(this.I);
+            aVar.setMarginEnd(this.H);
+            aVar.a();
         }
 
         /* renamed from: d */
-        public C0033b clone() {
-            C0033b c0033b = new C0033b();
-            c0033b.f169a = this.f169a;
-            c0033b.f171b = this.f171b;
-            c0033b.f173c = this.f173c;
-            c0033b.f177e = this.f177e;
-            c0033b.f179f = this.f179f;
-            c0033b.f181g = this.f181g;
-            c0033b.f183h = this.f183h;
-            c0033b.f185i = this.f185i;
-            c0033b.f187j = this.f187j;
-            c0033b.f189k = this.f189k;
-            c0033b.f191l = this.f191l;
-            c0033b.f193m = this.f193m;
-            c0033b.f195n = this.f195n;
-            c0033b.f197o = this.f197o;
-            c0033b.f199p = this.f199p;
-            c0033b.f201q = this.f201q;
-            c0033b.f203r = this.f203r;
-            c0033b.f205s = this.f205s;
-            c0033b.f207t = this.f207t;
-            c0033b.f209u = this.f209u;
-            c0033b.f211v = this.f211v;
-            c0033b.f213w = this.f213w;
-            c0033b.f143A = this.f143A;
-            c0033b.f144B = this.f144B;
-            c0033b.f209u = this.f209u;
-            c0033b.f209u = this.f209u;
-            c0033b.f209u = this.f209u;
-            c0033b.f209u = this.f209u;
-            c0033b.f209u = this.f209u;
-            c0033b.f145C = this.f145C;
-            c0033b.f146D = this.f146D;
-            c0033b.f147E = this.f147E;
-            c0033b.f148F = this.f148F;
-            c0033b.f149G = this.f149G;
-            c0033b.f150H = this.f150H;
-            c0033b.f151I = this.f151I;
-            c0033b.f152J = this.f152J;
-            c0033b.f153K = this.f153K;
-            c0033b.f154L = this.f154L;
-            c0033b.f155M = this.f155M;
-            c0033b.f156N = this.f156N;
-            c0033b.f157O = this.f157O;
-            c0033b.f158P = this.f158P;
-            c0033b.f159Q = this.f159Q;
-            c0033b.f160R = this.f160R;
-            c0033b.f161S = this.f161S;
-            c0033b.f162T = this.f162T;
-            c0033b.f163U = this.f163U;
-            c0033b.f164V = this.f164V;
-            c0033b.f165W = this.f165W;
-            c0033b.f166X = this.f166X;
-            c0033b.f167Y = this.f167Y;
-            c0033b.f168Z = this.f168Z;
-            c0033b.f170a0 = this.f170a0;
-            c0033b.f172b0 = this.f172b0;
-            c0033b.f174c0 = this.f174c0;
-            c0033b.f176d0 = this.f176d0;
-            c0033b.f178e0 = this.f178e0;
-            c0033b.f180f0 = this.f180f0;
-            c0033b.f182g0 = this.f182g0;
-            c0033b.f184h0 = this.f184h0;
-            c0033b.f186i0 = this.f186i0;
-            c0033b.f188j0 = this.f188j0;
-            c0033b.f190k0 = this.f190k0;
-            c0033b.f192l0 = this.f192l0;
-            c0033b.f194m0 = this.f194m0;
-            c0033b.f196n0 = this.f196n0;
-            c0033b.f198o0 = this.f198o0;
-            c0033b.f200p0 = this.f200p0;
-            c0033b.f202q0 = this.f202q0;
-            c0033b.f206s0 = this.f206s0;
-            c0033b.f208t0 = this.f208t0;
-            int[] iArr = this.f210u0;
+        public C0002b clone() {
+            C0002b c0002b = new C0002b();
+            c0002b.f101a = this.f101a;
+            c0002b.f102b = this.f102b;
+            c0002b.f103c = this.f103c;
+            c0002b.f105e = this.f105e;
+            c0002b.f106f = this.f106f;
+            c0002b.f107g = this.f107g;
+            c0002b.f108h = this.f108h;
+            c0002b.f109i = this.f109i;
+            c0002b.f110j = this.f110j;
+            c0002b.f111k = this.f111k;
+            c0002b.f112l = this.f112l;
+            c0002b.f113m = this.f113m;
+            c0002b.f114n = this.f114n;
+            c0002b.f115o = this.f115o;
+            c0002b.f116p = this.f116p;
+            c0002b.f117q = this.f117q;
+            c0002b.f118r = this.f118r;
+            c0002b.f119s = this.f119s;
+            c0002b.f120t = this.f120t;
+            c0002b.f121u = this.f121u;
+            c0002b.f122v = this.f122v;
+            c0002b.f123w = this.f123w;
+            c0002b.A = this.A;
+            c0002b.B = this.B;
+            c0002b.f121u = this.f121u;
+            c0002b.f121u = this.f121u;
+            c0002b.f121u = this.f121u;
+            c0002b.f121u = this.f121u;
+            c0002b.f121u = this.f121u;
+            c0002b.C = this.C;
+            c0002b.D = this.D;
+            c0002b.E = this.E;
+            c0002b.F = this.F;
+            c0002b.G = this.G;
+            c0002b.H = this.H;
+            c0002b.I = this.I;
+            c0002b.J = this.J;
+            c0002b.K = this.K;
+            c0002b.L = this.L;
+            c0002b.M = this.M;
+            c0002b.N = this.N;
+            c0002b.O = this.O;
+            c0002b.P = this.P;
+            c0002b.Q = this.Q;
+            c0002b.R = this.R;
+            c0002b.S = this.S;
+            c0002b.T = this.T;
+            c0002b.U = this.U;
+            c0002b.V = this.V;
+            c0002b.W = this.W;
+            c0002b.X = this.X;
+            c0002b.Y = this.Y;
+            c0002b.Z = this.Z;
+            c0002b.a0 = this.a0;
+            c0002b.b0 = this.b0;
+            c0002b.c0 = this.c0;
+            c0002b.d0 = this.d0;
+            c0002b.e0 = this.e0;
+            c0002b.f0 = this.f0;
+            c0002b.g0 = this.g0;
+            c0002b.h0 = this.h0;
+            c0002b.i0 = this.i0;
+            c0002b.j0 = this.j0;
+            c0002b.k0 = this.k0;
+            c0002b.l0 = this.l0;
+            c0002b.m0 = this.m0;
+            c0002b.n0 = this.n0;
+            c0002b.o0 = this.o0;
+            c0002b.p0 = this.p0;
+            c0002b.q0 = this.q0;
+            c0002b.s0 = this.s0;
+            c0002b.t0 = this.t0;
+            int[] iArr = this.u0;
             if (iArr != null) {
-                c0033b.f210u0 = Arrays.copyOf(iArr, iArr.length);
+                c0002b.u0 = Arrays.copyOf(iArr, iArr.length);
             }
-            c0033b.f214x = this.f214x;
-            c0033b.f215y = this.f215y;
-            c0033b.f216z = this.f216z;
-            c0033b.f204r0 = this.f204r0;
-            return c0033b;
+            c0002b.x = this.x;
+            c0002b.y = this.y;
+            c0002b.z = this.z;
+            c0002b.r0 = this.r0;
+            return c0002b;
         }
     }
 
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
-        f141c = sparseIntArray;
-        sparseIntArray.append(C0349c.f1708h1, 25);
-        f141c.append(C0349c.f1711i1, 26);
-        f141c.append(C0349c.f1717k1, 29);
-        f141c.append(C0349c.f1720l1, 30);
-        f141c.append(C0349c.f1735q1, 36);
-        f141c.append(C0349c.f1732p1, 35);
-        f141c.append(C0349c.f1664P0, 4);
-        f141c.append(C0349c.f1662O0, 3);
-        f141c.append(C0349c.f1658M0, 1);
-        f141c.append(C0349c.f1759y1, 6);
-        f141c.append(C0349c.f1762z1, 7);
-        f141c.append(C0349c.f1678W0, 17);
-        f141c.append(C0349c.f1680X0, 18);
-        f141c.append(C0349c.f1682Y0, 19);
-        f141c.append(C0349c.f1716k0, 27);
-        f141c.append(C0349c.f1723m1, 32);
-        f141c.append(C0349c.f1726n1, 33);
-        f141c.append(C0349c.f1676V0, 10);
-        f141c.append(C0349c.f1674U0, 9);
-        f141c.append(C0349c.f1634C1, 13);
-        f141c.append(C0349c.f1643F1, 16);
-        f141c.append(C0349c.f1637D1, 14);
-        f141c.append(C0349c.f1628A1, 11);
-        f141c.append(C0349c.f1640E1, 15);
-        f141c.append(C0349c.f1631B1, 12);
-        f141c.append(C0349c.f1744t1, 40);
-        f141c.append(C0349c.f1702f1, 39);
-        f141c.append(C0349c.f1699e1, 41);
-        f141c.append(C0349c.f1741s1, 42);
-        f141c.append(C0349c.f1696d1, 20);
-        f141c.append(C0349c.f1738r1, 37);
-        f141c.append(C0349c.f1672T0, 5);
-        f141c.append(C0349c.f1705g1, 75);
-        f141c.append(C0349c.f1729o1, 75);
-        f141c.append(C0349c.f1714j1, 75);
-        f141c.append(C0349c.f1660N0, 75);
-        f141c.append(C0349c.f1656L0, 75);
-        f141c.append(C0349c.f1731p0, 24);
-        f141c.append(C0349c.f1737r0, 28);
-        f141c.append(C0349c.f1636D0, 31);
-        f141c.append(C0349c.f1639E0, 8);
-        f141c.append(C0349c.f1734q0, 34);
-        f141c.append(C0349c.f1740s0, 2);
-        f141c.append(C0349c.f1725n0, 23);
-        f141c.append(C0349c.f1728o0, 21);
-        f141c.append(C0349c.f1722m0, 22);
-        f141c.append(C0349c.f1743t0, 43);
-        f141c.append(C0349c.f1645G0, 44);
-        f141c.append(C0349c.f1630B0, 45);
-        f141c.append(C0349c.f1633C0, 46);
-        f141c.append(C0349c.f1627A0, 60);
-        f141c.append(C0349c.f1758y0, 47);
-        f141c.append(C0349c.f1761z0, 48);
-        f141c.append(C0349c.f1746u0, 49);
-        f141c.append(C0349c.f1749v0, 50);
-        f141c.append(C0349c.f1752w0, 51);
-        f141c.append(C0349c.f1755x0, 52);
-        f141c.append(C0349c.f1642F0, 53);
-        f141c.append(C0349c.f1747u1, 54);
-        f141c.append(C0349c.f1684Z0, 55);
-        f141c.append(C0349c.f1750v1, 56);
-        f141c.append(C0349c.f1687a1, 57);
-        f141c.append(C0349c.f1753w1, 58);
-        f141c.append(C0349c.f1690b1, 59);
-        f141c.append(C0349c.f1666Q0, 61);
-        f141c.append(C0349c.f1670S0, 62);
-        f141c.append(C0349c.f1668R0, 63);
-        f141c.append(C0349c.f1719l0, 38);
-        f141c.append(C0349c.f1756x1, 69);
-        f141c.append(C0349c.f1693c1, 70);
-        f141c.append(C0349c.f1652J0, 71);
-        f141c.append(C0349c.f1650I0, 72);
-        f141c.append(C0349c.f1654K0, 73);
-        f141c.append(C0349c.f1648H0, 74);
+        f99c = sparseIntArray;
+        sparseIntArray.append(d.c.h1, 25);
+        f99c.append(d.c.i1, 26);
+        f99c.append(d.c.k1, 29);
+        f99c.append(d.c.l1, 30);
+        f99c.append(d.c.q1, 36);
+        f99c.append(d.c.p1, 35);
+        f99c.append(d.c.P0, 4);
+        f99c.append(d.c.O0, 3);
+        f99c.append(d.c.M0, 1);
+        f99c.append(d.c.y1, 6);
+        f99c.append(d.c.z1, 7);
+        f99c.append(d.c.W0, 17);
+        f99c.append(d.c.X0, 18);
+        f99c.append(d.c.Y0, 19);
+        f99c.append(d.c.k0, 27);
+        f99c.append(d.c.m1, 32);
+        f99c.append(d.c.n1, 33);
+        f99c.append(d.c.V0, 10);
+        f99c.append(d.c.U0, 9);
+        f99c.append(d.c.C1, 13);
+        f99c.append(d.c.F1, 16);
+        f99c.append(d.c.D1, 14);
+        f99c.append(d.c.A1, 11);
+        f99c.append(d.c.E1, 15);
+        f99c.append(d.c.B1, 12);
+        f99c.append(d.c.t1, 40);
+        f99c.append(d.c.f1, 39);
+        f99c.append(d.c.e1, 41);
+        f99c.append(d.c.s1, 42);
+        f99c.append(d.c.d1, 20);
+        f99c.append(d.c.r1, 37);
+        f99c.append(d.c.T0, 5);
+        f99c.append(d.c.g1, 75);
+        f99c.append(d.c.o1, 75);
+        f99c.append(d.c.j1, 75);
+        f99c.append(d.c.N0, 75);
+        f99c.append(d.c.L0, 75);
+        f99c.append(d.c.p0, 24);
+        f99c.append(d.c.r0, 28);
+        f99c.append(d.c.D0, 31);
+        f99c.append(d.c.E0, 8);
+        f99c.append(d.c.q0, 34);
+        f99c.append(d.c.s0, 2);
+        f99c.append(d.c.n0, 23);
+        f99c.append(d.c.o0, 21);
+        f99c.append(d.c.m0, 22);
+        f99c.append(d.c.t0, 43);
+        f99c.append(d.c.G0, 44);
+        f99c.append(d.c.B0, 45);
+        f99c.append(d.c.C0, 46);
+        f99c.append(d.c.A0, 60);
+        f99c.append(d.c.y0, 47);
+        f99c.append(d.c.z0, 48);
+        f99c.append(d.c.u0, 49);
+        f99c.append(d.c.v0, 50);
+        f99c.append(d.c.w0, 51);
+        f99c.append(d.c.x0, 52);
+        f99c.append(d.c.F0, 53);
+        f99c.append(d.c.u1, 54);
+        f99c.append(d.c.Z0, 55);
+        f99c.append(d.c.v1, 56);
+        f99c.append(d.c.a1, 57);
+        f99c.append(d.c.w1, 58);
+        f99c.append(d.c.b1, 59);
+        f99c.append(d.c.Q0, 61);
+        f99c.append(d.c.S0, 62);
+        f99c.append(d.c.R0, 63);
+        f99c.append(d.c.l0, 38);
+        f99c.append(d.c.x1, 69);
+        f99c.append(d.c.c1, 70);
+        f99c.append(d.c.J0, 71);
+        f99c.append(d.c.I0, 72);
+        f99c.append(d.c.K0, 73);
+        f99c.append(d.c.H0, 74);
     }
 
-    /* renamed from: c */
-    private int[] m2326c(View view, String str) {
-        int i;
-        Object m2347c;
+    private int[] c(View view, String str) {
+        int i2;
+        Object c2;
         String[] split = str.split(",");
         Context context = view.getContext();
         int[] iArr = new int[split.length];
-        int i2 = 0;
         int i3 = 0;
-        while (i2 < split.length) {
-            String trim = split[i2].trim();
+        int i4 = 0;
+        while (i3 < split.length) {
+            String trim = split[i3].trim();
             try {
-                i = C0348b.class.getField(trim).getInt(null);
+                i2 = d.b.class.getField(trim).getInt(null);
             } catch (Exception unused) {
-                i = 0;
+                i2 = 0;
             }
-            if (i == 0) {
-                i = context.getResources().getIdentifier(trim, "id", context.getPackageName());
+            if (i2 == 0) {
+                i2 = context.getResources().getIdentifier(trim, "id", context.getPackageName());
             }
-            if (i == 0 && view.isInEditMode() && (view.getParent() instanceof ConstraintLayout) && (m2347c = ((ConstraintLayout) view.getParent()).m2347c(0, trim)) != null && (m2347c instanceof Integer)) {
-                i = ((Integer) m2347c).intValue();
+            if (i2 == 0 && view.isInEditMode() && (view.getParent() instanceof ConstraintLayout) && (c2 = ((ConstraintLayout) view.getParent()).c(0, trim)) != null && (c2 instanceof Integer)) {
+                i2 = ((Integer) c2).intValue();
             }
-            iArr[i3] = i;
-            i2++;
+            iArr[i4] = i2;
             i3++;
+            i4++;
         }
-        return i3 != split.length ? Arrays.copyOf(iArr, i3) : iArr;
+        return i4 != split.length ? Arrays.copyOf(iArr, i4) : iArr;
     }
 
-    /* renamed from: d */
-    private C0033b m2325d(Context context, AttributeSet attributeSet) {
-        C0033b c0033b = new C0033b();
-        TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C0349c.f1713j0);
-        m2322g(c0033b, obtainStyledAttributes);
+    private C0002b d(Context context, AttributeSet attributeSet) {
+        C0002b c0002b = new C0002b();
+        TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, d.c.j0);
+        g(c0002b, obtainStyledAttributes);
         obtainStyledAttributes.recycle();
-        return c0033b;
+        return c0002b;
     }
 
-    /* renamed from: f */
-    private static int m2323f(TypedArray typedArray, int i, int i2) {
-        int resourceId = typedArray.getResourceId(i, i2);
-        return resourceId == -1 ? typedArray.getInt(i, -1) : resourceId;
+    private static int f(TypedArray typedArray, int i2, int i3) {
+        int resourceId = typedArray.getResourceId(i2, i3);
+        return resourceId == -1 ? typedArray.getInt(i2, -1) : resourceId;
     }
 
-    /* renamed from: g */
-    private void m2322g(C0033b c0033b, TypedArray typedArray) {
+    private void g(C0002b c0002b, TypedArray typedArray) {
         StringBuilder sb;
         String str;
         int indexCount = typedArray.getIndexCount();
-        for (int i = 0; i < indexCount; i++) {
-            int index = typedArray.getIndex(i);
-            int i2 = f141c.get(index);
-            switch (i2) {
+        for (int i2 = 0; i2 < indexCount; i2++) {
+            int index = typedArray.getIndex(i2);
+            int i3 = f99c.get(index);
+            switch (i3) {
                 case 1:
-                    c0033b.f199p = m2323f(typedArray, index, c0033b.f199p);
+                    c0002b.f116p = f(typedArray, index, c0002b.f116p);
                     break;
                 case 2:
-                    c0033b.f149G = typedArray.getDimensionPixelSize(index, c0033b.f149G);
+                    c0002b.G = typedArray.getDimensionPixelSize(index, c0002b.G);
                     break;
                 case 3:
-                    c0033b.f197o = m2323f(typedArray, index, c0033b.f197o);
+                    c0002b.f115o = f(typedArray, index, c0002b.f115o);
                     break;
                 case 4:
-                    c0033b.f195n = m2323f(typedArray, index, c0033b.f195n);
+                    c0002b.f114n = f(typedArray, index, c0002b.f114n);
                     break;
                 case 5:
-                    c0033b.f213w = typedArray.getString(index);
+                    c0002b.f123w = typedArray.getString(index);
                     break;
                 case 6:
-                    c0033b.f143A = typedArray.getDimensionPixelOffset(index, c0033b.f143A);
+                    c0002b.A = typedArray.getDimensionPixelOffset(index, c0002b.A);
                     break;
                 case 7:
-                    c0033b.f144B = typedArray.getDimensionPixelOffset(index, c0033b.f144B);
+                    c0002b.B = typedArray.getDimensionPixelOffset(index, c0002b.B);
                     break;
                 case 8:
-                    c0033b.f150H = typedArray.getDimensionPixelSize(index, c0033b.f150H);
+                    c0002b.H = typedArray.getDimensionPixelSize(index, c0002b.H);
                     break;
                 case 9:
-                    c0033b.f207t = m2323f(typedArray, index, c0033b.f207t);
+                    c0002b.f120t = f(typedArray, index, c0002b.f120t);
                     break;
                 case 10:
-                    c0033b.f205s = m2323f(typedArray, index, c0033b.f205s);
+                    c0002b.f119s = f(typedArray, index, c0002b.f119s);
                     break;
                 case 11:
-                    c0033b.f156N = typedArray.getDimensionPixelSize(index, c0033b.f156N);
+                    c0002b.N = typedArray.getDimensionPixelSize(index, c0002b.N);
                     break;
                 case 12:
-                    c0033b.f157O = typedArray.getDimensionPixelSize(index, c0033b.f157O);
+                    c0002b.O = typedArray.getDimensionPixelSize(index, c0002b.O);
                     break;
                 case 13:
-                    c0033b.f153K = typedArray.getDimensionPixelSize(index, c0033b.f153K);
+                    c0002b.K = typedArray.getDimensionPixelSize(index, c0002b.K);
                     break;
                 case 14:
-                    c0033b.f155M = typedArray.getDimensionPixelSize(index, c0033b.f155M);
+                    c0002b.M = typedArray.getDimensionPixelSize(index, c0002b.M);
                     break;
                 case 15:
-                    c0033b.f158P = typedArray.getDimensionPixelSize(index, c0033b.f158P);
+                    c0002b.P = typedArray.getDimensionPixelSize(index, c0002b.P);
                     break;
                 case 16:
-                    c0033b.f154L = typedArray.getDimensionPixelSize(index, c0033b.f154L);
+                    c0002b.L = typedArray.getDimensionPixelSize(index, c0002b.L);
                     break;
                 case 17:
-                    c0033b.f177e = typedArray.getDimensionPixelOffset(index, c0033b.f177e);
+                    c0002b.f105e = typedArray.getDimensionPixelOffset(index, c0002b.f105e);
                     break;
                 case 18:
-                    c0033b.f179f = typedArray.getDimensionPixelOffset(index, c0033b.f179f);
+                    c0002b.f106f = typedArray.getDimensionPixelOffset(index, c0002b.f106f);
                     break;
                 case 19:
-                    c0033b.f181g = typedArray.getFloat(index, c0033b.f181g);
+                    c0002b.f107g = typedArray.getFloat(index, c0002b.f107g);
                     break;
                 case 20:
-                    c0033b.f209u = typedArray.getFloat(index, c0033b.f209u);
+                    c0002b.f121u = typedArray.getFloat(index, c0002b.f121u);
                     break;
                 case 21:
-                    c0033b.f173c = typedArray.getLayoutDimension(index, c0033b.f173c);
+                    c0002b.f103c = typedArray.getLayoutDimension(index, c0002b.f103c);
                     break;
                 case 22:
-                    int i3 = typedArray.getInt(index, c0033b.f152J);
-                    c0033b.f152J = i3;
-                    c0033b.f152J = f140b[i3];
+                    int i4 = typedArray.getInt(index, c0002b.J);
+                    c0002b.J = i4;
+                    c0002b.J = f98b[i4];
                     break;
                 case 23:
-                    c0033b.f171b = typedArray.getLayoutDimension(index, c0033b.f171b);
+                    c0002b.f102b = typedArray.getLayoutDimension(index, c0002b.f102b);
                     break;
                 case 24:
-                    c0033b.f146D = typedArray.getDimensionPixelSize(index, c0033b.f146D);
+                    c0002b.D = typedArray.getDimensionPixelSize(index, c0002b.D);
                     break;
                 case 25:
-                    c0033b.f183h = m2323f(typedArray, index, c0033b.f183h);
+                    c0002b.f108h = f(typedArray, index, c0002b.f108h);
                     break;
                 case 26:
-                    c0033b.f185i = m2323f(typedArray, index, c0033b.f185i);
+                    c0002b.f109i = f(typedArray, index, c0002b.f109i);
                     break;
                 case 27:
-                    c0033b.f145C = typedArray.getInt(index, c0033b.f145C);
+                    c0002b.C = typedArray.getInt(index, c0002b.C);
                     break;
                 case 28:
-                    c0033b.f147E = typedArray.getDimensionPixelSize(index, c0033b.f147E);
+                    c0002b.E = typedArray.getDimensionPixelSize(index, c0002b.E);
                     break;
                 case 29:
-                    c0033b.f187j = m2323f(typedArray, index, c0033b.f187j);
+                    c0002b.f110j = f(typedArray, index, c0002b.f110j);
                     break;
                 case 30:
-                    c0033b.f189k = m2323f(typedArray, index, c0033b.f189k);
+                    c0002b.f111k = f(typedArray, index, c0002b.f111k);
                     break;
-                case C0349c.f1641F /* 31 */:
-                    c0033b.f151I = typedArray.getDimensionPixelSize(index, c0033b.f151I);
+                case d.c.F /* 31 */:
+                    c0002b.I = typedArray.getDimensionPixelSize(index, c0002b.I);
                     break;
-                case C0349c.f1644G /* 32 */:
-                    c0033b.f201q = m2323f(typedArray, index, c0033b.f201q);
+                case d.c.G /* 32 */:
+                    c0002b.f117q = f(typedArray, index, c0002b.f117q);
                     break;
                 case 33:
-                    c0033b.f203r = m2323f(typedArray, index, c0033b.f203r);
+                    c0002b.f118r = f(typedArray, index, c0002b.f118r);
                     break;
                 case 34:
-                    c0033b.f148F = typedArray.getDimensionPixelSize(index, c0033b.f148F);
+                    c0002b.F = typedArray.getDimensionPixelSize(index, c0002b.F);
                     break;
                 case 35:
-                    c0033b.f193m = m2323f(typedArray, index, c0033b.f193m);
+                    c0002b.f113m = f(typedArray, index, c0002b.f113m);
                     break;
                 case 36:
-                    c0033b.f191l = m2323f(typedArray, index, c0033b.f191l);
+                    c0002b.f112l = f(typedArray, index, c0002b.f112l);
                     break;
                 case 37:
-                    c0033b.f211v = typedArray.getFloat(index, c0033b.f211v);
+                    c0002b.f122v = typedArray.getFloat(index, c0002b.f122v);
                     break;
                 case 38:
-                    c0033b.f175d = typedArray.getResourceId(index, c0033b.f175d);
+                    c0002b.f104d = typedArray.getResourceId(index, c0002b.f104d);
                     break;
                 case 39:
-                    c0033b.f160R = typedArray.getFloat(index, c0033b.f160R);
+                    c0002b.R = typedArray.getFloat(index, c0002b.R);
                     break;
                 case 40:
-                    c0033b.f159Q = typedArray.getFloat(index, c0033b.f159Q);
+                    c0002b.Q = typedArray.getFloat(index, c0002b.Q);
                     break;
                 case 41:
-                    c0033b.f161S = typedArray.getInt(index, c0033b.f161S);
+                    c0002b.S = typedArray.getInt(index, c0002b.S);
                     break;
                 case 42:
-                    c0033b.f162T = typedArray.getInt(index, c0033b.f162T);
+                    c0002b.T = typedArray.getInt(index, c0002b.T);
                     break;
                 case 43:
-                    c0033b.f163U = typedArray.getFloat(index, c0033b.f163U);
+                    c0002b.U = typedArray.getFloat(index, c0002b.U);
                     break;
                 case 44:
-                    c0033b.f164V = true;
-                    c0033b.f165W = typedArray.getDimension(index, c0033b.f165W);
+                    c0002b.V = true;
+                    c0002b.W = typedArray.getDimension(index, c0002b.W);
                     break;
                 case 45:
-                    c0033b.f167Y = typedArray.getFloat(index, c0033b.f167Y);
+                    c0002b.Y = typedArray.getFloat(index, c0002b.Y);
                     break;
                 case 46:
-                    c0033b.f168Z = typedArray.getFloat(index, c0033b.f168Z);
+                    c0002b.Z = typedArray.getFloat(index, c0002b.Z);
                     break;
                 case 47:
-                    c0033b.f170a0 = typedArray.getFloat(index, c0033b.f170a0);
+                    c0002b.a0 = typedArray.getFloat(index, c0002b.a0);
                     break;
                 case 48:
-                    c0033b.f172b0 = typedArray.getFloat(index, c0033b.f172b0);
+                    c0002b.b0 = typedArray.getFloat(index, c0002b.b0);
                     break;
                 case 49:
-                    c0033b.f174c0 = typedArray.getFloat(index, c0033b.f174c0);
+                    c0002b.c0 = typedArray.getFloat(index, c0002b.c0);
                     break;
                 case 50:
-                    c0033b.f176d0 = typedArray.getFloat(index, c0033b.f176d0);
+                    c0002b.d0 = typedArray.getFloat(index, c0002b.d0);
                     break;
                 case 51:
-                    c0033b.f178e0 = typedArray.getDimension(index, c0033b.f178e0);
+                    c0002b.e0 = typedArray.getDimension(index, c0002b.e0);
                     break;
                 case 52:
-                    c0033b.f180f0 = typedArray.getDimension(index, c0033b.f180f0);
+                    c0002b.f0 = typedArray.getDimension(index, c0002b.f0);
                     break;
                 case 53:
-                    c0033b.f182g0 = typedArray.getDimension(index, c0033b.f182g0);
+                    c0002b.g0 = typedArray.getDimension(index, c0002b.g0);
                     break;
                 default:
-                    switch (i2) {
-                        case C0349c.f1723m1 /* 60 */:
-                            c0033b.f166X = typedArray.getFloat(index, c0033b.f166X);
+                    switch (i3) {
+                        case d.c.m1 /* 60 */:
+                            c0002b.X = typedArray.getFloat(index, c0002b.X);
                             continue;
-                        case C0349c.f1726n1 /* 61 */:
-                            c0033b.f214x = m2323f(typedArray, index, c0033b.f214x);
+                        case d.c.n1 /* 61 */:
+                            c0002b.x = f(typedArray, index, c0002b.x);
                             continue;
-                        case C0349c.f1729o1 /* 62 */:
-                            c0033b.f215y = typedArray.getDimensionPixelSize(index, c0033b.f215y);
+                        case d.c.o1 /* 62 */:
+                            c0002b.y = typedArray.getDimensionPixelSize(index, c0002b.y);
                             continue;
-                        case C0349c.f1732p1 /* 63 */:
-                            c0033b.f216z = typedArray.getFloat(index, c0033b.f216z);
+                        case d.c.p1 /* 63 */:
+                            c0002b.z = typedArray.getFloat(index, c0002b.z);
                             continue;
                         default:
-                            switch (i2) {
-                                case C0349c.f1750v1 /* 69 */:
-                                    c0033b.f200p0 = typedArray.getFloat(index, 1.0f);
+                            switch (i3) {
+                                case d.c.v1 /* 69 */:
+                                    c0002b.p0 = typedArray.getFloat(index, 1.0f);
                                     break;
-                                case C0349c.f1753w1 /* 70 */:
-                                    c0033b.f202q0 = typedArray.getFloat(index, 1.0f);
+                                case d.c.w1 /* 70 */:
+                                    c0002b.q0 = typedArray.getFloat(index, 1.0f);
                                     break;
-                                case C0349c.f1756x1 /* 71 */:
+                                case d.c.x1 /* 71 */:
                                     Log.e("ConstraintSet", "CURRENTLY UNSUPPORTED");
                                     break;
-                                case C0349c.f1759y1 /* 72 */:
-                                    c0033b.f206s0 = typedArray.getInt(index, c0033b.f206s0);
+                                case d.c.y1 /* 72 */:
+                                    c0002b.s0 = typedArray.getInt(index, c0002b.s0);
                                     break;
-                                case C0349c.f1762z1 /* 73 */:
-                                    c0033b.f212v0 = typedArray.getString(index);
+                                case d.c.z1 /* 73 */:
+                                    c0002b.v0 = typedArray.getString(index);
                                     break;
-                                case C0349c.f1628A1 /* 74 */:
-                                    c0033b.f204r0 = typedArray.getBoolean(index, c0033b.f204r0);
+                                case d.c.A1 /* 74 */:
+                                    c0002b.r0 = typedArray.getBoolean(index, c0002b.r0);
                                     break;
-                                case C0349c.f1631B1 /* 75 */:
+                                case d.c.B1 /* 75 */:
                                     sb = new StringBuilder();
                                     str = "unused attribute 0x";
                                     sb.append(str);
                                     sb.append(Integer.toHexString(index));
                                     sb.append("   ");
-                                    sb.append(f141c.get(index));
+                                    sb.append(f99c.get(index));
                                     Log.w("ConstraintSet", sb.toString());
                                     continue;
                                 default:
@@ -902,7 +788,7 @@ public class C0031b {
                                     sb.append(str);
                                     sb.append(Integer.toHexString(index));
                                     sb.append("   ");
-                                    sb.append(f141c.get(index));
+                                    sb.append(f99c.get(index));
                                     Log.w("ConstraintSet", sb.toString());
                                     continue;
                             }
@@ -912,63 +798,62 @@ public class C0031b {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: a */
-    public void m2328a(ConstraintLayout constraintLayout) {
+    public void a(ConstraintLayout constraintLayout) {
         int childCount = constraintLayout.getChildCount();
-        HashSet hashSet = new HashSet(this.f142a.keySet());
-        for (int i = 0; i < childCount; i++) {
-            View childAt = constraintLayout.getChildAt(i);
+        HashSet hashSet = new HashSet(this.f100a.keySet());
+        for (int i2 = 0; i2 < childCount; i2++) {
+            View childAt = constraintLayout.getChildAt(i2);
             int id = childAt.getId();
             if (id == -1) {
                 throw new RuntimeException("All children of ConstraintLayout must have ids to use ConstraintSet");
             }
-            if (this.f142a.containsKey(Integer.valueOf(id))) {
+            if (this.f100a.containsKey(Integer.valueOf(id))) {
                 hashSet.remove(Integer.valueOf(id));
-                C0033b c0033b = this.f142a.get(Integer.valueOf(id));
-                if (childAt instanceof C0347a) {
-                    c0033b.f208t0 = 1;
+                C0002b c0002b = this.f100a.get(Integer.valueOf(id));
+                if (childAt instanceof d.a) {
+                    c0002b.t0 = 1;
                 }
-                int i2 = c0033b.f208t0;
-                if (i2 != -1 && i2 == 1) {
-                    C0347a c0347a = (C0347a) childAt;
-                    c0347a.setId(id);
-                    c0347a.setType(c0033b.f206s0);
-                    c0347a.setAllowsGoneWidget(c0033b.f204r0);
-                    int[] iArr = c0033b.f210u0;
+                int i3 = c0002b.t0;
+                if (i3 != -1 && i3 == 1) {
+                    d.a aVar = (d.a) childAt;
+                    aVar.setId(id);
+                    aVar.setType(c0002b.s0);
+                    aVar.setAllowsGoneWidget(c0002b.r0);
+                    int[] iArr = c0002b.u0;
                     if (iArr != null) {
-                        c0347a.setReferencedIds(iArr);
+                        aVar.setReferencedIds(iArr);
                     } else {
-                        String str = c0033b.f212v0;
+                        String str = c0002b.v0;
                         if (str != null) {
-                            int[] m2326c = m2326c(c0347a, str);
-                            c0033b.f210u0 = m2326c;
-                            c0347a.setReferencedIds(m2326c);
+                            int[] c2 = c(aVar, str);
+                            c0002b.u0 = c2;
+                            aVar.setReferencedIds(c2);
                         }
                     }
                 }
-                ConstraintLayout.C0028a c0028a = (ConstraintLayout.C0028a) childAt.getLayoutParams();
-                c0033b.m2319c(c0028a);
-                childAt.setLayoutParams(c0028a);
-                childAt.setVisibility(c0033b.f152J);
-                int i3 = Build.VERSION.SDK_INT;
-                childAt.setAlpha(c0033b.f163U);
-                childAt.setRotation(c0033b.f166X);
-                childAt.setRotationX(c0033b.f167Y);
-                childAt.setRotationY(c0033b.f168Z);
-                childAt.setScaleX(c0033b.f170a0);
-                childAt.setScaleY(c0033b.f172b0);
-                if (!Float.isNaN(c0033b.f174c0)) {
-                    childAt.setPivotX(c0033b.f174c0);
+                ConstraintLayout.a aVar2 = (ConstraintLayout.a) childAt.getLayoutParams();
+                c0002b.c(aVar2);
+                childAt.setLayoutParams(aVar2);
+                childAt.setVisibility(c0002b.J);
+                int i4 = Build.VERSION.SDK_INT;
+                childAt.setAlpha(c0002b.U);
+                childAt.setRotation(c0002b.X);
+                childAt.setRotationX(c0002b.Y);
+                childAt.setRotationY(c0002b.Z);
+                childAt.setScaleX(c0002b.a0);
+                childAt.setScaleY(c0002b.b0);
+                if (!Float.isNaN(c0002b.c0)) {
+                    childAt.setPivotX(c0002b.c0);
                 }
-                if (!Float.isNaN(c0033b.f176d0)) {
-                    childAt.setPivotY(c0033b.f176d0);
+                if (!Float.isNaN(c0002b.d0)) {
+                    childAt.setPivotY(c0002b.d0);
                 }
-                childAt.setTranslationX(c0033b.f178e0);
-                childAt.setTranslationY(c0033b.f180f0);
-                if (i3 >= 21) {
-                    childAt.setTranslationZ(c0033b.f182g0);
-                    if (c0033b.f164V) {
-                        childAt.setElevation(c0033b.f165W);
+                childAt.setTranslationX(c0002b.e0);
+                childAt.setTranslationY(c0002b.f0);
+                if (i4 >= 21) {
+                    childAt.setTranslationZ(c0002b.g0);
+                    if (c0002b.V) {
+                        childAt.setElevation(c0002b.W);
                     }
                 }
             }
@@ -976,63 +861,61 @@ public class C0031b {
         Iterator it = hashSet.iterator();
         while (it.hasNext()) {
             Integer num = (Integer) it.next();
-            C0033b c0033b2 = this.f142a.get(num);
-            int i4 = c0033b2.f208t0;
-            if (i4 != -1 && i4 == 1) {
-                C0347a c0347a2 = new C0347a(constraintLayout.getContext());
-                c0347a2.setId(num.intValue());
-                int[] iArr2 = c0033b2.f210u0;
+            C0002b c0002b2 = this.f100a.get(num);
+            int i5 = c0002b2.t0;
+            if (i5 != -1 && i5 == 1) {
+                d.a aVar3 = new d.a(constraintLayout.getContext());
+                aVar3.setId(num.intValue());
+                int[] iArr2 = c0002b2.u0;
                 if (iArr2 != null) {
-                    c0347a2.setReferencedIds(iArr2);
+                    aVar3.setReferencedIds(iArr2);
                 } else {
-                    String str2 = c0033b2.f212v0;
+                    String str2 = c0002b2.v0;
                     if (str2 != null) {
-                        int[] m2326c2 = m2326c(c0347a2, str2);
-                        c0033b2.f210u0 = m2326c2;
-                        c0347a2.setReferencedIds(m2326c2);
+                        int[] c3 = c(aVar3, str2);
+                        c0002b2.u0 = c3;
+                        aVar3.setReferencedIds(c3);
                     }
                 }
-                c0347a2.setType(c0033b2.f206s0);
-                ConstraintLayout.C0028a generateDefaultLayoutParams = constraintLayout.generateDefaultLayoutParams();
-                c0347a2.m2329f();
-                c0033b2.m2319c(generateDefaultLayoutParams);
-                constraintLayout.addView(c0347a2, generateDefaultLayoutParams);
+                aVar3.setType(c0002b2.s0);
+                ConstraintLayout.a generateDefaultLayoutParams = constraintLayout.generateDefaultLayoutParams();
+                aVar3.f();
+                c0002b2.c(generateDefaultLayoutParams);
+                constraintLayout.addView(aVar3, generateDefaultLayoutParams);
             }
-            if (c0033b2.f169a) {
-                View c0036d = new C0036d(constraintLayout.getContext());
-                c0036d.setId(num.intValue());
-                ConstraintLayout.C0028a generateDefaultLayoutParams2 = constraintLayout.generateDefaultLayoutParams();
-                c0033b2.m2319c(generateDefaultLayoutParams2);
-                constraintLayout.addView(c0036d, generateDefaultLayoutParams2);
+            if (c0002b2.f101a) {
+                View dVar = new d(constraintLayout.getContext());
+                dVar.setId(num.intValue());
+                ConstraintLayout.a generateDefaultLayoutParams2 = constraintLayout.generateDefaultLayoutParams();
+                c0002b2.c(generateDefaultLayoutParams2);
+                constraintLayout.addView(dVar, generateDefaultLayoutParams2);
             }
         }
     }
 
-    /* renamed from: b */
-    public void m2327b(C0034c c0034c) {
-        int childCount = c0034c.getChildCount();
-        this.f142a.clear();
-        for (int i = 0; i < childCount; i++) {
-            View childAt = c0034c.getChildAt(i);
-            C0034c.C0035a c0035a = (C0034c.C0035a) childAt.getLayoutParams();
+    public void b(c cVar) {
+        int childCount = cVar.getChildCount();
+        this.f100a.clear();
+        for (int i2 = 0; i2 < childCount; i2++) {
+            View childAt = cVar.getChildAt(i2);
+            c.a aVar = (c.a) childAt.getLayoutParams();
             int id = childAt.getId();
             if (id == -1) {
                 throw new RuntimeException("All children of ConstraintLayout must have ids to use ConstraintSet");
             }
-            if (!this.f142a.containsKey(Integer.valueOf(id))) {
-                this.f142a.put(Integer.valueOf(id), new C0033b());
+            if (!this.f100a.containsKey(Integer.valueOf(id))) {
+                this.f100a.put(Integer.valueOf(id), new C0002b());
             }
-            C0033b c0033b = this.f142a.get(Integer.valueOf(id));
-            if (childAt instanceof AbstractC0030a) {
-                c0033b.m2315g((AbstractC0030a) childAt, id, c0035a);
+            C0002b c0002b = this.f100a.get(Integer.valueOf(id));
+            if (childAt instanceof android.support.constraint.a) {
+                c0002b.g((android.support.constraint.a) childAt, id, aVar);
             }
-            c0033b.m2316f(id, c0035a);
+            c0002b.f(id, aVar);
         }
     }
 
-    /* renamed from: e */
-    public void m2324e(Context context, int i) {
-        XmlResourceParser xml = context.getResources().getXml(i);
+    public void e(Context context, int i2) {
+        XmlResourceParser xml = context.getResources().getXml(i2);
         try {
             for (int eventType = xml.getEventType(); eventType != 1; eventType = xml.next()) {
                 if (eventType == 0) {
@@ -1042,18 +925,18 @@ public class C0031b {
                     continue;
                 } else {
                     String name = xml.getName();
-                    C0033b m2325d = m2325d(context, Xml.asAttributeSet(xml));
+                    C0002b d2 = d(context, Xml.asAttributeSet(xml));
                     if (name.equalsIgnoreCase("Guideline")) {
-                        m2325d.f169a = true;
+                        d2.f101a = true;
                     }
-                    this.f142a.put(Integer.valueOf(m2325d.f175d), m2325d);
+                    this.f100a.put(Integer.valueOf(d2.f104d), d2);
                     continue;
                 }
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (XmlPullParserException e2) {
+        } catch (IOException e2) {
             e2.printStackTrace();
+        } catch (XmlPullParserException e3) {
+            e3.printStackTrace();
         }
     }
 }

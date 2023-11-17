@@ -1,8 +1,7 @@
-package p020s;
+package s;
 
-/* renamed from: s.f */
 /* loaded from: classes.dex */
-public final class C0574f {
+public final class f {
 
     /* renamed from: A */
     public static final int submenuarrow = 2131165338;

@@ -1,30 +1,27 @@
-package p003b;
+package b;
 
+import b.b;
 import java.util.HashMap;
-import p003b.C0337b;
 
-/* renamed from: b.a */
 /* loaded from: classes.dex */
-public class C0336a<K, V> extends C0337b<K, V> {
+public class a<K, V> extends b<K, V> {
 
-    /* renamed from: f */
-    private HashMap<K, C0337b.C0341d<K, V>> f1591f = new HashMap<>();
+    /* renamed from: f  reason: collision with root package name */
+    private HashMap<K, b.d<K, V>> f1279f = new HashMap<>();
 
-    public boolean contains(K k) {
-        return this.f1591f.containsKey(k);
+    public boolean contains(K k2) {
+        return this.f1279f.containsKey(k2);
     }
 
-    @Override // p003b.C0337b
-    /* renamed from: d */
-    protected C0337b.C0341d<K, V> mo1011d(K k) {
-        return this.f1591f.get(k);
+    @Override // b.b
+    protected b.d<K, V> d(K k2) {
+        return this.f1279f.get(k2);
     }
 
-    @Override // p003b.C0337b
-    /* renamed from: g */
-    public V mo1008g(K k) {
-        V v = (V) super.mo1008g(k);
-        this.f1591f.remove(k);
-        return v;
+    @Override // b.b
+    public V g(K k2) {
+        V v2 = (V) super.g(k2);
+        this.f1279f.remove(k2);
+        return v2;
     }
 }

@@ -1,45 +1,41 @@
-package android.support.p002v7.widget;
+package android.support.v7.widget;
 
 import android.content.Context;
 import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.widget.FrameLayout;
-import p016o.C0490o;
 
-/* renamed from: android.support.v7.widget.ContentFrameLayout */
 /* loaded from: classes.dex */
 public class ContentFrameLayout extends FrameLayout {
 
-    /* renamed from: b */
-    private TypedValue f1103b;
+    /* renamed from: b  reason: collision with root package name */
+    private TypedValue f878b;
 
-    /* renamed from: c */
-    private TypedValue f1104c;
+    /* renamed from: c  reason: collision with root package name */
+    private TypedValue f879c;
 
-    /* renamed from: d */
-    private TypedValue f1105d;
+    /* renamed from: d  reason: collision with root package name */
+    private TypedValue f880d;
 
-    /* renamed from: e */
-    private TypedValue f1106e;
+    /* renamed from: e  reason: collision with root package name */
+    private TypedValue f881e;
 
-    /* renamed from: f */
-    private TypedValue f1107f;
+    /* renamed from: f  reason: collision with root package name */
+    private TypedValue f882f;
 
-    /* renamed from: g */
-    private TypedValue f1108g;
+    /* renamed from: g  reason: collision with root package name */
+    private TypedValue f883g;
 
-    /* renamed from: h */
-    private final Rect f1109h;
+    /* renamed from: h  reason: collision with root package name */
+    private final Rect f884h;
 
-    /* renamed from: i */
-    private InterfaceC0220a f1110i;
+    /* renamed from: i  reason: collision with root package name */
+    private a f885i;
 
-    /* renamed from: android.support.v7.widget.ContentFrameLayout$a */
     /* loaded from: classes.dex */
-    public interface InterfaceC0220a {
-        /* renamed from: a */
-        void mo190a();
+    public interface a {
+        void a();
 
         void onDetachedFromWindow();
     }
@@ -52,81 +48,79 @@ public class ContentFrameLayout extends FrameLayout {
         this(context, attributeSet, 0);
     }
 
-    public ContentFrameLayout(Context context, AttributeSet attributeSet, int i) {
-        super(context, attributeSet, i);
-        this.f1109h = new Rect();
+    public ContentFrameLayout(Context context, AttributeSet attributeSet, int i2) {
+        super(context, attributeSet, i2);
+        this.f884h = new Rect();
     }
 
-    /* renamed from: a */
-    public void m1490a(Rect rect) {
+    public void a(Rect rect) {
         fitSystemWindows(rect);
     }
 
-    /* renamed from: b */
-    public void m1489b(int i, int i2, int i3, int i4) {
-        this.f1109h.set(i, i2, i3, i4);
-        if (C0490o.m401k(this)) {
+    public void b(int i2, int i3, int i4, int i5) {
+        this.f884h.set(i2, i3, i4, i5);
+        if (o.o.k(this)) {
             requestLayout();
         }
     }
 
     public TypedValue getFixedHeightMajor() {
-        if (this.f1107f == null) {
-            this.f1107f = new TypedValue();
+        if (this.f882f == null) {
+            this.f882f = new TypedValue();
         }
-        return this.f1107f;
+        return this.f882f;
     }
 
     public TypedValue getFixedHeightMinor() {
-        if (this.f1108g == null) {
-            this.f1108g = new TypedValue();
+        if (this.f883g == null) {
+            this.f883g = new TypedValue();
         }
-        return this.f1108g;
+        return this.f883g;
     }
 
     public TypedValue getFixedWidthMajor() {
-        if (this.f1105d == null) {
-            this.f1105d = new TypedValue();
+        if (this.f880d == null) {
+            this.f880d = new TypedValue();
         }
-        return this.f1105d;
+        return this.f880d;
     }
 
     public TypedValue getFixedWidthMinor() {
-        if (this.f1106e == null) {
-            this.f1106e = new TypedValue();
+        if (this.f881e == null) {
+            this.f881e = new TypedValue();
         }
-        return this.f1106e;
+        return this.f881e;
     }
 
     public TypedValue getMinWidthMajor() {
-        if (this.f1103b == null) {
-            this.f1103b = new TypedValue();
+        if (this.f878b == null) {
+            this.f878b = new TypedValue();
         }
-        return this.f1103b;
+        return this.f878b;
     }
 
     public TypedValue getMinWidthMinor() {
-        if (this.f1104c == null) {
-            this.f1104c = new TypedValue();
+        if (this.f879c == null) {
+            this.f879c = new TypedValue();
         }
-        return this.f1104c;
+        return this.f879c;
     }
 
     @Override // android.view.ViewGroup, android.view.View
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
-        InterfaceC0220a interfaceC0220a = this.f1110i;
-        if (interfaceC0220a != null) {
-            interfaceC0220a.mo190a();
+        a aVar = this.f885i;
+        if (aVar != null) {
+            aVar.a();
         }
     }
 
     @Override // android.view.ViewGroup, android.view.View
     protected void onDetachedFromWindow() {
         super.onDetachedFromWindow();
-        InterfaceC0220a interfaceC0220a = this.f1110i;
-        if (interfaceC0220a != null) {
-            interfaceC0220a.onDetachedFromWindow();
+        a aVar = this.f885i;
+        if (aVar != null) {
+            aVar.onDetachedFromWindow();
         }
     }
 
@@ -151,10 +145,10 @@ public class ContentFrameLayout extends FrameLayout {
             Method dump skipped, instructions count: 226
             To view this dump change 'Code comments level' option to 'DEBUG'
         */
-        throw new UnsupportedOperationException("Method not decompiled: android.support.p002v7.widget.ContentFrameLayout.onMeasure(int, int):void");
+        throw new UnsupportedOperationException("Method not decompiled: android.support.v7.widget.ContentFrameLayout.onMeasure(int, int):void");
     }
 
-    public void setAttachListener(InterfaceC0220a interfaceC0220a) {
-        this.f1110i = interfaceC0220a;
+    public void setAttachListener(a aVar) {
+        this.f885i = aVar;
     }
 }

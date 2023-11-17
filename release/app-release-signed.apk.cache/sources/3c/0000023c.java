@@ -1,4 +1,4 @@
-package p019r;
+package r;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;
@@ -17,147 +17,128 @@ import android.util.Log;
 import android.view.ActionMode;
 import android.view.View;
 import android.view.Window;
-import p019r.AbstractC0532e;
-import p023v.AbstractC0585b;
-import p023v.C0590f;
+import r.e;
+import v.f;
 
 /* JADX INFO: Access modifiers changed from: package-private */
-/* renamed from: r.g */
 /* loaded from: classes.dex */
-public class C0537g extends LayoutInflater$Factory2C0543i {
+public class g extends i {
+    private int V;
+    private boolean W;
+    private boolean X;
+    private b Y;
 
-    /* renamed from: V */
-    private int f2277V;
-
-    /* renamed from: W */
-    private boolean f2278W;
-
-    /* renamed from: X */
-    private boolean f2279X;
-
-    /* renamed from: Y */
-    private C0539b f2280Y;
-
-    /* renamed from: r.g$a */
     /* loaded from: classes.dex */
-    class C0538a extends AbstractC0532e.C0534b {
+    class a extends e.b {
         /* JADX INFO: Access modifiers changed from: package-private */
-        public C0538a(Window.Callback callback) {
+        public a(Window.Callback callback) {
             super(callback);
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        /* renamed from: a */
-        public final ActionMode m254a(ActionMode.Callback callback) {
-            C0590f.C0591a c0591a = new C0590f.C0591a(C0537g.this.f2259d, callback);
-            AbstractC0585b m201s0 = C0537g.this.m201s0(c0591a);
-            if (m201s0 != null) {
-                return c0591a.m55e(m201s0);
+        public final ActionMode a(ActionMode.Callback callback) {
+            f.a aVar = new f.a(g.this.f1741d, callback);
+            v.b s0 = g.this.s0(aVar);
+            if (s0 != null) {
+                return aVar.e(s0);
             }
             return null;
         }
 
-        @Override // p023v.Window$CallbackC0597i, android.view.Window.Callback
+        @Override // v.i, android.view.Window.Callback
         public ActionMode onWindowStartingActionMode(ActionMode.Callback callback) {
-            return C0537g.this.m255y0() ? m254a(callback) : super.onWindowStartingActionMode(callback);
+            return g.this.y0() ? a(callback) : super.onWindowStartingActionMode(callback);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: r.g$b */
     /* loaded from: classes.dex */
-    public final class C0539b {
+    public final class b {
 
-        /* renamed from: a */
-        private C0562n f2282a;
+        /* renamed from: a  reason: collision with root package name */
+        private n f1760a;
 
-        /* renamed from: b */
-        private boolean f2283b;
+        /* renamed from: b  reason: collision with root package name */
+        private boolean f1761b;
 
-        /* renamed from: c */
-        private BroadcastReceiver f2284c;
+        /* renamed from: c  reason: collision with root package name */
+        private BroadcastReceiver f1762c;
 
-        /* renamed from: d */
-        private IntentFilter f2285d;
+        /* renamed from: d  reason: collision with root package name */
+        private IntentFilter f1763d;
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        /* renamed from: r.g$b$a */
         /* loaded from: classes.dex */
-        public class C0540a extends BroadcastReceiver {
-            C0540a() {
+        public class a extends BroadcastReceiver {
+            a() {
             }
 
             @Override // android.content.BroadcastReceiver
             public void onReceive(Context context, Intent intent) {
-                C0539b.this.m252b();
+                b.this.b();
             }
         }
 
-        C0539b(C0562n c0562n) {
-            this.f2282a = c0562n;
-            this.f2283b = c0562n.m145d();
+        b(n nVar) {
+            this.f1760a = nVar;
+            this.f1761b = nVar.d();
         }
 
-        /* renamed from: a */
-        final void m253a() {
-            BroadcastReceiver broadcastReceiver = this.f2284c;
+        final void a() {
+            BroadcastReceiver broadcastReceiver = this.f1762c;
             if (broadcastReceiver != null) {
-                C0537g.this.f2259d.unregisterReceiver(broadcastReceiver);
-                this.f2284c = null;
+                g.this.f1741d.unregisterReceiver(broadcastReceiver);
+                this.f1762c = null;
             }
         }
 
-        /* renamed from: b */
-        final void m252b() {
-            boolean m145d = this.f2282a.m145d();
-            if (m145d != this.f2283b) {
-                this.f2283b = m145d;
-                C0537g.this.mo260d();
+        final void b() {
+            boolean d2 = this.f1760a.d();
+            if (d2 != this.f1761b) {
+                this.f1761b = d2;
+                g.this.d();
             }
         }
 
-        /* renamed from: c */
-        final int m251c() {
-            boolean m145d = this.f2282a.m145d();
-            this.f2283b = m145d;
-            return m145d ? 2 : 1;
+        final int c() {
+            boolean d2 = this.f1760a.d();
+            this.f1761b = d2;
+            return d2 ? 2 : 1;
         }
 
-        /* renamed from: d */
-        final void m250d() {
-            m253a();
-            if (this.f2284c == null) {
-                this.f2284c = new C0540a();
+        final void d() {
+            a();
+            if (this.f1762c == null) {
+                this.f1762c = new a();
             }
-            if (this.f2285d == null) {
+            if (this.f1763d == null) {
                 IntentFilter intentFilter = new IntentFilter();
-                this.f2285d = intentFilter;
+                this.f1763d = intentFilter;
                 intentFilter.addAction("android.intent.action.TIME_SET");
-                this.f2285d.addAction("android.intent.action.TIMEZONE_CHANGED");
-                this.f2285d.addAction("android.intent.action.TIME_TICK");
+                this.f1763d.addAction("android.intent.action.TIMEZONE_CHANGED");
+                this.f1763d.addAction("android.intent.action.TIME_TICK");
             }
-            C0537g.this.f2259d.registerReceiver(this.f2284c, this.f2285d);
+            g.this.f1741d.registerReceiver(this.f1762c, this.f1763d);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public C0537g(Context context, Window window, InterfaceC0530c interfaceC0530c) {
-        super(context, window, interfaceC0530c);
-        this.f2277V = -100;
-        this.f2279X = true;
+    public g(Context context, Window window, c cVar) {
+        super(context, window, cVar);
+        this.V = -100;
+        this.X = true;
     }
 
-    /* renamed from: A0 */
-    private boolean m262A0() {
-        if (this.f2278W) {
-            Context context = this.f2259d;
+    private boolean A0() {
+        if (this.W) {
+            Context context = this.f1741d;
             if (context instanceof Activity) {
                 PackageManager packageManager = context.getPackageManager();
                 try {
-                    Context context2 = this.f2259d;
+                    Context context2 = this.f1741d;
                     return (packageManager.getActivityInfo(new ComponentName(context2, context2.getClass()), 0).configChanges & 512) == 0;
-                } catch (PackageManager.NameNotFoundException e) {
-                    Log.d("AppCompatDelegate", "Exception while getting ActivityInfo", e);
+                } catch (PackageManager.NameNotFoundException e2) {
+                    Log.d("AppCompatDelegate", "Exception while getting ActivityInfo", e2);
                     return true;
                 }
             }
@@ -165,23 +146,22 @@ public class C0537g extends LayoutInflater$Factory2C0543i {
         return false;
     }
 
-    /* renamed from: B0 */
-    private boolean m261B0(int i) {
-        Resources resources = this.f2259d.getResources();
+    private boolean B0(int i2) {
+        Resources resources = this.f1741d.getResources();
         Configuration configuration = resources.getConfiguration();
-        int i2 = configuration.uiMode & 48;
-        int i3 = i == 2 ? 32 : 16;
-        if (i2 != i3) {
-            if (m262A0()) {
-                ((Activity) this.f2259d).recreate();
+        int i3 = configuration.uiMode & 48;
+        int i4 = i2 == 2 ? 32 : 16;
+        if (i3 != i4) {
+            if (A0()) {
+                ((Activity) this.f1741d).recreate();
                 return true;
             }
             Configuration configuration2 = new Configuration(configuration);
             DisplayMetrics displayMetrics = resources.getDisplayMetrics();
-            configuration2.uiMode = i3 | (configuration2.uiMode & (-49));
+            configuration2.uiMode = i4 | (configuration2.uiMode & (-49));
             resources.updateConfiguration(configuration2, displayMetrics);
             if (Build.VERSION.SDK_INT < 26) {
-                C0560l.m155a(resources);
+                l.a(resources);
                 return true;
             }
             return true;
@@ -189,106 +169,94 @@ public class C0537g extends LayoutInflater$Factory2C0543i {
         return false;
     }
 
-    /* renamed from: w0 */
-    private void m257w0() {
-        if (this.f2280Y == null) {
-            this.f2280Y = new C0539b(C0562n.m148a(this.f2259d));
+    private void w0() {
+        if (this.Y == null) {
+            this.Y = new b(n.a(this.f1741d));
         }
     }
 
-    /* renamed from: x0 */
-    private int m256x0() {
-        int i = this.f2277V;
-        return i != -100 ? i : AbstractC0531d.m273i();
+    private int x0() {
+        int i2 = this.V;
+        return i2 != -100 ? i2 : d.i();
     }
 
-    @Override // p019r.AbstractC0532e
-    /* renamed from: M */
-    Window.Callback mo249M(Window.Callback callback) {
-        return new C0538a(callback);
+    @Override // r.e
+    Window.Callback M(Window.Callback callback) {
+        return new a(callback);
     }
 
-    @Override // p019r.LayoutInflater$Factory2C0543i
-    /* renamed from: O */
-    View mo240O(View view, String str, Context context, AttributeSet attributeSet) {
+    @Override // r.i
+    View O(View view, String str, Context context, AttributeSet attributeSet) {
         return null;
     }
 
-    @Override // p019r.AbstractC0532e, p019r.AbstractC0531d
-    /* renamed from: d */
-    public boolean mo260d() {
-        int m256x0 = m256x0();
-        int mo248z0 = mo248z0(m256x0);
-        boolean m261B0 = mo248z0 != -1 ? m261B0(mo248z0) : false;
-        if (m256x0 == 0) {
-            m257w0();
-            this.f2280Y.m250d();
+    @Override // r.e, r.d
+    public boolean d() {
+        int x0 = x0();
+        int z0 = z0(x0);
+        boolean B0 = z0 != -1 ? B0(z0) : false;
+        if (x0 == 0) {
+            w0();
+            this.Y.d();
         }
-        this.f2278W = true;
-        return m261B0;
+        this.W = true;
+        return B0;
     }
 
-    @Override // p019r.LayoutInflater$Factory2C0543i, p019r.AbstractC0531d
-    /* renamed from: p */
-    public void mo208p(Bundle bundle) {
-        super.mo208p(bundle);
-        if (bundle == null || this.f2277V != -100) {
+    @Override // r.i, r.d
+    public void p(Bundle bundle) {
+        super.p(bundle);
+        if (bundle == null || this.V != -100) {
             return;
         }
-        this.f2277V = bundle.getInt("appcompat:local_night_mode", -100);
+        this.V = bundle.getInt("appcompat:local_night_mode", -100);
     }
 
-    @Override // p019r.LayoutInflater$Factory2C0543i, p019r.AbstractC0532e, p019r.AbstractC0531d
-    /* renamed from: q */
-    public void mo206q() {
-        super.mo206q();
-        C0539b c0539b = this.f2280Y;
-        if (c0539b != null) {
-            c0539b.m253a();
+    @Override // r.i, r.e, r.d
+    public void q() {
+        super.q();
+        b bVar = this.Y;
+        if (bVar != null) {
+            bVar.a();
         }
     }
 
-    @Override // p019r.AbstractC0532e, p019r.AbstractC0531d
-    /* renamed from: t */
-    public void mo259t(Bundle bundle) {
-        super.mo259t(bundle);
-        int i = this.f2277V;
-        if (i != -100) {
-            bundle.putInt("appcompat:local_night_mode", i);
+    @Override // r.e, r.d
+    public void t(Bundle bundle) {
+        super.t(bundle);
+        int i2 = this.V;
+        if (i2 != -100) {
+            bundle.putInt("appcompat:local_night_mode", i2);
         }
     }
 
-    @Override // p019r.AbstractC0532e, p019r.AbstractC0531d
-    /* renamed from: u */
-    public void mo258u() {
-        super.mo258u();
-        mo260d();
+    @Override // r.e, r.d
+    public void u() {
+        super.u();
+        d();
     }
 
-    @Override // p019r.LayoutInflater$Factory2C0543i, p019r.AbstractC0531d
-    /* renamed from: v */
-    public void mo198v() {
-        super.mo198v();
-        C0539b c0539b = this.f2280Y;
-        if (c0539b != null) {
-            c0539b.m253a();
+    @Override // r.i, r.d
+    public void v() {
+        super.v();
+        b bVar = this.Y;
+        if (bVar != null) {
+            bVar.a();
         }
     }
 
-    /* renamed from: y0 */
-    public boolean m255y0() {
-        return this.f2279X;
+    public boolean y0() {
+        return this.X;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: z0 */
-    public int mo248z0(int i) {
-        if (i != -100) {
-            if (i != 0) {
-                return i;
+    public int z0(int i2) {
+        if (i2 != -100) {
+            if (i2 != 0) {
+                return i2;
             }
-            m257w0();
-            return this.f2280Y.m251c();
+            w0();
+            return this.Y.c();
         }
         return -1;
     }

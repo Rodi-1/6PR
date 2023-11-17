@@ -1,15 +1,13 @@
-package p019r;
+package r;
 
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.p001v4.app.ActivityC0079h;
-import android.support.p001v4.app.C0060a;
-import android.support.p001v4.app.C0062a0;
-import android.support.p001v4.app.C0126v;
-import android.support.p002v7.widget.C0241a1;
+import android.support.v4.app.a0;
+import android.support.v4.app.v;
+import android.support.v7.widget.a1;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -17,289 +15,271 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
-import p023v.AbstractC0585b;
+import v.b;
 
-/* renamed from: r.b */
 /* loaded from: classes.dex */
-public class ActivityC0529b extends ActivityC0079h implements InterfaceC0530c, C0062a0.InterfaceC0063a {
+public class b extends android.support.v4.app.h implements c, a0.a {
 
-    /* renamed from: p */
-    private AbstractC0531d f2251p;
+    /* renamed from: p  reason: collision with root package name */
+    private d f1733p;
 
-    /* renamed from: q */
-    private int f2252q = 0;
+    /* renamed from: q  reason: collision with root package name */
+    private int f1734q = 0;
 
-    /* renamed from: r */
-    private Resources f2253r;
+    /* renamed from: r  reason: collision with root package name */
+    private Resources f1735r;
 
-    /* renamed from: y */
-    private boolean m278y(int i, KeyEvent keyEvent) {
+    private boolean y(int i2, KeyEvent keyEvent) {
         Window window;
         return (Build.VERSION.SDK_INT >= 26 || keyEvent.isCtrlPressed() || KeyEvent.metaStateHasNoModifiers(keyEvent.getMetaState()) || keyEvent.getRepeatCount() != 0 || KeyEvent.isModifierKey(keyEvent.getKeyCode()) || (window = getWindow()) == null || window.getDecorView() == null || !window.getDecorView().dispatchKeyShortcutEvent(keyEvent)) ? false : true;
     }
 
-    /* renamed from: A */
-    public boolean m287A(Intent intent) {
-        return C0126v.m1822f(this, intent);
+    public boolean A(Intent intent) {
+        return v.f(this, intent);
     }
 
     @Override // android.app.Activity
     public void addContentView(View view, ViewGroup.LayoutParams layoutParams) {
-        m284s().mo226c(view, layoutParams);
+        s().c(view, layoutParams);
     }
 
-    @Override // p019r.InterfaceC0530c
-    /* renamed from: c */
-    public void mo180c(AbstractC0585b abstractC0585b) {
+    @Override // r.c
+    public void c(v.b bVar) {
     }
 
     @Override // android.app.Activity
     public void closeOptionsMenu() {
-        AbstractC0525a m283t = m283t();
+        a t2 = t();
         if (getWindow().hasFeature(0)) {
-            if (m283t == null || !m283t.m298g()) {
+            if (t2 == null || !t2.g()) {
                 super.closeOptionsMenu();
             }
         }
     }
 
-    @Override // p019r.InterfaceC0530c
-    /* renamed from: d */
-    public void mo179d(AbstractC0585b abstractC0585b) {
+    @Override // r.c
+    public void d(v.b bVar) {
     }
 
     @Override // android.app.Activity, android.view.Window.Callback
     public boolean dispatchKeyEvent(KeyEvent keyEvent) {
         int keyCode = keyEvent.getKeyCode();
-        AbstractC0525a m283t = m283t();
-        if (keyCode == 82 && m283t != null && m283t.m295p(keyEvent)) {
+        a t2 = t();
+        if (keyCode == 82 && t2 != null && t2.p(keyEvent)) {
             return true;
         }
         return super.dispatchKeyEvent(keyEvent);
     }
 
-    @Override // p019r.InterfaceC0530c
-    /* renamed from: e */
-    public AbstractC0585b mo178e(AbstractC0585b.InterfaceC0586a interfaceC0586a) {
+    @Override // r.c
+    public v.b e(b.a aVar) {
         return null;
     }
 
-    @Override // android.support.p001v4.app.C0062a0.InterfaceC0063a
-    /* renamed from: f */
-    public Intent mo286f() {
-        return C0126v.m1827a(this);
+    @Override // android.support.v4.app.a0.a
+    public Intent f() {
+        return v.a(this);
     }
 
     @Override // android.app.Activity
-    public <T extends View> T findViewById(int i) {
-        return (T) m284s().mo220h(i);
+    public <T extends View> T findViewById(int i2) {
+        return (T) s().h(i2);
     }
 
     @Override // android.app.Activity
     public MenuInflater getMenuInflater() {
-        return m284s().mo265j();
+        return s().j();
     }
 
     @Override // android.view.ContextThemeWrapper, android.content.ContextWrapper, android.content.Context
     public Resources getResources() {
-        if (this.f2253r == null && C0241a1.m1398a()) {
-            this.f2253r = new C0241a1(this, super.getResources());
+        if (this.f1735r == null && a1.a()) {
+            this.f1735r = new a1(this, super.getResources());
         }
-        Resources resources = this.f2253r;
+        Resources resources = this.f1735r;
         return resources == null ? super.getResources() : resources;
     }
 
     @Override // android.app.Activity
     public void invalidateOptionsMenu() {
-        m284s().mo213m();
+        s().m();
     }
 
-    @Override // android.support.p001v4.app.ActivityC0079h, android.app.Activity, android.content.ComponentCallbacks
+    @Override // android.support.v4.app.h, android.app.Activity, android.content.ComponentCallbacks
     public void onConfigurationChanged(Configuration configuration) {
         super.onConfigurationChanged(configuration);
-        m284s().mo210o(configuration);
-        if (this.f2253r != null) {
-            this.f2253r.updateConfiguration(configuration, super.getResources().getDisplayMetrics());
+        s().o(configuration);
+        if (this.f1735r != null) {
+            this.f1735r.updateConfiguration(configuration, super.getResources().getDisplayMetrics());
         }
     }
 
     @Override // android.app.Activity, android.view.Window.Callback
     public void onContentChanged() {
-        m280w();
+        w();
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // android.support.p001v4.app.ActivityC0079h, android.support.p001v4.app.ActivityC0130z, android.app.Activity
+    @Override // android.support.v4.app.h, android.support.v4.app.z, android.app.Activity
     public void onCreate(Bundle bundle) {
-        int i;
-        AbstractC0531d m284s = m284s();
-        m284s.mo215l();
-        m284s.mo208p(bundle);
-        if (m284s.mo260d() && (i = this.f2252q) != 0) {
+        int i2;
+        d s2 = s();
+        s2.l();
+        s2.p(bundle);
+        if (s2.d() && (i2 = this.f1734q) != 0) {
             if (Build.VERSION.SDK_INT >= 23) {
-                onApplyThemeResource(getTheme(), this.f2252q, false);
+                onApplyThemeResource(getTheme(), this.f1734q, false);
             } else {
-                setTheme(i);
+                setTheme(i2);
             }
         }
         super.onCreate(bundle);
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
-    @Override // android.support.p001v4.app.ActivityC0079h, android.app.Activity
-    public void onDestroy() {
+    @Override // android.support.v4.app.h, android.app.Activity
+    protected void onDestroy() {
         super.onDestroy();
-        m284s().mo206q();
+        s().q();
     }
 
     @Override // android.app.Activity, android.view.KeyEvent.Callback
-    public boolean onKeyDown(int i, KeyEvent keyEvent) {
-        if (m278y(i, keyEvent)) {
+    public boolean onKeyDown(int i2, KeyEvent keyEvent) {
+        if (y(i2, keyEvent)) {
             return true;
         }
-        return super.onKeyDown(i, keyEvent);
+        return super.onKeyDown(i2, keyEvent);
     }
 
-    @Override // android.support.p001v4.app.ActivityC0079h, android.app.Activity, android.view.Window.Callback
-    public final boolean onMenuItemSelected(int i, MenuItem menuItem) {
-        if (super.onMenuItemSelected(i, menuItem)) {
+    @Override // android.support.v4.app.h, android.app.Activity, android.view.Window.Callback
+    public final boolean onMenuItemSelected(int i2, MenuItem menuItem) {
+        if (super.onMenuItemSelected(i2, menuItem)) {
             return true;
         }
-        AbstractC0525a m283t = m283t();
-        if (menuItem.getItemId() != 16908332 || m283t == null || (m283t.mo121j() & 4) == 0) {
+        a t2 = t();
+        if (menuItem.getItemId() != 16908332 || t2 == null || (t2.j() & 4) == 0) {
             return false;
         }
-        return m279x();
+        return x();
     }
 
     @Override // android.app.Activity, android.view.Window.Callback
-    public boolean onMenuOpened(int i, Menu menu) {
-        return super.onMenuOpened(i, menu);
+    public boolean onMenuOpened(int i2, Menu menu) {
+        return super.onMenuOpened(i2, menu);
     }
 
-    @Override // android.support.p001v4.app.ActivityC0079h, android.app.Activity, android.view.Window.Callback
-    public void onPanelClosed(int i, Menu menu) {
-        super.onPanelClosed(i, menu);
+    @Override // android.support.v4.app.h, android.app.Activity, android.view.Window.Callback
+    public void onPanelClosed(int i2, Menu menu) {
+        super.onPanelClosed(i2, menu);
     }
 
     @Override // android.app.Activity
     protected void onPostCreate(Bundle bundle) {
         super.onPostCreate(bundle);
-        m284s().mo204r(bundle);
+        s().r(bundle);
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
-    @Override // android.support.p001v4.app.ActivityC0079h, android.app.Activity
-    public void onPostResume() {
+    @Override // android.support.v4.app.h, android.app.Activity
+    protected void onPostResume() {
         super.onPostResume();
-        m284s().mo202s();
+        s().s();
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // android.support.p001v4.app.ActivityC0079h, android.support.p001v4.app.ActivityC0130z, android.app.Activity
+    @Override // android.support.v4.app.h, android.support.v4.app.z, android.app.Activity
     public void onSaveInstanceState(Bundle bundle) {
         super.onSaveInstanceState(bundle);
-        m284s().mo259t(bundle);
+        s().t(bundle);
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
-    @Override // android.support.p001v4.app.ActivityC0079h, android.app.Activity
-    public void onStart() {
+    @Override // android.support.v4.app.h, android.app.Activity
+    protected void onStart() {
         super.onStart();
-        m284s().mo258u();
+        s().u();
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
-    @Override // android.support.p001v4.app.ActivityC0079h, android.app.Activity
-    public void onStop() {
+    @Override // android.support.v4.app.h, android.app.Activity
+    protected void onStop() {
         super.onStop();
-        m284s().mo198v();
+        s().v();
     }
 
     @Override // android.app.Activity
-    protected void onTitleChanged(CharSequence charSequence, int i) {
-        super.onTitleChanged(charSequence, i);
-        m284s().mo271A(charSequence);
+    protected void onTitleChanged(CharSequence charSequence, int i2) {
+        super.onTitleChanged(charSequence, i2);
+        s().A(charSequence);
     }
 
     @Override // android.app.Activity
     public void openOptionsMenu() {
-        AbstractC0525a m283t = m283t();
+        a t2 = t();
         if (getWindow().hasFeature(0)) {
-            if (m283t == null || !m283t.m294q()) {
+            if (t2 == null || !t2.q()) {
                 super.openOptionsMenu();
             }
         }
     }
 
-    @Override // android.support.p001v4.app.ActivityC0079h
-    /* renamed from: r */
-    public void mo285r() {
-        m284s().mo213m();
+    @Override // android.support.v4.app.h
+    public void r() {
+        s().m();
     }
 
-    /* renamed from: s */
-    public AbstractC0531d m284s() {
-        if (this.f2251p == null) {
-            this.f2251p = AbstractC0531d.m276e(this, this);
+    public d s() {
+        if (this.f1733p == null) {
+            this.f1733p = d.e(this, this);
         }
-        return this.f2251p;
+        return this.f1733p;
     }
 
     @Override // android.app.Activity
-    public void setContentView(int i) {
-        m284s().mo195x(i);
+    public void setContentView(int i2) {
+        s().x(i2);
     }
 
     @Override // android.app.Activity
     public void setContentView(View view) {
-        m284s().mo194y(view);
+        s().y(view);
     }
 
     @Override // android.app.Activity
     public void setContentView(View view, ViewGroup.LayoutParams layoutParams) {
-        m284s().mo193z(view, layoutParams);
+        s().z(view, layoutParams);
     }
 
     @Override // android.app.Activity, android.view.ContextThemeWrapper, android.content.ContextWrapper, android.content.Context
-    public void setTheme(int i) {
-        super.setTheme(i);
-        this.f2252q = i;
+    public void setTheme(int i2) {
+        super.setTheme(i2);
+        this.f1734q = i2;
     }
 
-    /* renamed from: t */
-    public AbstractC0525a m283t() {
-        return m284s().mo264k();
+    public a t() {
+        return s().k();
     }
 
-    /* renamed from: u */
-    public void m282u(C0062a0 c0062a0) {
-        c0062a0.m2223b(this);
+    public void u(a0 a0Var) {
+        a0Var.b(this);
     }
 
-    /* renamed from: v */
-    public void m281v(C0062a0 c0062a0) {
+    public void v(a0 a0Var) {
     }
 
     @Deprecated
-    /* renamed from: w */
-    public void m280w() {
+    public void w() {
     }
 
-    /* renamed from: x */
-    public boolean m279x() {
-        Intent mo286f = mo286f();
-        if (mo286f != null) {
-            if (!m287A(mo286f)) {
-                m277z(mo286f);
+    public boolean x() {
+        Intent f2 = f();
+        if (f2 != null) {
+            if (!A(f2)) {
+                z(f2);
                 return true;
             }
-            C0062a0 m2221d = C0062a0.m2221d(this);
-            m282u(m2221d);
-            m281v(m2221d);
-            m2221d.m2220e();
+            a0 d2 = a0.d(this);
+            u(d2);
+            v(d2);
+            d2.e();
             try {
-                C0060a.m2227d(this);
+                android.support.v4.app.a.d(this);
                 return true;
             } catch (IllegalStateException unused) {
                 finish();
@@ -309,8 +289,7 @@ public class ActivityC0529b extends ActivityC0079h implements InterfaceC0530c, C
         return false;
     }
 
-    /* renamed from: z */
-    public void m277z(Intent intent) {
-        C0126v.m1823e(this, intent);
+    public void z(Intent intent) {
+        v.e(this, intent);
     }
 }

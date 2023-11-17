@@ -1,16 +1,12 @@
-package p019r;
+package r;
 
-import p023v.AbstractC0585b;
+import v.b;
 
-/* renamed from: r.c */
 /* loaded from: classes.dex */
-public interface InterfaceC0530c {
-    /* renamed from: c */
-    void mo180c(AbstractC0585b abstractC0585b);
+public interface c {
+    void c(v.b bVar);
 
-    /* renamed from: d */
-    void mo179d(AbstractC0585b abstractC0585b);
+    void d(v.b bVar);
 
-    /* renamed from: e */
-    AbstractC0585b mo178e(AbstractC0585b.InterfaceC0586a interfaceC0586a);
+    v.b e(b.a aVar);
 }

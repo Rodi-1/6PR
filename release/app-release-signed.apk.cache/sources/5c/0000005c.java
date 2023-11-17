@@ -1,8 +1,6 @@
-package android.support.p001v4.app;
+package android.support.v4.app;
 
-import android.arch.lifecycle.AbstractC0009c;
-import android.arch.lifecycle.C0026n;
-import android.arch.lifecycle.InterfaceC0027o;
+import android.arch.lifecycle.c;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentSender;
@@ -12,7 +10,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.os.Parcelable;
-import android.support.p001v4.app.C0060a;
+import android.support.v4.app.a;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -22,187 +20,170 @@ import android.view.View;
 import android.view.Window;
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
-import p015n.C0463l;
 
-/* renamed from: android.support.v4.app.h */
 /* loaded from: classes.dex */
-public class ActivityC0079h extends AbstractActivityC0072f implements InterfaceC0027o {
+public class h extends f implements android.arch.lifecycle.o {
 
-    /* renamed from: h */
-    private C0026n f453h;
+    /* renamed from: h  reason: collision with root package name */
+    private android.arch.lifecycle.n f323h;
 
-    /* renamed from: i */
-    boolean f454i;
+    /* renamed from: i  reason: collision with root package name */
+    boolean f324i;
 
-    /* renamed from: j */
-    boolean f455j;
+    /* renamed from: j  reason: collision with root package name */
+    boolean f325j;
 
-    /* renamed from: m */
-    boolean f458m;
+    /* renamed from: m  reason: collision with root package name */
+    boolean f328m;
 
-    /* renamed from: n */
-    int f459n;
+    /* renamed from: n  reason: collision with root package name */
+    int f329n;
 
-    /* renamed from: o */
-    C0463l<String> f460o;
+    /* renamed from: o  reason: collision with root package name */
+    n.l<String> f330o;
 
-    /* renamed from: f */
-    final Handler f451f = new HandlerC0080a();
+    /* renamed from: f  reason: collision with root package name */
+    final Handler f321f = new a();
 
-    /* renamed from: g */
-    final C0084j f452g = C0084j.m2068b(new C0081b());
+    /* renamed from: g  reason: collision with root package name */
+    final j f322g = j.b(new b());
 
-    /* renamed from: k */
-    boolean f456k = true;
+    /* renamed from: k  reason: collision with root package name */
+    boolean f326k = true;
 
-    /* renamed from: l */
-    boolean f457l = true;
+    /* renamed from: l  reason: collision with root package name */
+    boolean f327l = true;
 
-    /* renamed from: android.support.v4.app.h$a */
     /* loaded from: classes.dex */
-    class HandlerC0080a extends Handler {
-        HandlerC0080a() {
+    class a extends Handler {
+        a() {
         }
 
         @Override // android.os.Handler
         public void handleMessage(Message message) {
-            int i = message.what;
-            if (i == 1) {
-                ActivityC0079h activityC0079h = ActivityC0079h.this;
-                if (activityC0079h.f456k) {
-                    activityC0079h.m2082i(false);
+            int i2 = message.what;
+            if (i2 == 1) {
+                h hVar = h.this;
+                if (hVar.f326k) {
+                    hVar.i(false);
                 }
-            } else if (i != 2) {
+            } else if (i2 != 2) {
                 super.handleMessage(message);
             } else {
-                ActivityC0079h.this.m2075p();
-                ActivityC0079h.this.f452g.m2050t();
+                h.this.p();
+                h.this.f322g.t();
             }
         }
     }
 
-    /* renamed from: android.support.v4.app.h$b */
     /* loaded from: classes.dex */
-    class C0081b extends AbstractC0085k<ActivityC0079h> {
-        public C0081b() {
-            super(ActivityC0079h.this);
+    class b extends k<h> {
+        public b() {
+            super(h.this);
         }
 
-        @Override // android.support.p001v4.app.AbstractC0083i
-        /* renamed from: b */
-        public View mo2072b(int i) {
-            return ActivityC0079h.this.findViewById(i);
+        @Override // android.support.v4.app.i
+        public View b(int i2) {
+            return h.this.findViewById(i2);
         }
 
-        @Override // android.support.p001v4.app.AbstractC0083i
-        /* renamed from: c */
-        public boolean mo2071c() {
-            Window window = ActivityC0079h.this.getWindow();
+        @Override // android.support.v4.app.i
+        public boolean c() {
+            Window window = h.this.getWindow();
             return (window == null || window.peekDecorView() == null) ? false : true;
         }
 
-        @Override // android.support.p001v4.app.AbstractC0085k
-        /* renamed from: h */
-        public void mo2039h(ComponentCallbacksC0073g componentCallbacksC0073g) {
-            ActivityC0079h.this.m2078m(componentCallbacksC0073g);
+        @Override // android.support.v4.app.k
+        public void h(g gVar) {
+            h.this.m(gVar);
         }
 
-        @Override // android.support.p001v4.app.AbstractC0085k
-        /* renamed from: i */
-        public void mo2038i(String str, FileDescriptor fileDescriptor, PrintWriter printWriter, String[] strArr) {
-            ActivityC0079h.this.dump(str, fileDescriptor, printWriter, strArr);
+        @Override // android.support.v4.app.k
+        public void i(String str, FileDescriptor fileDescriptor, PrintWriter printWriter, String[] strArr) {
+            h.this.dump(str, fileDescriptor, printWriter, strArr);
         }
 
-        @Override // android.support.p001v4.app.AbstractC0085k
-        /* renamed from: j */
-        public LayoutInflater mo2037j() {
-            return ActivityC0079h.this.getLayoutInflater().cloneInContext(ActivityC0079h.this);
+        @Override // android.support.v4.app.k
+        public LayoutInflater j() {
+            return h.this.getLayoutInflater().cloneInContext(h.this);
         }
 
-        @Override // android.support.p001v4.app.AbstractC0085k
-        /* renamed from: k */
-        public int mo2036k() {
-            Window window = ActivityC0079h.this.getWindow();
+        @Override // android.support.v4.app.k
+        public int k() {
+            Window window = h.this.getWindow();
             if (window == null) {
                 return 0;
             }
             return window.getAttributes().windowAnimations;
         }
 
-        @Override // android.support.p001v4.app.AbstractC0085k
-        /* renamed from: l */
-        public boolean mo2035l() {
-            return ActivityC0079h.this.getWindow() != null;
+        @Override // android.support.v4.app.k
+        public boolean l() {
+            return h.this.getWindow() != null;
         }
 
-        @Override // android.support.p001v4.app.AbstractC0085k
-        /* renamed from: m */
-        public boolean mo2034m(ComponentCallbacksC0073g componentCallbacksC0073g) {
-            return !ActivityC0079h.this.isFinishing();
+        @Override // android.support.v4.app.k
+        public boolean m(g gVar) {
+            return !h.this.isFinishing();
         }
 
-        @Override // android.support.p001v4.app.AbstractC0085k
-        /* renamed from: n */
-        public void mo2033n() {
-            ActivityC0079h.this.mo285r();
+        @Override // android.support.v4.app.k
+        public void n() {
+            h.this.r();
         }
     }
 
-    /* renamed from: android.support.v4.app.h$c */
+    /* JADX INFO: Access modifiers changed from: package-private */
     /* loaded from: classes.dex */
-    static final class C0082c {
+    public static final class c {
 
-        /* renamed from: a */
-        Object f463a;
+        /* renamed from: a  reason: collision with root package name */
+        Object f333a;
 
-        /* renamed from: b */
-        C0026n f464b;
+        /* renamed from: b  reason: collision with root package name */
+        android.arch.lifecycle.n f334b;
 
-        /* renamed from: c */
-        C0104n f465c;
+        /* renamed from: c  reason: collision with root package name */
+        n f335c;
 
-        C0082c() {
+        c() {
         }
     }
 
-    /* renamed from: k */
-    private void m2080k() {
+    private void k() {
         do {
-        } while (m2079l(m2081j(), AbstractC0009c.EnumC0011b.CREATED));
+        } while (l(j(), c.b.CREATED));
     }
 
-    /* renamed from: l */
-    private static boolean m2079l(AbstractC0086l abstractC0086l, AbstractC0009c.EnumC0011b enumC0011b) {
+    private static boolean l(l lVar, c.b bVar) {
         boolean z = false;
-        for (ComponentCallbacksC0073g componentCallbacksC0073g : abstractC0086l.mo1962b()) {
-            if (componentCallbacksC0073g != null) {
-                if (componentCallbacksC0073g.mo1819a().mo2379a().m2380a(AbstractC0009c.EnumC0011b.STARTED)) {
-                    componentCallbacksC0073g.f406S.m2371i(enumC0011b);
+        for (g gVar : lVar.b()) {
+            if (gVar != null) {
+                if (gVar.a().a().a(c.b.STARTED)) {
+                    gVar.S.i(bVar);
                     z = true;
                 }
-                AbstractC0086l m2105t0 = componentCallbacksC0073g.m2105t0();
-                if (m2105t0 != null) {
-                    z |= m2079l(m2105t0, enumC0011b);
+                l t0 = gVar.t0();
+                if (t0 != null) {
+                    z |= l(t0, bVar);
                 }
             }
         }
         return z;
     }
 
-    @Override // android.support.p001v4.app.ActivityC0130z, android.arch.lifecycle.InterfaceC0013e
-    /* renamed from: a */
-    public AbstractC0009c mo1819a() {
-        return super.mo1819a();
+    @Override // android.support.v4.app.z, android.arch.lifecycle.e
+    public android.arch.lifecycle.c a() {
+        return super.a();
     }
 
-    @Override // android.arch.lifecycle.InterfaceC0027o
-    /* renamed from: b */
-    public C0026n mo2084b() {
+    @Override // android.arch.lifecycle.o
+    public android.arch.lifecycle.n b() {
         if (getApplication() != null) {
-            if (this.f453h == null) {
-                this.f453h = new C0026n();
+            if (this.f323h == null) {
+                this.f323h = new android.arch.lifecycle.n();
             }
-            return this.f453h;
+            return this.f323h;
         }
         throw new IllegalStateException("Your activity is not yet attached to the Application instance. You can't request ViewModel before onCreate call.");
     }
@@ -217,86 +198,80 @@ public class ActivityC0079h extends AbstractActivityC0072f implements InterfaceC
         String str2 = str + "  ";
         printWriter.print(str2);
         printWriter.print("mCreated=");
-        printWriter.print(this.f454i);
+        printWriter.print(this.f324i);
         printWriter.print(" mResumed=");
-        printWriter.print(this.f455j);
+        printWriter.print(this.f325j);
         printWriter.print(" mStopped=");
-        printWriter.print(this.f456k);
+        printWriter.print(this.f326k);
         printWriter.print(" mReallyStopped=");
-        printWriter.println(this.f457l);
-        AbstractC0125u.m1829b(this).mo1830a(str2, fileDescriptor, printWriter, strArr);
-        this.f452g.m2048v().mo1965a(str, fileDescriptor, printWriter, strArr);
+        printWriter.println(this.f327l);
+        u.b(this).a(str2, fileDescriptor, printWriter, strArr);
+        this.f322g.v().a(str, fileDescriptor, printWriter, strArr);
     }
 
-    @Override // android.support.p001v4.app.AbstractActivityC0071e
-    /* renamed from: h */
-    final View mo2083h(View view, String str, Context context, AttributeSet attributeSet) {
-        return this.f452g.m2046x(view, str, context, attributeSet);
+    @Override // android.support.v4.app.e
+    final View h(View view, String str, Context context, AttributeSet attributeSet) {
+        return this.f322g.x(view, str, context, attributeSet);
     }
 
-    /* renamed from: i */
-    void m2082i(boolean z) {
-        if (this.f457l) {
+    void i(boolean z) {
+        if (this.f327l) {
             return;
         }
-        this.f457l = true;
-        this.f458m = z;
-        this.f451f.removeMessages(1);
-        m2076o();
+        this.f327l = true;
+        this.f328m = z;
+        this.f321f.removeMessages(1);
+        o();
     }
 
-    /* renamed from: j */
-    public AbstractC0086l m2081j() {
-        return this.f452g.m2048v();
+    public l j() {
+        return this.f322g.v();
     }
 
-    /* renamed from: m */
-    public void m2078m(ComponentCallbacksC0073g componentCallbacksC0073g) {
+    public void m(g gVar) {
     }
 
-    /* renamed from: n */
-    protected boolean m2077n(View view, Menu menu) {
+    protected boolean n(View view, Menu menu) {
         return super.onPreparePanel(0, view, menu);
     }
 
-    /* renamed from: o */
-    void m2076o() {
-        this.f452g.m2054p();
+    void o() {
+        this.f322g.p();
     }
 
     @Override // android.app.Activity
-    protected void onActivityResult(int i, int i2, Intent intent) {
-        this.f452g.m2047w();
-        int i3 = i >> 16;
-        if (i3 == 0) {
-            C0060a.InterfaceC0061a m2226e = C0060a.m2226e();
-            if (m2226e == null || !m2226e.m2225a(this, i, i2, intent)) {
-                super.onActivityResult(i, i2, intent);
+    protected void onActivityResult(int i2, int i3, Intent intent) {
+        this.f322g.w();
+        int i4 = i2 >> 16;
+        if (i4 == 0) {
+            a.InterfaceC0004a e2 = android.support.v4.app.a.e();
+            if (e2 == null || !e2.a(this, i2, i3, intent)) {
+                super.onActivityResult(i2, i3, intent);
                 return;
             }
             return;
         }
-        int i4 = i3 - 1;
-        String m482f = this.f460o.m482f(i4);
-        this.f460o.m478j(i4);
-        if (m482f == null) {
+        int i5 = i4 - 1;
+        String f2 = this.f330o.f(i5);
+        this.f330o.j(i5);
+        if (f2 == null) {
             Log.w("FragmentActivity", "Activity result delivered for unknown Fragment.");
             return;
         }
-        ComponentCallbacksC0073g m2049u = this.f452g.m2049u(m482f);
-        if (m2049u != null) {
-            m2049u.m2169O(i & 65535, i2, intent);
+        g u2 = this.f322g.u(f2);
+        if (u2 != null) {
+            u2.O(i2 & 65535, i3, intent);
             return;
         }
-        Log.w("FragmentActivity", "Activity result no fragment exists for who: " + m482f);
+        Log.w("FragmentActivity", "Activity result no fragment exists for who: " + f2);
     }
 
     @Override // android.app.Activity
     public void onBackPressed() {
-        AbstractC0086l m2048v = this.f452g.m2048v();
-        boolean mo1959c = m2048v.mo1959c();
-        if (!mo1959c || Build.VERSION.SDK_INT > 25) {
-            if (mo1959c || !m2048v.mo1956d()) {
+        l v2 = this.f322g.v();
+        boolean c2 = v2.c();
+        if (!c2 || Build.VERSION.SDK_INT > 25) {
+            if (c2 || !v2.d()) {
                 super.onBackPressed();
             }
         }
@@ -305,53 +280,53 @@ public class ActivityC0079h extends AbstractActivityC0072f implements InterfaceC
     @Override // android.app.Activity, android.content.ComponentCallbacks
     public void onConfigurationChanged(Configuration configuration) {
         super.onConfigurationChanged(configuration);
-        this.f452g.m2047w();
-        this.f452g.m2066d(configuration);
+        this.f322g.w();
+        this.f322g.d(configuration);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // android.support.p001v4.app.ActivityC0130z, android.app.Activity
+    @Override // android.support.v4.app.z, android.app.Activity
     public void onCreate(Bundle bundle) {
-        this.f452g.m2069a(null);
+        this.f322g.a(null);
         super.onCreate(bundle);
-        C0082c c0082c = (C0082c) getLastNonConfigurationInstance();
-        if (c0082c != null) {
-            this.f453h = c0082c.f464b;
+        c cVar = (c) getLastNonConfigurationInstance();
+        if (cVar != null) {
+            this.f323h = cVar.f334b;
         }
         if (bundle != null) {
-            this.f452g.m2045y(bundle.getParcelable("android:support:fragments"), c0082c != null ? c0082c.f465c : null);
+            this.f322g.y(bundle.getParcelable("android:support:fragments"), cVar != null ? cVar.f335c : null);
             if (bundle.containsKey("android:support:next_request_index")) {
-                this.f459n = bundle.getInt("android:support:next_request_index");
+                this.f329n = bundle.getInt("android:support:next_request_index");
                 int[] intArray = bundle.getIntArray("android:support:request_indicies");
                 String[] stringArray = bundle.getStringArray("android:support:request_fragment_who");
                 if (intArray == null || stringArray == null || intArray.length != stringArray.length) {
                     Log.w("FragmentActivity", "Invalid requestCode mapping in savedInstanceState.");
                 } else {
-                    this.f460o = new C0463l<>(intArray.length);
-                    for (int i = 0; i < intArray.length; i++) {
-                        this.f460o.m479i(intArray[i], stringArray[i]);
+                    this.f330o = new n.l<>(intArray.length);
+                    for (int i2 = 0; i2 < intArray.length; i2++) {
+                        this.f330o.i(intArray[i2], stringArray[i2]);
                     }
                 }
             }
         }
-        if (this.f460o == null) {
-            this.f460o = new C0463l<>();
-            this.f459n = 0;
+        if (this.f330o == null) {
+            this.f330o = new n.l<>();
+            this.f329n = 0;
         }
-        this.f452g.m2064f();
+        this.f322g.f();
     }
 
     @Override // android.app.Activity, android.view.Window.Callback
-    public boolean onCreatePanelMenu(int i, Menu menu) {
-        return i == 0 ? super.onCreatePanelMenu(i, menu) | this.f452g.m2063g(menu, getMenuInflater()) : super.onCreatePanelMenu(i, menu);
+    public boolean onCreatePanelMenu(int i2, Menu menu) {
+        return i2 == 0 ? super.onCreatePanelMenu(i2, menu) | this.f322g.g(menu, getMenuInflater()) : super.onCreatePanelMenu(i2, menu);
     }
 
-    @Override // android.support.p001v4.app.AbstractActivityC0071e, android.app.Activity, android.view.LayoutInflater.Factory2
+    @Override // android.support.v4.app.e, android.app.Activity, android.view.LayoutInflater.Factory2
     public /* bridge */ /* synthetic */ View onCreateView(View view, String str, Context context, AttributeSet attributeSet) {
         return super.onCreateView(view, str, context, attributeSet);
     }
 
-    @Override // android.support.p001v4.app.AbstractActivityC0071e, android.app.Activity, android.view.LayoutInflater.Factory
+    @Override // android.support.v4.app.e, android.app.Activity, android.view.LayoutInflater.Factory
     public /* bridge */ /* synthetic */ View onCreateView(String str, Context context, AttributeSet attributeSet) {
         return super.onCreateView(str, context, attributeSet);
     }
@@ -360,145 +335,145 @@ public class ActivityC0079h extends AbstractActivityC0072f implements InterfaceC
     @Override // android.app.Activity
     public void onDestroy() {
         super.onDestroy();
-        m2082i(false);
-        C0026n c0026n = this.f453h;
-        if (c0026n != null && !this.f458m) {
-            c0026n.m2352a();
+        i(false);
+        android.arch.lifecycle.n nVar = this.f323h;
+        if (nVar != null && !this.f328m) {
+            nVar.a();
         }
-        this.f452g.m2062h();
+        this.f322g.h();
     }
 
     @Override // android.app.Activity, android.content.ComponentCallbacks
     public void onLowMemory() {
         super.onLowMemory();
-        this.f452g.m2061i();
+        this.f322g.i();
     }
 
     @Override // android.app.Activity, android.view.Window.Callback
-    public boolean onMenuItemSelected(int i, MenuItem menuItem) {
-        if (super.onMenuItemSelected(i, menuItem)) {
+    public boolean onMenuItemSelected(int i2, MenuItem menuItem) {
+        if (super.onMenuItemSelected(i2, menuItem)) {
             return true;
         }
-        if (i != 0) {
-            if (i != 6) {
+        if (i2 != 0) {
+            if (i2 != 6) {
                 return false;
             }
-            return this.f452g.m2065e(menuItem);
+            return this.f322g.e(menuItem);
         }
-        return this.f452g.m2059k(menuItem);
+        return this.f322g.k(menuItem);
     }
 
     @Override // android.app.Activity
     public void onMultiWindowModeChanged(boolean z) {
-        this.f452g.m2060j(z);
+        this.f322g.j(z);
     }
 
     @Override // android.app.Activity
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-        this.f452g.m2047w();
+        this.f322g.w();
     }
 
     @Override // android.app.Activity, android.view.Window.Callback
-    public void onPanelClosed(int i, Menu menu) {
-        if (i == 0) {
-            this.f452g.m2058l(menu);
+    public void onPanelClosed(int i2, Menu menu) {
+        if (i2 == 0) {
+            this.f322g.l(menu);
         }
-        super.onPanelClosed(i, menu);
+        super.onPanelClosed(i2, menu);
     }
 
     @Override // android.app.Activity
     protected void onPause() {
         super.onPause();
-        this.f455j = false;
-        if (this.f451f.hasMessages(2)) {
-            this.f451f.removeMessages(2);
-            m2075p();
+        this.f325j = false;
+        if (this.f321f.hasMessages(2)) {
+            this.f321f.removeMessages(2);
+            p();
         }
-        this.f452g.m2057m();
+        this.f322g.m();
     }
 
     @Override // android.app.Activity
     public void onPictureInPictureModeChanged(boolean z) {
-        this.f452g.m2056n(z);
+        this.f322g.n(z);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // android.app.Activity
     public void onPostResume() {
         super.onPostResume();
-        this.f451f.removeMessages(2);
-        m2075p();
-        this.f452g.m2050t();
+        this.f321f.removeMessages(2);
+        p();
+        this.f322g.t();
     }
 
     @Override // android.app.Activity, android.view.Window.Callback
-    public boolean onPreparePanel(int i, View view, Menu menu) {
-        return (i != 0 || menu == null) ? super.onPreparePanel(i, view, menu) : m2077n(view, menu) | this.f452g.m2055o(menu);
+    public boolean onPreparePanel(int i2, View view, Menu menu) {
+        return (i2 != 0 || menu == null) ? super.onPreparePanel(i2, view, menu) : n(view, menu) | this.f322g.o(menu);
     }
 
     @Override // android.app.Activity
-    public void onRequestPermissionsResult(int i, String[] strArr, int[] iArr) {
-        this.f452g.m2047w();
-        int i2 = (i >> 16) & 65535;
-        if (i2 != 0) {
-            int i3 = i2 - 1;
-            String m482f = this.f460o.m482f(i3);
-            this.f460o.m478j(i3);
-            if (m482f == null) {
+    public void onRequestPermissionsResult(int i2, String[] strArr, int[] iArr) {
+        this.f322g.w();
+        int i3 = (i2 >> 16) & 65535;
+        if (i3 != 0) {
+            int i4 = i3 - 1;
+            String f2 = this.f330o.f(i4);
+            this.f330o.j(i4);
+            if (f2 == null) {
                 Log.w("FragmentActivity", "Activity result delivered for unknown Fragment.");
                 return;
             }
-            ComponentCallbacksC0073g m2049u = this.f452g.m2049u(m482f);
-            if (m2049u != null) {
-                m2049u.m2119m0(i & 65535, strArr, iArr);
+            g u2 = this.f322g.u(f2);
+            if (u2 != null) {
+                u2.m0(i2 & 65535, strArr, iArr);
                 return;
             }
-            Log.w("FragmentActivity", "Activity result no fragment exists for who: " + m482f);
+            Log.w("FragmentActivity", "Activity result no fragment exists for who: " + f2);
         }
     }
 
     @Override // android.app.Activity
     protected void onResume() {
         super.onResume();
-        this.f451f.sendEmptyMessage(2);
-        this.f455j = true;
-        this.f452g.m2050t();
+        this.f321f.sendEmptyMessage(2);
+        this.f325j = true;
+        this.f322g.t();
     }
 
     @Override // android.app.Activity
     public final Object onRetainNonConfigurationInstance() {
-        if (this.f456k) {
-            m2082i(true);
+        if (this.f326k) {
+            i(true);
         }
-        Object m2074q = m2074q();
-        C0104n m2044z = this.f452g.m2044z();
-        if (m2044z == null && this.f453h == null && m2074q == null) {
+        Object q2 = q();
+        n z = this.f322g.z();
+        if (z == null && this.f323h == null && q2 == null) {
             return null;
         }
-        C0082c c0082c = new C0082c();
-        c0082c.f463a = m2074q;
-        c0082c.f464b = this.f453h;
-        c0082c.f465c = m2044z;
-        return c0082c;
+        c cVar = new c();
+        cVar.f333a = q2;
+        cVar.f334b = this.f323h;
+        cVar.f335c = z;
+        return cVar;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // android.support.p001v4.app.ActivityC0130z, android.app.Activity
+    @Override // android.support.v4.app.z, android.app.Activity
     public void onSaveInstanceState(Bundle bundle) {
         super.onSaveInstanceState(bundle);
-        m2080k();
-        Parcelable m2070A = this.f452g.m2070A();
-        if (m2070A != null) {
-            bundle.putParcelable("android:support:fragments", m2070A);
+        k();
+        Parcelable A = this.f322g.A();
+        if (A != null) {
+            bundle.putParcelable("android:support:fragments", A);
         }
-        if (this.f460o.m477k() > 0) {
-            bundle.putInt("android:support:next_request_index", this.f459n);
-            int[] iArr = new int[this.f460o.m477k()];
-            String[] strArr = new String[this.f460o.m477k()];
-            for (int i = 0; i < this.f460o.m477k(); i++) {
-                iArr[i] = this.f460o.m480h(i);
-                strArr[i] = this.f460o.m476l(i);
+        if (this.f330o.k() > 0) {
+            bundle.putInt("android:support:next_request_index", this.f329n);
+            int[] iArr = new int[this.f330o.k()];
+            String[] strArr = new String[this.f330o.k()];
+            for (int i2 = 0; i2 < this.f330o.k(); i2++) {
+                iArr[i2] = this.f330o.h(i2);
+                strArr[i2] = this.f330o.l(i2);
             }
             bundle.putIntArray("android:support:request_indicies", iArr);
             bundle.putStringArray("android:support:request_fragment_who", strArr);
@@ -509,69 +484,66 @@ public class ActivityC0079h extends AbstractActivityC0072f implements InterfaceC
     @Override // android.app.Activity
     public void onStart() {
         super.onStart();
-        this.f456k = false;
-        this.f457l = false;
-        this.f451f.removeMessages(1);
-        if (!this.f454i) {
-            this.f454i = true;
-            this.f452g.m2067c();
+        this.f326k = false;
+        this.f327l = false;
+        this.f321f.removeMessages(1);
+        if (!this.f324i) {
+            this.f324i = true;
+            this.f322g.c();
         }
-        this.f452g.m2047w();
-        this.f452g.m2050t();
-        this.f452g.m2052r();
+        this.f322g.w();
+        this.f322g.t();
+        this.f322g.r();
     }
 
     @Override // android.app.Activity
     public void onStateNotSaved() {
-        this.f452g.m2047w();
+        this.f322g.w();
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // android.app.Activity
     public void onStop() {
         super.onStop();
-        this.f456k = true;
-        m2080k();
-        this.f451f.sendEmptyMessage(1);
-        this.f452g.m2051s();
+        this.f326k = true;
+        k();
+        this.f321f.sendEmptyMessage(1);
+        this.f322g.s();
     }
 
-    /* renamed from: p */
-    protected void m2075p() {
-        this.f452g.m2053q();
+    protected void p() {
+        this.f322g.q();
     }
 
-    /* renamed from: q */
-    public Object m2074q() {
+    public Object q() {
         return null;
     }
 
     @Deprecated
-    /* renamed from: r */
-    public void mo285r() {
+    public void r() {
         invalidateOptionsMenu();
     }
 
     @Override // android.app.Activity
-    public void startActivityForResult(Intent intent, int i) {
-        if (!this.f385e && i != -1) {
-            AbstractActivityC0071e.m2198g(i);
+    public void startActivityForResult(Intent intent, int i2) {
+        if (!this.f279e && i2 != -1) {
+            e.g(i2);
         }
-        super.startActivityForResult(intent, i);
+        super.startActivityForResult(intent, i2);
     }
 
-    @Override // android.support.p001v4.app.AbstractActivityC0072f, android.app.Activity
-    public /* bridge */ /* synthetic */ void startActivityForResult(Intent intent, int i, Bundle bundle) {
-        super.startActivityForResult(intent, i, bundle);
+    @Override // android.support.v4.app.f, android.app.Activity
+    public /* bridge */ /* synthetic */ void startActivityForResult(Intent intent, int i2, Bundle bundle) {
+        super.startActivityForResult(intent, i2, bundle);
     }
 
-    @Override // android.support.p001v4.app.AbstractActivityC0071e, android.app.Activity
-    public /* bridge */ /* synthetic */ void startIntentSenderForResult(IntentSender intentSender, int i, Intent intent, int i2, int i3, int i4) {
-        super.startIntentSenderForResult(intentSender, i, intent, i2, i3, i4);
+    @Override // android.support.v4.app.e, android.app.Activity
+    public /* bridge */ /* synthetic */ void startIntentSenderForResult(IntentSender intentSender, int i2, Intent intent, int i3, int i4, int i5) {
+        super.startIntentSenderForResult(intentSender, i2, intent, i3, i4, i5);
     }
 
-    @Override // android.support.p001v4.app.AbstractActivityC0072f, android.app.Activity
-    public /* bridge */ /* synthetic */ void startIntentSenderForResult(IntentSender intentSender, int i, Intent intent, int i2, int i3, int i4, Bundle bundle) {
-        super.startIntentSenderForResult(intentSender, i, intent, i2, i3, i4, bundle);
+    @Override // android.support.v4.app.f, android.app.Activity
+    public /* bridge */ /* synthetic */ void startIntentSenderForResult(IntentSender intentSender, int i2, Intent intent, int i3, int i4, int i5, Bundle bundle) {
+        super.startIntentSenderForResult(intentSender, i2, intent, i3, i4, i5, bundle);
     }
 }

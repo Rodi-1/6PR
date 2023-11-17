@@ -1,17 +1,16 @@
 package android.arch.lifecycle;
 
-import android.arch.lifecycle.AbstractC0009c;
+import android.arch.lifecycle.c;
 
 /* loaded from: classes.dex */
 public class SingleGeneratedAdapterObserver implements GenericLifecycleObserver {
 
-    /* renamed from: a */
-    private final InterfaceC0008b f26a;
+    /* renamed from: a  reason: collision with root package name */
+    private final b f26a;
 
     @Override // android.arch.lifecycle.GenericLifecycleObserver
-    /* renamed from: g */
-    public void mo2383g(InterfaceC0013e interfaceC0013e, AbstractC0009c.EnumC0010a enumC0010a) {
-        this.f26a.m2381a(interfaceC0013e, enumC0010a, false, null);
-        this.f26a.m2381a(interfaceC0013e, enumC0010a, true, null);
+    public void g(e eVar, c.a aVar) {
+        this.f26a.a(eVar, aVar, false, null);
+        this.f26a.a(eVar, aVar, true, null);
     }
 }

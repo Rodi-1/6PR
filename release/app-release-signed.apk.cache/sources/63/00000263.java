@@ -1,8 +1,7 @@
-package p020s;
+package s;
 
-/* renamed from: s.h */
 /* loaded from: classes.dex */
-public final class C0576h {
+public final class h {
 
     /* renamed from: a */
     public static final int abc_action_bar_up_description = 2131427329;

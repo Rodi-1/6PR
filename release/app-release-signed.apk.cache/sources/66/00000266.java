@@ -1,4 +1,4 @@
-package p021t;
+package t;
 
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
@@ -8,14 +8,11 @@ import android.util.AttributeSet;
 import android.util.Xml;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
-import p010i.C0398a;
 
 /* JADX INFO: Access modifiers changed from: package-private */
-/* renamed from: t.a */
 /* loaded from: classes.dex */
-public final class C0579a {
-    /* renamed from: a */
-    public static ColorStateList m106a(Resources resources, XmlPullParser xmlPullParser, Resources.Theme theme) {
+public final class a {
+    public static ColorStateList a(Resources resources, XmlPullParser xmlPullParser, Resources.Theme theme) {
         int next;
         AttributeSet asAttributeSet = Xml.asAttributeSet(xmlPullParser);
         do {
@@ -25,16 +22,15 @@ public final class C0579a {
             }
         } while (next != 1);
         if (next == 2) {
-            return m105b(resources, xmlPullParser, asAttributeSet, theme);
+            return b(resources, xmlPullParser, asAttributeSet, theme);
         }
         throw new XmlPullParserException("No start tag found");
     }
 
-    /* renamed from: b */
-    private static ColorStateList m105b(Resources resources, XmlPullParser xmlPullParser, AttributeSet attributeSet, Resources.Theme theme) {
+    private static ColorStateList b(Resources resources, XmlPullParser xmlPullParser, AttributeSet attributeSet, Resources.Theme theme) {
         String name = xmlPullParser.getName();
         if (name.equals("selector")) {
-            return m104c(resources, xmlPullParser, attributeSet, theme);
+            return c(resources, xmlPullParser, attributeSet, theme);
         }
         throw new XmlPullParserException(xmlPullParser.getPositionDescription() + ": invalid color state list tag " + name);
     }
@@ -42,12 +38,11 @@ public final class C0579a {
     /* JADX WARN: Code restructure failed: missing block: B:19:0x005a, code lost:
         if (r7.hasValue(r12) != false) goto L19;
      */
-    /* renamed from: c */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private static android.content.res.ColorStateList m104c(android.content.res.Resources r17, org.xmlpull.v1.XmlPullParser r18, android.util.AttributeSet r19, android.content.res.Resources.Theme r20) {
+    private static android.content.res.ColorStateList c(android.content.res.Resources r17, org.xmlpull.v1.XmlPullParser r18, android.util.AttributeSet r19, android.content.res.Resources.Theme r20) {
         /*
             r0 = r19
             int r1 = r18.getDepth()
@@ -75,22 +70,22 @@ public final class C0579a {
             if (r7 != 0) goto L32
             goto La6
         L32:
-            int[] r7 = p020s.C0578j.f2426B0
+            int[] r7 = s.j.B0
             r8 = r17
             r9 = r20
-            android.content.res.TypedArray r7 = m102e(r8, r9, r0, r7)
-            int r10 = p020s.C0578j.f2430C0
+            android.content.res.TypedArray r7 = e(r8, r9, r0, r7)
+            int r10 = s.j.C0
             r11 = -65281(0xffffffffffff00ff, float:NaN)
             int r10 = r7.getColor(r10, r11)
             r11 = 1065353216(0x3f800000, float:1.0)
-            int r12 = p020s.C0578j.f2434D0
+            int r12 = s.j.D0
             boolean r13 = r7.hasValue(r12)
             if (r13 == 0) goto L54
         L4f:
             float r11 = r7.getFloat(r12, r11)
             goto L5d
         L54:
-            int r12 = p020s.C0578j.f2438E0
+            int r12 = s.j.E0
             boolean r13 = r7.hasValue(r12)
             if (r13 == 0) goto L5d
             goto L4f
@@ -107,7 +102,7 @@ public final class C0579a {
             if (r15 == r2) goto L89
             r2 = 16843551(0x101031f, float:2.3695797E-38)
             if (r15 == r2) goto L89
-            int r2 = p020s.C0569a.alpha
+            int r2 = s.a.alpha
             if (r15 == r2) goto L89
             int r2 = r14 + 1
             boolean r16 = r0.getAttributeBooleanValue(r13, r5)
@@ -124,12 +119,12 @@ public final class C0579a {
             goto L68
         L8d:
             int[] r2 = android.util.StateSet.trimStateSet(r12, r14)
-            int r7 = m103d(r10, r11)
+            int r7 = d(r10, r11)
             if (r6 == 0) goto L98
             int r10 = r2.length
         L98:
-            int[] r3 = p021t.C0582c.m94a(r3, r6, r7)
-            java.lang.Object[] r2 = p021t.C0582c.m93b(r4, r6, r2)
+            int[] r3 = t.c.a(r3, r6, r7)
+            java.lang.Object[] r2 = t.c.b(r4, r6, r2)
             r4 = r2
             int[][] r4 = (int[][]) r4
             int r6 = r6 + 1
@@ -149,16 +144,14 @@ public final class C0579a {
             r2.<init>(r1, r0)
             return r2
         */
-        throw new UnsupportedOperationException("Method not decompiled: p021t.C0579a.m104c(android.content.res.Resources, org.xmlpull.v1.XmlPullParser, android.util.AttributeSet, android.content.res.Resources$Theme):android.content.res.ColorStateList");
+        throw new UnsupportedOperationException("Method not decompiled: t.a.c(android.content.res.Resources, org.xmlpull.v1.XmlPullParser, android.util.AttributeSet, android.content.res.Resources$Theme):android.content.res.ColorStateList");
     }
 
-    /* renamed from: d */
-    private static int m103d(int i, float f) {
-        return C0398a.m693d(i, Math.round(Color.alpha(i) * f));
+    private static int d(int i2, float f2) {
+        return i.a.d(i2, Math.round(Color.alpha(i2) * f2));
     }
 
-    /* renamed from: e */
-    private static TypedArray m102e(Resources resources, Resources.Theme theme, AttributeSet attributeSet, int[] iArr) {
+    private static TypedArray e(Resources resources, Resources.Theme theme, AttributeSet attributeSet, int[] iArr) {
         return theme == null ? resources.obtainAttributes(attributeSet, iArr) : theme.obtainStyledAttributes(attributeSet, iArr, 0, 0);
     }
 }

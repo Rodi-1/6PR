@@ -1,468 +1,445 @@
-package p006e;
+package e;
 
+import e.i;
+import f.e;
 import java.util.Arrays;
 import java.util.HashMap;
-import p006e.C0359i;
-import p007f.C0365e;
-import p007f.C0370f;
 
-/* renamed from: e.e */
 /* loaded from: classes.dex */
-public class C0354e {
+public class e {
 
-    /* renamed from: q */
-    private static int f1782q = 1000;
+    /* renamed from: q  reason: collision with root package name */
+    private static int f1356q = 1000;
 
-    /* renamed from: r */
-    public static final /* synthetic */ int f1783r = 0;
+    /* renamed from: r  reason: collision with root package name */
+    public static final /* synthetic */ int f1357r = 0;
 
-    /* renamed from: c */
-    private InterfaceC0355a f1786c;
+    /* renamed from: c  reason: collision with root package name */
+    private a f1360c;
 
-    /* renamed from: f */
-    C0351b[] f1789f;
+    /* renamed from: f  reason: collision with root package name */
+    b[] f1363f;
 
-    /* renamed from: l */
-    final C0352c f1795l;
+    /* renamed from: l  reason: collision with root package name */
+    final c f1369l;
 
-    /* renamed from: p */
-    private final InterfaceC0355a f1799p;
+    /* renamed from: p  reason: collision with root package name */
+    private final a f1373p;
 
-    /* renamed from: a */
-    int f1784a = 0;
+    /* renamed from: a  reason: collision with root package name */
+    int f1358a = 0;
 
-    /* renamed from: b */
-    private HashMap<String, C0359i> f1785b = null;
+    /* renamed from: b  reason: collision with root package name */
+    private HashMap<String, i> f1359b = null;
 
-    /* renamed from: d */
-    private int f1787d = 32;
+    /* renamed from: d  reason: collision with root package name */
+    private int f1361d = 32;
 
-    /* renamed from: e */
-    private int f1788e = 32;
+    /* renamed from: e  reason: collision with root package name */
+    private int f1362e = 32;
 
-    /* renamed from: g */
-    public boolean f1790g = false;
+    /* renamed from: g  reason: collision with root package name */
+    public boolean f1364g = false;
 
-    /* renamed from: h */
-    private boolean[] f1791h = new boolean[32];
+    /* renamed from: h  reason: collision with root package name */
+    private boolean[] f1365h = new boolean[32];
 
-    /* renamed from: i */
-    int f1792i = 1;
+    /* renamed from: i  reason: collision with root package name */
+    int f1366i = 1;
 
-    /* renamed from: j */
-    int f1793j = 0;
+    /* renamed from: j  reason: collision with root package name */
+    int f1367j = 0;
 
-    /* renamed from: k */
-    private int f1794k = 32;
+    /* renamed from: k  reason: collision with root package name */
+    private int f1368k = 32;
 
-    /* renamed from: m */
-    private C0359i[] f1796m = new C0359i[f1782q];
+    /* renamed from: m  reason: collision with root package name */
+    private i[] f1370m = new i[f1356q];
 
-    /* renamed from: n */
-    private int f1797n = 0;
+    /* renamed from: n  reason: collision with root package name */
+    private int f1371n = 0;
 
-    /* renamed from: o */
-    private C0351b[] f1798o = new C0351b[32];
+    /* renamed from: o  reason: collision with root package name */
+    private b[] f1372o = new b[32];
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: e.e$a */
     /* loaded from: classes.dex */
-    public interface InterfaceC0355a {
-        /* renamed from: a */
-        void mo932a(C0359i c0359i);
+    public interface a {
+        void a(i iVar);
 
-        /* renamed from: b */
-        C0359i mo931b(C0354e c0354e, boolean[] zArr);
+        i b(e eVar, boolean[] zArr);
 
-        /* renamed from: c */
-        void mo930c(InterfaceC0355a interfaceC0355a);
+        void c(a aVar);
 
         void clear();
 
-        C0359i getKey();
+        i getKey();
     }
 
-    public C0354e() {
-        this.f1789f = null;
-        this.f1789f = new C0351b[32];
-        m961D();
-        C0352c c0352c = new C0352c();
-        this.f1795l = c0352c;
-        this.f1786c = new C0353d(c0352c);
-        this.f1799p = new C0351b(c0352c);
+    public e() {
+        this.f1363f = null;
+        this.f1363f = new b[32];
+        D();
+        c cVar = new c();
+        this.f1369l = cVar;
+        this.f1360c = new d(cVar);
+        this.f1373p = new b(cVar);
     }
 
-    /* renamed from: C */
-    private final int m962C(InterfaceC0355a interfaceC0355a, boolean z) {
-        for (int i = 0; i < this.f1792i; i++) {
-            this.f1791h[i] = false;
+    private final int C(a aVar, boolean z) {
+        for (int i2 = 0; i2 < this.f1366i; i2++) {
+            this.f1365h[i2] = false;
         }
         boolean z2 = false;
-        int i2 = 0;
+        int i3 = 0;
         while (!z2) {
-            i2++;
-            if (i2 >= this.f1792i * 2) {
-                return i2;
+            i3++;
+            if (i3 >= this.f1366i * 2) {
+                return i3;
             }
-            if (interfaceC0355a.getKey() != null) {
-                this.f1791h[interfaceC0355a.getKey().f1804b] = true;
+            if (aVar.getKey() != null) {
+                this.f1365h[aVar.getKey().f1378b] = true;
             }
-            C0359i mo931b = interfaceC0355a.mo931b(this, this.f1791h);
-            if (mo931b != null) {
-                boolean[] zArr = this.f1791h;
-                int i3 = mo931b.f1804b;
-                if (zArr[i3]) {
-                    return i2;
+            i b2 = aVar.b(this, this.f1365h);
+            if (b2 != null) {
+                boolean[] zArr = this.f1365h;
+                int i4 = b2.f1378b;
+                if (zArr[i4]) {
+                    return i3;
                 }
-                zArr[i3] = true;
+                zArr[i4] = true;
             }
-            if (mo931b != null) {
-                float f = Float.MAX_VALUE;
-                int i4 = -1;
-                for (int i5 = 0; i5 < this.f1793j; i5++) {
-                    C0351b c0351b = this.f1789f[i5];
-                    if (c0351b.f1774a.f1809g != C0359i.EnumC0360a.UNRESTRICTED && !c0351b.f1778e && c0351b.m970s(mo931b)) {
-                        float m995f = c0351b.f1777d.m995f(mo931b);
-                        if (m995f < 0.0f) {
-                            float f2 = (-c0351b.f1775b) / m995f;
-                            if (f2 < f) {
-                                i4 = i5;
-                                f = f2;
+            if (b2 != null) {
+                float f2 = Float.MAX_VALUE;
+                int i5 = -1;
+                for (int i6 = 0; i6 < this.f1367j; i6++) {
+                    b bVar = this.f1363f[i6];
+                    if (bVar.f1348a.f1383g != i.a.UNRESTRICTED && !bVar.f1352e && bVar.s(b2)) {
+                        float f3 = bVar.f1351d.f(b2);
+                        if (f3 < 0.0f) {
+                            float f4 = (-bVar.f1349b) / f3;
+                            if (f4 < f2) {
+                                i5 = i6;
+                                f2 = f4;
                             }
                         }
                     }
                 }
-                if (i4 > -1) {
-                    C0351b c0351b2 = this.f1789f[i4];
-                    c0351b2.f1774a.f1805c = -1;
-                    c0351b2.m967v(mo931b);
-                    C0359i c0359i = c0351b2.f1774a;
-                    c0359i.f1805c = i4;
-                    c0359i.m921f(c0351b2);
+                if (i5 > -1) {
+                    b bVar2 = this.f1363f[i5];
+                    bVar2.f1348a.f1379c = -1;
+                    bVar2.v(b2);
+                    i iVar = bVar2.f1348a;
+                    iVar.f1379c = i5;
+                    iVar.f(bVar2);
                 }
             }
             z2 = true;
         }
-        return i2;
+        return i3;
     }
 
-    /* renamed from: D */
-    private void m961D() {
-        int i = 0;
+    private void D() {
+        int i2 = 0;
         while (true) {
-            C0351b[] c0351bArr = this.f1789f;
-            if (i >= c0351bArr.length) {
+            b[] bVarArr = this.f1363f;
+            if (i2 >= bVarArr.length) {
                 return;
             }
-            C0351b c0351b = c0351bArr[i];
-            if (c0351b != null) {
-                this.f1795l.f1779a.mo928b(c0351b);
+            b bVar = bVarArr[i2];
+            if (bVar != null) {
+                this.f1369l.f1353a.b(bVar);
             }
-            this.f1789f[i] = null;
-            i++;
+            this.f1363f[i2] = null;
+            i2++;
         }
     }
 
-    /* renamed from: F */
-    private final void m959F(C0351b c0351b) {
-        if (this.f1793j > 0) {
-            c0351b.f1777d.m986o(c0351b, this.f1789f);
-            if (c0351b.f1777d.f1763a == 0) {
-                c0351b.f1778e = true;
+    private final void F(b bVar) {
+        if (this.f1367j > 0) {
+            bVar.f1351d.o(bVar, this.f1363f);
+            if (bVar.f1351d.f1337a == 0) {
+                bVar.f1352e = true;
             }
         }
     }
 
-    /* renamed from: a */
-    private C0359i m958a(C0359i.EnumC0360a enumC0360a, String str) {
-        C0359i mo927c = this.f1795l.f1780b.mo927c();
-        if (mo927c == null) {
-            mo927c = new C0359i(enumC0360a, str);
+    private i a(i.a aVar, String str) {
+        i c2 = this.f1369l.f1354b.c();
+        if (c2 == null) {
+            c2 = new i(aVar, str);
         } else {
-            mo927c.m923d();
+            c2.d();
         }
-        mo927c.m922e(enumC0360a, str);
-        int i = this.f1797n;
-        int i2 = f1782q;
-        if (i >= i2) {
-            int i3 = i2 * 2;
-            f1782q = i3;
-            this.f1796m = (C0359i[]) Arrays.copyOf(this.f1796m, i3);
+        c2.e(aVar, str);
+        int i2 = this.f1371n;
+        int i3 = f1356q;
+        if (i2 >= i3) {
+            int i4 = i3 * 2;
+            f1356q = i4;
+            this.f1370m = (i[]) Arrays.copyOf(this.f1370m, i4);
         }
-        C0359i[] c0359iArr = this.f1796m;
-        int i4 = this.f1797n;
-        this.f1797n = i4 + 1;
-        c0359iArr[i4] = mo927c;
-        return mo927c;
+        i[] iVarArr = this.f1370m;
+        int i5 = this.f1371n;
+        this.f1371n = i5 + 1;
+        iVarArr[i5] = c2;
+        return c2;
     }
 
-    /* renamed from: g */
-    private void m952g(C0351b c0351b) {
-        c0351b.m985d(this, 0);
+    private void g(b bVar) {
+        bVar.d(this, 0);
     }
 
-    /* renamed from: m */
-    private final void m946m(C0351b c0351b) {
-        C0351b[] c0351bArr = this.f1789f;
-        int i = this.f1793j;
-        if (c0351bArr[i] != null) {
-            this.f1795l.f1779a.mo928b(c0351bArr[i]);
+    private final void m(b bVar) {
+        b[] bVarArr = this.f1363f;
+        int i2 = this.f1367j;
+        if (bVarArr[i2] != null) {
+            this.f1369l.f1353a.b(bVarArr[i2]);
         }
-        C0351b[] c0351bArr2 = this.f1789f;
-        int i2 = this.f1793j;
-        c0351bArr2[i2] = c0351b;
-        C0359i c0359i = c0351b.f1774a;
-        c0359i.f1805c = i2;
-        this.f1793j = i2 + 1;
-        c0359i.m921f(c0351b);
+        b[] bVarArr2 = this.f1363f;
+        int i3 = this.f1367j;
+        bVarArr2[i3] = bVar;
+        i iVar = bVar.f1348a;
+        iVar.f1379c = i3;
+        this.f1367j = i3 + 1;
+        iVar.f(bVar);
     }
 
-    /* renamed from: o */
-    private void m944o() {
-        for (int i = 0; i < this.f1793j; i++) {
-            C0351b c0351b = this.f1789f[i];
-            c0351b.f1774a.f1807e = c0351b.f1775b;
+    private void o() {
+        for (int i2 = 0; i2 < this.f1367j; i2++) {
+            b bVar = this.f1363f[i2];
+            bVar.f1348a.f1381e = bVar.f1349b;
         }
     }
 
-    /* renamed from: t */
-    public static C0351b m939t(C0354e c0354e, C0359i c0359i, C0359i c0359i2, C0359i c0359i3, float f, boolean z) {
-        C0351b m940s = c0354e.m940s();
+    public static b t(e eVar, i iVar, i iVar2, i iVar3, float f2, boolean z) {
+        b s2 = eVar.s();
         if (z) {
-            c0354e.m952g(m940s);
+            eVar.g(s2);
         }
-        return m940s.m980i(c0359i, c0359i2, c0359i3, f);
+        return s2.i(iVar, iVar2, iVar3, f2);
     }
 
-    /* renamed from: v */
-    private int m937v(InterfaceC0355a interfaceC0355a) {
-        float f;
+    private int v(a aVar) {
+        float f2;
         boolean z;
-        int i = 0;
+        int i2 = 0;
         while (true) {
-            f = 0.0f;
-            if (i >= this.f1793j) {
+            f2 = 0.0f;
+            if (i2 >= this.f1367j) {
                 z = false;
                 break;
             }
-            C0351b[] c0351bArr = this.f1789f;
-            if (c0351bArr[i].f1774a.f1809g != C0359i.EnumC0360a.UNRESTRICTED && c0351bArr[i].f1775b < 0.0f) {
+            b[] bVarArr = this.f1363f;
+            if (bVarArr[i2].f1348a.f1383g != i.a.UNRESTRICTED && bVarArr[i2].f1349b < 0.0f) {
                 z = true;
                 break;
             }
-            i++;
+            i2++;
         }
         if (z) {
             boolean z2 = false;
-            int i2 = 0;
+            int i3 = 0;
             while (!z2) {
-                i2++;
-                float f2 = Float.MAX_VALUE;
-                int i3 = 0;
-                int i4 = -1;
+                i3++;
+                float f3 = Float.MAX_VALUE;
+                int i4 = 0;
                 int i5 = -1;
-                int i6 = 0;
-                while (i3 < this.f1793j) {
-                    C0351b c0351b = this.f1789f[i3];
-                    if (c0351b.f1774a.f1809g != C0359i.EnumC0360a.UNRESTRICTED && !c0351b.f1778e && c0351b.f1775b < f) {
-                        int i7 = 1;
-                        while (i7 < this.f1792i) {
-                            C0359i c0359i = this.f1795l.f1781c[i7];
-                            float m995f = c0351b.f1777d.m995f(c0359i);
-                            if (m995f > f) {
-                                for (int i8 = 0; i8 < 7; i8++) {
-                                    float f3 = c0359i.f1808f[i8] / m995f;
-                                    if ((f3 < f2 && i8 == i6) || i8 > i6) {
+                int i6 = -1;
+                int i7 = 0;
+                while (i4 < this.f1367j) {
+                    b bVar = this.f1363f[i4];
+                    if (bVar.f1348a.f1383g != i.a.UNRESTRICTED && !bVar.f1352e && bVar.f1349b < f2) {
+                        int i8 = 1;
+                        while (i8 < this.f1366i) {
+                            i iVar = this.f1369l.f1355c[i8];
+                            float f4 = bVar.f1351d.f(iVar);
+                            if (f4 > f2) {
+                                for (int i9 = 0; i9 < 7; i9++) {
+                                    float f5 = iVar.f1382f[i9] / f4;
+                                    if ((f5 < f3 && i9 == i7) || i9 > i7) {
+                                        i7 = i9;
+                                        f3 = f5;
+                                        i5 = i4;
                                         i6 = i8;
-                                        f2 = f3;
-                                        i4 = i3;
-                                        i5 = i7;
                                     }
                                 }
                             }
-                            i7++;
-                            f = 0.0f;
+                            i8++;
+                            f2 = 0.0f;
                         }
                     }
-                    i3++;
-                    f = 0.0f;
+                    i4++;
+                    f2 = 0.0f;
                 }
-                if (i4 != -1) {
-                    C0351b c0351b2 = this.f1789f[i4];
-                    c0351b2.f1774a.f1805c = -1;
-                    c0351b2.m967v(this.f1795l.f1781c[i5]);
-                    C0359i c0359i2 = c0351b2.f1774a;
-                    c0359i2.f1805c = i4;
-                    c0359i2.m921f(c0351b2);
+                if (i5 != -1) {
+                    b bVar2 = this.f1363f[i5];
+                    bVar2.f1348a.f1379c = -1;
+                    bVar2.v(this.f1369l.f1355c[i6]);
+                    i iVar2 = bVar2.f1348a;
+                    iVar2.f1379c = i5;
+                    iVar2.f(bVar2);
                 } else {
                     z2 = true;
                 }
-                if (i2 > this.f1792i / 2) {
+                if (i3 > this.f1366i / 2) {
                     z2 = true;
                 }
-                f = 0.0f;
+                f2 = 0.0f;
             }
-            return i2;
+            return i3;
         }
         return 0;
     }
 
-    /* renamed from: x */
-    public static C0356f m935x() {
+    public static f x() {
         return null;
     }
 
-    /* renamed from: z */
-    private void m933z() {
-        int i = this.f1787d * 2;
-        this.f1787d = i;
-        this.f1789f = (C0351b[]) Arrays.copyOf(this.f1789f, i);
-        C0352c c0352c = this.f1795l;
-        c0352c.f1781c = (C0359i[]) Arrays.copyOf(c0352c.f1781c, this.f1787d);
-        int i2 = this.f1787d;
-        this.f1791h = new boolean[i2];
-        this.f1788e = i2;
-        this.f1794k = i2;
+    private void z() {
+        int i2 = this.f1361d * 2;
+        this.f1361d = i2;
+        this.f1363f = (b[]) Arrays.copyOf(this.f1363f, i2);
+        c cVar = this.f1369l;
+        cVar.f1355c = (i[]) Arrays.copyOf(cVar.f1355c, this.f1361d);
+        int i3 = this.f1361d;
+        this.f1365h = new boolean[i3];
+        this.f1362e = i3;
+        this.f1368k = i3;
     }
 
-    /* renamed from: A */
-    public void m964A() {
-        if (this.f1790g) {
+    public void A() {
+        if (this.f1364g) {
             boolean z = false;
-            int i = 0;
+            int i2 = 0;
             while (true) {
-                if (i >= this.f1793j) {
+                if (i2 >= this.f1367j) {
                     z = true;
                     break;
-                } else if (!this.f1789f[i].f1778e) {
+                } else if (!this.f1363f[i2].f1352e) {
                     break;
                 } else {
-                    i++;
+                    i2++;
                 }
             }
             if (z) {
-                m944o();
+                o();
                 return;
             }
         }
-        m963B(this.f1786c);
+        B(this.f1360c);
     }
 
-    /* renamed from: B */
-    void m963B(InterfaceC0355a interfaceC0355a) {
-        m959F((C0351b) interfaceC0355a);
-        m937v(interfaceC0355a);
-        m962C(interfaceC0355a, false);
-        m944o();
+    void B(a aVar) {
+        F((b) aVar);
+        v(aVar);
+        C(aVar, false);
+        o();
     }
 
-    /* renamed from: E */
-    public void m960E() {
-        C0352c c0352c;
-        int i = 0;
+    public void E() {
+        c cVar;
+        int i2 = 0;
         while (true) {
-            c0352c = this.f1795l;
-            C0359i[] c0359iArr = c0352c.f1781c;
-            if (i >= c0359iArr.length) {
+            cVar = this.f1369l;
+            i[] iVarArr = cVar.f1355c;
+            if (i2 >= iVarArr.length) {
                 break;
             }
-            C0359i c0359i = c0359iArr[i];
-            if (c0359i != null) {
-                c0359i.m923d();
+            i iVar = iVarArr[i2];
+            if (iVar != null) {
+                iVar.d();
             }
-            i++;
+            i2++;
         }
-        c0352c.f1780b.mo929a(this.f1796m, this.f1797n);
-        this.f1797n = 0;
-        Arrays.fill(this.f1795l.f1781c, (Object) null);
-        HashMap<String, C0359i> hashMap = this.f1785b;
+        cVar.f1354b.a(this.f1370m, this.f1371n);
+        this.f1371n = 0;
+        Arrays.fill(this.f1369l.f1355c, (Object) null);
+        HashMap<String, i> hashMap = this.f1359b;
         if (hashMap != null) {
             hashMap.clear();
         }
-        this.f1784a = 0;
-        this.f1786c.clear();
-        this.f1792i = 1;
-        for (int i2 = 0; i2 < this.f1793j; i2++) {
-            this.f1789f[i2].f1776c = false;
+        this.f1358a = 0;
+        this.f1360c.clear();
+        this.f1366i = 1;
+        for (int i3 = 0; i3 < this.f1367j; i3++) {
+            this.f1363f[i3].f1350c = false;
         }
-        m961D();
-        this.f1793j = 0;
+        D();
+        this.f1367j = 0;
     }
 
-    /* renamed from: b */
-    public void m957b(C0370f c0370f, C0370f c0370f2, float f, int i) {
-        C0365e.EnumC0369d enumC0369d = C0365e.EnumC0369d.LEFT;
-        C0359i m941r = m941r(c0370f.mo776h(enumC0369d));
-        C0365e.EnumC0369d enumC0369d2 = C0365e.EnumC0369d.TOP;
-        C0359i m941r2 = m941r(c0370f.mo776h(enumC0369d2));
-        C0365e.EnumC0369d enumC0369d3 = C0365e.EnumC0369d.RIGHT;
-        C0359i m941r3 = m941r(c0370f.mo776h(enumC0369d3));
-        C0365e.EnumC0369d enumC0369d4 = C0365e.EnumC0369d.BOTTOM;
-        C0359i m941r4 = m941r(c0370f.mo776h(enumC0369d4));
-        C0359i m941r5 = m941r(c0370f2.mo776h(enumC0369d));
-        C0359i m941r6 = m941r(c0370f2.mo776h(enumC0369d2));
-        C0359i m941r7 = m941r(c0370f2.mo776h(enumC0369d3));
-        C0359i m941r8 = m941r(c0370f2.mo776h(enumC0369d4));
-        C0351b m940s = m940s();
-        double d = f;
-        double sin = Math.sin(d);
-        double d2 = i;
-        Double.isNaN(d2);
-        m940s.m973p(m941r2, m941r4, m941r6, m941r8, (float) (sin * d2));
-        m955d(m940s);
-        C0351b m940s2 = m940s();
-        double cos = Math.cos(d);
-        Double.isNaN(d2);
-        m940s2.m973p(m941r, m941r3, m941r5, m941r7, (float) (cos * d2));
-        m955d(m940s2);
+    public void b(f.f fVar, f.f fVar2, float f2, int i2) {
+        e.d dVar = e.d.LEFT;
+        i r2 = r(fVar.h(dVar));
+        e.d dVar2 = e.d.TOP;
+        i r3 = r(fVar.h(dVar2));
+        e.d dVar3 = e.d.RIGHT;
+        i r4 = r(fVar.h(dVar3));
+        e.d dVar4 = e.d.BOTTOM;
+        i r5 = r(fVar.h(dVar4));
+        i r6 = r(fVar2.h(dVar));
+        i r7 = r(fVar2.h(dVar2));
+        i r8 = r(fVar2.h(dVar3));
+        i r9 = r(fVar2.h(dVar4));
+        b s2 = s();
+        double d2 = f2;
+        double sin = Math.sin(d2);
+        double d3 = i2;
+        Double.isNaN(d3);
+        s2.p(r3, r5, r7, r9, (float) (sin * d3));
+        d(s2);
+        b s3 = s();
+        double cos = Math.cos(d2);
+        Double.isNaN(d3);
+        s3.p(r2, r4, r6, r8, (float) (cos * d3));
+        d(s3);
     }
 
-    /* renamed from: c */
-    public void m956c(C0359i c0359i, C0359i c0359i2, int i, float f, C0359i c0359i3, C0359i c0359i4, int i2, int i3) {
-        C0351b m940s = m940s();
-        m940s.m982g(c0359i, c0359i2, i, f, c0359i3, c0359i4, i2);
-        if (i3 != 6) {
-            m940s.m985d(this, i3);
+    public void c(i iVar, i iVar2, int i2, float f2, i iVar3, i iVar4, int i3, int i4) {
+        b s2 = s();
+        s2.g(iVar, iVar2, i2, f2, iVar3, iVar4, i3);
+        if (i4 != 6) {
+            s2.d(this, i4);
         }
-        m955d(m940s);
+        d(s2);
     }
 
-    /* renamed from: d */
-    public void m955d(C0351b c0351b) {
-        C0359i m968u;
-        if (c0351b == null) {
+    public void d(b bVar) {
+        i u2;
+        if (bVar == null) {
             return;
         }
         boolean z = true;
-        if (this.f1793j + 1 >= this.f1794k || this.f1792i + 1 >= this.f1788e) {
-            m933z();
+        if (this.f1367j + 1 >= this.f1368k || this.f1366i + 1 >= this.f1362e) {
+            z();
         }
         boolean z2 = false;
-        if (!c0351b.f1778e) {
-            m959F(c0351b);
-            if (c0351b.m969t()) {
+        if (!bVar.f1352e) {
+            F(bVar);
+            if (bVar.t()) {
                 return;
             }
-            c0351b.m972q();
-            if (c0351b.m983f(this)) {
-                C0359i m942q = m942q();
-                c0351b.f1774a = m942q;
-                m946m(c0351b);
-                this.f1799p.mo930c(c0351b);
-                m962C(this.f1799p, true);
-                if (m942q.f1805c == -1) {
-                    if (c0351b.f1774a == m942q && (m968u = c0351b.m968u(m942q)) != null) {
-                        c0351b.m967v(m968u);
+            bVar.q();
+            if (bVar.f(this)) {
+                i q2 = q();
+                bVar.f1348a = q2;
+                m(bVar);
+                this.f1373p.c(bVar);
+                C(this.f1373p, true);
+                if (q2.f1379c == -1) {
+                    if (bVar.f1348a == q2 && (u2 = bVar.u(q2)) != null) {
+                        bVar.v(u2);
                     }
-                    if (!c0351b.f1778e) {
-                        c0351b.f1774a.m921f(c0351b);
+                    if (!bVar.f1352e) {
+                        bVar.f1348a.f(bVar);
                     }
-                    this.f1793j--;
+                    this.f1367j--;
                 }
             } else {
                 z = false;
             }
-            if (!c0351b.m971r()) {
+            if (!bVar.r()) {
                 return;
             }
             z2 = z;
@@ -470,203 +447,188 @@ public class C0354e {
         if (z2) {
             return;
         }
-        m946m(c0351b);
+        m(bVar);
     }
 
-    /* renamed from: e */
-    public C0351b m954e(C0359i c0359i, C0359i c0359i2, int i, int i2) {
-        C0351b m940s = m940s();
-        m940s.m976m(c0359i, c0359i2, i);
-        if (i2 != 6) {
-            m940s.m985d(this, i2);
+    public b e(i iVar, i iVar2, int i2, int i3) {
+        b s2 = s();
+        s2.m(iVar, iVar2, i2);
+        if (i3 != 6) {
+            s2.d(this, i3);
         }
-        m955d(m940s);
-        return m940s;
+        d(s2);
+        return s2;
     }
 
-    /* renamed from: f */
-    public void m953f(C0359i c0359i, int i) {
-        C0351b m940s;
-        int i2 = c0359i.f1805c;
-        if (i2 != -1) {
-            C0351b c0351b = this.f1789f[i2];
-            if (!c0351b.f1778e) {
-                if (c0351b.f1777d.f1763a == 0) {
-                    c0351b.f1778e = true;
+    public void f(i iVar, int i2) {
+        b s2;
+        int i3 = iVar.f1379c;
+        if (i3 != -1) {
+            b bVar = this.f1363f[i3];
+            if (!bVar.f1352e) {
+                if (bVar.f1351d.f1337a == 0) {
+                    bVar.f1352e = true;
                 } else {
-                    m940s = m940s();
-                    m940s.m977l(c0359i, i);
+                    s2 = s();
+                    s2.l(iVar, i2);
                 }
             }
-            c0351b.f1775b = i;
+            bVar.f1349b = i2;
             return;
         }
-        m940s = m940s();
-        m940s.m981h(c0359i, i);
-        m955d(m940s);
+        s2 = s();
+        s2.h(iVar, i2);
+        d(s2);
     }
 
-    /* renamed from: h */
-    public void m951h(C0359i c0359i, C0359i c0359i2, boolean z) {
-        C0351b m940s = m940s();
-        C0359i m938u = m938u();
-        m938u.f1806d = 0;
-        m940s.m975n(c0359i, c0359i2, m938u, 0);
+    public void h(i iVar, i iVar2, boolean z) {
+        b s2 = s();
+        i u2 = u();
+        u2.f1380d = 0;
+        s2.n(iVar, iVar2, u2, 0);
         if (z) {
-            m945n(m940s, (int) (m940s.f1777d.m995f(m938u) * (-1.0f)), 1);
+            n(s2, (int) (s2.f1351d.f(u2) * (-1.0f)), 1);
         }
-        m955d(m940s);
+        d(s2);
     }
 
-    /* renamed from: i */
-    public void m950i(C0359i c0359i, C0359i c0359i2, int i, int i2) {
-        C0351b m940s = m940s();
-        C0359i m938u = m938u();
-        m938u.f1806d = 0;
-        m940s.m975n(c0359i, c0359i2, m938u, i);
-        if (i2 != 6) {
-            m945n(m940s, (int) (m940s.f1777d.m995f(m938u) * (-1.0f)), i2);
+    public void i(i iVar, i iVar2, int i2, int i3) {
+        b s2 = s();
+        i u2 = u();
+        u2.f1380d = 0;
+        s2.n(iVar, iVar2, u2, i2);
+        if (i3 != 6) {
+            n(s2, (int) (s2.f1351d.f(u2) * (-1.0f)), i3);
         }
-        m955d(m940s);
+        d(s2);
     }
 
-    /* renamed from: j */
-    public void m949j(C0359i c0359i, C0359i c0359i2, boolean z) {
-        C0351b m940s = m940s();
-        C0359i m938u = m938u();
-        m938u.f1806d = 0;
-        m940s.m974o(c0359i, c0359i2, m938u, 0);
+    public void j(i iVar, i iVar2, boolean z) {
+        b s2 = s();
+        i u2 = u();
+        u2.f1380d = 0;
+        s2.o(iVar, iVar2, u2, 0);
         if (z) {
-            m945n(m940s, (int) (m940s.f1777d.m995f(m938u) * (-1.0f)), 1);
+            n(s2, (int) (s2.f1351d.f(u2) * (-1.0f)), 1);
         }
-        m955d(m940s);
+        d(s2);
     }
 
-    /* renamed from: k */
-    public void m948k(C0359i c0359i, C0359i c0359i2, int i, int i2) {
-        C0351b m940s = m940s();
-        C0359i m938u = m938u();
-        m938u.f1806d = 0;
-        m940s.m974o(c0359i, c0359i2, m938u, i);
+    public void k(i iVar, i iVar2, int i2, int i3) {
+        b s2 = s();
+        i u2 = u();
+        u2.f1380d = 0;
+        s2.o(iVar, iVar2, u2, i2);
+        if (i3 != 6) {
+            n(s2, (int) (s2.f1351d.f(u2) * (-1.0f)), i3);
+        }
+        d(s2);
+    }
+
+    public void l(i iVar, i iVar2, i iVar3, i iVar4, float f2, int i2) {
+        b s2 = s();
+        s2.j(iVar, iVar2, iVar3, iVar4, f2);
         if (i2 != 6) {
-            m945n(m940s, (int) (m940s.f1777d.m995f(m938u) * (-1.0f)), i2);
+            s2.d(this, i2);
         }
-        m955d(m940s);
+        d(s2);
     }
 
-    /* renamed from: l */
-    public void m947l(C0359i c0359i, C0359i c0359i2, C0359i c0359i3, C0359i c0359i4, float f, int i) {
-        C0351b m940s = m940s();
-        m940s.m979j(c0359i, c0359i2, c0359i3, c0359i4, f);
-        if (i != 6) {
-            m940s.m985d(this, i);
+    void n(b bVar, int i2, int i3) {
+        bVar.e(p(i3, null), i2);
+    }
+
+    public i p(int i2, String str) {
+        if (this.f1366i + 1 >= this.f1362e) {
+            z();
         }
-        m955d(m940s);
+        i a2 = a(i.a.ERROR, str);
+        int i3 = this.f1358a + 1;
+        this.f1358a = i3;
+        this.f1366i++;
+        a2.f1378b = i3;
+        a2.f1380d = i2;
+        this.f1369l.f1355c[i3] = a2;
+        this.f1360c.a(a2);
+        return a2;
     }
 
-    /* renamed from: n */
-    void m945n(C0351b c0351b, int i, int i2) {
-        c0351b.m984e(m943p(i2, null), i);
-    }
-
-    /* renamed from: p */
-    public C0359i m943p(int i, String str) {
-        if (this.f1792i + 1 >= this.f1788e) {
-            m933z();
+    public i q() {
+        if (this.f1366i + 1 >= this.f1362e) {
+            z();
         }
-        C0359i m958a = m958a(C0359i.EnumC0360a.ERROR, str);
-        int i2 = this.f1784a + 1;
-        this.f1784a = i2;
-        this.f1792i++;
-        m958a.f1804b = i2;
-        m958a.f1806d = i;
-        this.f1795l.f1781c[i2] = m958a;
-        this.f1786c.mo932a(m958a);
-        return m958a;
+        i a2 = a(i.a.SLACK, null);
+        int i2 = this.f1358a + 1;
+        this.f1358a = i2;
+        this.f1366i++;
+        a2.f1378b = i2;
+        this.f1369l.f1355c[i2] = a2;
+        return a2;
     }
 
-    /* renamed from: q */
-    public C0359i m942q() {
-        if (this.f1792i + 1 >= this.f1788e) {
-            m933z();
-        }
-        C0359i m958a = m958a(C0359i.EnumC0360a.SLACK, null);
-        int i = this.f1784a + 1;
-        this.f1784a = i;
-        this.f1792i++;
-        m958a.f1804b = i;
-        this.f1795l.f1781c[i] = m958a;
-        return m958a;
-    }
-
-    /* renamed from: r */
-    public C0359i m941r(Object obj) {
-        C0359i c0359i = null;
+    public i r(Object obj) {
+        i iVar = null;
         if (obj == null) {
             return null;
         }
-        if (this.f1792i + 1 >= this.f1788e) {
-            m933z();
+        if (this.f1366i + 1 >= this.f1362e) {
+            z();
         }
-        if (obj instanceof C0365e) {
-            C0365e c0365e = (C0365e) obj;
-            c0359i = c0365e.m895g();
-            if (c0359i == null) {
-                c0365e.m888n(this.f1795l);
-                c0359i = c0365e.m895g();
+        if (obj instanceof f.e) {
+            f.e eVar = (f.e) obj;
+            iVar = eVar.g();
+            if (iVar == null) {
+                eVar.n(this.f1369l);
+                iVar = eVar.g();
             }
-            int i = c0359i.f1804b;
-            if (i == -1 || i > this.f1784a || this.f1795l.f1781c[i] == null) {
-                if (i != -1) {
-                    c0359i.m923d();
+            int i2 = iVar.f1378b;
+            if (i2 == -1 || i2 > this.f1358a || this.f1369l.f1355c[i2] == null) {
+                if (i2 != -1) {
+                    iVar.d();
                 }
-                int i2 = this.f1784a + 1;
-                this.f1784a = i2;
-                this.f1792i++;
-                c0359i.f1804b = i2;
-                c0359i.f1809g = C0359i.EnumC0360a.UNRESTRICTED;
-                this.f1795l.f1781c[i2] = c0359i;
+                int i3 = this.f1358a + 1;
+                this.f1358a = i3;
+                this.f1366i++;
+                iVar.f1378b = i3;
+                iVar.f1383g = i.a.UNRESTRICTED;
+                this.f1369l.f1355c[i3] = iVar;
             }
         }
-        return c0359i;
+        return iVar;
     }
 
-    /* renamed from: s */
-    public C0351b m940s() {
-        C0351b mo927c = this.f1795l.f1779a.mo927c();
-        if (mo927c == null) {
-            mo927c = new C0351b(this.f1795l);
+    public b s() {
+        b c2 = this.f1369l.f1353a.c();
+        if (c2 == null) {
+            c2 = new b(this.f1369l);
         } else {
-            mo927c.m966w();
+            c2.w();
         }
-        C0359i.m925b();
-        return mo927c;
+        i.b();
+        return c2;
     }
 
-    /* renamed from: u */
-    public C0359i m938u() {
-        if (this.f1792i + 1 >= this.f1788e) {
-            m933z();
+    public i u() {
+        if (this.f1366i + 1 >= this.f1362e) {
+            z();
         }
-        C0359i m958a = m958a(C0359i.EnumC0360a.SLACK, null);
-        int i = this.f1784a + 1;
-        this.f1784a = i;
-        this.f1792i++;
-        m958a.f1804b = i;
-        this.f1795l.f1781c[i] = m958a;
-        return m958a;
+        i a2 = a(i.a.SLACK, null);
+        int i2 = this.f1358a + 1;
+        this.f1358a = i2;
+        this.f1366i++;
+        a2.f1378b = i2;
+        this.f1369l.f1355c[i2] = a2;
+        return a2;
     }
 
-    /* renamed from: w */
-    public C0352c m936w() {
-        return this.f1795l;
+    public c w() {
+        return this.f1369l;
     }
 
-    /* renamed from: y */
-    public int m934y(Object obj) {
-        C0359i m895g = ((C0365e) obj).m895g();
-        if (m895g != null) {
-            return (int) (m895g.f1807e + 0.5f);
+    public int y(Object obj) {
+        i g2 = ((f.e) obj).g();
+        if (g2 != null) {
+            return (int) (g2.f1381e + 0.5f);
         }
         return 0;
     }

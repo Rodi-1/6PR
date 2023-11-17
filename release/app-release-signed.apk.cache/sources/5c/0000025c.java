@@ -1,8 +1,7 @@
-package p020s;
+package s;
 
-/* renamed from: s.a */
 /* loaded from: classes.dex */
-public final class C0569a {
+public final class a {
 
     /* renamed from: A */
     public static final int dropDownListViewStyle = 2130837620;

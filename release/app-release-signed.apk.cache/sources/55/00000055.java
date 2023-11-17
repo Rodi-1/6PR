@@ -1,29 +1,28 @@
-package android.support.p001v4.app;
+package android.support.v4.app;
 
 import android.content.Intent;
 import android.content.IntentSender;
 import android.os.Bundle;
 
-/* renamed from: android.support.v4.app.f */
 /* loaded from: classes.dex */
-abstract class AbstractActivityC0072f extends AbstractActivityC0071e {
+abstract class f extends e {
 
-    /* renamed from: e */
-    boolean f385e;
+    /* renamed from: e  reason: collision with root package name */
+    boolean f279e;
 
     @Override // android.app.Activity
-    public void startActivityForResult(Intent intent, int i, Bundle bundle) {
-        if (!this.f385e && i != -1) {
-            AbstractActivityC0071e.m2198g(i);
+    public void startActivityForResult(Intent intent, int i2, Bundle bundle) {
+        if (!this.f279e && i2 != -1) {
+            e.g(i2);
         }
-        super.startActivityForResult(intent, i, bundle);
+        super.startActivityForResult(intent, i2, bundle);
     }
 
     @Override // android.app.Activity
-    public void startIntentSenderForResult(IntentSender intentSender, int i, Intent intent, int i2, int i3, int i4, Bundle bundle) {
-        if (!this.f384d && i != -1) {
-            AbstractActivityC0071e.m2198g(i);
+    public void startIntentSenderForResult(IntentSender intentSender, int i2, Intent intent, int i3, int i4, int i5, Bundle bundle) {
+        if (!this.f278d && i2 != -1) {
+            e.g(i2);
         }
-        super.startIntentSenderForResult(intentSender, i, intent, i2, i3, i4, bundle);
+        super.startIntentSenderForResult(intentSender, i2, intent, i3, i4, i5, bundle);
     }
 }

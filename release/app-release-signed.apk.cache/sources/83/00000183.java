@@ -1,16 +1,14 @@
-package p006e;
+package e;
 
-/* renamed from: e.d */
 /* loaded from: classes.dex */
-public class C0353d extends C0351b {
-    public C0353d(C0352c c0352c) {
-        super(c0352c);
+public class d extends b {
+    public d(c cVar) {
+        super(cVar);
     }
 
-    @Override // p006e.C0351b, p006e.C0354e.InterfaceC0355a
-    /* renamed from: a */
-    public void mo932a(C0359i c0359i) {
-        super.mo932a(c0359i);
-        c0359i.f1812j--;
+    @Override // e.b, e.e.a
+    public void a(i iVar) {
+        super.a(iVar);
+        iVar.f1386j--;
     }
 }

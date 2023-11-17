@@ -1,8 +1,7 @@
-package p020s;
+package s;
 
-/* renamed from: s.e */
 /* loaded from: classes.dex */
-public final class C0573e {
+public final class e {
 
     /* renamed from: A */
     public static final int abc_seekbar_track_material = 2131099713;

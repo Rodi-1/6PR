@@ -1,90 +1,83 @@
-package android.support.p002v7.widget;
+package android.support.v7.widget;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.util.TypedValue;
-import p010i.C0398a;
 
 /* JADX INFO: Access modifiers changed from: package-private */
-/* renamed from: android.support.v7.widget.q0 */
 /* loaded from: classes.dex */
-public class C0306q0 {
+public class q0 {
 
-    /* renamed from: a */
-    private static final ThreadLocal<TypedValue> f1477a = new ThreadLocal<>();
+    /* renamed from: a  reason: collision with root package name */
+    private static final ThreadLocal<TypedValue> f1169a = new ThreadLocal<>();
 
-    /* renamed from: b */
-    static final int[] f1478b = {-16842910};
+    /* renamed from: b  reason: collision with root package name */
+    static final int[] f1170b = {-16842910};
 
-    /* renamed from: c */
-    static final int[] f1479c = {16842908};
+    /* renamed from: c  reason: collision with root package name */
+    static final int[] f1171c = {16842908};
 
-    /* renamed from: d */
-    static final int[] f1480d = {16843518};
+    /* renamed from: d  reason: collision with root package name */
+    static final int[] f1172d = {16843518};
 
-    /* renamed from: e */
-    static final int[] f1481e = {16842919};
+    /* renamed from: e  reason: collision with root package name */
+    static final int[] f1173e = {16842919};
 
-    /* renamed from: f */
-    static final int[] f1482f = {16842912};
+    /* renamed from: f  reason: collision with root package name */
+    static final int[] f1174f = {16842912};
 
-    /* renamed from: g */
-    static final int[] f1483g = {16842913};
+    /* renamed from: g  reason: collision with root package name */
+    static final int[] f1175g = {16842913};
 
-    /* renamed from: h */
-    static final int[] f1484h = {-16842919, -16842908};
+    /* renamed from: h  reason: collision with root package name */
+    static final int[] f1176h = {-16842919, -16842908};
 
-    /* renamed from: i */
-    static final int[] f1485i = new int[0];
+    /* renamed from: i  reason: collision with root package name */
+    static final int[] f1177i = new int[0];
 
-    /* renamed from: j */
-    private static final int[] f1486j = new int[1];
+    /* renamed from: j  reason: collision with root package name */
+    private static final int[] f1178j = new int[1];
 
-    /* renamed from: a */
-    public static int m1141a(Context context, int i) {
-        ColorStateList m1138d = m1138d(context, i);
-        if (m1138d == null || !m1138d.isStateful()) {
-            TypedValue m1137e = m1137e();
-            context.getTheme().resolveAttribute(16842803, m1137e, true);
-            return m1139c(context, i, m1137e.getFloat());
+    public static int a(Context context, int i2) {
+        ColorStateList d2 = d(context, i2);
+        if (d2 == null || !d2.isStateful()) {
+            TypedValue e2 = e();
+            context.getTheme().resolveAttribute(16842803, e2, true);
+            return c(context, i2, e2.getFloat());
         }
-        return m1138d.getColorForState(f1478b, m1138d.getDefaultColor());
+        return d2.getColorForState(f1170b, d2.getDefaultColor());
     }
 
-    /* renamed from: b */
-    public static int m1140b(Context context, int i) {
-        int[] iArr = f1486j;
-        iArr[0] = i;
-        C0316v0 m1109s = C0316v0.m1109s(context, null, iArr);
+    public static int b(Context context, int i2) {
+        int[] iArr = f1178j;
+        iArr[0] = i2;
+        v0 s2 = v0.s(context, null, iArr);
         try {
-            return m1109s.m1126b(0, 0);
+            return s2.b(0, 0);
         } finally {
-            m1109s.m1107u();
+            s2.u();
         }
     }
 
-    /* renamed from: c */
-    static int m1139c(Context context, int i, float f) {
-        int m1140b = m1140b(context, i);
-        return C0398a.m693d(m1140b, Math.round(Color.alpha(m1140b) * f));
+    static int c(Context context, int i2, float f2) {
+        int b2 = b(context, i2);
+        return i.a.d(b2, Math.round(Color.alpha(b2) * f2));
     }
 
-    /* renamed from: d */
-    public static ColorStateList m1138d(Context context, int i) {
-        int[] iArr = f1486j;
-        iArr[0] = i;
-        C0316v0 m1109s = C0316v0.m1109s(context, null, iArr);
+    public static ColorStateList d(Context context, int i2) {
+        int[] iArr = f1178j;
+        iArr[0] = i2;
+        v0 s2 = v0.s(context, null, iArr);
         try {
-            return m1109s.m1125c(0);
+            return s2.c(0);
         } finally {
-            m1109s.m1107u();
+            s2.u();
         }
     }
 
-    /* renamed from: e */
-    private static TypedValue m1137e() {
-        ThreadLocal<TypedValue> threadLocal = f1477a;
+    private static TypedValue e() {
+        ThreadLocal<TypedValue> threadLocal = f1169a;
         TypedValue typedValue = threadLocal.get();
         if (typedValue == null) {
             TypedValue typedValue2 = new TypedValue();

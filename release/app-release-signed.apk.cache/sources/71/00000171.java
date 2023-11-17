@@ -1,4 +1,4 @@
-package android.support.p002v7.widget;
+package android.support.v7.widget;
 
 import android.app.Activity;
 import android.content.Context;
@@ -12,113 +12,106 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.TextView;
-import p020s.C0572d;
-import p020s.C0574f;
-import p020s.C0575g;
-import p020s.C0577i;
 
-/* renamed from: android.support.v7.widget.z0 */
 /* loaded from: classes.dex */
-class C0335z0 {
+class z0 {
 
-    /* renamed from: a */
-    private final Context f1584a;
+    /* renamed from: a  reason: collision with root package name */
+    private final Context f1272a;
 
-    /* renamed from: b */
-    private final View f1585b;
+    /* renamed from: b  reason: collision with root package name */
+    private final View f1273b;
 
-    /* renamed from: c */
-    private final TextView f1586c;
+    /* renamed from: c  reason: collision with root package name */
+    private final TextView f1274c;
 
-    /* renamed from: d */
-    private final WindowManager.LayoutParams f1587d;
+    /* renamed from: d  reason: collision with root package name */
+    private final WindowManager.LayoutParams f1275d;
 
-    /* renamed from: e */
-    private final Rect f1588e;
+    /* renamed from: e  reason: collision with root package name */
+    private final Rect f1276e;
 
-    /* renamed from: f */
-    private final int[] f1589f;
+    /* renamed from: f  reason: collision with root package name */
+    private final int[] f1277f;
 
-    /* renamed from: g */
-    private final int[] f1590g;
+    /* renamed from: g  reason: collision with root package name */
+    private final int[] f1278g;
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public C0335z0(Context context) {
+    public z0(Context context) {
         WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
-        this.f1587d = layoutParams;
-        this.f1588e = new Rect();
-        this.f1589f = new int[2];
-        this.f1590g = new int[2];
-        this.f1584a = context;
-        View inflate = LayoutInflater.from(context).inflate(C0575g.abc_tooltip, (ViewGroup) null);
-        this.f1585b = inflate;
-        this.f1586c = (TextView) inflate.findViewById(C0574f.message);
+        this.f1275d = layoutParams;
+        this.f1276e = new Rect();
+        this.f1277f = new int[2];
+        this.f1278g = new int[2];
+        this.f1272a = context;
+        View inflate = LayoutInflater.from(context).inflate(s.g.abc_tooltip, (ViewGroup) null);
+        this.f1273b = inflate;
+        this.f1274c = (TextView) inflate.findViewById(s.f.message);
         layoutParams.setTitle(getClass().getSimpleName());
         layoutParams.packageName = context.getPackageName();
         layoutParams.type = 1002;
         layoutParams.width = -2;
         layoutParams.height = -2;
         layoutParams.format = -3;
-        layoutParams.windowAnimations = C0577i.Animation_AppCompat_Tooltip;
+        layoutParams.windowAnimations = s.i.Animation_AppCompat_Tooltip;
         layoutParams.flags = 24;
     }
 
-    /* renamed from: a */
-    private void m1019a(View view, int i, int i2, boolean z, WindowManager.LayoutParams layoutParams) {
+    private void a(View view, int i2, int i3, boolean z, WindowManager.LayoutParams layoutParams) {
         int height;
-        int i3;
+        int i4;
         layoutParams.token = view.getApplicationWindowToken();
-        int dimensionPixelOffset = this.f1584a.getResources().getDimensionPixelOffset(C0572d.tooltip_precise_anchor_threshold);
+        int dimensionPixelOffset = this.f1272a.getResources().getDimensionPixelOffset(s.d.tooltip_precise_anchor_threshold);
         if (view.getWidth() < dimensionPixelOffset) {
-            i = view.getWidth() / 2;
+            i2 = view.getWidth() / 2;
         }
         if (view.getHeight() >= dimensionPixelOffset) {
-            int dimensionPixelOffset2 = this.f1584a.getResources().getDimensionPixelOffset(C0572d.tooltip_precise_anchor_extra_offset);
-            height = i2 + dimensionPixelOffset2;
-            i3 = i2 - dimensionPixelOffset2;
+            int dimensionPixelOffset2 = this.f1272a.getResources().getDimensionPixelOffset(s.d.tooltip_precise_anchor_extra_offset);
+            height = i3 + dimensionPixelOffset2;
+            i4 = i3 - dimensionPixelOffset2;
         } else {
             height = view.getHeight();
-            i3 = 0;
+            i4 = 0;
         }
         layoutParams.gravity = 49;
-        int dimensionPixelOffset3 = this.f1584a.getResources().getDimensionPixelOffset(z ? C0572d.tooltip_y_offset_touch : C0572d.tooltip_y_offset_non_touch);
-        View m1018b = m1018b(view);
-        if (m1018b == null) {
+        int dimensionPixelOffset3 = this.f1272a.getResources().getDimensionPixelOffset(z ? s.d.tooltip_y_offset_touch : s.d.tooltip_y_offset_non_touch);
+        View b2 = b(view);
+        if (b2 == null) {
             Log.e("TooltipPopup", "Cannot find app view");
             return;
         }
-        m1018b.getWindowVisibleDisplayFrame(this.f1588e);
-        Rect rect = this.f1588e;
+        b2.getWindowVisibleDisplayFrame(this.f1276e);
+        Rect rect = this.f1276e;
         if (rect.left < 0 && rect.top < 0) {
-            Resources resources = this.f1584a.getResources();
+            Resources resources = this.f1272a.getResources();
             int identifier = resources.getIdentifier("status_bar_height", "dimen", "android");
             int dimensionPixelSize = identifier != 0 ? resources.getDimensionPixelSize(identifier) : 0;
             DisplayMetrics displayMetrics = resources.getDisplayMetrics();
-            this.f1588e.set(0, dimensionPixelSize, displayMetrics.widthPixels, displayMetrics.heightPixels);
+            this.f1276e.set(0, dimensionPixelSize, displayMetrics.widthPixels, displayMetrics.heightPixels);
         }
-        m1018b.getLocationOnScreen(this.f1590g);
-        view.getLocationOnScreen(this.f1589f);
-        int[] iArr = this.f1589f;
-        int i4 = iArr[0];
-        int[] iArr2 = this.f1590g;
-        iArr[0] = i4 - iArr2[0];
+        b2.getLocationOnScreen(this.f1278g);
+        view.getLocationOnScreen(this.f1277f);
+        int[] iArr = this.f1277f;
+        int i5 = iArr[0];
+        int[] iArr2 = this.f1278g;
+        iArr[0] = i5 - iArr2[0];
         iArr[1] = iArr[1] - iArr2[1];
-        layoutParams.x = (iArr[0] + i) - (m1018b.getWidth() / 2);
+        layoutParams.x = (iArr[0] + i2) - (b2.getWidth() / 2);
         int makeMeasureSpec = View.MeasureSpec.makeMeasureSpec(0, 0);
-        this.f1585b.measure(makeMeasureSpec, makeMeasureSpec);
-        int measuredHeight = this.f1585b.getMeasuredHeight();
-        int[] iArr3 = this.f1589f;
-        int i5 = ((iArr3[1] + i3) - dimensionPixelOffset3) - measuredHeight;
-        int i6 = iArr3[1] + height + dimensionPixelOffset3;
-        if (!z ? measuredHeight + i6 <= this.f1588e.height() : i5 < 0) {
-            layoutParams.y = i5;
-        } else {
+        this.f1273b.measure(makeMeasureSpec, makeMeasureSpec);
+        int measuredHeight = this.f1273b.getMeasuredHeight();
+        int[] iArr3 = this.f1277f;
+        int i6 = ((iArr3[1] + i4) - dimensionPixelOffset3) - measuredHeight;
+        int i7 = iArr3[1] + height + dimensionPixelOffset3;
+        if (!z ? measuredHeight + i7 <= this.f1276e.height() : i6 < 0) {
             layoutParams.y = i6;
+        } else {
+            layoutParams.y = i7;
         }
     }
 
-    /* renamed from: b */
-    private static View m1018b(View view) {
+    private static View b(View view) {
         View rootView = view.getRootView();
         ViewGroup.LayoutParams layoutParams = rootView.getLayoutParams();
         if ((layoutParams instanceof WindowManager.LayoutParams) && ((WindowManager.LayoutParams) layoutParams).type == 2) {
@@ -133,26 +126,23 @@ class C0335z0 {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: c */
-    public void m1017c() {
-        if (m1016d()) {
-            ((WindowManager) this.f1584a.getSystemService("window")).removeView(this.f1585b);
+    public void c() {
+        if (d()) {
+            ((WindowManager) this.f1272a.getSystemService("window")).removeView(this.f1273b);
         }
     }
 
-    /* renamed from: d */
-    boolean m1016d() {
-        return this.f1585b.getParent() != null;
+    boolean d() {
+        return this.f1273b.getParent() != null;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: e */
-    public void m1015e(View view, int i, int i2, boolean z, CharSequence charSequence) {
-        if (m1016d()) {
-            m1017c();
+    public void e(View view, int i2, int i3, boolean z, CharSequence charSequence) {
+        if (d()) {
+            c();
         }
-        this.f1586c.setText(charSequence);
-        m1019a(view, i, i2, z, this.f1587d);
-        ((WindowManager) this.f1584a.getSystemService("window")).addView(this.f1585b, this.f1587d);
+        this.f1274c.setText(charSequence);
+        a(view, i2, i3, z, this.f1275d);
+        ((WindowManager) this.f1272a.getSystemService("window")).addView(this.f1273b, this.f1275d);
     }
 }

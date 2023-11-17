@@ -1,8 +1,7 @@
-package p020s;
+package s;
 
-/* renamed from: s.d */
 /* loaded from: classes.dex */
-public final class C0572d {
+public final class d {
 
     /* renamed from: a */
     public static final int abc_action_bar_stacked_max_height = 2131034122;

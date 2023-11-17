@@ -1,189 +1,184 @@
-package p007f;
+package f;
 
+import f.f;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import p007f.C0370f;
 
-/* renamed from: f.a */
 /* loaded from: classes.dex */
-public class C0361a {
-    /* renamed from: a */
-    public static void m920a(C0373g c0373g) {
-        if ((c0373g.m807R0() & 32) != 32) {
-            m911j(c0373g);
+public class a {
+    public static void a(g gVar) {
+        if ((gVar.R0() & 32) != 32) {
+            j(gVar);
             return;
         }
-        c0373g.f1961O0 = true;
-        c0373g.f1955I0 = false;
-        c0373g.f1956J0 = false;
-        c0373g.f1957K0 = false;
-        ArrayList<C0370f> arrayList = c0373g.f2019v0;
-        List<C0374h> list = c0373g.f1954H0;
-        C0370f.EnumC0372b m827s = c0373g.m827s();
-        C0370f.EnumC0372b enumC0372b = C0370f.EnumC0372b.WRAP_CONTENT;
-        boolean z = m827s == enumC0372b;
-        boolean z2 = c0373g.m885B() == enumC0372b;
+        gVar.O0 = true;
+        gVar.I0 = false;
+        gVar.J0 = false;
+        gVar.K0 = false;
+        ArrayList<f> arrayList = gVar.v0;
+        List<h> list = gVar.H0;
+        f.b s2 = gVar.s();
+        f.b bVar = f.b.WRAP_CONTENT;
+        boolean z = s2 == bVar;
+        boolean z2 = gVar.B() == bVar;
         boolean z3 = z || z2;
         list.clear();
-        for (C0370f c0370f : arrayList) {
-            c0370f.f1928r = null;
-            c0370f.f1915k0 = false;
-            c0370f.mo864S();
+        for (f fVar : arrayList) {
+            fVar.f1455r = null;
+            fVar.k0 = false;
+            fVar.S();
         }
-        for (C0370f c0370f2 : arrayList) {
-            if (c0370f2.f1928r == null && !m919b(c0370f2, list, z3)) {
-                m911j(c0373g);
-                c0373g.f1961O0 = false;
+        for (f fVar2 : arrayList) {
+            if (fVar2.f1455r == null && !b(fVar2, list, z3)) {
+                j(gVar);
+                gVar.O0 = false;
                 return;
             }
         }
-        int i = 0;
         int i2 = 0;
-        for (C0374h c0374h : list) {
-            i = Math.max(i, m918c(c0374h, 0));
-            i2 = Math.max(i2, m918c(c0374h, 1));
+        int i3 = 0;
+        for (h hVar : list) {
+            i2 = Math.max(i2, c(hVar, 0));
+            i3 = Math.max(i3, c(hVar, 1));
         }
         if (z) {
-            c0373g.m847g0(C0370f.EnumC0372b.FIXED);
-            c0373g.m814y0(i);
-            c0373g.f1955I0 = true;
-            c0373g.f1956J0 = true;
-            c0373g.f1958L0 = i;
+            gVar.g0(f.b.FIXED);
+            gVar.y0(i2);
+            gVar.I0 = true;
+            gVar.J0 = true;
+            gVar.L0 = i2;
         }
         if (z2) {
-            c0373g.m822u0(C0370f.EnumC0372b.FIXED);
-            c0373g.m855b0(i2);
-            c0373g.f1955I0 = true;
-            c0373g.f1957K0 = true;
-            c0373g.f1959M0 = i2;
+            gVar.u0(f.b.FIXED);
+            gVar.b0(i3);
+            gVar.I0 = true;
+            gVar.K0 = true;
+            gVar.M0 = i3;
         }
-        m912i(list, 0, c0373g.m881D());
-        m912i(list, 1, c0373g.m829r());
+        i(list, 0, gVar.D());
+        i(list, 1, gVar.r());
     }
 
-    /* renamed from: b */
-    private static boolean m919b(C0370f c0370f, List<C0374h> list, boolean z) {
-        C0374h c0374h = new C0374h(new ArrayList(), true);
-        list.add(c0374h);
-        return m910k(c0370f, c0374h, list, z);
+    private static boolean b(f fVar, List<h> list, boolean z) {
+        h hVar = new h(new ArrayList(), true);
+        list.add(hVar);
+        return k(fVar, hVar, list, z);
     }
 
-    /* renamed from: c */
-    private static int m918c(C0374h c0374h, int i) {
-        int i2 = i * 2;
-        List<C0370f> m791b = c0374h.m791b(i);
-        int size = m791b.size();
-        int i3 = 0;
-        for (int i4 = 0; i4 < size; i4++) {
-            C0370f c0370f = m791b.get(i4);
-            C0365e[] c0365eArr = c0370f.f1870C;
-            int i5 = i2 + 1;
-            i3 = Math.max(i3, m917d(c0370f, i, c0365eArr[i5].f1842d == null || !(c0365eArr[i2].f1842d == null || c0365eArr[i5].f1842d == null), 0));
+    private static int c(h hVar, int i2) {
+        int i3 = i2 * 2;
+        List<f> b2 = hVar.b(i2);
+        int size = b2.size();
+        int i4 = 0;
+        for (int i5 = 0; i5 < size; i5++) {
+            f fVar = b2.get(i5);
+            e[] eVarArr = fVar.C;
+            int i6 = i3 + 1;
+            i4 = Math.max(i4, d(fVar, i2, eVarArr[i6].f1413d == null || !(eVarArr[i3].f1413d == null || eVarArr[i6].f1413d == null), 0));
         }
-        c0374h.f1973e[i] = i3;
-        return i3;
+        hVar.f1472e[i2] = i4;
+        return i4;
     }
 
-    /* renamed from: d */
-    private static int m917d(C0370f c0370f, int i, boolean z, int i2) {
-        int m829r;
-        int m844j;
-        int i3;
+    private static int d(f fVar, int i2, boolean z, int i3) {
+        int r2;
+        int j2;
         int i4;
         int i5;
-        int m881D;
         int i6;
+        int D;
         int i7;
         int i8;
-        int i9 = 0;
-        if (c0370f.f1911i0) {
-            boolean z2 = c0370f.f1938y.f1842d != null && i == 1;
+        int i9;
+        int i10 = 0;
+        if (fVar.i0) {
+            boolean z2 = fVar.y.f1413d != null && i2 == 1;
             if (z) {
-                m829r = c0370f.m844j();
-                m844j = c0370f.m829r() - c0370f.m844j();
-                i4 = i * 2;
-                i3 = i4 + 1;
+                r2 = fVar.j();
+                j2 = fVar.r() - fVar.j();
+                i5 = i2 * 2;
+                i4 = i5 + 1;
             } else {
-                m829r = c0370f.m829r() - c0370f.m844j();
-                m844j = c0370f.m844j();
-                i3 = i * 2;
-                i4 = i3 + 1;
+                r2 = fVar.r() - fVar.j();
+                j2 = fVar.j();
+                i4 = i2 * 2;
+                i5 = i4 + 1;
             }
-            C0365e[] c0365eArr = c0370f.f1870C;
-            if (c0365eArr[i3].f1842d == null || c0365eArr[i4].f1842d != null) {
-                i5 = 1;
+            e[] eVarArr = fVar.C;
+            if (eVarArr[i4].f1413d == null || eVarArr[i5].f1413d != null) {
+                i6 = 1;
             } else {
-                i5 = -1;
-                int i10 = i3;
-                i3 = i4;
-                i4 = i10;
+                i6 = -1;
+                int i11 = i4;
+                i4 = i5;
+                i5 = i11;
             }
-            int i11 = z2 ? i2 - m829r : i2;
-            int m898d = (c0365eArr[i4].m898d() * i5) + m916e(c0370f, i);
-            int i12 = i11 + m898d;
-            int m881D2 = (i == 0 ? c0370f.m881D() : c0370f.m829r()) * i5;
-            Iterator<C0382o> it = c0370f.f1870C[i4].m896f().f2007a.iterator();
+            int i12 = z2 ? i3 - r2 : i3;
+            int d2 = (eVarArr[i5].d() * i6) + e(fVar, i2);
+            int i13 = i12 + d2;
+            int D2 = (i2 == 0 ? fVar.D() : fVar.r()) * i6;
+            Iterator<o> it = fVar.C[i5].f().f1495a.iterator();
             while (it.hasNext()) {
-                i9 = Math.max(i9, m917d(((C0380m) it.next()).f1993c.f1840b, i, z, i12));
+                i10 = Math.max(i10, d(((m) it.next()).f1481c.f1411b, i2, z, i13));
             }
-            int i13 = 0;
-            for (Iterator<C0382o> it2 = c0370f.f1870C[i3].m896f().f2007a.iterator(); it2.hasNext(); it2 = it2) {
-                i13 = Math.max(i13, m917d(((C0380m) it2.next()).f1993c.f1840b, i, z, m881D2 + i12));
+            int i14 = 0;
+            for (Iterator<o> it2 = fVar.C[i4].f().f1495a.iterator(); it2.hasNext(); it2 = it2) {
+                i14 = Math.max(i14, d(((m) it2.next()).f1481c.f1411b, i2, z, D2 + i13));
             }
             if (z2) {
-                i9 -= m829r;
-                m881D = i13 + m844j;
+                i10 -= r2;
+                D = i14 + j2;
             } else {
-                m881D = i13 + ((i == 0 ? c0370f.m881D() : c0370f.m829r()) * i5);
+                D = i14 + ((i2 == 0 ? fVar.D() : fVar.r()) * i6);
             }
-            int i14 = 1;
-            if (i == 1) {
-                Iterator<C0382o> it3 = c0370f.f1938y.m896f().f2007a.iterator();
-                int i15 = 0;
+            int i15 = 1;
+            if (i2 == 1) {
+                Iterator<o> it3 = fVar.y.f().f1495a.iterator();
+                int i16 = 0;
                 while (it3.hasNext()) {
-                    Iterator<C0382o> it4 = it3;
-                    C0380m c0380m = (C0380m) it3.next();
-                    if (i5 == i14) {
-                        i15 = Math.max(i15, m917d(c0380m.f1993c.f1840b, i, z, m829r + i12));
-                        i8 = i3;
+                    Iterator<o> it4 = it3;
+                    m mVar = (m) it3.next();
+                    if (i6 == i15) {
+                        i16 = Math.max(i16, d(mVar.f1481c.f1411b, i2, z, r2 + i13));
+                        i9 = i4;
                     } else {
-                        i8 = i3;
-                        i15 = Math.max(i15, m917d(c0380m.f1993c.f1840b, i, z, (m844j * i5) + i12));
+                        i9 = i4;
+                        i16 = Math.max(i16, d(mVar.f1481c.f1411b, i2, z, (j2 * i6) + i13));
                     }
                     it3 = it4;
-                    i3 = i8;
-                    i14 = 1;
+                    i4 = i9;
+                    i15 = 1;
                 }
-                i6 = i3;
-                int i16 = i15;
-                i7 = (c0370f.f1938y.m896f().f2007a.size() <= 0 || z2) ? i16 : i5 == 1 ? i16 + m829r : i16 - m844j;
+                i7 = i4;
+                int i17 = i16;
+                i8 = (fVar.y.f().f1495a.size() <= 0 || z2) ? i17 : i6 == 1 ? i17 + r2 : i17 - j2;
             } else {
-                i6 = i3;
-                i7 = 0;
+                i7 = i4;
+                i8 = 0;
             }
-            int max = m898d + Math.max(i9, Math.max(m881D, i7));
-            int i17 = m881D2 + i12;
-            if (i5 == -1) {
-                i17 = i12;
-                i12 = i17;
+            int max = d2 + Math.max(i10, Math.max(D, i8));
+            int i18 = D2 + i13;
+            if (i6 == -1) {
+                i18 = i13;
+                i13 = i18;
             }
             if (z) {
-                C0378k.m768e(c0370f, i, i12);
-                c0370f.m858Z(i12, i17, i);
+                k.e(fVar, i2, i13);
+                fVar.Z(i13, i18, i2);
             } else {
-                c0370f.f1928r.m792a(c0370f, i);
-                c0370f.m830q0(i12, i);
+                fVar.f1455r.a(fVar, i2);
+                fVar.q0(i13, i2);
             }
-            if (c0370f.m835o(i) == C0370f.EnumC0372b.MATCH_CONSTRAINT && c0370f.f1876I != 0.0f) {
-                c0370f.f1928r.m792a(c0370f, i);
+            if (fVar.o(i2) == f.b.MATCH_CONSTRAINT && fVar.I != 0.0f) {
+                fVar.f1455r.a(fVar, i2);
             }
-            C0365e[] c0365eArr2 = c0370f.f1870C;
-            if (c0365eArr2[i4].f1842d != null && c0365eArr2[i6].f1842d != null) {
-                C0370f m823u = c0370f.m823u();
-                C0365e[] c0365eArr3 = c0370f.f1870C;
-                if (c0365eArr3[i4].f1842d.f1840b == m823u && c0365eArr3[i6].f1842d.f1840b == m823u) {
-                    c0370f.f1928r.m792a(c0370f, i);
+            e[] eVarArr2 = fVar.C;
+            if (eVarArr2[i5].f1413d != null && eVarArr2[i7].f1413d != null) {
+                f u2 = fVar.u();
+                e[] eVarArr3 = fVar.C;
+                if (eVarArr3[i5].f1413d.f1411b == u2 && eVarArr3[i7].f1413d.f1411b == u2) {
+                    fVar.f1455r.a(fVar, i2);
                 }
             }
             return max;
@@ -191,119 +186,111 @@ public class C0361a {
         return 0;
     }
 
-    /* renamed from: e */
-    private static int m916e(C0370f c0370f, int i) {
-        C0365e c0365e;
-        int i2 = i * 2;
-        C0365e[] c0365eArr = c0370f.f1870C;
-        C0365e c0365e2 = c0365eArr[i2];
-        C0365e c0365e3 = c0365eArr[i2 + 1];
-        C0365e c0365e4 = c0365e2.f1842d;
-        if (c0365e4 != null) {
-            C0370f c0370f2 = c0365e4.f1840b;
-            C0370f c0370f3 = c0370f.f1873F;
-            if (c0370f2 == c0370f3 && (c0365e = c0365e3.f1842d) != null && c0365e.f1840b == c0370f3) {
-                return (int) ((((c0370f3.m825t(i) - c0365e2.m898d()) - c0365e3.m898d()) - c0370f.m825t(i)) * (i == 0 ? c0370f.f1893Z : c0370f.f1895a0));
+    private static int e(f fVar, int i2) {
+        e eVar;
+        int i3 = i2 * 2;
+        e[] eVarArr = fVar.C;
+        e eVar2 = eVarArr[i3];
+        e eVar3 = eVarArr[i3 + 1];
+        e eVar4 = eVar2.f1413d;
+        if (eVar4 != null) {
+            f fVar2 = eVar4.f1411b;
+            f fVar3 = fVar.F;
+            if (fVar2 == fVar3 && (eVar = eVar3.f1413d) != null && eVar.f1411b == fVar3) {
+                return (int) ((((fVar3.t(i2) - eVar2.d()) - eVar3.d()) - fVar.t(i2)) * (i2 == 0 ? fVar.Z : fVar.a0));
             }
             return 0;
         }
         return 0;
     }
 
-    /* renamed from: f */
-    private static void m915f(C0373g c0373g, C0370f c0370f, C0374h c0374h) {
-        c0374h.f1972d = false;
-        c0373g.f1961O0 = false;
-        c0370f.f1911i0 = false;
+    private static void f(g gVar, f fVar, h hVar) {
+        hVar.f1471d = false;
+        gVar.O0 = false;
+        fVar.i0 = false;
     }
 
-    /* renamed from: g */
-    private static int m914g(C0370f c0370f) {
-        C0370f.EnumC0372b m827s = c0370f.m827s();
-        C0370f.EnumC0372b enumC0372b = C0370f.EnumC0372b.MATCH_CONSTRAINT;
-        if (m827s == enumC0372b) {
-            int m829r = (int) (c0370f.f1877J == 0 ? c0370f.m829r() * c0370f.f1876I : c0370f.m829r() / c0370f.f1876I);
-            c0370f.m814y0(m829r);
-            return m829r;
-        } else if (c0370f.m885B() == enumC0372b) {
-            int m881D = (int) (c0370f.f1877J == 1 ? c0370f.m881D() * c0370f.f1876I : c0370f.m881D() / c0370f.f1876I);
-            c0370f.m855b0(m881D);
-            return m881D;
+    private static int g(f fVar) {
+        f.b s2 = fVar.s();
+        f.b bVar = f.b.MATCH_CONSTRAINT;
+        if (s2 == bVar) {
+            int r2 = (int) (fVar.J == 0 ? fVar.r() * fVar.I : fVar.r() / fVar.I);
+            fVar.y0(r2);
+            return r2;
+        } else if (fVar.B() == bVar) {
+            int D = (int) (fVar.J == 1 ? fVar.D() * fVar.I : fVar.D() / fVar.I);
+            fVar.b0(D);
+            return D;
         } else {
             return -1;
         }
     }
 
-    /* renamed from: h */
-    private static void m913h(C0365e c0365e) {
-        C0380m m896f = c0365e.m896f();
-        C0365e c0365e2 = c0365e.f1842d;
-        if (c0365e2 == null || c0365e2.f1842d == c0365e) {
+    private static void h(e eVar) {
+        m f2 = eVar.f();
+        e eVar2 = eVar.f1413d;
+        if (eVar2 == null || eVar2.f1413d == eVar) {
             return;
         }
-        c0365e2.m896f().m754a(m896f);
+        eVar2.f().a(f2);
     }
 
-    /* renamed from: i */
-    public static void m912i(List<C0374h> list, int i, int i2) {
+    public static void i(List<h> list, int i2, int i3) {
         int size = list.size();
-        for (int i3 = 0; i3 < size; i3++) {
-            for (C0370f c0370f : list.get(i3).m790c(i)) {
-                if (c0370f.f1911i0) {
-                    m909l(c0370f, i, i2);
+        for (int i4 = 0; i4 < size; i4++) {
+            for (f fVar : list.get(i4).c(i2)) {
+                if (fVar.i0) {
+                    l(fVar, i2, i3);
                 }
             }
         }
     }
 
-    /* renamed from: j */
-    private static void m911j(C0373g c0373g) {
-        c0373g.f1954H0.clear();
-        c0373g.f1954H0.add(0, new C0374h(c0373g.f2019v0));
+    private static void j(g gVar) {
+        gVar.H0.clear();
+        gVar.H0.add(0, new h(gVar.v0));
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:114:0x0159, code lost:
-        if (r4.f1840b == r5) goto L74;
+        if (r4.f1411b == r5) goto L74;
      */
     /* JADX WARN: Code restructure failed: missing block: B:87:0x0110, code lost:
-        if (r4.f1840b == r5) goto L63;
+        if (r4.f1411b == r5) goto L63;
      */
     /* JADX WARN: Removed duplicated region for block: B:110:0x014f  */
     /* JADX WARN: Removed duplicated region for block: B:126:0x0178  */
     /* JADX WARN: Removed duplicated region for block: B:138:0x019a  */
-    /* renamed from: k */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    private static boolean m910k(p007f.C0370f r8, p007f.C0374h r9, java.util.List<p007f.C0374h> r10, boolean r11) {
+    private static boolean k(f.f r8, f.h r9, java.util.List<f.h> r10, boolean r11) {
         /*
             Method dump skipped, instructions count: 518
             To view this dump change 'Code comments level' option to 'DEBUG'
         */
-        throw new UnsupportedOperationException("Method not decompiled: p007f.C0361a.m910k(f.f, f.h, java.util.List, boolean):boolean");
+        throw new UnsupportedOperationException("Method not decompiled: f.a.k(f.f, f.h, java.util.List, boolean):boolean");
     }
 
-    /* renamed from: l */
-    private static void m909l(C0370f c0370f, int i, int i2) {
-        int i3 = i * 2;
-        C0365e[] c0365eArr = c0370f.f1870C;
-        C0365e c0365e = c0365eArr[i3];
-        C0365e c0365e2 = c0365eArr[i3 + 1];
-        if ((c0365e.f1842d == null || c0365e2.f1842d == null) ? false : true) {
-            C0378k.m768e(c0370f, i, m916e(c0370f, i) + c0365e.m898d());
-        } else if (c0370f.f1876I == 0.0f || c0370f.m835o(i) != C0370f.EnumC0372b.MATCH_CONSTRAINT) {
-            int m821v = i2 - c0370f.m821v(i);
-            int m825t = m821v - c0370f.m825t(i);
-            c0370f.m858Z(m825t, m821v, i);
-            C0378k.m768e(c0370f, i, m825t);
+    private static void l(f fVar, int i2, int i3) {
+        int i4 = i2 * 2;
+        e[] eVarArr = fVar.C;
+        e eVar = eVarArr[i4];
+        e eVar2 = eVarArr[i4 + 1];
+        if ((eVar.f1413d == null || eVar2.f1413d == null) ? false : true) {
+            k.e(fVar, i2, e(fVar, i2) + eVar.d());
+        } else if (fVar.I == 0.0f || fVar.o(i2) != f.b.MATCH_CONSTRAINT) {
+            int v2 = i3 - fVar.v(i2);
+            int t2 = v2 - fVar.t(i2);
+            fVar.Z(t2, v2, i2);
+            k.e(fVar, i2, t2);
         } else {
-            int m914g = m914g(c0370f);
-            int i4 = (int) c0370f.f1870C[i3].m896f().f1998h;
-            c0365e2.m896f().f1997g = c0365e.m896f();
-            c0365e2.m896f().f1998h = m914g;
-            c0365e2.m896f().f2008b = 1;
-            c0370f.m858Z(i4, i4 + m914g, i);
+            int g2 = g(fVar);
+            int i5 = (int) fVar.C[i4].f().f1486h;
+            eVar2.f().f1485g = eVar.f();
+            eVar2.f().f1486h = g2;
+            eVar2.f().f1496b = 1;
+            fVar.Z(i5, i5 + g2, i2);
         }
     }
 }

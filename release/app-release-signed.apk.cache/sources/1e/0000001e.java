@@ -3,69 +3,59 @@ package android.arch.lifecycle;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.arch.lifecycle.AbstractC0009c;
+import android.arch.lifecycle.c;
 import android.os.Bundle;
 
-/* renamed from: android.arch.lifecycle.k */
 /* loaded from: classes.dex */
-public class FragmentC0021k extends Fragment {
+public class k extends Fragment {
 
-    /* renamed from: b */
-    private InterfaceC0022a f45b;
+    /* renamed from: b  reason: collision with root package name */
+    private a f45b;
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: android.arch.lifecycle.k$a */
     /* loaded from: classes.dex */
-    public interface InterfaceC0022a {
-        /* renamed from: a */
-        void m2357a();
+    public interface a {
+        void a();
 
-        /* renamed from: b */
-        void m2356b();
+        void b();
 
-        /* renamed from: c */
-        void m2355c();
+        void c();
     }
 
-    /* renamed from: a */
-    private void m2362a(AbstractC0009c.EnumC0010a enumC0010a) {
+    private void a(c.a aVar) {
         Activity activity = getActivity();
-        if (activity instanceof InterfaceC0017g) {
-            ((InterfaceC0017g) activity).mo1819a().m2373g(enumC0010a);
-        } else if (activity instanceof InterfaceC0013e) {
-            AbstractC0009c mo1819a = ((InterfaceC0013e) activity).mo1819a();
-            if (mo1819a instanceof C0014f) {
-                ((C0014f) mo1819a).m2373g(enumC0010a);
+        if (activity instanceof g) {
+            ((g) activity).a().g(aVar);
+        } else if (activity instanceof e) {
+            c a2 = ((e) activity).a();
+            if (a2 instanceof f) {
+                ((f) a2).g(aVar);
             }
         }
     }
 
-    /* renamed from: b */
-    private void m2361b(InterfaceC0022a interfaceC0022a) {
-        if (interfaceC0022a != null) {
-            interfaceC0022a.m2357a();
+    private void b(a aVar) {
+        if (aVar != null) {
+            aVar.a();
         }
     }
 
-    /* renamed from: c */
-    private void m2360c(InterfaceC0022a interfaceC0022a) {
-        if (interfaceC0022a != null) {
-            interfaceC0022a.m2356b();
+    private void c(a aVar) {
+        if (aVar != null) {
+            aVar.b();
         }
     }
 
-    /* renamed from: d */
-    private void m2359d(InterfaceC0022a interfaceC0022a) {
-        if (interfaceC0022a != null) {
-            interfaceC0022a.m2355c();
+    private void d(a aVar) {
+        if (aVar != null) {
+            aVar.c();
         }
     }
 
-    /* renamed from: e */
-    public static void m2358e(Activity activity) {
+    public static void e(Activity activity) {
         FragmentManager fragmentManager = activity.getFragmentManager();
         if (fragmentManager.findFragmentByTag("android.arch.lifecycle.LifecycleDispatcher.report_fragment_tag") == null) {
-            fragmentManager.beginTransaction().add(new FragmentC0021k(), "android.arch.lifecycle.LifecycleDispatcher.report_fragment_tag").commit();
+            fragmentManager.beginTransaction().add(new k(), "android.arch.lifecycle.LifecycleDispatcher.report_fragment_tag").commit();
             fragmentManager.executePendingTransactions();
         }
     }
@@ -73,40 +63,40 @@ public class FragmentC0021k extends Fragment {
     @Override // android.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        m2361b(this.f45b);
-        m2362a(AbstractC0009c.EnumC0010a.ON_CREATE);
+        b(this.f45b);
+        a(c.a.ON_CREATE);
     }
 
     @Override // android.app.Fragment
     public void onDestroy() {
         super.onDestroy();
-        m2362a(AbstractC0009c.EnumC0010a.ON_DESTROY);
+        a(c.a.ON_DESTROY);
         this.f45b = null;
     }
 
     @Override // android.app.Fragment
     public void onPause() {
         super.onPause();
-        m2362a(AbstractC0009c.EnumC0010a.ON_PAUSE);
+        a(c.a.ON_PAUSE);
     }
 
     @Override // android.app.Fragment
     public void onResume() {
         super.onResume();
-        m2360c(this.f45b);
-        m2362a(AbstractC0009c.EnumC0010a.ON_RESUME);
+        c(this.f45b);
+        a(c.a.ON_RESUME);
     }
 
     @Override // android.app.Fragment
     public void onStart() {
         super.onStart();
-        m2359d(this.f45b);
-        m2362a(AbstractC0009c.EnumC0010a.ON_START);
+        d(this.f45b);
+        a(c.a.ON_START);
     }
 
     @Override // android.app.Fragment
     public void onStop() {
         super.onStop();
-        m2362a(AbstractC0009c.EnumC0010a.ON_STOP);
+        a(c.a.ON_STOP);
     }
 }

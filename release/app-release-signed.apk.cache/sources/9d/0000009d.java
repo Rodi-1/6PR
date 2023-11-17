@@ -1,50 +1,48 @@
-package android.support.p001v4.widget;
+package android.support.v4.widget;
 
 import android.content.Context;
 import android.database.ContentObserver;
 import android.database.Cursor;
 import android.database.DataSetObserver;
 import android.os.Handler;
-import android.support.p001v4.widget.C0146e;
+import android.support.v4.widget.e;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Filter;
 import android.widget.Filterable;
 
-/* renamed from: android.support.v4.widget.d */
 /* loaded from: classes.dex */
-public abstract class AbstractC0143d extends BaseAdapter implements Filterable, C0146e.InterfaceC0147a {
+public abstract class d extends BaseAdapter implements Filterable, e.a {
 
-    /* renamed from: b */
-    protected boolean f686b;
+    /* renamed from: b  reason: collision with root package name */
+    protected boolean f536b;
 
-    /* renamed from: c */
-    protected boolean f687c;
+    /* renamed from: c  reason: collision with root package name */
+    protected boolean f537c;
 
-    /* renamed from: d */
-    protected Cursor f688d;
+    /* renamed from: d  reason: collision with root package name */
+    protected Cursor f538d;
 
-    /* renamed from: e */
-    protected Context f689e;
+    /* renamed from: e  reason: collision with root package name */
+    protected Context f539e;
 
-    /* renamed from: f */
-    protected int f690f;
+    /* renamed from: f  reason: collision with root package name */
+    protected int f540f;
 
-    /* renamed from: g */
-    protected C0144a f691g;
+    /* renamed from: g  reason: collision with root package name */
+    protected a f541g;
 
-    /* renamed from: h */
-    protected DataSetObserver f692h;
+    /* renamed from: h  reason: collision with root package name */
+    protected DataSetObserver f542h;
 
-    /* renamed from: i */
-    protected C0146e f693i;
+    /* renamed from: i  reason: collision with root package name */
+    protected e f543i;
 
     /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: android.support.v4.widget.d$a */
     /* loaded from: classes.dex */
-    public class C0144a extends ContentObserver {
-        C0144a() {
+    public class a extends ContentObserver {
+        a() {
             super(new Handler());
         }
 
@@ -55,128 +53,121 @@ public abstract class AbstractC0143d extends BaseAdapter implements Filterable, 
 
         @Override // android.database.ContentObserver
         public void onChange(boolean z) {
-            AbstractC0143d.this.m1744e();
+            d.this.e();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: android.support.v4.widget.d$b */
     /* loaded from: classes.dex */
-    public class C0145b extends DataSetObserver {
-        C0145b() {
+    public class b extends DataSetObserver {
+        b() {
         }
 
         @Override // android.database.DataSetObserver
         public void onChanged() {
-            AbstractC0143d abstractC0143d = AbstractC0143d.this;
-            abstractC0143d.f686b = true;
-            abstractC0143d.notifyDataSetChanged();
+            d dVar = d.this;
+            dVar.f536b = true;
+            dVar.notifyDataSetChanged();
         }
 
         @Override // android.database.DataSetObserver
         public void onInvalidated() {
-            AbstractC0143d abstractC0143d = AbstractC0143d.this;
-            abstractC0143d.f686b = false;
-            abstractC0143d.notifyDataSetInvalidated();
+            d dVar = d.this;
+            dVar.f536b = false;
+            dVar.notifyDataSetInvalidated();
         }
     }
 
-    public AbstractC0143d(Context context, Cursor cursor, boolean z) {
-        m1745b(context, cursor, z ? 1 : 2);
+    public d(Context context, Cursor cursor, boolean z) {
+        b(context, cursor, z ? 1 : 2);
     }
 
-    /* renamed from: a */
-    public abstract void mo1161a(View view, Context context, Cursor cursor);
+    public abstract void a(View view, Context context, Cursor cursor);
 
-    /* renamed from: b */
-    void m1745b(Context context, Cursor cursor, int i) {
-        C0145b c0145b;
-        if ((i & 1) == 1) {
-            i |= 2;
-            this.f687c = true;
+    void b(Context context, Cursor cursor, int i2) {
+        b bVar;
+        if ((i2 & 1) == 1) {
+            i2 |= 2;
+            this.f537c = true;
         } else {
-            this.f687c = false;
+            this.f537c = false;
         }
         boolean z = cursor != null;
-        this.f688d = cursor;
-        this.f686b = z;
-        this.f689e = context;
-        this.f690f = z ? cursor.getColumnIndexOrThrow("_id") : -1;
-        if ((i & 2) == 2) {
-            this.f691g = new C0144a();
-            c0145b = new C0145b();
+        this.f538d = cursor;
+        this.f536b = z;
+        this.f539e = context;
+        this.f540f = z ? cursor.getColumnIndexOrThrow("_id") : -1;
+        if ((i2 & 2) == 2) {
+            this.f541g = new a();
+            bVar = new b();
         } else {
-            c0145b = null;
-            this.f691g = null;
+            bVar = null;
+            this.f541g = null;
         }
-        this.f692h = c0145b;
+        this.f542h = bVar;
         if (z) {
-            C0144a c0144a = this.f691g;
-            if (c0144a != null) {
-                cursor.registerContentObserver(c0144a);
+            a aVar = this.f541g;
+            if (aVar != null) {
+                cursor.registerContentObserver(aVar);
             }
-            DataSetObserver dataSetObserver = this.f692h;
+            DataSetObserver dataSetObserver = this.f542h;
             if (dataSetObserver != null) {
                 cursor.registerDataSetObserver(dataSetObserver);
             }
         }
     }
 
-    /* renamed from: c */
-    public abstract View mo1722c(Context context, Cursor cursor, ViewGroup viewGroup);
+    public abstract View c(Context context, Cursor cursor, ViewGroup viewGroup);
 
-    @Override // android.support.p001v4.widget.C0146e.InterfaceC0147a
+    @Override // android.support.v4.widget.e.a
     public void changeCursor(Cursor cursor) {
-        Cursor m1743f = m1743f(cursor);
-        if (m1743f != null) {
-            m1743f.close();
+        Cursor f2 = f(cursor);
+        if (f2 != null) {
+            f2.close();
         }
     }
 
-    /* renamed from: d */
-    public abstract View mo1160d(Context context, Cursor cursor, ViewGroup viewGroup);
+    public abstract View d(Context context, Cursor cursor, ViewGroup viewGroup);
 
-    /* renamed from: e */
-    protected void m1744e() {
+    protected void e() {
         Cursor cursor;
-        if (!this.f687c || (cursor = this.f688d) == null || cursor.isClosed()) {
+        if (!this.f537c || (cursor = this.f538d) == null || cursor.isClosed()) {
             return;
         }
-        this.f686b = this.f688d.requery();
+        this.f536b = this.f538d.requery();
     }
 
-    /* renamed from: f */
-    public Cursor m1743f(Cursor cursor) {
-        Cursor cursor2 = this.f688d;
+    public Cursor f(Cursor cursor) {
+        Cursor cursor2 = this.f538d;
         if (cursor == cursor2) {
             return null;
         }
         if (cursor2 != null) {
-            C0144a c0144a = this.f691g;
-            if (c0144a != null) {
-                cursor2.unregisterContentObserver(c0144a);
+            a aVar = this.f541g;
+            if (aVar != null) {
+                cursor2.unregisterContentObserver(aVar);
             }
-            DataSetObserver dataSetObserver = this.f692h;
+            DataSetObserver dataSetObserver = this.f542h;
             if (dataSetObserver != null) {
                 cursor2.unregisterDataSetObserver(dataSetObserver);
             }
         }
-        this.f688d = cursor;
+        this.f538d = cursor;
         if (cursor != null) {
-            C0144a c0144a2 = this.f691g;
-            if (c0144a2 != null) {
-                cursor.registerContentObserver(c0144a2);
+            a aVar2 = this.f541g;
+            if (aVar2 != null) {
+                cursor.registerContentObserver(aVar2);
             }
-            DataSetObserver dataSetObserver2 = this.f692h;
+            DataSetObserver dataSetObserver2 = this.f542h;
             if (dataSetObserver2 != null) {
                 cursor.registerDataSetObserver(dataSetObserver2);
             }
-            this.f690f = cursor.getColumnIndexOrThrow("_id");
-            this.f686b = true;
+            this.f540f = cursor.getColumnIndexOrThrow("_id");
+            this.f536b = true;
             notifyDataSetChanged();
         } else {
-            this.f690f = -1;
-            this.f686b = false;
+            this.f540f = -1;
+            this.f536b = false;
             notifyDataSetInvalidated();
         }
         return cursor2;
@@ -185,25 +176,25 @@ public abstract class AbstractC0143d extends BaseAdapter implements Filterable, 
     @Override // android.widget.Adapter
     public int getCount() {
         Cursor cursor;
-        if (!this.f686b || (cursor = this.f688d) == null) {
+        if (!this.f536b || (cursor = this.f538d) == null) {
             return 0;
         }
         return cursor.getCount();
     }
 
-    @Override // android.support.p001v4.widget.C0146e.InterfaceC0147a
+    @Override // android.support.v4.widget.e.a
     public Cursor getCursor() {
-        return this.f688d;
+        return this.f538d;
     }
 
     @Override // android.widget.BaseAdapter, android.widget.SpinnerAdapter
-    public View getDropDownView(int i, View view, ViewGroup viewGroup) {
-        if (this.f686b) {
-            this.f688d.moveToPosition(i);
+    public View getDropDownView(int i2, View view, ViewGroup viewGroup) {
+        if (this.f536b) {
+            this.f538d.moveToPosition(i2);
             if (view == null) {
-                view = mo1722c(this.f689e, this.f688d, viewGroup);
+                view = c(this.f539e, this.f538d, viewGroup);
             }
-            mo1161a(view, this.f689e, this.f688d);
+            a(view, this.f539e, this.f538d);
             return view;
         }
         return null;
@@ -211,42 +202,42 @@ public abstract class AbstractC0143d extends BaseAdapter implements Filterable, 
 
     @Override // android.widget.Filterable
     public Filter getFilter() {
-        if (this.f693i == null) {
-            this.f693i = new C0146e(this);
+        if (this.f543i == null) {
+            this.f543i = new e(this);
         }
-        return this.f693i;
+        return this.f543i;
     }
 
     @Override // android.widget.Adapter
-    public Object getItem(int i) {
+    public Object getItem(int i2) {
         Cursor cursor;
-        if (!this.f686b || (cursor = this.f688d) == null) {
+        if (!this.f536b || (cursor = this.f538d) == null) {
             return null;
         }
-        cursor.moveToPosition(i);
-        return this.f688d;
+        cursor.moveToPosition(i2);
+        return this.f538d;
     }
 
     @Override // android.widget.Adapter
-    public long getItemId(int i) {
+    public long getItemId(int i2) {
         Cursor cursor;
-        if (this.f686b && (cursor = this.f688d) != null && cursor.moveToPosition(i)) {
-            return this.f688d.getLong(this.f690f);
+        if (this.f536b && (cursor = this.f538d) != null && cursor.moveToPosition(i2)) {
+            return this.f538d.getLong(this.f540f);
         }
         return 0L;
     }
 
     @Override // android.widget.Adapter
-    public View getView(int i, View view, ViewGroup viewGroup) {
-        if (this.f686b) {
-            if (this.f688d.moveToPosition(i)) {
+    public View getView(int i2, View view, ViewGroup viewGroup) {
+        if (this.f536b) {
+            if (this.f538d.moveToPosition(i2)) {
                 if (view == null) {
-                    view = mo1160d(this.f689e, this.f688d, viewGroup);
+                    view = d(this.f539e, this.f538d, viewGroup);
                 }
-                mo1161a(view, this.f689e, this.f688d);
+                a(view, this.f539e, this.f538d);
                 return view;
             }
-            throw new IllegalStateException("couldn't move cursor to position " + i);
+            throw new IllegalStateException("couldn't move cursor to position " + i2);
         }
         throw new IllegalStateException("this should only be called when the cursor is valid");
     }

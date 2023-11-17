@@ -1,4 +1,4 @@
-package p019r;
+package r;
 
 import android.app.Activity;
 import android.content.Context;
@@ -6,89 +6,83 @@ import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.p002v7.view.menu.C0192e;
-import android.support.p002v7.widget.C0316v0;
+import android.support.v7.widget.v0;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.view.Window;
 import java.lang.Thread;
-import p023v.C0592g;
-import p023v.Window$CallbackC0597i;
 
 /* JADX INFO: Access modifiers changed from: package-private */
-/* renamed from: r.e */
 /* loaded from: classes.dex */
-public abstract class AbstractC0532e extends AbstractC0531d {
+public abstract class e extends d {
 
-    /* renamed from: s */
-    private static boolean f2256s;
+    /* renamed from: s  reason: collision with root package name */
+    private static boolean f1738s;
 
-    /* renamed from: t */
-    private static final boolean f2257t;
+    /* renamed from: t  reason: collision with root package name */
+    private static final boolean f1739t;
 
-    /* renamed from: u */
-    private static final int[] f2258u;
+    /* renamed from: u  reason: collision with root package name */
+    private static final int[] f1740u;
 
-    /* renamed from: d */
-    final Context f2259d;
+    /* renamed from: d  reason: collision with root package name */
+    final Context f1741d;
 
-    /* renamed from: e */
-    final Window f2260e;
+    /* renamed from: e  reason: collision with root package name */
+    final Window f1742e;
 
-    /* renamed from: f */
-    final Window.Callback f2261f;
+    /* renamed from: f  reason: collision with root package name */
+    final Window.Callback f1743f;
 
-    /* renamed from: g */
-    final Window.Callback f2262g;
+    /* renamed from: g  reason: collision with root package name */
+    final Window.Callback f1744g;
 
-    /* renamed from: h */
-    final InterfaceC0530c f2263h;
+    /* renamed from: h  reason: collision with root package name */
+    final c f1745h;
 
-    /* renamed from: i */
-    AbstractC0525a f2264i;
+    /* renamed from: i  reason: collision with root package name */
+    r.a f1746i;
 
-    /* renamed from: j */
-    MenuInflater f2265j;
+    /* renamed from: j  reason: collision with root package name */
+    MenuInflater f1747j;
 
-    /* renamed from: k */
-    boolean f2266k;
+    /* renamed from: k  reason: collision with root package name */
+    boolean f1748k;
 
-    /* renamed from: l */
-    boolean f2267l;
+    /* renamed from: l  reason: collision with root package name */
+    boolean f1749l;
 
-    /* renamed from: m */
-    boolean f2268m;
+    /* renamed from: m  reason: collision with root package name */
+    boolean f1750m;
 
-    /* renamed from: n */
-    boolean f2269n;
+    /* renamed from: n  reason: collision with root package name */
+    boolean f1751n;
 
-    /* renamed from: o */
-    boolean f2270o;
+    /* renamed from: o  reason: collision with root package name */
+    boolean f1752o;
 
-    /* renamed from: p */
-    private CharSequence f2271p;
+    /* renamed from: p  reason: collision with root package name */
+    private CharSequence f1753p;
 
-    /* renamed from: q */
-    private boolean f2272q;
+    /* renamed from: q  reason: collision with root package name */
+    private boolean f1754q;
 
-    /* renamed from: r */
-    private boolean f2273r;
+    /* renamed from: r  reason: collision with root package name */
+    private boolean f1755r;
 
-    /* renamed from: r.e$a */
     /* loaded from: classes.dex */
-    static class C0533a implements Thread.UncaughtExceptionHandler {
+    static class a implements Thread.UncaughtExceptionHandler {
 
-        /* renamed from: a */
-        final /* synthetic */ Thread.UncaughtExceptionHandler f2274a;
+        /* renamed from: a  reason: collision with root package name */
+        final /* synthetic */ Thread.UncaughtExceptionHandler f1756a;
 
-        C0533a(Thread.UncaughtExceptionHandler uncaughtExceptionHandler) {
-            this.f2274a = uncaughtExceptionHandler;
+        a(Thread.UncaughtExceptionHandler uncaughtExceptionHandler) {
+            this.f1756a = uncaughtExceptionHandler;
         }
 
-        /* renamed from: a */
-        private boolean m263a(Throwable th) {
+        private boolean a(Throwable th) {
             String message;
             if (!(th instanceof Resources.NotFoundException) || (message = th.getMessage()) == null) {
                 return false;
@@ -98,73 +92,72 @@ public abstract class AbstractC0532e extends AbstractC0531d {
 
         @Override // java.lang.Thread.UncaughtExceptionHandler
         public void uncaughtException(Thread thread, Throwable th) {
-            if (!m263a(th)) {
-                this.f2274a.uncaughtException(thread, th);
+            if (!a(th)) {
+                this.f1756a.uncaughtException(thread, th);
                 return;
             }
             Resources.NotFoundException notFoundException = new Resources.NotFoundException(th.getMessage() + ". If the resource you are trying to use is a vector resource, you may be referencing it in an unsupported way. See AppCompatDelegate.setCompatVectorFromResourcesEnabled() for more info.");
             notFoundException.initCause(th.getCause());
             notFoundException.setStackTrace(th.getStackTrace());
-            this.f2274a.uncaughtException(thread, notFoundException);
+            this.f1756a.uncaughtException(thread, notFoundException);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: r.e$b */
     /* loaded from: classes.dex */
-    public class C0534b extends Window$CallbackC0597i {
+    public class b extends v.i {
         /* JADX INFO: Access modifiers changed from: package-private */
-        public C0534b(Window.Callback callback) {
+        public b(Window.Callback callback) {
             super(callback);
         }
 
-        @Override // p023v.Window$CallbackC0597i, android.view.Window.Callback
+        @Override // v.i, android.view.Window.Callback
         public boolean dispatchKeyEvent(KeyEvent keyEvent) {
-            return AbstractC0532e.this.mo247B(keyEvent) || super.dispatchKeyEvent(keyEvent);
+            return e.this.B(keyEvent) || super.dispatchKeyEvent(keyEvent);
         }
 
-        @Override // p023v.Window$CallbackC0597i, android.view.Window.Callback
+        @Override // v.i, android.view.Window.Callback
         public boolean dispatchKeyShortcutEvent(KeyEvent keyEvent) {
-            return super.dispatchKeyShortcutEvent(keyEvent) || AbstractC0532e.this.mo245H(keyEvent.getKeyCode(), keyEvent);
+            return super.dispatchKeyShortcutEvent(keyEvent) || e.this.H(keyEvent.getKeyCode(), keyEvent);
         }
 
         @Override // android.view.Window.Callback
         public void onContentChanged() {
         }
 
-        @Override // p023v.Window$CallbackC0597i, android.view.Window.Callback
-        public boolean onCreatePanelMenu(int i, Menu menu) {
-            if (i != 0 || (menu instanceof C0192e)) {
-                return super.onCreatePanelMenu(i, menu);
+        @Override // v.i, android.view.Window.Callback
+        public boolean onCreatePanelMenu(int i2, Menu menu) {
+            if (i2 != 0 || (menu instanceof android.support.v7.view.menu.e)) {
+                return super.onCreatePanelMenu(i2, menu);
             }
             return false;
         }
 
-        @Override // p023v.Window$CallbackC0597i, android.view.Window.Callback
-        public boolean onMenuOpened(int i, Menu menu) {
-            super.onMenuOpened(i, menu);
-            AbstractC0532e.this.mo244I(i, menu);
+        @Override // v.i, android.view.Window.Callback
+        public boolean onMenuOpened(int i2, Menu menu) {
+            super.onMenuOpened(i2, menu);
+            e.this.I(i2, menu);
             return true;
         }
 
-        @Override // p023v.Window$CallbackC0597i, android.view.Window.Callback
-        public void onPanelClosed(int i, Menu menu) {
-            super.onPanelClosed(i, menu);
-            AbstractC0532e.this.mo243J(i, menu);
+        @Override // v.i, android.view.Window.Callback
+        public void onPanelClosed(int i2, Menu menu) {
+            super.onPanelClosed(i2, menu);
+            e.this.J(i2, menu);
         }
 
-        @Override // p023v.Window$CallbackC0597i, android.view.Window.Callback
-        public boolean onPreparePanel(int i, View view, Menu menu) {
-            C0192e c0192e = menu instanceof C0192e ? (C0192e) menu : null;
-            if (i == 0 && c0192e == null) {
+        @Override // v.i, android.view.Window.Callback
+        public boolean onPreparePanel(int i2, View view, Menu menu) {
+            android.support.v7.view.menu.e eVar = menu instanceof android.support.v7.view.menu.e ? (android.support.v7.view.menu.e) menu : null;
+            if (i2 == 0 && eVar == null) {
                 return false;
             }
-            if (c0192e != null) {
-                c0192e.m1629a0(true);
+            if (eVar != null) {
+                eVar.a0(true);
             }
-            boolean onPreparePanel = super.onPreparePanel(i, view, menu);
-            if (c0192e != null) {
-                c0192e.m1629a0(false);
+            boolean onPreparePanel = super.onPreparePanel(i2, view, menu);
+            if (eVar != null) {
+                eVar.a0(false);
             }
             return onPreparePanel;
         }
@@ -172,132 +165,113 @@ public abstract class AbstractC0532e extends AbstractC0531d {
 
     static {
         boolean z = Build.VERSION.SDK_INT < 21;
-        f2257t = z;
-        if (z && !f2256s) {
-            Thread.setDefaultUncaughtExceptionHandler(new C0533a(Thread.getDefaultUncaughtExceptionHandler()));
-            f2256s = true;
+        f1739t = z;
+        if (z && !f1738s) {
+            Thread.setDefaultUncaughtExceptionHandler(new a(Thread.getDefaultUncaughtExceptionHandler()));
+            f1738s = true;
         }
-        f2258u = new int[]{16842836};
+        f1740u = new int[]{16842836};
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public AbstractC0532e(Context context, Window window, InterfaceC0530c interfaceC0530c) {
-        this.f2259d = context;
-        this.f2260e = window;
-        this.f2263h = interfaceC0530c;
+    public e(Context context, Window window, c cVar) {
+        this.f1741d = context;
+        this.f1742e = window;
+        this.f1745h = cVar;
         Window.Callback callback = window.getCallback();
-        this.f2261f = callback;
-        if (callback instanceof C0534b) {
+        this.f1743f = callback;
+        if (callback instanceof b) {
             throw new IllegalStateException("AppCompat has already installed itself into the Window");
         }
-        Window.Callback mo249M = mo249M(callback);
-        this.f2262g = mo249M;
-        window.setCallback(mo249M);
-        C0316v0 m1109s = C0316v0.m1109s(context, null, f2258u);
-        Drawable m1121g = m1109s.m1121g(0);
-        if (m1121g != null) {
-            window.setBackgroundDrawable(m1121g);
+        Window.Callback M = M(callback);
+        this.f1744g = M;
+        window.setCallback(M);
+        v0 s2 = v0.s(context, null, f1740u);
+        Drawable g2 = s2.g(0);
+        if (g2 != null) {
+            window.setBackgroundDrawable(g2);
         }
-        m1109s.m1107u();
+        s2.u();
     }
 
-    @Override // p019r.AbstractC0531d
-    /* renamed from: A */
-    public final void mo271A(CharSequence charSequence) {
-        this.f2271p = charSequence;
-        mo242K(charSequence);
+    @Override // r.d
+    public final void A(CharSequence charSequence) {
+        this.f1753p = charSequence;
+        K(charSequence);
     }
 
-    /* renamed from: B */
-    abstract boolean mo247B(KeyEvent keyEvent);
+    abstract boolean B(KeyEvent keyEvent);
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: C */
-    public final Context m270C() {
-        AbstractC0525a mo264k = mo264k();
-        Context mo120k = mo264k != null ? mo264k.mo120k() : null;
-        return mo120k == null ? this.f2259d : mo120k;
+    public final Context C() {
+        r.a k2 = k();
+        Context k3 = k2 != null ? k2.k() : null;
+        return k3 == null ? this.f1741d : k3;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: D */
-    public final CharSequence m269D() {
-        Window.Callback callback = this.f2261f;
-        return callback instanceof Activity ? ((Activity) callback).getTitle() : this.f2271p;
+    public final CharSequence D() {
+        Window.Callback callback = this.f1743f;
+        return callback instanceof Activity ? ((Activity) callback).getTitle() : this.f1753p;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: E */
-    public final Window.Callback m268E() {
-        return this.f2260e.getCallback();
+    public final Window.Callback E() {
+        return this.f1742e.getCallback();
     }
 
-    /* renamed from: F */
-    abstract void mo246F();
+    abstract void F();
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: G */
-    public final boolean m267G() {
-        return this.f2273r;
+    public final boolean G() {
+        return this.f1755r;
     }
 
-    /* renamed from: H */
-    abstract boolean mo245H(int i, KeyEvent keyEvent);
+    abstract boolean H(int i2, KeyEvent keyEvent);
 
-    /* renamed from: I */
-    abstract boolean mo244I(int i, Menu menu);
+    abstract boolean I(int i2, Menu menu);
 
-    /* renamed from: J */
-    abstract void mo243J(int i, Menu menu);
+    abstract void J(int i2, Menu menu);
 
-    /* renamed from: K */
-    abstract void mo242K(CharSequence charSequence);
+    abstract void K(CharSequence charSequence);
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: L */
-    public final AbstractC0525a m266L() {
-        return this.f2264i;
+    public final r.a L() {
+        return this.f1746i;
     }
 
-    /* renamed from: M */
-    abstract Window.Callback mo249M(Window.Callback callback);
+    abstract Window.Callback M(Window.Callback callback);
 
-    @Override // p019r.AbstractC0531d
-    /* renamed from: d */
-    public abstract boolean mo260d();
+    @Override // r.d
+    public abstract boolean d();
 
-    @Override // p019r.AbstractC0531d
-    /* renamed from: j */
-    public MenuInflater mo265j() {
-        if (this.f2265j == null) {
-            mo246F();
-            AbstractC0525a abstractC0525a = this.f2264i;
-            this.f2265j = new C0592g(abstractC0525a != null ? abstractC0525a.mo120k() : this.f2259d);
+    @Override // r.d
+    public MenuInflater j() {
+        if (this.f1747j == null) {
+            F();
+            r.a aVar = this.f1746i;
+            this.f1747j = new v.g(aVar != null ? aVar.k() : this.f1741d);
         }
-        return this.f2265j;
+        return this.f1747j;
     }
 
-    @Override // p019r.AbstractC0531d
-    /* renamed from: k */
-    public AbstractC0525a mo264k() {
-        mo246F();
-        return this.f2264i;
+    @Override // r.d
+    public r.a k() {
+        F();
+        return this.f1746i;
     }
 
-    @Override // p019r.AbstractC0531d
-    /* renamed from: q */
-    public void mo206q() {
-        this.f2273r = true;
+    @Override // r.d
+    public void q() {
+        this.f1755r = true;
     }
 
-    @Override // p019r.AbstractC0531d
-    /* renamed from: t */
-    public void mo259t(Bundle bundle) {
+    @Override // r.d
+    public void t(Bundle bundle) {
     }
 
-    @Override // p019r.AbstractC0531d
-    /* renamed from: u */
-    public void mo258u() {
-        this.f2272q = true;
+    @Override // r.d
+    public void u() {
+        this.f1754q = true;
     }
 }

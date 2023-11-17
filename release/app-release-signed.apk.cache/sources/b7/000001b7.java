@@ -1,4 +1,4 @@
-package p010i;
+package i;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -6,31 +6,30 @@ import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.CancellationSignal;
 import android.util.Log;
+import h.a;
 import java.lang.reflect.Array;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.nio.ByteBuffer;
 import java.util.List;
-import p009h.C0388a;
-import p014m.C0427b;
-import p015n.C0462k;
+import m.b;
+import n.k;
 
-/* renamed from: i.e */
 /* loaded from: classes.dex */
-class C0405e extends C0408h {
+class e extends h {
 
-    /* renamed from: a */
-    private static final Class f2042a;
+    /* renamed from: a  reason: collision with root package name */
+    private static final Class f1529a;
 
-    /* renamed from: b */
-    private static final Constructor f2043b;
+    /* renamed from: b  reason: collision with root package name */
+    private static final Constructor f1530b;
 
-    /* renamed from: c */
-    private static final Method f2044c;
+    /* renamed from: c  reason: collision with root package name */
+    private static final Method f1531c;
 
-    /* renamed from: d */
-    private static final Method f2045d;
+    /* renamed from: d  reason: collision with root package name */
+    private static final Method f1532d;
 
     static {
         Class<?> cls;
@@ -44,86 +43,80 @@ class C0405e extends C0408h {
             method2 = cls.getMethod("addFontWeightStyle", ByteBuffer.class, cls2, List.class, cls2, Boolean.TYPE);
             method = Typeface.class.getMethod("createFromFamiliesWithDefault", Array.newInstance(cls, 1).getClass());
             constructor = constructor2;
-        } catch (ClassNotFoundException | NoSuchMethodException e) {
-            Log.e("TypefaceCompatApi24Impl", e.getClass().getName(), e);
+        } catch (ClassNotFoundException | NoSuchMethodException e2) {
+            Log.e("TypefaceCompatApi24Impl", e2.getClass().getName(), e2);
             cls = null;
             method = null;
             method2 = null;
         }
-        f2043b = constructor;
-        f2042a = cls;
-        f2044c = method2;
-        f2045d = method;
+        f1530b = constructor;
+        f1529a = cls;
+        f1531c = method2;
+        f1532d = method;
     }
 
-    /* renamed from: h */
-    private static boolean m671h(Object obj, ByteBuffer byteBuffer, int i, int i2, boolean z) {
+    private static boolean h(Object obj, ByteBuffer byteBuffer, int i2, int i3, boolean z) {
         try {
-            return ((Boolean) f2044c.invoke(obj, byteBuffer, Integer.valueOf(i), null, Integer.valueOf(i2), Boolean.valueOf(z))).booleanValue();
-        } catch (IllegalAccessException | InvocationTargetException e) {
-            throw new RuntimeException(e);
+            return ((Boolean) f1531c.invoke(obj, byteBuffer, Integer.valueOf(i2), null, Integer.valueOf(i3), Boolean.valueOf(z))).booleanValue();
+        } catch (IllegalAccessException | InvocationTargetException e2) {
+            throw new RuntimeException(e2);
         }
     }
 
-    /* renamed from: i */
-    private static Typeface m670i(Object obj) {
+    private static Typeface i(Object obj) {
         try {
-            Object newInstance = Array.newInstance(f2042a, 1);
+            Object newInstance = Array.newInstance(f1529a, 1);
             Array.set(newInstance, 0, obj);
-            return (Typeface) f2045d.invoke(null, newInstance);
-        } catch (IllegalAccessException | InvocationTargetException e) {
-            throw new RuntimeException(e);
+            return (Typeface) f1532d.invoke(null, newInstance);
+        } catch (IllegalAccessException | InvocationTargetException e2) {
+            throw new RuntimeException(e2);
         }
     }
 
-    /* renamed from: j */
-    public static boolean m669j() {
-        Method method = f2044c;
+    public static boolean j() {
+        Method method = f1531c;
         if (method == null) {
             Log.w("TypefaceCompatApi24Impl", "Unable to collect necessary private methods.Fallback to legacy implementation.");
         }
         return method != null;
     }
 
-    /* renamed from: k */
-    private static Object m668k() {
+    private static Object k() {
         try {
-            return f2043b.newInstance(new Object[0]);
-        } catch (IllegalAccessException | InstantiationException | InvocationTargetException e) {
-            throw new RuntimeException(e);
+            return f1530b.newInstance(new Object[0]);
+        } catch (IllegalAccessException | InstantiationException | InvocationTargetException e2) {
+            throw new RuntimeException(e2);
         }
     }
 
-    @Override // p010i.C0408h, p010i.C0402c.InterfaceC0403a
-    /* renamed from: b */
-    public Typeface mo652b(Context context, C0388a.C0390b c0390b, Resources resources, int i) {
-        C0388a.C0391c[] m723a;
-        Object m668k = m668k();
-        for (C0388a.C0391c c0391c : c0390b.m723a()) {
-            ByteBuffer m639b = C0412i.m639b(context, resources, c0391c.m721b());
-            if (m639b == null || !m671h(m668k, m639b, c0391c.m720c(), c0391c.m718e(), c0391c.m717f())) {
+    @Override // i.h, i.c.a
+    public Typeface b(Context context, a.b bVar, Resources resources, int i2) {
+        a.c[] a2;
+        Object k2 = k();
+        for (a.c cVar : bVar.a()) {
+            ByteBuffer b2 = i.b(context, resources, cVar.b());
+            if (b2 == null || !h(k2, b2, cVar.c(), cVar.e(), cVar.f())) {
                 return null;
             }
         }
-        return m670i(m668k);
+        return i(k2);
     }
 
-    @Override // p010i.C0408h, p010i.C0402c.InterfaceC0403a
-    /* renamed from: c */
-    public Typeface mo651c(Context context, CancellationSignal cancellationSignal, C0427b.C0433f[] c0433fArr, int i) {
-        Object m668k = m668k();
-        C0462k c0462k = new C0462k();
-        for (C0427b.C0433f c0433f : c0433fArr) {
-            Uri m581c = c0433f.m581c();
-            ByteBuffer byteBuffer = (ByteBuffer) c0462k.get(m581c);
+    @Override // i.h, i.c.a
+    public Typeface c(Context context, CancellationSignal cancellationSignal, b.f[] fVarArr, int i2) {
+        Object k2 = k();
+        k kVar = new k();
+        for (b.f fVar : fVarArr) {
+            Uri c2 = fVar.c();
+            ByteBuffer byteBuffer = (ByteBuffer) kVar.get(c2);
             if (byteBuffer == null) {
-                byteBuffer = C0412i.m635f(context, cancellationSignal, m581c);
-                c0462k.put(m581c, byteBuffer);
+                byteBuffer = i.f(context, cancellationSignal, c2);
+                kVar.put(c2, byteBuffer);
             }
-            if (!m671h(m668k, byteBuffer, c0433f.m582b(), c0433f.m580d(), c0433f.m579e())) {
+            if (!h(k2, byteBuffer, fVar.b(), fVar.d(), fVar.e())) {
                 return null;
             }
         }
-        return Typeface.create(m670i(m668k), i);
+        return Typeface.create(i(k2), i2);
     }
 }

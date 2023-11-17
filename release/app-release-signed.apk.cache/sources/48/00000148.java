@@ -1,4 +1,4 @@
-package android.support.p002v7.widget;
+package android.support.v7.widget;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -6,169 +6,165 @@ import android.graphics.Bitmap;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
-import android.support.p001v4.widget.InterfaceC0164m;
 import android.util.AttributeSet;
 import android.widget.ImageButton;
-import p016o.InterfaceC0489n;
-import p020s.C0569a;
 
-/* renamed from: android.support.v7.widget.n */
 /* loaded from: classes.dex */
-public class C0294n extends ImageButton implements InterfaceC0489n, InterfaceC0164m {
+public class n extends ImageButton implements o.n, android.support.v4.widget.m {
 
-    /* renamed from: b */
-    private final C0259f f1418b;
+    /* renamed from: b  reason: collision with root package name */
+    private final f f1114b;
 
-    /* renamed from: c */
-    private final C0296o f1419c;
+    /* renamed from: c  reason: collision with root package name */
+    private final o f1115c;
 
-    public C0294n(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, C0569a.imageButtonStyle);
+    public n(Context context, AttributeSet attributeSet) {
+        this(context, attributeSet, s.a.imageButtonStyle);
     }
 
-    public C0294n(Context context, AttributeSet attributeSet, int i) {
-        super(C0310s0.m1129b(context), attributeSet, i);
-        C0259f c0259f = new C0259f(this);
-        this.f1418b = c0259f;
-        c0259f.m1316e(attributeSet, i);
-        C0296o c0296o = new C0296o(this);
-        this.f1419c = c0296o;
-        c0296o.m1175f(attributeSet, i);
+    public n(Context context, AttributeSet attributeSet, int i2) {
+        super(s0.b(context), attributeSet, i2);
+        f fVar = new f(this);
+        this.f1114b = fVar;
+        fVar.e(attributeSet, i2);
+        o oVar = new o(this);
+        this.f1115c = oVar;
+        oVar.f(attributeSet, i2);
     }
 
     @Override // android.widget.ImageView, android.view.View
     protected void drawableStateChanged() {
         super.drawableStateChanged();
-        C0259f c0259f = this.f1418b;
-        if (c0259f != null) {
-            c0259f.m1319b();
+        f fVar = this.f1114b;
+        if (fVar != null) {
+            fVar.b();
         }
-        C0296o c0296o = this.f1419c;
-        if (c0296o != null) {
-            c0296o.m1179b();
+        o oVar = this.f1115c;
+        if (oVar != null) {
+            oVar.b();
         }
     }
 
-    @Override // p016o.InterfaceC0489n
+    @Override // o.n
     public ColorStateList getSupportBackgroundTintList() {
-        C0259f c0259f = this.f1418b;
-        if (c0259f != null) {
-            return c0259f.m1318c();
+        f fVar = this.f1114b;
+        if (fVar != null) {
+            return fVar.c();
         }
         return null;
     }
 
-    @Override // p016o.InterfaceC0489n
+    @Override // o.n
     public PorterDuff.Mode getSupportBackgroundTintMode() {
-        C0259f c0259f = this.f1418b;
-        if (c0259f != null) {
-            return c0259f.m1317d();
+        f fVar = this.f1114b;
+        if (fVar != null) {
+            return fVar.d();
         }
         return null;
     }
 
-    @Override // android.support.p001v4.widget.InterfaceC0164m
+    @Override // android.support.v4.widget.m
     public ColorStateList getSupportImageTintList() {
-        C0296o c0296o = this.f1419c;
-        if (c0296o != null) {
-            return c0296o.m1178c();
+        o oVar = this.f1115c;
+        if (oVar != null) {
+            return oVar.c();
         }
         return null;
     }
 
-    @Override // android.support.p001v4.widget.InterfaceC0164m
+    @Override // android.support.v4.widget.m
     public PorterDuff.Mode getSupportImageTintMode() {
-        C0296o c0296o = this.f1419c;
-        if (c0296o != null) {
-            return c0296o.m1177d();
+        o oVar = this.f1115c;
+        if (oVar != null) {
+            return oVar.d();
         }
         return null;
     }
 
     @Override // android.widget.ImageView, android.view.View
     public boolean hasOverlappingRendering() {
-        return this.f1419c.m1176e() && super.hasOverlappingRendering();
+        return this.f1115c.e() && super.hasOverlappingRendering();
     }
 
     @Override // android.view.View
     public void setBackgroundDrawable(Drawable drawable) {
         super.setBackgroundDrawable(drawable);
-        C0259f c0259f = this.f1418b;
-        if (c0259f != null) {
-            c0259f.m1315f(drawable);
+        f fVar = this.f1114b;
+        if (fVar != null) {
+            fVar.f(drawable);
         }
     }
 
     @Override // android.view.View
-    public void setBackgroundResource(int i) {
-        super.setBackgroundResource(i);
-        C0259f c0259f = this.f1418b;
-        if (c0259f != null) {
-            c0259f.m1314g(i);
+    public void setBackgroundResource(int i2) {
+        super.setBackgroundResource(i2);
+        f fVar = this.f1114b;
+        if (fVar != null) {
+            fVar.g(i2);
         }
     }
 
     @Override // android.widget.ImageView
     public void setImageBitmap(Bitmap bitmap) {
         super.setImageBitmap(bitmap);
-        C0296o c0296o = this.f1419c;
-        if (c0296o != null) {
-            c0296o.m1179b();
+        o oVar = this.f1115c;
+        if (oVar != null) {
+            oVar.b();
         }
     }
 
     @Override // android.widget.ImageView
     public void setImageDrawable(Drawable drawable) {
         super.setImageDrawable(drawable);
-        C0296o c0296o = this.f1419c;
-        if (c0296o != null) {
-            c0296o.m1179b();
+        o oVar = this.f1115c;
+        if (oVar != null) {
+            oVar.b();
         }
     }
 
     @Override // android.widget.ImageView
-    public void setImageResource(int i) {
-        this.f1419c.m1174g(i);
+    public void setImageResource(int i2) {
+        this.f1115c.g(i2);
     }
 
     @Override // android.widget.ImageView
     public void setImageURI(Uri uri) {
         super.setImageURI(uri);
-        C0296o c0296o = this.f1419c;
-        if (c0296o != null) {
-            c0296o.m1179b();
+        o oVar = this.f1115c;
+        if (oVar != null) {
+            oVar.b();
         }
     }
 
-    @Override // p016o.InterfaceC0489n
+    @Override // o.n
     public void setSupportBackgroundTintList(ColorStateList colorStateList) {
-        C0259f c0259f = this.f1418b;
-        if (c0259f != null) {
-            c0259f.m1312i(colorStateList);
+        f fVar = this.f1114b;
+        if (fVar != null) {
+            fVar.i(colorStateList);
         }
     }
 
-    @Override // p016o.InterfaceC0489n
+    @Override // o.n
     public void setSupportBackgroundTintMode(PorterDuff.Mode mode) {
-        C0259f c0259f = this.f1418b;
-        if (c0259f != null) {
-            c0259f.m1311j(mode);
+        f fVar = this.f1114b;
+        if (fVar != null) {
+            fVar.j(mode);
         }
     }
 
-    @Override // android.support.p001v4.widget.InterfaceC0164m
+    @Override // android.support.v4.widget.m
     public void setSupportImageTintList(ColorStateList colorStateList) {
-        C0296o c0296o = this.f1419c;
-        if (c0296o != null) {
-            c0296o.m1173h(colorStateList);
+        o oVar = this.f1115c;
+        if (oVar != null) {
+            oVar.h(colorStateList);
         }
     }
 
-    @Override // android.support.p001v4.widget.InterfaceC0164m
+    @Override // android.support.v4.widget.m
     public void setSupportImageTintMode(PorterDuff.Mode mode) {
-        C0296o c0296o = this.f1419c;
-        if (c0296o != null) {
-            c0296o.m1172i(mode);
+        o oVar = this.f1115c;
+        if (oVar != null) {
+            oVar.i(mode);
         }
     }
 }

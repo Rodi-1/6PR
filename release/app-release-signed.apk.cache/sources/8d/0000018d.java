@@ -1,32 +1,28 @@
-package p007f;
-
-import p006e.C0354e;
+package f;
 
 /* JADX INFO: Access modifiers changed from: package-private */
-/* renamed from: f.c */
 /* loaded from: classes.dex */
-public class C0363c {
+public class c {
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: a */
-    public static void m906a(C0373g c0373g, C0354e c0354e, int i) {
-        int i2;
+    public static void a(g gVar, e.e eVar, int i2) {
         int i3;
-        C0364d[] c0364dArr;
-        if (i == 0) {
-            int i4 = c0373g.f1950D0;
-            c0364dArr = c0373g.f1953G0;
-            i3 = i4;
-            i2 = 0;
+        int i4;
+        d[] dVarArr;
+        if (i2 == 0) {
+            int i5 = gVar.D0;
+            dVarArr = gVar.G0;
+            i4 = i5;
+            i3 = 0;
         } else {
-            i2 = 2;
-            i3 = c0373g.f1951E0;
-            c0364dArr = c0373g.f1952F0;
+            i3 = 2;
+            i4 = gVar.E0;
+            dVarArr = gVar.F0;
         }
-        for (int i5 = 0; i5 < i3; i5++) {
-            C0364d c0364d = c0364dArr[i5];
-            c0364d.m904a();
-            if (!c0373g.m801X0(4) || !C0378k.m771b(c0373g, c0354e, i, i2, c0364d)) {
-                m905b(c0373g, c0354e, i, i2, c0364d);
+        for (int i6 = 0; i6 < i4; i6++) {
+            d dVar = dVarArr[i6];
+            dVar.a();
+            if (!gVar.X0(4) || !k.b(gVar, eVar, i2, i3, dVar)) {
+                b(gVar, eVar, i2, i3, dVar);
             }
         }
     }
@@ -66,16 +62,15 @@ public class C0363c {
     /* JADX WARN: Removed duplicated region for block: B:292:0x035e A[SYNTHETIC] */
     /* JADX WARN: Removed duplicated region for block: B:83:0x0145  */
     /* JADX WARN: Removed duplicated region for block: B:96:0x017e  */
-    /* renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    static void m905b(p007f.C0373g r37, p006e.C0354e r38, int r39, int r40, p007f.C0364d r41) {
+    static void b(f.g r37, e.e r38, int r39, int r40, f.d r41) {
         /*
             Method dump skipped, instructions count: 1261
             To view this dump change 'Code comments level' option to 'DEBUG'
         */
-        throw new UnsupportedOperationException("Method not decompiled: p007f.C0363c.m905b(f.g, e.e, int, int, f.d):void");
+        throw new UnsupportedOperationException("Method not decompiled: f.c.b(f.g, e.e, int, int, f.d):void");
     }
 }

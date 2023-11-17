@@ -1,73 +1,68 @@
-package android.support.p002v7.widget;
+package android.support.v7.widget;
 
 import android.content.Context;
 import android.os.Build;
-import android.support.p001v4.widget.C0157j;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.PopupWindow;
-import p020s.C0578j;
 
-/* renamed from: android.support.v7.widget.r */
 /* loaded from: classes.dex */
-class C0307r extends PopupWindow {
+class r extends PopupWindow {
 
-    /* renamed from: b */
-    private static final boolean f1487b;
+    /* renamed from: b  reason: collision with root package name */
+    private static final boolean f1179b;
 
-    /* renamed from: a */
-    private boolean f1488a;
+    /* renamed from: a  reason: collision with root package name */
+    private boolean f1180a;
 
     static {
-        f1487b = Build.VERSION.SDK_INT < 21;
+        f1179b = Build.VERSION.SDK_INT < 21;
     }
 
-    public C0307r(Context context, AttributeSet attributeSet, int i, int i2) {
-        super(context, attributeSet, i, i2);
-        m1136a(context, attributeSet, i, i2);
+    public r(Context context, AttributeSet attributeSet, int i2, int i3) {
+        super(context, attributeSet, i2, i3);
+        a(context, attributeSet, i2, i3);
     }
 
-    /* renamed from: a */
-    private void m1136a(Context context, AttributeSet attributeSet, int i, int i2) {
-        C0316v0 m1108t = C0316v0.m1108t(context, attributeSet, C0578j.f2479O1, i, i2);
-        int i3 = C0578j.f2487Q1;
-        if (m1108t.m1111q(i3)) {
-            m1135b(m1108t.m1127a(i3, false));
+    private void a(Context context, AttributeSet attributeSet, int i2, int i3) {
+        v0 t2 = v0.t(context, attributeSet, s.j.O1, i2, i3);
+        int i4 = s.j.Q1;
+        if (t2.q(i4)) {
+            b(t2.a(i4, false));
         }
-        setBackgroundDrawable(m1108t.m1122f(C0578j.f2483P1));
-        m1108t.m1107u();
+        setBackgroundDrawable(t2.f(s.j.P1));
+        t2.u();
     }
 
-    /* renamed from: b */
-    private void m1135b(boolean z) {
-        if (f1487b) {
-            this.f1488a = z;
+    private void b(boolean z) {
+        if (f1179b) {
+            this.f1180a = z;
         } else {
-            C0157j.m1728a(this, z);
+            android.support.v4.widget.j.a(this, z);
         }
     }
 
     @Override // android.widget.PopupWindow
-    public void showAsDropDown(View view, int i, int i2) {
-        if (f1487b && this.f1488a) {
-            i2 -= view.getHeight();
+    public void showAsDropDown(View view, int i2, int i3) {
+        if (f1179b && this.f1180a) {
+            i3 -= view.getHeight();
         }
-        super.showAsDropDown(view, i, i2);
+        super.showAsDropDown(view, i2, i3);
     }
 
     @Override // android.widget.PopupWindow
-    public void showAsDropDown(View view, int i, int i2, int i3) {
-        if (f1487b && this.f1488a) {
-            i2 -= view.getHeight();
+    public void showAsDropDown(View view, int i2, int i3, int i4) {
+        if (f1179b && this.f1180a) {
+            i3 -= view.getHeight();
         }
-        super.showAsDropDown(view, i, i2, i3);
+        super.showAsDropDown(view, i2, i3, i4);
     }
 
     @Override // android.widget.PopupWindow
-    public void update(View view, int i, int i2, int i3, int i4) {
-        if (f1487b && this.f1488a) {
-            i2 -= view.getHeight();
+    public void update(View view, int i2, int i3, int i4, int i5) {
+        if (f1179b && this.f1180a) {
+            i3 -= view.getHeight();
         }
-        super.update(view, i, i2, i3, i4);
+        super.update(view, i2, i3, i4, i5);
     }
 }

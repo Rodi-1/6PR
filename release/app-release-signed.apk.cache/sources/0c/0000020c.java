@@ -1,11 +1,10 @@
-package p016o;
+package o;
 
 import android.content.res.ColorStateList;
 import android.graphics.PorterDuff;
 
-/* renamed from: o.n */
 /* loaded from: classes.dex */
-public interface InterfaceC0489n {
+public interface n {
     ColorStateList getSupportBackgroundTintList();
 
     PorterDuff.Mode getSupportBackgroundTintMode();

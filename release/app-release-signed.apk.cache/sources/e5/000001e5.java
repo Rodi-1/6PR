@@ -1,10 +1,8 @@
-package p015n;
+package n;
 
-/* renamed from: n.d */
 /* loaded from: classes.dex */
-public class C0450d {
-    /* renamed from: a */
-    public static void m540a(Object obj, StringBuilder sb) {
+public class d {
+    public static void a(Object obj, StringBuilder sb) {
         String hexString;
         int lastIndexOf;
         if (obj == null) {

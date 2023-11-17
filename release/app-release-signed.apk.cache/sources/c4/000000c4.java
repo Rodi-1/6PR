@@ -1,4 +1,4 @@
-package android.support.p002v7.view.menu;
+package android.support.v7.view.menu;
 
 import android.content.Context;
 import android.content.res.Configuration;
@@ -6,212 +6,197 @@ import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.Parcelable;
-import android.support.p002v7.view.menu.C0192e;
-import android.support.p002v7.view.menu.InterfaceC0203k;
-import android.support.p002v7.widget.AbstractView$OnTouchListenerC0268h0;
-import android.support.p002v7.widget.ActionMenuView;
-import android.support.p002v7.widget.C0240a0;
-import android.support.p002v7.widget.C0328x0;
+import android.support.v7.view.menu.e;
+import android.support.v7.view.menu.k;
+import android.support.v7.widget.ActionMenuView;
+import android.support.v7.widget.a0;
+import android.support.v7.widget.h0;
+import android.support.v7.widget.x0;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
-import p020s.C0578j;
-import p024w.InterfaceC0610h;
 
-/* renamed from: android.support.v7.view.menu.ActionMenuItemView */
 /* loaded from: classes.dex */
-public class ActionMenuItemView extends C0240a0 implements InterfaceC0203k.InterfaceC0204a, View.OnClickListener, ActionMenuView.InterfaceC0215a {
+public class ActionMenuItemView extends a0 implements k.a, View.OnClickListener, ActionMenuView.a {
 
-    /* renamed from: d */
-    C0196g f825d;
+    /* renamed from: d  reason: collision with root package name */
+    g f634d;
 
-    /* renamed from: e */
-    private CharSequence f826e;
+    /* renamed from: e  reason: collision with root package name */
+    private CharSequence f635e;
 
-    /* renamed from: f */
-    private Drawable f827f;
+    /* renamed from: f  reason: collision with root package name */
+    private Drawable f636f;
 
-    /* renamed from: g */
-    C0192e.InterfaceC0194b f828g;
+    /* renamed from: g  reason: collision with root package name */
+    e.b f637g;
 
-    /* renamed from: h */
-    private AbstractView$OnTouchListenerC0268h0 f829h;
+    /* renamed from: h  reason: collision with root package name */
+    private h0 f638h;
 
-    /* renamed from: i */
-    AbstractC0181b f830i;
+    /* renamed from: i  reason: collision with root package name */
+    b f639i;
 
-    /* renamed from: j */
-    private boolean f831j;
+    /* renamed from: j  reason: collision with root package name */
+    private boolean f640j;
 
-    /* renamed from: k */
-    private boolean f832k;
+    /* renamed from: k  reason: collision with root package name */
+    private boolean f641k;
 
-    /* renamed from: l */
-    private int f833l;
+    /* renamed from: l  reason: collision with root package name */
+    private int f642l;
 
-    /* renamed from: m */
-    private int f834m;
+    /* renamed from: m  reason: collision with root package name */
+    private int f643m;
 
-    /* renamed from: n */
-    private int f835n;
+    /* renamed from: n  reason: collision with root package name */
+    private int f644n;
 
-    /* renamed from: android.support.v7.view.menu.ActionMenuItemView$a */
     /* loaded from: classes.dex */
-    private class C0180a extends AbstractView$OnTouchListenerC0268h0 {
-        public C0180a() {
+    private class a extends h0 {
+        public a() {
             super(ActionMenuItemView.this);
         }
 
-        @Override // android.support.p002v7.widget.AbstractView$OnTouchListenerC0268h0
-        /* renamed from: b */
-        public InterfaceC0610h mo1061b() {
-            AbstractC0181b abstractC0181b = ActionMenuItemView.this.f830i;
-            if (abstractC0181b != null) {
-                return abstractC0181b.mo1328a();
+        @Override // android.support.v7.widget.h0
+        public w.h b() {
+            b bVar = ActionMenuItemView.this.f639i;
+            if (bVar != null) {
+                return bVar.a();
             }
             return null;
         }
 
-        @Override // android.support.p002v7.widget.AbstractView$OnTouchListenerC0268h0
-        /* renamed from: c */
-        protected boolean mo1060c() {
-            InterfaceC0610h mo1061b;
+        @Override // android.support.v7.widget.h0
+        protected boolean c() {
+            w.h b2;
             ActionMenuItemView actionMenuItemView = ActionMenuItemView.this;
-            C0192e.InterfaceC0194b interfaceC0194b = actionMenuItemView.f828g;
-            return interfaceC0194b != null && interfaceC0194b.mo1498c(actionMenuItemView.f825d) && (mo1061b = mo1061b()) != null && mo1061b.mo3c();
+            e.b bVar = actionMenuItemView.f637g;
+            return bVar != null && bVar.c(actionMenuItemView.f634d) && (b2 = b()) != null && b2.c();
         }
     }
 
-    /* renamed from: android.support.v7.view.menu.ActionMenuItemView$b */
     /* loaded from: classes.dex */
-    public static abstract class AbstractC0181b {
-        /* renamed from: a */
-        public abstract InterfaceC0610h mo1328a();
+    public static abstract class b {
+        public abstract w.h a();
     }
 
     public ActionMenuItemView(Context context, AttributeSet attributeSet) {
         this(context, attributeSet, 0);
     }
 
-    public ActionMenuItemView(Context context, AttributeSet attributeSet, int i) {
-        super(context, attributeSet, i);
+    public ActionMenuItemView(Context context, AttributeSet attributeSet, int i2) {
+        super(context, attributeSet, i2);
         Resources resources = context.getResources();
-        this.f831j = m1682f();
-        TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C0578j.f2610v, i, 0);
-        this.f833l = obtainStyledAttributes.getDimensionPixelSize(C0578j.f2614w, 0);
+        this.f640j = f();
+        TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, s.j.f1885v, i2, 0);
+        this.f642l = obtainStyledAttributes.getDimensionPixelSize(s.j.f1886w, 0);
         obtainStyledAttributes.recycle();
-        this.f835n = (int) ((resources.getDisplayMetrics().density * 32.0f) + 0.5f);
+        this.f644n = (int) ((resources.getDisplayMetrics().density * 32.0f) + 0.5f);
         setOnClickListener(this);
-        this.f834m = -1;
+        this.f643m = -1;
         setSaveEnabled(false);
     }
 
-    /* renamed from: f */
-    private boolean m1682f() {
+    private boolean f() {
         Configuration configuration = getContext().getResources().getConfiguration();
-        int i = configuration.screenWidthDp;
-        return i >= 480 || (i >= 640 && configuration.screenHeightDp >= 480) || configuration.orientation == 2;
+        int i2 = configuration.screenWidthDp;
+        return i2 >= 480 || (i2 >= 640 && configuration.screenHeightDp >= 480) || configuration.orientation == 2;
     }
 
-    /* renamed from: g */
-    private void m1681g() {
+    private void g() {
         boolean z = true;
-        boolean z2 = !TextUtils.isEmpty(this.f826e);
-        if (this.f827f != null && (!this.f825d.m1579z() || (!this.f831j && !this.f832k))) {
+        boolean z2 = !TextUtils.isEmpty(this.f635e);
+        if (this.f636f != null && (!this.f634d.z() || (!this.f640j && !this.f641k))) {
             z = false;
         }
         boolean z3 = z2 & z;
-        setText(z3 ? this.f826e : null);
-        CharSequence contentDescription = this.f825d.getContentDescription();
+        setText(z3 ? this.f635e : null);
+        CharSequence contentDescription = this.f634d.getContentDescription();
         if (TextUtils.isEmpty(contentDescription)) {
-            contentDescription = z3 ? null : this.f825d.getTitle();
+            contentDescription = z3 ? null : this.f634d.getTitle();
         }
         setContentDescription(contentDescription);
-        CharSequence tooltipText = this.f825d.getTooltipText();
+        CharSequence tooltipText = this.f634d.getTooltipText();
         if (TextUtils.isEmpty(tooltipText)) {
-            C0328x0.m1053a(this, z3 ? null : this.f825d.getTitle());
+            x0.a(this, z3 ? null : this.f634d.getTitle());
         } else {
-            C0328x0.m1053a(this, tooltipText);
+            x0.a(this, tooltipText);
         }
     }
 
-    @Override // android.support.p002v7.widget.ActionMenuView.InterfaceC0215a
-    /* renamed from: a */
-    public boolean mo1327a() {
-        return m1683e() && this.f825d.getIcon() == null;
+    @Override // android.support.v7.widget.ActionMenuView.a
+    public boolean a() {
+        return e() && this.f634d.getIcon() == null;
     }
 
-    @Override // android.support.p002v7.widget.ActionMenuView.InterfaceC0215a
-    /* renamed from: b */
-    public boolean mo1326b() {
-        return m1683e();
+    @Override // android.support.v7.widget.ActionMenuView.a
+    public boolean b() {
+        return e();
     }
 
-    @Override // android.support.p002v7.view.menu.InterfaceC0203k.InterfaceC0204a
-    /* renamed from: c */
-    public boolean mo1559c() {
+    @Override // android.support.v7.view.menu.k.a
+    public boolean c() {
         return true;
     }
 
-    @Override // android.support.p002v7.view.menu.InterfaceC0203k.InterfaceC0204a
-    /* renamed from: d */
-    public void mo1558d(C0196g c0196g, int i) {
-        this.f825d = c0196g;
-        setIcon(c0196g.getIcon());
-        setTitle(c0196g.m1597h(this));
-        setId(c0196g.getItemId());
-        setVisibility(c0196g.isVisible() ? 0 : 8);
-        setEnabled(c0196g.isEnabled());
-        if (c0196g.hasSubMenu() && this.f829h == null) {
-            this.f829h = new C0180a();
+    @Override // android.support.v7.view.menu.k.a
+    public void d(g gVar, int i2) {
+        this.f634d = gVar;
+        setIcon(gVar.getIcon());
+        setTitle(gVar.h(this));
+        setId(gVar.getItemId());
+        setVisibility(gVar.isVisible() ? 0 : 8);
+        setEnabled(gVar.isEnabled());
+        if (gVar.hasSubMenu() && this.f638h == null) {
+            this.f638h = new a();
         }
     }
 
-    /* renamed from: e */
-    public boolean m1683e() {
+    public boolean e() {
         return !TextUtils.isEmpty(getText());
     }
 
-    @Override // android.support.p002v7.view.menu.InterfaceC0203k.InterfaceC0204a
-    public C0196g getItemData() {
-        return this.f825d;
+    @Override // android.support.v7.view.menu.k.a
+    public g getItemData() {
+        return this.f634d;
     }
 
     @Override // android.view.View.OnClickListener
     public void onClick(View view) {
-        C0192e.InterfaceC0194b interfaceC0194b = this.f828g;
-        if (interfaceC0194b != null) {
-            interfaceC0194b.mo1498c(this.f825d);
+        e.b bVar = this.f637g;
+        if (bVar != null) {
+            bVar.c(this.f634d);
         }
     }
 
     @Override // android.widget.TextView, android.view.View
     public void onConfigurationChanged(Configuration configuration) {
         super.onConfigurationChanged(configuration);
-        this.f831j = m1682f();
-        m1681g();
+        this.f640j = f();
+        g();
     }
 
     @Override // android.widget.TextView, android.view.View
-    protected void onMeasure(int i, int i2) {
-        int i3;
-        boolean m1683e = m1683e();
-        if (m1683e && (i3 = this.f834m) >= 0) {
-            super.setPadding(i3, getPaddingTop(), getPaddingRight(), getPaddingBottom());
+    protected void onMeasure(int i2, int i3) {
+        int i4;
+        boolean e2 = e();
+        if (e2 && (i4 = this.f643m) >= 0) {
+            super.setPadding(i4, getPaddingTop(), getPaddingRight(), getPaddingBottom());
         }
-        super.onMeasure(i, i2);
-        int mode = View.MeasureSpec.getMode(i);
-        int size = View.MeasureSpec.getSize(i);
+        super.onMeasure(i2, i3);
+        int mode = View.MeasureSpec.getMode(i2);
+        int size = View.MeasureSpec.getSize(i2);
         int measuredWidth = getMeasuredWidth();
-        int min = mode == Integer.MIN_VALUE ? Math.min(size, this.f833l) : this.f833l;
-        if (mode != 1073741824 && this.f833l > 0 && measuredWidth < min) {
-            super.onMeasure(View.MeasureSpec.makeMeasureSpec(min, 1073741824), i2);
+        int min = mode == Integer.MIN_VALUE ? Math.min(size, this.f642l) : this.f642l;
+        if (mode != 1073741824 && this.f642l > 0 && measuredWidth < min) {
+            super.onMeasure(View.MeasureSpec.makeMeasureSpec(min, 1073741824), i3);
         }
-        if (m1683e || this.f827f == null) {
+        if (e2 || this.f636f == null) {
             return;
         }
-        super.setPadding((getMeasuredWidth() - this.f827f.getBounds().width()) / 2, getPaddingTop(), getPaddingRight(), getPaddingBottom());
+        super.setPadding((getMeasuredWidth() - this.f636f.getBounds().width()) / 2, getPaddingTop(), getPaddingRight(), getPaddingBottom());
     }
 
     @Override // android.widget.TextView, android.view.View
@@ -221,8 +206,8 @@ public class ActionMenuItemView extends C0240a0 implements InterfaceC0203k.Inter
 
     @Override // android.widget.TextView, android.view.View
     public boolean onTouchEvent(MotionEvent motionEvent) {
-        AbstractView$OnTouchListenerC0268h0 abstractView$OnTouchListenerC0268h0;
-        if (this.f825d.hasSubMenu() && (abstractView$OnTouchListenerC0268h0 = this.f829h) != null && abstractView$OnTouchListenerC0268h0.onTouch(this, motionEvent)) {
+        h0 h0Var;
+        if (this.f634d.hasSubMenu() && (h0Var = this.f638h) != null && h0Var.onTouch(this, motionEvent)) {
             return true;
         }
         return super.onTouchEvent(motionEvent);
@@ -235,52 +220,52 @@ public class ActionMenuItemView extends C0240a0 implements InterfaceC0203k.Inter
     }
 
     public void setExpandedFormat(boolean z) {
-        if (this.f832k != z) {
-            this.f832k = z;
-            C0196g c0196g = this.f825d;
-            if (c0196g != null) {
-                c0196g.m1602c();
+        if (this.f641k != z) {
+            this.f641k = z;
+            g gVar = this.f634d;
+            if (gVar != null) {
+                gVar.c();
             }
         }
     }
 
     public void setIcon(Drawable drawable) {
-        this.f827f = drawable;
+        this.f636f = drawable;
         if (drawable != null) {
             int intrinsicWidth = drawable.getIntrinsicWidth();
             int intrinsicHeight = drawable.getIntrinsicHeight();
-            int i = this.f835n;
-            if (intrinsicWidth > i) {
-                intrinsicHeight = (int) (intrinsicHeight * (i / intrinsicWidth));
-                intrinsicWidth = i;
+            int i2 = this.f644n;
+            if (intrinsicWidth > i2) {
+                intrinsicHeight = (int) (intrinsicHeight * (i2 / intrinsicWidth));
+                intrinsicWidth = i2;
             }
-            if (intrinsicHeight > i) {
-                intrinsicWidth = (int) (intrinsicWidth * (i / intrinsicHeight));
+            if (intrinsicHeight > i2) {
+                intrinsicWidth = (int) (intrinsicWidth * (i2 / intrinsicHeight));
             } else {
-                i = intrinsicHeight;
+                i2 = intrinsicHeight;
             }
-            drawable.setBounds(0, 0, intrinsicWidth, i);
+            drawable.setBounds(0, 0, intrinsicWidth, i2);
         }
         setCompoundDrawables(drawable, null, null, null);
-        m1681g();
+        g();
     }
 
-    public void setItemInvoker(C0192e.InterfaceC0194b interfaceC0194b) {
-        this.f828g = interfaceC0194b;
+    public void setItemInvoker(e.b bVar) {
+        this.f637g = bVar;
     }
 
     @Override // android.widget.TextView, android.view.View
-    public void setPadding(int i, int i2, int i3, int i4) {
-        this.f834m = i;
-        super.setPadding(i, i2, i3, i4);
+    public void setPadding(int i2, int i3, int i4, int i5) {
+        this.f643m = i2;
+        super.setPadding(i2, i3, i4, i5);
     }
 
-    public void setPopupCallback(AbstractC0181b abstractC0181b) {
-        this.f830i = abstractC0181b;
+    public void setPopupCallback(b bVar) {
+        this.f639i = bVar;
     }
 
     public void setTitle(CharSequence charSequence) {
-        this.f826e = charSequence;
-        m1681g();
+        this.f635e = charSequence;
+        g();
     }
 }

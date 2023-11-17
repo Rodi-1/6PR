@@ -7,52 +7,49 @@ import android.graphics.Typeface;
 import android.support.constraint.ConstraintLayout;
 import android.view.View;
 
-/* renamed from: android.support.constraint.e */
 /* loaded from: classes.dex */
-public class C0037e extends View {
+public class e extends View {
 
-    /* renamed from: b */
-    private int f231b;
+    /* renamed from: b  reason: collision with root package name */
+    private int f125b;
 
-    /* renamed from: c */
-    private View f232c;
+    /* renamed from: c  reason: collision with root package name */
+    private View f126c;
 
-    /* renamed from: d */
-    private int f233d;
+    /* renamed from: d  reason: collision with root package name */
+    private int f127d;
 
-    /* renamed from: a */
-    public void m2312a(ConstraintLayout constraintLayout) {
-        if (this.f232c == null) {
+    public void a(ConstraintLayout constraintLayout) {
+        if (this.f126c == null) {
             return;
         }
-        ConstraintLayout.C0028a c0028a = (ConstraintLayout.C0028a) getLayoutParams();
-        ConstraintLayout.C0028a c0028a2 = (ConstraintLayout.C0028a) this.f232c.getLayoutParams();
-        c0028a2.f117l0.m816x0(0);
-        c0028a.f117l0.m814y0(c0028a2.f117l0.m881D());
-        c0028a.f117l0.m855b0(c0028a2.f117l0.m829r());
-        c0028a2.f117l0.m816x0(8);
+        ConstraintLayout.a aVar = (ConstraintLayout.a) getLayoutParams();
+        ConstraintLayout.a aVar2 = (ConstraintLayout.a) this.f126c.getLayoutParams();
+        aVar2.l0.x0(0);
+        aVar.l0.y0(aVar2.l0.D());
+        aVar.l0.b0(aVar2.l0.r());
+        aVar2.l0.x0(8);
     }
 
-    /* renamed from: b */
-    public void m2311b(ConstraintLayout constraintLayout) {
-        if (this.f231b == -1 && !isInEditMode()) {
-            setVisibility(this.f233d);
+    public void b(ConstraintLayout constraintLayout) {
+        if (this.f125b == -1 && !isInEditMode()) {
+            setVisibility(this.f127d);
         }
-        View findViewById = constraintLayout.findViewById(this.f231b);
-        this.f232c = findViewById;
+        View findViewById = constraintLayout.findViewById(this.f125b);
+        this.f126c = findViewById;
         if (findViewById != null) {
-            ((ConstraintLayout.C0028a) findViewById.getLayoutParams()).f95a0 = true;
-            this.f232c.setVisibility(0);
+            ((ConstraintLayout.a) findViewById.getLayoutParams()).a0 = true;
+            this.f126c.setVisibility(0);
             setVisibility(0);
         }
     }
 
     public View getContent() {
-        return this.f232c;
+        return this.f126c;
     }
 
     public int getEmptyVisibility() {
-        return this.f233d;
+        return this.f127d;
     }
 
     @Override // android.view.View
@@ -74,25 +71,25 @@ public class C0037e extends View {
         }
     }
 
-    public void setContentId(int i) {
+    public void setContentId(int i2) {
         View findViewById;
-        if (this.f231b == i) {
+        if (this.f125b == i2) {
             return;
         }
-        View view = this.f232c;
+        View view = this.f126c;
         if (view != null) {
             view.setVisibility(0);
-            ((ConstraintLayout.C0028a) this.f232c.getLayoutParams()).f95a0 = false;
-            this.f232c = null;
+            ((ConstraintLayout.a) this.f126c.getLayoutParams()).a0 = false;
+            this.f126c = null;
         }
-        this.f231b = i;
-        if (i == -1 || (findViewById = ((View) getParent()).findViewById(i)) == null) {
+        this.f125b = i2;
+        if (i2 == -1 || (findViewById = ((View) getParent()).findViewById(i2)) == null) {
             return;
         }
         findViewById.setVisibility(8);
     }
 
-    public void setEmptyVisibility(int i) {
-        this.f233d = i;
+    public void setEmptyVisibility(int i2) {
+        this.f127d = i2;
     }
 }

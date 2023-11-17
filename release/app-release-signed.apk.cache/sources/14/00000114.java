@@ -1,38 +1,37 @@
-package android.support.p002v7.widget;
+package android.support.v7.widget;
 
 import android.graphics.Canvas;
 import android.graphics.ColorFilter;
 import android.graphics.drawable.Drawable;
 
-/* renamed from: android.support.v7.widget.b */
 /* loaded from: classes.dex */
-class C0242b extends Drawable {
+class b extends Drawable {
 
-    /* renamed from: a */
-    final ActionBarContainer f1239a;
+    /* renamed from: a  reason: collision with root package name */
+    final ActionBarContainer f960a;
 
-    public C0242b(ActionBarContainer actionBarContainer) {
-        this.f1239a = actionBarContainer;
+    public b(ActionBarContainer actionBarContainer) {
+        this.f960a = actionBarContainer;
     }
 
     @Override // android.graphics.drawable.Drawable
     public void draw(Canvas canvas) {
-        ActionBarContainer actionBarContainer = this.f1239a;
-        if (actionBarContainer.f1033i) {
-            Drawable drawable = actionBarContainer.f1032h;
+        ActionBarContainer actionBarContainer = this.f960a;
+        if (actionBarContainer.f819i) {
+            Drawable drawable = actionBarContainer.f818h;
             if (drawable != null) {
                 drawable.draw(canvas);
                 return;
             }
             return;
         }
-        Drawable drawable2 = actionBarContainer.f1030f;
+        Drawable drawable2 = actionBarContainer.f816f;
         if (drawable2 != null) {
             drawable2.draw(canvas);
         }
-        ActionBarContainer actionBarContainer2 = this.f1239a;
-        Drawable drawable3 = actionBarContainer2.f1031g;
-        if (drawable3 == null || !actionBarContainer2.f1034j) {
+        ActionBarContainer actionBarContainer2 = this.f960a;
+        Drawable drawable3 = actionBarContainer2.f817g;
+        if (drawable3 == null || !actionBarContainer2.f820j) {
             return;
         }
         drawable3.draw(canvas);
@@ -44,7 +43,7 @@ class C0242b extends Drawable {
     }
 
     @Override // android.graphics.drawable.Drawable
-    public void setAlpha(int i) {
+    public void setAlpha(int i2) {
     }
 
     @Override // android.graphics.drawable.Drawable

@@ -1,21 +1,19 @@
-package p007f;
+package f;
 
-import p006e.C0354e;
-import p007f.C0370f;
+import f.f;
 
-/* renamed from: f.k */
 /* loaded from: classes.dex */
-public class C0378k {
+public class k {
 
-    /* renamed from: a */
-    static boolean[] f1992a = new boolean[3];
+    /* renamed from: a  reason: collision with root package name */
+    static boolean[] f1480a = new boolean[3];
 
     /* JADX INFO: Access modifiers changed from: package-private */
     /* JADX WARN: Code restructure failed: missing block: B:100:0x01ac, code lost:
-        r4.m764j(r2, 1, r17.m819w());
+        r4.j(r2, 1, r17.w());
      */
     /* JADX WARN: Code restructure failed: missing block: B:101:0x01b5, code lost:
-        r4.m765i(r2, r1);
+        r4.i(r2, r1);
      */
     /* JADX WARN: Code restructure failed: missing block: B:105:0x01c2, code lost:
         if (r6 != false) goto L90;
@@ -39,13 +37,13 @@ public class C0378k {
         if (r6 != false) goto L25;
      */
     /* JADX WARN: Code restructure failed: missing block: B:54:0x00df, code lost:
-        r3.m764j(r1, 1, r17.m817x());
+        r3.j(r1, 1, r17.x());
      */
     /* JADX WARN: Code restructure failed: missing block: B:55:0x00e8, code lost:
-        r7 = r17.m881D();
+        r7 = r17.D();
      */
     /* JADX WARN: Code restructure failed: missing block: B:56:0x00ec, code lost:
-        r3.m765i(r1, r7);
+        r3.i(r1, r7);
      */
     /* JADX WARN: Code restructure failed: missing block: B:61:0x00ff, code lost:
         if (r6 != false) goto L25;
@@ -53,17 +51,16 @@ public class C0378k {
     /* JADX WARN: Code restructure failed: missing block: B:99:0x01aa, code lost:
         if (r6 != false) goto L90;
      */
-    /* renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    public static void m772a(int r16, p007f.C0370f r17) {
+    public static void a(int r16, f.f r17) {
         /*
             Method dump skipped, instructions count: 760
             To view this dump change 'Code comments level' option to 'DEBUG'
         */
-        throw new UnsupportedOperationException("Method not decompiled: p007f.C0378k.m772a(int, f.f):void");
+        throw new UnsupportedOperationException("Method not decompiled: f.k.a(int, f.f):void");
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -82,86 +79,82 @@ public class C0378k {
     /* JADX WARN: Removed duplicated region for block: B:129:0x01b4  */
     /* JADX WARN: Removed duplicated region for block: B:204:0x00fb A[SYNTHETIC] */
     /* JADX WARN: Removed duplicated region for block: B:207:0x00f8 A[SYNTHETIC] */
-    /* renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    public static boolean m771b(p007f.C0373g r22, p006e.C0354e r23, int r24, int r25, p007f.C0364d r26) {
+    public static boolean b(f.g r22, e.e r23, int r24, int r25, f.d r26) {
         /*
             Method dump skipped, instructions count: 827
             To view this dump change 'Code comments level' option to 'DEBUG'
         */
-        throw new UnsupportedOperationException("Method not decompiled: p007f.C0378k.m771b(f.g, e.e, int, int, f.d):boolean");
+        throw new UnsupportedOperationException("Method not decompiled: f.k.b(f.g, e.e, int, int, f.d):boolean");
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: c */
-    public static void m770c(C0373g c0373g, C0354e c0354e, C0370f c0370f) {
-        C0370f.EnumC0372b enumC0372b = c0373g.f1872E[0];
-        C0370f.EnumC0372b enumC0372b2 = C0370f.EnumC0372b.WRAP_CONTENT;
-        if (enumC0372b != enumC0372b2 && c0370f.f1872E[0] == C0370f.EnumC0372b.MATCH_PARENT) {
-            int i = c0370f.f1934u.f1843e;
-            int m881D = c0373g.m881D() - c0370f.f1936w.f1843e;
-            C0365e c0365e = c0370f.f1934u;
-            c0365e.f1848j = c0354e.m941r(c0365e);
-            C0365e c0365e2 = c0370f.f1936w;
-            c0365e2.f1848j = c0354e.m941r(c0365e2);
-            c0354e.m953f(c0370f.f1934u.f1848j, i);
-            c0354e.m953f(c0370f.f1936w.f1848j, m881D);
-            c0370f.f1894a = 2;
-            c0370f.m849f0(i, m881D);
+    public static void c(g gVar, e.e eVar, f fVar) {
+        f.b bVar = gVar.E[0];
+        f.b bVar2 = f.b.WRAP_CONTENT;
+        if (bVar != bVar2 && fVar.E[0] == f.b.MATCH_PARENT) {
+            int i2 = fVar.f1458u.f1414e;
+            int D = gVar.D() - fVar.f1460w.f1414e;
+            e eVar2 = fVar.f1458u;
+            eVar2.f1419j = eVar.r(eVar2);
+            e eVar3 = fVar.f1460w;
+            eVar3.f1419j = eVar.r(eVar3);
+            eVar.f(fVar.f1458u.f1419j, i2);
+            eVar.f(fVar.f1460w.f1419j, D);
+            fVar.f1438a = 2;
+            fVar.f0(i2, D);
         }
-        if (c0373g.f1872E[1] == enumC0372b2 || c0370f.f1872E[1] != C0370f.EnumC0372b.MATCH_PARENT) {
+        if (gVar.E[1] == bVar2 || fVar.E[1] != f.b.MATCH_PARENT) {
             return;
         }
-        int i2 = c0370f.f1935v.f1843e;
-        int m829r = c0373g.m829r() - c0370f.f1937x.f1843e;
-        C0365e c0365e3 = c0370f.f1935v;
-        c0365e3.f1848j = c0354e.m941r(c0365e3);
-        C0365e c0365e4 = c0370f.f1937x;
-        c0365e4.f1848j = c0354e.m941r(c0365e4);
-        c0354e.m953f(c0370f.f1935v.f1848j, i2);
-        c0354e.m953f(c0370f.f1937x.f1848j, m829r);
-        if (c0370f.f1888U > 0 || c0370f.m883C() == 8) {
-            C0365e c0365e5 = c0370f.f1938y;
-            c0365e5.f1848j = c0354e.m941r(c0365e5);
-            c0354e.m953f(c0370f.f1938y.f1848j, c0370f.f1888U + i2);
+        int i3 = fVar.f1459v.f1414e;
+        int r2 = gVar.r() - fVar.x.f1414e;
+        e eVar4 = fVar.f1459v;
+        eVar4.f1419j = eVar.r(eVar4);
+        e eVar5 = fVar.x;
+        eVar5.f1419j = eVar.r(eVar5);
+        eVar.f(fVar.f1459v.f1419j, i3);
+        eVar.f(fVar.x.f1419j, r2);
+        if (fVar.U > 0 || fVar.C() == 8) {
+            e eVar6 = fVar.y;
+            eVar6.f1419j = eVar.r(eVar6);
+            eVar.f(fVar.y.f1419j, fVar.U + i3);
         }
-        c0370f.f1896b = 2;
-        c0370f.m824t0(i2, m829r);
+        fVar.f1439b = 2;
+        fVar.t0(i3, r2);
     }
 
-    /* renamed from: d */
-    private static boolean m769d(C0370f c0370f, int i) {
-        C0370f.EnumC0372b[] enumC0372bArr = c0370f.f1872E;
-        if (enumC0372bArr[i] != C0370f.EnumC0372b.MATCH_CONSTRAINT) {
+    private static boolean d(f fVar, int i2) {
+        f.b[] bVarArr = fVar.E;
+        if (bVarArr[i2] != f.b.MATCH_CONSTRAINT) {
             return false;
         }
-        if (c0370f.f1876I != 0.0f) {
-            C0370f.EnumC0372b enumC0372b = enumC0372bArr[i != 0 ? (char) 0 : (char) 1];
+        if (fVar.I != 0.0f) {
+            f.b bVar = bVarArr[i2 != 0 ? (char) 0 : (char) 1];
             return false;
         }
-        if (i == 0) {
-            if (c0370f.f1902e != 0 || c0370f.f1908h != 0 || c0370f.f1910i != 0) {
+        if (i2 == 0) {
+            if (fVar.f1442e != 0 || fVar.f1445h != 0 || fVar.f1446i != 0) {
                 return false;
             }
-        } else if (c0370f.f1904f != 0 || c0370f.f1914k != 0 || c0370f.f1916l != 0) {
+        } else if (fVar.f1443f != 0 || fVar.f1448k != 0 || fVar.f1449l != 0) {
             return false;
         }
         return true;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: e */
-    public static void m768e(C0370f c0370f, int i, int i2) {
-        int i3 = i * 2;
-        int i4 = i3 + 1;
-        c0370f.f1870C[i3].m896f().f1997g = c0370f.m823u().f1934u.m896f();
-        c0370f.f1870C[i3].m896f().f1998h = i2;
-        c0370f.f1870C[i3].m896f().f2008b = 1;
-        c0370f.f1870C[i4].m896f().f1997g = c0370f.f1870C[i3].m896f();
-        c0370f.f1870C[i4].m896f().f1998h = c0370f.m825t(i);
-        c0370f.f1870C[i4].m896f().f2008b = 1;
+    public static void e(f fVar, int i2, int i3) {
+        int i4 = i2 * 2;
+        int i5 = i4 + 1;
+        fVar.C[i4].f().f1485g = fVar.u().f1458u.f();
+        fVar.C[i4].f().f1486h = i3;
+        fVar.C[i4].f().f1496b = 1;
+        fVar.C[i5].f().f1485g = fVar.C[i4].f();
+        fVar.C[i5].f().f1486h = fVar.t(i2);
+        fVar.C[i5].f().f1496b = 1;
     }
 }

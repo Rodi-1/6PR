@@ -1,12 +1,8 @@
-package android.support.p001v4.app;
+package android.support.v4.app;
 
 import android.animation.Animator;
 import android.app.Activity;
-import android.arch.lifecycle.AbstractC0009c;
-import android.arch.lifecycle.C0014f;
-import android.arch.lifecycle.C0026n;
-import android.arch.lifecycle.InterfaceC0013e;
-import android.arch.lifecycle.InterfaceC0027o;
+import android.arch.lifecycle.c;
 import android.content.ComponentCallbacks;
 import android.content.Context;
 import android.content.Intent;
@@ -29,1120 +25,988 @@ import java.io.FileDescriptor;
 import java.io.PrintWriter;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Objects;
-import p015n.C0450d;
-import p015n.C0462k;
-import p016o.C0475e;
 
-/* renamed from: android.support.v4.app.g */
 /* loaded from: classes.dex */
-public class ComponentCallbacksC0073g implements ComponentCallbacks, View.OnCreateContextMenuListener, InterfaceC0013e, InterfaceC0027o {
+public class g implements ComponentCallbacks, View.OnCreateContextMenuListener, android.arch.lifecycle.e, android.arch.lifecycle.o {
+    private static final n.k<String, Class<?>> T = new n.k<>();
+    static final Object U = new Object();
+    boolean A;
+    boolean B;
+    boolean C;
+    boolean D;
+    boolean E;
+    boolean G;
+    ViewGroup H;
+    View I;
+    View J;
+    boolean K;
+    c M;
+    boolean N;
+    boolean O;
+    float P;
+    LayoutInflater Q;
+    boolean R;
 
-    /* renamed from: T */
-    private static final C0462k<String, Class<?>> f386T = new C0462k<>();
+    /* renamed from: c  reason: collision with root package name */
+    Bundle f281c;
 
-    /* renamed from: U */
-    static final Object f387U = new Object();
+    /* renamed from: d  reason: collision with root package name */
+    SparseArray<Parcelable> f282d;
 
-    /* renamed from: A */
-    boolean f388A;
+    /* renamed from: f  reason: collision with root package name */
+    String f284f;
 
-    /* renamed from: B */
-    boolean f389B;
+    /* renamed from: g  reason: collision with root package name */
+    Bundle f285g;
 
-    /* renamed from: C */
-    boolean f390C;
+    /* renamed from: h  reason: collision with root package name */
+    g f286h;
 
-    /* renamed from: D */
-    boolean f391D;
+    /* renamed from: j  reason: collision with root package name */
+    int f288j;
 
-    /* renamed from: E */
-    boolean f392E;
+    /* renamed from: k  reason: collision with root package name */
+    boolean f289k;
 
-    /* renamed from: G */
-    boolean f394G;
+    /* renamed from: l  reason: collision with root package name */
+    boolean f290l;
 
-    /* renamed from: H */
-    ViewGroup f395H;
+    /* renamed from: m  reason: collision with root package name */
+    boolean f291m;
 
-    /* renamed from: I */
-    View f396I;
+    /* renamed from: n  reason: collision with root package name */
+    boolean f292n;
 
-    /* renamed from: J */
-    View f397J;
+    /* renamed from: o  reason: collision with root package name */
+    boolean f293o;
 
-    /* renamed from: K */
-    boolean f398K;
+    /* renamed from: p  reason: collision with root package name */
+    boolean f294p;
 
-    /* renamed from: M */
-    C0076c f400M;
+    /* renamed from: q  reason: collision with root package name */
+    int f295q;
 
-    /* renamed from: N */
-    boolean f401N;
+    /* renamed from: r  reason: collision with root package name */
+    m f296r;
 
-    /* renamed from: O */
-    boolean f402O;
+    /* renamed from: s  reason: collision with root package name */
+    k f297s;
 
-    /* renamed from: P */
-    float f403P;
+    /* renamed from: t  reason: collision with root package name */
+    m f298t;
 
-    /* renamed from: Q */
-    LayoutInflater f404Q;
+    /* renamed from: u  reason: collision with root package name */
+    n f299u;
 
-    /* renamed from: R */
-    boolean f405R;
+    /* renamed from: v  reason: collision with root package name */
+    android.arch.lifecycle.n f300v;
 
-    /* renamed from: c */
-    Bundle f408c;
+    /* renamed from: w  reason: collision with root package name */
+    g f301w;
+    int x;
+    int y;
+    String z;
 
-    /* renamed from: d */
-    SparseArray<Parcelable> f409d;
+    /* renamed from: b  reason: collision with root package name */
+    int f280b = 0;
 
-    /* renamed from: f */
-    String f411f;
+    /* renamed from: e  reason: collision with root package name */
+    int f283e = -1;
 
-    /* renamed from: g */
-    Bundle f412g;
+    /* renamed from: i  reason: collision with root package name */
+    int f287i = -1;
+    boolean F = true;
+    boolean L = true;
+    android.arch.lifecycle.f S = new android.arch.lifecycle.f(this);
 
-    /* renamed from: h */
-    ComponentCallbacksC0073g f413h;
-
-    /* renamed from: j */
-    int f415j;
-
-    /* renamed from: k */
-    boolean f416k;
-
-    /* renamed from: l */
-    boolean f417l;
-
-    /* renamed from: m */
-    boolean f418m;
-
-    /* renamed from: n */
-    boolean f419n;
-
-    /* renamed from: o */
-    boolean f420o;
-
-    /* renamed from: p */
-    boolean f421p;
-
-    /* renamed from: q */
-    int f422q;
-
-    /* renamed from: r */
-    LayoutInflater$Factory2C0089m f423r;
-
-    /* renamed from: s */
-    AbstractC0085k f424s;
-
-    /* renamed from: t */
-    LayoutInflater$Factory2C0089m f425t;
-
-    /* renamed from: u */
-    C0104n f426u;
-
-    /* renamed from: v */
-    C0026n f427v;
-
-    /* renamed from: w */
-    ComponentCallbacksC0073g f428w;
-
-    /* renamed from: x */
-    int f429x;
-
-    /* renamed from: y */
-    int f430y;
-
-    /* renamed from: z */
-    String f431z;
-
-    /* renamed from: b */
-    int f407b = 0;
-
-    /* renamed from: e */
-    int f410e = -1;
-
-    /* renamed from: i */
-    int f414i = -1;
-
-    /* renamed from: F */
-    boolean f393F = true;
-
-    /* renamed from: L */
-    boolean f399L = true;
-
-    /* renamed from: S */
-    C0014f f406S = new C0014f(this);
-
-    /* renamed from: android.support.v4.app.g$a */
     /* loaded from: classes.dex */
-    class RunnableC0074a implements Runnable {
-        RunnableC0074a() {
+    class a implements Runnable {
+        a() {
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            ComponentCallbacksC0073g.this.m2138d();
+            g.this.d();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: android.support.v4.app.g$b */
     /* loaded from: classes.dex */
-    public class C0075b extends AbstractC0083i {
-        C0075b() {
+    public class b extends i {
+        b() {
         }
 
-        @Override // android.support.p001v4.app.AbstractC0083i
-        /* renamed from: a */
-        public ComponentCallbacksC0073g mo2073a(Context context, String str, Bundle bundle) {
-            return ComponentCallbacksC0073g.this.f424s.mo2073a(context, str, bundle);
+        @Override // android.support.v4.app.i
+        public g a(Context context, String str, Bundle bundle) {
+            return g.this.f297s.a(context, str, bundle);
         }
 
-        @Override // android.support.p001v4.app.AbstractC0083i
-        /* renamed from: b */
-        public View mo2072b(int i) {
-            View view = ComponentCallbacksC0073g.this.f396I;
+        @Override // android.support.v4.app.i
+        public View b(int i2) {
+            View view = g.this.I;
             if (view != null) {
-                return view.findViewById(i);
+                return view.findViewById(i2);
             }
             throw new IllegalStateException("Fragment does not have a view");
         }
 
-        @Override // android.support.p001v4.app.AbstractC0083i
-        /* renamed from: c */
-        public boolean mo2071c() {
-            return ComponentCallbacksC0073g.this.f396I != null;
+        @Override // android.support.v4.app.i
+        public boolean c() {
+            return g.this.I != null;
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: android.support.v4.app.g$c */
     /* loaded from: classes.dex */
-    public static class C0076c {
+    public static class c {
 
-        /* renamed from: a */
-        View f434a;
+        /* renamed from: a  reason: collision with root package name */
+        View f304a;
 
-        /* renamed from: b */
-        Animator f435b;
+        /* renamed from: b  reason: collision with root package name */
+        Animator f305b;
 
-        /* renamed from: c */
-        int f436c;
+        /* renamed from: c  reason: collision with root package name */
+        int f306c;
 
-        /* renamed from: d */
-        int f437d;
+        /* renamed from: d  reason: collision with root package name */
+        int f307d;
 
-        /* renamed from: e */
-        int f438e;
+        /* renamed from: e  reason: collision with root package name */
+        int f308e;
 
-        /* renamed from: f */
-        int f439f;
+        /* renamed from: f  reason: collision with root package name */
+        int f309f;
 
-        /* renamed from: g */
-        private Object f440g = null;
+        /* renamed from: g  reason: collision with root package name */
+        private Object f310g = null;
 
-        /* renamed from: h */
-        private Object f441h;
+        /* renamed from: h  reason: collision with root package name */
+        private Object f311h;
 
-        /* renamed from: i */
-        private Object f442i;
+        /* renamed from: i  reason: collision with root package name */
+        private Object f312i;
 
-        /* renamed from: j */
-        private Object f443j;
+        /* renamed from: j  reason: collision with root package name */
+        private Object f313j;
 
-        /* renamed from: k */
-        private Object f444k;
+        /* renamed from: k  reason: collision with root package name */
+        private Object f314k;
 
-        /* renamed from: l */
-        private Object f445l;
+        /* renamed from: l  reason: collision with root package name */
+        private Object f315l;
 
-        /* renamed from: m */
-        private Boolean f446m;
+        /* renamed from: m  reason: collision with root package name */
+        private Boolean f316m;
 
-        /* renamed from: n */
-        private Boolean f447n;
+        /* renamed from: n  reason: collision with root package name */
+        private Boolean f317n;
 
-        /* renamed from: o */
-        boolean f448o;
+        /* renamed from: o  reason: collision with root package name */
+        boolean f318o;
 
-        /* renamed from: p */
-        InterfaceC0078e f449p;
+        /* renamed from: p  reason: collision with root package name */
+        e f319p;
 
-        /* renamed from: q */
-        boolean f450q;
+        /* renamed from: q  reason: collision with root package name */
+        boolean f320q;
 
-        C0076c() {
-            Object obj = ComponentCallbacksC0073g.f387U;
-            this.f441h = obj;
-            this.f442i = null;
-            this.f443j = obj;
-            this.f444k = null;
-            this.f445l = obj;
+        c() {
+            Object obj = g.U;
+            this.f311h = obj;
+            this.f312i = null;
+            this.f313j = obj;
+            this.f314k = null;
+            this.f315l = obj;
         }
     }
 
-    /* renamed from: android.support.v4.app.g$d */
     /* loaded from: classes.dex */
-    public static class C0077d extends RuntimeException {
-        public C0077d(String str, Exception exc) {
+    public static class d extends RuntimeException {
+        public d(String str, Exception exc) {
             super(str, exc);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: android.support.v4.app.g$e */
     /* loaded from: classes.dex */
-    public interface InterfaceC0078e {
-        /* renamed from: a */
-        void mo1906a();
+    public interface e {
+        void a();
 
-        /* renamed from: b */
-        void mo1905b();
+        void b();
     }
 
-    /* renamed from: F */
-    public static ComponentCallbacksC0073g m2187F(Context context, String str, Bundle bundle) {
+    public static g F(Context context, String str, Bundle bundle) {
         try {
-            C0462k<String, Class<?>> c0462k = f386T;
-            Class<?> cls = c0462k.get(str);
+            n.k<String, Class<?>> kVar = T;
+            Class<?> cls = kVar.get(str);
             if (cls == null) {
                 cls = context.getClassLoader().loadClass(str);
-                c0462k.put(str, cls);
+                kVar.put(str, cls);
             }
-            ComponentCallbacksC0073g componentCallbacksC0073g = (ComponentCallbacksC0073g) cls.getConstructor(new Class[0]).newInstance(new Object[0]);
+            g gVar = (g) cls.getConstructor(new Class[0]).newInstance(new Object[0]);
             if (bundle != null) {
-                bundle.setClassLoader(componentCallbacksC0073g.getClass().getClassLoader());
-                componentCallbacksC0073g.m2154V0(bundle);
+                bundle.setClassLoader(gVar.getClass().getClassLoader());
+                gVar.V0(bundle);
             }
-            return componentCallbacksC0073g;
-        } catch (ClassNotFoundException e) {
-            throw new C0077d("Unable to instantiate fragment " + str + ": make sure class name exists, is public, and has an empty constructor that is public", e);
-        } catch (IllegalAccessException e2) {
-            throw new C0077d("Unable to instantiate fragment " + str + ": make sure class name exists, is public, and has an empty constructor that is public", e2);
-        } catch (InstantiationException e3) {
-            throw new C0077d("Unable to instantiate fragment " + str + ": make sure class name exists, is public, and has an empty constructor that is public", e3);
-        } catch (NoSuchMethodException e4) {
-            throw new C0077d("Unable to instantiate fragment " + str + ": could not find Fragment constructor", e4);
-        } catch (InvocationTargetException e5) {
-            throw new C0077d("Unable to instantiate fragment " + str + ": calling Fragment constructor caused an exception", e5);
+            return gVar;
+        } catch (ClassNotFoundException e2) {
+            throw new d("Unable to instantiate fragment " + str + ": make sure class name exists, is public, and has an empty constructor that is public", e2);
+        } catch (IllegalAccessException e3) {
+            throw new d("Unable to instantiate fragment " + str + ": make sure class name exists, is public, and has an empty constructor that is public", e3);
+        } catch (InstantiationException e4) {
+            throw new d("Unable to instantiate fragment " + str + ": make sure class name exists, is public, and has an empty constructor that is public", e4);
+        } catch (NoSuchMethodException e5) {
+            throw new d("Unable to instantiate fragment " + str + ": could not find Fragment constructor", e5);
+        } catch (InvocationTargetException e6) {
+            throw new d("Unable to instantiate fragment " + str + ": calling Fragment constructor caused an exception", e6);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: L */
-    public static boolean m2175L(Context context, String str) {
+    public static boolean L(Context context, String str) {
         try {
-            C0462k<String, Class<?>> c0462k = f386T;
-            Class<?> cls = c0462k.get(str);
+            n.k<String, Class<?>> kVar = T;
+            Class<?> cls = kVar.get(str);
             if (cls == null) {
                 cls = context.getClassLoader().loadClass(str);
-                c0462k.put(str, cls);
+                kVar.put(str, cls);
             }
-            return ComponentCallbacksC0073g.class.isAssignableFrom(cls);
+            return g.class.isAssignableFrom(cls);
         } catch (ClassNotFoundException unused) {
             return false;
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: d */
-    public void m2138d() {
-        C0076c c0076c = this.f400M;
-        InterfaceC0078e interfaceC0078e = null;
-        if (c0076c != null) {
-            c0076c.f448o = false;
-            InterfaceC0078e interfaceC0078e2 = c0076c.f449p;
-            c0076c.f449p = null;
-            interfaceC0078e = interfaceC0078e2;
+    public void d() {
+        c cVar = this.M;
+        e eVar = null;
+        if (cVar != null) {
+            cVar.f318o = false;
+            e eVar2 = cVar.f319p;
+            cVar.f319p = null;
+            eVar = eVar2;
         }
-        if (interfaceC0078e != null) {
-            interfaceC0078e.mo1906a();
+        if (eVar != null) {
+            eVar.a();
         }
     }
 
-    /* renamed from: f */
-    private C0076c m2134f() {
-        if (this.f400M == null) {
-            this.f400M = new C0076c();
+    private c f() {
+        if (this.M == null) {
+            this.M = new c();
         }
-        return this.f400M;
+        return this.M;
     }
 
-    /* renamed from: A */
-    public Object m2197A() {
-        C0076c c0076c = this.f400M;
-        if (c0076c == null) {
+    public Object A() {
+        c cVar = this.M;
+        if (cVar == null) {
             return null;
         }
-        return c0076c.f444k;
+        return cVar.f314k;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: A0 */
-    public void m2196A0() {
-        this.f406S.m2373g(AbstractC0009c.EnumC0010a.ON_DESTROY);
-        LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m = this.f425t;
-        if (layoutInflater$Factory2C0089m != null) {
-            layoutInflater$Factory2C0089m.m1913x();
+    public void A0() {
+        this.S.g(c.a.ON_DESTROY);
+        m mVar = this.f298t;
+        if (mVar != null) {
+            mVar.x();
         }
-        this.f407b = 0;
-        this.f394G = false;
-        this.f405R = false;
-        m2149Y();
-        if (this.f394G) {
-            this.f425t = null;
+        this.f280b = 0;
+        this.G = false;
+        this.R = false;
+        Y();
+        if (this.G) {
+            this.f298t = null;
             return;
         }
-        throw new C0129y("Fragment " + this + " did not call through to super.onDestroy()");
+        throw new y("Fragment " + this + " did not call through to super.onDestroy()");
     }
 
-    /* renamed from: B */
-    public Object m2195B() {
-        C0076c c0076c = this.f400M;
-        if (c0076c == null) {
+    public Object B() {
+        c cVar = this.M;
+        if (cVar == null) {
             return null;
         }
-        return c0076c.f445l == f387U ? m2197A() : this.f400M.f445l;
+        return cVar.f315l == U ? A() : this.M.f315l;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: B0 */
-    public void m2194B0() {
-        LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m = this.f425t;
-        if (layoutInflater$Factory2C0089m != null) {
-            layoutInflater$Factory2C0089m.m1911y();
+    public void B0() {
+        m mVar = this.f298t;
+        if (mVar != null) {
+            mVar.y();
         }
-        this.f407b = 1;
-        this.f394G = false;
-        m2145a0();
-        if (this.f394G) {
-            AbstractC0125u.m1829b(this).mo1828c();
-            this.f421p = false;
+        this.f280b = 1;
+        this.G = false;
+        a0();
+        if (this.G) {
+            u.b(this).c();
+            this.f294p = false;
             return;
         }
-        throw new C0129y("Fragment " + this + " did not call through to super.onDestroyView()");
+        throw new y("Fragment " + this + " did not call through to super.onDestroyView()");
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: C */
-    public int m2193C() {
-        C0076c c0076c = this.f400M;
-        if (c0076c == null) {
+    public int C() {
+        c cVar = this.M;
+        if (cVar == null) {
             return 0;
         }
-        return c0076c.f436c;
+        return cVar.f306c;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: C0 */
-    public void m2192C0() {
-        this.f394G = false;
-        m2143b0();
-        this.f404Q = null;
-        if (!this.f394G) {
-            throw new C0129y("Fragment " + this + " did not call through to super.onDetach()");
+    public void C0() {
+        this.G = false;
+        b0();
+        this.Q = null;
+        if (!this.G) {
+            throw new y("Fragment " + this + " did not call through to super.onDetach()");
         }
-        LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m = this.f425t;
-        if (layoutInflater$Factory2C0089m != null) {
-            if (this.f391D) {
-                layoutInflater$Factory2C0089m.m1913x();
-                this.f425t = null;
+        m mVar = this.f298t;
+        if (mVar != null) {
+            if (this.D) {
+                mVar.x();
+                this.f298t = null;
                 return;
             }
             throw new IllegalStateException("Child FragmentManager of " + this + " was not  destroyed and this fragment is not retaining instance");
         }
     }
 
-    /* renamed from: D */
-    public View m2191D() {
-        return this.f396I;
+    public View D() {
+        return this.I;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: D0 */
-    public LayoutInflater m2190D0(Bundle bundle) {
-        LayoutInflater m2140c0 = m2140c0(bundle);
-        this.f404Q = m2140c0;
-        return m2140c0;
+    public LayoutInflater D0(Bundle bundle) {
+        LayoutInflater c0 = c0(bundle);
+        this.Q = c0;
+        return c0;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: E */
-    public void m2189E() {
-        this.f410e = -1;
-        this.f411f = null;
-        this.f416k = false;
-        this.f417l = false;
-        this.f418m = false;
-        this.f419n = false;
-        this.f420o = false;
-        this.f422q = 0;
-        this.f423r = null;
-        this.f425t = null;
-        this.f424s = null;
-        this.f429x = 0;
-        this.f430y = 0;
-        this.f431z = null;
-        this.f388A = false;
-        this.f389B = false;
-        this.f391D = false;
+    public void E() {
+        this.f283e = -1;
+        this.f284f = null;
+        this.f289k = false;
+        this.f290l = false;
+        this.f291m = false;
+        this.f292n = false;
+        this.f293o = false;
+        this.f295q = 0;
+        this.f296r = null;
+        this.f298t = null;
+        this.f297s = null;
+        this.x = 0;
+        this.y = 0;
+        this.z = null;
+        this.A = false;
+        this.B = false;
+        this.D = false;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: E0 */
-    public void m2188E0() {
+    public void E0() {
         onLowMemory();
-        LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m = this.f425t;
-        if (layoutInflater$Factory2C0089m != null) {
-            layoutInflater$Factory2C0089m.m1909z();
+        m mVar = this.f298t;
+        if (mVar != null) {
+            mVar.z();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: F0 */
-    public void m2186F0(boolean z) {
-        m2131g0(z);
-        LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m = this.f425t;
-        if (layoutInflater$Factory2C0089m != null) {
-            layoutInflater$Factory2C0089m.m2017A(z);
+    public void F0(boolean z) {
+        g0(z);
+        m mVar = this.f298t;
+        if (mVar != null) {
+            mVar.A(z);
         }
     }
 
-    /* renamed from: G */
-    void m2185G() {
-        if (this.f424s == null) {
+    void G() {
+        if (this.f297s == null) {
             throw new IllegalStateException("Fragment has not been attached yet.");
         }
-        LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m = new LayoutInflater$Factory2C0089m();
-        this.f425t = layoutInflater$Factory2C0089m;
-        layoutInflater$Factory2C0089m.m1939k(this.f424s, new C0075b(), this);
+        m mVar = new m();
+        this.f298t = mVar;
+        mVar.k(this.f297s, new b(), this);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: G0 */
-    public boolean m2184G0(MenuItem menuItem) {
-        if (this.f388A) {
+    public boolean G0(MenuItem menuItem) {
+        if (this.A) {
             return false;
         }
-        if (this.f392E && this.f393F && m2129h0(menuItem)) {
+        if (this.E && this.F && h0(menuItem)) {
             return true;
         }
-        LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m = this.f425t;
-        return layoutInflater$Factory2C0089m != null && layoutInflater$Factory2C0089m.m1987P(menuItem);
+        m mVar = this.f298t;
+        return mVar != null && mVar.P(menuItem);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: H */
-    public boolean m2183H() {
-        C0076c c0076c = this.f400M;
-        if (c0076c == null) {
+    public boolean H() {
+        c cVar = this.M;
+        if (cVar == null) {
             return false;
         }
-        return c0076c.f450q;
+        return cVar.f320q;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: H0 */
-    public void m2182H0(Menu menu) {
-        if (this.f388A) {
+    public void H0(Menu menu) {
+        if (this.A) {
             return;
         }
-        if (this.f392E && this.f393F) {
-            m2127i0(menu);
+        if (this.E && this.F) {
+            i0(menu);
         }
-        LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m = this.f425t;
-        if (layoutInflater$Factory2C0089m != null) {
-            layoutInflater$Factory2C0089m.m1985Q(menu);
+        m mVar = this.f298t;
+        if (mVar != null) {
+            mVar.Q(menu);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: I */
-    public final boolean m2181I() {
-        return this.f422q > 0;
+    public final boolean I() {
+        return this.f295q > 0;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: I0 */
-    public void m2180I0() {
-        this.f406S.m2373g(AbstractC0009c.EnumC0010a.ON_PAUSE);
-        LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m = this.f425t;
-        if (layoutInflater$Factory2C0089m != null) {
-            layoutInflater$Factory2C0089m.m1983R();
+    public void I0() {
+        this.S.g(c.a.ON_PAUSE);
+        m mVar = this.f298t;
+        if (mVar != null) {
+            mVar.R();
         }
-        this.f407b = 4;
-        this.f394G = false;
-        m2125j0();
-        if (this.f394G) {
+        this.f280b = 4;
+        this.G = false;
+        j0();
+        if (this.G) {
             return;
         }
-        throw new C0129y("Fragment " + this + " did not call through to super.onPause()");
+        throw new y("Fragment " + this + " did not call through to super.onPause()");
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: J */
-    public boolean m2179J() {
-        C0076c c0076c = this.f400M;
-        if (c0076c == null) {
+    public boolean J() {
+        c cVar = this.M;
+        if (cVar == null) {
             return false;
         }
-        return c0076c.f448o;
+        return cVar.f318o;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: J0 */
-    public void m2178J0(boolean z) {
-        m2123k0(z);
-        LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m = this.f425t;
-        if (layoutInflater$Factory2C0089m != null) {
-            layoutInflater$Factory2C0089m.m1981S(z);
+    public void J0(boolean z) {
+        k0(z);
+        m mVar = this.f298t;
+        if (mVar != null) {
+            mVar.S(z);
         }
     }
 
-    /* renamed from: K */
-    public final boolean m2177K() {
-        LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m = this.f423r;
-        if (layoutInflater$Factory2C0089m == null) {
+    public final boolean K() {
+        m mVar = this.f296r;
+        if (mVar == null) {
             return false;
         }
-        return layoutInflater$Factory2C0089m.mo1959c();
+        return mVar.c();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: K0 */
-    public boolean m2176K0(Menu menu) {
+    public boolean K0(Menu menu) {
         boolean z = false;
-        if (this.f388A) {
+        if (this.A) {
             return false;
         }
-        if (this.f392E && this.f393F) {
-            m2121l0(menu);
+        if (this.E && this.F) {
+            l0(menu);
             z = true;
         }
-        LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m = this.f425t;
-        return layoutInflater$Factory2C0089m != null ? z | layoutInflater$Factory2C0089m.m1979T(menu) : z;
+        m mVar = this.f298t;
+        return mVar != null ? z | mVar.T(menu) : z;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: L0 */
-    public void m2174L0() {
-        LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m = this.f425t;
-        if (layoutInflater$Factory2C0089m != null) {
-            layoutInflater$Factory2C0089m.m1977U();
+    public void L0() {
+        m mVar = this.f298t;
+        if (mVar != null) {
+            mVar.U();
         }
-        this.f407b = 2;
+        this.f280b = 2;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: M */
-    public void m2173M() {
-        LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m = this.f425t;
-        if (layoutInflater$Factory2C0089m != null) {
-            layoutInflater$Factory2C0089m.m2004G0();
+    public void M() {
+        m mVar = this.f298t;
+        if (mVar != null) {
+            mVar.G0();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: M0 */
-    public void m2172M0() {
-        LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m = this.f425t;
-        if (layoutInflater$Factory2C0089m != null) {
-            layoutInflater$Factory2C0089m.m2004G0();
-            this.f425t.m1955d0();
+    public void M0() {
+        m mVar = this.f298t;
+        if (mVar != null) {
+            mVar.G0();
+            this.f298t.d0();
         }
-        this.f407b = 5;
-        this.f394G = false;
-        m2117n0();
-        if (!this.f394G) {
-            throw new C0129y("Fragment " + this + " did not call through to super.onResume()");
+        this.f280b = 5;
+        this.G = false;
+        n0();
+        if (!this.G) {
+            throw new y("Fragment " + this + " did not call through to super.onResume()");
         }
-        LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m2 = this.f425t;
-        if (layoutInflater$Factory2C0089m2 != null) {
-            layoutInflater$Factory2C0089m2.m1975V();
-            this.f425t.m1955d0();
+        m mVar2 = this.f298t;
+        if (mVar2 != null) {
+            mVar2.V();
+            this.f298t.d0();
         }
-        this.f406S.m2373g(AbstractC0009c.EnumC0010a.ON_RESUME);
+        this.S.g(c.a.ON_RESUME);
     }
 
-    /* renamed from: N */
-    public void m2171N(Bundle bundle) {
-        this.f394G = true;
+    public void N(Bundle bundle) {
+        this.G = true;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: N0 */
-    public void m2170N0(Bundle bundle) {
-        Parcelable m1980S0;
-        m2115o0(bundle);
-        LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m = this.f425t;
-        if (layoutInflater$Factory2C0089m == null || (m1980S0 = layoutInflater$Factory2C0089m.m1980S0()) == null) {
+    public void N0(Bundle bundle) {
+        Parcelable S0;
+        o0(bundle);
+        m mVar = this.f298t;
+        if (mVar == null || (S0 = mVar.S0()) == null) {
             return;
         }
-        bundle.putParcelable("android:support:fragments", m1980S0);
+        bundle.putParcelable("android:support:fragments", S0);
     }
 
-    /* renamed from: O */
-    public void m2169O(int i, int i2, Intent intent) {
+    public void O(int i2, int i3, Intent intent) {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: O0 */
-    public void m2168O0() {
-        LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m = this.f425t;
-        if (layoutInflater$Factory2C0089m != null) {
-            layoutInflater$Factory2C0089m.m2004G0();
-            this.f425t.m1955d0();
+    public void O0() {
+        m mVar = this.f298t;
+        if (mVar != null) {
+            mVar.G0();
+            this.f298t.d0();
         }
-        this.f407b = 4;
-        this.f394G = false;
-        m2113p0();
-        if (this.f394G) {
-            LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m2 = this.f425t;
-            if (layoutInflater$Factory2C0089m2 != null) {
-                layoutInflater$Factory2C0089m2.m1973W();
+        this.f280b = 4;
+        this.G = false;
+        p0();
+        if (this.G) {
+            m mVar2 = this.f298t;
+            if (mVar2 != null) {
+                mVar2.W();
             }
-            this.f406S.m2373g(AbstractC0009c.EnumC0010a.ON_START);
+            this.S.g(c.a.ON_START);
             return;
         }
-        throw new C0129y("Fragment " + this + " did not call through to super.onStart()");
+        throw new y("Fragment " + this + " did not call through to super.onStart()");
     }
 
     @Deprecated
-    /* renamed from: P */
-    public void m2167P(Activity activity) {
-        this.f394G = true;
+    public void P(Activity activity) {
+        this.G = true;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: P0 */
-    public void m2166P0() {
-        this.f406S.m2373g(AbstractC0009c.EnumC0010a.ON_STOP);
-        LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m = this.f425t;
-        if (layoutInflater$Factory2C0089m != null) {
-            layoutInflater$Factory2C0089m.m1969Y();
+    public void P0() {
+        this.S.g(c.a.ON_STOP);
+        m mVar = this.f298t;
+        if (mVar != null) {
+            mVar.Y();
         }
-        this.f407b = 3;
-        this.f394G = false;
-        m2111q0();
-        if (this.f394G) {
+        this.f280b = 3;
+        this.G = false;
+        q0();
+        if (this.G) {
             return;
         }
-        throw new C0129y("Fragment " + this + " did not call through to super.onStop()");
+        throw new y("Fragment " + this + " did not call through to super.onStop()");
     }
 
-    /* renamed from: Q */
-    public void m2165Q(Context context) {
-        this.f394G = true;
-        AbstractC0085k abstractC0085k = this.f424s;
-        Activity m2043d = abstractC0085k == null ? null : abstractC0085k.m2043d();
-        if (m2043d != null) {
-            this.f394G = false;
-            m2167P(m2043d);
+    public void Q(Context context) {
+        this.G = true;
+        k kVar = this.f297s;
+        Activity d2 = kVar == null ? null : kVar.d();
+        if (d2 != null) {
+            this.G = false;
+            P(d2);
         }
     }
 
-    /* renamed from: Q0 */
-    public final Context m2164Q0() {
-        Context m2118n = m2118n();
-        if (m2118n != null) {
-            return m2118n;
+    public final Context Q0() {
+        Context n2 = n();
+        if (n2 != null) {
+            return n2;
         }
         throw new IllegalStateException("Fragment " + this + " not attached to a context.");
     }
 
-    /* renamed from: R */
-    public void m2163R(ComponentCallbacksC0073g componentCallbacksC0073g) {
+    public void R(g gVar) {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: R0 */
-    public void m2162R0(Bundle bundle) {
+    public void R0(Bundle bundle) {
         Parcelable parcelable;
         if (bundle == null || (parcelable = bundle.getParcelable("android:support:fragments")) == null) {
             return;
         }
-        if (this.f425t == null) {
-            m2185G();
+        if (this.f298t == null) {
+            G();
         }
-        this.f425t.m1986P0(parcelable, this.f426u);
-        this.f426u = null;
-        this.f425t.m1917v();
+        this.f298t.P0(parcelable, this.f299u);
+        this.f299u = null;
+        this.f298t.v();
     }
 
-    /* renamed from: S */
-    public boolean m2161S(MenuItem menuItem) {
+    public boolean S(MenuItem menuItem) {
         return false;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: S0 */
-    public final void m2160S0(Bundle bundle) {
-        SparseArray<Parcelable> sparseArray = this.f409d;
+    public final void S0(Bundle bundle) {
+        SparseArray<Parcelable> sparseArray = this.f282d;
         if (sparseArray != null) {
-            this.f397J.restoreHierarchyState(sparseArray);
-            this.f409d = null;
+            this.J.restoreHierarchyState(sparseArray);
+            this.f282d = null;
         }
-        this.f394G = false;
-        m2107s0(bundle);
-        if (this.f394G) {
+        this.G = false;
+        s0(bundle);
+        if (this.G) {
             return;
         }
-        throw new C0129y("Fragment " + this + " did not call through to super.onViewStateRestored()");
+        throw new y("Fragment " + this + " did not call through to super.onViewStateRestored()");
     }
 
-    /* renamed from: T */
-    public void m2159T(Bundle bundle) {
-        this.f394G = true;
-        m2162R0(bundle);
-        LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m = this.f425t;
-        if (layoutInflater$Factory2C0089m == null || layoutInflater$Factory2C0089m.m1920t0(1)) {
+    public void T(Bundle bundle) {
+        this.G = true;
+        R0(bundle);
+        m mVar = this.f298t;
+        if (mVar == null || mVar.t0(1)) {
             return;
         }
-        this.f425t.m1917v();
+        this.f298t.v();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: T0 */
-    public void m2158T0(View view) {
-        m2134f().f434a = view;
+    public void T0(View view) {
+        f().f304a = view;
     }
 
-    /* renamed from: U */
-    public Animation m2157U(int i, boolean z, int i2) {
+    public Animation U(int i2, boolean z, int i3) {
         return null;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: U0 */
-    public void m2156U0(Animator animator) {
-        m2134f().f435b = animator;
+    public void U0(Animator animator) {
+        f().f305b = animator;
     }
 
-    /* renamed from: V */
-    public Animator m2155V(int i, boolean z, int i2) {
+    public Animator V(int i2, boolean z, int i3) {
         return null;
     }
 
-    /* renamed from: V0 */
-    public void m2154V0(Bundle bundle) {
-        if (this.f410e >= 0 && m2177K()) {
+    public void V0(Bundle bundle) {
+        if (this.f283e >= 0 && K()) {
             throw new IllegalStateException("Fragment already active and state has been saved");
         }
-        this.f412g = bundle;
+        this.f285g = bundle;
     }
 
-    /* renamed from: W */
-    public void m2153W(Menu menu, MenuInflater menuInflater) {
+    public void W(Menu menu, MenuInflater menuInflater) {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: W0 */
-    public void m2152W0(boolean z) {
-        m2134f().f450q = z;
+    public void W0(boolean z) {
+        f().f320q = z;
     }
 
-    /* renamed from: X */
-    public View m2151X(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
+    public View X(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
         return null;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: X0 */
-    public final void m2150X0(int i, ComponentCallbacksC0073g componentCallbacksC0073g) {
+    public final void X0(int i2, g gVar) {
         StringBuilder sb;
         String str;
-        this.f410e = i;
-        if (componentCallbacksC0073g != null) {
+        this.f283e = i2;
+        if (gVar != null) {
             sb = new StringBuilder();
-            sb.append(componentCallbacksC0073g.f411f);
+            sb.append(gVar.f284f);
             str = ":";
         } else {
             sb = new StringBuilder();
             str = "android:fragment:";
         }
         sb.append(str);
-        sb.append(this.f410e);
-        this.f411f = sb.toString();
+        sb.append(this.f283e);
+        this.f284f = sb.toString();
     }
 
-    /* renamed from: Y */
-    public void m2149Y() {
-        this.f394G = true;
-        C0026n c0026n = this.f427v;
-        if (c0026n == null || this.f424s.f471e.f500s) {
+    public void Y() {
+        this.G = true;
+        android.arch.lifecycle.n nVar = this.f300v;
+        if (nVar == null || this.f297s.f341e.f359s) {
             return;
         }
-        c0026n.m2352a();
+        nVar.a();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: Y0 */
-    public void m2148Y0(int i) {
-        if (this.f400M == null && i == 0) {
+    public void Y0(int i2) {
+        if (this.M == null && i2 == 0) {
             return;
         }
-        m2134f().f437d = i;
+        f().f307d = i2;
     }
 
-    /* renamed from: Z */
-    public void m2147Z() {
+    public void Z() {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: Z0 */
-    public void m2146Z0(int i, int i2) {
-        if (this.f400M == null && i == 0 && i2 == 0) {
+    public void Z0(int i2, int i3) {
+        if (this.M == null && i2 == 0 && i3 == 0) {
             return;
         }
-        m2134f();
-        C0076c c0076c = this.f400M;
-        c0076c.f438e = i;
-        c0076c.f439f = i2;
+        f();
+        c cVar = this.M;
+        cVar.f308e = i2;
+        cVar.f309f = i3;
     }
 
-    @Override // android.arch.lifecycle.InterfaceC0013e
-    /* renamed from: a */
-    public AbstractC0009c mo1819a() {
-        return this.f406S;
+    @Override // android.arch.lifecycle.e
+    public android.arch.lifecycle.c a() {
+        return this.S;
     }
 
-    /* renamed from: a0 */
-    public void m2145a0() {
-        this.f394G = true;
+    public void a0() {
+        this.G = true;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: a1 */
-    public void m2144a1(InterfaceC0078e interfaceC0078e) {
-        m2134f();
-        C0076c c0076c = this.f400M;
-        InterfaceC0078e interfaceC0078e2 = c0076c.f449p;
-        if (interfaceC0078e == interfaceC0078e2) {
+    public void a1(e eVar) {
+        f();
+        c cVar = this.M;
+        e eVar2 = cVar.f319p;
+        if (eVar == eVar2) {
             return;
         }
-        if (interfaceC0078e != null && interfaceC0078e2 != null) {
+        if (eVar != null && eVar2 != null) {
             throw new IllegalStateException("Trying to set a replacement startPostponedEnterTransition on " + this);
         }
-        if (c0076c.f448o) {
-            c0076c.f449p = interfaceC0078e;
+        if (cVar.f318o) {
+            cVar.f319p = eVar;
         }
-        if (interfaceC0078e != null) {
-            interfaceC0078e.mo1905b();
+        if (eVar != null) {
+            eVar.b();
         }
     }
 
-    @Override // android.arch.lifecycle.InterfaceC0027o
-    /* renamed from: b */
-    public C0026n mo2084b() {
-        if (m2118n() != null) {
-            if (this.f427v == null) {
-                this.f427v = new C0026n();
+    @Override // android.arch.lifecycle.o
+    public android.arch.lifecycle.n b() {
+        if (n() != null) {
+            if (this.f300v == null) {
+                this.f300v = new android.arch.lifecycle.n();
             }
-            return this.f427v;
+            return this.f300v;
         }
         throw new IllegalStateException("Can't access ViewModels from detached fragment");
     }
 
-    /* renamed from: b0 */
-    public void m2143b0() {
-        this.f394G = true;
+    public void b0() {
+        this.G = true;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: b1 */
-    public void m2142b1(int i) {
-        m2134f().f436c = i;
+    public void b1(int i2) {
+        f().f306c = i2;
     }
 
-    /* renamed from: c0 */
-    public LayoutInflater m2140c0(Bundle bundle) {
-        return m2106t(bundle);
+    public LayoutInflater c0(Bundle bundle) {
+        return t(bundle);
     }
 
-    /* renamed from: c1 */
-    public void m2139c1() {
-        LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m = this.f423r;
-        if (layoutInflater$Factory2C0089m == null || layoutInflater$Factory2C0089m.f495n == null) {
-            m2134f().f448o = false;
-        } else if (Looper.myLooper() != this.f423r.f495n.m2040g().getLooper()) {
-            this.f423r.f495n.m2040g().postAtFrontOfQueue(new RunnableC0074a());
+    public void c1() {
+        m mVar = this.f296r;
+        if (mVar == null || mVar.f354n == null) {
+            f().f318o = false;
+        } else if (Looper.myLooper() != this.f296r.f354n.g().getLooper()) {
+            this.f296r.f354n.g().postAtFrontOfQueue(new a());
         } else {
-            m2138d();
+            d();
         }
     }
 
-    /* renamed from: d0 */
-    public void m2137d0(boolean z) {
+    public void d0(boolean z) {
     }
 
-    /* renamed from: e */
-    public void m2136e(String str, FileDescriptor fileDescriptor, PrintWriter printWriter, String[] strArr) {
+    public void e(String str, FileDescriptor fileDescriptor, PrintWriter printWriter, String[] strArr) {
         printWriter.print(str);
         printWriter.print("mFragmentId=#");
-        printWriter.print(Integer.toHexString(this.f429x));
+        printWriter.print(Integer.toHexString(this.x));
         printWriter.print(" mContainerId=#");
-        printWriter.print(Integer.toHexString(this.f430y));
+        printWriter.print(Integer.toHexString(this.y));
         printWriter.print(" mTag=");
-        printWriter.println(this.f431z);
+        printWriter.println(this.z);
         printWriter.print(str);
         printWriter.print("mState=");
-        printWriter.print(this.f407b);
+        printWriter.print(this.f280b);
         printWriter.print(" mIndex=");
-        printWriter.print(this.f410e);
+        printWriter.print(this.f283e);
         printWriter.print(" mWho=");
-        printWriter.print(this.f411f);
+        printWriter.print(this.f284f);
         printWriter.print(" mBackStackNesting=");
-        printWriter.println(this.f422q);
+        printWriter.println(this.f295q);
         printWriter.print(str);
         printWriter.print("mAdded=");
-        printWriter.print(this.f416k);
+        printWriter.print(this.f289k);
         printWriter.print(" mRemoving=");
-        printWriter.print(this.f417l);
+        printWriter.print(this.f290l);
         printWriter.print(" mFromLayout=");
-        printWriter.print(this.f418m);
+        printWriter.print(this.f291m);
         printWriter.print(" mInLayout=");
-        printWriter.println(this.f419n);
+        printWriter.println(this.f292n);
         printWriter.print(str);
         printWriter.print("mHidden=");
-        printWriter.print(this.f388A);
+        printWriter.print(this.A);
         printWriter.print(" mDetached=");
-        printWriter.print(this.f389B);
+        printWriter.print(this.B);
         printWriter.print(" mMenuVisible=");
-        printWriter.print(this.f393F);
+        printWriter.print(this.F);
         printWriter.print(" mHasMenu=");
-        printWriter.println(this.f392E);
+        printWriter.println(this.E);
         printWriter.print(str);
         printWriter.print("mRetainInstance=");
-        printWriter.print(this.f390C);
+        printWriter.print(this.C);
         printWriter.print(" mRetaining=");
-        printWriter.print(this.f391D);
+        printWriter.print(this.D);
         printWriter.print(" mUserVisibleHint=");
-        printWriter.println(this.f399L);
-        if (this.f423r != null) {
+        printWriter.println(this.L);
+        if (this.f296r != null) {
             printWriter.print(str);
             printWriter.print("mFragmentManager=");
-            printWriter.println(this.f423r);
+            printWriter.println(this.f296r);
         }
-        if (this.f424s != null) {
+        if (this.f297s != null) {
             printWriter.print(str);
             printWriter.print("mHost=");
-            printWriter.println(this.f424s);
+            printWriter.println(this.f297s);
         }
-        if (this.f428w != null) {
+        if (this.f301w != null) {
             printWriter.print(str);
             printWriter.print("mParentFragment=");
-            printWriter.println(this.f428w);
+            printWriter.println(this.f301w);
         }
-        if (this.f412g != null) {
+        if (this.f285g != null) {
             printWriter.print(str);
             printWriter.print("mArguments=");
-            printWriter.println(this.f412g);
+            printWriter.println(this.f285g);
         }
-        if (this.f408c != null) {
+        if (this.f281c != null) {
             printWriter.print(str);
             printWriter.print("mSavedFragmentState=");
-            printWriter.println(this.f408c);
+            printWriter.println(this.f281c);
         }
-        if (this.f409d != null) {
+        if (this.f282d != null) {
             printWriter.print(str);
             printWriter.print("mSavedViewState=");
-            printWriter.println(this.f409d);
+            printWriter.println(this.f282d);
         }
-        if (this.f413h != null) {
+        if (this.f286h != null) {
             printWriter.print(str);
             printWriter.print("mTarget=");
-            printWriter.print(this.f413h);
+            printWriter.print(this.f286h);
             printWriter.print(" mTargetRequestCode=");
-            printWriter.println(this.f415j);
+            printWriter.println(this.f288j);
         }
-        if (m2104u() != 0) {
+        if (u() != 0) {
             printWriter.print(str);
             printWriter.print("mNextAnim=");
-            printWriter.println(m2104u());
+            printWriter.println(u());
         }
-        if (this.f395H != null) {
+        if (this.H != null) {
             printWriter.print(str);
             printWriter.print("mContainer=");
-            printWriter.println(this.f395H);
+            printWriter.println(this.H);
         }
-        if (this.f396I != null) {
+        if (this.I != null) {
             printWriter.print(str);
             printWriter.print("mView=");
-            printWriter.println(this.f396I);
+            printWriter.println(this.I);
         }
-        if (this.f397J != null) {
+        if (this.J != null) {
             printWriter.print(str);
             printWriter.print("mInnerView=");
-            printWriter.println(this.f396I);
+            printWriter.println(this.I);
         }
-        if (m2124k() != null) {
+        if (k() != null) {
             printWriter.print(str);
             printWriter.print("mAnimatingAway=");
-            printWriter.println(m2124k());
+            printWriter.println(k());
             printWriter.print(str);
             printWriter.print("mStateAfterAnimating=");
-            printWriter.println(m2193C());
+            printWriter.println(C());
         }
-        AbstractC0125u.m1829b(this).mo1830a(str, fileDescriptor, printWriter, strArr);
-        if (this.f425t != null) {
+        u.b(this).a(str, fileDescriptor, printWriter, strArr);
+        if (this.f298t != null) {
             printWriter.print(str);
-            printWriter.println("Child " + this.f425t + ":");
-            LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m = this.f425t;
-            layoutInflater$Factory2C0089m.mo1965a(str + "  ", fileDescriptor, printWriter, strArr);
+            printWriter.println("Child " + this.f298t + ":");
+            m mVar = this.f298t;
+            mVar.a(str + "  ", fileDescriptor, printWriter, strArr);
         }
     }
 
     @Deprecated
-    /* renamed from: e0 */
-    public void m2135e0(Activity activity, AttributeSet attributeSet, Bundle bundle) {
-        this.f394G = true;
+    public void e0(Activity activity, AttributeSet attributeSet, Bundle bundle) {
+        this.G = true;
     }
 
     public final boolean equals(Object obj) {
         return super.equals(obj);
     }
 
-    /* renamed from: f0 */
-    public void m2133f0(Context context, AttributeSet attributeSet, Bundle bundle) {
-        this.f394G = true;
-        AbstractC0085k abstractC0085k = this.f424s;
-        Activity m2043d = abstractC0085k == null ? null : abstractC0085k.m2043d();
-        if (m2043d != null) {
-            this.f394G = false;
-            m2135e0(m2043d, attributeSet, bundle);
+    public void f0(Context context, AttributeSet attributeSet, Bundle bundle) {
+        this.G = true;
+        k kVar = this.f297s;
+        Activity d2 = kVar == null ? null : kVar.d();
+        if (d2 != null) {
+            this.G = false;
+            e0(d2, attributeSet, bundle);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: g */
-    public ComponentCallbacksC0073g m2132g(String str) {
-        if (str.equals(this.f411f)) {
+    public g g(String str) {
+        if (str.equals(this.f284f)) {
             return this;
         }
-        LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m = this.f425t;
-        if (layoutInflater$Factory2C0089m != null) {
-            return layoutInflater$Factory2C0089m.m1940j0(str);
+        m mVar = this.f298t;
+        if (mVar != null) {
+            return mVar.j0(str);
         }
         return null;
     }
 
-    /* renamed from: g0 */
-    public void m2131g0(boolean z) {
+    public void g0(boolean z) {
     }
 
-    /* renamed from: h */
-    public final ActivityC0079h m2130h() {
-        AbstractC0085k abstractC0085k = this.f424s;
-        if (abstractC0085k == null) {
+    public final h h() {
+        k kVar = this.f297s;
+        if (kVar == null) {
             return null;
         }
-        return (ActivityC0079h) abstractC0085k.m2043d();
+        return (h) kVar.d();
     }
 
-    /* renamed from: h0 */
-    public boolean m2129h0(MenuItem menuItem) {
+    public boolean h0(MenuItem menuItem) {
         return false;
     }
 
@@ -1150,356 +1014,320 @@ public class ComponentCallbacksC0073g implements ComponentCallbacks, View.OnCrea
         return super.hashCode();
     }
 
-    /* renamed from: i */
-    public boolean m2128i() {
-        C0076c c0076c = this.f400M;
-        if (c0076c == null || c0076c.f447n == null) {
+    public boolean i() {
+        c cVar = this.M;
+        if (cVar == null || cVar.f317n == null) {
             return true;
         }
-        return this.f400M.f447n.booleanValue();
+        return this.M.f317n.booleanValue();
     }
 
-    /* renamed from: i0 */
-    public void m2127i0(Menu menu) {
+    public void i0(Menu menu) {
     }
 
-    /* renamed from: j */
-    public boolean m2126j() {
-        C0076c c0076c = this.f400M;
-        if (c0076c == null || c0076c.f446m == null) {
+    public boolean j() {
+        c cVar = this.M;
+        if (cVar == null || cVar.f316m == null) {
             return true;
         }
-        return this.f400M.f446m.booleanValue();
+        return this.M.f316m.booleanValue();
     }
 
-    /* renamed from: j0 */
-    public void m2125j0() {
-        this.f394G = true;
+    public void j0() {
+        this.G = true;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: k */
-    public View m2124k() {
-        C0076c c0076c = this.f400M;
-        if (c0076c == null) {
+    public View k() {
+        c cVar = this.M;
+        if (cVar == null) {
             return null;
         }
-        return c0076c.f434a;
+        return cVar.f304a;
     }
 
-    /* renamed from: k0 */
-    public void m2123k0(boolean z) {
+    public void k0(boolean z) {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: l */
-    public Animator m2122l() {
-        C0076c c0076c = this.f400M;
-        if (c0076c == null) {
+    public Animator l() {
+        c cVar = this.M;
+        if (cVar == null) {
             return null;
         }
-        return c0076c.f435b;
+        return cVar.f305b;
     }
 
-    /* renamed from: l0 */
-    public void m2121l0(Menu menu) {
+    public void l0(Menu menu) {
     }
 
-    /* renamed from: m */
-    public final AbstractC0086l m2120m() {
-        if (this.f425t == null) {
-            m2185G();
-            int i = this.f407b;
-            if (i >= 5) {
-                this.f425t.m1975V();
-            } else if (i >= 4) {
-                this.f425t.m1973W();
-            } else if (i >= 2) {
-                this.f425t.m1923s();
-            } else if (i >= 1) {
-                this.f425t.m1917v();
+    public final l m() {
+        if (this.f298t == null) {
+            G();
+            int i2 = this.f280b;
+            if (i2 >= 5) {
+                this.f298t.V();
+            } else if (i2 >= 4) {
+                this.f298t.W();
+            } else if (i2 >= 2) {
+                this.f298t.s();
+            } else if (i2 >= 1) {
+                this.f298t.v();
             }
         }
-        return this.f425t;
+        return this.f298t;
     }
 
-    /* renamed from: m0 */
-    public void m2119m0(int i, String[] strArr, int[] iArr) {
+    public void m0(int i2, String[] strArr, int[] iArr) {
     }
 
-    /* renamed from: n */
-    public Context m2118n() {
-        AbstractC0085k abstractC0085k = this.f424s;
-        if (abstractC0085k == null) {
+    public Context n() {
+        k kVar = this.f297s;
+        if (kVar == null) {
             return null;
         }
-        return abstractC0085k.m2042e();
+        return kVar.e();
     }
 
-    /* renamed from: n0 */
-    public void m2117n0() {
-        this.f394G = true;
+    public void n0() {
+        this.G = true;
     }
 
-    /* renamed from: o */
-    public Object m2116o() {
-        C0076c c0076c = this.f400M;
-        if (c0076c == null) {
+    public Object o() {
+        c cVar = this.M;
+        if (cVar == null) {
             return null;
         }
-        return c0076c.f440g;
+        return cVar.f310g;
     }
 
-    /* renamed from: o0 */
-    public void m2115o0(Bundle bundle) {
+    public void o0(Bundle bundle) {
     }
 
     @Override // android.content.ComponentCallbacks
     public void onConfigurationChanged(Configuration configuration) {
-        this.f394G = true;
+        this.G = true;
     }
 
     @Override // android.view.View.OnCreateContextMenuListener
     public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo contextMenuInfo) {
-        m2130h().onCreateContextMenu(contextMenu, view, contextMenuInfo);
+        h().onCreateContextMenu(contextMenu, view, contextMenuInfo);
     }
 
     @Override // android.content.ComponentCallbacks
     public void onLowMemory() {
-        this.f394G = true;
+        this.G = true;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: p */
-    public AbstractC0128x m2114p() {
-        C0076c c0076c = this.f400M;
-        if (c0076c == null) {
+    public x p() {
+        c cVar = this.M;
+        if (cVar == null) {
             return null;
         }
-        Objects.requireNonNull(c0076c);
+        Objects.requireNonNull(cVar);
         return null;
     }
 
-    /* renamed from: p0 */
-    public void m2113p0() {
-        this.f394G = true;
+    public void p0() {
+        this.G = true;
     }
 
-    /* renamed from: q */
-    public Object m2112q() {
-        C0076c c0076c = this.f400M;
-        if (c0076c == null) {
+    public Object q() {
+        c cVar = this.M;
+        if (cVar == null) {
             return null;
         }
-        return c0076c.f442i;
+        return cVar.f312i;
     }
 
-    /* renamed from: q0 */
-    public void m2111q0() {
-        this.f394G = true;
+    public void q0() {
+        this.G = true;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: r */
-    public AbstractC0128x m2110r() {
-        C0076c c0076c = this.f400M;
-        if (c0076c == null) {
+    public x r() {
+        c cVar = this.M;
+        if (cVar == null) {
             return null;
         }
-        Objects.requireNonNull(c0076c);
+        Objects.requireNonNull(cVar);
         return null;
     }
 
-    /* renamed from: r0 */
-    public void m2109r0(View view, Bundle bundle) {
+    public void r0(View view, Bundle bundle) {
     }
 
-    /* renamed from: s */
-    public final AbstractC0086l m2108s() {
-        return this.f423r;
+    public final l s() {
+        return this.f296r;
     }
 
-    /* renamed from: s0 */
-    public void m2107s0(Bundle bundle) {
-        this.f394G = true;
+    public void s0(Bundle bundle) {
+        this.G = true;
     }
 
     @Deprecated
-    /* renamed from: t */
-    public LayoutInflater m2106t(Bundle bundle) {
-        AbstractC0085k abstractC0085k = this.f424s;
-        if (abstractC0085k != null) {
-            LayoutInflater mo2037j = abstractC0085k.mo2037j();
-            m2120m();
-            C0475e.m454b(mo2037j, this.f425t.m1926q0());
-            return mo2037j;
+    public LayoutInflater t(Bundle bundle) {
+        k kVar = this.f297s;
+        if (kVar != null) {
+            LayoutInflater j2 = kVar.j();
+            m();
+            o.e.b(j2, this.f298t.q0());
+            return j2;
         }
         throw new IllegalStateException("onGetLayoutInflater() cannot be executed until the Fragment is attached to the FragmentManager.");
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: t0 */
-    public AbstractC0086l m2105t0() {
-        return this.f425t;
+    public l t0() {
+        return this.f298t;
     }
 
     public String toString() {
         StringBuilder sb = new StringBuilder(128);
-        C0450d.m540a(this, sb);
-        if (this.f410e >= 0) {
+        n.d.a(this, sb);
+        if (this.f283e >= 0) {
             sb.append(" #");
-            sb.append(this.f410e);
+            sb.append(this.f283e);
         }
-        if (this.f429x != 0) {
+        if (this.x != 0) {
             sb.append(" id=0x");
-            sb.append(Integer.toHexString(this.f429x));
+            sb.append(Integer.toHexString(this.x));
         }
-        if (this.f431z != null) {
+        if (this.z != null) {
             sb.append(" ");
-            sb.append(this.f431z);
+            sb.append(this.z);
         }
         sb.append('}');
         return sb.toString();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: u */
-    public int m2104u() {
-        C0076c c0076c = this.f400M;
-        if (c0076c == null) {
+    public int u() {
+        c cVar = this.M;
+        if (cVar == null) {
             return 0;
         }
-        return c0076c.f437d;
+        return cVar.f307d;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: u0 */
-    public void m2103u0(Bundle bundle) {
-        LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m = this.f425t;
-        if (layoutInflater$Factory2C0089m != null) {
-            layoutInflater$Factory2C0089m.m2004G0();
+    public void u0(Bundle bundle) {
+        m mVar = this.f298t;
+        if (mVar != null) {
+            mVar.G0();
         }
-        this.f407b = 2;
-        this.f394G = false;
-        m2171N(bundle);
-        if (this.f394G) {
-            LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m2 = this.f425t;
-            if (layoutInflater$Factory2C0089m2 != null) {
-                layoutInflater$Factory2C0089m2.m1923s();
+        this.f280b = 2;
+        this.G = false;
+        N(bundle);
+        if (this.G) {
+            m mVar2 = this.f298t;
+            if (mVar2 != null) {
+                mVar2.s();
                 return;
             }
             return;
         }
-        throw new C0129y("Fragment " + this + " did not call through to super.onActivityCreated()");
+        throw new y("Fragment " + this + " did not call through to super.onActivityCreated()");
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: v */
-    public int m2102v() {
-        C0076c c0076c = this.f400M;
-        if (c0076c == null) {
+    public int v() {
+        c cVar = this.M;
+        if (cVar == null) {
             return 0;
         }
-        return c0076c.f438e;
+        return cVar.f308e;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: v0 */
-    public void m2101v0(Configuration configuration) {
+    public void v0(Configuration configuration) {
         onConfigurationChanged(configuration);
-        LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m = this.f425t;
-        if (layoutInflater$Factory2C0089m != null) {
-            layoutInflater$Factory2C0089m.m1921t(configuration);
+        m mVar = this.f298t;
+        if (mVar != null) {
+            mVar.t(configuration);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: w */
-    public int m2100w() {
-        C0076c c0076c = this.f400M;
-        if (c0076c == null) {
+    public int w() {
+        c cVar = this.M;
+        if (cVar == null) {
             return 0;
         }
-        return c0076c.f439f;
+        return cVar.f309f;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: w0 */
-    public boolean m2099w0(MenuItem menuItem) {
-        if (this.f388A) {
+    public boolean w0(MenuItem menuItem) {
+        if (this.A) {
             return false;
         }
-        if (m2161S(menuItem)) {
+        if (S(menuItem)) {
             return true;
         }
-        LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m = this.f425t;
-        return layoutInflater$Factory2C0089m != null && layoutInflater$Factory2C0089m.m1919u(menuItem);
+        m mVar = this.f298t;
+        return mVar != null && mVar.u(menuItem);
     }
 
-    /* renamed from: x */
-    public Object m2098x() {
-        C0076c c0076c = this.f400M;
-        if (c0076c == null) {
+    public Object x() {
+        c cVar = this.M;
+        if (cVar == null) {
             return null;
         }
-        return c0076c.f443j == f387U ? m2112q() : this.f400M.f443j;
+        return cVar.f313j == U ? q() : this.M.f313j;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: x0 */
-    public void m2097x0(Bundle bundle) {
-        LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m = this.f425t;
-        if (layoutInflater$Factory2C0089m != null) {
-            layoutInflater$Factory2C0089m.m2004G0();
+    public void x0(Bundle bundle) {
+        m mVar = this.f298t;
+        if (mVar != null) {
+            mVar.G0();
         }
-        this.f407b = 1;
-        this.f394G = false;
-        m2159T(bundle);
-        this.f405R = true;
-        if (this.f394G) {
-            this.f406S.m2373g(AbstractC0009c.EnumC0010a.ON_CREATE);
+        this.f280b = 1;
+        this.G = false;
+        T(bundle);
+        this.R = true;
+        if (this.G) {
+            this.S.g(c.a.ON_CREATE);
             return;
         }
-        throw new C0129y("Fragment " + this + " did not call through to super.onCreate()");
+        throw new y("Fragment " + this + " did not call through to super.onCreate()");
     }
 
-    /* renamed from: y */
-    public final Resources m2096y() {
-        return m2164Q0().getResources();
+    public final Resources y() {
+        return Q0().getResources();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: y0 */
-    public boolean m2095y0(Menu menu, MenuInflater menuInflater) {
+    public boolean y0(Menu menu, MenuInflater menuInflater) {
         boolean z = false;
-        if (this.f388A) {
+        if (this.A) {
             return false;
         }
-        if (this.f392E && this.f393F) {
-            m2153W(menu, menuInflater);
+        if (this.E && this.F) {
+            W(menu, menuInflater);
             z = true;
         }
-        LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m = this.f425t;
-        return layoutInflater$Factory2C0089m != null ? z | layoutInflater$Factory2C0089m.m1915w(menu, menuInflater) : z;
+        m mVar = this.f298t;
+        return mVar != null ? z | mVar.w(menu, menuInflater) : z;
     }
 
-    /* renamed from: z */
-    public Object m2094z() {
-        C0076c c0076c = this.f400M;
-        if (c0076c == null) {
+    public Object z() {
+        c cVar = this.M;
+        if (cVar == null) {
             return null;
         }
-        return c0076c.f441h == f387U ? m2116o() : this.f400M.f441h;
+        return cVar.f311h == U ? o() : this.M.f311h;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: z0 */
-    public View m2093z0(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
-        LayoutInflater$Factory2C0089m layoutInflater$Factory2C0089m = this.f425t;
-        if (layoutInflater$Factory2C0089m != null) {
-            layoutInflater$Factory2C0089m.m2004G0();
+    public View z0(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
+        m mVar = this.f298t;
+        if (mVar != null) {
+            mVar.G0();
         }
-        this.f421p = true;
-        return m2151X(layoutInflater, viewGroup, bundle);
+        this.f294p = true;
+        return X(layoutInflater, viewGroup, bundle);
     }
 }

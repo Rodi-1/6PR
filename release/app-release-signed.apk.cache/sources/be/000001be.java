@@ -1,4 +1,4 @@
-package p010i;
+package i;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -17,11 +17,9 @@ import java.nio.ByteBuffer;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
 
-/* renamed from: i.i */
 /* loaded from: classes.dex */
-public class C0412i {
-    /* renamed from: a */
-    public static void m640a(Closeable closeable) {
+public class i {
+    public static void a(Closeable closeable) {
         if (closeable != null) {
             try {
                 closeable.close();
@@ -30,44 +28,41 @@ public class C0412i {
         }
     }
 
-    /* renamed from: b */
-    public static ByteBuffer m639b(Context context, Resources resources, int i) {
-        File m636e = m636e(context);
-        if (m636e == null) {
+    public static ByteBuffer b(Context context, Resources resources, int i2) {
+        File e2 = e(context);
+        if (e2 == null) {
             return null;
         }
         try {
-            if (m638c(m636e, resources, i)) {
-                return m634g(m636e);
+            if (c(e2, resources, i2)) {
+                return g(e2);
             }
             return null;
         } finally {
-            m636e.delete();
+            e2.delete();
         }
     }
 
-    /* renamed from: c */
-    public static boolean m638c(File file, Resources resources, int i) {
+    public static boolean c(File file, Resources resources, int i2) {
         InputStream inputStream;
         try {
-            inputStream = resources.openRawResource(i);
+            inputStream = resources.openRawResource(i2);
         } catch (Throwable th) {
             th = th;
             inputStream = null;
         }
         try {
-            boolean m637d = m637d(file, inputStream);
-            m640a(inputStream);
-            return m637d;
+            boolean d2 = d(file, inputStream);
+            a(inputStream);
+            return d2;
         } catch (Throwable th2) {
             th = th2;
-            m640a(inputStream);
+            a(inputStream);
             throw th;
         }
     }
 
-    /* renamed from: d */
-    public static boolean m637d(File file, InputStream inputStream) {
+    public static boolean d(File file, InputStream inputStream) {
         FileOutputStream fileOutputStream = null;
         try {
             try {
@@ -77,36 +72,35 @@ public class C0412i {
                     while (true) {
                         int read = inputStream.read(bArr);
                         if (read == -1) {
-                            m640a(fileOutputStream2);
+                            a(fileOutputStream2);
                             return true;
                         }
                         fileOutputStream2.write(bArr, 0, read);
                     }
-                } catch (IOException e) {
-                    e = e;
+                } catch (IOException e2) {
+                    e = e2;
                     fileOutputStream = fileOutputStream2;
                     Log.e("TypefaceCompatUtil", "Error copying resource contents to temp file: " + e.getMessage());
-                    m640a(fileOutputStream);
+                    a(fileOutputStream);
                     return false;
                 } catch (Throwable th) {
                     th = th;
                     fileOutputStream = fileOutputStream2;
-                    m640a(fileOutputStream);
+                    a(fileOutputStream);
                     throw th;
                 }
-            } catch (IOException e2) {
-                e = e2;
+            } catch (IOException e3) {
+                e = e3;
             }
         } catch (Throwable th2) {
             th = th2;
         }
     }
 
-    /* renamed from: e */
-    public static File m636e(Context context) {
+    public static File e(Context context) {
         String str = ".font" + Process.myPid() + "-" + Process.myTid() + "-";
-        for (int i = 0; i < 100; i++) {
-            File file = new File(context.getCacheDir(), str + i);
+        for (int i2 = 0; i2 < 100; i2++) {
+            File file = new File(context.getCacheDir(), str + i2);
             if (file.createNewFile()) {
                 return file;
             }
@@ -114,8 +108,7 @@ public class C0412i {
         return null;
     }
 
-    /* renamed from: f */
-    public static ByteBuffer m635f(Context context, CancellationSignal cancellationSignal, Uri uri) {
+    public static ByteBuffer f(Context context, CancellationSignal cancellationSignal, Uri uri) {
         try {
             ParcelFileDescriptor openFileDescriptor = context.getContentResolver().openFileDescriptor(uri, "r", cancellationSignal);
             if (openFileDescriptor == null) {
@@ -138,8 +131,7 @@ public class C0412i {
         }
     }
 
-    /* renamed from: g */
-    private static ByteBuffer m634g(File file) {
+    private static ByteBuffer g(File file) {
         try {
             FileInputStream fileInputStream = new FileInputStream(file);
             FileChannel channel = fileInputStream.getChannel();

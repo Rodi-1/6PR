@@ -1,4 +1,4 @@
-package android.support.p002v7.view.menu;
+package android.support.v7.view.menu;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -22,217 +22,192 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
-import p008g.C0386a;
-import p012k.InterfaceMenuC0422a;
-import p020s.C0570b;
 
-/* renamed from: android.support.v7.view.menu.e */
 /* loaded from: classes.dex */
-public class C0192e implements InterfaceMenuC0422a {
+public class e implements k.a {
+    private static final int[] A = {1, 4, 5, 3, 2, 0};
 
-    /* renamed from: A */
-    private static final int[] f921A = {1, 4, 5, 3, 2, 0};
+    /* renamed from: a  reason: collision with root package name */
+    private final Context f725a;
 
-    /* renamed from: a */
-    private final Context f922a;
+    /* renamed from: b  reason: collision with root package name */
+    private final Resources f726b;
 
-    /* renamed from: b */
-    private final Resources f923b;
+    /* renamed from: c  reason: collision with root package name */
+    private boolean f727c;
 
-    /* renamed from: c */
-    private boolean f924c;
+    /* renamed from: d  reason: collision with root package name */
+    private boolean f728d;
 
-    /* renamed from: d */
-    private boolean f925d;
+    /* renamed from: e  reason: collision with root package name */
+    private a f729e;
 
-    /* renamed from: e */
-    private InterfaceC0193a f926e;
+    /* renamed from: m  reason: collision with root package name */
+    private ContextMenu.ContextMenuInfo f737m;
 
-    /* renamed from: m */
-    private ContextMenu.ContextMenuInfo f934m;
+    /* renamed from: n  reason: collision with root package name */
+    CharSequence f738n;
 
-    /* renamed from: n */
-    CharSequence f935n;
+    /* renamed from: o  reason: collision with root package name */
+    Drawable f739o;
 
-    /* renamed from: o */
-    Drawable f936o;
+    /* renamed from: p  reason: collision with root package name */
+    View f740p;
+    private g x;
+    private boolean z;
 
-    /* renamed from: p */
-    View f937p;
+    /* renamed from: l  reason: collision with root package name */
+    private int f736l = 0;
 
-    /* renamed from: x */
-    private C0196g f945x;
+    /* renamed from: q  reason: collision with root package name */
+    private boolean f741q = false;
 
-    /* renamed from: z */
-    private boolean f947z;
+    /* renamed from: r  reason: collision with root package name */
+    private boolean f742r = false;
 
-    /* renamed from: l */
-    private int f933l = 0;
+    /* renamed from: s  reason: collision with root package name */
+    private boolean f743s = false;
 
-    /* renamed from: q */
-    private boolean f938q = false;
+    /* renamed from: t  reason: collision with root package name */
+    private boolean f744t = false;
 
-    /* renamed from: r */
-    private boolean f939r = false;
+    /* renamed from: u  reason: collision with root package name */
+    private boolean f745u = false;
 
-    /* renamed from: s */
-    private boolean f940s = false;
+    /* renamed from: v  reason: collision with root package name */
+    private ArrayList<g> f746v = new ArrayList<>();
 
-    /* renamed from: t */
-    private boolean f941t = false;
+    /* renamed from: w  reason: collision with root package name */
+    private CopyOnWriteArrayList<WeakReference<j>> f747w = new CopyOnWriteArrayList<>();
+    private boolean y = false;
 
-    /* renamed from: u */
-    private boolean f942u = false;
+    /* renamed from: f  reason: collision with root package name */
+    private ArrayList<g> f730f = new ArrayList<>();
 
-    /* renamed from: v */
-    private ArrayList<C0196g> f943v = new ArrayList<>();
+    /* renamed from: g  reason: collision with root package name */
+    private ArrayList<g> f731g = new ArrayList<>();
 
-    /* renamed from: w */
-    private CopyOnWriteArrayList<WeakReference<InterfaceC0201j>> f944w = new CopyOnWriteArrayList<>();
+    /* renamed from: h  reason: collision with root package name */
+    private boolean f732h = true;
 
-    /* renamed from: y */
-    private boolean f946y = false;
+    /* renamed from: i  reason: collision with root package name */
+    private ArrayList<g> f733i = new ArrayList<>();
 
-    /* renamed from: f */
-    private ArrayList<C0196g> f927f = new ArrayList<>();
+    /* renamed from: j  reason: collision with root package name */
+    private ArrayList<g> f734j = new ArrayList<>();
 
-    /* renamed from: g */
-    private ArrayList<C0196g> f928g = new ArrayList<>();
+    /* renamed from: k  reason: collision with root package name */
+    private boolean f735k = true;
 
-    /* renamed from: h */
-    private boolean f929h = true;
-
-    /* renamed from: i */
-    private ArrayList<C0196g> f930i = new ArrayList<>();
-
-    /* renamed from: j */
-    private ArrayList<C0196g> f931j = new ArrayList<>();
-
-    /* renamed from: k */
-    private boolean f932k = true;
-
-    /* renamed from: android.support.v7.view.menu.e$a */
     /* loaded from: classes.dex */
-    public interface InterfaceC0193a {
-        /* renamed from: a */
-        void mo75a(C0192e c0192e);
+    public interface a {
+        void a(e eVar);
 
-        /* renamed from: b */
-        boolean mo74b(C0192e c0192e, MenuItem menuItem);
+        boolean b(e eVar, MenuItem menuItem);
     }
 
-    /* renamed from: android.support.v7.view.menu.e$b */
     /* loaded from: classes.dex */
-    public interface InterfaceC0194b {
-        /* renamed from: c */
-        boolean mo1498c(C0196g c0196g);
+    public interface b {
+        boolean c(g gVar);
     }
 
-    public C0192e(Context context) {
-        this.f922a = context;
-        this.f923b = context.getResources();
-        m1627b0(true);
+    public e(Context context) {
+        this.f725a = context;
+        this.f726b = context.getResources();
+        b0(true);
     }
 
-    /* renamed from: B */
-    private static int m1650B(int i) {
-        int i2 = ((-65536) & i) >> 16;
-        if (i2 >= 0) {
-            int[] iArr = f921A;
-            if (i2 < iArr.length) {
-                return (i & 65535) | (iArr[i2] << 16);
+    private static int B(int i2) {
+        int i3 = ((-65536) & i2) >> 16;
+        if (i3 >= 0) {
+            int[] iArr = A;
+            if (i3 < iArr.length) {
+                return (i2 & 65535) | (iArr[i3] << 16);
             }
         }
         throw new IllegalArgumentException("order does not contain a valid category.");
     }
 
-    /* renamed from: N */
-    private void m1642N(int i, boolean z) {
-        if (i < 0 || i >= this.f927f.size()) {
+    private void N(int i2, boolean z) {
+        if (i2 < 0 || i2 >= this.f730f.size()) {
             return;
         }
-        this.f927f.remove(i);
+        this.f730f.remove(i2);
         if (z) {
-            m1645K(true);
+            K(true);
         }
     }
 
-    /* renamed from: W */
-    private void m1634W(int i, CharSequence charSequence, int i2, Drawable drawable, View view) {
-        Resources m1649C = m1649C();
+    private void W(int i2, CharSequence charSequence, int i3, Drawable drawable, View view) {
+        Resources C = C();
         if (view != null) {
-            this.f937p = view;
-            this.f935n = null;
-            this.f936o = null;
+            this.f740p = view;
+            this.f738n = null;
+            this.f739o = null;
         } else {
-            if (i > 0) {
-                this.f935n = m1649C.getText(i);
-            } else if (charSequence != null) {
-                this.f935n = charSequence;
-            }
             if (i2 > 0) {
-                this.f936o = C0386a.m734b(m1610u(), i2);
-            } else if (drawable != null) {
-                this.f936o = drawable;
+                this.f738n = C.getText(i2);
+            } else if (charSequence != null) {
+                this.f738n = charSequence;
             }
-            this.f937p = null;
+            if (i3 > 0) {
+                this.f739o = g.a.b(u(), i3);
+            } else if (drawable != null) {
+                this.f739o = drawable;
+            }
+            this.f740p = null;
         }
-        m1645K(false);
+        K(false);
     }
 
-    /* renamed from: b0 */
-    private void m1627b0(boolean z) {
+    private void b0(boolean z) {
         boolean z2 = true;
-        this.f925d = (z && this.f923b.getConfiguration().keyboard != 1 && this.f923b.getBoolean(C0570b.abc_config_showMenuShortcutsWhenKeyboardPresent)) ? false : false;
+        this.f728d = (z && this.f726b.getConfiguration().keyboard != 1 && this.f726b.getBoolean(s.b.abc_config_showMenuShortcutsWhenKeyboardPresent)) ? false : false;
     }
 
-    /* renamed from: g */
-    private C0196g m1621g(int i, int i2, int i3, int i4, CharSequence charSequence, int i5) {
-        return new C0196g(this, i, i2, i3, i4, charSequence, i5);
+    private g g(int i2, int i3, int i4, int i5, CharSequence charSequence, int i6) {
+        return new g(this, i2, i3, i4, i5, charSequence, i6);
     }
 
-    /* renamed from: i */
-    private void m1620i(boolean z) {
-        if (this.f944w.isEmpty()) {
+    private void i(boolean z) {
+        if (this.f747w.isEmpty()) {
             return;
         }
-        m1623d0();
-        Iterator<WeakReference<InterfaceC0201j>> it = this.f944w.iterator();
+        d0();
+        Iterator<WeakReference<j>> it = this.f747w.iterator();
         while (it.hasNext()) {
-            WeakReference<InterfaceC0201j> next = it.next();
-            InterfaceC0201j interfaceC0201j = next.get();
-            if (interfaceC0201j == null) {
-                this.f944w.remove(next);
+            WeakReference<j> next = it.next();
+            j jVar = next.get();
+            if (jVar == null) {
+                this.f747w.remove(next);
             } else {
-                interfaceC0201j.mo1343i(z);
+                jVar.i(z);
             }
         }
-        m1625c0();
+        c0();
     }
 
-    /* renamed from: j */
-    private boolean m1619j(SubMenuC0208m subMenuC0208m, InterfaceC0201j interfaceC0201j) {
-        if (this.f944w.isEmpty()) {
+    private boolean j(m mVar, j jVar) {
+        if (this.f747w.isEmpty()) {
             return false;
         }
-        boolean mo1346b = interfaceC0201j != null ? interfaceC0201j.mo1346b(subMenuC0208m) : false;
-        Iterator<WeakReference<InterfaceC0201j>> it = this.f944w.iterator();
+        boolean b2 = jVar != null ? jVar.b(mVar) : false;
+        Iterator<WeakReference<j>> it = this.f747w.iterator();
         while (it.hasNext()) {
-            WeakReference<InterfaceC0201j> next = it.next();
-            InterfaceC0201j interfaceC0201j2 = next.get();
-            if (interfaceC0201j2 == null) {
-                this.f944w.remove(next);
-            } else if (!mo1346b) {
-                mo1346b = interfaceC0201j2.mo1346b(subMenuC0208m);
+            WeakReference<j> next = it.next();
+            j jVar2 = next.get();
+            if (jVar2 == null) {
+                this.f747w.remove(next);
+            } else if (!b2) {
+                b2 = jVar2.b(mVar);
             }
         }
-        return mo1346b;
+        return b2;
     }
 
-    /* renamed from: n */
-    private static int m1616n(ArrayList<C0196g> arrayList, int i) {
+    private static int n(ArrayList<g> arrayList, int i2) {
         for (int size = arrayList.size() - 1; size >= 0; size--) {
-            if (arrayList.get(size).m1600e() <= i) {
+            if (arrayList.get(size).e() <= i2) {
                 return size + 1;
             }
         }
@@ -240,96 +215,85 @@ public class C0192e implements InterfaceMenuC0422a {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: A */
-    public boolean m1651A() {
-        return this.f941t;
+    public boolean A() {
+        return this.f744t;
     }
 
-    /* renamed from: C */
-    Resources m1649C() {
-        return this.f923b;
+    Resources C() {
+        return this.f726b;
     }
 
-    /* renamed from: D */
-    public C0192e mo1544D() {
+    public e D() {
         return this;
     }
 
-    /* renamed from: E */
-    public ArrayList<C0196g> m1648E() {
-        if (this.f929h) {
-            this.f928g.clear();
-            int size = this.f927f.size();
-            for (int i = 0; i < size; i++) {
-                C0196g c0196g = this.f927f.get(i);
-                if (c0196g.isVisible()) {
-                    this.f928g.add(c0196g);
+    public ArrayList<g> E() {
+        if (this.f732h) {
+            this.f731g.clear();
+            int size = this.f730f.size();
+            for (int i2 = 0; i2 < size; i2++) {
+                g gVar = this.f730f.get(i2);
+                if (gVar.isVisible()) {
+                    this.f731g.add(gVar);
                 }
             }
-            this.f929h = false;
-            this.f932k = true;
-            return this.f928g;
+            this.f732h = false;
+            this.f735k = true;
+            return this.f731g;
         }
-        return this.f928g;
+        return this.f731g;
     }
 
-    /* renamed from: F */
-    public boolean mo1543F() {
-        return this.f946y;
-    }
-
-    /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: G */
-    public boolean mo1542G() {
-        return this.f924c;
-    }
-
-    /* renamed from: H */
-    public boolean mo1541H() {
-        return this.f925d;
+    public boolean F() {
+        return this.y;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: I */
-    public void m1647I(C0196g c0196g) {
-        this.f932k = true;
-        m1645K(true);
+    public boolean G() {
+        return this.f727c;
+    }
+
+    public boolean H() {
+        return this.f728d;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: J */
-    public void m1646J(C0196g c0196g) {
-        this.f929h = true;
-        m1645K(true);
+    public void I(g gVar) {
+        this.f735k = true;
+        K(true);
     }
 
-    /* renamed from: K */
-    public void m1645K(boolean z) {
-        if (this.f938q) {
-            this.f939r = true;
+    /* JADX INFO: Access modifiers changed from: package-private */
+    public void J(g gVar) {
+        this.f732h = true;
+        K(true);
+    }
+
+    public void K(boolean z) {
+        if (this.f741q) {
+            this.f742r = true;
             if (z) {
-                this.f940s = true;
+                this.f743s = true;
                 return;
             }
             return;
         }
         if (z) {
-            this.f929h = true;
-            this.f932k = true;
+            this.f732h = true;
+            this.f735k = true;
         }
-        m1620i(z);
+        i(z);
     }
 
-    /* renamed from: L */
-    public boolean m1644L(MenuItem menuItem, int i) {
-        return m1643M(menuItem, null, i);
+    public boolean L(MenuItem menuItem, int i2) {
+        return M(menuItem, null, i2);
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:16:0x002b, code lost:
         if (r1 != false) goto L14;
      */
     /* JADX WARN: Code restructure failed: missing block: B:17:0x002d, code lost:
-        m1622e(true);
+        e(true);
      */
     /* JADX WARN: Code restructure failed: missing block: B:23:0x003c, code lost:
         if ((r9 & 1) == 0) goto L14;
@@ -340,39 +304,38 @@ public class C0192e implements InterfaceMenuC0422a {
     /* JADX WARN: Code restructure failed: missing block: B:37:0x006b, code lost:
         return r1;
      */
-    /* renamed from: M */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    public boolean m1643M(android.view.MenuItem r7, android.support.p002v7.view.menu.InterfaceC0201j r8, int r9) {
+    public boolean M(android.view.MenuItem r7, android.support.v7.view.menu.j r8, int r9) {
         /*
             r6 = this;
-            android.support.v7.view.menu.g r7 = (android.support.p002v7.view.menu.C0196g) r7
+            android.support.v7.view.menu.g r7 = (android.support.v7.view.menu.g) r7
             r0 = 0
             if (r7 == 0) goto L6c
             boolean r1 = r7.isEnabled()
             if (r1 != 0) goto Lc
             goto L6c
         Lc:
-            boolean r1 = r7.m1595j()
-            o.c r2 = r7.mo29b()
+            boolean r1 = r7.j()
+            o.c r2 = r7.b()
             r3 = 1
             if (r2 == 0) goto L1f
-            boolean r4 = r2.mo18a()
+            boolean r4 = r2.a()
             if (r4 == 0) goto L1f
             r4 = 1
             goto L20
         L1f:
             r4 = 0
         L20:
-            boolean r5 = r7.m1596i()
+            boolean r5 = r7.i()
             if (r5 == 0) goto L31
             boolean r7 = r7.expandActionView()
             r1 = r1 | r7
             if (r1 == 0) goto L6b
         L2d:
-            r6.m1622e(r3)
+            r6.e(r3)
             goto L6b
         L31:
             boolean r5 = r7.hasSubMenu()
@@ -386,21 +349,21 @@ public class C0192e implements InterfaceMenuC0422a {
         L3f:
             r9 = r9 & 4
             if (r9 != 0) goto L46
-            r6.m1622e(r0)
+            r6.e(r0)
         L46:
             boolean r9 = r7.hasSubMenu()
             if (r9 != 0) goto L58
             android.support.v7.view.menu.m r9 = new android.support.v7.view.menu.m
-            android.content.Context r0 = r6.m1610u()
+            android.content.Context r0 = r6.u()
             r9.<init>(r0, r6, r7)
-            r7.m1583v(r9)
+            r7.v(r9)
         L58:
             android.view.SubMenu r7 = r7.getSubMenu()
-            android.support.v7.view.menu.m r7 = (android.support.p002v7.view.menu.SubMenuC0208m) r7
+            android.support.v7.view.menu.m r7 = (android.support.v7.view.menu.m) r7
             if (r4 == 0) goto L63
-            r2.mo15f(r7)
+            r2.f(r7)
         L63:
-            boolean r7 = r6.m1619j(r7, r8)
+            boolean r7 = r6.j(r7, r8)
             r1 = r1 | r7
             if (r1 != 0) goto L6b
             goto L2d
@@ -409,52 +372,49 @@ public class C0192e implements InterfaceMenuC0422a {
         L6c:
             return r0
         */
-        throw new UnsupportedOperationException("Method not decompiled: android.support.p002v7.view.menu.C0192e.m1643M(android.view.MenuItem, android.support.v7.view.menu.j, int):boolean");
+        throw new UnsupportedOperationException("Method not decompiled: android.support.v7.view.menu.e.M(android.view.MenuItem, android.support.v7.view.menu.j, int):boolean");
     }
 
-    /* renamed from: O */
-    public void m1641O(InterfaceC0201j interfaceC0201j) {
-        Iterator<WeakReference<InterfaceC0201j>> it = this.f944w.iterator();
+    public void O(j jVar) {
+        Iterator<WeakReference<j>> it = this.f747w.iterator();
         while (it.hasNext()) {
-            WeakReference<InterfaceC0201j> next = it.next();
-            InterfaceC0201j interfaceC0201j2 = next.get();
-            if (interfaceC0201j2 == null || interfaceC0201j2 == interfaceC0201j) {
-                this.f944w.remove(next);
+            WeakReference<j> next = it.next();
+            j jVar2 = next.get();
+            if (jVar2 == null || jVar2 == jVar) {
+                this.f747w.remove(next);
             }
         }
     }
 
-    /* renamed from: P */
-    public void m1640P(Bundle bundle) {
+    public void P(Bundle bundle) {
         MenuItem findItem;
         if (bundle == null) {
             return;
         }
-        SparseArray<Parcelable> sparseParcelableArray = bundle.getSparseParcelableArray(mo1535t());
+        SparseArray<Parcelable> sparseParcelableArray = bundle.getSparseParcelableArray(t());
         int size = size();
-        for (int i = 0; i < size; i++) {
-            MenuItem item = getItem(i);
+        for (int i2 = 0; i2 < size; i2++) {
+            MenuItem item = getItem(i2);
             View actionView = item.getActionView();
             if (actionView != null && actionView.getId() != -1) {
                 actionView.restoreHierarchyState(sparseParcelableArray);
             }
             if (item.hasSubMenu()) {
-                ((SubMenuC0208m) item.getSubMenu()).m1640P(bundle);
+                ((m) item.getSubMenu()).P(bundle);
             }
         }
-        int i2 = bundle.getInt("android:menu:expandedactionview");
-        if (i2 <= 0 || (findItem = findItem(i2)) == null) {
+        int i3 = bundle.getInt("android:menu:expandedactionview");
+        if (i3 <= 0 || (findItem = findItem(i3)) == null) {
             return;
         }
         findItem.expandActionView();
     }
 
-    /* renamed from: Q */
-    public void m1639Q(Bundle bundle) {
+    public void Q(Bundle bundle) {
         int size = size();
         SparseArray<? extends Parcelable> sparseArray = null;
-        for (int i = 0; i < size; i++) {
-            MenuItem item = getItem(i);
+        for (int i2 = 0; i2 < size; i2++) {
+            MenuItem item = getItem(i2);
             View actionView = item.getActionView();
             if (actionView != null && actionView.getId() != -1) {
                 if (sparseArray == null) {
@@ -466,153 +426,143 @@ public class C0192e implements InterfaceMenuC0422a {
                 }
             }
             if (item.hasSubMenu()) {
-                ((SubMenuC0208m) item.getSubMenu()).m1639Q(bundle);
+                ((m) item.getSubMenu()).Q(bundle);
             }
         }
         if (sparseArray != null) {
-            bundle.putSparseParcelableArray(mo1535t(), sparseArray);
+            bundle.putSparseParcelableArray(t(), sparseArray);
         }
     }
 
-    /* renamed from: R */
-    public void mo1540R(InterfaceC0193a interfaceC0193a) {
-        this.f926e = interfaceC0193a;
+    public void R(a aVar) {
+        this.f729e = aVar;
     }
 
-    /* renamed from: S */
-    public C0192e m1638S(int i) {
-        this.f933l = i;
+    public e S(int i2) {
+        this.f736l = i2;
         return this;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: T */
-    public void m1637T(MenuItem menuItem) {
+    public void T(MenuItem menuItem) {
         int groupId = menuItem.getGroupId();
-        int size = this.f927f.size();
-        m1623d0();
-        for (int i = 0; i < size; i++) {
-            C0196g c0196g = this.f927f.get(i);
-            if (c0196g.getGroupId() == groupId && c0196g.m1593l() && c0196g.isCheckable()) {
-                c0196g.m1588q(c0196g == menuItem);
+        int size = this.f730f.size();
+        d0();
+        for (int i2 = 0; i2 < size; i2++) {
+            g gVar = this.f730f.get(i2);
+            if (gVar.getGroupId() == groupId && gVar.l() && gVar.isCheckable()) {
+                gVar.q(gVar == menuItem);
             }
         }
-        m1625c0();
+        c0();
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    /* renamed from: U */
-    public C0192e m1636U(int i) {
-        m1634W(0, null, i, null, null);
+    public e U(int i2) {
+        W(0, null, i2, null, null);
         return this;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    /* renamed from: V */
-    public C0192e m1635V(Drawable drawable) {
-        m1634W(0, null, 0, drawable, null);
+    public e V(Drawable drawable) {
+        W(0, null, 0, drawable, null);
         return this;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    /* renamed from: X */
-    public C0192e m1633X(int i) {
-        m1634W(i, null, 0, null, null);
+    public e X(int i2) {
+        W(i2, null, 0, null, null);
         return this;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    /* renamed from: Y */
-    public C0192e m1632Y(CharSequence charSequence) {
-        m1634W(0, charSequence, 0, null, null);
+    public e Y(CharSequence charSequence) {
+        W(0, charSequence, 0, null, null);
         return this;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    /* renamed from: Z */
-    public C0192e m1631Z(View view) {
-        m1634W(0, null, 0, null, view);
+    public e Z(View view) {
+        W(0, null, 0, null, view);
         return this;
     }
 
-    /* renamed from: a */
-    protected MenuItem m1630a(int i, int i2, int i3, CharSequence charSequence) {
-        int m1650B = m1650B(i3);
-        C0196g m1621g = m1621g(i, i2, i3, m1650B, charSequence, this.f933l);
-        ContextMenu.ContextMenuInfo contextMenuInfo = this.f934m;
+    protected MenuItem a(int i2, int i3, int i4, CharSequence charSequence) {
+        int B = B(i4);
+        g g2 = g(i2, i3, i4, B, charSequence, this.f736l);
+        ContextMenu.ContextMenuInfo contextMenuInfo = this.f737m;
         if (contextMenuInfo != null) {
-            m1621g.m1585t(contextMenuInfo);
+            g2.t(contextMenuInfo);
         }
-        ArrayList<C0196g> arrayList = this.f927f;
-        arrayList.add(m1616n(arrayList, m1650B), m1621g);
-        m1645K(true);
-        return m1621g;
+        ArrayList<g> arrayList = this.f730f;
+        arrayList.add(n(arrayList, B), g2);
+        K(true);
+        return g2;
     }
 
-    /* renamed from: a0 */
-    public void m1629a0(boolean z) {
-        this.f947z = z;
-    }
-
-    @Override // android.view.Menu
-    public MenuItem add(int i) {
-        return m1630a(0, 0, 0, this.f923b.getString(i));
+    public void a0(boolean z) {
+        this.z = z;
     }
 
     @Override // android.view.Menu
-    public MenuItem add(int i, int i2, int i3, int i4) {
-        return m1630a(i, i2, i3, this.f923b.getString(i4));
+    public MenuItem add(int i2) {
+        return a(0, 0, 0, this.f726b.getString(i2));
     }
 
     @Override // android.view.Menu
-    public MenuItem add(int i, int i2, int i3, CharSequence charSequence) {
-        return m1630a(i, i2, i3, charSequence);
+    public MenuItem add(int i2, int i3, int i4, int i5) {
+        return a(i2, i3, i4, this.f726b.getString(i5));
+    }
+
+    @Override // android.view.Menu
+    public MenuItem add(int i2, int i3, int i4, CharSequence charSequence) {
+        return a(i2, i3, i4, charSequence);
     }
 
     @Override // android.view.Menu
     public MenuItem add(CharSequence charSequence) {
-        return m1630a(0, 0, 0, charSequence);
+        return a(0, 0, 0, charSequence);
     }
 
     @Override // android.view.Menu
-    public int addIntentOptions(int i, int i2, int i3, ComponentName componentName, Intent[] intentArr, Intent intent, int i4, MenuItem[] menuItemArr) {
-        int i5;
-        PackageManager packageManager = this.f922a.getPackageManager();
+    public int addIntentOptions(int i2, int i3, int i4, ComponentName componentName, Intent[] intentArr, Intent intent, int i5, MenuItem[] menuItemArr) {
+        int i6;
+        PackageManager packageManager = this.f725a.getPackageManager();
         List<ResolveInfo> queryIntentActivityOptions = packageManager.queryIntentActivityOptions(componentName, intentArr, intent, 0);
         int size = queryIntentActivityOptions != null ? queryIntentActivityOptions.size() : 0;
-        if ((i4 & 1) == 0) {
-            removeGroup(i);
+        if ((i5 & 1) == 0) {
+            removeGroup(i2);
         }
-        for (int i6 = 0; i6 < size; i6++) {
-            ResolveInfo resolveInfo = queryIntentActivityOptions.get(i6);
-            int i7 = resolveInfo.specificIndex;
-            Intent intent2 = new Intent(i7 < 0 ? intent : intentArr[i7]);
+        for (int i7 = 0; i7 < size; i7++) {
+            ResolveInfo resolveInfo = queryIntentActivityOptions.get(i7);
+            int i8 = resolveInfo.specificIndex;
+            Intent intent2 = new Intent(i8 < 0 ? intent : intentArr[i8]);
             ActivityInfo activityInfo = resolveInfo.activityInfo;
             intent2.setComponent(new ComponentName(activityInfo.applicationInfo.packageName, activityInfo.name));
-            MenuItem intent3 = add(i, i2, i3, resolveInfo.loadLabel(packageManager)).setIcon(resolveInfo.loadIcon(packageManager)).setIntent(intent2);
-            if (menuItemArr != null && (i5 = resolveInfo.specificIndex) >= 0) {
-                menuItemArr[i5] = intent3;
+            MenuItem intent3 = add(i2, i3, i4, resolveInfo.loadLabel(packageManager)).setIcon(resolveInfo.loadIcon(packageManager)).setIntent(intent2);
+            if (menuItemArr != null && (i6 = resolveInfo.specificIndex) >= 0) {
+                menuItemArr[i6] = intent3;
             }
         }
         return size;
     }
 
     @Override // android.view.Menu
-    public SubMenu addSubMenu(int i) {
-        return addSubMenu(0, 0, 0, this.f923b.getString(i));
+    public SubMenu addSubMenu(int i2) {
+        return addSubMenu(0, 0, 0, this.f726b.getString(i2));
     }
 
     @Override // android.view.Menu
-    public SubMenu addSubMenu(int i, int i2, int i3, int i4) {
-        return addSubMenu(i, i2, i3, this.f923b.getString(i4));
+    public SubMenu addSubMenu(int i2, int i3, int i4, int i5) {
+        return addSubMenu(i2, i3, i4, this.f726b.getString(i5));
     }
 
     @Override // android.view.Menu
-    public SubMenu addSubMenu(int i, int i2, int i3, CharSequence charSequence) {
-        C0196g c0196g = (C0196g) m1630a(i, i2, i3, charSequence);
-        SubMenuC0208m subMenuC0208m = new SubMenuC0208m(this.f922a, this, c0196g);
-        c0196g.m1583v(subMenuC0208m);
-        return subMenuC0208m;
+    public SubMenu addSubMenu(int i2, int i3, int i4, CharSequence charSequence) {
+        g gVar = (g) a(i2, i3, i4, charSequence);
+        m mVar = new m(this.f725a, this, gVar);
+        gVar.v(mVar);
+        return mVar;
     }
 
     @Override // android.view.Menu
@@ -620,122 +570,115 @@ public class C0192e implements InterfaceMenuC0422a {
         return addSubMenu(0, 0, 0, charSequence);
     }
 
-    /* renamed from: b */
-    public void m1628b(InterfaceC0201j interfaceC0201j) {
-        m1626c(interfaceC0201j, this.f922a);
+    public void b(j jVar) {
+        c(jVar, this.f725a);
     }
 
-    /* renamed from: c */
-    public void m1626c(InterfaceC0201j interfaceC0201j, Context context) {
-        this.f944w.add(new WeakReference<>(interfaceC0201j));
-        interfaceC0201j.mo1342k(context, this);
-        this.f932k = true;
+    public void c(j jVar, Context context) {
+        this.f747w.add(new WeakReference<>(jVar));
+        jVar.k(context, this);
+        this.f735k = true;
     }
 
-    /* renamed from: c0 */
-    public void m1625c0() {
-        this.f938q = false;
-        if (this.f939r) {
-            this.f939r = false;
-            m1645K(this.f940s);
+    public void c0() {
+        this.f741q = false;
+        if (this.f742r) {
+            this.f742r = false;
+            K(this.f743s);
         }
     }
 
     @Override // android.view.Menu
     public void clear() {
-        C0196g c0196g = this.f945x;
-        if (c0196g != null) {
-            mo1538f(c0196g);
+        g gVar = this.x;
+        if (gVar != null) {
+            f(gVar);
         }
-        this.f927f.clear();
-        m1645K(true);
+        this.f730f.clear();
+        K(true);
     }
 
     public void clearHeader() {
-        this.f936o = null;
-        this.f935n = null;
-        this.f937p = null;
-        m1645K(false);
+        this.f739o = null;
+        this.f738n = null;
+        this.f740p = null;
+        K(false);
     }
 
     @Override // android.view.Menu
     public void close() {
-        m1622e(true);
+        e(true);
     }
 
-    /* renamed from: d */
-    public void m1624d() {
-        InterfaceC0193a interfaceC0193a = this.f926e;
-        if (interfaceC0193a != null) {
-            interfaceC0193a.mo75a(this);
+    public void d() {
+        a aVar = this.f729e;
+        if (aVar != null) {
+            aVar.a(this);
         }
     }
 
-    /* renamed from: d0 */
-    public void m1623d0() {
-        if (this.f938q) {
+    public void d0() {
+        if (this.f741q) {
             return;
         }
-        this.f938q = true;
-        this.f939r = false;
-        this.f940s = false;
+        this.f741q = true;
+        this.f742r = false;
+        this.f743s = false;
     }
 
-    /* renamed from: e */
-    public final void m1622e(boolean z) {
-        if (this.f942u) {
+    public final void e(boolean z) {
+        if (this.f745u) {
             return;
         }
-        this.f942u = true;
-        Iterator<WeakReference<InterfaceC0201j>> it = this.f944w.iterator();
+        this.f745u = true;
+        Iterator<WeakReference<j>> it = this.f747w.iterator();
         while (it.hasNext()) {
-            WeakReference<InterfaceC0201j> next = it.next();
-            InterfaceC0201j interfaceC0201j = next.get();
-            if (interfaceC0201j == null) {
-                this.f944w.remove(next);
+            WeakReference<j> next = it.next();
+            j jVar = next.get();
+            if (jVar == null) {
+                this.f747w.remove(next);
             } else {
-                interfaceC0201j.mo1347a(this, z);
+                jVar.a(this, z);
             }
         }
-        this.f942u = false;
+        this.f745u = false;
     }
 
-    /* renamed from: f */
-    public boolean mo1538f(C0196g c0196g) {
+    public boolean f(g gVar) {
         boolean z = false;
-        if (!this.f944w.isEmpty() && this.f945x == c0196g) {
-            m1623d0();
-            Iterator<WeakReference<InterfaceC0201j>> it = this.f944w.iterator();
+        if (!this.f747w.isEmpty() && this.x == gVar) {
+            d0();
+            Iterator<WeakReference<j>> it = this.f747w.iterator();
             while (it.hasNext()) {
-                WeakReference<InterfaceC0201j> next = it.next();
-                InterfaceC0201j interfaceC0201j = next.get();
-                if (interfaceC0201j == null) {
-                    this.f944w.remove(next);
+                WeakReference<j> next = it.next();
+                j jVar = next.get();
+                if (jVar == null) {
+                    this.f747w.remove(next);
                 } else {
-                    z = interfaceC0201j.mo1412h(this, c0196g);
+                    z = jVar.h(this, gVar);
                     if (z) {
                         break;
                     }
                 }
             }
-            m1625c0();
+            c0();
             if (z) {
-                this.f945x = null;
+                this.x = null;
             }
         }
         return z;
     }
 
     @Override // android.view.Menu
-    public MenuItem findItem(int i) {
+    public MenuItem findItem(int i2) {
         MenuItem findItem;
         int size = size();
-        for (int i2 = 0; i2 < size; i2++) {
-            C0196g c0196g = this.f927f.get(i2);
-            if (c0196g.getItemId() == i) {
-                return c0196g;
+        for (int i3 = 0; i3 < size; i3++) {
+            g gVar = this.f730f.get(i3);
+            if (gVar.getItemId() == i2) {
+                return gVar;
             }
-            if (c0196g.hasSubMenu() && (findItem = c0196g.getSubMenu().findItem(i)) != null) {
+            if (gVar.hasSubMenu() && (findItem = gVar.getSubMenu().findItem(i2)) != null) {
                 return findItem;
             }
         }
@@ -743,25 +686,24 @@ public class C0192e implements InterfaceMenuC0422a {
     }
 
     @Override // android.view.Menu
-    public MenuItem getItem(int i) {
-        return this.f927f.get(i);
+    public MenuItem getItem(int i2) {
+        return this.f730f.get(i2);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: h */
-    public boolean mo1537h(C0192e c0192e, MenuItem menuItem) {
-        InterfaceC0193a interfaceC0193a = this.f926e;
-        return interfaceC0193a != null && interfaceC0193a.mo74b(c0192e, menuItem);
+    public boolean h(e eVar, MenuItem menuItem) {
+        a aVar = this.f729e;
+        return aVar != null && aVar.b(eVar, menuItem);
     }
 
     @Override // android.view.Menu
     public boolean hasVisibleItems() {
-        if (this.f947z) {
+        if (this.z) {
             return true;
         }
         int size = size();
-        for (int i = 0; i < size; i++) {
-            if (this.f927f.get(i).isVisible()) {
+        for (int i2 = 0; i2 < size; i2++) {
+            if (this.f730f.get(i2).isVisible()) {
                 return true;
             }
         }
@@ -769,73 +711,68 @@ public class C0192e implements InterfaceMenuC0422a {
     }
 
     @Override // android.view.Menu
-    public boolean isShortcutKey(int i, KeyEvent keyEvent) {
-        return m1614p(i, keyEvent) != null;
+    public boolean isShortcutKey(int i2, KeyEvent keyEvent) {
+        return p(i2, keyEvent) != null;
     }
 
-    /* renamed from: k */
-    public boolean mo1536k(C0196g c0196g) {
+    public boolean k(g gVar) {
         boolean z = false;
-        if (this.f944w.isEmpty()) {
+        if (this.f747w.isEmpty()) {
             return false;
         }
-        m1623d0();
-        Iterator<WeakReference<InterfaceC0201j>> it = this.f944w.iterator();
+        d0();
+        Iterator<WeakReference<j>> it = this.f747w.iterator();
         while (it.hasNext()) {
-            WeakReference<InterfaceC0201j> next = it.next();
-            InterfaceC0201j interfaceC0201j = next.get();
-            if (interfaceC0201j == null) {
-                this.f944w.remove(next);
+            WeakReference<j> next = it.next();
+            j jVar = next.get();
+            if (jVar == null) {
+                this.f747w.remove(next);
             } else {
-                z = interfaceC0201j.mo1413e(this, c0196g);
+                z = jVar.e(this, gVar);
                 if (z) {
                     break;
                 }
             }
         }
-        m1625c0();
+        c0();
         if (z) {
-            this.f945x = c0196g;
+            this.x = gVar;
         }
         return z;
     }
 
-    /* renamed from: l */
-    public int m1618l(int i) {
-        return m1617m(i, 0);
+    public int l(int i2) {
+        return m(i2, 0);
     }
 
-    /* renamed from: m */
-    public int m1617m(int i, int i2) {
+    public int m(int i2, int i3) {
         int size = size();
-        if (i2 < 0) {
-            i2 = 0;
+        if (i3 < 0) {
+            i3 = 0;
         }
-        while (i2 < size) {
-            if (this.f927f.get(i2).getGroupId() == i) {
-                return i2;
+        while (i3 < size) {
+            if (this.f730f.get(i3).getGroupId() == i2) {
+                return i3;
             }
-            i2++;
+            i3++;
         }
         return -1;
     }
 
-    /* renamed from: o */
-    public int m1615o(int i) {
+    public int o(int i2) {
         int size = size();
-        for (int i2 = 0; i2 < size; i2++) {
-            if (this.f927f.get(i2).getItemId() == i) {
-                return i2;
+        for (int i3 = 0; i3 < size; i3++) {
+            if (this.f730f.get(i3).getItemId() == i2) {
+                return i3;
             }
         }
         return -1;
     }
 
-    /* renamed from: p */
-    C0196g m1614p(int i, KeyEvent keyEvent) {
-        ArrayList<C0196g> arrayList = this.f943v;
+    g p(int i2, KeyEvent keyEvent) {
+        ArrayList<g> arrayList = this.f746v;
         arrayList.clear();
-        m1613q(arrayList, i, keyEvent);
+        q(arrayList, i2, keyEvent);
         if (arrayList.isEmpty()) {
             return null;
         }
@@ -846,205 +783,195 @@ public class C0192e implements InterfaceMenuC0422a {
         if (size == 1) {
             return arrayList.get(0);
         }
-        boolean mo1542G = mo1542G();
-        for (int i2 = 0; i2 < size; i2++) {
-            C0196g c0196g = arrayList.get(i2);
-            char alphabeticShortcut = mo1542G ? c0196g.getAlphabeticShortcut() : c0196g.getNumericShortcut();
+        boolean G = G();
+        for (int i3 = 0; i3 < size; i3++) {
+            g gVar = arrayList.get(i3);
+            char alphabeticShortcut = G ? gVar.getAlphabeticShortcut() : gVar.getNumericShortcut();
             char[] cArr = keyData.meta;
-            if ((alphabeticShortcut == cArr[0] && (metaState & 2) == 0) || ((alphabeticShortcut == cArr[2] && (metaState & 2) != 0) || (mo1542G && alphabeticShortcut == '\b' && i == 67))) {
-                return c0196g;
+            if ((alphabeticShortcut == cArr[0] && (metaState & 2) == 0) || ((alphabeticShortcut == cArr[2] && (metaState & 2) != 0) || (G && alphabeticShortcut == '\b' && i2 == 67))) {
+                return gVar;
             }
         }
         return null;
     }
 
     @Override // android.view.Menu
-    public boolean performIdentifierAction(int i, int i2) {
-        return m1644L(findItem(i), i2);
+    public boolean performIdentifierAction(int i2, int i3) {
+        return L(findItem(i2), i3);
     }
 
     @Override // android.view.Menu
-    public boolean performShortcut(int i, KeyEvent keyEvent, int i2) {
-        C0196g m1614p = m1614p(i, keyEvent);
-        boolean m1644L = m1614p != null ? m1644L(m1614p, i2) : false;
-        if ((i2 & 2) != 0) {
-            m1622e(true);
+    public boolean performShortcut(int i2, KeyEvent keyEvent, int i3) {
+        g p2 = p(i2, keyEvent);
+        boolean L = p2 != null ? L(p2, i3) : false;
+        if ((i3 & 2) != 0) {
+            e(true);
         }
-        return m1644L;
+        return L;
     }
 
-    /* renamed from: q */
-    void m1613q(List<C0196g> list, int i, KeyEvent keyEvent) {
-        boolean mo1542G = mo1542G();
+    void q(List<g> list, int i2, KeyEvent keyEvent) {
+        boolean G = G();
         int modifiers = keyEvent.getModifiers();
         KeyCharacterMap.KeyData keyData = new KeyCharacterMap.KeyData();
-        if (keyEvent.getKeyData(keyData) || i == 67) {
-            int size = this.f927f.size();
-            for (int i2 = 0; i2 < size; i2++) {
-                C0196g c0196g = this.f927f.get(i2);
-                if (c0196g.hasSubMenu()) {
-                    ((C0192e) c0196g.getSubMenu()).m1613q(list, i, keyEvent);
+        if (keyEvent.getKeyData(keyData) || i2 == 67) {
+            int size = this.f730f.size();
+            for (int i3 = 0; i3 < size; i3++) {
+                g gVar = this.f730f.get(i3);
+                if (gVar.hasSubMenu()) {
+                    ((e) gVar.getSubMenu()).q(list, i2, keyEvent);
                 }
-                char alphabeticShortcut = mo1542G ? c0196g.getAlphabeticShortcut() : c0196g.getNumericShortcut();
-                if (((modifiers & 69647) == ((mo1542G ? c0196g.getAlphabeticModifiers() : c0196g.getNumericModifiers()) & 69647)) && alphabeticShortcut != 0) {
+                char alphabeticShortcut = G ? gVar.getAlphabeticShortcut() : gVar.getNumericShortcut();
+                if (((modifiers & 69647) == ((G ? gVar.getAlphabeticModifiers() : gVar.getNumericModifiers()) & 69647)) && alphabeticShortcut != 0) {
                     char[] cArr = keyData.meta;
-                    if ((alphabeticShortcut == cArr[0] || alphabeticShortcut == cArr[2] || (mo1542G && alphabeticShortcut == '\b' && i == 67)) && c0196g.isEnabled()) {
-                        list.add(c0196g);
+                    if ((alphabeticShortcut == cArr[0] || alphabeticShortcut == cArr[2] || (G && alphabeticShortcut == '\b' && i2 == 67)) && gVar.isEnabled()) {
+                        list.add(gVar);
                     }
                 }
             }
         }
     }
 
-    /* renamed from: r */
-    public void m1612r() {
-        ArrayList<C0196g> m1648E = m1648E();
-        if (this.f932k) {
-            Iterator<WeakReference<InterfaceC0201j>> it = this.f944w.iterator();
+    public void r() {
+        ArrayList<g> E = E();
+        if (this.f735k) {
+            Iterator<WeakReference<j>> it = this.f747w.iterator();
             boolean z = false;
             while (it.hasNext()) {
-                WeakReference<InterfaceC0201j> next = it.next();
-                InterfaceC0201j interfaceC0201j = next.get();
-                if (interfaceC0201j == null) {
-                    this.f944w.remove(next);
+                WeakReference<j> next = it.next();
+                j jVar = next.get();
+                if (jVar == null) {
+                    this.f747w.remove(next);
                 } else {
-                    z |= interfaceC0201j.mo1344g();
+                    z |= jVar.g();
                 }
             }
             if (z) {
-                this.f930i.clear();
-                this.f931j.clear();
-                int size = m1648E.size();
-                for (int i = 0; i < size; i++) {
-                    C0196g c0196g = m1648E.get(i);
-                    (c0196g.m1594k() ? this.f930i : this.f931j).add(c0196g);
+                this.f733i.clear();
+                this.f734j.clear();
+                int size = E.size();
+                for (int i2 = 0; i2 < size; i2++) {
+                    g gVar = E.get(i2);
+                    (gVar.k() ? this.f733i : this.f734j).add(gVar);
                 }
             } else {
-                this.f930i.clear();
-                this.f931j.clear();
-                this.f931j.addAll(m1648E());
+                this.f733i.clear();
+                this.f734j.clear();
+                this.f734j.addAll(E());
             }
-            this.f932k = false;
+            this.f735k = false;
         }
     }
 
     @Override // android.view.Menu
-    public void removeGroup(int i) {
-        int m1618l = m1618l(i);
-        if (m1618l >= 0) {
-            int size = this.f927f.size() - m1618l;
-            int i2 = 0;
+    public void removeGroup(int i2) {
+        int l2 = l(i2);
+        if (l2 >= 0) {
+            int size = this.f730f.size() - l2;
+            int i3 = 0;
             while (true) {
-                int i3 = i2 + 1;
-                if (i2 >= size || this.f927f.get(m1618l).getGroupId() != i) {
+                int i4 = i3 + 1;
+                if (i3 >= size || this.f730f.get(l2).getGroupId() != i2) {
                     break;
                 }
-                m1642N(m1618l, false);
-                i2 = i3;
+                N(l2, false);
+                i3 = i4;
             }
-            m1645K(true);
+            K(true);
         }
     }
 
     @Override // android.view.Menu
-    public void removeItem(int i) {
-        m1642N(m1615o(i), true);
+    public void removeItem(int i2) {
+        N(o(i2), true);
     }
 
-    /* renamed from: s */
-    public ArrayList<C0196g> m1611s() {
-        m1612r();
-        return this.f930i;
+    public ArrayList<g> s() {
+        r();
+        return this.f733i;
     }
 
     @Override // android.view.Menu
-    public void setGroupCheckable(int i, boolean z, boolean z2) {
-        int size = this.f927f.size();
-        for (int i2 = 0; i2 < size; i2++) {
-            C0196g c0196g = this.f927f.get(i2);
-            if (c0196g.getGroupId() == i) {
-                c0196g.m1587r(z2);
-                c0196g.setCheckable(z);
+    public void setGroupCheckable(int i2, boolean z, boolean z2) {
+        int size = this.f730f.size();
+        for (int i3 = 0; i3 < size; i3++) {
+            g gVar = this.f730f.get(i3);
+            if (gVar.getGroupId() == i2) {
+                gVar.r(z2);
+                gVar.setCheckable(z);
             }
         }
     }
 
     @Override // android.view.Menu
     public void setGroupDividerEnabled(boolean z) {
-        this.f946y = z;
+        this.y = z;
     }
 
     @Override // android.view.Menu
-    public void setGroupEnabled(int i, boolean z) {
-        int size = this.f927f.size();
-        for (int i2 = 0; i2 < size; i2++) {
-            C0196g c0196g = this.f927f.get(i2);
-            if (c0196g.getGroupId() == i) {
-                c0196g.setEnabled(z);
+    public void setGroupEnabled(int i2, boolean z) {
+        int size = this.f730f.size();
+        for (int i3 = 0; i3 < size; i3++) {
+            g gVar = this.f730f.get(i3);
+            if (gVar.getGroupId() == i2) {
+                gVar.setEnabled(z);
             }
         }
     }
 
     @Override // android.view.Menu
-    public void setGroupVisible(int i, boolean z) {
-        int size = this.f927f.size();
+    public void setGroupVisible(int i2, boolean z) {
+        int size = this.f730f.size();
         boolean z2 = false;
-        for (int i2 = 0; i2 < size; i2++) {
-            C0196g c0196g = this.f927f.get(i2);
-            if (c0196g.getGroupId() == i && c0196g.m1582w(z)) {
+        for (int i3 = 0; i3 < size; i3++) {
+            g gVar = this.f730f.get(i3);
+            if (gVar.getGroupId() == i2 && gVar.w(z)) {
                 z2 = true;
             }
         }
         if (z2) {
-            m1645K(true);
+            K(true);
         }
     }
 
     @Override // android.view.Menu
     public void setQwertyMode(boolean z) {
-        this.f924c = z;
-        m1645K(false);
+        this.f727c = z;
+        K(false);
     }
 
     @Override // android.view.Menu
     public int size() {
-        return this.f927f.size();
+        return this.f730f.size();
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    /* renamed from: t */
-    public String mo1535t() {
+    public String t() {
         return "android:menu:actionviewstates";
     }
 
-    /* renamed from: u */
-    public Context m1610u() {
-        return this.f922a;
+    public Context u() {
+        return this.f725a;
     }
 
-    /* renamed from: v */
-    public C0196g m1609v() {
-        return this.f945x;
+    public g v() {
+        return this.x;
     }
 
-    /* renamed from: w */
-    public Drawable m1608w() {
-        return this.f936o;
+    public Drawable w() {
+        return this.f739o;
     }
 
-    /* renamed from: x */
-    public CharSequence m1607x() {
-        return this.f935n;
+    public CharSequence x() {
+        return this.f738n;
     }
 
-    /* renamed from: y */
-    public View m1606y() {
-        return this.f937p;
+    public View y() {
+        return this.f740p;
     }
 
-    /* renamed from: z */
-    public ArrayList<C0196g> m1605z() {
-        m1612r();
-        return this.f931j;
+    public ArrayList<g> z() {
+        r();
+        return this.f734j;
     }
 }

@@ -1,78 +1,57 @@
-package android.support.p002v7.widget;
+package android.support.v7.widget;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.support.p002v7.view.menu.InterfaceC0201j;
+import android.support.v7.view.menu.j;
 import android.view.Menu;
 import android.view.ViewGroup;
 import android.view.Window;
-import p016o.C0511s;
 
-/* renamed from: android.support.v7.widget.d0 */
 /* loaded from: classes.dex */
-public interface InterfaceC0256d0 {
-    /* renamed from: a */
-    boolean mo1091a();
+public interface d0 {
+    boolean a();
 
-    /* renamed from: b */
-    boolean mo1090b();
+    boolean b();
 
-    /* renamed from: c */
-    void mo1089c();
+    void c();
 
     void collapseActionView();
 
-    /* renamed from: d */
-    boolean mo1088d();
+    boolean d();
 
-    /* renamed from: e */
-    boolean mo1087e();
+    boolean e();
 
-    /* renamed from: f */
-    void mo1086f(Menu menu, InterfaceC0201j.InterfaceC0202a interfaceC0202a);
+    void f(Menu menu, j.a aVar);
 
-    /* renamed from: g */
-    boolean mo1085g();
+    boolean g();
 
     CharSequence getTitle();
 
-    /* renamed from: h */
-    void mo1084h();
+    void h();
 
-    /* renamed from: i */
-    void mo1083i(C0297o0 c0297o0);
+    void i(o0 o0Var);
 
-    /* renamed from: j */
-    C0511s mo1082j(int i, long j);
+    o.s j(int i2, long j2);
 
-    /* renamed from: k */
-    int mo1081k();
+    int k();
 
-    /* renamed from: l */
-    void mo1080l(int i);
+    void l(int i2);
 
-    /* renamed from: m */
-    void mo1079m();
+    void m();
 
-    /* renamed from: n */
-    boolean mo1078n();
+    boolean n();
 
-    /* renamed from: o */
-    void mo1077o(int i);
+    void o(int i2);
 
-    /* renamed from: p */
-    ViewGroup mo1076p();
+    ViewGroup p();
 
-    /* renamed from: q */
-    void mo1075q(boolean z);
+    void q(boolean z);
 
-    /* renamed from: r */
-    void mo1074r();
+    void r();
 
-    /* renamed from: s */
-    void mo1073s(boolean z);
+    void s(boolean z);
 
-    void setIcon(int i);
+    void setIcon(int i2);
 
     void setIcon(Drawable drawable);
 
@@ -80,12 +59,9 @@ public interface InterfaceC0256d0 {
 
     void setWindowTitle(CharSequence charSequence);
 
-    /* renamed from: t */
-    Context mo1072t();
+    Context t();
 
-    /* renamed from: u */
-    void mo1071u(int i);
+    void u(int i2);
 
-    /* renamed from: v */
-    int mo1070v();
+    int v();
 }

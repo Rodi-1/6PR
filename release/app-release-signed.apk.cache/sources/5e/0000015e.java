@@ -1,4 +1,4 @@
-package android.support.p002v7.widget;
+package android.support.v7.widget;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -7,143 +7,120 @@ import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.util.TypedValue;
-import p009h.C0393b;
-import p021t.C0580b;
+import h.b;
 
-/* renamed from: android.support.v7.widget.v0 */
 /* loaded from: classes.dex */
-public class C0316v0 {
+public class v0 {
 
-    /* renamed from: a */
-    private final Context f1505a;
+    /* renamed from: a  reason: collision with root package name */
+    private final Context f1197a;
 
-    /* renamed from: b */
-    private final TypedArray f1506b;
+    /* renamed from: b  reason: collision with root package name */
+    private final TypedArray f1198b;
 
-    /* renamed from: c */
-    private TypedValue f1507c;
+    /* renamed from: c  reason: collision with root package name */
+    private TypedValue f1199c;
 
-    private C0316v0(Context context, TypedArray typedArray) {
-        this.f1505a = context;
-        this.f1506b = typedArray;
+    private v0(Context context, TypedArray typedArray) {
+        this.f1197a = context;
+        this.f1198b = typedArray;
     }
 
-    /* renamed from: r */
-    public static C0316v0 m1110r(Context context, int i, int[] iArr) {
-        return new C0316v0(context, context.obtainStyledAttributes(i, iArr));
+    public static v0 r(Context context, int i2, int[] iArr) {
+        return new v0(context, context.obtainStyledAttributes(i2, iArr));
     }
 
-    /* renamed from: s */
-    public static C0316v0 m1109s(Context context, AttributeSet attributeSet, int[] iArr) {
-        return new C0316v0(context, context.obtainStyledAttributes(attributeSet, iArr));
+    public static v0 s(Context context, AttributeSet attributeSet, int[] iArr) {
+        return new v0(context, context.obtainStyledAttributes(attributeSet, iArr));
     }
 
-    /* renamed from: t */
-    public static C0316v0 m1108t(Context context, AttributeSet attributeSet, int[] iArr, int i, int i2) {
-        return new C0316v0(context, context.obtainStyledAttributes(attributeSet, iArr, i, i2));
+    public static v0 t(Context context, AttributeSet attributeSet, int[] iArr, int i2, int i3) {
+        return new v0(context, context.obtainStyledAttributes(attributeSet, iArr, i2, i3));
     }
 
-    /* renamed from: a */
-    public boolean m1127a(int i, boolean z) {
-        return this.f1506b.getBoolean(i, z);
+    public boolean a(int i2, boolean z) {
+        return this.f1198b.getBoolean(i2, z);
     }
 
-    /* renamed from: b */
-    public int m1126b(int i, int i2) {
-        return this.f1506b.getColor(i, i2);
+    public int b(int i2, int i3) {
+        return this.f1198b.getColor(i2, i3);
     }
 
-    /* renamed from: c */
-    public ColorStateList m1125c(int i) {
+    public ColorStateList c(int i2) {
         int resourceId;
-        ColorStateList m99c;
-        return (!this.f1506b.hasValue(i) || (resourceId = this.f1506b.getResourceId(i, 0)) == 0 || (m99c = C0580b.m99c(this.f1505a, resourceId)) == null) ? this.f1506b.getColorStateList(i) : m99c;
+        ColorStateList c2;
+        return (!this.f1198b.hasValue(i2) || (resourceId = this.f1198b.getResourceId(i2, 0)) == 0 || (c2 = t.b.c(this.f1197a, resourceId)) == null) ? this.f1198b.getColorStateList(i2) : c2;
     }
 
-    /* renamed from: d */
-    public int m1124d(int i, int i2) {
-        return this.f1506b.getDimensionPixelOffset(i, i2);
+    public int d(int i2, int i3) {
+        return this.f1198b.getDimensionPixelOffset(i2, i3);
     }
 
-    /* renamed from: e */
-    public int m1123e(int i, int i2) {
-        return this.f1506b.getDimensionPixelSize(i, i2);
+    public int e(int i2, int i3) {
+        return this.f1198b.getDimensionPixelSize(i2, i3);
     }
 
-    /* renamed from: f */
-    public Drawable m1122f(int i) {
+    public Drawable f(int i2) {
         int resourceId;
-        return (!this.f1506b.hasValue(i) || (resourceId = this.f1506b.getResourceId(i, 0)) == 0) ? this.f1506b.getDrawable(i) : C0580b.m98d(this.f1505a, resourceId);
+        return (!this.f1198b.hasValue(i2) || (resourceId = this.f1198b.getResourceId(i2, 0)) == 0) ? this.f1198b.getDrawable(i2) : t.b.d(this.f1197a, resourceId);
     }
 
-    /* renamed from: g */
-    public Drawable m1121g(int i) {
+    public Drawable g(int i2) {
         int resourceId;
-        if (!this.f1506b.hasValue(i) || (resourceId = this.f1506b.getResourceId(i, 0)) == 0) {
+        if (!this.f1198b.hasValue(i2) || (resourceId = this.f1198b.getResourceId(i2, 0)) == 0) {
             return null;
         }
-        return C0283k.m1214n().m1211q(this.f1505a, resourceId, true);
+        return k.n().q(this.f1197a, resourceId, true);
     }
 
-    /* renamed from: h */
-    public float m1120h(int i, float f) {
-        return this.f1506b.getFloat(i, f);
+    public float h(int i2, float f2) {
+        return this.f1198b.getFloat(i2, f2);
     }
 
-    /* renamed from: i */
-    public Typeface m1119i(int i, int i2, C0393b.AbstractC0394a abstractC0394a) {
-        int resourceId = this.f1506b.getResourceId(i, 0);
+    public Typeface i(int i2, int i3, b.a aVar) {
+        int resourceId = this.f1198b.getResourceId(i2, 0);
         if (resourceId == 0) {
             return null;
         }
-        if (this.f1507c == null) {
-            this.f1507c = new TypedValue();
+        if (this.f1199c == null) {
+            this.f1199c = new TypedValue();
         }
-        return C0393b.m712b(this.f1505a, resourceId, this.f1507c, i2, abstractC0394a);
+        return h.b.b(this.f1197a, resourceId, this.f1199c, i3, aVar);
     }
 
-    /* renamed from: j */
-    public int m1118j(int i, int i2) {
-        return this.f1506b.getInt(i, i2);
+    public int j(int i2, int i3) {
+        return this.f1198b.getInt(i2, i3);
     }
 
-    /* renamed from: k */
-    public int m1117k(int i, int i2) {
-        return this.f1506b.getInteger(i, i2);
+    public int k(int i2, int i3) {
+        return this.f1198b.getInteger(i2, i3);
     }
 
-    /* renamed from: l */
-    public int m1116l(int i, int i2) {
-        return this.f1506b.getLayoutDimension(i, i2);
+    public int l(int i2, int i3) {
+        return this.f1198b.getLayoutDimension(i2, i3);
     }
 
-    /* renamed from: m */
-    public int m1115m(int i, int i2) {
-        return this.f1506b.getResourceId(i, i2);
+    public int m(int i2, int i3) {
+        return this.f1198b.getResourceId(i2, i3);
     }
 
-    /* renamed from: n */
-    public String m1114n(int i) {
-        return this.f1506b.getString(i);
+    public String n(int i2) {
+        return this.f1198b.getString(i2);
     }
 
-    /* renamed from: o */
-    public CharSequence m1113o(int i) {
-        return this.f1506b.getText(i);
+    public CharSequence o(int i2) {
+        return this.f1198b.getText(i2);
     }
 
-    /* renamed from: p */
-    public CharSequence[] m1112p(int i) {
-        return this.f1506b.getTextArray(i);
+    public CharSequence[] p(int i2) {
+        return this.f1198b.getTextArray(i2);
     }
 
-    /* renamed from: q */
-    public boolean m1111q(int i) {
-        return this.f1506b.hasValue(i);
+    public boolean q(int i2) {
+        return this.f1198b.hasValue(i2);
     }
 
-    /* renamed from: u */
-    public void m1107u() {
-        this.f1506b.recycle();
+    public void u() {
+        this.f1198b.recycle();
     }
 }

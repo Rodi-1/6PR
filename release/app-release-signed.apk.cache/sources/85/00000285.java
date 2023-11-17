@@ -1,18 +1,14 @@
-package p024w;
+package w;
 
 import android.widget.ListView;
 
-/* renamed from: w.h */
 /* loaded from: classes.dex */
-public interface InterfaceC0610h {
-    /* renamed from: c */
-    boolean mo3c();
+public interface h {
+    boolean c();
 
-    /* renamed from: d */
-    ListView mo2d();
+    ListView d();
 
     void dismiss();
 
-    /* renamed from: f */
-    void mo1f();
+    void f();
 }

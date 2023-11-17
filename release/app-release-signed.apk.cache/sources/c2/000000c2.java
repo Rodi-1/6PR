@@ -1,140 +1,130 @@
-package android.support.p002v7.app;
+package android.support.v7.app;
 
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.p002v7.app.AlertController;
+import android.support.v7.app.AlertController;
 import android.util.TypedValue;
 import android.view.ContextThemeWrapper;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ListAdapter;
-import p019r.DialogC0557j;
-import p020s.C0569a;
+import r.j;
 
-/* renamed from: android.support.v7.app.a */
 /* loaded from: classes.dex */
-public class DialogC0178a extends DialogC0557j {
+public class a extends j {
 
-    /* renamed from: c */
-    final AlertController f822c;
+    /* renamed from: c  reason: collision with root package name */
+    final AlertController f631c;
 
-    /* renamed from: android.support.v7.app.a$a */
+    /* renamed from: android.support.v7.app.a$a  reason: collision with other inner class name */
     /* loaded from: classes.dex */
-    public static class C0179a {
+    public static class C0007a {
 
-        /* renamed from: a */
-        private final AlertController.C0170f f823a;
+        /* renamed from: a  reason: collision with root package name */
+        private final AlertController.f f632a;
 
-        /* renamed from: b */
-        private final int f824b;
+        /* renamed from: b  reason: collision with root package name */
+        private final int f633b;
 
-        public C0179a(Context context) {
-            this(context, DialogC0178a.m1691g(context, 0));
+        public C0007a(Context context) {
+            this(context, a.g(context, 0));
         }
 
-        public C0179a(Context context, int i) {
-            this.f823a = new AlertController.C0170f(new ContextThemeWrapper(context, DialogC0178a.m1691g(context, i)));
-            this.f824b = i;
+        public C0007a(Context context, int i2) {
+            this.f632a = new AlertController.f(new ContextThemeWrapper(context, a.g(context, i2)));
+            this.f633b = i2;
         }
 
-        /* renamed from: a */
-        public DialogC0178a m1690a() {
-            DialogC0178a dialogC0178a = new DialogC0178a(this.f823a.f783a, this.f824b);
-            this.f823a.m1694a(dialogC0178a.f822c);
-            dialogC0178a.setCancelable(this.f823a.f800r);
-            if (this.f823a.f800r) {
-                dialogC0178a.setCanceledOnTouchOutside(true);
+        public a a() {
+            a aVar = new a(this.f632a.f595a, this.f633b);
+            this.f632a.a(aVar.f631c);
+            aVar.setCancelable(this.f632a.f612r);
+            if (this.f632a.f612r) {
+                aVar.setCanceledOnTouchOutside(true);
             }
-            dialogC0178a.setOnCancelListener(this.f823a.f801s);
-            dialogC0178a.setOnDismissListener(this.f823a.f802t);
-            DialogInterface.OnKeyListener onKeyListener = this.f823a.f803u;
+            aVar.setOnCancelListener(this.f632a.f613s);
+            aVar.setOnDismissListener(this.f632a.f614t);
+            DialogInterface.OnKeyListener onKeyListener = this.f632a.f615u;
             if (onKeyListener != null) {
-                dialogC0178a.setOnKeyListener(onKeyListener);
+                aVar.setOnKeyListener(onKeyListener);
             }
-            return dialogC0178a;
+            return aVar;
         }
 
-        /* renamed from: b */
-        public Context m1689b() {
-            return this.f823a.f783a;
+        public Context b() {
+            return this.f632a.f595a;
         }
 
-        /* renamed from: c */
-        public C0179a m1688c(ListAdapter listAdapter, DialogInterface.OnClickListener onClickListener) {
-            AlertController.C0170f c0170f = this.f823a;
-            c0170f.f805w = listAdapter;
-            c0170f.f806x = onClickListener;
+        public C0007a c(ListAdapter listAdapter, DialogInterface.OnClickListener onClickListener) {
+            AlertController.f fVar = this.f632a;
+            fVar.f617w = listAdapter;
+            fVar.x = onClickListener;
             return this;
         }
 
-        /* renamed from: d */
-        public C0179a m1687d(View view) {
-            this.f823a.f789g = view;
+        public C0007a d(View view) {
+            this.f632a.f601g = view;
             return this;
         }
 
-        /* renamed from: e */
-        public C0179a m1686e(Drawable drawable) {
-            this.f823a.f786d = drawable;
+        public C0007a e(Drawable drawable) {
+            this.f632a.f598d = drawable;
             return this;
         }
 
-        /* renamed from: f */
-        public C0179a m1685f(DialogInterface.OnKeyListener onKeyListener) {
-            this.f823a.f803u = onKeyListener;
+        public C0007a f(DialogInterface.OnKeyListener onKeyListener) {
+            this.f632a.f615u = onKeyListener;
             return this;
         }
 
-        /* renamed from: g */
-        public C0179a m1684g(CharSequence charSequence) {
-            this.f823a.f788f = charSequence;
+        public C0007a g(CharSequence charSequence) {
+            this.f632a.f600f = charSequence;
             return this;
         }
     }
 
-    protected DialogC0178a(Context context, int i) {
-        super(context, m1691g(context, i));
-        this.f822c = new AlertController(getContext(), this, getWindow());
+    protected a(Context context, int i2) {
+        super(context, g(context, i2));
+        this.f631c = new AlertController(getContext(), this, getWindow());
     }
 
-    /* renamed from: g */
-    static int m1691g(Context context, int i) {
-        if (((i >>> 24) & 255) >= 1) {
-            return i;
+    static int g(Context context, int i2) {
+        if (((i2 >>> 24) & 255) >= 1) {
+            return i2;
         }
         TypedValue typedValue = new TypedValue();
-        context.getTheme().resolveAttribute(C0569a.alertDialogTheme, typedValue, true);
+        context.getTheme().resolveAttribute(s.a.alertDialogTheme, typedValue, true);
         return typedValue.resourceId;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    @Override // p019r.DialogC0557j, android.app.Dialog
+    @Override // r.j, android.app.Dialog
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        this.f822c.m1718d();
+        this.f631c.d();
     }
 
     @Override // android.app.Dialog, android.view.KeyEvent.Callback
-    public boolean onKeyDown(int i, KeyEvent keyEvent) {
-        if (this.f822c.m1716f(i, keyEvent)) {
+    public boolean onKeyDown(int i2, KeyEvent keyEvent) {
+        if (this.f631c.f(i2, keyEvent)) {
             return true;
         }
-        return super.onKeyDown(i, keyEvent);
+        return super.onKeyDown(i2, keyEvent);
     }
 
     @Override // android.app.Dialog, android.view.KeyEvent.Callback
-    public boolean onKeyUp(int i, KeyEvent keyEvent) {
-        if (this.f822c.m1715g(i, keyEvent)) {
+    public boolean onKeyUp(int i2, KeyEvent keyEvent) {
+        if (this.f631c.g(i2, keyEvent)) {
             return true;
         }
-        return super.onKeyUp(i, keyEvent);
+        return super.onKeyUp(i2, keyEvent);
     }
 
-    @Override // p019r.DialogC0557j, android.app.Dialog
+    @Override // r.j, android.app.Dialog
     public void setTitle(CharSequence charSequence) {
         super.setTitle(charSequence);
-        this.f822c.m1706p(charSequence);
+        this.f631c.p(charSequence);
     }
 }

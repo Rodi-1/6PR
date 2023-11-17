@@ -1,4 +1,4 @@
-package p024w;
+package w;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -7,144 +7,143 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.SubMenu;
-import p012k.InterfaceMenuC0422a;
 
-/* renamed from: w.g */
+/* JADX INFO: Access modifiers changed from: package-private */
 /* loaded from: classes.dex */
-class MenuC0609g extends AbstractC0599b<InterfaceMenuC0422a> implements Menu {
+public class g extends b<k.a> implements Menu {
     /* JADX INFO: Access modifiers changed from: package-private */
-    public MenuC0609g(Context context, InterfaceMenuC0422a interfaceMenuC0422a) {
-        super(context, interfaceMenuC0422a);
+    public g(Context context, k.a aVar) {
+        super(context, aVar);
     }
 
     @Override // android.view.Menu
-    public MenuItem add(int i) {
-        return m24c(((InterfaceMenuC0422a) this.f2733a).add(i));
+    public MenuItem add(int i2) {
+        return c(((k.a) this.f1981a).add(i2));
     }
 
     @Override // android.view.Menu
-    public MenuItem add(int i, int i2, int i3, int i4) {
-        return m24c(((InterfaceMenuC0422a) this.f2733a).add(i, i2, i3, i4));
+    public MenuItem add(int i2, int i3, int i4, int i5) {
+        return c(((k.a) this.f1981a).add(i2, i3, i4, i5));
     }
 
     @Override // android.view.Menu
-    public MenuItem add(int i, int i2, int i3, CharSequence charSequence) {
-        return m24c(((InterfaceMenuC0422a) this.f2733a).add(i, i2, i3, charSequence));
+    public MenuItem add(int i2, int i3, int i4, CharSequence charSequence) {
+        return c(((k.a) this.f1981a).add(i2, i3, i4, charSequence));
     }
 
     @Override // android.view.Menu
     public MenuItem add(CharSequence charSequence) {
-        return m24c(((InterfaceMenuC0422a) this.f2733a).add(charSequence));
+        return c(((k.a) this.f1981a).add(charSequence));
     }
 
     @Override // android.view.Menu
-    public int addIntentOptions(int i, int i2, int i3, ComponentName componentName, Intent[] intentArr, Intent intent, int i4, MenuItem[] menuItemArr) {
+    public int addIntentOptions(int i2, int i3, int i4, ComponentName componentName, Intent[] intentArr, Intent intent, int i5, MenuItem[] menuItemArr) {
         MenuItem[] menuItemArr2 = menuItemArr != null ? new MenuItem[menuItemArr.length] : null;
-        int addIntentOptions = ((InterfaceMenuC0422a) this.f2733a).addIntentOptions(i, i2, i3, componentName, intentArr, intent, i4, menuItemArr2);
+        int addIntentOptions = ((k.a) this.f1981a).addIntentOptions(i2, i3, i4, componentName, intentArr, intent, i5, menuItemArr2);
         if (menuItemArr2 != null) {
             int length = menuItemArr2.length;
-            for (int i5 = 0; i5 < length; i5++) {
-                menuItemArr[i5] = m24c(menuItemArr2[i5]);
+            for (int i6 = 0; i6 < length; i6++) {
+                menuItemArr[i6] = c(menuItemArr2[i6]);
             }
         }
         return addIntentOptions;
     }
 
     @Override // android.view.Menu
-    public SubMenu addSubMenu(int i) {
-        return m23d(((InterfaceMenuC0422a) this.f2733a).addSubMenu(i));
+    public SubMenu addSubMenu(int i2) {
+        return d(((k.a) this.f1981a).addSubMenu(i2));
     }
 
     @Override // android.view.Menu
-    public SubMenu addSubMenu(int i, int i2, int i3, int i4) {
-        return m23d(((InterfaceMenuC0422a) this.f2733a).addSubMenu(i, i2, i3, i4));
+    public SubMenu addSubMenu(int i2, int i3, int i4, int i5) {
+        return d(((k.a) this.f1981a).addSubMenu(i2, i3, i4, i5));
     }
 
     @Override // android.view.Menu
-    public SubMenu addSubMenu(int i, int i2, int i3, CharSequence charSequence) {
-        return m23d(((InterfaceMenuC0422a) this.f2733a).addSubMenu(i, i2, i3, charSequence));
+    public SubMenu addSubMenu(int i2, int i3, int i4, CharSequence charSequence) {
+        return d(((k.a) this.f1981a).addSubMenu(i2, i3, i4, charSequence));
     }
 
     @Override // android.view.Menu
     public SubMenu addSubMenu(CharSequence charSequence) {
-        return m23d(((InterfaceMenuC0422a) this.f2733a).addSubMenu(charSequence));
+        return d(((k.a) this.f1981a).addSubMenu(charSequence));
     }
 
     @Override // android.view.Menu
     public void clear() {
-        m22e();
-        ((InterfaceMenuC0422a) this.f2733a).clear();
+        e();
+        ((k.a) this.f1981a).clear();
     }
 
     @Override // android.view.Menu
     public void close() {
-        ((InterfaceMenuC0422a) this.f2733a).close();
+        ((k.a) this.f1981a).close();
     }
 
     @Override // android.view.Menu
-    public MenuItem findItem(int i) {
-        return m24c(((InterfaceMenuC0422a) this.f2733a).findItem(i));
+    public MenuItem findItem(int i2) {
+        return c(((k.a) this.f1981a).findItem(i2));
     }
 
     @Override // android.view.Menu
-    public MenuItem getItem(int i) {
-        return m24c(((InterfaceMenuC0422a) this.f2733a).getItem(i));
+    public MenuItem getItem(int i2) {
+        return c(((k.a) this.f1981a).getItem(i2));
     }
 
     @Override // android.view.Menu
     public boolean hasVisibleItems() {
-        return ((InterfaceMenuC0422a) this.f2733a).hasVisibleItems();
+        return ((k.a) this.f1981a).hasVisibleItems();
     }
 
     @Override // android.view.Menu
-    public boolean isShortcutKey(int i, KeyEvent keyEvent) {
-        return ((InterfaceMenuC0422a) this.f2733a).isShortcutKey(i, keyEvent);
+    public boolean isShortcutKey(int i2, KeyEvent keyEvent) {
+        return ((k.a) this.f1981a).isShortcutKey(i2, keyEvent);
     }
 
     @Override // android.view.Menu
-    public boolean performIdentifierAction(int i, int i2) {
-        return ((InterfaceMenuC0422a) this.f2733a).performIdentifierAction(i, i2);
+    public boolean performIdentifierAction(int i2, int i3) {
+        return ((k.a) this.f1981a).performIdentifierAction(i2, i3);
     }
 
     @Override // android.view.Menu
-    public boolean performShortcut(int i, KeyEvent keyEvent, int i2) {
-        return ((InterfaceMenuC0422a) this.f2733a).performShortcut(i, keyEvent, i2);
+    public boolean performShortcut(int i2, KeyEvent keyEvent, int i3) {
+        return ((k.a) this.f1981a).performShortcut(i2, keyEvent, i3);
     }
 
     @Override // android.view.Menu
-    public void removeGroup(int i) {
-        m21f(i);
-        ((InterfaceMenuC0422a) this.f2733a).removeGroup(i);
+    public void removeGroup(int i2) {
+        f(i2);
+        ((k.a) this.f1981a).removeGroup(i2);
     }
 
     @Override // android.view.Menu
-    public void removeItem(int i) {
-        m20g(i);
-        ((InterfaceMenuC0422a) this.f2733a).removeItem(i);
+    public void removeItem(int i2) {
+        g(i2);
+        ((k.a) this.f1981a).removeItem(i2);
     }
 
     @Override // android.view.Menu
-    public void setGroupCheckable(int i, boolean z, boolean z2) {
-        ((InterfaceMenuC0422a) this.f2733a).setGroupCheckable(i, z, z2);
+    public void setGroupCheckable(int i2, boolean z, boolean z2) {
+        ((k.a) this.f1981a).setGroupCheckable(i2, z, z2);
     }
 
     @Override // android.view.Menu
-    public void setGroupEnabled(int i, boolean z) {
-        ((InterfaceMenuC0422a) this.f2733a).setGroupEnabled(i, z);
+    public void setGroupEnabled(int i2, boolean z) {
+        ((k.a) this.f1981a).setGroupEnabled(i2, z);
     }
 
     @Override // android.view.Menu
-    public void setGroupVisible(int i, boolean z) {
-        ((InterfaceMenuC0422a) this.f2733a).setGroupVisible(i, z);
+    public void setGroupVisible(int i2, boolean z) {
+        ((k.a) this.f1981a).setGroupVisible(i2, z);
     }
 
     @Override // android.view.Menu
     public void setQwertyMode(boolean z) {
-        ((InterfaceMenuC0422a) this.f2733a).setQwertyMode(z);
+        ((k.a) this.f1981a).setQwertyMode(z);
     }
 
     @Override // android.view.Menu
     public int size() {
-        return ((InterfaceMenuC0422a) this.f2733a).size();
+        return ((k.a) this.f1981a).size();
     }
 }

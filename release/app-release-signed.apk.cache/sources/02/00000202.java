@@ -1,185 +1,155 @@
-package p016o;
+package o;
 
 import android.content.res.ColorStateList;
 import android.graphics.PorterDuff;
 import android.os.Build;
 import android.util.Log;
 import android.view.MenuItem;
-import p012k.InterfaceMenuItemC0423b;
 
-/* renamed from: o.g */
 /* loaded from: classes.dex */
-public final class C0479g {
+public final class g {
 
-    /* renamed from: a */
-    static final InterfaceC0482c f2213a;
+    /* renamed from: a  reason: collision with root package name */
+    static final c f1695a;
 
-    /* renamed from: o.g$a */
     /* loaded from: classes.dex */
-    static class C0480a extends C0481b {
-        C0480a() {
+    static class a extends b {
+        a() {
         }
 
-        @Override // p016o.C0479g.C0481b, p016o.C0479g.InterfaceC0482c
-        /* renamed from: a */
-        public void mo443a(MenuItem menuItem, char c, int i) {
-            menuItem.setAlphabeticShortcut(c, i);
+        @Override // o.g.b, o.g.c
+        public void a(MenuItem menuItem, char c2, int i2) {
+            menuItem.setAlphabeticShortcut(c2, i2);
         }
 
-        @Override // p016o.C0479g.C0481b, p016o.C0479g.InterfaceC0482c
-        /* renamed from: b */
-        public void mo442b(MenuItem menuItem, PorterDuff.Mode mode) {
+        @Override // o.g.b, o.g.c
+        public void b(MenuItem menuItem, PorterDuff.Mode mode) {
             menuItem.setIconTintMode(mode);
         }
 
-        @Override // p016o.C0479g.C0481b, p016o.C0479g.InterfaceC0482c
-        /* renamed from: c */
-        public void mo441c(MenuItem menuItem, CharSequence charSequence) {
+        @Override // o.g.b, o.g.c
+        public void c(MenuItem menuItem, CharSequence charSequence) {
             menuItem.setContentDescription(charSequence);
         }
 
-        @Override // p016o.C0479g.C0481b, p016o.C0479g.InterfaceC0482c
-        /* renamed from: d */
-        public void mo440d(MenuItem menuItem, char c, int i) {
-            menuItem.setNumericShortcut(c, i);
+        @Override // o.g.b, o.g.c
+        public void d(MenuItem menuItem, char c2, int i2) {
+            menuItem.setNumericShortcut(c2, i2);
         }
 
-        @Override // p016o.C0479g.C0481b, p016o.C0479g.InterfaceC0482c
-        /* renamed from: e */
-        public void mo439e(MenuItem menuItem, CharSequence charSequence) {
+        @Override // o.g.b, o.g.c
+        public void e(MenuItem menuItem, CharSequence charSequence) {
             menuItem.setTooltipText(charSequence);
         }
 
-        @Override // p016o.C0479g.C0481b, p016o.C0479g.InterfaceC0482c
-        /* renamed from: f */
-        public void mo438f(MenuItem menuItem, ColorStateList colorStateList) {
+        @Override // o.g.b, o.g.c
+        public void f(MenuItem menuItem, ColorStateList colorStateList) {
             menuItem.setIconTintList(colorStateList);
         }
     }
 
-    /* renamed from: o.g$b */
     /* loaded from: classes.dex */
-    static class C0481b implements InterfaceC0482c {
-        C0481b() {
+    static class b implements c {
+        b() {
         }
 
-        @Override // p016o.C0479g.InterfaceC0482c
-        /* renamed from: a */
-        public void mo443a(MenuItem menuItem, char c, int i) {
+        @Override // o.g.c
+        public void a(MenuItem menuItem, char c2, int i2) {
         }
 
-        @Override // p016o.C0479g.InterfaceC0482c
-        /* renamed from: b */
-        public void mo442b(MenuItem menuItem, PorterDuff.Mode mode) {
+        @Override // o.g.c
+        public void b(MenuItem menuItem, PorterDuff.Mode mode) {
         }
 
-        @Override // p016o.C0479g.InterfaceC0482c
-        /* renamed from: c */
-        public void mo441c(MenuItem menuItem, CharSequence charSequence) {
+        @Override // o.g.c
+        public void c(MenuItem menuItem, CharSequence charSequence) {
         }
 
-        @Override // p016o.C0479g.InterfaceC0482c
-        /* renamed from: d */
-        public void mo440d(MenuItem menuItem, char c, int i) {
+        @Override // o.g.c
+        public void d(MenuItem menuItem, char c2, int i2) {
         }
 
-        @Override // p016o.C0479g.InterfaceC0482c
-        /* renamed from: e */
-        public void mo439e(MenuItem menuItem, CharSequence charSequence) {
+        @Override // o.g.c
+        public void e(MenuItem menuItem, CharSequence charSequence) {
         }
 
-        @Override // p016o.C0479g.InterfaceC0482c
-        /* renamed from: f */
-        public void mo438f(MenuItem menuItem, ColorStateList colorStateList) {
+        @Override // o.g.c
+        public void f(MenuItem menuItem, ColorStateList colorStateList) {
         }
     }
 
-    /* renamed from: o.g$c */
     /* loaded from: classes.dex */
-    interface InterfaceC0482c {
-        /* renamed from: a */
-        void mo443a(MenuItem menuItem, char c, int i);
+    interface c {
+        void a(MenuItem menuItem, char c2, int i2);
 
-        /* renamed from: b */
-        void mo442b(MenuItem menuItem, PorterDuff.Mode mode);
+        void b(MenuItem menuItem, PorterDuff.Mode mode);
 
-        /* renamed from: c */
-        void mo441c(MenuItem menuItem, CharSequence charSequence);
+        void c(MenuItem menuItem, CharSequence charSequence);
 
-        /* renamed from: d */
-        void mo440d(MenuItem menuItem, char c, int i);
+        void d(MenuItem menuItem, char c2, int i2);
 
-        /* renamed from: e */
-        void mo439e(MenuItem menuItem, CharSequence charSequence);
+        void e(MenuItem menuItem, CharSequence charSequence);
 
-        /* renamed from: f */
-        void mo438f(MenuItem menuItem, ColorStateList colorStateList);
+        void f(MenuItem menuItem, ColorStateList colorStateList);
     }
 
     static {
-        f2213a = Build.VERSION.SDK_INT >= 26 ? new C0480a() : new C0481b();
+        f1695a = Build.VERSION.SDK_INT >= 26 ? new a() : new b();
     }
 
-    /* renamed from: a */
-    public static MenuItem m450a(MenuItem menuItem, AbstractC0471c abstractC0471c) {
-        if (menuItem instanceof InterfaceMenuItemC0423b) {
-            return ((InterfaceMenuItemC0423b) menuItem).mo30a(abstractC0471c);
+    public static MenuItem a(MenuItem menuItem, o.c cVar) {
+        if (menuItem instanceof k.b) {
+            return ((k.b) menuItem).a(cVar);
         }
         Log.w("MenuItemCompat", "setActionProvider: item does not implement SupportMenuItem; ignoring");
         return menuItem;
     }
 
-    /* renamed from: b */
-    public static void m449b(MenuItem menuItem, char c, int i) {
-        if (menuItem instanceof InterfaceMenuItemC0423b) {
-            ((InterfaceMenuItemC0423b) menuItem).setAlphabeticShortcut(c, i);
+    public static void b(MenuItem menuItem, char c2, int i2) {
+        if (menuItem instanceof k.b) {
+            ((k.b) menuItem).setAlphabeticShortcut(c2, i2);
         } else {
-            f2213a.mo443a(menuItem, c, i);
+            f1695a.a(menuItem, c2, i2);
         }
     }
 
-    /* renamed from: c */
-    public static void m448c(MenuItem menuItem, CharSequence charSequence) {
-        if (menuItem instanceof InterfaceMenuItemC0423b) {
-            ((InterfaceMenuItemC0423b) menuItem).setContentDescription(charSequence);
+    public static void c(MenuItem menuItem, CharSequence charSequence) {
+        if (menuItem instanceof k.b) {
+            ((k.b) menuItem).setContentDescription(charSequence);
         } else {
-            f2213a.mo441c(menuItem, charSequence);
+            f1695a.c(menuItem, charSequence);
         }
     }
 
-    /* renamed from: d */
-    public static void m447d(MenuItem menuItem, ColorStateList colorStateList) {
-        if (menuItem instanceof InterfaceMenuItemC0423b) {
-            ((InterfaceMenuItemC0423b) menuItem).setIconTintList(colorStateList);
+    public static void d(MenuItem menuItem, ColorStateList colorStateList) {
+        if (menuItem instanceof k.b) {
+            ((k.b) menuItem).setIconTintList(colorStateList);
         } else {
-            f2213a.mo438f(menuItem, colorStateList);
+            f1695a.f(menuItem, colorStateList);
         }
     }
 
-    /* renamed from: e */
-    public static void m446e(MenuItem menuItem, PorterDuff.Mode mode) {
-        if (menuItem instanceof InterfaceMenuItemC0423b) {
-            ((InterfaceMenuItemC0423b) menuItem).setIconTintMode(mode);
+    public static void e(MenuItem menuItem, PorterDuff.Mode mode) {
+        if (menuItem instanceof k.b) {
+            ((k.b) menuItem).setIconTintMode(mode);
         } else {
-            f2213a.mo442b(menuItem, mode);
+            f1695a.b(menuItem, mode);
         }
     }
 
-    /* renamed from: f */
-    public static void m445f(MenuItem menuItem, char c, int i) {
-        if (menuItem instanceof InterfaceMenuItemC0423b) {
-            ((InterfaceMenuItemC0423b) menuItem).setNumericShortcut(c, i);
+    public static void f(MenuItem menuItem, char c2, int i2) {
+        if (menuItem instanceof k.b) {
+            ((k.b) menuItem).setNumericShortcut(c2, i2);
         } else {
-            f2213a.mo440d(menuItem, c, i);
+            f1695a.d(menuItem, c2, i2);
         }
     }
 
-    /* renamed from: g */
-    public static void m444g(MenuItem menuItem, CharSequence charSequence) {
-        if (menuItem instanceof InterfaceMenuItemC0423b) {
-            ((InterfaceMenuItemC0423b) menuItem).setTooltipText(charSequence);
+    public static void g(MenuItem menuItem, CharSequence charSequence) {
+        if (menuItem instanceof k.b) {
+            ((k.b) menuItem).setTooltipText(charSequence);
         } else {
-            f2213a.mo439e(menuItem, charSequence);
+            f1695a.e(menuItem, charSequence);
         }
     }
 }

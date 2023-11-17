@@ -1,4 +1,4 @@
-package p014m;
+package m;
 
 import android.content.ContentUris;
 import android.content.Context;
@@ -11,6 +11,8 @@ import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.CancellationSignal;
 import android.os.Handler;
+import h.b;
+import i.i;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,254 +22,234 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Callable;
-import p009h.C0388a;
-import p009h.C0393b;
-import p010i.C0402c;
-import p010i.C0412i;
-import p014m.C0435c;
-import p015n.C0453g;
-import p015n.C0461j;
-import p015n.C0462k;
+import m.c;
+import n.j;
+import n.k;
 
-/* renamed from: m.b */
 /* loaded from: classes.dex */
-public class C0427b {
+public class b {
 
-    /* renamed from: a */
-    private static final C0453g<String, Typeface> f2077a = new C0453g<>(16);
+    /* renamed from: a  reason: collision with root package name */
+    private static final n.g<String, Typeface> f1564a = new n.g<>(16);
 
-    /* renamed from: b */
-    private static final C0435c f2078b = new C0435c("fonts", 10, 10000);
+    /* renamed from: b  reason: collision with root package name */
+    private static final m.c f1565b = new m.c("fonts", 10, 10000);
 
-    /* renamed from: c */
-    private static final Object f2079c = new Object();
+    /* renamed from: c  reason: collision with root package name */
+    private static final Object f1566c = new Object();
 
-    /* renamed from: d */
-    private static final C0462k<String, ArrayList<C0435c.InterfaceC0440d<C0434g>>> f2080d = new C0462k<>();
+    /* renamed from: d  reason: collision with root package name */
+    private static final k<String, ArrayList<c.d<g>>> f1567d = new k<>();
 
-    /* renamed from: e */
-    private static final Comparator<byte[]> f2081e = new C0431d();
+    /* renamed from: e  reason: collision with root package name */
+    private static final Comparator<byte[]> f1568e = new d();
 
-    /* renamed from: m.b$a */
     /* loaded from: classes.dex */
-    static class CallableC0428a implements Callable<C0434g> {
+    static class a implements Callable<g> {
 
-        /* renamed from: a */
-        final /* synthetic */ Context f2082a;
+        /* renamed from: a  reason: collision with root package name */
+        final /* synthetic */ Context f1569a;
 
-        /* renamed from: b */
-        final /* synthetic */ C0426a f2083b;
+        /* renamed from: b  reason: collision with root package name */
+        final /* synthetic */ m.a f1570b;
 
-        /* renamed from: c */
-        final /* synthetic */ int f2084c;
+        /* renamed from: c  reason: collision with root package name */
+        final /* synthetic */ int f1571c;
 
-        /* renamed from: d */
-        final /* synthetic */ String f2085d;
+        /* renamed from: d  reason: collision with root package name */
+        final /* synthetic */ String f1572d;
 
-        CallableC0428a(Context context, C0426a c0426a, int i, String str) {
-            this.f2082a = context;
-            this.f2083b = c0426a;
-            this.f2084c = i;
-            this.f2085d = str;
+        a(Context context, m.a aVar, int i2, String str) {
+            this.f1569a = context;
+            this.f1570b = aVar;
+            this.f1571c = i2;
+            this.f1572d = str;
         }
 
         @Override // java.util.concurrent.Callable
         /* renamed from: a */
-        public C0434g call() {
-            C0434g m593j = C0427b.m593j(this.f2082a, this.f2083b, this.f2084c);
-            if (m593j.f2096a != null) {
-                C0427b.f2077a.m525d(this.f2085d, m593j.f2096a);
+        public g call() {
+            g j2 = b.j(this.f1569a, this.f1570b, this.f1571c);
+            if (j2.f1583a != null) {
+                b.f1564a.d(this.f1572d, j2.f1583a);
             }
-            return m593j;
+            return j2;
         }
     }
 
-    /* renamed from: m.b$b */
+    /* renamed from: m.b$b  reason: collision with other inner class name */
     /* loaded from: classes.dex */
-    static class C0429b implements C0435c.InterfaceC0440d<C0434g> {
+    static class C0017b implements c.d<g> {
 
-        /* renamed from: a */
-        final /* synthetic */ C0393b.AbstractC0394a f2086a;
+        /* renamed from: a  reason: collision with root package name */
+        final /* synthetic */ b.a f1573a;
 
-        /* renamed from: b */
-        final /* synthetic */ Handler f2087b;
+        /* renamed from: b  reason: collision with root package name */
+        final /* synthetic */ Handler f1574b;
 
-        C0429b(C0393b.AbstractC0394a abstractC0394a, Handler handler) {
-            this.f2086a = abstractC0394a;
-            this.f2087b = handler;
+        C0017b(b.a aVar, Handler handler) {
+            this.f1573a = aVar;
+            this.f1574b = handler;
         }
 
-        @Override // p014m.C0435c.InterfaceC0440d
+        @Override // m.c.d
         /* renamed from: b */
-        public void mo571a(C0434g c0434g) {
-            int i;
-            C0393b.AbstractC0394a abstractC0394a;
-            if (c0434g == null) {
-                abstractC0394a = this.f2086a;
-                i = 1;
+        public void a(g gVar) {
+            int i2;
+            b.a aVar;
+            if (gVar == null) {
+                aVar = this.f1573a;
+                i2 = 1;
             } else {
-                i = c0434g.f2097b;
-                if (i == 0) {
-                    this.f2086a.m708b(c0434g.f2096a, this.f2087b);
+                i2 = gVar.f1584b;
+                if (i2 == 0) {
+                    this.f1573a.b(gVar.f1583a, this.f1574b);
                     return;
                 }
-                abstractC0394a = this.f2086a;
+                aVar = this.f1573a;
             }
-            abstractC0394a.m709a(i, this.f2087b);
+            aVar.a(i2, this.f1574b);
         }
     }
 
-    /* renamed from: m.b$c */
     /* loaded from: classes.dex */
-    static class C0430c implements C0435c.InterfaceC0440d<C0434g> {
+    static class c implements c.d<g> {
 
-        /* renamed from: a */
-        final /* synthetic */ String f2088a;
+        /* renamed from: a  reason: collision with root package name */
+        final /* synthetic */ String f1575a;
 
-        C0430c(String str) {
-            this.f2088a = str;
+        c(String str) {
+            this.f1575a = str;
         }
 
-        @Override // p014m.C0435c.InterfaceC0440d
+        @Override // m.c.d
         /* renamed from: b */
-        public void mo571a(C0434g c0434g) {
-            synchronized (C0427b.f2079c) {
-                ArrayList arrayList = (ArrayList) C0427b.f2080d.get(this.f2088a);
+        public void a(g gVar) {
+            synchronized (b.f1566c) {
+                ArrayList arrayList = (ArrayList) b.f1567d.get(this.f1575a);
                 if (arrayList == null) {
                     return;
                 }
-                C0427b.f2080d.remove(this.f2088a);
-                for (int i = 0; i < arrayList.size(); i++) {
-                    ((C0435c.InterfaceC0440d) arrayList.get(i)).mo571a(c0434g);
+                b.f1567d.remove(this.f1575a);
+                for (int i2 = 0; i2 < arrayList.size(); i2++) {
+                    ((c.d) arrayList.get(i2)).a(gVar);
                 }
             }
         }
     }
 
-    /* renamed from: m.b$d */
     /* loaded from: classes.dex */
-    static class C0431d implements Comparator<byte[]> {
-        C0431d() {
+    static class d implements Comparator<byte[]> {
+        d() {
         }
 
         @Override // java.util.Comparator
         /* renamed from: a */
         public int compare(byte[] bArr, byte[] bArr2) {
-            int i;
             int i2;
+            int i3;
             if (bArr.length == bArr2.length) {
-                for (int i3 = 0; i3 < bArr.length; i3++) {
-                    if (bArr[i3] != bArr2[i3]) {
-                        i = bArr[i3];
-                        i2 = bArr2[i3];
+                for (int i4 = 0; i4 < bArr.length; i4++) {
+                    if (bArr[i4] != bArr2[i4]) {
+                        i2 = bArr[i4];
+                        i3 = bArr2[i4];
                     }
                 }
                 return 0;
             }
-            i = bArr.length;
-            i2 = bArr2.length;
-            return i - i2;
+            i2 = bArr.length;
+            i3 = bArr2.length;
+            return i2 - i3;
         }
     }
 
-    /* renamed from: m.b$e */
     /* loaded from: classes.dex */
-    public static class C0432e {
+    public static class e {
 
-        /* renamed from: a */
-        private final int f2089a;
+        /* renamed from: a  reason: collision with root package name */
+        private final int f1576a;
 
-        /* renamed from: b */
-        private final C0433f[] f2090b;
+        /* renamed from: b  reason: collision with root package name */
+        private final f[] f1577b;
 
-        public C0432e(int i, C0433f[] c0433fArr) {
-            this.f2089a = i;
-            this.f2090b = c0433fArr;
+        public e(int i2, f[] fVarArr) {
+            this.f1576a = i2;
+            this.f1577b = fVarArr;
         }
 
-        /* renamed from: a */
-        public C0433f[] m585a() {
-            return this.f2090b;
+        public f[] a() {
+            return this.f1577b;
         }
 
-        /* renamed from: b */
-        public int m584b() {
-            return this.f2089a;
+        public int b() {
+            return this.f1576a;
         }
     }
 
-    /* renamed from: m.b$f */
     /* loaded from: classes.dex */
-    public static class C0433f {
+    public static class f {
 
-        /* renamed from: a */
-        private final Uri f2091a;
+        /* renamed from: a  reason: collision with root package name */
+        private final Uri f1578a;
 
-        /* renamed from: b */
-        private final int f2092b;
+        /* renamed from: b  reason: collision with root package name */
+        private final int f1579b;
 
-        /* renamed from: c */
-        private final int f2093c;
+        /* renamed from: c  reason: collision with root package name */
+        private final int f1580c;
 
-        /* renamed from: d */
-        private final boolean f2094d;
+        /* renamed from: d  reason: collision with root package name */
+        private final boolean f1581d;
 
-        /* renamed from: e */
-        private final int f2095e;
+        /* renamed from: e  reason: collision with root package name */
+        private final int f1582e;
 
-        public C0433f(Uri uri, int i, int i2, boolean z, int i3) {
-            this.f2091a = (Uri) C0461j.m500a(uri);
-            this.f2092b = i;
-            this.f2093c = i2;
-            this.f2094d = z;
-            this.f2095e = i3;
+        public f(Uri uri, int i2, int i3, boolean z, int i4) {
+            this.f1578a = (Uri) j.a(uri);
+            this.f1579b = i2;
+            this.f1580c = i3;
+            this.f1581d = z;
+            this.f1582e = i4;
         }
 
-        /* renamed from: a */
-        public int m583a() {
-            return this.f2095e;
+        public int a() {
+            return this.f1582e;
         }
 
-        /* renamed from: b */
-        public int m582b() {
-            return this.f2092b;
+        public int b() {
+            return this.f1579b;
         }
 
-        /* renamed from: c */
-        public Uri m581c() {
-            return this.f2091a;
+        public Uri c() {
+            return this.f1578a;
         }
 
-        /* renamed from: d */
-        public int m580d() {
-            return this.f2093c;
+        public int d() {
+            return this.f1580c;
         }
 
-        /* renamed from: e */
-        public boolean m579e() {
-            return this.f2094d;
+        public boolean e() {
+            return this.f1581d;
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: m.b$g */
     /* loaded from: classes.dex */
-    public static final class C0434g {
+    public static final class g {
 
-        /* renamed from: a */
-        final Typeface f2096a;
+        /* renamed from: a  reason: collision with root package name */
+        final Typeface f1583a;
 
-        /* renamed from: b */
-        final int f2097b;
+        /* renamed from: b  reason: collision with root package name */
+        final int f1584b;
 
-        C0434g(Typeface typeface, int i) {
-            this.f2096a = typeface;
-            this.f2097b = i;
+        g(Typeface typeface, int i2) {
+            this.f1583a = typeface;
+            this.f1584b = i2;
         }
     }
 
-    /* renamed from: e */
-    private static List<byte[]> m598e(Signature[] signatureArr) {
+    private static List<byte[]> e(Signature[] signatureArr) {
         ArrayList arrayList = new ArrayList();
         for (Signature signature : signatureArr) {
             arrayList.add(signature.toByteArray());
@@ -275,38 +257,34 @@ public class C0427b {
         return arrayList;
     }
 
-    /* renamed from: f */
-    private static boolean m597f(List<byte[]> list, List<byte[]> list2) {
+    private static boolean f(List<byte[]> list, List<byte[]> list2) {
         if (list.size() != list2.size()) {
             return false;
         }
-        for (int i = 0; i < list.size(); i++) {
-            if (!Arrays.equals(list.get(i), list2.get(i))) {
+        for (int i2 = 0; i2 < list.size(); i2++) {
+            if (!Arrays.equals(list.get(i2), list2.get(i2))) {
                 return false;
             }
         }
         return true;
     }
 
-    /* renamed from: g */
-    public static C0432e m596g(Context context, CancellationSignal cancellationSignal, C0426a c0426a) {
-        ProviderInfo m591l = m591l(context.getPackageManager(), c0426a, context.getResources());
-        return m591l == null ? new C0432e(1, null) : new C0432e(0, m594i(context, c0426a, m591l.authority, cancellationSignal));
+    public static e g(Context context, CancellationSignal cancellationSignal, m.a aVar) {
+        ProviderInfo l2 = l(context.getPackageManager(), aVar, context.getResources());
+        return l2 == null ? new e(1, null) : new e(0, i(context, aVar, l2.authority, cancellationSignal));
     }
 
-    /* renamed from: h */
-    private static List<List<byte[]>> m595h(C0426a c0426a, Resources resources) {
-        return c0426a.m608a() != null ? c0426a.m608a() : C0388a.m729b(resources, c0426a.m607b());
+    private static List<List<byte[]>> h(m.a aVar, Resources resources) {
+        return aVar.a() != null ? aVar.a() : h.a.b(resources, aVar.b());
     }
 
-    /* renamed from: i */
-    static C0433f[] m594i(Context context, C0426a c0426a, String str, CancellationSignal cancellationSignal) {
+    static f[] i(Context context, m.a aVar, String str, CancellationSignal cancellationSignal) {
         ArrayList arrayList = new ArrayList();
         Uri build = new Uri.Builder().scheme("content").authority(str).build();
         Uri build2 = new Uri.Builder().scheme("content").authority(str).appendPath("file").build();
         Cursor cursor = null;
         try {
-            cursor = context.getContentResolver().query(build, new String[]{"_id", "file_id", "font_ttc_index", "font_variation_settings", "font_weight", "font_italic", "result_code"}, "query = ?", new String[]{c0426a.m603f()}, null, cancellationSignal);
+            cursor = context.getContentResolver().query(build, new String[]{"_id", "file_id", "font_ttc_index", "font_variation_settings", "font_weight", "font_italic", "result_code"}, "query = ?", new String[]{aVar.f()}, null, cancellationSignal);
             if (cursor != null && cursor.getCount() > 0) {
                 int columnIndex = cursor.getColumnIndex("result_code");
                 ArrayList arrayList2 = new ArrayList();
@@ -316,12 +294,12 @@ public class C0427b {
                 int columnIndex5 = cursor.getColumnIndex("font_weight");
                 int columnIndex6 = cursor.getColumnIndex("font_italic");
                 while (cursor.moveToNext()) {
-                    int i = columnIndex != -1 ? cursor.getInt(columnIndex) : 0;
-                    arrayList2.add(new C0433f(columnIndex3 == -1 ? ContentUris.withAppendedId(build, cursor.getLong(columnIndex2)) : ContentUris.withAppendedId(build2, cursor.getLong(columnIndex3)), columnIndex4 != -1 ? cursor.getInt(columnIndex4) : 0, columnIndex5 != -1 ? cursor.getInt(columnIndex5) : 400, columnIndex6 != -1 && cursor.getInt(columnIndex6) == 1, i));
+                    int i2 = columnIndex != -1 ? cursor.getInt(columnIndex) : 0;
+                    arrayList2.add(new f(columnIndex3 == -1 ? ContentUris.withAppendedId(build, cursor.getLong(columnIndex2)) : ContentUris.withAppendedId(build2, cursor.getLong(columnIndex3)), columnIndex4 != -1 ? cursor.getInt(columnIndex4) : 0, columnIndex5 != -1 ? cursor.getInt(columnIndex5) : 400, columnIndex6 != -1 && cursor.getInt(columnIndex6) == 1, i2));
                 }
                 arrayList = arrayList2;
             }
-            return (C0433f[]) arrayList.toArray(new C0433f[0]);
+            return (f[]) arrayList.toArray(new f[0]);
         } finally {
             if (cursor != null) {
                 cursor.close();
@@ -330,85 +308,82 @@ public class C0427b {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: j */
-    public static C0434g m593j(Context context, C0426a c0426a, int i) {
+    public static g j(Context context, m.a aVar, int i2) {
         try {
-            C0432e m596g = m596g(context, null, c0426a);
-            if (m596g.m584b() != 0) {
-                return new C0434g(null, m596g.m584b() == 1 ? -2 : -3);
+            e g2 = g(context, null, aVar);
+            if (g2.b() != 0) {
+                return new g(null, g2.b() == 1 ? -2 : -3);
             }
-            Typeface m677a = C0402c.m677a(context, null, m596g.m585a(), i);
-            return new C0434g(m677a, m677a != null ? 0 : -3);
+            Typeface a2 = i.c.a(context, null, g2.a(), i2);
+            return new g(a2, a2 != null ? 0 : -3);
         } catch (PackageManager.NameNotFoundException unused) {
-            return new C0434g(null, -1);
+            return new g(null, -1);
         }
     }
 
-    /* renamed from: k */
-    public static Typeface m592k(Context context, C0426a c0426a, C0393b.AbstractC0394a abstractC0394a, Handler handler, boolean z, int i, int i2) {
-        String str = c0426a.m606c() + "-" + i2;
-        Typeface m526c = f2077a.m526c(str);
-        if (m526c != null) {
-            if (abstractC0394a != null) {
-                abstractC0394a.mo706d(m526c);
+    public static Typeface k(Context context, m.a aVar, b.a aVar2, Handler handler, boolean z, int i2, int i3) {
+        String str = aVar.c() + "-" + i3;
+        Typeface c2 = f1564a.c(str);
+        if (c2 != null) {
+            if (aVar2 != null) {
+                aVar2.d(c2);
             }
-            return m526c;
-        } else if (z && i == -1) {
-            C0434g m593j = m593j(context, c0426a, i2);
-            if (abstractC0394a != null) {
-                int i3 = m593j.f2097b;
-                if (i3 == 0) {
-                    abstractC0394a.m708b(m593j.f2096a, handler);
+            return c2;
+        } else if (z && i2 == -1) {
+            g j2 = j(context, aVar, i3);
+            if (aVar2 != null) {
+                int i4 = j2.f1584b;
+                if (i4 == 0) {
+                    aVar2.b(j2.f1583a, handler);
                 } else {
-                    abstractC0394a.m709a(i3, handler);
+                    aVar2.a(i4, handler);
                 }
             }
-            return m593j.f2096a;
+            return j2.f1583a;
         } else {
-            CallableC0428a callableC0428a = new CallableC0428a(context, c0426a, i2, str);
+            a aVar3 = new a(context, aVar, i3, str);
             if (z) {
                 try {
-                    return ((C0434g) f2078b.m572g(callableC0428a, i)).f2096a;
+                    return ((g) f1565b.g(aVar3, i2)).f1583a;
                 } catch (InterruptedException unused) {
                     return null;
                 }
             }
-            C0429b c0429b = abstractC0394a == null ? null : new C0429b(abstractC0394a, handler);
-            synchronized (f2079c) {
-                C0462k<String, ArrayList<C0435c.InterfaceC0440d<C0434g>>> c0462k = f2080d;
-                if (c0462k.containsKey(str)) {
-                    if (c0429b != null) {
-                        c0462k.get(str).add(c0429b);
+            C0017b c0017b = aVar2 == null ? null : new C0017b(aVar2, handler);
+            synchronized (f1566c) {
+                k<String, ArrayList<c.d<g>>> kVar = f1567d;
+                if (kVar.containsKey(str)) {
+                    if (c0017b != null) {
+                        kVar.get(str).add(c0017b);
                     }
                     return null;
                 }
-                if (c0429b != null) {
-                    ArrayList<C0435c.InterfaceC0440d<C0434g>> arrayList = new ArrayList<>();
-                    arrayList.add(c0429b);
-                    c0462k.put(str, arrayList);
+                if (c0017b != null) {
+                    ArrayList<c.d<g>> arrayList = new ArrayList<>();
+                    arrayList.add(c0017b);
+                    kVar.put(str, arrayList);
                 }
-                f2078b.m573f(callableC0428a, new C0430c(str));
+                f1565b.f(aVar3, new c(str));
                 return null;
             }
         }
     }
 
-    /* renamed from: l */
-    public static ProviderInfo m591l(PackageManager packageManager, C0426a c0426a, Resources resources) {
-        String m605d = c0426a.m605d();
-        ProviderInfo resolveContentProvider = packageManager.resolveContentProvider(m605d, 0);
+    public static ProviderInfo l(PackageManager packageManager, m.a aVar, Resources resources) {
+        String d2 = aVar.d();
+        ProviderInfo resolveContentProvider = packageManager.resolveContentProvider(d2, 0);
         if (resolveContentProvider == null) {
-            throw new PackageManager.NameNotFoundException("No package found for authority: " + m605d);
-        } else if (!resolveContentProvider.packageName.equals(c0426a.m604e())) {
-            throw new PackageManager.NameNotFoundException("Found content provider " + m605d + ", but package was not " + c0426a.m604e());
+            throw new PackageManager.NameNotFoundException("No package found for authority: " + d2);
+        } else if (!resolveContentProvider.packageName.equals(aVar.e())) {
+            throw new PackageManager.NameNotFoundException("Found content provider " + d2 + ", but package was not " + aVar.e());
         } else {
-            List<byte[]> m598e = m598e(packageManager.getPackageInfo(resolveContentProvider.packageName, 64).signatures);
-            Collections.sort(m598e, f2081e);
-            List<List<byte[]>> m595h = m595h(c0426a, resources);
-            for (int i = 0; i < m595h.size(); i++) {
-                ArrayList arrayList = new ArrayList(m595h.get(i));
-                Collections.sort(arrayList, f2081e);
-                if (m597f(m598e, arrayList)) {
+            List<byte[]> e2 = e(packageManager.getPackageInfo(resolveContentProvider.packageName, 64).signatures);
+            Collections.sort(e2, f1568e);
+            List<List<byte[]>> h2 = h(aVar, resources);
+            for (int i2 = 0; i2 < h2.size(); i2++) {
+                ArrayList arrayList = new ArrayList(h2.get(i2));
+                Collections.sort(arrayList, f1568e);
+                if (f(e2, arrayList)) {
                     return resolveContentProvider;
                 }
             }
@@ -416,14 +391,13 @@ public class C0427b {
         }
     }
 
-    /* renamed from: m */
-    public static Map<Uri, ByteBuffer> m590m(Context context, C0433f[] c0433fArr, CancellationSignal cancellationSignal) {
+    public static Map<Uri, ByteBuffer> m(Context context, f[] fVarArr, CancellationSignal cancellationSignal) {
         HashMap hashMap = new HashMap();
-        for (C0433f c0433f : c0433fArr) {
-            if (c0433f.m583a() == 0) {
-                Uri m581c = c0433f.m581c();
-                if (!hashMap.containsKey(m581c)) {
-                    hashMap.put(m581c, C0412i.m635f(context, cancellationSignal, m581c));
+        for (f fVar : fVarArr) {
+            if (fVar.a() == 0) {
+                Uri c2 = fVar.c();
+                if (!hashMap.containsKey(c2)) {
+                    hashMap.put(c2, i.f(context, cancellationSignal, c2));
                 }
             }
         }

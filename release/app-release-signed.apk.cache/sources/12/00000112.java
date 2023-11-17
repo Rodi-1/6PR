@@ -1,245 +1,242 @@
-package android.support.p002v7.widget;
+package android.support.v7.widget;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
-import android.support.p001v4.widget.InterfaceC0138b;
 import android.util.AttributeSet;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputConnection;
 import android.widget.TextView;
-import p016o.InterfaceC0489n;
 
-/* renamed from: android.support.v7.widget.a0 */
 /* loaded from: classes.dex */
-public class C0240a0 extends TextView implements InterfaceC0489n, InterfaceC0138b {
+public class a0 extends TextView implements o.n, android.support.v4.widget.b {
 
-    /* renamed from: b */
-    private final C0259f f1236b;
+    /* renamed from: b  reason: collision with root package name */
+    private final f f957b;
 
-    /* renamed from: c */
-    private final C0329y f1237c;
+    /* renamed from: c  reason: collision with root package name */
+    private final y f958c;
 
-    public C0240a0(Context context) {
+    public a0(Context context) {
         this(context, null);
     }
 
-    public C0240a0(Context context, AttributeSet attributeSet) {
+    public a0(Context context, AttributeSet attributeSet) {
         this(context, attributeSet, 16842884);
     }
 
-    public C0240a0(Context context, AttributeSet attributeSet, int i) {
-        super(C0310s0.m1129b(context), attributeSet, i);
-        C0259f c0259f = new C0259f(this);
-        this.f1236b = c0259f;
-        c0259f.m1316e(attributeSet, i);
-        C0329y m1049e = C0329y.m1049e(this);
-        this.f1237c = m1049e;
-        m1049e.mo1020m(attributeSet, i);
-        m1049e.mo1021c();
+    public a0(Context context, AttributeSet attributeSet, int i2) {
+        super(s0.b(context), attributeSet, i2);
+        f fVar = new f(this);
+        this.f957b = fVar;
+        fVar.e(attributeSet, i2);
+        y e2 = y.e(this);
+        this.f958c = e2;
+        e2.m(attributeSet, i2);
+        e2.c();
     }
 
     @Override // android.widget.TextView, android.view.View
     protected void drawableStateChanged() {
         super.drawableStateChanged();
-        C0259f c0259f = this.f1236b;
-        if (c0259f != null) {
-            c0259f.m1319b();
+        f fVar = this.f957b;
+        if (fVar != null) {
+            fVar.b();
         }
-        C0329y c0329y = this.f1237c;
-        if (c0329y != null) {
-            c0329y.mo1021c();
+        y yVar = this.f958c;
+        if (yVar != null) {
+            yVar.c();
         }
     }
 
     @Override // android.widget.TextView
     public int getAutoSizeMaxTextSize() {
-        if (InterfaceC0138b.f682a) {
+        if (android.support.v4.widget.b.f532a) {
             return super.getAutoSizeMaxTextSize();
         }
-        C0329y c0329y = this.f1237c;
-        if (c0329y != null) {
-            return c0329y.m1047g();
+        y yVar = this.f958c;
+        if (yVar != null) {
+            return yVar.g();
         }
         return -1;
     }
 
     @Override // android.widget.TextView
     public int getAutoSizeMinTextSize() {
-        if (InterfaceC0138b.f682a) {
+        if (android.support.v4.widget.b.f532a) {
             return super.getAutoSizeMinTextSize();
         }
-        C0329y c0329y = this.f1237c;
-        if (c0329y != null) {
-            return c0329y.m1046h();
+        y yVar = this.f958c;
+        if (yVar != null) {
+            return yVar.h();
         }
         return -1;
     }
 
     @Override // android.widget.TextView
     public int getAutoSizeStepGranularity() {
-        if (InterfaceC0138b.f682a) {
+        if (android.support.v4.widget.b.f532a) {
             return super.getAutoSizeStepGranularity();
         }
-        C0329y c0329y = this.f1237c;
-        if (c0329y != null) {
-            return c0329y.m1045i();
+        y yVar = this.f958c;
+        if (yVar != null) {
+            return yVar.i();
         }
         return -1;
     }
 
     @Override // android.widget.TextView
     public int[] getAutoSizeTextAvailableSizes() {
-        if (InterfaceC0138b.f682a) {
+        if (android.support.v4.widget.b.f532a) {
             return super.getAutoSizeTextAvailableSizes();
         }
-        C0329y c0329y = this.f1237c;
-        return c0329y != null ? c0329y.m1044j() : new int[0];
+        y yVar = this.f958c;
+        return yVar != null ? yVar.j() : new int[0];
     }
 
     @Override // android.widget.TextView
     public int getAutoSizeTextType() {
-        if (InterfaceC0138b.f682a) {
+        if (android.support.v4.widget.b.f532a) {
             return super.getAutoSizeTextType() == 1 ? 1 : 0;
         }
-        C0329y c0329y = this.f1237c;
-        if (c0329y != null) {
-            return c0329y.m1043k();
+        y yVar = this.f958c;
+        if (yVar != null) {
+            return yVar.k();
         }
         return 0;
     }
 
-    @Override // p016o.InterfaceC0489n
+    @Override // o.n
     public ColorStateList getSupportBackgroundTintList() {
-        C0259f c0259f = this.f1236b;
-        if (c0259f != null) {
-            return c0259f.m1318c();
+        f fVar = this.f957b;
+        if (fVar != null) {
+            return fVar.c();
         }
         return null;
     }
 
-    @Override // p016o.InterfaceC0489n
+    @Override // o.n
     public PorterDuff.Mode getSupportBackgroundTintMode() {
-        C0259f c0259f = this.f1236b;
-        if (c0259f != null) {
-            return c0259f.m1317d();
+        f fVar = this.f957b;
+        if (fVar != null) {
+            return fVar.d();
         }
         return null;
     }
 
     @Override // android.widget.TextView, android.view.View
     public InputConnection onCreateInputConnection(EditorInfo editorInfo) {
-        return C0292m.m1188a(super.onCreateInputConnection(editorInfo), editorInfo, this);
+        return m.a(super.onCreateInputConnection(editorInfo), editorInfo, this);
     }
 
     @Override // android.widget.TextView, android.view.View
-    protected void onLayout(boolean z, int i, int i2, int i3, int i4) {
-        super.onLayout(z, i, i2, i3, i4);
-        C0329y c0329y = this.f1237c;
-        if (c0329y != null) {
-            c0329y.m1040o(z, i, i2, i3, i4);
+    protected void onLayout(boolean z, int i2, int i3, int i4, int i5) {
+        super.onLayout(z, i2, i3, i4, i5);
+        y yVar = this.f958c;
+        if (yVar != null) {
+            yVar.o(z, i2, i3, i4, i5);
         }
     }
 
     @Override // android.widget.TextView
-    protected void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
-        super.onTextChanged(charSequence, i, i2, i3);
-        C0329y c0329y = this.f1237c;
-        if (c0329y == null || InterfaceC0138b.f682a || !c0329y.m1042l()) {
+    protected void onTextChanged(CharSequence charSequence, int i2, int i3, int i4) {
+        super.onTextChanged(charSequence, i2, i3, i4);
+        y yVar = this.f958c;
+        if (yVar == null || android.support.v4.widget.b.f532a || !yVar.l()) {
             return;
         }
-        this.f1237c.m1050d();
+        this.f958c.d();
     }
 
     @Override // android.widget.TextView
-    public void setAutoSizeTextTypeUniformWithConfiguration(int i, int i2, int i3, int i4) {
-        if (InterfaceC0138b.f682a) {
-            super.setAutoSizeTextTypeUniformWithConfiguration(i, i2, i3, i4);
+    public void setAutoSizeTextTypeUniformWithConfiguration(int i2, int i3, int i4, int i5) {
+        if (android.support.v4.widget.b.f532a) {
+            super.setAutoSizeTextTypeUniformWithConfiguration(i2, i3, i4, i5);
             return;
         }
-        C0329y c0329y = this.f1237c;
-        if (c0329y != null) {
-            c0329y.m1037r(i, i2, i3, i4);
-        }
-    }
-
-    @Override // android.widget.TextView
-    public void setAutoSizeTextTypeUniformWithPresetSizes(int[] iArr, int i) {
-        if (InterfaceC0138b.f682a) {
-            super.setAutoSizeTextTypeUniformWithPresetSizes(iArr, i);
-            return;
-        }
-        C0329y c0329y = this.f1237c;
-        if (c0329y != null) {
-            c0329y.m1036s(iArr, i);
+        y yVar = this.f958c;
+        if (yVar != null) {
+            yVar.r(i2, i3, i4, i5);
         }
     }
 
     @Override // android.widget.TextView
-    public void setAutoSizeTextTypeWithDefaults(int i) {
-        if (InterfaceC0138b.f682a) {
-            super.setAutoSizeTextTypeWithDefaults(i);
+    public void setAutoSizeTextTypeUniformWithPresetSizes(int[] iArr, int i2) {
+        if (android.support.v4.widget.b.f532a) {
+            super.setAutoSizeTextTypeUniformWithPresetSizes(iArr, i2);
             return;
         }
-        C0329y c0329y = this.f1237c;
-        if (c0329y != null) {
-            c0329y.m1035t(i);
+        y yVar = this.f958c;
+        if (yVar != null) {
+            yVar.s(iArr, i2);
+        }
+    }
+
+    @Override // android.widget.TextView
+    public void setAutoSizeTextTypeWithDefaults(int i2) {
+        if (android.support.v4.widget.b.f532a) {
+            super.setAutoSizeTextTypeWithDefaults(i2);
+            return;
+        }
+        y yVar = this.f958c;
+        if (yVar != null) {
+            yVar.t(i2);
         }
     }
 
     @Override // android.view.View
     public void setBackgroundDrawable(Drawable drawable) {
         super.setBackgroundDrawable(drawable);
-        C0259f c0259f = this.f1236b;
-        if (c0259f != null) {
-            c0259f.m1315f(drawable);
+        f fVar = this.f957b;
+        if (fVar != null) {
+            fVar.f(drawable);
         }
     }
 
     @Override // android.view.View
-    public void setBackgroundResource(int i) {
-        super.setBackgroundResource(i);
-        C0259f c0259f = this.f1236b;
-        if (c0259f != null) {
-            c0259f.m1314g(i);
+    public void setBackgroundResource(int i2) {
+        super.setBackgroundResource(i2);
+        f fVar = this.f957b;
+        if (fVar != null) {
+            fVar.g(i2);
         }
     }
 
-    @Override // p016o.InterfaceC0489n
+    @Override // o.n
     public void setSupportBackgroundTintList(ColorStateList colorStateList) {
-        C0259f c0259f = this.f1236b;
-        if (c0259f != null) {
-            c0259f.m1312i(colorStateList);
+        f fVar = this.f957b;
+        if (fVar != null) {
+            fVar.i(colorStateList);
         }
     }
 
-    @Override // p016o.InterfaceC0489n
+    @Override // o.n
     public void setSupportBackgroundTintMode(PorterDuff.Mode mode) {
-        C0259f c0259f = this.f1236b;
-        if (c0259f != null) {
-            c0259f.m1311j(mode);
+        f fVar = this.f957b;
+        if (fVar != null) {
+            fVar.j(mode);
         }
     }
 
     @Override // android.widget.TextView
-    public void setTextAppearance(Context context, int i) {
-        super.setTextAppearance(context, i);
-        C0329y c0329y = this.f1237c;
-        if (c0329y != null) {
-            c0329y.m1039p(context, i);
+    public void setTextAppearance(Context context, int i2) {
+        super.setTextAppearance(context, i2);
+        y yVar = this.f958c;
+        if (yVar != null) {
+            yVar.p(context, i2);
         }
     }
 
     @Override // android.widget.TextView
-    public void setTextSize(int i, float f) {
-        if (InterfaceC0138b.f682a) {
-            super.setTextSize(i, f);
+    public void setTextSize(int i2, float f2) {
+        if (android.support.v4.widget.b.f532a) {
+            super.setTextSize(i2, f2);
             return;
         }
-        C0329y c0329y = this.f1237c;
-        if (c0329y != null) {
-            c0329y.m1034u(i, f);
+        y yVar = this.f958c;
+        if (yVar != null) {
+            yVar.u(i2, f2);
         }
     }
 }

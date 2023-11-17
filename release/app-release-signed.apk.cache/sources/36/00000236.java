@@ -1,4 +1,4 @@
-package p019r;
+package r;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -11,99 +11,73 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 
-/* renamed from: r.d */
 /* loaded from: classes.dex */
-public abstract class AbstractC0531d {
+public abstract class d {
 
-    /* renamed from: b */
-    private static int f2254b = -1;
+    /* renamed from: b  reason: collision with root package name */
+    private static int f1736b = -1;
 
-    /* renamed from: c */
-    private static boolean f2255c = false;
+    /* renamed from: c  reason: collision with root package name */
+    private static boolean f1737c = false;
 
-    /* renamed from: e */
-    public static AbstractC0531d m276e(Activity activity, InterfaceC0530c interfaceC0530c) {
-        return m274g(activity, activity.getWindow(), interfaceC0530c);
+    public static d e(Activity activity, c cVar) {
+        return g(activity, activity.getWindow(), cVar);
     }
 
-    /* renamed from: f */
-    public static AbstractC0531d m275f(Dialog dialog, InterfaceC0530c interfaceC0530c) {
-        return m274g(dialog.getContext(), dialog.getWindow(), interfaceC0530c);
+    public static d f(Dialog dialog, c cVar) {
+        return g(dialog.getContext(), dialog.getWindow(), cVar);
     }
 
-    /* renamed from: g */
-    private static AbstractC0531d m274g(Context context, Window window, InterfaceC0530c interfaceC0530c) {
-        int i = Build.VERSION.SDK_INT;
-        return i >= 24 ? new C0535f(context, window, interfaceC0530c) : i >= 23 ? new C0541h(context, window, interfaceC0530c) : new C0537g(context, window, interfaceC0530c);
+    private static d g(Context context, Window window, c cVar) {
+        int i2 = Build.VERSION.SDK_INT;
+        return i2 >= 24 ? new f(context, window, cVar) : i2 >= 23 ? new h(context, window, cVar) : new g(context, window, cVar);
     }
 
-    /* renamed from: i */
-    public static int m273i() {
-        return f2254b;
+    public static int i() {
+        return f1736b;
     }
 
-    /* renamed from: n */
-    public static boolean m272n() {
-        return f2255c;
+    public static boolean n() {
+        return f1737c;
     }
 
-    /* renamed from: A */
-    public abstract void mo271A(CharSequence charSequence);
+    public abstract void A(CharSequence charSequence);
 
-    /* renamed from: c */
-    public abstract void mo226c(View view, ViewGroup.LayoutParams layoutParams);
+    public abstract void c(View view, ViewGroup.LayoutParams layoutParams);
 
-    /* renamed from: d */
-    public abstract boolean mo260d();
+    public abstract boolean d();
 
-    /* renamed from: h */
-    public abstract <T extends View> T mo220h(int i);
+    public abstract <T extends View> T h(int i2);
 
-    /* renamed from: j */
-    public abstract MenuInflater mo265j();
+    public abstract MenuInflater j();
 
-    /* renamed from: k */
-    public abstract AbstractC0525a mo264k();
+    public abstract a k();
 
-    /* renamed from: l */
-    public abstract void mo215l();
+    public abstract void l();
 
-    /* renamed from: m */
-    public abstract void mo213m();
+    public abstract void m();
 
-    /* renamed from: o */
-    public abstract void mo210o(Configuration configuration);
+    public abstract void o(Configuration configuration);
 
-    /* renamed from: p */
-    public abstract void mo208p(Bundle bundle);
+    public abstract void p(Bundle bundle);
 
-    /* renamed from: q */
-    public abstract void mo206q();
+    public abstract void q();
 
-    /* renamed from: r */
-    public abstract void mo204r(Bundle bundle);
+    public abstract void r(Bundle bundle);
 
-    /* renamed from: s */
-    public abstract void mo202s();
+    public abstract void s();
 
-    /* renamed from: t */
-    public abstract void mo259t(Bundle bundle);
+    public abstract void t(Bundle bundle);
 
-    /* renamed from: u */
-    public abstract void mo258u();
+    public abstract void u();
 
-    /* renamed from: v */
-    public abstract void mo198v();
+    public abstract void v();
 
-    /* renamed from: w */
-    public abstract boolean mo196w(int i);
+    public abstract boolean w(int i2);
 
-    /* renamed from: x */
-    public abstract void mo195x(int i);
+    public abstract void x(int i2);
 
-    /* renamed from: y */
-    public abstract void mo194y(View view);
+    public abstract void y(View view);
 
-    /* renamed from: z */
-    public abstract void mo193z(View view, ViewGroup.LayoutParams layoutParams);
+    public abstract void z(View view, ViewGroup.LayoutParams layoutParams);
 }

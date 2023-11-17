@@ -1,11 +1,10 @@
-package android.support.p001v4.widget;
+package android.support.v4.widget;
 
 import android.content.res.ColorStateList;
 import android.graphics.PorterDuff;
 
-/* renamed from: android.support.v4.widget.m */
 /* loaded from: classes.dex */
-public interface InterfaceC0164m {
+public interface m {
     ColorStateList getSupportImageTintList();
 
     PorterDuff.Mode getSupportImageTintMode();

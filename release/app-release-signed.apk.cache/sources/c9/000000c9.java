@@ -1,190 +1,173 @@
-package android.support.p002v7.view.menu;
+package android.support.v7.view.menu;
 
 import android.content.Context;
-import android.support.p002v7.view.menu.InterfaceC0201j;
-import android.support.p002v7.view.menu.InterfaceC0203k;
+import android.support.v7.view.menu.j;
+import android.support.v7.view.menu.k;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import java.util.ArrayList;
 
-/* renamed from: android.support.v7.view.menu.a */
 /* loaded from: classes.dex */
-public abstract class AbstractC0182a implements InterfaceC0201j {
+public abstract class a implements j {
 
-    /* renamed from: b */
-    protected Context f858b;
+    /* renamed from: b  reason: collision with root package name */
+    protected Context f667b;
 
-    /* renamed from: c */
-    protected Context f859c;
+    /* renamed from: c  reason: collision with root package name */
+    protected Context f668c;
 
-    /* renamed from: d */
-    protected C0192e f860d;
+    /* renamed from: d  reason: collision with root package name */
+    protected e f669d;
 
-    /* renamed from: e */
-    protected LayoutInflater f861e;
+    /* renamed from: e  reason: collision with root package name */
+    protected LayoutInflater f670e;
 
-    /* renamed from: f */
-    protected LayoutInflater f862f;
+    /* renamed from: f  reason: collision with root package name */
+    protected LayoutInflater f671f;
 
-    /* renamed from: g */
-    private InterfaceC0201j.InterfaceC0202a f863g;
+    /* renamed from: g  reason: collision with root package name */
+    private j.a f672g;
 
-    /* renamed from: h */
-    private int f864h;
+    /* renamed from: h  reason: collision with root package name */
+    private int f673h;
 
-    /* renamed from: i */
-    private int f865i;
+    /* renamed from: i  reason: collision with root package name */
+    private int f674i;
 
-    /* renamed from: j */
-    protected InterfaceC0203k f866j;
+    /* renamed from: j  reason: collision with root package name */
+    protected k f675j;
 
-    /* renamed from: k */
-    private int f867k;
+    /* renamed from: k  reason: collision with root package name */
+    private int f676k;
 
-    public AbstractC0182a(Context context, int i, int i2) {
-        this.f858b = context;
-        this.f861e = LayoutInflater.from(context);
-        this.f864h = i;
-        this.f865i = i2;
+    public a(Context context, int i2, int i3) {
+        this.f667b = context;
+        this.f670e = LayoutInflater.from(context);
+        this.f673h = i2;
+        this.f674i = i3;
     }
 
-    @Override // android.support.p002v7.view.menu.InterfaceC0201j
-    /* renamed from: a */
-    public void mo1347a(C0192e c0192e, boolean z) {
-        InterfaceC0201j.InterfaceC0202a interfaceC0202a = this.f863g;
-        if (interfaceC0202a != null) {
-            interfaceC0202a.mo184a(c0192e, z);
+    @Override // android.support.v7.view.menu.j
+    public void a(e eVar, boolean z) {
+        j.a aVar = this.f672g;
+        if (aVar != null) {
+            aVar.a(eVar, z);
         }
     }
 
-    @Override // android.support.p002v7.view.menu.InterfaceC0201j
-    /* renamed from: b */
-    public boolean mo1346b(SubMenuC0208m subMenuC0208m) {
-        InterfaceC0201j.InterfaceC0202a interfaceC0202a = this.f863g;
-        if (interfaceC0202a != null) {
-            return interfaceC0202a.mo183b(subMenuC0208m);
+    @Override // android.support.v7.view.menu.j
+    public boolean b(m mVar) {
+        j.a aVar = this.f672g;
+        if (aVar != null) {
+            return aVar.b(mVar);
         }
         return false;
     }
 
-    /* renamed from: c */
-    protected void m1674c(View view, int i) {
+    protected void c(View view, int i2) {
         ViewGroup viewGroup = (ViewGroup) view.getParent();
         if (viewGroup != null) {
             viewGroup.removeView(view);
         }
-        ((ViewGroup) this.f866j).addView(view, i);
+        ((ViewGroup) this.f675j).addView(view, i2);
     }
 
-    /* renamed from: d */
-    public abstract void mo1345d(C0196g c0196g, InterfaceC0203k.InterfaceC0204a interfaceC0204a);
+    public abstract void d(g gVar, k.a aVar);
 
-    @Override // android.support.p002v7.view.menu.InterfaceC0201j
-    /* renamed from: e */
-    public boolean mo1413e(C0192e c0192e, C0196g c0196g) {
+    @Override // android.support.v7.view.menu.j
+    public boolean e(e eVar, g gVar) {
         return false;
     }
 
-    /* renamed from: f */
-    public InterfaceC0203k.InterfaceC0204a m1673f(ViewGroup viewGroup) {
-        return (InterfaceC0203k.InterfaceC0204a) this.f861e.inflate(this.f865i, viewGroup, false);
+    public k.a f(ViewGroup viewGroup) {
+        return (k.a) this.f670e.inflate(this.f674i, viewGroup, false);
     }
 
-    @Override // android.support.p002v7.view.menu.InterfaceC0201j
-    /* renamed from: h */
-    public boolean mo1412h(C0192e c0192e, C0196g c0196g) {
+    @Override // android.support.v7.view.menu.j
+    public boolean h(e eVar, g gVar) {
         return false;
     }
 
-    @Override // android.support.p002v7.view.menu.InterfaceC0201j
-    /* renamed from: i */
-    public void mo1343i(boolean z) {
-        ViewGroup viewGroup = (ViewGroup) this.f866j;
+    @Override // android.support.v7.view.menu.j
+    public void i(boolean z) {
+        ViewGroup viewGroup = (ViewGroup) this.f675j;
         if (viewGroup == null) {
             return;
         }
-        C0192e c0192e = this.f860d;
-        int i = 0;
-        if (c0192e != null) {
-            c0192e.m1612r();
-            ArrayList<C0196g> m1648E = this.f860d.m1648E();
-            int size = m1648E.size();
-            int i2 = 0;
-            for (int i3 = 0; i3 < size; i3++) {
-                C0196g c0196g = m1648E.get(i3);
-                if (mo1338q(i2, c0196g)) {
-                    View childAt = viewGroup.getChildAt(i2);
-                    C0196g itemData = childAt instanceof InterfaceC0203k.InterfaceC0204a ? ((InterfaceC0203k.InterfaceC0204a) childAt).getItemData() : null;
-                    View mo1340n = mo1340n(c0196g, childAt, viewGroup);
-                    if (c0196g != itemData) {
-                        mo1340n.setPressed(false);
-                        mo1340n.jumpDrawablesToCurrentState();
+        e eVar = this.f669d;
+        int i2 = 0;
+        if (eVar != null) {
+            eVar.r();
+            ArrayList<g> E = this.f669d.E();
+            int size = E.size();
+            int i3 = 0;
+            for (int i4 = 0; i4 < size; i4++) {
+                g gVar = E.get(i4);
+                if (q(i3, gVar)) {
+                    View childAt = viewGroup.getChildAt(i3);
+                    g itemData = childAt instanceof k.a ? ((k.a) childAt).getItemData() : null;
+                    View n2 = n(gVar, childAt, viewGroup);
+                    if (gVar != itemData) {
+                        n2.setPressed(false);
+                        n2.jumpDrawablesToCurrentState();
                     }
-                    if (mo1340n != childAt) {
-                        m1674c(mo1340n, i2);
+                    if (n2 != childAt) {
+                        c(n2, i3);
                     }
-                    i2++;
+                    i3++;
                 }
             }
-            i = i2;
+            i2 = i3;
         }
-        while (i < viewGroup.getChildCount()) {
-            if (!mo1341l(viewGroup, i)) {
-                i++;
+        while (i2 < viewGroup.getChildCount()) {
+            if (!l(viewGroup, i2)) {
+                i2++;
             }
         }
     }
 
-    @Override // android.support.p002v7.view.menu.InterfaceC0201j
-    /* renamed from: j */
-    public void mo1554j(InterfaceC0201j.InterfaceC0202a interfaceC0202a) {
-        this.f863g = interfaceC0202a;
+    @Override // android.support.v7.view.menu.j
+    public void j(j.a aVar) {
+        this.f672g = aVar;
     }
 
-    @Override // android.support.p002v7.view.menu.InterfaceC0201j
-    /* renamed from: k */
-    public void mo1342k(Context context, C0192e c0192e) {
-        this.f859c = context;
-        this.f862f = LayoutInflater.from(context);
-        this.f860d = c0192e;
+    @Override // android.support.v7.view.menu.j
+    public void k(Context context, e eVar) {
+        this.f668c = context;
+        this.f671f = LayoutInflater.from(context);
+        this.f669d = eVar;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    /* renamed from: l */
-    public boolean mo1341l(ViewGroup viewGroup, int i) {
-        viewGroup.removeViewAt(i);
+    public boolean l(ViewGroup viewGroup, int i2) {
+        viewGroup.removeViewAt(i2);
         return true;
     }
 
-    /* renamed from: m */
-    public InterfaceC0201j.InterfaceC0202a m1672m() {
-        return this.f863g;
+    public j.a m() {
+        return this.f672g;
     }
 
-    /* renamed from: n */
-    public View mo1340n(C0196g c0196g, View view, ViewGroup viewGroup) {
-        InterfaceC0203k.InterfaceC0204a m1673f = view instanceof InterfaceC0203k.InterfaceC0204a ? (InterfaceC0203k.InterfaceC0204a) view : m1673f(viewGroup);
-        mo1345d(c0196g, m1673f);
-        return (View) m1673f;
+    public View n(g gVar, View view, ViewGroup viewGroup) {
+        k.a f2 = view instanceof k.a ? (k.a) view : f(viewGroup);
+        d(gVar, f2);
+        return (View) f2;
     }
 
-    /* renamed from: o */
-    public InterfaceC0203k mo1339o(ViewGroup viewGroup) {
-        if (this.f866j == null) {
-            InterfaceC0203k interfaceC0203k = (InterfaceC0203k) this.f861e.inflate(this.f864h, viewGroup, false);
-            this.f866j = interfaceC0203k;
-            interfaceC0203k.mo1499b(this.f860d);
-            mo1343i(true);
+    public k o(ViewGroup viewGroup) {
+        if (this.f675j == null) {
+            k kVar = (k) this.f670e.inflate(this.f673h, viewGroup, false);
+            this.f675j = kVar;
+            kVar.b(this.f669d);
+            i(true);
         }
-        return this.f866j;
+        return this.f675j;
     }
 
-    /* renamed from: p */
-    public void m1671p(int i) {
-        this.f867k = i;
+    public void p(int i2) {
+        this.f676k = i2;
     }
 
-    /* renamed from: q */
-    public abstract boolean mo1338q(int i, C0196g c0196g);
+    public abstract boolean q(int i2, g gVar);
 }

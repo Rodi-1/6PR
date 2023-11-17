@@ -1,64 +1,60 @@
-package p006e;
+package e;
 
-/* renamed from: e.h */
 /* loaded from: classes.dex */
-class C0358h<T> implements InterfaceC0357g<T> {
+class h<T> implements g<T> {
 
-    /* renamed from: a */
-    private final Object[] f1800a;
+    /* renamed from: a  reason: collision with root package name */
+    private final Object[] f1374a;
 
-    /* renamed from: b */
-    private int f1801b;
+    /* renamed from: b  reason: collision with root package name */
+    private int f1375b;
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public C0358h(int i) {
-        if (i <= 0) {
+    public h(int i2) {
+        if (i2 <= 0) {
             throw new IllegalArgumentException("The max pool size must be > 0");
         }
-        this.f1800a = new Object[i];
+        this.f1374a = new Object[i2];
     }
 
-    @Override // p006e.InterfaceC0357g
-    /* renamed from: a */
-    public void mo929a(T[] tArr, int i) {
-        if (i > tArr.length) {
-            i = tArr.length;
+    @Override // e.g
+    public void a(T[] tArr, int i2) {
+        if (i2 > tArr.length) {
+            i2 = tArr.length;
         }
-        for (int i2 = 0; i2 < i; i2++) {
-            T t = tArr[i2];
-            int i3 = this.f1801b;
-            Object[] objArr = this.f1800a;
-            if (i3 < objArr.length) {
-                objArr[i3] = t;
-                this.f1801b = i3 + 1;
+        for (int i3 = 0; i3 < i2; i3++) {
+            T t2 = tArr[i3];
+            int i4 = this.f1375b;
+            Object[] objArr = this.f1374a;
+            if (i4 < objArr.length) {
+                objArr[i4] = t2;
+                this.f1375b = i4 + 1;
             }
         }
     }
 
-    @Override // p006e.InterfaceC0357g
-    /* renamed from: b */
-    public boolean mo928b(T t) {
-        int i = this.f1801b;
-        Object[] objArr = this.f1800a;
-        if (i < objArr.length) {
-            objArr[i] = t;
-            this.f1801b = i + 1;
+    @Override // e.g
+    public boolean b(T t2) {
+        int i2 = this.f1375b;
+        Object[] objArr = this.f1374a;
+        if (i2 < objArr.length) {
+            objArr[i2] = t2;
+            this.f1375b = i2 + 1;
             return true;
         }
         return false;
     }
 
-    @Override // p006e.InterfaceC0357g
-    /* renamed from: c */
-    public T mo927c() {
-        int i = this.f1801b;
-        if (i > 0) {
-            int i2 = i - 1;
-            Object[] objArr = this.f1800a;
-            T t = (T) objArr[i2];
-            objArr[i2] = null;
-            this.f1801b = i - 1;
-            return t;
+    @Override // e.g
+    public T c() {
+        int i2 = this.f1375b;
+        if (i2 > 0) {
+            int i3 = i2 - 1;
+            Object[] objArr = this.f1374a;
+            T t2 = (T) objArr[i3];
+            objArr[i3] = null;
+            this.f1375b = i2 - 1;
+            return t2;
         }
         return null;
     }

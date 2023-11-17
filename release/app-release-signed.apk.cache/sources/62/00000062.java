@@ -1,4 +1,4 @@
-package android.support.p001v4.app;
+package android.support.v4.app;
 
 import android.app.Activity;
 import android.content.Context;
@@ -7,81 +7,69 @@ import android.view.LayoutInflater;
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
 
-/* renamed from: android.support.v4.app.k */
 /* loaded from: classes.dex */
-public abstract class AbstractC0085k<E> extends AbstractC0083i {
+public abstract class k<E> extends i {
 
-    /* renamed from: a */
-    private final Activity f467a;
+    /* renamed from: a  reason: collision with root package name */
+    private final Activity f337a;
 
-    /* renamed from: b */
-    final Context f468b;
+    /* renamed from: b  reason: collision with root package name */
+    final Context f338b;
 
-    /* renamed from: c */
-    private final Handler f469c;
+    /* renamed from: c  reason: collision with root package name */
+    private final Handler f339c;
 
-    /* renamed from: d */
-    final int f470d;
+    /* renamed from: d  reason: collision with root package name */
+    final int f340d;
 
-    /* renamed from: e */
-    final LayoutInflater$Factory2C0089m f471e;
+    /* renamed from: e  reason: collision with root package name */
+    final m f341e;
 
-    AbstractC0085k(Activity activity, Context context, Handler handler, int i) {
-        this.f471e = new LayoutInflater$Factory2C0089m();
-        this.f467a = activity;
-        this.f468b = context;
-        this.f469c = handler;
-        this.f470d = i;
+    k(Activity activity, Context context, Handler handler, int i2) {
+        this.f341e = new m();
+        this.f337a = activity;
+        this.f338b = context;
+        this.f339c = handler;
+        this.f340d = i2;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public AbstractC0085k(ActivityC0079h activityC0079h) {
-        this(activityC0079h, activityC0079h, activityC0079h.f451f, 0);
+    public k(h hVar) {
+        this(hVar, hVar, hVar.f321f, 0);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: d */
-    public Activity m2043d() {
-        return this.f467a;
+    public Activity d() {
+        return this.f337a;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: e */
-    public Context m2042e() {
-        return this.f468b;
+    public Context e() {
+        return this.f338b;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: f */
-    public LayoutInflater$Factory2C0089m m2041f() {
-        return this.f471e;
+    public m f() {
+        return this.f341e;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: g */
-    public Handler m2040g() {
-        return this.f469c;
+    public Handler g() {
+        return this.f339c;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: h */
-    public abstract void mo2039h(ComponentCallbacksC0073g componentCallbacksC0073g);
+    public abstract void h(g gVar);
 
-    /* renamed from: i */
-    public abstract void mo2038i(String str, FileDescriptor fileDescriptor, PrintWriter printWriter, String[] strArr);
+    public abstract void i(String str, FileDescriptor fileDescriptor, PrintWriter printWriter, String[] strArr);
 
-    /* renamed from: j */
-    public abstract LayoutInflater mo2037j();
+    public abstract LayoutInflater j();
 
-    /* renamed from: k */
-    public abstract int mo2036k();
+    public abstract int k();
 
-    /* renamed from: l */
-    public abstract boolean mo2035l();
+    public abstract boolean l();
 
-    /* renamed from: m */
-    public abstract boolean mo2034m(ComponentCallbacksC0073g componentCallbacksC0073g);
+    public abstract boolean m(g gVar);
 
-    /* renamed from: n */
-    public abstract void mo2033n();
+    public abstract void n();
 }

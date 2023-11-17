@@ -1,21 +1,20 @@
-package p016o;
+package o;
 
 import android.view.View;
 
-/* renamed from: o.k */
 /* loaded from: classes.dex */
-public interface InterfaceC0486k {
-    boolean onNestedFling(View view, float f, float f2, boolean z);
+public interface k {
+    boolean onNestedFling(View view, float f2, float f3, boolean z);
 
-    boolean onNestedPreFling(View view, float f, float f2);
+    boolean onNestedPreFling(View view, float f2, float f3);
 
-    void onNestedPreScroll(View view, int i, int i2, int[] iArr);
+    void onNestedPreScroll(View view, int i2, int i3, int[] iArr);
 
-    void onNestedScroll(View view, int i, int i2, int i3, int i4);
+    void onNestedScroll(View view, int i2, int i3, int i4, int i5);
 
-    void onNestedScrollAccepted(View view, View view2, int i);
+    void onNestedScrollAccepted(View view, View view2, int i2);
 
-    boolean onStartNestedScroll(View view, View view2, int i);
+    boolean onStartNestedScroll(View view, View view2, int i2);
 
     void onStopNestedScroll(View view);
 }

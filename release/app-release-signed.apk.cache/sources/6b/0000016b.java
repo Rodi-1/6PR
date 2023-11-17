@@ -1,4 +1,4 @@
-package android.support.p002v7.widget;
+package android.support.v7.widget;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -6,214 +6,194 @@ import android.content.res.Resources;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.support.p001v4.widget.InterfaceC0138b;
 import android.widget.TextView;
+import h.b;
 import java.lang.ref.WeakReference;
-import p009h.C0393b;
-import p020s.C0578j;
 
-/* renamed from: android.support.v7.widget.y */
 /* loaded from: classes.dex */
-class C0329y {
+class y {
 
-    /* renamed from: a */
-    final TextView f1558a;
+    /* renamed from: a  reason: collision with root package name */
+    final TextView f1246a;
 
-    /* renamed from: b */
-    private C0312t0 f1559b;
+    /* renamed from: b  reason: collision with root package name */
+    private t0 f1247b;
 
-    /* renamed from: c */
-    private C0312t0 f1560c;
+    /* renamed from: c  reason: collision with root package name */
+    private t0 f1248c;
 
-    /* renamed from: d */
-    private C0312t0 f1561d;
+    /* renamed from: d  reason: collision with root package name */
+    private t0 f1249d;
 
-    /* renamed from: e */
-    private C0312t0 f1562e;
+    /* renamed from: e  reason: collision with root package name */
+    private t0 f1250e;
 
-    /* renamed from: f */
-    private final C0243b0 f1563f;
+    /* renamed from: f  reason: collision with root package name */
+    private final b0 f1251f;
 
-    /* renamed from: g */
-    private int f1564g = 0;
+    /* renamed from: g  reason: collision with root package name */
+    private int f1252g = 0;
 
-    /* renamed from: h */
-    private Typeface f1565h;
+    /* renamed from: h  reason: collision with root package name */
+    private Typeface f1253h;
 
-    /* renamed from: i */
-    private boolean f1566i;
+    /* renamed from: i  reason: collision with root package name */
+    private boolean f1254i;
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: android.support.v7.widget.y$a */
     /* loaded from: classes.dex */
-    public class C0330a extends C0393b.AbstractC0394a {
+    public class a extends b.a {
 
-        /* renamed from: a */
-        final /* synthetic */ WeakReference f1567a;
+        /* renamed from: a  reason: collision with root package name */
+        final /* synthetic */ WeakReference f1255a;
 
-        C0330a(WeakReference weakReference) {
-            this.f1567a = weakReference;
+        a(WeakReference weakReference) {
+            this.f1255a = weakReference;
         }
 
-        @Override // p009h.C0393b.AbstractC0394a
-        /* renamed from: c */
-        public void mo707c(int i) {
+        @Override // h.b.a
+        public void c(int i2) {
         }
 
-        @Override // p009h.C0393b.AbstractC0394a
-        /* renamed from: d */
-        public void mo706d(Typeface typeface) {
-            C0329y.this.m1041n(this.f1567a, typeface);
+        @Override // h.b.a
+        public void d(Typeface typeface) {
+            y.this.n(this.f1255a, typeface);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public C0329y(TextView textView) {
-        this.f1558a = textView;
-        this.f1563f = new C0243b0(textView);
+    public y(TextView textView) {
+        this.f1246a = textView;
+        this.f1251f = new b0(textView);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: e */
-    public static C0329y m1049e(TextView textView) {
-        return new C0334z(textView);
+    public static y e(TextView textView) {
+        return new z(textView);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    /* renamed from: f */
-    public static C0312t0 m1048f(Context context, C0283k c0283k, int i) {
-        ColorStateList m1209s = c0283k.m1209s(context, i);
-        if (m1209s != null) {
-            C0312t0 c0312t0 = new C0312t0();
-            c0312t0.f1501d = true;
-            c0312t0.f1498a = m1209s;
-            return c0312t0;
+    public static t0 f(Context context, k kVar, int i2) {
+        ColorStateList s2 = kVar.s(context, i2);
+        if (s2 != null) {
+            t0 t0Var = new t0();
+            t0Var.f1193d = true;
+            t0Var.f1190a = s2;
+            return t0Var;
         }
         return null;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: n */
-    public void m1041n(WeakReference<TextView> weakReference, Typeface typeface) {
-        if (this.f1566i) {
-            this.f1565h = typeface;
+    public void n(WeakReference<TextView> weakReference, Typeface typeface) {
+        if (this.f1254i) {
+            this.f1253h = typeface;
             TextView textView = weakReference.get();
             if (textView != null) {
-                textView.setTypeface(typeface, this.f1564g);
+                textView.setTypeface(typeface, this.f1252g);
             }
         }
     }
 
-    /* renamed from: v */
-    private void m1033v(int i, float f) {
-        this.f1563f.m1377t(i, f);
+    private void v(int i2, float f2) {
+        this.f1251f.t(i2, f2);
     }
 
-    /* renamed from: w */
-    private void m1032w(Context context, C0316v0 c0316v0) {
-        String m1114n;
+    private void w(Context context, v0 v0Var) {
+        String n2;
         Typeface typeface;
-        this.f1564g = c0316v0.m1118j(C0578j.f2553g2, this.f1564g);
-        int i = C0578j.f2569k2;
-        if (c0316v0.m1111q(i) || c0316v0.m1111q(C0578j.f2573l2)) {
-            this.f1565h = null;
-            int i2 = C0578j.f2573l2;
-            if (c0316v0.m1111q(i2)) {
-                i = i2;
+        this.f1252g = v0Var.j(s.j.g2, this.f1252g);
+        int i2 = s.j.k2;
+        if (v0Var.q(i2) || v0Var.q(s.j.l2)) {
+            this.f1253h = null;
+            int i3 = s.j.l2;
+            if (v0Var.q(i3)) {
+                i2 = i3;
             }
             if (!context.isRestricted()) {
                 try {
-                    Typeface m1119i = c0316v0.m1119i(i, this.f1564g, new C0330a(new WeakReference(this.f1558a)));
-                    this.f1565h = m1119i;
-                    this.f1566i = m1119i == null;
+                    Typeface i4 = v0Var.i(i2, this.f1252g, new a(new WeakReference(this.f1246a)));
+                    this.f1253h = i4;
+                    this.f1254i = i4 == null;
                 } catch (Resources.NotFoundException | UnsupportedOperationException unused) {
                 }
             }
-            if (this.f1565h != null || (m1114n = c0316v0.m1114n(i)) == null) {
+            if (this.f1253h != null || (n2 = v0Var.n(i2)) == null) {
                 return;
             }
-            this.f1565h = Typeface.create(m1114n, this.f1564g);
+            this.f1253h = Typeface.create(n2, this.f1252g);
             return;
         }
-        int i3 = C0578j.f2549f2;
-        if (c0316v0.m1111q(i3)) {
-            this.f1566i = false;
-            int m1118j = c0316v0.m1118j(i3, 1);
-            if (m1118j == 1) {
+        int i5 = s.j.f2;
+        if (v0Var.q(i5)) {
+            this.f1254i = false;
+            int j2 = v0Var.j(i5, 1);
+            if (j2 == 1) {
                 typeface = Typeface.SANS_SERIF;
-            } else if (m1118j == 2) {
+            } else if (j2 == 2) {
                 typeface = Typeface.SERIF;
-            } else if (m1118j != 3) {
+            } else if (j2 != 3) {
                 return;
             } else {
                 typeface = Typeface.MONOSPACE;
             }
-            this.f1565h = typeface;
+            this.f1253h = typeface;
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: b */
-    public final void m1051b(Drawable drawable, C0312t0 c0312t0) {
-        if (drawable == null || c0312t0 == null) {
+    public final void b(Drawable drawable, t0 t0Var) {
+        if (drawable == null || t0Var == null) {
             return;
         }
-        C0283k.m1229C(drawable, c0312t0, this.f1558a.getDrawableState());
+        k.C(drawable, t0Var, this.f1246a.getDrawableState());
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: c */
-    public void mo1021c() {
-        if (this.f1559b == null && this.f1560c == null && this.f1561d == null && this.f1562e == null) {
+    public void c() {
+        if (this.f1247b == null && this.f1248c == null && this.f1249d == null && this.f1250e == null) {
             return;
         }
-        Drawable[] compoundDrawables = this.f1558a.getCompoundDrawables();
-        m1051b(compoundDrawables[0], this.f1559b);
-        m1051b(compoundDrawables[1], this.f1560c);
-        m1051b(compoundDrawables[2], this.f1561d);
-        m1051b(compoundDrawables[3], this.f1562e);
+        Drawable[] compoundDrawables = this.f1246a.getCompoundDrawables();
+        b(compoundDrawables[0], this.f1247b);
+        b(compoundDrawables[1], this.f1248c);
+        b(compoundDrawables[2], this.f1249d);
+        b(compoundDrawables[3], this.f1250e);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: d */
-    public void m1050d() {
-        this.f1563f.m1396a();
+    public void d() {
+        this.f1251f.a();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: g */
-    public int m1047g() {
-        return this.f1563f.m1390g();
+    public int g() {
+        return this.f1251f.g();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: h */
-    public int m1046h() {
-        return this.f1563f.m1389h();
+    public int h() {
+        return this.f1251f.h();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: i */
-    public int m1045i() {
-        return this.f1563f.m1388i();
+    public int i() {
+        return this.f1251f.i();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: j */
-    public int[] m1044j() {
-        return this.f1563f.m1387j();
+    public int[] j() {
+        return this.f1251f.j();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: k */
-    public int m1043k() {
-        return this.f1563f.m1386k();
+    public int k() {
+        return this.f1251f.k();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: l */
-    public boolean m1042l() {
-        return this.f1563f.m1383n();
+    public boolean l() {
+        return this.f1251f.n();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
@@ -225,81 +205,73 @@ class C0329y {
     /* JADX WARN: Removed duplicated region for block: B:62:0x0122  */
     /* JADX WARN: Removed duplicated region for block: B:68:0x0132  */
     @android.annotation.SuppressLint({"NewApi"})
-    /* renamed from: m */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    public void mo1020m(android.util.AttributeSet r18, int r19) {
+    public void m(android.util.AttributeSet r18, int r19) {
         /*
             Method dump skipped, instructions count: 382
             To view this dump change 'Code comments level' option to 'DEBUG'
         */
-        throw new UnsupportedOperationException("Method not decompiled: android.support.p002v7.widget.C0329y.mo1020m(android.util.AttributeSet, int):void");
+        throw new UnsupportedOperationException("Method not decompiled: android.support.v7.widget.y.m(android.util.AttributeSet, int):void");
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: o */
-    public void m1040o(boolean z, int i, int i2, int i3, int i4) {
-        if (InterfaceC0138b.f682a) {
+    public void o(boolean z, int i2, int i3, int i4, int i5) {
+        if (android.support.v4.widget.b.f532a) {
             return;
         }
-        m1050d();
+        d();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: p */
-    public void m1039p(Context context, int i) {
-        ColorStateList m1125c;
-        C0316v0 m1110r = C0316v0.m1110r(context, i, C0578j.f2541d2);
-        int i2 = C0578j.f2577m2;
-        if (m1110r.m1111q(i2)) {
-            m1038q(m1110r.m1127a(i2, false));
+    public void p(Context context, int i2) {
+        ColorStateList c2;
+        v0 r2 = v0.r(context, i2, s.j.d2);
+        int i3 = s.j.m2;
+        if (r2.q(i3)) {
+            q(r2.a(i3, false));
         }
         if (Build.VERSION.SDK_INT < 23) {
-            int i3 = C0578j.f2557h2;
-            if (m1110r.m1111q(i3) && (m1125c = m1110r.m1125c(i3)) != null) {
-                this.f1558a.setTextColor(m1125c);
+            int i4 = s.j.h2;
+            if (r2.q(i4) && (c2 = r2.c(i4)) != null) {
+                this.f1246a.setTextColor(c2);
             }
         }
-        m1032w(context, m1110r);
-        m1110r.m1107u();
-        Typeface typeface = this.f1565h;
+        w(context, r2);
+        r2.u();
+        Typeface typeface = this.f1253h;
         if (typeface != null) {
-            this.f1558a.setTypeface(typeface, this.f1564g);
+            this.f1246a.setTypeface(typeface, this.f1252g);
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: q */
-    public void m1038q(boolean z) {
-        this.f1558a.setAllCaps(z);
+    public void q(boolean z) {
+        this.f1246a.setAllCaps(z);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: r */
-    public void m1037r(int i, int i2, int i3, int i4) {
-        this.f1563f.m1381p(i, i2, i3, i4);
+    public void r(int i2, int i3, int i4, int i5) {
+        this.f1251f.p(i2, i3, i4, i5);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: s */
-    public void m1036s(int[] iArr, int i) {
-        this.f1563f.m1380q(iArr, i);
+    public void s(int[] iArr, int i2) {
+        this.f1251f.q(iArr, i2);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: t */
-    public void m1035t(int i) {
-        this.f1563f.m1379r(i);
+    public void t(int i2) {
+        this.f1251f.r(i2);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: u */
-    public void m1034u(int i, float f) {
-        if (InterfaceC0138b.f682a || m1042l()) {
+    public void u(int i2, float f2) {
+        if (android.support.v4.widget.b.f532a || l()) {
             return;
         }
-        m1033v(i, f);
+        v(i2, f2);
     }
 }

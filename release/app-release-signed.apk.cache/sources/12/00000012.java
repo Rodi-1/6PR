@@ -1,12 +1,10 @@
 package android.arch.lifecycle;
 
-/* renamed from: android.arch.lifecycle.c */
 /* loaded from: classes.dex */
-public abstract class AbstractC0009c {
+public abstract class c {
 
-    /* renamed from: android.arch.lifecycle.c$a */
     /* loaded from: classes.dex */
-    public enum EnumC0010a {
+    public enum a {
         ON_CREATE,
         ON_START,
         ON_RESUME,
@@ -16,24 +14,20 @@ public abstract class AbstractC0009c {
         ON_ANY
     }
 
-    /* renamed from: android.arch.lifecycle.c$b */
     /* loaded from: classes.dex */
-    public enum EnumC0011b {
+    public enum b {
         DESTROYED,
         INITIALIZED,
         CREATED,
         STARTED,
         RESUMED;
 
-        /* renamed from: a */
-        public boolean m2380a(EnumC0011b enumC0011b) {
-            return compareTo(enumC0011b) >= 0;
+        public boolean a(b bVar) {
+            return compareTo(bVar) >= 0;
         }
     }
 
-    /* renamed from: a */
-    public abstract EnumC0011b mo2379a();
+    public abstract b a();
 
-    /* renamed from: b */
-    public abstract void mo2378b(InterfaceC0012d interfaceC0012d);
+    public abstract void b(d dVar);
 }

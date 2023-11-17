@@ -1,4 +1,4 @@
-package p015n;
+package n;
 
 import java.lang.reflect.Array;
 import java.util.Collection;
@@ -8,73 +8,70 @@ import java.util.NoSuchElementException;
 import java.util.Set;
 
 /* JADX INFO: Access modifiers changed from: package-private */
-/* renamed from: n.h */
 /* loaded from: classes.dex */
-public abstract class AbstractC0454h<K, V> {
+public abstract class h<K, V> {
 
-    /* renamed from: a */
-    AbstractC0454h<K, V>.C0456b f2171a;
+    /* renamed from: a  reason: collision with root package name */
+    h<K, V>.b f1653a;
 
-    /* renamed from: b */
-    AbstractC0454h<K, V>.C0457c f2172b;
+    /* renamed from: b  reason: collision with root package name */
+    h<K, V>.c f1654b;
 
-    /* renamed from: c */
-    AbstractC0454h<K, V>.C0459e f2173c;
+    /* renamed from: c  reason: collision with root package name */
+    h<K, V>.e f1655c;
 
-    /* renamed from: n.h$a */
     /* loaded from: classes.dex */
-    final class C0455a<T> implements Iterator<T> {
+    final class a<T> implements Iterator<T> {
 
-        /* renamed from: b */
-        final int f2174b;
+        /* renamed from: b  reason: collision with root package name */
+        final int f1656b;
 
-        /* renamed from: c */
-        int f2175c;
+        /* renamed from: c  reason: collision with root package name */
+        int f1657c;
 
-        /* renamed from: d */
-        int f2176d;
+        /* renamed from: d  reason: collision with root package name */
+        int f1658d;
 
-        /* renamed from: e */
-        boolean f2177e = false;
+        /* renamed from: e  reason: collision with root package name */
+        boolean f1659e = false;
 
-        C0455a(int i) {
-            this.f2174b = i;
-            this.f2175c = AbstractC0454h.this.mo518d();
+        a(int i2) {
+            this.f1656b = i2;
+            this.f1657c = h.this.d();
         }
 
         @Override // java.util.Iterator
         public boolean hasNext() {
-            return this.f2176d < this.f2175c;
+            return this.f1658d < this.f1657c;
         }
 
         @Override // java.util.Iterator
         public T next() {
             if (hasNext()) {
-                T t = (T) AbstractC0454h.this.mo520b(this.f2176d, this.f2174b);
-                this.f2176d++;
-                this.f2177e = true;
-                return t;
+                T t2 = (T) h.this.b(this.f1658d, this.f1656b);
+                this.f1658d++;
+                this.f1659e = true;
+                return t2;
             }
             throw new NoSuchElementException();
         }
 
         @Override // java.util.Iterator
         public void remove() {
-            if (!this.f2177e) {
+            if (!this.f1659e) {
                 throw new IllegalStateException();
             }
-            int i = this.f2176d - 1;
-            this.f2176d = i;
-            this.f2175c--;
-            this.f2177e = false;
-            AbstractC0454h.this.mo514h(i);
+            int i2 = this.f1658d - 1;
+            this.f1658d = i2;
+            this.f1657c--;
+            this.f1659e = false;
+            h.this.h(i2);
         }
     }
 
-    /* renamed from: n.h$b */
     /* loaded from: classes.dex */
-    final class C0456b implements Set<Map.Entry<K, V>> {
-        C0456b() {
+    final class b implements Set<Map.Entry<K, V>> {
+        b() {
         }
 
         @Override // java.util.Set, java.util.Collection
@@ -85,27 +82,27 @@ public abstract class AbstractC0454h<K, V> {
 
         @Override // java.util.Set, java.util.Collection
         public boolean addAll(Collection<? extends Map.Entry<K, V>> collection) {
-            int mo518d = AbstractC0454h.this.mo518d();
+            int d2 = h.this.d();
             for (Map.Entry<K, V> entry : collection) {
-                AbstractC0454h.this.mo515g(entry.getKey(), entry.getValue());
+                h.this.g(entry.getKey(), entry.getValue());
             }
-            return mo518d != AbstractC0454h.this.mo518d();
+            return d2 != h.this.d();
         }
 
         @Override // java.util.Set, java.util.Collection
         public void clear() {
-            AbstractC0454h.this.mo521a();
+            h.this.a();
         }
 
         @Override // java.util.Set, java.util.Collection
         public boolean contains(Object obj) {
             if (obj instanceof Map.Entry) {
                 Map.Entry entry = (Map.Entry) obj;
-                int mo517e = AbstractC0454h.this.mo517e(entry.getKey());
-                if (mo517e < 0) {
+                int e2 = h.this.e(entry.getKey());
+                if (e2 < 0) {
                     return false;
                 }
-                return C0449c.m544c(AbstractC0454h.this.mo520b(mo517e, 1), entry.getValue());
+                return n.c.c(h.this.b(e2, 1), entry.getValue());
             }
             return false;
         }
@@ -123,28 +120,28 @@ public abstract class AbstractC0454h<K, V> {
 
         @Override // java.util.Set, java.util.Collection
         public boolean equals(Object obj) {
-            return AbstractC0454h.m511k(this, obj);
+            return h.k(this, obj);
         }
 
         @Override // java.util.Set, java.util.Collection
         public int hashCode() {
-            int i = 0;
-            for (int mo518d = AbstractC0454h.this.mo518d() - 1; mo518d >= 0; mo518d--) {
-                Object mo520b = AbstractC0454h.this.mo520b(mo518d, 0);
-                Object mo520b2 = AbstractC0454h.this.mo520b(mo518d, 1);
-                i += (mo520b == null ? 0 : mo520b.hashCode()) ^ (mo520b2 == null ? 0 : mo520b2.hashCode());
+            int i2 = 0;
+            for (int d2 = h.this.d() - 1; d2 >= 0; d2--) {
+                Object b2 = h.this.b(d2, 0);
+                Object b3 = h.this.b(d2, 1);
+                i2 += (b2 == null ? 0 : b2.hashCode()) ^ (b3 == null ? 0 : b3.hashCode());
             }
-            return i;
+            return i2;
         }
 
         @Override // java.util.Set, java.util.Collection
         public boolean isEmpty() {
-            return AbstractC0454h.this.mo518d() == 0;
+            return h.this.d() == 0;
         }
 
         @Override // java.util.Set, java.util.Collection, java.lang.Iterable
         public Iterator<Map.Entry<K, V>> iterator() {
-            return new C0458d();
+            return new d();
         }
 
         @Override // java.util.Set, java.util.Collection
@@ -164,7 +161,7 @@ public abstract class AbstractC0454h<K, V> {
 
         @Override // java.util.Set, java.util.Collection
         public int size() {
-            return AbstractC0454h.this.mo518d();
+            return h.this.d();
         }
 
         @Override // java.util.Set, java.util.Collection
@@ -178,14 +175,13 @@ public abstract class AbstractC0454h<K, V> {
         }
     }
 
-    /* renamed from: n.h$c */
     /* loaded from: classes.dex */
-    final class C0457c implements Set<K> {
-        C0457c() {
+    final class c implements Set<K> {
+        c() {
         }
 
         @Override // java.util.Set, java.util.Collection
-        public boolean add(K k) {
+        public boolean add(K k2) {
             throw new UnsupportedOperationException();
         }
 
@@ -196,49 +192,49 @@ public abstract class AbstractC0454h<K, V> {
 
         @Override // java.util.Set, java.util.Collection
         public void clear() {
-            AbstractC0454h.this.mo521a();
+            h.this.a();
         }
 
         @Override // java.util.Set, java.util.Collection
         public boolean contains(Object obj) {
-            return AbstractC0454h.this.mo517e(obj) >= 0;
+            return h.this.e(obj) >= 0;
         }
 
         @Override // java.util.Set, java.util.Collection
         public boolean containsAll(Collection<?> collection) {
-            return AbstractC0454h.m512j(AbstractC0454h.this.mo519c(), collection);
+            return h.j(h.this.c(), collection);
         }
 
         @Override // java.util.Set, java.util.Collection
         public boolean equals(Object obj) {
-            return AbstractC0454h.m511k(this, obj);
+            return h.k(this, obj);
         }
 
         @Override // java.util.Set, java.util.Collection
         public int hashCode() {
-            int i = 0;
-            for (int mo518d = AbstractC0454h.this.mo518d() - 1; mo518d >= 0; mo518d--) {
-                Object mo520b = AbstractC0454h.this.mo520b(mo518d, 0);
-                i += mo520b == null ? 0 : mo520b.hashCode();
+            int i2 = 0;
+            for (int d2 = h.this.d() - 1; d2 >= 0; d2--) {
+                Object b2 = h.this.b(d2, 0);
+                i2 += b2 == null ? 0 : b2.hashCode();
             }
-            return i;
+            return i2;
         }
 
         @Override // java.util.Set, java.util.Collection
         public boolean isEmpty() {
-            return AbstractC0454h.this.mo518d() == 0;
+            return h.this.d() == 0;
         }
 
         @Override // java.util.Set, java.util.Collection, java.lang.Iterable
         public Iterator<K> iterator() {
-            return new C0455a(0);
+            return new a(0);
         }
 
         @Override // java.util.Set, java.util.Collection
         public boolean remove(Object obj) {
-            int mo517e = AbstractC0454h.this.mo517e(obj);
-            if (mo517e >= 0) {
-                AbstractC0454h.this.mo514h(mo517e);
+            int e2 = h.this.e(obj);
+            if (e2 >= 0) {
+                h.this.h(e2);
                 return true;
             }
             return false;
@@ -246,53 +242,52 @@ public abstract class AbstractC0454h<K, V> {
 
         @Override // java.util.Set, java.util.Collection
         public boolean removeAll(Collection<?> collection) {
-            return AbstractC0454h.m507o(AbstractC0454h.this.mo519c(), collection);
+            return h.o(h.this.c(), collection);
         }
 
         @Override // java.util.Set, java.util.Collection
         public boolean retainAll(Collection<?> collection) {
-            return AbstractC0454h.m506p(AbstractC0454h.this.mo519c(), collection);
+            return h.p(h.this.c(), collection);
         }
 
         @Override // java.util.Set, java.util.Collection
         public int size() {
-            return AbstractC0454h.this.mo518d();
+            return h.this.d();
         }
 
         @Override // java.util.Set, java.util.Collection
         public Object[] toArray() {
-            return AbstractC0454h.this.m505q(0);
+            return h.this.q(0);
         }
 
         @Override // java.util.Set, java.util.Collection
         public <T> T[] toArray(T[] tArr) {
-            return (T[]) AbstractC0454h.this.m504r(tArr, 0);
+            return (T[]) h.this.r(tArr, 0);
         }
     }
 
-    /* renamed from: n.h$d */
     /* loaded from: classes.dex */
-    final class C0458d implements Iterator<Map.Entry<K, V>>, Map.Entry<K, V> {
+    final class d implements Iterator<Map.Entry<K, V>>, Map.Entry<K, V> {
 
-        /* renamed from: b */
-        int f2181b;
+        /* renamed from: b  reason: collision with root package name */
+        int f1663b;
 
-        /* renamed from: d */
-        boolean f2183d = false;
+        /* renamed from: d  reason: collision with root package name */
+        boolean f1665d = false;
 
-        /* renamed from: c */
-        int f2182c = -1;
+        /* renamed from: c  reason: collision with root package name */
+        int f1664c = -1;
 
-        C0458d() {
-            this.f2181b = AbstractC0454h.this.mo518d() - 1;
+        d() {
+            this.f1663b = h.this.d() - 1;
         }
 
         @Override // java.util.Iterator
         /* renamed from: a */
         public Map.Entry<K, V> next() {
             if (hasNext()) {
-                this.f2182c++;
-                this.f2183d = true;
+                this.f1664c++;
+                this.f1665d = true;
                 return this;
             }
             throw new NoSuchElementException();
@@ -300,10 +295,10 @@ public abstract class AbstractC0454h<K, V> {
 
         @Override // java.util.Map.Entry
         public boolean equals(Object obj) {
-            if (this.f2183d) {
+            if (this.f1665d) {
                 if (obj instanceof Map.Entry) {
                     Map.Entry entry = (Map.Entry) obj;
-                    return C0449c.m544c(entry.getKey(), AbstractC0454h.this.mo520b(this.f2182c, 0)) && C0449c.m544c(entry.getValue(), AbstractC0454h.this.mo520b(this.f2182c, 1));
+                    return n.c.c(entry.getKey(), h.this.b(this.f1664c, 0)) && n.c.c(entry.getValue(), h.this.b(this.f1664c, 1));
                 }
                 return false;
             }
@@ -312,50 +307,50 @@ public abstract class AbstractC0454h<K, V> {
 
         @Override // java.util.Map.Entry
         public K getKey() {
-            if (this.f2183d) {
-                return (K) AbstractC0454h.this.mo520b(this.f2182c, 0);
+            if (this.f1665d) {
+                return (K) h.this.b(this.f1664c, 0);
             }
             throw new IllegalStateException("This container does not support retaining Map.Entry objects");
         }
 
         @Override // java.util.Map.Entry
         public V getValue() {
-            if (this.f2183d) {
-                return (V) AbstractC0454h.this.mo520b(this.f2182c, 1);
+            if (this.f1665d) {
+                return (V) h.this.b(this.f1664c, 1);
             }
             throw new IllegalStateException("This container does not support retaining Map.Entry objects");
         }
 
         @Override // java.util.Iterator
         public boolean hasNext() {
-            return this.f2182c < this.f2181b;
+            return this.f1664c < this.f1663b;
         }
 
         @Override // java.util.Map.Entry
         public int hashCode() {
-            if (this.f2183d) {
-                Object mo520b = AbstractC0454h.this.mo520b(this.f2182c, 0);
-                Object mo520b2 = AbstractC0454h.this.mo520b(this.f2182c, 1);
-                return (mo520b == null ? 0 : mo520b.hashCode()) ^ (mo520b2 != null ? mo520b2.hashCode() : 0);
+            if (this.f1665d) {
+                Object b2 = h.this.b(this.f1664c, 0);
+                Object b3 = h.this.b(this.f1664c, 1);
+                return (b2 == null ? 0 : b2.hashCode()) ^ (b3 != null ? b3.hashCode() : 0);
             }
             throw new IllegalStateException("This container does not support retaining Map.Entry objects");
         }
 
         @Override // java.util.Iterator
         public void remove() {
-            if (!this.f2183d) {
+            if (!this.f1665d) {
                 throw new IllegalStateException();
             }
-            AbstractC0454h.this.mo514h(this.f2182c);
-            this.f2182c--;
-            this.f2181b--;
-            this.f2183d = false;
+            h.this.h(this.f1664c);
+            this.f1664c--;
+            this.f1663b--;
+            this.f1665d = false;
         }
 
         @Override // java.util.Map.Entry
-        public V setValue(V v) {
-            if (this.f2183d) {
-                return (V) AbstractC0454h.this.mo513i(this.f2182c, v);
+        public V setValue(V v2) {
+            if (this.f1665d) {
+                return (V) h.this.i(this.f1664c, v2);
             }
             throw new IllegalStateException("This container does not support retaining Map.Entry objects");
         }
@@ -365,14 +360,13 @@ public abstract class AbstractC0454h<K, V> {
         }
     }
 
-    /* renamed from: n.h$e */
     /* loaded from: classes.dex */
-    final class C0459e implements Collection<V> {
-        C0459e() {
+    final class e implements Collection<V> {
+        e() {
         }
 
         @Override // java.util.Collection
-        public boolean add(V v) {
+        public boolean add(V v2) {
             throw new UnsupportedOperationException();
         }
 
@@ -383,12 +377,12 @@ public abstract class AbstractC0454h<K, V> {
 
         @Override // java.util.Collection
         public void clear() {
-            AbstractC0454h.this.mo521a();
+            h.this.a();
         }
 
         @Override // java.util.Collection
         public boolean contains(Object obj) {
-            return AbstractC0454h.this.mo516f(obj) >= 0;
+            return h.this.f(obj) >= 0;
         }
 
         @Override // java.util.Collection
@@ -404,19 +398,19 @@ public abstract class AbstractC0454h<K, V> {
 
         @Override // java.util.Collection
         public boolean isEmpty() {
-            return AbstractC0454h.this.mo518d() == 0;
+            return h.this.d() == 0;
         }
 
         @Override // java.util.Collection, java.lang.Iterable
         public Iterator<V> iterator() {
-            return new C0455a(1);
+            return new a(1);
         }
 
         @Override // java.util.Collection
         public boolean remove(Object obj) {
-            int mo516f = AbstractC0454h.this.mo516f(obj);
-            if (mo516f >= 0) {
-                AbstractC0454h.this.mo514h(mo516f);
+            int f2 = h.this.f(obj);
+            if (f2 >= 0) {
+                h.this.h(f2);
                 return true;
             }
             return false;
@@ -424,56 +418,55 @@ public abstract class AbstractC0454h<K, V> {
 
         @Override // java.util.Collection
         public boolean removeAll(Collection<?> collection) {
-            int mo518d = AbstractC0454h.this.mo518d();
-            int i = 0;
+            int d2 = h.this.d();
+            int i2 = 0;
             boolean z = false;
-            while (i < mo518d) {
-                if (collection.contains(AbstractC0454h.this.mo520b(i, 1))) {
-                    AbstractC0454h.this.mo514h(i);
-                    i--;
-                    mo518d--;
+            while (i2 < d2) {
+                if (collection.contains(h.this.b(i2, 1))) {
+                    h.this.h(i2);
+                    i2--;
+                    d2--;
                     z = true;
                 }
-                i++;
+                i2++;
             }
             return z;
         }
 
         @Override // java.util.Collection
         public boolean retainAll(Collection<?> collection) {
-            int mo518d = AbstractC0454h.this.mo518d();
-            int i = 0;
+            int d2 = h.this.d();
+            int i2 = 0;
             boolean z = false;
-            while (i < mo518d) {
-                if (!collection.contains(AbstractC0454h.this.mo520b(i, 1))) {
-                    AbstractC0454h.this.mo514h(i);
-                    i--;
-                    mo518d--;
+            while (i2 < d2) {
+                if (!collection.contains(h.this.b(i2, 1))) {
+                    h.this.h(i2);
+                    i2--;
+                    d2--;
                     z = true;
                 }
-                i++;
+                i2++;
             }
             return z;
         }
 
         @Override // java.util.Collection
         public int size() {
-            return AbstractC0454h.this.mo518d();
+            return h.this.d();
         }
 
         @Override // java.util.Collection
         public Object[] toArray() {
-            return AbstractC0454h.this.m505q(1);
+            return h.this.q(1);
         }
 
         @Override // java.util.Collection
         public <T> T[] toArray(T[] tArr) {
-            return (T[]) AbstractC0454h.this.m504r(tArr, 1);
+            return (T[]) h.this.r(tArr, 1);
         }
     }
 
-    /* renamed from: j */
-    public static <K, V> boolean m512j(Map<K, V> map, Collection<?> collection) {
+    public static <K, V> boolean j(Map<K, V> map, Collection<?> collection) {
         Iterator<?> it = collection.iterator();
         while (it.hasNext()) {
             if (!map.containsKey(it.next())) {
@@ -483,8 +476,7 @@ public abstract class AbstractC0454h<K, V> {
         return true;
     }
 
-    /* renamed from: k */
-    public static <T> boolean m511k(Set<T> set, Object obj) {
+    public static <T> boolean k(Set<T> set, Object obj) {
         if (set == obj) {
             return true;
         }
@@ -503,8 +495,7 @@ public abstract class AbstractC0454h<K, V> {
         return false;
     }
 
-    /* renamed from: o */
-    public static <K, V> boolean m507o(Map<K, V> map, Collection<?> collection) {
+    public static <K, V> boolean o(Map<K, V> map, Collection<?> collection) {
         int size = map.size();
         Iterator<?> it = collection.iterator();
         while (it.hasNext()) {
@@ -513,8 +504,7 @@ public abstract class AbstractC0454h<K, V> {
         return size != map.size();
     }
 
-    /* renamed from: p */
-    public static <K, V> boolean m506p(Map<K, V> map, Collection<?> collection) {
+    public static <K, V> boolean p(Map<K, V> map, Collection<?> collection) {
         int size = map.size();
         Iterator<K> it = map.keySet().iterator();
         while (it.hasNext()) {
@@ -525,79 +515,65 @@ public abstract class AbstractC0454h<K, V> {
         return size != map.size();
     }
 
-    /* renamed from: a */
-    protected abstract void mo521a();
+    protected abstract void a();
 
-    /* renamed from: b */
-    protected abstract Object mo520b(int i, int i2);
+    protected abstract Object b(int i2, int i3);
 
-    /* renamed from: c */
-    protected abstract Map<K, V> mo519c();
+    protected abstract Map<K, V> c();
 
-    /* renamed from: d */
-    protected abstract int mo518d();
+    protected abstract int d();
 
-    /* renamed from: e */
-    protected abstract int mo517e(Object obj);
+    protected abstract int e(Object obj);
 
-    /* renamed from: f */
-    protected abstract int mo516f(Object obj);
+    protected abstract int f(Object obj);
 
-    /* renamed from: g */
-    protected abstract void mo515g(K k, V v);
+    protected abstract void g(K k2, V v2);
 
-    /* renamed from: h */
-    protected abstract void mo514h(int i);
+    protected abstract void h(int i2);
 
-    /* renamed from: i */
-    protected abstract V mo513i(int i, V v);
+    protected abstract V i(int i2, V v2);
 
-    /* renamed from: l */
-    public Set<Map.Entry<K, V>> m510l() {
-        if (this.f2171a == null) {
-            this.f2171a = new C0456b();
+    public Set<Map.Entry<K, V>> l() {
+        if (this.f1653a == null) {
+            this.f1653a = new b();
         }
-        return this.f2171a;
+        return this.f1653a;
     }
 
-    /* renamed from: m */
-    public Set<K> m509m() {
-        if (this.f2172b == null) {
-            this.f2172b = new C0457c();
+    public Set<K> m() {
+        if (this.f1654b == null) {
+            this.f1654b = new c();
         }
-        return this.f2172b;
+        return this.f1654b;
     }
 
-    /* renamed from: n */
-    public Collection<V> m508n() {
-        if (this.f2173c == null) {
-            this.f2173c = new C0459e();
+    public Collection<V> n() {
+        if (this.f1655c == null) {
+            this.f1655c = new e();
         }
-        return this.f2173c;
+        return this.f1655c;
     }
 
-    /* renamed from: q */
-    public Object[] m505q(int i) {
-        int mo518d = mo518d();
-        Object[] objArr = new Object[mo518d];
-        for (int i2 = 0; i2 < mo518d; i2++) {
-            objArr[i2] = mo520b(i2, i);
+    public Object[] q(int i2) {
+        int d2 = d();
+        Object[] objArr = new Object[d2];
+        for (int i3 = 0; i3 < d2; i3++) {
+            objArr[i3] = b(i3, i2);
         }
         return objArr;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: r */
-    public <T> T[] m504r(T[] tArr, int i) {
-        int mo518d = mo518d();
-        if (tArr.length < mo518d) {
-            tArr = (T[]) ((Object[]) Array.newInstance(tArr.getClass().getComponentType(), mo518d));
+    public <T> T[] r(T[] tArr, int i2) {
+        int d2 = d();
+        if (tArr.length < d2) {
+            tArr = (T[]) ((Object[]) Array.newInstance(tArr.getClass().getComponentType(), d2));
         }
-        for (int i2 = 0; i2 < mo518d; i2++) {
-            tArr[i2] = mo520b(i2, i);
+        for (int i3 = 0; i3 < d2; i3++) {
+            tArr[i3] = b(i3, i2);
         }
-        if (tArr.length > mo518d) {
-            tArr[mo518d] = null;
+        if (tArr.length > d2) {
+            tArr[d2] = null;
         }
         return tArr;
     }

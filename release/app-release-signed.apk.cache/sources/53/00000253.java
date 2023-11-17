@@ -1,4 +1,4 @@
-package p019r;
+package r;
 
 import android.content.res.Resources;
 import android.os.Build;
@@ -7,69 +7,66 @@ import android.util.LongSparseArray;
 import java.lang.reflect.Field;
 import java.util.Map;
 
-/* renamed from: r.l */
 /* loaded from: classes.dex */
-class C0560l {
+class l {
 
-    /* renamed from: a */
-    private static Field f2358a;
+    /* renamed from: a  reason: collision with root package name */
+    private static Field f1811a;
 
-    /* renamed from: b */
-    private static boolean f2359b;
+    /* renamed from: b  reason: collision with root package name */
+    private static boolean f1812b;
 
-    /* renamed from: c */
-    private static Class f2360c;
+    /* renamed from: c  reason: collision with root package name */
+    private static Class f1813c;
 
-    /* renamed from: d */
-    private static boolean f2361d;
+    /* renamed from: d  reason: collision with root package name */
+    private static boolean f1814d;
 
-    /* renamed from: e */
-    private static Field f2362e;
+    /* renamed from: e  reason: collision with root package name */
+    private static Field f1815e;
 
-    /* renamed from: f */
-    private static boolean f2363f;
+    /* renamed from: f  reason: collision with root package name */
+    private static boolean f1816f;
 
-    /* renamed from: g */
-    private static Field f2364g;
+    /* renamed from: g  reason: collision with root package name */
+    private static Field f1817g;
 
-    /* renamed from: h */
-    private static boolean f2365h;
+    /* renamed from: h  reason: collision with root package name */
+    private static boolean f1818h;
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: a */
-    public static boolean m155a(Resources resources) {
-        int i = Build.VERSION.SDK_INT;
-        if (i >= 24) {
-            return m152d(resources);
+    public static boolean a(Resources resources) {
+        int i2 = Build.VERSION.SDK_INT;
+        if (i2 >= 24) {
+            return d(resources);
         }
-        if (i >= 23) {
-            return m153c(resources);
+        if (i2 >= 23) {
+            return c(resources);
         }
-        if (i >= 21) {
-            return m154b(resources);
+        if (i2 >= 21) {
+            return b(resources);
         }
         return false;
     }
 
-    /* renamed from: b */
-    private static boolean m154b(Resources resources) {
-        if (!f2359b) {
+    private static boolean b(Resources resources) {
+        if (!f1812b) {
             try {
                 Field declaredField = Resources.class.getDeclaredField("mDrawableCache");
-                f2358a = declaredField;
+                f1811a = declaredField;
                 declaredField.setAccessible(true);
-            } catch (NoSuchFieldException e) {
-                Log.e("ResourcesFlusher", "Could not retrieve Resources#mDrawableCache field", e);
+            } catch (NoSuchFieldException e2) {
+                Log.e("ResourcesFlusher", "Could not retrieve Resources#mDrawableCache field", e2);
             }
-            f2359b = true;
+            f1812b = true;
         }
-        Field field = f2358a;
+        Field field = f1811a;
         if (field != null) {
             Map map = null;
             try {
                 map = (Map) field.get(resources);
-            } catch (IllegalAccessException e2) {
-                Log.e("ResourcesFlusher", "Could not retrieve value from Resources#mDrawableCache", e2);
+            } catch (IllegalAccessException e3) {
+                Log.e("ResourcesFlusher", "Could not retrieve value from Resources#mDrawableCache", e3);
             }
             if (map != null) {
                 map.clear();
@@ -80,111 +77,108 @@ class C0560l {
         return false;
     }
 
-    /* renamed from: c */
-    private static boolean m153c(Resources resources) {
-        if (!f2359b) {
+    private static boolean c(Resources resources) {
+        if (!f1812b) {
             try {
                 Field declaredField = Resources.class.getDeclaredField("mDrawableCache");
-                f2358a = declaredField;
+                f1811a = declaredField;
                 declaredField.setAccessible(true);
-            } catch (NoSuchFieldException e) {
-                Log.e("ResourcesFlusher", "Could not retrieve Resources#mDrawableCache field", e);
+            } catch (NoSuchFieldException e2) {
+                Log.e("ResourcesFlusher", "Could not retrieve Resources#mDrawableCache field", e2);
             }
-            f2359b = true;
+            f1812b = true;
         }
         Object obj = null;
-        Field field = f2358a;
+        Field field = f1811a;
         if (field != null) {
             try {
                 obj = field.get(resources);
-            } catch (IllegalAccessException e2) {
-                Log.e("ResourcesFlusher", "Could not retrieve value from Resources#mDrawableCache", e2);
+            } catch (IllegalAccessException e3) {
+                Log.e("ResourcesFlusher", "Could not retrieve value from Resources#mDrawableCache", e3);
             }
         }
-        return obj != null && m151e(obj);
+        return obj != null && e(obj);
     }
 
-    /* renamed from: d */
-    private static boolean m152d(Resources resources) {
+    private static boolean d(Resources resources) {
         Object obj;
-        if (!f2365h) {
+        if (!f1818h) {
             try {
                 Field declaredField = Resources.class.getDeclaredField("mResourcesImpl");
-                f2364g = declaredField;
+                f1817g = declaredField;
                 declaredField.setAccessible(true);
-            } catch (NoSuchFieldException e) {
-                Log.e("ResourcesFlusher", "Could not retrieve Resources#mResourcesImpl field", e);
+            } catch (NoSuchFieldException e2) {
+                Log.e("ResourcesFlusher", "Could not retrieve Resources#mResourcesImpl field", e2);
             }
-            f2365h = true;
+            f1818h = true;
         }
-        Field field = f2364g;
+        Field field = f1817g;
         if (field == null) {
             return false;
         }
         Object obj2 = null;
         try {
             obj = field.get(resources);
-        } catch (IllegalAccessException e2) {
-            Log.e("ResourcesFlusher", "Could not retrieve value from Resources#mResourcesImpl", e2);
+        } catch (IllegalAccessException e3) {
+            Log.e("ResourcesFlusher", "Could not retrieve value from Resources#mResourcesImpl", e3);
             obj = null;
         }
         if (obj == null) {
             return false;
         }
-        if (!f2359b) {
+        if (!f1812b) {
             try {
                 Field declaredField2 = obj.getClass().getDeclaredField("mDrawableCache");
-                f2358a = declaredField2;
+                f1811a = declaredField2;
                 declaredField2.setAccessible(true);
-            } catch (NoSuchFieldException e3) {
-                Log.e("ResourcesFlusher", "Could not retrieve ResourcesImpl#mDrawableCache field", e3);
+            } catch (NoSuchFieldException e4) {
+                Log.e("ResourcesFlusher", "Could not retrieve ResourcesImpl#mDrawableCache field", e4);
             }
-            f2359b = true;
+            f1812b = true;
         }
-        Field field2 = f2358a;
+        Field field2 = f1811a;
         if (field2 != null) {
             try {
                 obj2 = field2.get(obj);
-            } catch (IllegalAccessException e4) {
-                Log.e("ResourcesFlusher", "Could not retrieve value from ResourcesImpl#mDrawableCache", e4);
+            } catch (IllegalAccessException e5) {
+                Log.e("ResourcesFlusher", "Could not retrieve value from ResourcesImpl#mDrawableCache", e5);
             }
         }
-        return obj2 != null && m151e(obj2);
+        return obj2 != null && e(obj2);
     }
 
-    /* renamed from: e */
-    private static boolean m151e(Object obj) {
-        if (!f2361d) {
+    private static boolean e(Object obj) {
+        if (!f1814d) {
             try {
-                f2360c = Class.forName("android.content.res.ThemedResourceCache");
-            } catch (ClassNotFoundException e) {
-                Log.e("ResourcesFlusher", "Could not find ThemedResourceCache class", e);
+                f1813c = Class.forName("android.content.res.ThemedResourceCache");
+            } catch (ClassNotFoundException e2) {
+                Log.e("ResourcesFlusher", "Could not find ThemedResourceCache class", e2);
             }
-            f2361d = true;
+            f1814d = true;
         }
-        Class cls = f2360c;
+        Class cls = f1813c;
         if (cls == null) {
             return false;
         }
-        if (!f2363f) {
+        if (!f1816f) {
             try {
                 Field declaredField = cls.getDeclaredField("mUnthemedEntries");
-                f2362e = declaredField;
+                f1815e = declaredField;
                 declaredField.setAccessible(true);
-            } catch (NoSuchFieldException e2) {
-                Log.e("ResourcesFlusher", "Could not retrieve ThemedResourceCache#mUnthemedEntries field", e2);
+            } catch (NoSuchFieldException e3) {
+                Log.e("ResourcesFlusher", "Could not retrieve ThemedResourceCache#mUnthemedEntries field", e3);
             }
-            f2363f = true;
+            f1816f = true;
         }
-        Field field = f2362e;
+        Field field = f1815e;
         if (field == null) {
             return false;
         }
         LongSparseArray longSparseArray = null;
         try {
             longSparseArray = (LongSparseArray) field.get(obj);
-        } catch (IllegalAccessException e3) {
-            Log.e("ResourcesFlusher", "Could not retrieve value from ThemedResourceCache#mUnthemedEntries", e3);
+        } catch (IllegalAccessException e4) {
+            Log.e("ResourcesFlusher", "Could not retrieve value from ThemedResourceCache#mUnthemedEntries", e4);
         }
         if (longSparseArray != null) {
             longSparseArray.clear();

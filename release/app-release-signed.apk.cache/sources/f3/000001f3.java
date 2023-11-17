@@ -1,80 +1,77 @@
-package p016o;
+package o;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
-/* renamed from: o.a */
 /* loaded from: classes.dex */
-public abstract class AbstractC0464a implements Parcelable {
+public abstract class a implements Parcelable {
 
-    /* renamed from: b */
-    private final Parcelable f2201b;
+    /* renamed from: b  reason: collision with root package name */
+    private final Parcelable f1683b;
 
-    /* renamed from: c */
-    public static final AbstractC0464a f2200c = new C0465a();
-    public static final Parcelable.Creator<AbstractC0464a> CREATOR = new C0466b();
+    /* renamed from: c  reason: collision with root package name */
+    public static final a f1682c = new C0020a();
+    public static final Parcelable.Creator<a> CREATOR = new b();
 
-    /* renamed from: o.a$a */
+    /* renamed from: o.a$a  reason: collision with other inner class name */
     /* loaded from: classes.dex */
-    static class C0465a extends AbstractC0464a {
-        C0465a() {
-            super((C0465a) null);
+    static class C0020a extends a {
+        C0020a() {
+            super((C0020a) null);
         }
     }
 
-    /* renamed from: o.a$b */
     /* loaded from: classes.dex */
-    static class C0466b implements Parcelable.ClassLoaderCreator<AbstractC0464a> {
-        C0466b() {
+    static class b implements Parcelable.ClassLoaderCreator<a> {
+        b() {
         }
 
         @Override // android.os.Parcelable.Creator
         /* renamed from: a */
-        public AbstractC0464a createFromParcel(Parcel parcel) {
+        public a createFromParcel(Parcel parcel) {
             return createFromParcel(parcel, null);
         }
 
         @Override // android.os.Parcelable.ClassLoaderCreator
         /* renamed from: b */
-        public AbstractC0464a createFromParcel(Parcel parcel, ClassLoader classLoader) {
+        public a createFromParcel(Parcel parcel, ClassLoader classLoader) {
             if (parcel.readParcelable(classLoader) == null) {
-                return AbstractC0464a.f2200c;
+                return a.f1682c;
             }
             throw new IllegalStateException("superState must be null");
         }
 
         @Override // android.os.Parcelable.Creator
         /* renamed from: c */
-        public AbstractC0464a[] newArray(int i) {
-            return new AbstractC0464a[i];
+        public a[] newArray(int i2) {
+            return new a[i2];
         }
     }
 
-    private AbstractC0464a() {
-        this.f2201b = null;
+    private a() {
+        this.f1683b = null;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    public AbstractC0464a(Parcel parcel, ClassLoader classLoader) {
+    public a(Parcel parcel, ClassLoader classLoader) {
         Parcelable readParcelable = parcel.readParcelable(classLoader);
-        this.f2201b = readParcelable == null ? f2200c : readParcelable;
+        this.f1683b = readParcelable == null ? f1682c : readParcelable;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
-    public AbstractC0464a(Parcelable parcelable) {
+    public a(Parcelable parcelable) {
         if (parcelable == null) {
             throw new IllegalArgumentException("superState must not be null");
         }
-        this.f2201b = parcelable == f2200c ? null : parcelable;
+        this.f1683b = parcelable == f1682c ? null : parcelable;
     }
 
-    /* synthetic */ AbstractC0464a(C0465a c0465a) {
+    /* synthetic */ a(C0020a c0020a) {
         this();
     }
 
-    /* renamed from: a */
-    public final Parcelable m475a() {
-        return this.f2201b;
+    public final Parcelable a() {
+        return this.f1683b;
     }
 
     @Override // android.os.Parcelable
@@ -83,7 +80,7 @@ public abstract class AbstractC0464a implements Parcelable {
     }
 
     @Override // android.os.Parcelable
-    public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeParcelable(this.f2201b, i);
+    public void writeToParcel(Parcel parcel, int i2) {
+        parcel.writeParcelable(this.f1683b, i2);
     }
 }

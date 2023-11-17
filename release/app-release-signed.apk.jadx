@@ -13,10 +13,10 @@
       "type": "class",
       "tabPath": "me.test.calculator.MainActivity",
       "subPath": "java",
-      "caret": 4286,
+      "caret": 4070,
       "view": {
         "x": 0,
-        "y": 3088
+        "y": 2704
       }
     }
   ],
@@ -24,6 +24,7 @@
   "cacheDir": "app-release-signed.apk.cache",
   "enableLiveReload": false,
   "searchHistory": [
+    "0.0d",
     "\u003d 0.0d;"
   ]
 }

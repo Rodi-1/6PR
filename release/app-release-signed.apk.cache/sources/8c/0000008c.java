@@ -1,55 +1,52 @@
-package android.support.p001v4.app;
+package android.support.v4.app;
 
 import android.view.View;
 import android.view.ViewTreeObserver;
 
-/* renamed from: android.support.v4.app.w */
 /* loaded from: classes.dex */
-class ViewTreeObserver$OnPreDrawListenerC0127w implements ViewTreeObserver.OnPreDrawListener, View.OnAttachStateChangeListener {
+class w implements ViewTreeObserver.OnPreDrawListener, View.OnAttachStateChangeListener {
 
-    /* renamed from: b */
-    private final View f618b;
+    /* renamed from: b  reason: collision with root package name */
+    private final View f474b;
 
-    /* renamed from: c */
-    private ViewTreeObserver f619c;
+    /* renamed from: c  reason: collision with root package name */
+    private ViewTreeObserver f475c;
 
-    /* renamed from: d */
-    private final Runnable f620d;
+    /* renamed from: d  reason: collision with root package name */
+    private final Runnable f476d;
 
-    private ViewTreeObserver$OnPreDrawListenerC0127w(View view, Runnable runnable) {
-        this.f618b = view;
-        this.f619c = view.getViewTreeObserver();
-        this.f620d = runnable;
+    private w(View view, Runnable runnable) {
+        this.f474b = view;
+        this.f475c = view.getViewTreeObserver();
+        this.f476d = runnable;
     }
 
-    /* renamed from: a */
-    public static ViewTreeObserver$OnPreDrawListenerC0127w m1821a(View view, Runnable runnable) {
-        ViewTreeObserver$OnPreDrawListenerC0127w viewTreeObserver$OnPreDrawListenerC0127w = new ViewTreeObserver$OnPreDrawListenerC0127w(view, runnable);
-        view.getViewTreeObserver().addOnPreDrawListener(viewTreeObserver$OnPreDrawListenerC0127w);
-        view.addOnAttachStateChangeListener(viewTreeObserver$OnPreDrawListenerC0127w);
-        return viewTreeObserver$OnPreDrawListenerC0127w;
+    public static w a(View view, Runnable runnable) {
+        w wVar = new w(view, runnable);
+        view.getViewTreeObserver().addOnPreDrawListener(wVar);
+        view.addOnAttachStateChangeListener(wVar);
+        return wVar;
     }
 
-    /* renamed from: b */
-    public void m1820b() {
-        (this.f619c.isAlive() ? this.f619c : this.f618b.getViewTreeObserver()).removeOnPreDrawListener(this);
-        this.f618b.removeOnAttachStateChangeListener(this);
+    public void b() {
+        (this.f475c.isAlive() ? this.f475c : this.f474b.getViewTreeObserver()).removeOnPreDrawListener(this);
+        this.f474b.removeOnAttachStateChangeListener(this);
     }
 
     @Override // android.view.ViewTreeObserver.OnPreDrawListener
     public boolean onPreDraw() {
-        m1820b();
-        this.f620d.run();
+        b();
+        this.f476d.run();
         return true;
     }
 
     @Override // android.view.View.OnAttachStateChangeListener
     public void onViewAttachedToWindow(View view) {
-        this.f619c = view.getViewTreeObserver();
+        this.f475c = view.getViewTreeObserver();
     }
 
     @Override // android.view.View.OnAttachStateChangeListener
     public void onViewDetachedFromWindow(View view) {
-        m1820b();
+        b();
     }
 }

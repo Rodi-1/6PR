@@ -1,274 +1,254 @@
-package p003b;
+package b;
 
 import java.util.Iterator;
 import java.util.Map;
 import java.util.WeakHashMap;
 
-/* renamed from: b.b */
 /* loaded from: classes.dex */
-public class C0337b<K, V> implements Iterable<Map.Entry<K, V>> {
+public class b<K, V> implements Iterable<Map.Entry<K, V>> {
 
-    /* renamed from: b */
-    private C0341d<K, V> f1592b;
+    /* renamed from: b  reason: collision with root package name */
+    private d<K, V> f1280b;
 
-    /* renamed from: c */
-    private C0341d<K, V> f1593c;
+    /* renamed from: c  reason: collision with root package name */
+    private d<K, V> f1281c;
 
-    /* renamed from: d */
-    private WeakHashMap<InterfaceC0344g<K, V>, Boolean> f1594d = new WeakHashMap<>();
+    /* renamed from: d  reason: collision with root package name */
+    private WeakHashMap<g<K, V>, Boolean> f1282d = new WeakHashMap<>();
 
-    /* renamed from: e */
-    private int f1595e = 0;
+    /* renamed from: e  reason: collision with root package name */
+    private int f1283e = 0;
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: b.b$b */
+    /* renamed from: b.b$b  reason: collision with other inner class name */
     /* loaded from: classes.dex */
-    public static class C0339b<K, V> extends AbstractC0343f<K, V> {
-        C0339b(C0341d<K, V> c0341d, C0341d<K, V> c0341d2) {
-            super(c0341d, c0341d2);
+    public static class C0012b<K, V> extends f<K, V> {
+        C0012b(d<K, V> dVar, d<K, V> dVar2) {
+            super(dVar, dVar2);
         }
 
-        @Override // p003b.C0337b.AbstractC0343f
-        /* renamed from: b */
-        C0341d<K, V> mo1006b(C0341d<K, V> c0341d) {
-            return c0341d.f1599e;
+        @Override // b.b.f
+        d<K, V> b(d<K, V> dVar) {
+            return dVar.f1287e;
         }
 
-        @Override // p003b.C0337b.AbstractC0343f
-        /* renamed from: c */
-        C0341d<K, V> mo1005c(C0341d<K, V> c0341d) {
-            return c0341d.f1598d;
+        @Override // b.b.f
+        d<K, V> c(d<K, V> dVar) {
+            return dVar.f1286d;
         }
     }
 
-    /* renamed from: b.b$c */
     /* loaded from: classes.dex */
-    private static class C0340c<K, V> extends AbstractC0343f<K, V> {
-        C0340c(C0341d<K, V> c0341d, C0341d<K, V> c0341d2) {
-            super(c0341d, c0341d2);
+    private static class c<K, V> extends f<K, V> {
+        c(d<K, V> dVar, d<K, V> dVar2) {
+            super(dVar, dVar2);
         }
 
-        @Override // p003b.C0337b.AbstractC0343f
-        /* renamed from: b */
-        C0341d<K, V> mo1006b(C0341d<K, V> c0341d) {
-            return c0341d.f1598d;
+        @Override // b.b.f
+        d<K, V> b(d<K, V> dVar) {
+            return dVar.f1286d;
         }
 
-        @Override // p003b.C0337b.AbstractC0343f
-        /* renamed from: c */
-        C0341d<K, V> mo1005c(C0341d<K, V> c0341d) {
-            return c0341d.f1599e;
+        @Override // b.b.f
+        d<K, V> c(d<K, V> dVar) {
+            return dVar.f1287e;
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: b.b$d */
     /* loaded from: classes.dex */
-    public static class C0341d<K, V> implements Map.Entry<K, V> {
+    public static class d<K, V> implements Map.Entry<K, V> {
 
-        /* renamed from: b */
-        final K f1596b;
+        /* renamed from: b  reason: collision with root package name */
+        final K f1284b;
 
-        /* renamed from: c */
-        final V f1597c;
+        /* renamed from: c  reason: collision with root package name */
+        final V f1285c;
 
-        /* renamed from: d */
-        C0341d<K, V> f1598d;
+        /* renamed from: d  reason: collision with root package name */
+        d<K, V> f1286d;
 
-        /* renamed from: e */
-        C0341d<K, V> f1599e;
+        /* renamed from: e  reason: collision with root package name */
+        d<K, V> f1287e;
 
         @Override // java.util.Map.Entry
         public boolean equals(Object obj) {
             if (obj == this) {
                 return true;
             }
-            if (obj instanceof C0341d) {
-                C0341d c0341d = (C0341d) obj;
-                return this.f1596b.equals(c0341d.f1596b) && this.f1597c.equals(c0341d.f1597c);
+            if (obj instanceof d) {
+                d dVar = (d) obj;
+                return this.f1284b.equals(dVar.f1284b) && this.f1285c.equals(dVar.f1285c);
             }
             return false;
         }
 
         @Override // java.util.Map.Entry
         public K getKey() {
-            return this.f1596b;
+            return this.f1284b;
         }
 
         @Override // java.util.Map.Entry
         public V getValue() {
-            return this.f1597c;
+            return this.f1285c;
         }
 
         @Override // java.util.Map.Entry
-        public V setValue(V v) {
+        public V setValue(V v2) {
             throw new UnsupportedOperationException("An entry modification is not supported");
         }
 
         public String toString() {
-            return this.f1596b + "=" + this.f1597c;
+            return this.f1284b + "=" + this.f1285c;
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: b.b$e */
     /* loaded from: classes.dex */
-    public class C0342e implements Iterator<Map.Entry<K, V>>, InterfaceC0344g<K, V> {
+    public class e implements Iterator<Map.Entry<K, V>>, g<K, V> {
 
-        /* renamed from: b */
-        private C0341d<K, V> f1600b;
+        /* renamed from: b  reason: collision with root package name */
+        private d<K, V> f1288b;
 
-        /* renamed from: c */
-        private boolean f1601c;
+        /* renamed from: c  reason: collision with root package name */
+        private boolean f1289c;
 
-        private C0342e() {
-            this.f1601c = true;
+        private e() {
+            this.f1289c = true;
         }
 
-        @Override // p003b.C0337b.InterfaceC0344g
-        /* renamed from: a */
-        public void mo1002a(C0341d<K, V> c0341d) {
-            C0341d<K, V> c0341d2 = this.f1600b;
-            if (c0341d == c0341d2) {
-                C0341d<K, V> c0341d3 = c0341d2.f1599e;
-                this.f1600b = c0341d3;
-                this.f1601c = c0341d3 == null;
+        @Override // b.b.g
+        public void a(d<K, V> dVar) {
+            d<K, V> dVar2 = this.f1288b;
+            if (dVar == dVar2) {
+                d<K, V> dVar3 = dVar2.f1287e;
+                this.f1288b = dVar3;
+                this.f1289c = dVar3 == null;
             }
         }
 
         @Override // java.util.Iterator
         /* renamed from: b */
         public Map.Entry<K, V> next() {
-            C0341d<K, V> c0341d;
-            if (this.f1601c) {
-                this.f1601c = false;
-                c0341d = C0337b.this.f1592b;
+            d<K, V> dVar;
+            if (this.f1289c) {
+                this.f1289c = false;
+                dVar = b.this.f1280b;
             } else {
-                C0341d<K, V> c0341d2 = this.f1600b;
-                c0341d = c0341d2 != null ? c0341d2.f1598d : null;
+                d<K, V> dVar2 = this.f1288b;
+                dVar = dVar2 != null ? dVar2.f1286d : null;
             }
-            this.f1600b = c0341d;
-            return this.f1600b;
+            this.f1288b = dVar;
+            return this.f1288b;
         }
 
         @Override // java.util.Iterator
         public boolean hasNext() {
-            if (this.f1601c) {
-                return C0337b.this.f1592b != null;
+            if (this.f1289c) {
+                return b.this.f1280b != null;
             }
-            C0341d<K, V> c0341d = this.f1600b;
-            return (c0341d == null || c0341d.f1598d == null) ? false : true;
+            d<K, V> dVar = this.f1288b;
+            return (dVar == null || dVar.f1286d == null) ? false : true;
         }
     }
 
-    /* renamed from: b.b$f */
     /* loaded from: classes.dex */
-    private static abstract class AbstractC0343f<K, V> implements Iterator<Map.Entry<K, V>>, InterfaceC0344g<K, V> {
+    private static abstract class f<K, V> implements Iterator<Map.Entry<K, V>>, g<K, V> {
 
-        /* renamed from: b */
-        C0341d<K, V> f1603b;
+        /* renamed from: b  reason: collision with root package name */
+        d<K, V> f1291b;
 
-        /* renamed from: c */
-        C0341d<K, V> f1604c;
+        /* renamed from: c  reason: collision with root package name */
+        d<K, V> f1292c;
 
-        AbstractC0343f(C0341d<K, V> c0341d, C0341d<K, V> c0341d2) {
-            this.f1603b = c0341d2;
-            this.f1604c = c0341d;
+        f(d<K, V> dVar, d<K, V> dVar2) {
+            this.f1291b = dVar2;
+            this.f1292c = dVar;
         }
 
-        /* renamed from: e */
-        private C0341d<K, V> m1003e() {
-            C0341d<K, V> c0341d = this.f1604c;
-            C0341d<K, V> c0341d2 = this.f1603b;
-            if (c0341d == c0341d2 || c0341d2 == null) {
+        private d<K, V> e() {
+            d<K, V> dVar = this.f1292c;
+            d<K, V> dVar2 = this.f1291b;
+            if (dVar == dVar2 || dVar2 == null) {
                 return null;
             }
-            return mo1005c(c0341d);
+            return c(dVar);
         }
 
-        @Override // p003b.C0337b.InterfaceC0344g
-        /* renamed from: a */
-        public void mo1002a(C0341d<K, V> c0341d) {
-            if (this.f1603b == c0341d && c0341d == this.f1604c) {
-                this.f1604c = null;
-                this.f1603b = null;
+        @Override // b.b.g
+        public void a(d<K, V> dVar) {
+            if (this.f1291b == dVar && dVar == this.f1292c) {
+                this.f1292c = null;
+                this.f1291b = null;
             }
-            C0341d<K, V> c0341d2 = this.f1603b;
-            if (c0341d2 == c0341d) {
-                this.f1603b = mo1006b(c0341d2);
+            d<K, V> dVar2 = this.f1291b;
+            if (dVar2 == dVar) {
+                this.f1291b = b(dVar2);
             }
-            if (this.f1604c == c0341d) {
-                this.f1604c = m1003e();
+            if (this.f1292c == dVar) {
+                this.f1292c = e();
             }
         }
 
-        /* renamed from: b */
-        abstract C0341d<K, V> mo1006b(C0341d<K, V> c0341d);
+        abstract d<K, V> b(d<K, V> dVar);
 
-        /* renamed from: c */
-        abstract C0341d<K, V> mo1005c(C0341d<K, V> c0341d);
+        abstract d<K, V> c(d<K, V> dVar);
 
         @Override // java.util.Iterator
         /* renamed from: d */
         public Map.Entry<K, V> next() {
-            C0341d<K, V> c0341d = this.f1604c;
-            this.f1604c = m1003e();
-            return c0341d;
+            d<K, V> dVar = this.f1292c;
+            this.f1292c = e();
+            return dVar;
         }
 
         @Override // java.util.Iterator
         public boolean hasNext() {
-            return this.f1604c != null;
+            return this.f1292c != null;
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: b.b$g */
     /* loaded from: classes.dex */
-    public interface InterfaceC0344g<K, V> {
-        /* renamed from: a */
-        void mo1002a(C0341d<K, V> c0341d);
+    public interface g<K, V> {
+        void a(d<K, V> dVar);
     }
 
-    /* renamed from: b */
-    public Iterator<Map.Entry<K, V>> m1013b() {
-        C0340c c0340c = new C0340c(this.f1593c, this.f1592b);
-        this.f1594d.put(c0340c, Boolean.FALSE);
-        return c0340c;
+    public Iterator<Map.Entry<K, V>> b() {
+        c cVar = new c(this.f1281c, this.f1280b);
+        this.f1282d.put(cVar, Boolean.FALSE);
+        return cVar;
     }
 
-    /* renamed from: c */
-    public Map.Entry<K, V> m1012c() {
-        return this.f1592b;
+    public Map.Entry<K, V> c() {
+        return this.f1280b;
     }
 
-    /* renamed from: d */
-    protected C0341d<K, V> mo1011d(K k) {
-        C0341d<K, V> c0341d = this.f1592b;
-        while (c0341d != null && !c0341d.f1596b.equals(k)) {
-            c0341d = c0341d.f1598d;
+    protected d<K, V> d(K k2) {
+        d<K, V> dVar = this.f1280b;
+        while (dVar != null && !dVar.f1284b.equals(k2)) {
+            dVar = dVar.f1286d;
         }
-        return c0341d;
+        return dVar;
     }
 
-    /* renamed from: e */
-    public C0337b<K, V>.C0342e m1010e() {
-        C0337b<K, V>.C0342e c0342e = new C0342e();
-        this.f1594d.put(c0342e, Boolean.FALSE);
-        return c0342e;
+    public b<K, V>.e e() {
+        b<K, V>.e eVar = new e();
+        this.f1282d.put(eVar, Boolean.FALSE);
+        return eVar;
     }
 
     public boolean equals(Object obj) {
         if (obj == this) {
             return true;
         }
-        if (obj instanceof C0337b) {
-            C0337b c0337b = (C0337b) obj;
-            if (size() != c0337b.size()) {
+        if (obj instanceof b) {
+            b bVar = (b) obj;
+            if (size() != bVar.size()) {
                 return false;
             }
             Iterator<Map.Entry<K, V>> it = iterator();
-            Iterator<Map.Entry<K, V>> it2 = c0337b.iterator();
+            Iterator<Map.Entry<K, V>> it2 = bVar.iterator();
             while (it.hasNext() && it2.hasNext()) {
                 Map.Entry<K, V> next = it.next();
                 Map.Entry<K, V> next2 = it2.next();
@@ -281,50 +261,48 @@ public class C0337b<K, V> implements Iterable<Map.Entry<K, V>> {
         return false;
     }
 
-    /* renamed from: f */
-    public Map.Entry<K, V> m1009f() {
-        return this.f1593c;
+    public Map.Entry<K, V> f() {
+        return this.f1281c;
     }
 
-    /* renamed from: g */
-    public V mo1008g(K k) {
-        C0341d<K, V> mo1011d = mo1011d(k);
-        if (mo1011d == null) {
+    public V g(K k2) {
+        d<K, V> d2 = d(k2);
+        if (d2 == null) {
             return null;
         }
-        this.f1595e--;
-        if (!this.f1594d.isEmpty()) {
-            for (InterfaceC0344g<K, V> interfaceC0344g : this.f1594d.keySet()) {
-                interfaceC0344g.mo1002a(mo1011d);
+        this.f1283e--;
+        if (!this.f1282d.isEmpty()) {
+            for (g<K, V> gVar : this.f1282d.keySet()) {
+                gVar.a(d2);
             }
         }
-        C0341d<K, V> c0341d = mo1011d.f1599e;
-        C0341d<K, V> c0341d2 = mo1011d.f1598d;
-        if (c0341d != null) {
-            c0341d.f1598d = c0341d2;
+        d<K, V> dVar = d2.f1287e;
+        d<K, V> dVar2 = d2.f1286d;
+        if (dVar != null) {
+            dVar.f1286d = dVar2;
         } else {
-            this.f1592b = c0341d2;
+            this.f1280b = dVar2;
         }
-        C0341d<K, V> c0341d3 = mo1011d.f1598d;
-        if (c0341d3 != null) {
-            c0341d3.f1599e = c0341d;
+        d<K, V> dVar3 = d2.f1286d;
+        if (dVar3 != null) {
+            dVar3.f1287e = dVar;
         } else {
-            this.f1593c = c0341d;
+            this.f1281c = dVar;
         }
-        mo1011d.f1598d = null;
-        mo1011d.f1599e = null;
-        return mo1011d.f1597c;
+        d2.f1286d = null;
+        d2.f1287e = null;
+        return d2.f1285c;
     }
 
     @Override // java.lang.Iterable
     public Iterator<Map.Entry<K, V>> iterator() {
-        C0339b c0339b = new C0339b(this.f1592b, this.f1593c);
-        this.f1594d.put(c0339b, Boolean.FALSE);
-        return c0339b;
+        C0012b c0012b = new C0012b(this.f1280b, this.f1281c);
+        this.f1282d.put(c0012b, Boolean.FALSE);
+        return c0012b;
     }
 
     public int size() {
-        return this.f1595e;
+        return this.f1283e;
     }
 
     public String toString() {

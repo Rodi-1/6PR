@@ -1,4 +1,4 @@
-package android.support.p002v7.widget;
+package android.support.v7.widget;
 
 import android.graphics.PorterDuff;
 import android.graphics.Rect;
@@ -6,45 +6,41 @@ import android.graphics.drawable.Drawable;
 import android.graphics.drawable.DrawableContainer;
 import android.graphics.drawable.ScaleDrawable;
 import android.os.Build;
-import p011j.InterfaceC0415c;
-import p022u.C0583a;
 
-/* renamed from: android.support.v7.widget.e0 */
 /* loaded from: classes.dex */
-public class C0258e0 {
+public class e0 {
 
-    /* renamed from: a */
-    public static final Rect f1287a = new Rect();
+    /* renamed from: a  reason: collision with root package name */
+    public static final Rect f999a = new Rect();
 
-    /* renamed from: b */
-    private static Class<?> f1288b;
+    /* renamed from: b  reason: collision with root package name */
+    private static Class<?> f1000b;
 
     static {
         try {
-            f1288b = Class.forName("android.graphics.Insets");
+            f1000b = Class.forName("android.graphics.Insets");
         } catch (ClassNotFoundException unused) {
         }
     }
 
-    /* renamed from: a */
-    public static boolean m1324a(Drawable drawable) {
+    public static boolean a(Drawable drawable) {
         Drawable drawable2;
         if (!(drawable instanceof DrawableContainer)) {
-            if (drawable instanceof InterfaceC0415c) {
-                drawable2 = ((InterfaceC0415c) drawable).mo617a();
-            } else if (drawable instanceof C0583a) {
-                drawable2 = ((C0583a) drawable).m91a();
+            if (drawable instanceof j.c) {
+                drawable2 = ((j.c) drawable).a();
+            } else if (drawable instanceof u.a) {
+                drawable2 = ((u.a) drawable).a();
             } else if (!(drawable instanceof ScaleDrawable)) {
                 return true;
             } else {
                 drawable2 = ((ScaleDrawable) drawable).getDrawable();
             }
-            return m1324a(drawable2);
+            return a(drawable2);
         }
         Drawable.ConstantState constantState = drawable.getConstantState();
         if (constantState instanceof DrawableContainer.DrawableContainerState) {
             for (Drawable drawable3 : ((DrawableContainer.DrawableContainerState) constantState).getChildren()) {
-                if (!m1324a(drawable3)) {
+                if (!a(drawable3)) {
                     return false;
                 }
             }
@@ -54,30 +50,27 @@ public class C0258e0 {
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: b */
-    public static void m1323b(Drawable drawable) {
+    public static void b(Drawable drawable) {
         if (Build.VERSION.SDK_INT == 21 && "android.graphics.drawable.VectorDrawable".equals(drawable.getClass().getName())) {
-            m1322c(drawable);
+            c(drawable);
         }
     }
 
-    /* renamed from: c */
-    private static void m1322c(Drawable drawable) {
+    private static void c(Drawable drawable) {
         int[] state = drawable.getState();
         if (state == null || state.length == 0) {
-            drawable.setState(C0306q0.f1482f);
+            drawable.setState(q0.f1174f);
         } else {
-            drawable.setState(C0306q0.f1485i);
+            drawable.setState(q0.f1177i);
         }
         drawable.setState(state);
     }
 
-    /* renamed from: d */
-    public static PorterDuff.Mode m1321d(int i, PorterDuff.Mode mode) {
-        if (i != 3) {
-            if (i != 5) {
-                if (i != 9) {
-                    switch (i) {
+    public static PorterDuff.Mode d(int i2, PorterDuff.Mode mode) {
+        if (i2 != 3) {
+            if (i2 != 5) {
+                if (i2 != 9) {
+                    switch (i2) {
                         case 14:
                             return PorterDuff.Mode.MULTIPLY;
                         case 15:

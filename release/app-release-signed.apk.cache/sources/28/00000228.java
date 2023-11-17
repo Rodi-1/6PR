@@ -1,73 +1,65 @@
-package p016o;
+package o;
 
 import android.os.Build;
 import android.view.WindowInsets;
 
-/* renamed from: o.w */
 /* loaded from: classes.dex */
-public class C0517w {
+public class w {
 
-    /* renamed from: a */
-    private final Object f2241a;
+    /* renamed from: a  reason: collision with root package name */
+    private final Object f1723a;
 
-    private C0517w(Object obj) {
-        this.f2241a = obj;
+    private w(Object obj) {
+        this.f1723a = obj;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: f */
-    public static Object m327f(C0517w c0517w) {
-        if (c0517w == null) {
+    public static Object f(w wVar) {
+        if (wVar == null) {
             return null;
         }
-        return c0517w.f2241a;
+        return wVar.f1723a;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: g */
-    public static C0517w m326g(Object obj) {
+    public static w g(Object obj) {
         if (obj == null) {
             return null;
         }
-        return new C0517w(obj);
+        return new w(obj);
     }
 
-    /* renamed from: a */
-    public int m332a() {
+    public int a() {
         if (Build.VERSION.SDK_INT >= 20) {
-            return ((WindowInsets) this.f2241a).getSystemWindowInsetBottom();
+            return ((WindowInsets) this.f1723a).getSystemWindowInsetBottom();
         }
         return 0;
     }
 
-    /* renamed from: b */
-    public int m331b() {
+    public int b() {
         if (Build.VERSION.SDK_INT >= 20) {
-            return ((WindowInsets) this.f2241a).getSystemWindowInsetLeft();
+            return ((WindowInsets) this.f1723a).getSystemWindowInsetLeft();
         }
         return 0;
     }
 
-    /* renamed from: c */
-    public int m330c() {
+    public int c() {
         if (Build.VERSION.SDK_INT >= 20) {
-            return ((WindowInsets) this.f2241a).getSystemWindowInsetRight();
+            return ((WindowInsets) this.f1723a).getSystemWindowInsetRight();
         }
         return 0;
     }
 
-    /* renamed from: d */
-    public int m329d() {
+    public int d() {
         if (Build.VERSION.SDK_INT >= 20) {
-            return ((WindowInsets) this.f2241a).getSystemWindowInsetTop();
+            return ((WindowInsets) this.f1723a).getSystemWindowInsetTop();
         }
         return 0;
     }
 
-    /* renamed from: e */
-    public C0517w m328e(int i, int i2, int i3, int i4) {
+    public w e(int i2, int i3, int i4, int i5) {
         if (Build.VERSION.SDK_INT >= 20) {
-            return new C0517w(((WindowInsets) this.f2241a).replaceSystemWindowInsets(i, i2, i3, i4));
+            return new w(((WindowInsets) this.f1723a).replaceSystemWindowInsets(i2, i3, i4, i5));
         }
         return null;
     }
@@ -79,13 +71,13 @@ public class C0517w {
         if (obj == null || getClass() != obj.getClass()) {
             return false;
         }
-        Object obj2 = this.f2241a;
-        Object obj3 = ((C0517w) obj).f2241a;
+        Object obj2 = this.f1723a;
+        Object obj3 = ((w) obj).f1723a;
         return obj2 == null ? obj3 == null : obj2.equals(obj3);
     }
 
     public int hashCode() {
-        Object obj = this.f2241a;
+        Object obj = this.f1723a;
         if (obj == null) {
             return 0;
         }

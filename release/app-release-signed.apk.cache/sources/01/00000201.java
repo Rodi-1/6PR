@@ -1,17 +1,14 @@
-package p016o;
+package o;
 
 import android.view.ViewGroup;
 
-/* renamed from: o.f */
 /* loaded from: classes.dex */
-public final class C0478f {
-    /* renamed from: a */
-    public static int m452a(ViewGroup.MarginLayoutParams marginLayoutParams) {
+public final class f {
+    public static int a(ViewGroup.MarginLayoutParams marginLayoutParams) {
         return marginLayoutParams.getMarginEnd();
     }
 
-    /* renamed from: b */
-    public static int m451b(ViewGroup.MarginLayoutParams marginLayoutParams) {
+    public static int b(ViewGroup.MarginLayoutParams marginLayoutParams) {
         return marginLayoutParams.getMarginStart();
     }
 }

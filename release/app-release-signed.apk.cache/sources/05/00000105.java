@@ -1,14 +1,12 @@
-package android.support.p002v7.widget;
+package android.support.v7.widget;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.support.p002v7.view.menu.C0192e;
-import android.support.p002v7.view.menu.C0196g;
-import android.support.p002v7.view.menu.InterfaceC0201j;
-import android.support.p002v7.view.menu.SubMenuC0208m;
-import android.support.p002v7.widget.ActionMenuView;
+import android.support.v7.view.menu.e;
+import android.support.v7.view.menu.j;
+import android.support.v7.widget.ActionMenuView;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.ContextThemeWrapper;
@@ -24,356 +22,295 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
-import p016o.AbstractC0464a;
-import p016o.C0474d;
-import p016o.C0478f;
-import p016o.C0490o;
-import p019r.AbstractC0525a;
-import p020s.C0569a;
-import p020s.C0578j;
-import p021t.C0580b;
-import p023v.C0592g;
-import p023v.InterfaceC0587c;
+import r.a;
 
-/* renamed from: android.support.v7.widget.Toolbar */
 /* loaded from: classes.dex */
 public class Toolbar extends ViewGroup {
+    private int A;
+    private int B;
+    private boolean C;
+    private boolean D;
+    private final ArrayList<View> E;
+    private final ArrayList<View> F;
+    private final int[] G;
+    f H;
+    private final ActionMenuView.e I;
+    private w0 J;
+    private android.support.v7.widget.d K;
+    private d L;
+    private j.a M;
+    private e.a N;
+    private boolean O;
+    private final Runnable P;
 
-    /* renamed from: A */
-    private int f1170A;
+    /* renamed from: b  reason: collision with root package name */
+    private ActionMenuView f910b;
 
-    /* renamed from: B */
-    private int f1171B;
+    /* renamed from: c  reason: collision with root package name */
+    private TextView f911c;
 
-    /* renamed from: C */
-    private boolean f1172C;
+    /* renamed from: d  reason: collision with root package name */
+    private TextView f912d;
 
-    /* renamed from: D */
-    private boolean f1173D;
+    /* renamed from: e  reason: collision with root package name */
+    private ImageButton f913e;
 
-    /* renamed from: E */
-    private final ArrayList<View> f1174E;
+    /* renamed from: f  reason: collision with root package name */
+    private ImageView f914f;
 
-    /* renamed from: F */
-    private final ArrayList<View> f1175F;
+    /* renamed from: g  reason: collision with root package name */
+    private Drawable f915g;
 
-    /* renamed from: G */
-    private final int[] f1176G;
+    /* renamed from: h  reason: collision with root package name */
+    private CharSequence f916h;
 
-    /* renamed from: H */
-    InterfaceC0234f f1177H;
+    /* renamed from: i  reason: collision with root package name */
+    ImageButton f917i;
 
-    /* renamed from: I */
-    private final ActionMenuView.InterfaceC0219e f1178I;
+    /* renamed from: j  reason: collision with root package name */
+    View f918j;
 
-    /* renamed from: J */
-    private C0318w0 f1179J;
+    /* renamed from: k  reason: collision with root package name */
+    private Context f919k;
 
-    /* renamed from: K */
-    private C0248d f1180K;
+    /* renamed from: l  reason: collision with root package name */
+    private int f920l;
 
-    /* renamed from: L */
-    private C0232d f1181L;
+    /* renamed from: m  reason: collision with root package name */
+    private int f921m;
 
-    /* renamed from: M */
-    private InterfaceC0201j.InterfaceC0202a f1182M;
+    /* renamed from: n  reason: collision with root package name */
+    private int f922n;
 
-    /* renamed from: N */
-    private C0192e.InterfaceC0193a f1183N;
+    /* renamed from: o  reason: collision with root package name */
+    int f923o;
 
-    /* renamed from: O */
-    private boolean f1184O;
+    /* renamed from: p  reason: collision with root package name */
+    private int f924p;
 
-    /* renamed from: P */
-    private final Runnable f1185P;
+    /* renamed from: q  reason: collision with root package name */
+    private int f925q;
 
-    /* renamed from: b */
-    private ActionMenuView f1186b;
+    /* renamed from: r  reason: collision with root package name */
+    private int f926r;
 
-    /* renamed from: c */
-    private TextView f1187c;
+    /* renamed from: s  reason: collision with root package name */
+    private int f927s;
 
-    /* renamed from: d */
-    private TextView f1188d;
+    /* renamed from: t  reason: collision with root package name */
+    private int f928t;
 
-    /* renamed from: e */
-    private ImageButton f1189e;
+    /* renamed from: u  reason: collision with root package name */
+    private n0 f929u;
 
-    /* renamed from: f */
-    private ImageView f1190f;
+    /* renamed from: v  reason: collision with root package name */
+    private int f930v;
 
-    /* renamed from: g */
-    private Drawable f1191g;
+    /* renamed from: w  reason: collision with root package name */
+    private int f931w;
+    private int x;
+    private CharSequence y;
+    private CharSequence z;
 
-    /* renamed from: h */
-    private CharSequence f1192h;
-
-    /* renamed from: i */
-    ImageButton f1193i;
-
-    /* renamed from: j */
-    View f1194j;
-
-    /* renamed from: k */
-    private Context f1195k;
-
-    /* renamed from: l */
-    private int f1196l;
-
-    /* renamed from: m */
-    private int f1197m;
-
-    /* renamed from: n */
-    private int f1198n;
-
-    /* renamed from: o */
-    int f1199o;
-
-    /* renamed from: p */
-    private int f1200p;
-
-    /* renamed from: q */
-    private int f1201q;
-
-    /* renamed from: r */
-    private int f1202r;
-
-    /* renamed from: s */
-    private int f1203s;
-
-    /* renamed from: t */
-    private int f1204t;
-
-    /* renamed from: u */
-    private C0295n0 f1205u;
-
-    /* renamed from: v */
-    private int f1206v;
-
-    /* renamed from: w */
-    private int f1207w;
-
-    /* renamed from: x */
-    private int f1208x;
-
-    /* renamed from: y */
-    private CharSequence f1209y;
-
-    /* renamed from: z */
-    private CharSequence f1210z;
-
-    /* renamed from: android.support.v7.widget.Toolbar$a */
     /* loaded from: classes.dex */
-    class C0229a implements ActionMenuView.InterfaceC0219e {
-        C0229a() {
+    class a implements ActionMenuView.e {
+        a() {
         }
 
-        @Override // android.support.p002v7.widget.ActionMenuView.InterfaceC0219e
+        @Override // android.support.v7.widget.ActionMenuView.e
         public boolean onMenuItemClick(MenuItem menuItem) {
-            InterfaceC0234f interfaceC0234f = Toolbar.this.f1177H;
-            if (interfaceC0234f != null) {
-                return interfaceC0234f.onMenuItemClick(menuItem);
+            f fVar = Toolbar.this.H;
+            if (fVar != null) {
+                return fVar.onMenuItemClick(menuItem);
             }
             return false;
         }
     }
 
-    /* renamed from: android.support.v7.widget.Toolbar$b */
     /* loaded from: classes.dex */
-    class RunnableC0230b implements Runnable {
-        RunnableC0230b() {
+    class b implements Runnable {
+        b() {
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            Toolbar.this.m1440M();
+            Toolbar.this.M();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: android.support.v7.widget.Toolbar$c */
     /* loaded from: classes.dex */
-    public class View$OnClickListenerC0231c implements View.OnClickListener {
-        View$OnClickListenerC0231c() {
+    public class c implements View.OnClickListener {
+        c() {
         }
 
         @Override // android.view.View.OnClickListener
         public void onClick(View view) {
-            Toolbar.this.m1435e();
+            Toolbar.this.e();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: android.support.v7.widget.Toolbar$d */
     /* loaded from: classes.dex */
-    public class C0232d implements InterfaceC0201j {
+    public class d implements android.support.v7.view.menu.j {
 
-        /* renamed from: b */
-        C0192e f1214b;
+        /* renamed from: b  reason: collision with root package name */
+        android.support.v7.view.menu.e f935b;
 
-        /* renamed from: c */
-        C0196g f1215c;
+        /* renamed from: c  reason: collision with root package name */
+        android.support.v7.view.menu.g f936c;
 
-        C0232d() {
+        d() {
         }
 
-        @Override // android.support.p002v7.view.menu.InterfaceC0201j
-        /* renamed from: a */
-        public void mo1347a(C0192e c0192e, boolean z) {
+        @Override // android.support.v7.view.menu.j
+        public void a(android.support.v7.view.menu.e eVar, boolean z) {
         }
 
-        @Override // android.support.p002v7.view.menu.InterfaceC0201j
-        /* renamed from: b */
-        public boolean mo1346b(SubMenuC0208m subMenuC0208m) {
+        @Override // android.support.v7.view.menu.j
+        public boolean b(android.support.v7.view.menu.m mVar) {
             return false;
         }
 
-        @Override // android.support.p002v7.view.menu.InterfaceC0201j
-        /* renamed from: e */
-        public boolean mo1413e(C0192e c0192e, C0196g c0196g) {
-            Toolbar.this.m1433g();
-            ViewParent parent = Toolbar.this.f1193i.getParent();
+        @Override // android.support.v7.view.menu.j
+        public boolean e(android.support.v7.view.menu.e eVar, android.support.v7.view.menu.g gVar) {
+            Toolbar.this.g();
+            ViewParent parent = Toolbar.this.f917i.getParent();
             Toolbar toolbar = Toolbar.this;
             if (parent != toolbar) {
                 if (parent instanceof ViewGroup) {
-                    ((ViewGroup) parent).removeView(toolbar.f1193i);
+                    ((ViewGroup) parent).removeView(toolbar.f917i);
                 }
                 Toolbar toolbar2 = Toolbar.this;
-                toolbar2.addView(toolbar2.f1193i);
+                toolbar2.addView(toolbar2.f917i);
             }
-            Toolbar.this.f1194j = c0196g.getActionView();
-            this.f1215c = c0196g;
-            ViewParent parent2 = Toolbar.this.f1194j.getParent();
+            Toolbar.this.f918j = gVar.getActionView();
+            this.f936c = gVar;
+            ViewParent parent2 = Toolbar.this.f918j.getParent();
             Toolbar toolbar3 = Toolbar.this;
             if (parent2 != toolbar3) {
                 if (parent2 instanceof ViewGroup) {
-                    ((ViewGroup) parent2).removeView(toolbar3.f1194j);
+                    ((ViewGroup) parent2).removeView(toolbar3.f918j);
                 }
-                C0233e generateDefaultLayoutParams = Toolbar.this.generateDefaultLayoutParams();
+                e generateDefaultLayoutParams = Toolbar.this.generateDefaultLayoutParams();
                 Toolbar toolbar4 = Toolbar.this;
-                generateDefaultLayoutParams.f2250a = 8388611 | (toolbar4.f1199o & C0578j.f2591q0);
-                generateDefaultLayoutParams.f1217b = 2;
-                toolbar4.f1194j.setLayoutParams(generateDefaultLayoutParams);
+                generateDefaultLayoutParams.f1732a = 8388611 | (toolbar4.f923o & s.j.q0);
+                generateDefaultLayoutParams.f938b = 2;
+                toolbar4.f918j.setLayoutParams(generateDefaultLayoutParams);
                 Toolbar toolbar5 = Toolbar.this;
-                toolbar5.addView(toolbar5.f1194j);
+                toolbar5.addView(toolbar5.f918j);
             }
-            Toolbar.this.m1447F();
+            Toolbar.this.F();
             Toolbar.this.requestLayout();
-            c0196g.m1589p(true);
-            View view = Toolbar.this.f1194j;
-            if (view instanceof InterfaceC0587c) {
-                ((InterfaceC0587c) view).mo14a();
+            gVar.p(true);
+            View view = Toolbar.this.f918j;
+            if (view instanceof v.c) {
+                ((v.c) view).a();
             }
             return true;
         }
 
-        @Override // android.support.p002v7.view.menu.InterfaceC0201j
-        /* renamed from: g */
-        public boolean mo1344g() {
+        @Override // android.support.v7.view.menu.j
+        public boolean g() {
             return false;
         }
 
-        @Override // android.support.p002v7.view.menu.InterfaceC0201j
-        /* renamed from: h */
-        public boolean mo1412h(C0192e c0192e, C0196g c0196g) {
-            View view = Toolbar.this.f1194j;
-            if (view instanceof InterfaceC0587c) {
-                ((InterfaceC0587c) view).mo12d();
+        @Override // android.support.v7.view.menu.j
+        public boolean h(android.support.v7.view.menu.e eVar, android.support.v7.view.menu.g gVar) {
+            View view = Toolbar.this.f918j;
+            if (view instanceof v.c) {
+                ((v.c) view).d();
             }
             Toolbar toolbar = Toolbar.this;
-            toolbar.removeView(toolbar.f1194j);
+            toolbar.removeView(toolbar.f918j);
             Toolbar toolbar2 = Toolbar.this;
-            toolbar2.removeView(toolbar2.f1193i);
+            toolbar2.removeView(toolbar2.f917i);
             Toolbar toolbar3 = Toolbar.this;
-            toolbar3.f1194j = null;
-            toolbar3.m1439a();
-            this.f1215c = null;
+            toolbar3.f918j = null;
+            toolbar3.a();
+            this.f936c = null;
             Toolbar.this.requestLayout();
-            c0196g.m1589p(false);
+            gVar.p(false);
             return true;
         }
 
-        @Override // android.support.p002v7.view.menu.InterfaceC0201j
-        /* renamed from: i */
-        public void mo1343i(boolean z) {
-            if (this.f1215c != null) {
-                C0192e c0192e = this.f1214b;
+        @Override // android.support.v7.view.menu.j
+        public void i(boolean z) {
+            if (this.f936c != null) {
+                android.support.v7.view.menu.e eVar = this.f935b;
                 boolean z2 = false;
-                if (c0192e != null) {
-                    int size = c0192e.size();
-                    int i = 0;
+                if (eVar != null) {
+                    int size = eVar.size();
+                    int i2 = 0;
                     while (true) {
-                        if (i >= size) {
+                        if (i2 >= size) {
                             break;
-                        } else if (this.f1214b.getItem(i) == this.f1215c) {
+                        } else if (this.f935b.getItem(i2) == this.f936c) {
                             z2 = true;
                             break;
                         } else {
-                            i++;
+                            i2++;
                         }
                     }
                 }
                 if (z2) {
                     return;
                 }
-                mo1412h(this.f1214b, this.f1215c);
+                h(this.f935b, this.f936c);
             }
         }
 
-        @Override // android.support.p002v7.view.menu.InterfaceC0201j
-        /* renamed from: k */
-        public void mo1342k(Context context, C0192e c0192e) {
-            C0196g c0196g;
-            C0192e c0192e2 = this.f1214b;
-            if (c0192e2 != null && (c0196g = this.f1215c) != null) {
-                c0192e2.mo1538f(c0196g);
+        @Override // android.support.v7.view.menu.j
+        public void k(Context context, android.support.v7.view.menu.e eVar) {
+            android.support.v7.view.menu.g gVar;
+            android.support.v7.view.menu.e eVar2 = this.f935b;
+            if (eVar2 != null && (gVar = this.f936c) != null) {
+                eVar2.f(gVar);
             }
-            this.f1214b = c0192e;
+            this.f935b = eVar;
         }
     }
 
-    /* renamed from: android.support.v7.widget.Toolbar$e */
     /* loaded from: classes.dex */
-    public static class C0233e extends AbstractC0525a.C0526a {
+    public static class e extends a.C0023a {
 
-        /* renamed from: b */
-        int f1217b;
+        /* renamed from: b  reason: collision with root package name */
+        int f938b;
 
-        public C0233e(int i, int i2) {
-            super(i, i2);
-            this.f1217b = 0;
-            this.f2250a = 8388627;
+        public e(int i2, int i3) {
+            super(i2, i3);
+            this.f938b = 0;
+            this.f1732a = 8388627;
         }
 
-        public C0233e(Context context, AttributeSet attributeSet) {
+        public e(Context context, AttributeSet attributeSet) {
             super(context, attributeSet);
-            this.f1217b = 0;
+            this.f938b = 0;
         }
 
-        public C0233e(C0233e c0233e) {
-            super((AbstractC0525a.C0526a) c0233e);
-            this.f1217b = 0;
-            this.f1217b = c0233e.f1217b;
+        public e(e eVar) {
+            super((a.C0023a) eVar);
+            this.f938b = 0;
+            this.f938b = eVar.f938b;
         }
 
-        public C0233e(ViewGroup.LayoutParams layoutParams) {
+        public e(ViewGroup.LayoutParams layoutParams) {
             super(layoutParams);
-            this.f1217b = 0;
+            this.f938b = 0;
         }
 
-        public C0233e(ViewGroup.MarginLayoutParams marginLayoutParams) {
+        public e(ViewGroup.MarginLayoutParams marginLayoutParams) {
             super(marginLayoutParams);
-            this.f1217b = 0;
-            m1411a(marginLayoutParams);
+            this.f938b = 0;
+            a(marginLayoutParams);
         }
 
-        public C0233e(AbstractC0525a.C0526a c0526a) {
-            super(c0526a);
-            this.f1217b = 0;
+        public e(a.C0023a c0023a) {
+            super(c0023a);
+            this.f938b = 0;
         }
 
-        /* renamed from: a */
-        void m1411a(ViewGroup.MarginLayoutParams marginLayoutParams) {
+        void a(ViewGroup.MarginLayoutParams marginLayoutParams) {
             ((ViewGroup.MarginLayoutParams) this).leftMargin = marginLayoutParams.leftMargin;
             ((ViewGroup.MarginLayoutParams) this).topMargin = marginLayoutParams.topMargin;
             ((ViewGroup.MarginLayoutParams) this).rightMargin = marginLayoutParams.rightMargin;
@@ -381,221 +318,212 @@ public class Toolbar extends ViewGroup {
         }
     }
 
-    /* renamed from: android.support.v7.widget.Toolbar$f */
     /* loaded from: classes.dex */
-    public interface InterfaceC0234f {
+    public interface f {
         boolean onMenuItemClick(MenuItem menuItem);
     }
 
-    /* renamed from: android.support.v7.widget.Toolbar$g */
     /* loaded from: classes.dex */
-    public static class C0235g extends AbstractC0464a {
-        public static final Parcelable.Creator<C0235g> CREATOR = new C0236a();
+    public static class g extends o.a {
+        public static final Parcelable.Creator<g> CREATOR = new a();
 
-        /* renamed from: d */
-        int f1218d;
+        /* renamed from: d  reason: collision with root package name */
+        int f939d;
 
-        /* renamed from: e */
-        boolean f1219e;
+        /* renamed from: e  reason: collision with root package name */
+        boolean f940e;
 
-        /* renamed from: android.support.v7.widget.Toolbar$g$a */
         /* loaded from: classes.dex */
-        static class C0236a implements Parcelable.ClassLoaderCreator<C0235g> {
-            C0236a() {
+        static class a implements Parcelable.ClassLoaderCreator<g> {
+            a() {
             }
 
             @Override // android.os.Parcelable.Creator
             /* renamed from: a */
-            public C0235g createFromParcel(Parcel parcel) {
-                return new C0235g(parcel, null);
+            public g createFromParcel(Parcel parcel) {
+                return new g(parcel, null);
             }
 
             @Override // android.os.Parcelable.ClassLoaderCreator
             /* renamed from: b */
-            public C0235g createFromParcel(Parcel parcel, ClassLoader classLoader) {
-                return new C0235g(parcel, classLoader);
+            public g createFromParcel(Parcel parcel, ClassLoader classLoader) {
+                return new g(parcel, classLoader);
             }
 
             @Override // android.os.Parcelable.Creator
             /* renamed from: c */
-            public C0235g[] newArray(int i) {
-                return new C0235g[i];
+            public g[] newArray(int i2) {
+                return new g[i2];
             }
         }
 
-        public C0235g(Parcel parcel, ClassLoader classLoader) {
+        public g(Parcel parcel, ClassLoader classLoader) {
             super(parcel, classLoader);
-            this.f1218d = parcel.readInt();
-            this.f1219e = parcel.readInt() != 0;
+            this.f939d = parcel.readInt();
+            this.f940e = parcel.readInt() != 0;
         }
 
-        public C0235g(Parcelable parcelable) {
+        public g(Parcelable parcelable) {
             super(parcelable);
         }
 
-        @Override // p016o.AbstractC0464a, android.os.Parcelable
-        public void writeToParcel(Parcel parcel, int i) {
-            super.writeToParcel(parcel, i);
-            parcel.writeInt(this.f1218d);
-            parcel.writeInt(this.f1219e ? 1 : 0);
+        @Override // o.a, android.os.Parcelable
+        public void writeToParcel(Parcel parcel, int i2) {
+            super.writeToParcel(parcel, i2);
+            parcel.writeInt(this.f939d);
+            parcel.writeInt(this.f940e ? 1 : 0);
         }
     }
 
     public Toolbar(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, C0569a.toolbarStyle);
+        this(context, attributeSet, s.a.toolbarStyle);
     }
 
-    public Toolbar(Context context, AttributeSet attributeSet, int i) {
-        super(context, attributeSet, i);
-        this.f1208x = 8388627;
-        this.f1174E = new ArrayList<>();
-        this.f1175F = new ArrayList<>();
-        this.f1176G = new int[2];
-        this.f1178I = new C0229a();
-        this.f1185P = new RunnableC0230b();
-        C0316v0 m1108t = C0316v0.m1108t(getContext(), attributeSet, C0578j.f2581n2, i, 0);
-        this.f1197m = m1108t.m1115m(C0578j.f2480O2, 0);
-        this.f1198n = m1108t.m1115m(C0578j.f2444F2, 0);
-        this.f1208x = m1108t.m1117k(C0578j.f2585o2, this.f1208x);
-        this.f1199o = m1108t.m1117k(C0578j.f2589p2, 48);
-        int m1124d = m1108t.m1124d(C0578j.f2456I2, 0);
-        int i2 = C0578j.f2476N2;
-        m1124d = m1108t.m1111q(i2) ? m1108t.m1124d(i2, m1124d) : m1124d;
-        this.f1204t = m1124d;
-        this.f1203s = m1124d;
-        this.f1202r = m1124d;
-        this.f1201q = m1124d;
-        int m1124d2 = m1108t.m1124d(C0578j.f2468L2, -1);
-        if (m1124d2 >= 0) {
-            this.f1201q = m1124d2;
+    public Toolbar(Context context, AttributeSet attributeSet, int i2) {
+        super(context, attributeSet, i2);
+        this.x = 8388627;
+        this.E = new ArrayList<>();
+        this.F = new ArrayList<>();
+        this.G = new int[2];
+        this.I = new a();
+        this.P = new b();
+        v0 t2 = v0.t(getContext(), attributeSet, s.j.n2, i2, 0);
+        this.f921m = t2.m(s.j.O2, 0);
+        this.f922n = t2.m(s.j.F2, 0);
+        this.x = t2.k(s.j.o2, this.x);
+        this.f923o = t2.k(s.j.p2, 48);
+        int d2 = t2.d(s.j.I2, 0);
+        int i3 = s.j.N2;
+        d2 = t2.q(i3) ? t2.d(i3, d2) : d2;
+        this.f928t = d2;
+        this.f927s = d2;
+        this.f926r = d2;
+        this.f925q = d2;
+        int d3 = t2.d(s.j.L2, -1);
+        if (d3 >= 0) {
+            this.f925q = d3;
         }
-        int m1124d3 = m1108t.m1124d(C0578j.f2464K2, -1);
-        if (m1124d3 >= 0) {
-            this.f1202r = m1124d3;
+        int d4 = t2.d(s.j.K2, -1);
+        if (d4 >= 0) {
+            this.f926r = d4;
         }
-        int m1124d4 = m1108t.m1124d(C0578j.f2472M2, -1);
-        if (m1124d4 >= 0) {
-            this.f1203s = m1124d4;
+        int d5 = t2.d(s.j.M2, -1);
+        if (d5 >= 0) {
+            this.f927s = d5;
         }
-        int m1124d5 = m1108t.m1124d(C0578j.f2460J2, -1);
-        if (m1124d5 >= 0) {
-            this.f1204t = m1124d5;
+        int d6 = t2.d(s.j.J2, -1);
+        if (d6 >= 0) {
+            this.f928t = d6;
         }
-        this.f1200p = m1108t.m1123e(C0578j.f2424A2, -1);
-        int m1124d6 = m1108t.m1124d(C0578j.f2617w2, Integer.MIN_VALUE);
-        int m1124d7 = m1108t.m1124d(C0578j.f2601s2, Integer.MIN_VALUE);
-        int m1123e = m1108t.m1123e(C0578j.f2609u2, 0);
-        int m1123e2 = m1108t.m1123e(C0578j.f2613v2, 0);
-        m1432h();
-        this.f1205u.m1183e(m1123e, m1123e2);
-        if (m1124d6 != Integer.MIN_VALUE || m1124d7 != Integer.MIN_VALUE) {
-            this.f1205u.m1181g(m1124d6, m1124d7);
+        this.f924p = t2.e(s.j.A2, -1);
+        int d7 = t2.d(s.j.w2, Integer.MIN_VALUE);
+        int d8 = t2.d(s.j.s2, Integer.MIN_VALUE);
+        int e2 = t2.e(s.j.u2, 0);
+        int e3 = t2.e(s.j.v2, 0);
+        h();
+        this.f929u.e(e2, e3);
+        if (d7 != Integer.MIN_VALUE || d8 != Integer.MIN_VALUE) {
+            this.f929u.g(d7, d8);
         }
-        this.f1206v = m1108t.m1124d(C0578j.f2621x2, Integer.MIN_VALUE);
-        this.f1207w = m1108t.m1124d(C0578j.f2605t2, Integer.MIN_VALUE);
-        this.f1191g = m1108t.m1122f(C0578j.f2597r2);
-        this.f1192h = m1108t.m1113o(C0578j.f2593q2);
-        CharSequence m1113o = m1108t.m1113o(C0578j.f2452H2);
-        if (!TextUtils.isEmpty(m1113o)) {
-            setTitle(m1113o);
+        this.f930v = t2.d(s.j.x2, Integer.MIN_VALUE);
+        this.f931w = t2.d(s.j.t2, Integer.MIN_VALUE);
+        this.f915g = t2.f(s.j.r2);
+        this.f916h = t2.o(s.j.q2);
+        CharSequence o2 = t2.o(s.j.H2);
+        if (!TextUtils.isEmpty(o2)) {
+            setTitle(o2);
         }
-        CharSequence m1113o2 = m1108t.m1113o(C0578j.f2440E2);
-        if (!TextUtils.isEmpty(m1113o2)) {
-            setSubtitle(m1113o2);
+        CharSequence o3 = t2.o(s.j.E2);
+        if (!TextUtils.isEmpty(o3)) {
+            setSubtitle(o3);
         }
-        this.f1195k = getContext();
-        setPopupTheme(m1108t.m1115m(C0578j.f2436D2, 0));
-        Drawable m1122f = m1108t.m1122f(C0578j.f2432C2);
-        if (m1122f != null) {
-            setNavigationIcon(m1122f);
+        this.f919k = getContext();
+        setPopupTheme(t2.m(s.j.D2, 0));
+        Drawable f2 = t2.f(s.j.C2);
+        if (f2 != null) {
+            setNavigationIcon(f2);
         }
-        CharSequence m1113o3 = m1108t.m1113o(C0578j.f2428B2);
-        if (!TextUtils.isEmpty(m1113o3)) {
-            setNavigationContentDescription(m1113o3);
+        CharSequence o4 = t2.o(s.j.B2);
+        if (!TextUtils.isEmpty(o4)) {
+            setNavigationContentDescription(o4);
         }
-        Drawable m1122f2 = m1108t.m1122f(C0578j.f2625y2);
-        if (m1122f2 != null) {
-            setLogo(m1122f2);
+        Drawable f3 = t2.f(s.j.y2);
+        if (f3 != null) {
+            setLogo(f3);
         }
-        CharSequence m1113o4 = m1108t.m1113o(C0578j.f2629z2);
-        if (!TextUtils.isEmpty(m1113o4)) {
-            setLogoDescription(m1113o4);
+        CharSequence o5 = t2.o(s.j.z2);
+        if (!TextUtils.isEmpty(o5)) {
+            setLogoDescription(o5);
         }
-        int i3 = C0578j.f2484P2;
-        if (m1108t.m1111q(i3)) {
-            setTitleTextColor(m1108t.m1126b(i3, -1));
+        int i4 = s.j.P2;
+        if (t2.q(i4)) {
+            setTitleTextColor(t2.b(i4, -1));
         }
-        int i4 = C0578j.f2448G2;
-        if (m1108t.m1111q(i4)) {
-            setSubtitleTextColor(m1108t.m1126b(i4, -1));
+        int i5 = s.j.G2;
+        if (t2.q(i5)) {
+            setSubtitleTextColor(t2.b(i5, -1));
         }
-        m1108t.m1107u();
+        t2.u();
     }
 
-    /* renamed from: A */
-    private int m1452A(View view, int i, int[] iArr, int i2) {
-        C0233e c0233e = (C0233e) view.getLayoutParams();
-        int i3 = ((ViewGroup.MarginLayoutParams) c0233e).leftMargin - iArr[0];
-        int max = i + Math.max(0, i3);
-        iArr[0] = Math.max(0, -i3);
-        int m1423q = m1423q(view, i2);
+    private int A(View view, int i2, int[] iArr, int i3) {
+        e eVar = (e) view.getLayoutParams();
+        int i4 = ((ViewGroup.MarginLayoutParams) eVar).leftMargin - iArr[0];
+        int max = i2 + Math.max(0, i4);
+        iArr[0] = Math.max(0, -i4);
+        int q2 = q(view, i3);
         int measuredWidth = view.getMeasuredWidth();
-        view.layout(max, m1423q, max + measuredWidth, view.getMeasuredHeight() + m1423q);
-        return max + measuredWidth + ((ViewGroup.MarginLayoutParams) c0233e).rightMargin;
+        view.layout(max, q2, max + measuredWidth, view.getMeasuredHeight() + q2);
+        return max + measuredWidth + ((ViewGroup.MarginLayoutParams) eVar).rightMargin;
     }
 
-    /* renamed from: B */
-    private int m1451B(View view, int i, int[] iArr, int i2) {
-        C0233e c0233e = (C0233e) view.getLayoutParams();
-        int i3 = ((ViewGroup.MarginLayoutParams) c0233e).rightMargin - iArr[1];
-        int max = i - Math.max(0, i3);
-        iArr[1] = Math.max(0, -i3);
-        int m1423q = m1423q(view, i2);
+    private int B(View view, int i2, int[] iArr, int i3) {
+        e eVar = (e) view.getLayoutParams();
+        int i4 = ((ViewGroup.MarginLayoutParams) eVar).rightMargin - iArr[1];
+        int max = i2 - Math.max(0, i4);
+        iArr[1] = Math.max(0, -i4);
+        int q2 = q(view, i3);
         int measuredWidth = view.getMeasuredWidth();
-        view.layout(max - measuredWidth, m1423q, max, view.getMeasuredHeight() + m1423q);
-        return max - (measuredWidth + ((ViewGroup.MarginLayoutParams) c0233e).leftMargin);
+        view.layout(max - measuredWidth, q2, max, view.getMeasuredHeight() + q2);
+        return max - (measuredWidth + ((ViewGroup.MarginLayoutParams) eVar).leftMargin);
     }
 
-    /* renamed from: C */
-    private int m1450C(View view, int i, int i2, int i3, int i4, int[] iArr) {
+    private int C(View view, int i2, int i3, int i4, int i5, int[] iArr) {
         ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) view.getLayoutParams();
-        int i5 = marginLayoutParams.leftMargin - iArr[0];
-        int i6 = marginLayoutParams.rightMargin - iArr[1];
-        int max = Math.max(0, i5) + Math.max(0, i6);
-        iArr[0] = Math.max(0, -i5);
-        iArr[1] = Math.max(0, -i6);
-        view.measure(ViewGroup.getChildMeasureSpec(i, getPaddingLeft() + getPaddingRight() + max + i2, marginLayoutParams.width), ViewGroup.getChildMeasureSpec(i3, getPaddingTop() + getPaddingBottom() + marginLayoutParams.topMargin + marginLayoutParams.bottomMargin + i4, marginLayoutParams.height));
+        int i6 = marginLayoutParams.leftMargin - iArr[0];
+        int i7 = marginLayoutParams.rightMargin - iArr[1];
+        int max = Math.max(0, i6) + Math.max(0, i7);
+        iArr[0] = Math.max(0, -i6);
+        iArr[1] = Math.max(0, -i7);
+        view.measure(ViewGroup.getChildMeasureSpec(i2, getPaddingLeft() + getPaddingRight() + max + i3, marginLayoutParams.width), ViewGroup.getChildMeasureSpec(i4, getPaddingTop() + getPaddingBottom() + marginLayoutParams.topMargin + marginLayoutParams.bottomMargin + i5, marginLayoutParams.height));
         return view.getMeasuredWidth() + max;
     }
 
-    /* renamed from: D */
-    private void m1449D(View view, int i, int i2, int i3, int i4, int i5) {
+    private void D(View view, int i2, int i3, int i4, int i5, int i6) {
         ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) view.getLayoutParams();
-        int childMeasureSpec = ViewGroup.getChildMeasureSpec(i, getPaddingLeft() + getPaddingRight() + marginLayoutParams.leftMargin + marginLayoutParams.rightMargin + i2, marginLayoutParams.width);
-        int childMeasureSpec2 = ViewGroup.getChildMeasureSpec(i3, getPaddingTop() + getPaddingBottom() + marginLayoutParams.topMargin + marginLayoutParams.bottomMargin + i4, marginLayoutParams.height);
+        int childMeasureSpec = ViewGroup.getChildMeasureSpec(i2, getPaddingLeft() + getPaddingRight() + marginLayoutParams.leftMargin + marginLayoutParams.rightMargin + i3, marginLayoutParams.width);
+        int childMeasureSpec2 = ViewGroup.getChildMeasureSpec(i4, getPaddingTop() + getPaddingBottom() + marginLayoutParams.topMargin + marginLayoutParams.bottomMargin + i5, marginLayoutParams.height);
         int mode = View.MeasureSpec.getMode(childMeasureSpec2);
-        if (mode != 1073741824 && i5 >= 0) {
+        if (mode != 1073741824 && i6 >= 0) {
             if (mode != 0) {
-                i5 = Math.min(View.MeasureSpec.getSize(childMeasureSpec2), i5);
+                i6 = Math.min(View.MeasureSpec.getSize(childMeasureSpec2), i6);
             }
-            childMeasureSpec2 = View.MeasureSpec.makeMeasureSpec(i5, 1073741824);
+            childMeasureSpec2 = View.MeasureSpec.makeMeasureSpec(i6, 1073741824);
         }
         view.measure(childMeasureSpec, childMeasureSpec2);
     }
 
-    /* renamed from: E */
-    private void m1448E() {
-        removeCallbacks(this.f1185P);
-        post(this.f1185P);
+    private void E() {
+        removeCallbacks(this.P);
+        post(this.P);
     }
 
-    /* renamed from: K */
-    private boolean m1442K() {
-        if (this.f1184O) {
+    private boolean K() {
+        if (this.O) {
             int childCount = getChildCount();
-            for (int i = 0; i < childCount; i++) {
-                View childAt = getChildAt(i);
-                if (m1441L(childAt) && childAt.getMeasuredWidth() > 0 && childAt.getMeasuredHeight() > 0) {
+            for (int i2 = 0; i2 < childCount; i2++) {
+                View childAt = getChildAt(i2);
+                if (L(childAt) && childAt.getMeasuredWidth() > 0 && childAt.getMeasuredHeight() > 0) {
                     return false;
                 }
             }
@@ -604,374 +532,348 @@ public class Toolbar extends ViewGroup {
         return false;
     }
 
-    /* renamed from: L */
-    private boolean m1441L(View view) {
+    private boolean L(View view) {
         return (view == null || view.getParent() != this || view.getVisibility() == 8) ? false : true;
     }
 
-    /* renamed from: b */
-    private void m1438b(List<View> list, int i) {
-        boolean z = C0490o.m408d(this) == 1;
+    private void b(List<View> list, int i2) {
+        boolean z = o.o.d(this) == 1;
         int childCount = getChildCount();
-        int m456a = C0474d.m456a(i, C0490o.m408d(this));
+        int a2 = o.d.a(i2, o.o.d(this));
         list.clear();
         if (!z) {
-            for (int i2 = 0; i2 < childCount; i2++) {
-                View childAt = getChildAt(i2);
-                C0233e c0233e = (C0233e) childAt.getLayoutParams();
-                if (c0233e.f1217b == 0 && m1441L(childAt) && m1424p(c0233e.f2250a) == m456a) {
+            for (int i3 = 0; i3 < childCount; i3++) {
+                View childAt = getChildAt(i3);
+                e eVar = (e) childAt.getLayoutParams();
+                if (eVar.f938b == 0 && L(childAt) && p(eVar.f1732a) == a2) {
                     list.add(childAt);
                 }
             }
             return;
         }
-        for (int i3 = childCount - 1; i3 >= 0; i3--) {
-            View childAt2 = getChildAt(i3);
-            C0233e c0233e2 = (C0233e) childAt2.getLayoutParams();
-            if (c0233e2.f1217b == 0 && m1441L(childAt2) && m1424p(c0233e2.f2250a) == m456a) {
+        for (int i4 = childCount - 1; i4 >= 0; i4--) {
+            View childAt2 = getChildAt(i4);
+            e eVar2 = (e) childAt2.getLayoutParams();
+            if (eVar2.f938b == 0 && L(childAt2) && p(eVar2.f1732a) == a2) {
                 list.add(childAt2);
             }
         }
     }
 
-    /* renamed from: c */
-    private void m1437c(View view, boolean z) {
+    private void c(View view, boolean z) {
         ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
-        C0233e generateDefaultLayoutParams = layoutParams == null ? generateDefaultLayoutParams() : !checkLayoutParams(layoutParams) ? generateLayoutParams(layoutParams) : (C0233e) layoutParams;
-        generateDefaultLayoutParams.f1217b = 1;
-        if (!z || this.f1194j == null) {
+        e generateDefaultLayoutParams = layoutParams == null ? generateDefaultLayoutParams() : !checkLayoutParams(layoutParams) ? generateLayoutParams(layoutParams) : (e) layoutParams;
+        generateDefaultLayoutParams.f938b = 1;
+        if (!z || this.f918j == null) {
             addView(view, generateDefaultLayoutParams);
             return;
         }
         view.setLayoutParams(generateDefaultLayoutParams);
-        this.f1175F.add(view);
+        this.F.add(view);
     }
 
     private MenuInflater getMenuInflater() {
-        return new C0592g(getContext());
+        return new v.g(getContext());
     }
 
-    /* renamed from: h */
-    private void m1432h() {
-        if (this.f1205u == null) {
-            this.f1205u = new C0295n0();
+    private void h() {
+        if (this.f929u == null) {
+            this.f929u = new n0();
         }
     }
 
-    /* renamed from: i */
-    private void m1431i() {
-        if (this.f1190f == null) {
-            this.f1190f = new C0302p(getContext());
+    private void i() {
+        if (this.f914f == null) {
+            this.f914f = new p(getContext());
         }
     }
 
-    /* renamed from: j */
-    private void m1430j() {
-        m1429k();
-        if (this.f1186b.m1502L() == null) {
-            C0192e c0192e = (C0192e) this.f1186b.getMenu();
-            if (this.f1181L == null) {
-                this.f1181L = new C0232d();
+    private void j() {
+        k();
+        if (this.f910b.L() == null) {
+            android.support.v7.view.menu.e eVar = (android.support.v7.view.menu.e) this.f910b.getMenu();
+            if (this.L == null) {
+                this.L = new d();
             }
-            this.f1186b.setExpandedActionViewsExclusive(true);
-            c0192e.m1626c(this.f1181L, this.f1195k);
+            this.f910b.setExpandedActionViewsExclusive(true);
+            eVar.c(this.L, this.f919k);
         }
     }
 
-    /* renamed from: k */
-    private void m1429k() {
-        if (this.f1186b == null) {
+    private void k() {
+        if (this.f910b == null) {
             ActionMenuView actionMenuView = new ActionMenuView(getContext());
-            this.f1186b = actionMenuView;
-            actionMenuView.setPopupTheme(this.f1196l);
-            this.f1186b.setOnMenuItemClickListener(this.f1178I);
-            this.f1186b.m1501M(this.f1182M, this.f1183N);
-            C0233e generateDefaultLayoutParams = generateDefaultLayoutParams();
-            generateDefaultLayoutParams.f2250a = 8388613 | (this.f1199o & C0578j.f2591q0);
-            this.f1186b.setLayoutParams(generateDefaultLayoutParams);
-            m1437c(this.f1186b, false);
+            this.f910b = actionMenuView;
+            actionMenuView.setPopupTheme(this.f920l);
+            this.f910b.setOnMenuItemClickListener(this.I);
+            this.f910b.M(this.M, this.N);
+            e generateDefaultLayoutParams = generateDefaultLayoutParams();
+            generateDefaultLayoutParams.f1732a = 8388613 | (this.f923o & s.j.q0);
+            this.f910b.setLayoutParams(generateDefaultLayoutParams);
+            c(this.f910b, false);
         }
     }
 
-    /* renamed from: l */
-    private void m1428l() {
-        if (this.f1189e == null) {
-            this.f1189e = new C0294n(getContext(), null, C0569a.toolbarNavigationButtonStyle);
-            C0233e generateDefaultLayoutParams = generateDefaultLayoutParams();
-            generateDefaultLayoutParams.f2250a = 8388611 | (this.f1199o & C0578j.f2591q0);
-            this.f1189e.setLayoutParams(generateDefaultLayoutParams);
+    private void l() {
+        if (this.f913e == null) {
+            this.f913e = new n(getContext(), null, s.a.toolbarNavigationButtonStyle);
+            e generateDefaultLayoutParams = generateDefaultLayoutParams();
+            generateDefaultLayoutParams.f1732a = 8388611 | (this.f923o & s.j.q0);
+            this.f913e.setLayoutParams(generateDefaultLayoutParams);
         }
     }
 
-    /* renamed from: p */
-    private int m1424p(int i) {
-        int m408d = C0490o.m408d(this);
-        int m456a = C0474d.m456a(i, m408d) & 7;
-        return (m456a == 1 || m456a == 3 || m456a == 5) ? m456a : m408d == 1 ? 5 : 3;
+    private int p(int i2) {
+        int d2 = o.o.d(this);
+        int a2 = o.d.a(i2, d2) & 7;
+        return (a2 == 1 || a2 == 3 || a2 == 5) ? a2 : d2 == 1 ? 5 : 3;
     }
 
-    /* renamed from: q */
-    private int m1423q(View view, int i) {
-        C0233e c0233e = (C0233e) view.getLayoutParams();
+    private int q(View view, int i2) {
+        e eVar = (e) view.getLayoutParams();
         int measuredHeight = view.getMeasuredHeight();
-        int i2 = i > 0 ? (measuredHeight - i) / 2 : 0;
-        int m1422r = m1422r(c0233e.f2250a);
-        if (m1422r != 48) {
-            if (m1422r != 80) {
+        int i3 = i2 > 0 ? (measuredHeight - i2) / 2 : 0;
+        int r2 = r(eVar.f1732a);
+        if (r2 != 48) {
+            if (r2 != 80) {
                 int paddingTop = getPaddingTop();
                 int paddingBottom = getPaddingBottom();
                 int height = getHeight();
-                int i3 = (((height - paddingTop) - paddingBottom) - measuredHeight) / 2;
-                int i4 = ((ViewGroup.MarginLayoutParams) c0233e).topMargin;
-                if (i3 < i4) {
-                    i3 = i4;
+                int i4 = (((height - paddingTop) - paddingBottom) - measuredHeight) / 2;
+                int i5 = ((ViewGroup.MarginLayoutParams) eVar).topMargin;
+                if (i4 < i5) {
+                    i4 = i5;
                 } else {
-                    int i5 = (((height - paddingBottom) - measuredHeight) - i3) - paddingTop;
-                    int i6 = ((ViewGroup.MarginLayoutParams) c0233e).bottomMargin;
-                    if (i5 < i6) {
-                        i3 = Math.max(0, i3 - (i6 - i5));
+                    int i6 = (((height - paddingBottom) - measuredHeight) - i4) - paddingTop;
+                    int i7 = ((ViewGroup.MarginLayoutParams) eVar).bottomMargin;
+                    if (i6 < i7) {
+                        i4 = Math.max(0, i4 - (i7 - i6));
                     }
                 }
-                return paddingTop + i3;
+                return paddingTop + i4;
             }
-            return (((getHeight() - getPaddingBottom()) - measuredHeight) - ((ViewGroup.MarginLayoutParams) c0233e).bottomMargin) - i2;
+            return (((getHeight() - getPaddingBottom()) - measuredHeight) - ((ViewGroup.MarginLayoutParams) eVar).bottomMargin) - i3;
         }
-        return getPaddingTop() - i2;
+        return getPaddingTop() - i3;
     }
 
-    /* renamed from: r */
-    private int m1422r(int i) {
-        int i2 = i & C0578j.f2591q0;
-        return (i2 == 16 || i2 == 48 || i2 == 80) ? i2 : this.f1208x & C0578j.f2591q0;
+    private int r(int i2) {
+        int i3 = i2 & s.j.q0;
+        return (i3 == 16 || i3 == 48 || i3 == 80) ? i3 : this.x & s.j.q0;
     }
 
-    /* renamed from: s */
-    private int m1421s(View view) {
+    private int s(View view) {
         ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) view.getLayoutParams();
-        return C0478f.m451b(marginLayoutParams) + C0478f.m452a(marginLayoutParams);
+        return o.f.b(marginLayoutParams) + o.f.a(marginLayoutParams);
     }
 
-    /* renamed from: t */
-    private int m1420t(View view) {
+    private int t(View view) {
         ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) view.getLayoutParams();
         return marginLayoutParams.topMargin + marginLayoutParams.bottomMargin;
     }
 
-    /* renamed from: u */
-    private int m1419u(List<View> list, int[] iArr) {
-        int i = iArr[0];
-        int i2 = iArr[1];
+    private int u(List<View> list, int[] iArr) {
+        int i2 = iArr[0];
+        int i3 = iArr[1];
         int size = list.size();
-        int i3 = 0;
         int i4 = 0;
-        while (i3 < size) {
-            View view = list.get(i3);
-            C0233e c0233e = (C0233e) view.getLayoutParams();
-            int i5 = ((ViewGroup.MarginLayoutParams) c0233e).leftMargin - i;
-            int i6 = ((ViewGroup.MarginLayoutParams) c0233e).rightMargin - i2;
-            int max = Math.max(0, i5);
-            int max2 = Math.max(0, i6);
-            int max3 = Math.max(0, -i5);
-            int max4 = Math.max(0, -i6);
-            i4 += max + view.getMeasuredWidth() + max2;
-            i3++;
-            i2 = max4;
-            i = max3;
+        int i5 = 0;
+        while (i4 < size) {
+            View view = list.get(i4);
+            e eVar = (e) view.getLayoutParams();
+            int i6 = ((ViewGroup.MarginLayoutParams) eVar).leftMargin - i2;
+            int i7 = ((ViewGroup.MarginLayoutParams) eVar).rightMargin - i3;
+            int max = Math.max(0, i6);
+            int max2 = Math.max(0, i7);
+            int max3 = Math.max(0, -i6);
+            int max4 = Math.max(0, -i7);
+            i5 += max + view.getMeasuredWidth() + max2;
+            i4++;
+            i3 = max4;
+            i2 = max3;
         }
-        return i4;
+        return i5;
     }
 
-    /* renamed from: x */
-    private boolean m1416x(View view) {
-        return view.getParent() == this || this.f1175F.contains(view);
+    private boolean x(View view) {
+        return view.getParent() == this || this.F.contains(view);
     }
 
-    /* renamed from: F */
-    void m1447F() {
+    void F() {
         for (int childCount = getChildCount() - 1; childCount >= 0; childCount--) {
             View childAt = getChildAt(childCount);
-            if (((C0233e) childAt.getLayoutParams()).f1217b != 2 && childAt != this.f1186b) {
+            if (((e) childAt.getLayoutParams()).f938b != 2 && childAt != this.f910b) {
                 removeViewAt(childCount);
-                this.f1175F.add(childAt);
+                this.F.add(childAt);
             }
         }
     }
 
-    /* renamed from: G */
-    public void m1446G(int i, int i2) {
-        m1432h();
-        this.f1205u.m1181g(i, i2);
+    public void G(int i2, int i3) {
+        h();
+        this.f929u.g(i2, i3);
     }
 
-    /* renamed from: H */
-    public void m1445H(C0192e c0192e, C0248d c0248d) {
-        if (c0192e == null && this.f1186b == null) {
+    public void H(android.support.v7.view.menu.e eVar, android.support.v7.widget.d dVar) {
+        if (eVar == null && this.f910b == null) {
             return;
         }
-        m1429k();
-        C0192e m1502L = this.f1186b.m1502L();
-        if (m1502L == c0192e) {
+        k();
+        android.support.v7.view.menu.e L = this.f910b.L();
+        if (L == eVar) {
             return;
         }
-        if (m1502L != null) {
-            m1502L.m1641O(this.f1180K);
-            m1502L.m1641O(this.f1181L);
+        if (L != null) {
+            L.O(this.K);
+            L.O(this.L);
         }
-        if (this.f1181L == null) {
-            this.f1181L = new C0232d();
+        if (this.L == null) {
+            this.L = new d();
         }
-        c0248d.m1352F(true);
-        if (c0192e != null) {
-            c0192e.m1626c(c0248d, this.f1195k);
-            c0192e.m1626c(this.f1181L, this.f1195k);
+        dVar.F(true);
+        if (eVar != null) {
+            eVar.c(dVar, this.f919k);
+            eVar.c(this.L, this.f919k);
         } else {
-            c0248d.mo1342k(this.f1195k, null);
-            this.f1181L.mo1342k(this.f1195k, null);
-            c0248d.mo1343i(true);
-            this.f1181L.mo1343i(true);
+            dVar.k(this.f919k, null);
+            this.L.k(this.f919k, null);
+            dVar.i(true);
+            this.L.i(true);
         }
-        this.f1186b.setPopupTheme(this.f1196l);
-        this.f1186b.setPresenter(c0248d);
-        this.f1180K = c0248d;
+        this.f910b.setPopupTheme(this.f920l);
+        this.f910b.setPresenter(dVar);
+        this.K = dVar;
     }
 
-    /* renamed from: I */
-    public void m1444I(Context context, int i) {
-        this.f1198n = i;
-        TextView textView = this.f1188d;
+    public void I(Context context, int i2) {
+        this.f922n = i2;
+        TextView textView = this.f912d;
         if (textView != null) {
-            textView.setTextAppearance(context, i);
+            textView.setTextAppearance(context, i2);
         }
     }
 
-    /* renamed from: J */
-    public void m1443J(Context context, int i) {
-        this.f1197m = i;
-        TextView textView = this.f1187c;
+    public void J(Context context, int i2) {
+        this.f921m = i2;
+        TextView textView = this.f911c;
         if (textView != null) {
-            textView.setTextAppearance(context, i);
+            textView.setTextAppearance(context, i2);
         }
     }
 
-    /* renamed from: M */
-    public boolean m1440M() {
-        ActionMenuView actionMenuView = this.f1186b;
-        return actionMenuView != null && actionMenuView.m1500N();
+    public boolean M() {
+        ActionMenuView actionMenuView = this.f910b;
+        return actionMenuView != null && actionMenuView.N();
     }
 
-    /* renamed from: a */
-    void m1439a() {
-        for (int size = this.f1175F.size() - 1; size >= 0; size--) {
-            addView(this.f1175F.get(size));
+    void a() {
+        for (int size = this.F.size() - 1; size >= 0; size--) {
+            addView(this.F.get(size));
         }
-        this.f1175F.clear();
+        this.F.clear();
     }
 
     @Override // android.view.ViewGroup
     protected boolean checkLayoutParams(ViewGroup.LayoutParams layoutParams) {
-        return super.checkLayoutParams(layoutParams) && (layoutParams instanceof C0233e);
+        return super.checkLayoutParams(layoutParams) && (layoutParams instanceof e);
     }
 
-    /* renamed from: d */
-    public boolean m1436d() {
+    public boolean d() {
         ActionMenuView actionMenuView;
-        return getVisibility() == 0 && (actionMenuView = this.f1186b) != null && actionMenuView.m1505I();
+        return getVisibility() == 0 && (actionMenuView = this.f910b) != null && actionMenuView.I();
     }
 
-    /* renamed from: e */
-    public void m1435e() {
-        C0232d c0232d = this.f1181L;
-        C0196g c0196g = c0232d == null ? null : c0232d.f1215c;
-        if (c0196g != null) {
-            c0196g.collapseActionView();
+    public void e() {
+        d dVar = this.L;
+        android.support.v7.view.menu.g gVar = dVar == null ? null : dVar.f936c;
+        if (gVar != null) {
+            gVar.collapseActionView();
         }
     }
 
-    /* renamed from: f */
-    public void m1434f() {
-        ActionMenuView actionMenuView = this.f1186b;
+    public void f() {
+        ActionMenuView actionMenuView = this.f910b;
         if (actionMenuView != null) {
-            actionMenuView.m1497z();
+            actionMenuView.z();
         }
     }
 
-    /* renamed from: g */
-    void m1433g() {
-        if (this.f1193i == null) {
-            C0294n c0294n = new C0294n(getContext(), null, C0569a.toolbarNavigationButtonStyle);
-            this.f1193i = c0294n;
-            c0294n.setImageDrawable(this.f1191g);
-            this.f1193i.setContentDescription(this.f1192h);
-            C0233e generateDefaultLayoutParams = generateDefaultLayoutParams();
-            generateDefaultLayoutParams.f2250a = 8388611 | (this.f1199o & C0578j.f2591q0);
-            generateDefaultLayoutParams.f1217b = 2;
-            this.f1193i.setLayoutParams(generateDefaultLayoutParams);
-            this.f1193i.setOnClickListener(new View$OnClickListenerC0231c());
+    void g() {
+        if (this.f917i == null) {
+            n nVar = new n(getContext(), null, s.a.toolbarNavigationButtonStyle);
+            this.f917i = nVar;
+            nVar.setImageDrawable(this.f915g);
+            this.f917i.setContentDescription(this.f916h);
+            e generateDefaultLayoutParams = generateDefaultLayoutParams();
+            generateDefaultLayoutParams.f1732a = 8388611 | (this.f923o & s.j.q0);
+            generateDefaultLayoutParams.f938b = 2;
+            this.f917i.setLayoutParams(generateDefaultLayoutParams);
+            this.f917i.setOnClickListener(new c());
         }
     }
 
     public int getContentInsetEnd() {
-        C0295n0 c0295n0 = this.f1205u;
-        if (c0295n0 != null) {
-            return c0295n0.m1187a();
+        n0 n0Var = this.f929u;
+        if (n0Var != null) {
+            return n0Var.a();
         }
         return 0;
     }
 
     public int getContentInsetEndWithActions() {
-        int i = this.f1207w;
-        return i != Integer.MIN_VALUE ? i : getContentInsetEnd();
+        int i2 = this.f931w;
+        return i2 != Integer.MIN_VALUE ? i2 : getContentInsetEnd();
     }
 
     public int getContentInsetLeft() {
-        C0295n0 c0295n0 = this.f1205u;
-        if (c0295n0 != null) {
-            return c0295n0.m1186b();
+        n0 n0Var = this.f929u;
+        if (n0Var != null) {
+            return n0Var.b();
         }
         return 0;
     }
 
     public int getContentInsetRight() {
-        C0295n0 c0295n0 = this.f1205u;
-        if (c0295n0 != null) {
-            return c0295n0.m1185c();
+        n0 n0Var = this.f929u;
+        if (n0Var != null) {
+            return n0Var.c();
         }
         return 0;
     }
 
     public int getContentInsetStart() {
-        C0295n0 c0295n0 = this.f1205u;
-        if (c0295n0 != null) {
-            return c0295n0.m1184d();
+        n0 n0Var = this.f929u;
+        if (n0Var != null) {
+            return n0Var.d();
         }
         return 0;
     }
 
     public int getContentInsetStartWithNavigation() {
-        int i = this.f1206v;
-        return i != Integer.MIN_VALUE ? i : getContentInsetStart();
+        int i2 = this.f930v;
+        return i2 != Integer.MIN_VALUE ? i2 : getContentInsetStart();
     }
 
     public int getCurrentContentInsetEnd() {
-        C0192e m1502L;
-        ActionMenuView actionMenuView = this.f1186b;
-        return actionMenuView != null && (m1502L = actionMenuView.m1502L()) != null && m1502L.hasVisibleItems() ? Math.max(getContentInsetEnd(), Math.max(this.f1207w, 0)) : getContentInsetEnd();
+        android.support.v7.view.menu.e L;
+        ActionMenuView actionMenuView = this.f910b;
+        return actionMenuView != null && (L = actionMenuView.L()) != null && L.hasVisibleItems() ? Math.max(getContentInsetEnd(), Math.max(this.f931w, 0)) : getContentInsetEnd();
     }
 
     public int getCurrentContentInsetLeft() {
-        return C0490o.m408d(this) == 1 ? getCurrentContentInsetEnd() : getCurrentContentInsetStart();
+        return o.o.d(this) == 1 ? getCurrentContentInsetEnd() : getCurrentContentInsetStart();
     }
 
     public int getCurrentContentInsetRight() {
-        return C0490o.m408d(this) == 1 ? getCurrentContentInsetStart() : getCurrentContentInsetEnd();
+        return o.o.d(this) == 1 ? getCurrentContentInsetStart() : getCurrentContentInsetEnd();
     }
 
     public int getCurrentContentInsetStart() {
-        return getNavigationIcon() != null ? Math.max(getContentInsetStart(), Math.max(this.f1206v, 0)) : getContentInsetStart();
+        return getNavigationIcon() != null ? Math.max(getContentInsetStart(), Math.max(this.f930v, 0)) : getContentInsetStart();
     }
 
     public Drawable getLogo() {
-        ImageView imageView = this.f1190f;
+        ImageView imageView = this.f914f;
         if (imageView != null) {
             return imageView.getDrawable();
         }
@@ -979,7 +881,7 @@ public class Toolbar extends ViewGroup {
     }
 
     public CharSequence getLogoDescription() {
-        ImageView imageView = this.f1190f;
+        ImageView imageView = this.f914f;
         if (imageView != null) {
             return imageView.getContentDescription();
         }
@@ -987,12 +889,12 @@ public class Toolbar extends ViewGroup {
     }
 
     public Menu getMenu() {
-        m1430j();
-        return this.f1186b.getMenu();
+        j();
+        return this.f910b.getMenu();
     }
 
     public CharSequence getNavigationContentDescription() {
-        ImageButton imageButton = this.f1189e;
+        ImageButton imageButton = this.f913e;
         if (imageButton != null) {
             return imageButton.getContentDescription();
         }
@@ -1000,101 +902,101 @@ public class Toolbar extends ViewGroup {
     }
 
     public Drawable getNavigationIcon() {
-        ImageButton imageButton = this.f1189e;
+        ImageButton imageButton = this.f913e;
         if (imageButton != null) {
             return imageButton.getDrawable();
         }
         return null;
     }
 
-    C0248d getOuterActionMenuPresenter() {
-        return this.f1180K;
+    android.support.v7.widget.d getOuterActionMenuPresenter() {
+        return this.K;
     }
 
     public Drawable getOverflowIcon() {
-        m1430j();
-        return this.f1186b.getOverflowIcon();
+        j();
+        return this.f910b.getOverflowIcon();
     }
 
     Context getPopupContext() {
-        return this.f1195k;
+        return this.f919k;
     }
 
     public int getPopupTheme() {
-        return this.f1196l;
+        return this.f920l;
     }
 
     public CharSequence getSubtitle() {
-        return this.f1210z;
+        return this.z;
     }
 
     public CharSequence getTitle() {
-        return this.f1209y;
+        return this.y;
     }
 
     public int getTitleMarginBottom() {
-        return this.f1204t;
+        return this.f928t;
     }
 
     public int getTitleMarginEnd() {
-        return this.f1202r;
+        return this.f926r;
     }
 
     public int getTitleMarginStart() {
-        return this.f1201q;
+        return this.f925q;
     }
 
     public int getTitleMarginTop() {
-        return this.f1203s;
+        return this.f927s;
     }
 
-    public InterfaceC0256d0 getWrapper() {
-        if (this.f1179J == null) {
-            this.f1179J = new C0318w0(this, true);
+    public d0 getWrapper() {
+        if (this.J == null) {
+            this.J = new w0(this, true);
         }
-        return this.f1179J;
+        return this.J;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // android.view.ViewGroup
     /* renamed from: m */
-    public C0233e generateDefaultLayoutParams() {
-        return new C0233e(-2, -2);
+    public e generateDefaultLayoutParams() {
+        return new e(-2, -2);
     }
 
     @Override // android.view.ViewGroup
     /* renamed from: n */
-    public C0233e generateLayoutParams(AttributeSet attributeSet) {
-        return new C0233e(getContext(), attributeSet);
+    public e generateLayoutParams(AttributeSet attributeSet) {
+        return new e(getContext(), attributeSet);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // android.view.ViewGroup
     /* renamed from: o */
-    public C0233e generateLayoutParams(ViewGroup.LayoutParams layoutParams) {
-        return layoutParams instanceof C0233e ? new C0233e((C0233e) layoutParams) : layoutParams instanceof AbstractC0525a.C0526a ? new C0233e((AbstractC0525a.C0526a) layoutParams) : layoutParams instanceof ViewGroup.MarginLayoutParams ? new C0233e((ViewGroup.MarginLayoutParams) layoutParams) : new C0233e(layoutParams);
+    public e generateLayoutParams(ViewGroup.LayoutParams layoutParams) {
+        return layoutParams instanceof e ? new e((e) layoutParams) : layoutParams instanceof a.C0023a ? new e((a.C0023a) layoutParams) : layoutParams instanceof ViewGroup.MarginLayoutParams ? new e((ViewGroup.MarginLayoutParams) layoutParams) : new e(layoutParams);
     }
 
     @Override // android.view.ViewGroup, android.view.View
     protected void onDetachedFromWindow() {
         super.onDetachedFromWindow();
-        removeCallbacks(this.f1185P);
+        removeCallbacks(this.P);
     }
 
     @Override // android.view.View
     public boolean onHoverEvent(MotionEvent motionEvent) {
         int actionMasked = motionEvent.getActionMasked();
         if (actionMasked == 9) {
-            this.f1173D = false;
+            this.D = false;
         }
-        if (!this.f1173D) {
+        if (!this.D) {
             boolean onHoverEvent = super.onHoverEvent(motionEvent);
             if (actionMasked == 9 && !onHoverEvent) {
-                this.f1173D = true;
+                this.D = true;
             }
         }
         if (actionMasked == 10 || actionMasked == 3) {
-            this.f1173D = false;
+            this.D = false;
         }
         return true;
     }
@@ -1129,410 +1031,406 @@ public class Toolbar extends ViewGroup {
             Method dump skipped, instructions count: 773
             To view this dump change 'Code comments level' option to 'DEBUG'
         */
-        throw new UnsupportedOperationException("Method not decompiled: android.support.p002v7.widget.Toolbar.onLayout(boolean, int, int, int, int):void");
+        throw new UnsupportedOperationException("Method not decompiled: android.support.v7.widget.Toolbar.onLayout(boolean, int, int, int, int):void");
     }
 
     @Override // android.view.View
-    protected void onMeasure(int i, int i2) {
-        int i3;
+    protected void onMeasure(int i2, int i3) {
         int i4;
         int i5;
         int i6;
         int i7;
         int i8;
         int i9;
-        int[] iArr = this.f1176G;
-        boolean m1369b = C0244b1.m1369b(this);
-        int i10 = !m1369b ? 1 : 0;
-        if (m1441L(this.f1189e)) {
-            m1449D(this.f1189e, i, 0, i2, 0, this.f1200p);
-            i3 = this.f1189e.getMeasuredWidth() + m1421s(this.f1189e);
-            i4 = Math.max(0, this.f1189e.getMeasuredHeight() + m1420t(this.f1189e));
-            i5 = View.combineMeasuredStates(0, this.f1189e.getMeasuredState());
+        int i10;
+        int[] iArr = this.G;
+        boolean b2 = b1.b(this);
+        int i11 = !b2 ? 1 : 0;
+        if (L(this.f913e)) {
+            D(this.f913e, i2, 0, i3, 0, this.f924p);
+            i4 = this.f913e.getMeasuredWidth() + s(this.f913e);
+            i5 = Math.max(0, this.f913e.getMeasuredHeight() + t(this.f913e));
+            i6 = View.combineMeasuredStates(0, this.f913e.getMeasuredState());
         } else {
-            i3 = 0;
             i4 = 0;
             i5 = 0;
-        }
-        if (m1441L(this.f1193i)) {
-            m1449D(this.f1193i, i, 0, i2, 0, this.f1200p);
-            i3 = this.f1193i.getMeasuredWidth() + m1421s(this.f1193i);
-            i4 = Math.max(i4, this.f1193i.getMeasuredHeight() + m1420t(this.f1193i));
-            i5 = View.combineMeasuredStates(i5, this.f1193i.getMeasuredState());
-        }
-        int currentContentInsetStart = getCurrentContentInsetStart();
-        int max = 0 + Math.max(currentContentInsetStart, i3);
-        iArr[m1369b ? 1 : 0] = Math.max(0, currentContentInsetStart - i3);
-        if (m1441L(this.f1186b)) {
-            m1449D(this.f1186b, i, max, i2, 0, this.f1200p);
-            i6 = this.f1186b.getMeasuredWidth() + m1421s(this.f1186b);
-            i4 = Math.max(i4, this.f1186b.getMeasuredHeight() + m1420t(this.f1186b));
-            i5 = View.combineMeasuredStates(i5, this.f1186b.getMeasuredState());
-        } else {
             i6 = 0;
         }
-        int currentContentInsetEnd = getCurrentContentInsetEnd();
-        int max2 = max + Math.max(currentContentInsetEnd, i6);
-        iArr[i10] = Math.max(0, currentContentInsetEnd - i6);
-        if (m1441L(this.f1194j)) {
-            max2 += m1450C(this.f1194j, i, max2, i2, 0, iArr);
-            i4 = Math.max(i4, this.f1194j.getMeasuredHeight() + m1420t(this.f1194j));
-            i5 = View.combineMeasuredStates(i5, this.f1194j.getMeasuredState());
+        if (L(this.f917i)) {
+            D(this.f917i, i2, 0, i3, 0, this.f924p);
+            i4 = this.f917i.getMeasuredWidth() + s(this.f917i);
+            i5 = Math.max(i5, this.f917i.getMeasuredHeight() + t(this.f917i));
+            i6 = View.combineMeasuredStates(i6, this.f917i.getMeasuredState());
         }
-        if (m1441L(this.f1190f)) {
-            max2 += m1450C(this.f1190f, i, max2, i2, 0, iArr);
-            i4 = Math.max(i4, this.f1190f.getMeasuredHeight() + m1420t(this.f1190f));
-            i5 = View.combineMeasuredStates(i5, this.f1190f.getMeasuredState());
+        int currentContentInsetStart = getCurrentContentInsetStart();
+        int max = 0 + Math.max(currentContentInsetStart, i4);
+        iArr[b2 ? 1 : 0] = Math.max(0, currentContentInsetStart - i4);
+        if (L(this.f910b)) {
+            D(this.f910b, i2, max, i3, 0, this.f924p);
+            i7 = this.f910b.getMeasuredWidth() + s(this.f910b);
+            i5 = Math.max(i5, this.f910b.getMeasuredHeight() + t(this.f910b));
+            i6 = View.combineMeasuredStates(i6, this.f910b.getMeasuredState());
+        } else {
+            i7 = 0;
+        }
+        int currentContentInsetEnd = getCurrentContentInsetEnd();
+        int max2 = max + Math.max(currentContentInsetEnd, i7);
+        iArr[i11] = Math.max(0, currentContentInsetEnd - i7);
+        if (L(this.f918j)) {
+            max2 += C(this.f918j, i2, max2, i3, 0, iArr);
+            i5 = Math.max(i5, this.f918j.getMeasuredHeight() + t(this.f918j));
+            i6 = View.combineMeasuredStates(i6, this.f918j.getMeasuredState());
+        }
+        if (L(this.f914f)) {
+            max2 += C(this.f914f, i2, max2, i3, 0, iArr);
+            i5 = Math.max(i5, this.f914f.getMeasuredHeight() + t(this.f914f));
+            i6 = View.combineMeasuredStates(i6, this.f914f.getMeasuredState());
         }
         int childCount = getChildCount();
-        for (int i11 = 0; i11 < childCount; i11++) {
-            View childAt = getChildAt(i11);
-            if (((C0233e) childAt.getLayoutParams()).f1217b == 0 && m1441L(childAt)) {
-                max2 += m1450C(childAt, i, max2, i2, 0, iArr);
-                i4 = Math.max(i4, childAt.getMeasuredHeight() + m1420t(childAt));
-                i5 = View.combineMeasuredStates(i5, childAt.getMeasuredState());
+        for (int i12 = 0; i12 < childCount; i12++) {
+            View childAt = getChildAt(i12);
+            if (((e) childAt.getLayoutParams()).f938b == 0 && L(childAt)) {
+                max2 += C(childAt, i2, max2, i3, 0, iArr);
+                i5 = Math.max(i5, childAt.getMeasuredHeight() + t(childAt));
+                i6 = View.combineMeasuredStates(i6, childAt.getMeasuredState());
             }
         }
-        int i12 = this.f1203s + this.f1204t;
-        int i13 = this.f1201q + this.f1202r;
-        if (m1441L(this.f1187c)) {
-            m1450C(this.f1187c, i, max2 + i13, i2, i12, iArr);
-            int measuredWidth = this.f1187c.getMeasuredWidth() + m1421s(this.f1187c);
-            i9 = this.f1187c.getMeasuredHeight() + m1420t(this.f1187c);
-            i7 = View.combineMeasuredStates(i5, this.f1187c.getMeasuredState());
-            i8 = measuredWidth;
+        int i13 = this.f927s + this.f928t;
+        int i14 = this.f925q + this.f926r;
+        if (L(this.f911c)) {
+            C(this.f911c, i2, max2 + i14, i3, i13, iArr);
+            int measuredWidth = this.f911c.getMeasuredWidth() + s(this.f911c);
+            i10 = this.f911c.getMeasuredHeight() + t(this.f911c);
+            i8 = View.combineMeasuredStates(i6, this.f911c.getMeasuredState());
+            i9 = measuredWidth;
         } else {
-            i7 = i5;
-            i8 = 0;
+            i8 = i6;
             i9 = 0;
+            i10 = 0;
         }
-        if (m1441L(this.f1188d)) {
-            i8 = Math.max(i8, m1450C(this.f1188d, i, max2 + i13, i2, i9 + i12, iArr));
-            i9 += this.f1188d.getMeasuredHeight() + m1420t(this.f1188d);
-            i7 = View.combineMeasuredStates(i7, this.f1188d.getMeasuredState());
+        if (L(this.f912d)) {
+            i9 = Math.max(i9, C(this.f912d, i2, max2 + i14, i3, i10 + i13, iArr));
+            i10 += this.f912d.getMeasuredHeight() + t(this.f912d);
+            i8 = View.combineMeasuredStates(i8, this.f912d.getMeasuredState());
         }
-        int max3 = Math.max(i4, i9);
-        setMeasuredDimension(View.resolveSizeAndState(Math.max(max2 + i8 + getPaddingLeft() + getPaddingRight(), getSuggestedMinimumWidth()), i, (-16777216) & i7), m1442K() ? 0 : View.resolveSizeAndState(Math.max(max3 + getPaddingTop() + getPaddingBottom(), getSuggestedMinimumHeight()), i2, i7 << 16));
+        int max3 = Math.max(i5, i10);
+        setMeasuredDimension(View.resolveSizeAndState(Math.max(max2 + i9 + getPaddingLeft() + getPaddingRight(), getSuggestedMinimumWidth()), i2, (-16777216) & i8), K() ? 0 : View.resolveSizeAndState(Math.max(max3 + getPaddingTop() + getPaddingBottom(), getSuggestedMinimumHeight()), i3, i8 << 16));
     }
 
     @Override // android.view.View
     protected void onRestoreInstanceState(Parcelable parcelable) {
         MenuItem findItem;
-        if (!(parcelable instanceof C0235g)) {
+        if (!(parcelable instanceof g)) {
             super.onRestoreInstanceState(parcelable);
             return;
         }
-        C0235g c0235g = (C0235g) parcelable;
-        super.onRestoreInstanceState(c0235g.m475a());
-        ActionMenuView actionMenuView = this.f1186b;
-        C0192e m1502L = actionMenuView != null ? actionMenuView.m1502L() : null;
-        int i = c0235g.f1218d;
-        if (i != 0 && this.f1181L != null && m1502L != null && (findItem = m1502L.findItem(i)) != null) {
+        g gVar = (g) parcelable;
+        super.onRestoreInstanceState(gVar.a());
+        ActionMenuView actionMenuView = this.f910b;
+        android.support.v7.view.menu.e L = actionMenuView != null ? actionMenuView.L() : null;
+        int i2 = gVar.f939d;
+        if (i2 != 0 && this.L != null && L != null && (findItem = L.findItem(i2)) != null) {
             findItem.expandActionView();
         }
-        if (c0235g.f1219e) {
-            m1448E();
+        if (gVar.f940e) {
+            E();
         }
     }
 
     @Override // android.view.View
-    public void onRtlPropertiesChanged(int i) {
-        super.onRtlPropertiesChanged(i);
-        m1432h();
-        this.f1205u.m1182f(i == 1);
+    public void onRtlPropertiesChanged(int i2) {
+        super.onRtlPropertiesChanged(i2);
+        h();
+        this.f929u.f(i2 == 1);
     }
 
     @Override // android.view.View
     protected Parcelable onSaveInstanceState() {
-        C0196g c0196g;
-        C0235g c0235g = new C0235g(super.onSaveInstanceState());
-        C0232d c0232d = this.f1181L;
-        if (c0232d != null && (c0196g = c0232d.f1215c) != null) {
-            c0235g.f1218d = c0196g.getItemId();
+        android.support.v7.view.menu.g gVar;
+        g gVar2 = new g(super.onSaveInstanceState());
+        d dVar = this.L;
+        if (dVar != null && (gVar = dVar.f936c) != null) {
+            gVar2.f939d = gVar.getItemId();
         }
-        c0235g.f1219e = m1414z();
-        return c0235g;
+        gVar2.f940e = z();
+        return gVar2;
     }
 
     @Override // android.view.View
     public boolean onTouchEvent(MotionEvent motionEvent) {
         int actionMasked = motionEvent.getActionMasked();
         if (actionMasked == 0) {
-            this.f1172C = false;
+            this.C = false;
         }
-        if (!this.f1172C) {
+        if (!this.C) {
             boolean onTouchEvent = super.onTouchEvent(motionEvent);
             if (actionMasked == 0 && !onTouchEvent) {
-                this.f1172C = true;
+                this.C = true;
             }
         }
         if (actionMasked == 1 || actionMasked == 3) {
-            this.f1172C = false;
+            this.C = false;
         }
         return true;
     }
 
     public void setCollapsible(boolean z) {
-        this.f1184O = z;
+        this.O = z;
         requestLayout();
     }
 
-    public void setContentInsetEndWithActions(int i) {
-        if (i < 0) {
-            i = Integer.MIN_VALUE;
+    public void setContentInsetEndWithActions(int i2) {
+        if (i2 < 0) {
+            i2 = Integer.MIN_VALUE;
         }
-        if (i != this.f1207w) {
-            this.f1207w = i;
+        if (i2 != this.f931w) {
+            this.f931w = i2;
             if (getNavigationIcon() != null) {
                 requestLayout();
             }
         }
     }
 
-    public void setContentInsetStartWithNavigation(int i) {
-        if (i < 0) {
-            i = Integer.MIN_VALUE;
+    public void setContentInsetStartWithNavigation(int i2) {
+        if (i2 < 0) {
+            i2 = Integer.MIN_VALUE;
         }
-        if (i != this.f1206v) {
-            this.f1206v = i;
+        if (i2 != this.f930v) {
+            this.f930v = i2;
             if (getNavigationIcon() != null) {
                 requestLayout();
             }
         }
     }
 
-    public void setLogo(int i) {
-        setLogo(C0580b.m98d(getContext(), i));
+    public void setLogo(int i2) {
+        setLogo(t.b.d(getContext(), i2));
     }
 
     public void setLogo(Drawable drawable) {
         if (drawable != null) {
-            m1431i();
-            if (!m1416x(this.f1190f)) {
-                m1437c(this.f1190f, true);
+            i();
+            if (!x(this.f914f)) {
+                c(this.f914f, true);
             }
         } else {
-            ImageView imageView = this.f1190f;
-            if (imageView != null && m1416x(imageView)) {
-                removeView(this.f1190f);
-                this.f1175F.remove(this.f1190f);
+            ImageView imageView = this.f914f;
+            if (imageView != null && x(imageView)) {
+                removeView(this.f914f);
+                this.F.remove(this.f914f);
             }
         }
-        ImageView imageView2 = this.f1190f;
+        ImageView imageView2 = this.f914f;
         if (imageView2 != null) {
             imageView2.setImageDrawable(drawable);
         }
     }
 
-    public void setLogoDescription(int i) {
-        setLogoDescription(getContext().getText(i));
+    public void setLogoDescription(int i2) {
+        setLogoDescription(getContext().getText(i2));
     }
 
     public void setLogoDescription(CharSequence charSequence) {
         if (!TextUtils.isEmpty(charSequence)) {
-            m1431i();
+            i();
         }
-        ImageView imageView = this.f1190f;
+        ImageView imageView = this.f914f;
         if (imageView != null) {
             imageView.setContentDescription(charSequence);
         }
     }
 
-    public void setNavigationContentDescription(int i) {
-        setNavigationContentDescription(i != 0 ? getContext().getText(i) : null);
+    public void setNavigationContentDescription(int i2) {
+        setNavigationContentDescription(i2 != 0 ? getContext().getText(i2) : null);
     }
 
     public void setNavigationContentDescription(CharSequence charSequence) {
         if (!TextUtils.isEmpty(charSequence)) {
-            m1428l();
+            l();
         }
-        ImageButton imageButton = this.f1189e;
+        ImageButton imageButton = this.f913e;
         if (imageButton != null) {
             imageButton.setContentDescription(charSequence);
         }
     }
 
-    public void setNavigationIcon(int i) {
-        setNavigationIcon(C0580b.m98d(getContext(), i));
+    public void setNavigationIcon(int i2) {
+        setNavigationIcon(t.b.d(getContext(), i2));
     }
 
     public void setNavigationIcon(Drawable drawable) {
         if (drawable != null) {
-            m1428l();
-            if (!m1416x(this.f1189e)) {
-                m1437c(this.f1189e, true);
+            l();
+            if (!x(this.f913e)) {
+                c(this.f913e, true);
             }
         } else {
-            ImageButton imageButton = this.f1189e;
-            if (imageButton != null && m1416x(imageButton)) {
-                removeView(this.f1189e);
-                this.f1175F.remove(this.f1189e);
+            ImageButton imageButton = this.f913e;
+            if (imageButton != null && x(imageButton)) {
+                removeView(this.f913e);
+                this.F.remove(this.f913e);
             }
         }
-        ImageButton imageButton2 = this.f1189e;
+        ImageButton imageButton2 = this.f913e;
         if (imageButton2 != null) {
             imageButton2.setImageDrawable(drawable);
         }
     }
 
     public void setNavigationOnClickListener(View.OnClickListener onClickListener) {
-        m1428l();
-        this.f1189e.setOnClickListener(onClickListener);
+        l();
+        this.f913e.setOnClickListener(onClickListener);
     }
 
-    public void setOnMenuItemClickListener(InterfaceC0234f interfaceC0234f) {
-        this.f1177H = interfaceC0234f;
+    public void setOnMenuItemClickListener(f fVar) {
+        this.H = fVar;
     }
 
     public void setOverflowIcon(Drawable drawable) {
-        m1430j();
-        this.f1186b.setOverflowIcon(drawable);
+        j();
+        this.f910b.setOverflowIcon(drawable);
     }
 
-    public void setPopupTheme(int i) {
-        if (this.f1196l != i) {
-            this.f1196l = i;
-            if (i == 0) {
-                this.f1195k = getContext();
+    public void setPopupTheme(int i2) {
+        if (this.f920l != i2) {
+            this.f920l = i2;
+            if (i2 == 0) {
+                this.f919k = getContext();
             } else {
-                this.f1195k = new ContextThemeWrapper(getContext(), i);
+                this.f919k = new ContextThemeWrapper(getContext(), i2);
             }
         }
     }
 
-    public void setSubtitle(int i) {
-        setSubtitle(getContext().getText(i));
+    public void setSubtitle(int i2) {
+        setSubtitle(getContext().getText(i2));
     }
 
     public void setSubtitle(CharSequence charSequence) {
         if (TextUtils.isEmpty(charSequence)) {
-            TextView textView = this.f1188d;
-            if (textView != null && m1416x(textView)) {
-                removeView(this.f1188d);
-                this.f1175F.remove(this.f1188d);
+            TextView textView = this.f912d;
+            if (textView != null && x(textView)) {
+                removeView(this.f912d);
+                this.F.remove(this.f912d);
             }
         } else {
-            if (this.f1188d == null) {
+            if (this.f912d == null) {
                 Context context = getContext();
-                C0240a0 c0240a0 = new C0240a0(context);
-                this.f1188d = c0240a0;
-                c0240a0.setSingleLine();
-                this.f1188d.setEllipsize(TextUtils.TruncateAt.END);
-                int i = this.f1198n;
-                if (i != 0) {
-                    this.f1188d.setTextAppearance(context, i);
-                }
-                int i2 = this.f1171B;
+                a0 a0Var = new a0(context);
+                this.f912d = a0Var;
+                a0Var.setSingleLine();
+                this.f912d.setEllipsize(TextUtils.TruncateAt.END);
+                int i2 = this.f922n;
                 if (i2 != 0) {
-                    this.f1188d.setTextColor(i2);
+                    this.f912d.setTextAppearance(context, i2);
+                }
+                int i3 = this.B;
+                if (i3 != 0) {
+                    this.f912d.setTextColor(i3);
                 }
             }
-            if (!m1416x(this.f1188d)) {
-                m1437c(this.f1188d, true);
+            if (!x(this.f912d)) {
+                c(this.f912d, true);
             }
         }
-        TextView textView2 = this.f1188d;
+        TextView textView2 = this.f912d;
         if (textView2 != null) {
             textView2.setText(charSequence);
         }
-        this.f1210z = charSequence;
+        this.z = charSequence;
     }
 
-    public void setSubtitleTextColor(int i) {
-        this.f1171B = i;
-        TextView textView = this.f1188d;
+    public void setSubtitleTextColor(int i2) {
+        this.B = i2;
+        TextView textView = this.f912d;
         if (textView != null) {
-            textView.setTextColor(i);
+            textView.setTextColor(i2);
         }
     }
 
-    public void setTitle(int i) {
-        setTitle(getContext().getText(i));
+    public void setTitle(int i2) {
+        setTitle(getContext().getText(i2));
     }
 
     public void setTitle(CharSequence charSequence) {
         if (TextUtils.isEmpty(charSequence)) {
-            TextView textView = this.f1187c;
-            if (textView != null && m1416x(textView)) {
-                removeView(this.f1187c);
-                this.f1175F.remove(this.f1187c);
+            TextView textView = this.f911c;
+            if (textView != null && x(textView)) {
+                removeView(this.f911c);
+                this.F.remove(this.f911c);
             }
         } else {
-            if (this.f1187c == null) {
+            if (this.f911c == null) {
                 Context context = getContext();
-                C0240a0 c0240a0 = new C0240a0(context);
-                this.f1187c = c0240a0;
-                c0240a0.setSingleLine();
-                this.f1187c.setEllipsize(TextUtils.TruncateAt.END);
-                int i = this.f1197m;
-                if (i != 0) {
-                    this.f1187c.setTextAppearance(context, i);
-                }
-                int i2 = this.f1170A;
+                a0 a0Var = new a0(context);
+                this.f911c = a0Var;
+                a0Var.setSingleLine();
+                this.f911c.setEllipsize(TextUtils.TruncateAt.END);
+                int i2 = this.f921m;
                 if (i2 != 0) {
-                    this.f1187c.setTextColor(i2);
+                    this.f911c.setTextAppearance(context, i2);
+                }
+                int i3 = this.A;
+                if (i3 != 0) {
+                    this.f911c.setTextColor(i3);
                 }
             }
-            if (!m1416x(this.f1187c)) {
-                m1437c(this.f1187c, true);
+            if (!x(this.f911c)) {
+                c(this.f911c, true);
             }
         }
-        TextView textView2 = this.f1187c;
+        TextView textView2 = this.f911c;
         if (textView2 != null) {
             textView2.setText(charSequence);
         }
-        this.f1209y = charSequence;
+        this.y = charSequence;
     }
 
-    public void setTitleMarginBottom(int i) {
-        this.f1204t = i;
+    public void setTitleMarginBottom(int i2) {
+        this.f928t = i2;
         requestLayout();
     }
 
-    public void setTitleMarginEnd(int i) {
-        this.f1202r = i;
+    public void setTitleMarginEnd(int i2) {
+        this.f926r = i2;
         requestLayout();
     }
 
-    public void setTitleMarginStart(int i) {
-        this.f1201q = i;
+    public void setTitleMarginStart(int i2) {
+        this.f925q = i2;
         requestLayout();
     }
 
-    public void setTitleMarginTop(int i) {
-        this.f1203s = i;
+    public void setTitleMarginTop(int i2) {
+        this.f927s = i2;
         requestLayout();
     }
 
-    public void setTitleTextColor(int i) {
-        this.f1170A = i;
-        TextView textView = this.f1187c;
+    public void setTitleTextColor(int i2) {
+        this.A = i2;
+        TextView textView = this.f911c;
         if (textView != null) {
-            textView.setTextColor(i);
+            textView.setTextColor(i2);
         }
     }
 
-    /* renamed from: v */
-    public boolean m1418v() {
-        C0232d c0232d = this.f1181L;
-        return (c0232d == null || c0232d.f1215c == null) ? false : true;
+    public boolean v() {
+        d dVar = this.L;
+        return (dVar == null || dVar.f936c == null) ? false : true;
     }
 
-    /* renamed from: w */
-    public boolean m1417w() {
-        ActionMenuView actionMenuView = this.f1186b;
-        return actionMenuView != null && actionMenuView.m1508F();
+    public boolean w() {
+        ActionMenuView actionMenuView = this.f910b;
+        return actionMenuView != null && actionMenuView.F();
     }
 
-    /* renamed from: y */
-    public boolean m1415y() {
-        ActionMenuView actionMenuView = this.f1186b;
-        return actionMenuView != null && actionMenuView.m1507G();
+    public boolean y() {
+        ActionMenuView actionMenuView = this.f910b;
+        return actionMenuView != null && actionMenuView.G();
     }
 
-    /* renamed from: z */
-    public boolean m1414z() {
-        ActionMenuView actionMenuView = this.f1186b;
-        return actionMenuView != null && actionMenuView.m1506H();
+    public boolean z() {
+        ActionMenuView actionMenuView = this.f910b;
+        return actionMenuView != null && actionMenuView.H();
     }
 }

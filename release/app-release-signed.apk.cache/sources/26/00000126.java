@@ -1,11 +1,10 @@
-package android.support.p002v7.widget;
+package android.support.v7.widget;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.support.p001v4.widget.C0155h;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,108 +12,101 @@ import android.widget.AbsListView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import java.lang.reflect.Field;
-import p011j.C0413a;
-import p016o.C0511s;
-import p020s.C0569a;
-import p022u.C0583a;
 
 /* JADX INFO: Access modifiers changed from: package-private */
-/* renamed from: android.support.v7.widget.f0 */
 /* loaded from: classes.dex */
-public class C0260f0 extends ListView {
+public class f0 extends ListView {
 
-    /* renamed from: b */
-    private final Rect f1295b;
+    /* renamed from: b  reason: collision with root package name */
+    private final Rect f1007b;
 
-    /* renamed from: c */
-    private int f1296c;
+    /* renamed from: c  reason: collision with root package name */
+    private int f1008c;
 
-    /* renamed from: d */
-    private int f1297d;
+    /* renamed from: d  reason: collision with root package name */
+    private int f1009d;
 
-    /* renamed from: e */
-    private int f1298e;
+    /* renamed from: e  reason: collision with root package name */
+    private int f1010e;
 
-    /* renamed from: f */
-    private int f1299f;
+    /* renamed from: f  reason: collision with root package name */
+    private int f1011f;
 
-    /* renamed from: g */
-    private int f1300g;
+    /* renamed from: g  reason: collision with root package name */
+    private int f1012g;
 
-    /* renamed from: h */
-    private Field f1301h;
+    /* renamed from: h  reason: collision with root package name */
+    private Field f1013h;
 
-    /* renamed from: i */
-    private C0262b f1302i;
+    /* renamed from: i  reason: collision with root package name */
+    private b f1014i;
 
-    /* renamed from: j */
-    private boolean f1303j;
+    /* renamed from: j  reason: collision with root package name */
+    private boolean f1015j;
 
-    /* renamed from: k */
-    private boolean f1304k;
+    /* renamed from: k  reason: collision with root package name */
+    private boolean f1016k;
 
-    /* renamed from: l */
-    private boolean f1305l;
+    /* renamed from: l  reason: collision with root package name */
+    private boolean f1017l;
 
-    /* renamed from: m */
-    private C0511s f1306m;
+    /* renamed from: m  reason: collision with root package name */
+    private o.s f1018m;
 
-    /* renamed from: n */
-    private C0155h f1307n;
+    /* renamed from: n  reason: collision with root package name */
+    private android.support.v4.widget.h f1019n;
 
-    /* renamed from: o */
-    private RunnableC0263c f1308o;
+    /* renamed from: o  reason: collision with root package name */
+    private c f1020o;
 
     /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: android.support.v7.widget.f0$b */
     /* loaded from: classes.dex */
-    public static class C0262b extends C0583a {
+    public static class b extends u.a {
 
-        /* renamed from: c */
-        private boolean f1309c;
+        /* renamed from: c  reason: collision with root package name */
+        private boolean f1021c;
 
-        C0262b(Drawable drawable) {
+        b(Drawable drawable) {
             super(drawable);
-            this.f1309c = true;
+            this.f1021c = true;
         }
 
-        /* renamed from: c */
-        void m1299c(boolean z) {
-            this.f1309c = z;
+        void c(boolean z) {
+            this.f1021c = z;
         }
 
-        @Override // p022u.C0583a, android.graphics.drawable.Drawable
+        @Override // u.a, android.graphics.drawable.Drawable
         public void draw(Canvas canvas) {
-            if (this.f1309c) {
+            if (this.f1021c) {
                 super.draw(canvas);
             }
         }
 
-        @Override // p022u.C0583a, android.graphics.drawable.Drawable
-        public void setHotspot(float f, float f2) {
-            if (this.f1309c) {
-                super.setHotspot(f, f2);
+        @Override // u.a, android.graphics.drawable.Drawable
+        public void setHotspot(float f2, float f3) {
+            if (this.f1021c) {
+                super.setHotspot(f2, f3);
             }
         }
 
-        @Override // p022u.C0583a, android.graphics.drawable.Drawable
-        public void setHotspotBounds(int i, int i2, int i3, int i4) {
-            if (this.f1309c) {
-                super.setHotspotBounds(i, i2, i3, i4);
+        @Override // u.a, android.graphics.drawable.Drawable
+        public void setHotspotBounds(int i2, int i3, int i4, int i5) {
+            if (this.f1021c) {
+                super.setHotspotBounds(i2, i3, i4, i5);
             }
         }
 
-        @Override // p022u.C0583a, android.graphics.drawable.Drawable
+        @Override // u.a, android.graphics.drawable.Drawable
         public boolean setState(int[] iArr) {
-            if (this.f1309c) {
+            if (this.f1021c) {
                 return super.setState(iArr);
             }
             return false;
         }
 
-        @Override // p022u.C0583a, android.graphics.drawable.Drawable
+        @Override // u.a, android.graphics.drawable.Drawable
         public boolean setVisible(boolean z, boolean z2) {
-            if (this.f1309c) {
+            if (this.f1021c) {
                 return super.setVisible(z, z2);
             }
             return false;
@@ -122,196 +114,183 @@ public class C0260f0 extends ListView {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: android.support.v7.widget.f0$c */
     /* loaded from: classes.dex */
-    public class RunnableC0263c implements Runnable {
-        private RunnableC0263c() {
+    public class c implements Runnable {
+        private c() {
         }
 
-        /* renamed from: a */
-        public void m1298a() {
-            C0260f0.this.f1308o = null;
-            C0260f0.this.removeCallbacks(this);
+        public void a() {
+            f0.this.f1020o = null;
+            f0.this.removeCallbacks(this);
         }
 
-        /* renamed from: b */
-        public void m1297b() {
-            C0260f0.this.post(this);
+        public void b() {
+            f0.this.post(this);
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            C0260f0.this.f1308o = null;
-            C0260f0.this.drawableStateChanged();
+            f0.this.f1020o = null;
+            f0.this.drawableStateChanged();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public C0260f0(Context context, boolean z) {
-        super(context, null, C0569a.dropDownListViewStyle);
-        this.f1295b = new Rect();
-        this.f1296c = 0;
-        this.f1297d = 0;
-        this.f1298e = 0;
-        this.f1299f = 0;
-        this.f1304k = z;
+    public f0(Context context, boolean z) {
+        super(context, null, s.a.dropDownListViewStyle);
+        this.f1007b = new Rect();
+        this.f1008c = 0;
+        this.f1009d = 0;
+        this.f1010e = 0;
+        this.f1011f = 0;
+        this.f1016k = z;
         setCacheColorHint(0);
         try {
             Field declaredField = AbsListView.class.getDeclaredField("mIsChildViewEnabled");
-            this.f1301h = declaredField;
+            this.f1013h = declaredField;
             declaredField.setAccessible(true);
-        } catch (NoSuchFieldException e) {
-            e.printStackTrace();
+        } catch (NoSuchFieldException e2) {
+            e2.printStackTrace();
         }
     }
 
-    /* renamed from: b */
-    private void m1308b() {
-        this.f1305l = false;
+    private void b() {
+        this.f1017l = false;
         setPressed(false);
         drawableStateChanged();
-        View childAt = getChildAt(this.f1300g - getFirstVisiblePosition());
+        View childAt = getChildAt(this.f1012g - getFirstVisiblePosition());
         if (childAt != null) {
             childAt.setPressed(false);
         }
-        C0511s c0511s = this.f1306m;
-        if (c0511s != null) {
-            c0511s.m343b();
-            this.f1306m = null;
+        o.s sVar = this.f1018m;
+        if (sVar != null) {
+            sVar.b();
+            this.f1018m = null;
         }
     }
 
-    /* renamed from: c */
-    private void m1307c(View view, int i) {
-        performItemClick(view, i, getItemIdAtPosition(i));
+    private void c(View view, int i2) {
+        performItemClick(view, i2, getItemIdAtPosition(i2));
     }
 
-    /* renamed from: d */
-    private void m1306d(Canvas canvas) {
+    private void d(Canvas canvas) {
         Drawable selector;
-        if (this.f1295b.isEmpty() || (selector = getSelector()) == null) {
+        if (this.f1007b.isEmpty() || (selector = getSelector()) == null) {
             return;
         }
-        selector.setBounds(this.f1295b);
+        selector.setBounds(this.f1007b);
         selector.draw(canvas);
     }
 
-    /* renamed from: g */
-    private void m1305g(int i, View view) {
-        Rect rect = this.f1295b;
+    private void g(int i2, View view) {
+        Rect rect = this.f1007b;
         rect.set(view.getLeft(), view.getTop(), view.getRight(), view.getBottom());
-        rect.left -= this.f1296c;
-        rect.top -= this.f1297d;
-        rect.right += this.f1298e;
-        rect.bottom += this.f1299f;
+        rect.left -= this.f1008c;
+        rect.top -= this.f1009d;
+        rect.right += this.f1010e;
+        rect.bottom += this.f1011f;
         try {
-            boolean z = this.f1301h.getBoolean(this);
+            boolean z = this.f1013h.getBoolean(this);
             if (view.isEnabled() != z) {
-                this.f1301h.set(this, Boolean.valueOf(!z));
-                if (i != -1) {
+                this.f1013h.set(this, Boolean.valueOf(!z));
+                if (i2 != -1) {
                     refreshDrawableState();
                 }
             }
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
+        } catch (IllegalAccessException e2) {
+            e2.printStackTrace();
         }
     }
 
-    /* renamed from: h */
-    private void m1304h(int i, View view) {
+    private void h(int i2, View view) {
         Drawable selector = getSelector();
-        boolean z = (selector == null || i == -1) ? false : true;
+        boolean z = (selector == null || i2 == -1) ? false : true;
         if (z) {
             selector.setVisible(false, false);
         }
-        m1305g(i, view);
+        g(i2, view);
         if (z) {
-            Rect rect = this.f1295b;
+            Rect rect = this.f1007b;
             float exactCenterX = rect.exactCenterX();
             float exactCenterY = rect.exactCenterY();
             selector.setVisible(getVisibility() == 0, false);
-            C0413a.m624j(selector, exactCenterX, exactCenterY);
+            j.a.j(selector, exactCenterX, exactCenterY);
         }
     }
 
-    /* renamed from: i */
-    private void m1303i(int i, View view, float f, float f2) {
-        m1304h(i, view);
+    private void i(int i2, View view, float f2, float f3) {
+        h(i2, view);
         Drawable selector = getSelector();
-        if (selector == null || i == -1) {
+        if (selector == null || i2 == -1) {
             return;
         }
-        C0413a.m624j(selector, f, f2);
+        j.a.j(selector, f2, f3);
     }
 
-    /* renamed from: j */
-    private void m1302j(View view, int i, float f, float f2) {
+    private void j(View view, int i2, float f2, float f3) {
         View childAt;
-        this.f1305l = true;
-        int i2 = Build.VERSION.SDK_INT;
-        if (i2 >= 21) {
-            drawableHotspotChanged(f, f2);
+        this.f1017l = true;
+        int i3 = Build.VERSION.SDK_INT;
+        if (i3 >= 21) {
+            drawableHotspotChanged(f2, f3);
         }
         if (!isPressed()) {
             setPressed(true);
         }
         layoutChildren();
-        int i3 = this.f1300g;
-        if (i3 != -1 && (childAt = getChildAt(i3 - getFirstVisiblePosition())) != null && childAt != view && childAt.isPressed()) {
+        int i4 = this.f1012g;
+        if (i4 != -1 && (childAt = getChildAt(i4 - getFirstVisiblePosition())) != null && childAt != view && childAt.isPressed()) {
             childAt.setPressed(false);
         }
-        this.f1300g = i;
-        float left = f - view.getLeft();
-        float top = f2 - view.getTop();
-        if (i2 >= 21) {
+        this.f1012g = i2;
+        float left = f2 - view.getLeft();
+        float top = f3 - view.getTop();
+        if (i3 >= 21) {
             view.drawableHotspotChanged(left, top);
         }
         if (!view.isPressed()) {
             view.setPressed(true);
         }
-        m1303i(i, view, f, f2);
+        i(i2, view, f2, f3);
         setSelectorEnabled(false);
         refreshDrawableState();
     }
 
-    /* renamed from: k */
-    private boolean m1301k() {
-        return this.f1305l;
+    private boolean k() {
+        return this.f1017l;
     }
 
-    /* renamed from: l */
-    private void m1300l() {
+    private void l() {
         Drawable selector = getSelector();
-        if (selector != null && m1301k() && isPressed()) {
+        if (selector != null && k() && isPressed()) {
             selector.setState(getDrawableState());
         }
     }
 
     private void setSelectorEnabled(boolean z) {
-        C0262b c0262b = this.f1302i;
-        if (c0262b != null) {
-            c0262b.m1299c(z);
+        b bVar = this.f1014i;
+        if (bVar != null) {
+            bVar.c(z);
         }
     }
 
     @Override // android.widget.ListView, android.widget.AbsListView, android.view.ViewGroup, android.view.View
     protected void dispatchDraw(Canvas canvas) {
-        m1306d(canvas);
+        d(canvas);
         super.dispatchDraw(canvas);
     }
 
     @Override // android.widget.AbsListView, android.view.ViewGroup, android.view.View
     protected void drawableStateChanged() {
-        if (this.f1308o != null) {
+        if (this.f1020o != null) {
             return;
         }
         super.drawableStateChanged();
         setSelectorEnabled(true);
-        m1300l();
+        l();
     }
 
-    /* renamed from: e */
-    public int mo1190e(int i, int i2, int i3, int i4, int i5) {
+    public int e(int i2, int i3, int i4, int i5, int i6) {
         int listPaddingTop = getListPaddingTop();
         int listPaddingBottom = getListPaddingBottom();
         getListPaddingLeft();
@@ -319,44 +298,44 @@ public class C0260f0 extends ListView {
         int dividerHeight = getDividerHeight();
         Drawable divider = getDivider();
         ListAdapter adapter = getAdapter();
-        int i6 = listPaddingTop + listPaddingBottom;
+        int i7 = listPaddingTop + listPaddingBottom;
         if (adapter == null) {
-            return i6;
+            return i7;
         }
         dividerHeight = (dividerHeight <= 0 || divider == null) ? 0 : 0;
         int count = adapter.getCount();
         View view = null;
-        int i7 = 0;
         int i8 = 0;
         int i9 = 0;
-        while (i7 < count) {
-            int itemViewType = adapter.getItemViewType(i7);
-            if (itemViewType != i8) {
+        int i10 = 0;
+        while (i8 < count) {
+            int itemViewType = adapter.getItemViewType(i8);
+            if (itemViewType != i9) {
                 view = null;
-                i8 = itemViewType;
+                i9 = itemViewType;
             }
-            view = adapter.getView(i7, view, this);
+            view = adapter.getView(i8, view, this);
             ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
             if (layoutParams == null) {
                 layoutParams = generateDefaultLayoutParams();
                 view.setLayoutParams(layoutParams);
             }
-            int i10 = layoutParams.height;
-            view.measure(i, i10 > 0 ? View.MeasureSpec.makeMeasureSpec(i10, 1073741824) : View.MeasureSpec.makeMeasureSpec(0, 0));
+            int i11 = layoutParams.height;
+            view.measure(i2, i11 > 0 ? View.MeasureSpec.makeMeasureSpec(i11, 1073741824) : View.MeasureSpec.makeMeasureSpec(0, 0));
             view.forceLayout();
-            if (i7 > 0) {
-                i6 += dividerHeight;
+            if (i8 > 0) {
+                i7 += dividerHeight;
             }
-            i6 += view.getMeasuredHeight();
-            if (i6 >= i4) {
-                return (i5 < 0 || i7 <= i5 || i9 <= 0 || i6 == i4) ? i4 : i9;
+            i7 += view.getMeasuredHeight();
+            if (i7 >= i5) {
+                return (i6 < 0 || i8 <= i6 || i10 <= 0 || i7 == i5) ? i5 : i10;
             }
-            if (i5 >= 0 && i7 >= i5) {
-                i9 = i6;
+            if (i6 >= 0 && i8 >= i6) {
+                i10 = i7;
             }
-            i7++;
+            i8++;
         }
-        return i6;
+        return i7;
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:7:0x000c, code lost:
@@ -365,12 +344,11 @@ public class C0260f0 extends ListView {
     /* JADX WARN: Removed duplicated region for block: B:22:0x0048 A[ADDED_TO_REGION] */
     /* JADX WARN: Removed duplicated region for block: B:25:0x004f  */
     /* JADX WARN: Removed duplicated region for block: B:29:0x0065  */
-    /* renamed from: f */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    public boolean mo1189f(android.view.MotionEvent r8, int r9) {
+    public boolean f(android.view.MotionEvent r8, int r9) {
         /*
             r7 = this;
             int r0 = r8.getActionMasked()
@@ -414,61 +392,61 @@ public class C0260f0 extends ListView {
             android.view.View r3 = r7.getChildAt(r3)
             float r4 = (float) r4
             float r9 = (float) r9
-            r7.m1302j(r3, r5, r4, r9)
+            r7.j(r3, r5, r4, r9)
             if (r0 != r2) goto Le
-            r7.m1307c(r3, r5)
+            r7.c(r3, r5)
             goto Le
         L46:
             if (r3 == 0) goto L4a
             if (r9 == 0) goto L4d
         L4a:
-            r7.m1308b()
+            r7.b()
         L4d:
             if (r3 == 0) goto L65
-            android.support.v4.widget.h r9 = r7.f1307n
+            android.support.v4.widget.h r9 = r7.f1019n
             if (r9 != 0) goto L5a
             android.support.v4.widget.h r9 = new android.support.v4.widget.h
             r9.<init>(r7)
-            r7.f1307n = r9
+            r7.f1019n = r9
         L5a:
-            android.support.v4.widget.h r9 = r7.f1307n
-            r9.m1774m(r2)
-            android.support.v4.widget.h r9 = r7.f1307n
+            android.support.v4.widget.h r9 = r7.f1019n
+            r9.m(r2)
+            android.support.v4.widget.h r9 = r7.f1019n
             r9.onTouch(r7, r8)
             goto L6c
         L65:
-            android.support.v4.widget.h r8 = r7.f1307n
+            android.support.v4.widget.h r8 = r7.f1019n
             if (r8 == 0) goto L6c
-            r8.m1774m(r1)
+            r8.m(r1)
         L6c:
             return r3
         */
-        throw new UnsupportedOperationException("Method not decompiled: android.support.p002v7.widget.C0260f0.mo1189f(android.view.MotionEvent, int):boolean");
+        throw new UnsupportedOperationException("Method not decompiled: android.support.v7.widget.f0.f(android.view.MotionEvent, int):boolean");
     }
 
     @Override // android.view.ViewGroup, android.view.View
     public boolean hasFocus() {
-        return this.f1304k || super.hasFocus();
+        return this.f1016k || super.hasFocus();
     }
 
     @Override // android.view.View
     public boolean hasWindowFocus() {
-        return this.f1304k || super.hasWindowFocus();
+        return this.f1016k || super.hasWindowFocus();
     }
 
     @Override // android.view.View
     public boolean isFocused() {
-        return this.f1304k || super.isFocused();
+        return this.f1016k || super.isFocused();
     }
 
     @Override // android.view.View
     public boolean isInTouchMode() {
-        return (this.f1304k && this.f1303j) || super.isInTouchMode();
+        return (this.f1016k && this.f1015j) || super.isInTouchMode();
     }
 
     @Override // android.widget.ListView, android.widget.AbsListView, android.widget.AdapterView, android.view.ViewGroup, android.view.View
     protected void onDetachedFromWindow() {
-        this.f1308o = null;
+        this.f1020o = null;
         super.onDetachedFromWindow();
     }
 
@@ -478,10 +456,10 @@ public class C0260f0 extends ListView {
             return super.onHoverEvent(motionEvent);
         }
         int actionMasked = motionEvent.getActionMasked();
-        if (actionMasked == 10 && this.f1308o == null) {
-            RunnableC0263c runnableC0263c = new RunnableC0263c();
-            this.f1308o = runnableC0263c;
-            runnableC0263c.m1297b();
+        if (actionMasked == 10 && this.f1020o == null) {
+            c cVar = new c();
+            this.f1020o = cVar;
+            cVar.b();
         }
         boolean onHoverEvent = super.onHoverEvent(motionEvent);
         if (actionMasked == 9 || actionMasked == 7) {
@@ -491,7 +469,7 @@ public class C0260f0 extends ListView {
                 if (childAt.isEnabled()) {
                     setSelectionFromTop(pointToPosition, childAt.getTop() - getTop());
                 }
-                m1300l();
+                l();
             }
         } else {
             setSelection(-1);
@@ -502,32 +480,32 @@ public class C0260f0 extends ListView {
     @Override // android.widget.AbsListView, android.view.View
     public boolean onTouchEvent(MotionEvent motionEvent) {
         if (motionEvent.getAction() == 0) {
-            this.f1300g = pointToPosition((int) motionEvent.getX(), (int) motionEvent.getY());
+            this.f1012g = pointToPosition((int) motionEvent.getX(), (int) motionEvent.getY());
         }
-        RunnableC0263c runnableC0263c = this.f1308o;
-        if (runnableC0263c != null) {
-            runnableC0263c.m1298a();
+        c cVar = this.f1020o;
+        if (cVar != null) {
+            cVar.a();
         }
         return super.onTouchEvent(motionEvent);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public void setListSelectionHidden(boolean z) {
-        this.f1303j = z;
+        this.f1015j = z;
     }
 
     @Override // android.widget.AbsListView
     public void setSelector(Drawable drawable) {
-        C0262b c0262b = drawable != null ? new C0262b(drawable) : null;
-        this.f1302i = c0262b;
-        super.setSelector(c0262b);
+        b bVar = drawable != null ? new b(drawable) : null;
+        this.f1014i = bVar;
+        super.setSelector(bVar);
         Rect rect = new Rect();
         if (drawable != null) {
             drawable.getPadding(rect);
         }
-        this.f1296c = rect.left;
-        this.f1297d = rect.top;
-        this.f1298e = rect.right;
-        this.f1299f = rect.bottom;
+        this.f1008c = rect.left;
+        this.f1009d = rect.top;
+        this.f1010e = rect.right;
+        this.f1011f = rect.bottom;
     }
 }

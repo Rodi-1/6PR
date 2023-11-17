@@ -1,37 +1,34 @@
-package p017p;
+package p;
 
 import android.graphics.Rect;
 import android.view.accessibility.AccessibilityNodeInfo;
-import p005d.C0349c;
 
-/* renamed from: p.a */
 /* loaded from: classes.dex */
-public class C0518a {
+public class a {
 
-    /* renamed from: a */
-    private final AccessibilityNodeInfo f2242a;
+    /* renamed from: a  reason: collision with root package name */
+    private final AccessibilityNodeInfo f1724a;
 
-    /* renamed from: b */
-    public int f2243b = -1;
+    /* renamed from: b  reason: collision with root package name */
+    public int f1725b = -1;
 
-    private C0518a(AccessibilityNodeInfo accessibilityNodeInfo) {
-        this.f2242a = accessibilityNodeInfo;
+    private a(AccessibilityNodeInfo accessibilityNodeInfo) {
+        this.f1724a = accessibilityNodeInfo;
     }
 
-    /* renamed from: b */
-    private static String m324b(int i) {
-        if (i != 1) {
-            if (i != 2) {
-                switch (i) {
+    private static String b(int i2) {
+        if (i2 != 1) {
+            if (i2 != 2) {
+                switch (i2) {
                     case 4:
                         return "ACTION_SELECT";
                     case 8:
                         return "ACTION_CLEAR_SELECTION";
                     case 16:
                         return "ACTION_CLICK";
-                    case C0349c.f1644G /* 32 */:
+                    case d.c.G /* 32 */:
                         return "ACTION_LONG_CLICK";
-                    case C0349c.f1735q1 /* 64 */:
+                    case d.c.q1 /* 64 */:
                         return "ACTION_ACCESSIBILITY_FOCUS";
                     case 128:
                         return "ACTION_CLEAR_ACCESSIBILITY_FOCUS";
@@ -64,29 +61,24 @@ public class C0518a {
         return "ACTION_FOCUS";
     }
 
-    /* renamed from: x */
-    public static C0518a m302x(AccessibilityNodeInfo accessibilityNodeInfo) {
-        return new C0518a(accessibilityNodeInfo);
+    public static a x(AccessibilityNodeInfo accessibilityNodeInfo) {
+        return new a(accessibilityNodeInfo);
     }
 
-    /* renamed from: a */
-    public void m325a(int i) {
-        this.f2242a.addAction(i);
+    public void a(int i2) {
+        this.f1724a.addAction(i2);
     }
 
-    /* renamed from: c */
-    public int m323c() {
-        return this.f2242a.getActions();
+    public int c() {
+        return this.f1724a.getActions();
     }
 
-    /* renamed from: d */
-    public void m322d(Rect rect) {
-        this.f2242a.getBoundsInParent(rect);
+    public void d(Rect rect) {
+        this.f1724a.getBoundsInParent(rect);
     }
 
-    /* renamed from: e */
-    public void m321e(Rect rect) {
-        this.f2242a.getBoundsInScreen(rect);
+    public void e(Rect rect) {
+        this.f1724a.getBoundsInScreen(rect);
     }
 
     public boolean equals(Object obj) {
@@ -94,8 +86,8 @@ public class C0518a {
             return true;
         }
         if (obj != null && getClass() == obj.getClass()) {
-            AccessibilityNodeInfo accessibilityNodeInfo = this.f2242a;
-            AccessibilityNodeInfo accessibilityNodeInfo2 = ((C0518a) obj).f2242a;
+            AccessibilityNodeInfo accessibilityNodeInfo = this.f1724a;
+            AccessibilityNodeInfo accessibilityNodeInfo2 = ((a) obj).f1724a;
             if (accessibilityNodeInfo == null) {
                 if (accessibilityNodeInfo2 != null) {
                     return false;
@@ -108,133 +100,118 @@ public class C0518a {
         return false;
     }
 
-    /* renamed from: f */
-    public CharSequence m320f() {
-        return this.f2242a.getClassName();
+    public CharSequence f() {
+        return this.f1724a.getClassName();
     }
 
-    /* renamed from: g */
-    public CharSequence m319g() {
-        return this.f2242a.getContentDescription();
+    public CharSequence g() {
+        return this.f1724a.getContentDescription();
     }
 
-    /* renamed from: h */
-    public CharSequence m318h() {
-        return this.f2242a.getPackageName();
+    public CharSequence h() {
+        return this.f1724a.getPackageName();
     }
 
     public int hashCode() {
-        AccessibilityNodeInfo accessibilityNodeInfo = this.f2242a;
+        AccessibilityNodeInfo accessibilityNodeInfo = this.f1724a;
         if (accessibilityNodeInfo == null) {
             return 0;
         }
         return accessibilityNodeInfo.hashCode();
     }
 
-    /* renamed from: i */
-    public CharSequence m317i() {
-        return this.f2242a.getText();
+    public CharSequence i() {
+        return this.f1724a.getText();
     }
 
-    /* renamed from: j */
-    public String m316j() {
-        return this.f2242a.getViewIdResourceName();
+    public String j() {
+        return this.f1724a.getViewIdResourceName();
     }
 
-    /* renamed from: k */
-    public boolean m315k() {
-        return this.f2242a.isCheckable();
+    public boolean k() {
+        return this.f1724a.isCheckable();
     }
 
-    /* renamed from: l */
-    public boolean m314l() {
-        return this.f2242a.isChecked();
+    public boolean l() {
+        return this.f1724a.isChecked();
     }
 
-    /* renamed from: m */
-    public boolean m313m() {
-        return this.f2242a.isClickable();
+    public boolean m() {
+        return this.f1724a.isClickable();
     }
 
-    /* renamed from: n */
-    public boolean m312n() {
-        return this.f2242a.isEnabled();
+    public boolean n() {
+        return this.f1724a.isEnabled();
     }
 
-    /* renamed from: o */
-    public boolean m311o() {
-        return this.f2242a.isFocusable();
+    public boolean o() {
+        return this.f1724a.isFocusable();
     }
 
-    /* renamed from: p */
-    public boolean m310p() {
-        return this.f2242a.isFocused();
+    public boolean p() {
+        return this.f1724a.isFocused();
     }
 
-    /* renamed from: q */
-    public boolean m309q() {
-        return this.f2242a.isLongClickable();
+    public boolean q() {
+        return this.f1724a.isLongClickable();
     }
 
-    /* renamed from: r */
-    public boolean m308r() {
-        return this.f2242a.isPassword();
+    public boolean r() {
+        return this.f1724a.isPassword();
     }
 
-    /* renamed from: s */
-    public boolean m307s() {
-        return this.f2242a.isScrollable();
+    public boolean s() {
+        return this.f1724a.isScrollable();
     }
 
-    /* renamed from: t */
-    public boolean m306t() {
-        return this.f2242a.isSelected();
+    public boolean t() {
+        return this.f1724a.isSelected();
     }
 
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append(super.toString());
         Rect rect = new Rect();
-        m322d(rect);
+        d(rect);
         sb.append("; boundsInParent: " + rect);
-        m321e(rect);
+        e(rect);
         sb.append("; boundsInScreen: " + rect);
         sb.append("; packageName: ");
-        sb.append(m318h());
+        sb.append(h());
         sb.append("; className: ");
-        sb.append(m320f());
+        sb.append(f());
         sb.append("; text: ");
-        sb.append(m317i());
+        sb.append(i());
         sb.append("; contentDescription: ");
-        sb.append(m319g());
+        sb.append(g());
         sb.append("; viewId: ");
-        sb.append(m316j());
+        sb.append(j());
         sb.append("; checkable: ");
-        sb.append(m315k());
+        sb.append(k());
         sb.append("; checked: ");
-        sb.append(m314l());
+        sb.append(l());
         sb.append("; focusable: ");
-        sb.append(m311o());
+        sb.append(o());
         sb.append("; focused: ");
-        sb.append(m310p());
+        sb.append(p());
         sb.append("; selected: ");
-        sb.append(m306t());
+        sb.append(t());
         sb.append("; clickable: ");
-        sb.append(m313m());
+        sb.append(m());
         sb.append("; longClickable: ");
-        sb.append(m309q());
+        sb.append(q());
         sb.append("; enabled: ");
-        sb.append(m312n());
+        sb.append(n());
         sb.append("; password: ");
-        sb.append(m308r());
-        sb.append("; scrollable: " + m307s());
+        sb.append(r());
+        sb.append("; scrollable: " + s());
         sb.append("; [");
-        int m323c = m323c();
-        while (m323c != 0) {
-            int numberOfTrailingZeros = 1 << Integer.numberOfTrailingZeros(m323c);
-            m323c &= numberOfTrailingZeros ^ (-1);
-            sb.append(m324b(numberOfTrailingZeros));
-            if (m323c != 0) {
+        int c2 = c();
+        while (c2 != 0) {
+            int numberOfTrailingZeros = 1 << Integer.numberOfTrailingZeros(c2);
+            c2 &= numberOfTrailingZeros ^ (-1);
+            sb.append(b(numberOfTrailingZeros));
+            if (c2 != 0) {
                 sb.append(", ");
             }
         }
@@ -242,18 +219,15 @@ public class C0518a {
         return sb.toString();
     }
 
-    /* renamed from: u */
-    public void m305u(CharSequence charSequence) {
-        this.f2242a.setClassName(charSequence);
+    public void u(CharSequence charSequence) {
+        this.f1724a.setClassName(charSequence);
     }
 
-    /* renamed from: v */
-    public void m304v(boolean z) {
-        this.f2242a.setScrollable(z);
+    public void v(boolean z) {
+        this.f1724a.setScrollable(z);
     }
 
-    /* renamed from: w */
-    public AccessibilityNodeInfo m303w() {
-        return this.f2242a;
+    public AccessibilityNodeInfo w() {
+        return this.f1724a;
     }
 }

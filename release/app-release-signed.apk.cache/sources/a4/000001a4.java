@@ -1,4 +1,4 @@
-package p008g;
+package g;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,25 +7,21 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 
-/* renamed from: g.a */
 /* loaded from: classes.dex */
-public class C0386a {
+public class a {
 
-    /* renamed from: a */
-    private static final Object f2020a = new Object();
+    /* renamed from: a  reason: collision with root package name */
+    private static final Object f1507a = new Object();
 
-    /* renamed from: a */
-    public static ColorStateList m735a(Context context, int i) {
-        return Build.VERSION.SDK_INT >= 23 ? context.getColorStateList(i) : context.getResources().getColorStateList(i);
+    public static ColorStateList a(Context context, int i2) {
+        return Build.VERSION.SDK_INT >= 23 ? context.getColorStateList(i2) : context.getResources().getColorStateList(i2);
     }
 
-    /* renamed from: b */
-    public static Drawable m734b(Context context, int i) {
-        return Build.VERSION.SDK_INT >= 21 ? context.getDrawable(i) : context.getResources().getDrawable(i);
+    public static Drawable b(Context context, int i2) {
+        return Build.VERSION.SDK_INT >= 21 ? context.getDrawable(i2) : context.getResources().getDrawable(i2);
     }
 
-    /* renamed from: c */
-    public static boolean m733c(Context context, Intent[] intentArr, Bundle bundle) {
+    public static boolean c(Context context, Intent[] intentArr, Bundle bundle) {
         context.startActivities(intentArr, bundle);
         return true;
     }

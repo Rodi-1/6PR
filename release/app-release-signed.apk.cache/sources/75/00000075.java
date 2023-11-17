@@ -1,43 +1,38 @@
-package android.support.p001v4.app;
+package android.support.v4.app;
 
-import android.arch.lifecycle.C0026n;
 import java.util.List;
 
-/* renamed from: android.support.v4.app.n */
 /* loaded from: classes.dex */
-public class C0104n {
+public class n {
 
-    /* renamed from: a */
-    private final List<ComponentCallbacksC0073g> f535a;
+    /* renamed from: a  reason: collision with root package name */
+    private final List<g> f391a;
 
-    /* renamed from: b */
-    private final List<C0104n> f536b;
+    /* renamed from: b  reason: collision with root package name */
+    private final List<n> f392b;
 
-    /* renamed from: c */
-    private final List<C0026n> f537c;
+    /* renamed from: c  reason: collision with root package name */
+    private final List<android.arch.lifecycle.n> f393c;
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public C0104n(List<ComponentCallbacksC0073g> list, List<C0104n> list2, List<C0026n> list3) {
-        this.f535a = list;
-        this.f536b = list2;
-        this.f537c = list3;
+    public n(List<g> list, List<n> list2, List<android.arch.lifecycle.n> list3) {
+        this.f391a = list;
+        this.f392b = list2;
+        this.f393c = list3;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: a */
-    public List<C0104n> m1899a() {
-        return this.f536b;
+    public List<n> a() {
+        return this.f392b;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: b */
-    public List<ComponentCallbacksC0073g> m1898b() {
-        return this.f535a;
+    public List<g> b() {
+        return this.f391a;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: c */
-    public List<C0026n> m1897c() {
-        return this.f537c;
+    public List<android.arch.lifecycle.n> c() {
+        return this.f393c;
     }
 }

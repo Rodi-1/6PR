@@ -1,53 +1,46 @@
-package p007f;
+package f;
 
 import java.util.HashSet;
 import java.util.Iterator;
 
-/* renamed from: f.o */
 /* loaded from: classes.dex */
-public class C0382o {
+public class o {
 
-    /* renamed from: a */
-    HashSet<C0382o> f2007a = new HashSet<>(2);
+    /* renamed from: a  reason: collision with root package name */
+    HashSet<o> f1495a = new HashSet<>(2);
 
-    /* renamed from: b */
-    int f2008b = 0;
+    /* renamed from: b  reason: collision with root package name */
+    int f1496b = 0;
 
-    /* renamed from: a */
-    public void m754a(C0382o c0382o) {
-        this.f2007a.add(c0382o);
+    public void a(o oVar) {
+        this.f1495a.add(oVar);
     }
 
-    /* renamed from: b */
-    public void m753b() {
-        this.f2008b = 1;
-        Iterator<C0382o> it = this.f2007a.iterator();
+    public void b() {
+        this.f1496b = 1;
+        Iterator<o> it = this.f1495a.iterator();
         while (it.hasNext()) {
-            it.next().mo749f();
+            it.next().f();
         }
     }
 
-    /* renamed from: c */
-    public void m752c() {
-        this.f2008b = 0;
-        Iterator<C0382o> it = this.f2007a.iterator();
+    public void c() {
+        this.f1496b = 0;
+        Iterator<o> it = this.f1495a.iterator();
         while (it.hasNext()) {
-            it.next().m752c();
+            it.next().c();
         }
     }
 
-    /* renamed from: d */
-    public boolean m751d() {
-        return this.f2008b == 1;
+    public boolean d() {
+        return this.f1496b == 1;
     }
 
-    /* renamed from: e */
-    public void mo750e() {
-        this.f2008b = 0;
-        this.f2007a.clear();
+    public void e() {
+        this.f1496b = 0;
+        this.f1495a.clear();
     }
 
-    /* renamed from: f */
-    public void mo749f() {
+    public void f() {
     }
 }

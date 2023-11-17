@@ -1,4 +1,4 @@
-package p011j;
+package j;
 
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
@@ -11,79 +11,72 @@ import android.util.Log;
 import java.lang.reflect.Method;
 import org.xmlpull.v1.XmlPullParser;
 
-/* renamed from: j.a */
 /* loaded from: classes.dex */
-public final class C0413a {
+public final class a {
 
-    /* renamed from: a */
-    private static Method f2055a;
+    /* renamed from: a  reason: collision with root package name */
+    private static Method f1542a;
 
-    /* renamed from: b */
-    private static boolean f2056b;
+    /* renamed from: b  reason: collision with root package name */
+    private static boolean f1543b;
 
-    /* renamed from: c */
-    private static Method f2057c;
+    /* renamed from: c  reason: collision with root package name */
+    private static Method f1544c;
 
-    /* renamed from: d */
-    private static boolean f2058d;
+    /* renamed from: d  reason: collision with root package name */
+    private static boolean f1545d;
 
-    /* renamed from: a */
-    public static void m633a(Drawable drawable, Resources.Theme theme) {
+    public static void a(Drawable drawable, Resources.Theme theme) {
         if (Build.VERSION.SDK_INT >= 21) {
             drawable.applyTheme(theme);
         }
     }
 
-    /* renamed from: b */
-    public static boolean m632b(Drawable drawable) {
+    public static boolean b(Drawable drawable) {
         if (Build.VERSION.SDK_INT >= 21) {
             return drawable.canApplyTheme();
         }
         return false;
     }
 
-    /* renamed from: c */
-    public static int m631c(Drawable drawable) {
+    public static int c(Drawable drawable) {
         return drawable.getAlpha();
     }
 
-    /* renamed from: d */
-    public static ColorFilter m630d(Drawable drawable) {
+    public static ColorFilter d(Drawable drawable) {
         if (Build.VERSION.SDK_INT >= 21) {
             return drawable.getColorFilter();
         }
         return null;
     }
 
-    /* renamed from: e */
-    public static int m629e(Drawable drawable) {
+    public static int e(Drawable drawable) {
         if (Build.VERSION.SDK_INT >= 23) {
             return drawable.getLayoutDirection();
         }
-        if (!f2058d) {
+        if (!f1545d) {
             try {
                 Method declaredMethod = Drawable.class.getDeclaredMethod("getLayoutDirection", new Class[0]);
-                f2057c = declaredMethod;
+                f1544c = declaredMethod;
                 declaredMethod.setAccessible(true);
-            } catch (NoSuchMethodException e) {
-                Log.i("DrawableCompat", "Failed to retrieve getLayoutDirection() method", e);
+            } catch (NoSuchMethodException e2) {
+                Log.i("DrawableCompat", "Failed to retrieve getLayoutDirection() method", e2);
             }
-            f2058d = true;
+            f1545d = true;
         }
-        Method method = f2057c;
+        Method method = f1544c;
         if (method != null) {
             try {
                 return ((Integer) method.invoke(drawable, new Object[0])).intValue();
-            } catch (Exception e2) {
-                Log.i("DrawableCompat", "Failed to invoke getLayoutDirection() via reflection", e2);
-                f2057c = null;
+            } catch (Exception e3) {
+                Log.i("DrawableCompat", "Failed to invoke getLayoutDirection() via reflection", e3);
+                f1544c = null;
             }
         }
         return 0;
     }
 
-    /* renamed from: f */
-    public static void m628f(Drawable drawable, Resources resources, XmlPullParser xmlPullParser, AttributeSet attributeSet, Resources.Theme theme) {
+    public static void f(Drawable drawable, Resources resources, XmlPullParser xmlPullParser, AttributeSet attributeSet, Resources.Theme theme) {
         if (Build.VERSION.SDK_INT >= 21) {
             drawable.inflate(resources, xmlPullParser, attributeSet, theme);
         } else {
@@ -91,94 +84,84 @@ public final class C0413a {
         }
     }
 
-    /* renamed from: g */
-    public static boolean m627g(Drawable drawable) {
+    public static boolean g(Drawable drawable) {
         return drawable.isAutoMirrored();
     }
 
     @Deprecated
-    /* renamed from: h */
-    public static void m626h(Drawable drawable) {
+    public static void h(Drawable drawable) {
         drawable.jumpToCurrentState();
     }
 
-    /* renamed from: i */
-    public static void m625i(Drawable drawable, boolean z) {
+    public static void i(Drawable drawable, boolean z) {
         drawable.setAutoMirrored(z);
     }
 
-    /* renamed from: j */
-    public static void m624j(Drawable drawable, float f, float f2) {
+    public static void j(Drawable drawable, float f2, float f3) {
         if (Build.VERSION.SDK_INT >= 21) {
-            drawable.setHotspot(f, f2);
+            drawable.setHotspot(f2, f3);
         }
     }
 
-    /* renamed from: k */
-    public static void m623k(Drawable drawable, int i, int i2, int i3, int i4) {
+    public static void k(Drawable drawable, int i2, int i3, int i4, int i5) {
         if (Build.VERSION.SDK_INT >= 21) {
-            drawable.setHotspotBounds(i, i2, i3, i4);
+            drawable.setHotspotBounds(i2, i3, i4, i5);
         }
     }
 
-    /* renamed from: l */
-    public static boolean m622l(Drawable drawable, int i) {
+    public static boolean l(Drawable drawable, int i2) {
         if (Build.VERSION.SDK_INT >= 23) {
-            return drawable.setLayoutDirection(i);
+            return drawable.setLayoutDirection(i2);
         }
-        if (!f2056b) {
+        if (!f1543b) {
             try {
                 Method declaredMethod = Drawable.class.getDeclaredMethod("setLayoutDirection", Integer.TYPE);
-                f2055a = declaredMethod;
+                f1542a = declaredMethod;
                 declaredMethod.setAccessible(true);
-            } catch (NoSuchMethodException e) {
-                Log.i("DrawableCompat", "Failed to retrieve setLayoutDirection(int) method", e);
+            } catch (NoSuchMethodException e2) {
+                Log.i("DrawableCompat", "Failed to retrieve setLayoutDirection(int) method", e2);
             }
-            f2056b = true;
+            f1543b = true;
         }
-        Method method = f2055a;
+        Method method = f1542a;
         if (method != null) {
             try {
-                method.invoke(drawable, Integer.valueOf(i));
+                method.invoke(drawable, Integer.valueOf(i2));
                 return true;
-            } catch (Exception e2) {
-                Log.i("DrawableCompat", "Failed to invoke setLayoutDirection(int) via reflection", e2);
-                f2055a = null;
+            } catch (Exception e3) {
+                Log.i("DrawableCompat", "Failed to invoke setLayoutDirection(int) via reflection", e3);
+                f1542a = null;
             }
         }
         return false;
     }
 
-    /* renamed from: m */
-    public static void m621m(Drawable drawable, int i) {
+    public static void m(Drawable drawable, int i2) {
         if (Build.VERSION.SDK_INT >= 21) {
-            drawable.setTint(i);
-        } else if (drawable instanceof InterfaceC0414b) {
-            ((InterfaceC0414b) drawable).setTint(i);
+            drawable.setTint(i2);
+        } else if (drawable instanceof b) {
+            ((b) drawable).setTint(i2);
         }
     }
 
-    /* renamed from: n */
-    public static void m620n(Drawable drawable, ColorStateList colorStateList) {
+    public static void n(Drawable drawable, ColorStateList colorStateList) {
         if (Build.VERSION.SDK_INT >= 21) {
             drawable.setTintList(colorStateList);
-        } else if (drawable instanceof InterfaceC0414b) {
-            ((InterfaceC0414b) drawable).setTintList(colorStateList);
+        } else if (drawable instanceof b) {
+            ((b) drawable).setTintList(colorStateList);
         }
     }
 
-    /* renamed from: o */
-    public static void m619o(Drawable drawable, PorterDuff.Mode mode) {
+    public static void o(Drawable drawable, PorterDuff.Mode mode) {
         if (Build.VERSION.SDK_INT >= 21) {
             drawable.setTintMode(mode);
-        } else if (drawable instanceof InterfaceC0414b) {
-            ((InterfaceC0414b) drawable).setTintMode(mode);
+        } else if (drawable instanceof b) {
+            ((b) drawable).setTintMode(mode);
         }
     }
 
-    /* renamed from: p */
-    public static Drawable m618p(Drawable drawable) {
-        int i = Build.VERSION.SDK_INT;
-        return i >= 23 ? drawable : i >= 21 ? !(drawable instanceof InterfaceC0414b) ? new C0420f(drawable) : drawable : !(drawable instanceof InterfaceC0414b) ? new C0418e(drawable) : drawable;
+    public static Drawable p(Drawable drawable) {
+        int i2 = Build.VERSION.SDK_INT;
+        return i2 >= 23 ? drawable : i2 >= 21 ? !(drawable instanceof b) ? new f(drawable) : drawable : !(drawable instanceof b) ? new e(drawable) : drawable;
     }
 }

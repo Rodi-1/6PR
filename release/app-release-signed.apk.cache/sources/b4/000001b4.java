@@ -1,4 +1,4 @@
-package p010i;
+package i;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -6,95 +6,83 @@ import android.graphics.Typeface;
 import android.os.Build;
 import android.os.CancellationSignal;
 import android.os.Handler;
-import p009h.C0388a;
-import p009h.C0393b;
-import p013l.C0425a;
-import p014m.C0427b;
-import p015n.C0453g;
+import h.a;
+import h.b;
+import m.b;
 
-/* renamed from: i.c */
 /* loaded from: classes.dex */
-public class C0402c {
+public class c {
 
-    /* renamed from: a */
-    private static final InterfaceC0403a f2040a;
+    /* renamed from: a  reason: collision with root package name */
+    private static final a f1527a;
 
-    /* renamed from: b */
-    private static final C0453g<String, Typeface> f2041b;
+    /* renamed from: b  reason: collision with root package name */
+    private static final n.g<String, Typeface> f1528b;
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: i.c$a */
     /* loaded from: classes.dex */
-    public interface InterfaceC0403a {
-        /* renamed from: a */
-        Typeface mo653a(Context context, Resources resources, int i, String str, int i2);
+    public interface a {
+        Typeface a(Context context, Resources resources, int i2, String str, int i3);
 
-        /* renamed from: b */
-        Typeface mo652b(Context context, C0388a.C0390b c0390b, Resources resources, int i);
+        Typeface b(Context context, a.b bVar, Resources resources, int i2);
 
-        /* renamed from: c */
-        Typeface mo651c(Context context, CancellationSignal cancellationSignal, C0427b.C0433f[] c0433fArr, int i);
+        Typeface c(Context context, CancellationSignal cancellationSignal, b.f[] fVarArr, int i2);
     }
 
     static {
-        InterfaceC0403a c0406f;
-        if (C0425a.m609a()) {
-            c0406f = new C0407g();
+        a fVar;
+        if (l.a.a()) {
+            fVar = new g();
         } else {
-            int i = Build.VERSION.SDK_INT;
-            c0406f = i >= 26 ? new C0406f() : (i < 24 || !C0405e.m669j()) ? i >= 21 ? new C0404d() : new C0408h() : new C0405e();
+            int i2 = Build.VERSION.SDK_INT;
+            fVar = i2 >= 26 ? new f() : (i2 < 24 || !e.j()) ? i2 >= 21 ? new d() : new h() : new e();
         }
-        f2040a = c0406f;
-        f2041b = new C0453g<>(16);
+        f1527a = fVar;
+        f1528b = new n.g<>(16);
     }
 
-    /* renamed from: a */
-    public static Typeface m677a(Context context, CancellationSignal cancellationSignal, C0427b.C0433f[] c0433fArr, int i) {
-        return f2040a.mo651c(context, cancellationSignal, c0433fArr, i);
+    public static Typeface a(Context context, CancellationSignal cancellationSignal, b.f[] fVarArr, int i2) {
+        return f1527a.c(context, cancellationSignal, fVarArr, i2);
     }
 
-    /* renamed from: b */
-    public static Typeface m676b(Context context, C0388a.InterfaceC0389a interfaceC0389a, Resources resources, int i, int i2, C0393b.AbstractC0394a abstractC0394a, Handler handler, boolean z) {
-        Typeface mo652b;
-        if (interfaceC0389a instanceof C0388a.C0392d) {
-            C0388a.C0392d c0392d = (C0388a.C0392d) interfaceC0389a;
+    public static Typeface b(Context context, a.InterfaceC0013a interfaceC0013a, Resources resources, int i2, int i3, b.a aVar, Handler handler, boolean z) {
+        Typeface b2;
+        if (interfaceC0013a instanceof a.d) {
+            a.d dVar = (a.d) interfaceC0013a;
             boolean z2 = false;
-            if (!z ? abstractC0394a == null : c0392d.m716a() == 0) {
+            if (!z ? aVar == null : dVar.a() == 0) {
                 z2 = true;
             }
-            mo652b = C0427b.m592k(context, c0392d.m715b(), abstractC0394a, handler, z2, z ? c0392d.m714c() : -1, i2);
+            b2 = m.b.k(context, dVar.b(), aVar, handler, z2, z ? dVar.c() : -1, i3);
         } else {
-            mo652b = f2040a.mo652b(context, (C0388a.C0390b) interfaceC0389a, resources, i2);
-            if (abstractC0394a != null) {
-                if (mo652b != null) {
-                    abstractC0394a.m708b(mo652b, handler);
+            b2 = f1527a.b(context, (a.b) interfaceC0013a, resources, i3);
+            if (aVar != null) {
+                if (b2 != null) {
+                    aVar.b(b2, handler);
                 } else {
-                    abstractC0394a.m709a(-3, handler);
+                    aVar.a(-3, handler);
                 }
             }
         }
-        if (mo652b != null) {
-            f2041b.m525d(m674d(resources, i, i2), mo652b);
+        if (b2 != null) {
+            f1528b.d(d(resources, i2, i3), b2);
         }
-        return mo652b;
+        return b2;
     }
 
-    /* renamed from: c */
-    public static Typeface m675c(Context context, Resources resources, int i, String str, int i2) {
-        Typeface mo653a = f2040a.mo653a(context, resources, i, str, i2);
-        if (mo653a != null) {
-            f2041b.m525d(m674d(resources, i, i2), mo653a);
+    public static Typeface c(Context context, Resources resources, int i2, String str, int i3) {
+        Typeface a2 = f1527a.a(context, resources, i2, str, i3);
+        if (a2 != null) {
+            f1528b.d(d(resources, i2, i3), a2);
         }
-        return mo653a;
+        return a2;
     }
 
-    /* renamed from: d */
-    private static String m674d(Resources resources, int i, int i2) {
-        return resources.getResourcePackageName(i) + "-" + i + "-" + i2;
+    private static String d(Resources resources, int i2, int i3) {
+        return resources.getResourcePackageName(i2) + "-" + i2 + "-" + i3;
     }
 
-    /* renamed from: e */
-    public static Typeface m673e(Resources resources, int i, int i2) {
-        return f2041b.m526c(m674d(resources, i, i2));
+    public static Typeface e(Resources resources, int i2, int i3) {
+        return f1528b.c(d(resources, i2, i3));
     }
 }

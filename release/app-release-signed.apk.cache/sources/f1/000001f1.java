@@ -1,205 +1,199 @@
-package p015n;
+package n;
 
 import java.util.ConcurrentModificationException;
 import java.util.Map;
 
-/* renamed from: n.k */
 /* loaded from: classes.dex */
-public class C0462k<K, V> {
+public class k<K, V> {
 
-    /* renamed from: e */
-    static Object[] f2188e;
+    /* renamed from: e  reason: collision with root package name */
+    static Object[] f1670e;
 
-    /* renamed from: f */
-    static int f2189f;
+    /* renamed from: f  reason: collision with root package name */
+    static int f1671f;
 
-    /* renamed from: g */
-    static Object[] f2190g;
+    /* renamed from: g  reason: collision with root package name */
+    static Object[] f1672g;
 
-    /* renamed from: h */
-    static int f2191h;
+    /* renamed from: h  reason: collision with root package name */
+    static int f1673h;
 
-    /* renamed from: b */
-    int[] f2192b;
+    /* renamed from: b  reason: collision with root package name */
+    int[] f1674b;
 
-    /* renamed from: c */
-    Object[] f2193c;
+    /* renamed from: c  reason: collision with root package name */
+    Object[] f1675c;
 
-    /* renamed from: d */
-    int f2194d;
+    /* renamed from: d  reason: collision with root package name */
+    int f1676d;
 
-    public C0462k() {
-        this.f2192b = C0449c.f2153a;
-        this.f2193c = C0449c.f2155c;
-        this.f2194d = 0;
+    public k() {
+        this.f1674b = c.f1635a;
+        this.f1675c = c.f1637c;
+        this.f1676d = 0;
     }
 
-    public C0462k(int i) {
-        if (i == 0) {
-            this.f2192b = C0449c.f2153a;
-            this.f2193c = C0449c.f2155c;
+    public k(int i2) {
+        if (i2 == 0) {
+            this.f1674b = c.f1635a;
+            this.f1675c = c.f1637c;
         } else {
-            m499a(i);
+            a(i2);
         }
-        this.f2194d = 0;
+        this.f1676d = 0;
     }
 
-    /* renamed from: a */
-    private void m499a(int i) {
-        if (i == 8) {
-            synchronized (C0445a.class) {
-                Object[] objArr = f2190g;
+    private void a(int i2) {
+        if (i2 == 8) {
+            synchronized (a.class) {
+                Object[] objArr = f1672g;
                 if (objArr != null) {
-                    this.f2193c = objArr;
-                    f2190g = (Object[]) objArr[0];
-                    this.f2192b = (int[]) objArr[1];
+                    this.f1675c = objArr;
+                    f1672g = (Object[]) objArr[0];
+                    this.f1674b = (int[]) objArr[1];
                     objArr[1] = null;
                     objArr[0] = null;
-                    f2191h--;
+                    f1673h--;
                     return;
                 }
             }
-        } else if (i == 4) {
-            synchronized (C0445a.class) {
-                Object[] objArr2 = f2188e;
+        } else if (i2 == 4) {
+            synchronized (a.class) {
+                Object[] objArr2 = f1670e;
                 if (objArr2 != null) {
-                    this.f2193c = objArr2;
-                    f2188e = (Object[]) objArr2[0];
-                    this.f2192b = (int[]) objArr2[1];
+                    this.f1675c = objArr2;
+                    f1670e = (Object[]) objArr2[0];
+                    this.f1674b = (int[]) objArr2[1];
                     objArr2[1] = null;
                     objArr2[0] = null;
-                    f2189f--;
+                    f1671f--;
                     return;
                 }
             }
         }
-        this.f2192b = new int[i];
-        this.f2193c = new Object[i << 1];
+        this.f1674b = new int[i2];
+        this.f1675c = new Object[i2 << 1];
     }
 
-    /* renamed from: b */
-    private static int m498b(int[] iArr, int i, int i2) {
+    private static int b(int[] iArr, int i2, int i3) {
         try {
-            return C0449c.m546a(iArr, i, i2);
+            return c.a(iArr, i2, i3);
         } catch (ArrayIndexOutOfBoundsException unused) {
             throw new ConcurrentModificationException();
         }
     }
 
-    /* renamed from: d */
-    private static void m496d(int[] iArr, Object[] objArr, int i) {
+    private static void d(int[] iArr, Object[] objArr, int i2) {
         if (iArr.length == 8) {
-            synchronized (C0445a.class) {
-                if (f2191h < 10) {
-                    objArr[0] = f2190g;
+            synchronized (a.class) {
+                if (f1673h < 10) {
+                    objArr[0] = f1672g;
                     objArr[1] = iArr;
-                    for (int i2 = (i << 1) - 1; i2 >= 2; i2--) {
-                        objArr[i2] = null;
+                    for (int i3 = (i2 << 1) - 1; i3 >= 2; i3--) {
+                        objArr[i3] = null;
                     }
-                    f2190g = objArr;
-                    f2191h++;
+                    f1672g = objArr;
+                    f1673h++;
                 }
             }
         } else if (iArr.length == 4) {
-            synchronized (C0445a.class) {
-                if (f2189f < 10) {
-                    objArr[0] = f2188e;
+            synchronized (a.class) {
+                if (f1671f < 10) {
+                    objArr[0] = f1670e;
                     objArr[1] = iArr;
-                    for (int i3 = (i << 1) - 1; i3 >= 2; i3--) {
-                        objArr[i3] = null;
+                    for (int i4 = (i2 << 1) - 1; i4 >= 2; i4--) {
+                        objArr[i4] = null;
                     }
-                    f2188e = objArr;
-                    f2189f++;
+                    f1670e = objArr;
+                    f1671f++;
                 }
             }
         }
     }
 
-    /* renamed from: c */
-    public void m497c(int i) {
-        int i2 = this.f2194d;
-        int[] iArr = this.f2192b;
-        if (iArr.length < i) {
-            Object[] objArr = this.f2193c;
-            m499a(i);
-            if (this.f2194d > 0) {
-                System.arraycopy(iArr, 0, this.f2192b, 0, i2);
-                System.arraycopy(objArr, 0, this.f2193c, 0, i2 << 1);
+    public void c(int i2) {
+        int i3 = this.f1676d;
+        int[] iArr = this.f1674b;
+        if (iArr.length < i2) {
+            Object[] objArr = this.f1675c;
+            a(i2);
+            if (this.f1676d > 0) {
+                System.arraycopy(iArr, 0, this.f1674b, 0, i3);
+                System.arraycopy(objArr, 0, this.f1675c, 0, i3 << 1);
             }
-            m496d(iArr, objArr, i2);
+            d(iArr, objArr, i3);
         }
-        if (this.f2194d != i2) {
+        if (this.f1676d != i3) {
             throw new ConcurrentModificationException();
         }
     }
 
     public void clear() {
-        int i = this.f2194d;
-        if (i > 0) {
-            int[] iArr = this.f2192b;
-            Object[] objArr = this.f2193c;
-            this.f2192b = C0449c.f2153a;
-            this.f2193c = C0449c.f2155c;
-            this.f2194d = 0;
-            m496d(iArr, objArr, i);
+        int i2 = this.f1676d;
+        if (i2 > 0) {
+            int[] iArr = this.f1674b;
+            Object[] objArr = this.f1675c;
+            this.f1674b = c.f1635a;
+            this.f1675c = c.f1637c;
+            this.f1676d = 0;
+            d(iArr, objArr, i2);
         }
-        if (this.f2194d > 0) {
+        if (this.f1676d > 0) {
             throw new ConcurrentModificationException();
         }
     }
 
     public boolean containsKey(Object obj) {
-        return m494f(obj) >= 0;
+        return f(obj) >= 0;
     }
 
     public boolean containsValue(Object obj) {
-        return m492h(obj) >= 0;
+        return h(obj) >= 0;
     }
 
-    /* renamed from: e */
-    int m495e(Object obj, int i) {
-        int i2 = this.f2194d;
-        if (i2 == 0) {
+    int e(Object obj, int i2) {
+        int i3 = this.f1676d;
+        if (i3 == 0) {
             return -1;
         }
-        int m498b = m498b(this.f2192b, i2, i);
-        if (m498b >= 0 && !obj.equals(this.f2193c[m498b << 1])) {
-            int i3 = m498b + 1;
-            while (i3 < i2 && this.f2192b[i3] == i) {
-                if (obj.equals(this.f2193c[i3 << 1])) {
-                    return i3;
-                }
-                i3++;
-            }
-            for (int i4 = m498b - 1; i4 >= 0 && this.f2192b[i4] == i; i4--) {
-                if (obj.equals(this.f2193c[i4 << 1])) {
+        int b2 = b(this.f1674b, i3, i2);
+        if (b2 >= 0 && !obj.equals(this.f1675c[b2 << 1])) {
+            int i4 = b2 + 1;
+            while (i4 < i3 && this.f1674b[i4] == i2) {
+                if (obj.equals(this.f1675c[i4 << 1])) {
                     return i4;
                 }
+                i4++;
             }
-            return i3 ^ (-1);
+            for (int i5 = b2 - 1; i5 >= 0 && this.f1674b[i5] == i2; i5--) {
+                if (obj.equals(this.f1675c[i5 << 1])) {
+                    return i5;
+                }
+            }
+            return i4 ^ (-1);
         }
-        return m498b;
+        return b2;
     }
 
     public boolean equals(Object obj) {
         if (this == obj) {
             return true;
         }
-        if (obj instanceof C0462k) {
-            C0462k c0462k = (C0462k) obj;
-            if (size() != c0462k.size()) {
+        if (obj instanceof k) {
+            k kVar = (k) obj;
+            if (size() != kVar.size()) {
                 return false;
             }
-            for (int i = 0; i < this.f2194d; i++) {
+            for (int i2 = 0; i2 < this.f1676d; i2++) {
                 try {
-                    K m491i = m491i(i);
-                    V m488l = m488l(i);
-                    Object obj2 = c0462k.get(m491i);
-                    if (m488l == null) {
-                        if (obj2 != null || !c0462k.containsKey(m491i)) {
+                    K i3 = i(i2);
+                    V l2 = l(i2);
+                    Object obj2 = kVar.get(i3);
+                    if (l2 == null) {
+                        if (obj2 != null || !kVar.containsKey(i3)) {
                             return false;
                         }
-                    } else if (!m488l.equals(obj2)) {
+                    } else if (!l2.equals(obj2)) {
                         return false;
                     }
                 } catch (ClassCastException | NullPointerException unused) {
@@ -213,16 +207,16 @@ public class C0462k<K, V> {
             if (size() != map.size()) {
                 return false;
             }
-            for (int i2 = 0; i2 < this.f2194d; i2++) {
+            for (int i4 = 0; i4 < this.f1676d; i4++) {
                 try {
-                    K m491i2 = m491i(i2);
-                    V m488l2 = m488l(i2);
-                    Object obj3 = map.get(m491i2);
-                    if (m488l2 == null) {
-                        if (obj3 != null || !map.containsKey(m491i2)) {
+                    K i5 = i(i4);
+                    V l3 = l(i4);
+                    Object obj3 = map.get(i5);
+                    if (l3 == null) {
+                        if (obj3 != null || !map.containsKey(i5)) {
                             return false;
                         }
-                    } else if (!m488l2.equals(obj3)) {
+                    } else if (!l3.equals(obj3)) {
                         return false;
                     }
                 } catch (ClassCastException | NullPointerException unused2) {
@@ -233,212 +227,205 @@ public class C0462k<K, V> {
         return false;
     }
 
-    /* renamed from: f */
-    public int m494f(Object obj) {
-        return obj == null ? m493g() : m495e(obj, obj.hashCode());
+    public int f(Object obj) {
+        return obj == null ? g() : e(obj, obj.hashCode());
     }
 
-    /* renamed from: g */
-    int m493g() {
-        int i = this.f2194d;
-        if (i == 0) {
+    int g() {
+        int i2 = this.f1676d;
+        if (i2 == 0) {
             return -1;
         }
-        int m498b = m498b(this.f2192b, i, 0);
-        if (m498b >= 0 && this.f2193c[m498b << 1] != null) {
-            int i2 = m498b + 1;
-            while (i2 < i && this.f2192b[i2] == 0) {
-                if (this.f2193c[i2 << 1] == null) {
-                    return i2;
-                }
-                i2++;
-            }
-            for (int i3 = m498b - 1; i3 >= 0 && this.f2192b[i3] == 0; i3--) {
-                if (this.f2193c[i3 << 1] == null) {
+        int b2 = b(this.f1674b, i2, 0);
+        if (b2 >= 0 && this.f1675c[b2 << 1] != null) {
+            int i3 = b2 + 1;
+            while (i3 < i2 && this.f1674b[i3] == 0) {
+                if (this.f1675c[i3 << 1] == null) {
                     return i3;
                 }
+                i3++;
             }
-            return i2 ^ (-1);
+            for (int i4 = b2 - 1; i4 >= 0 && this.f1674b[i4] == 0; i4--) {
+                if (this.f1675c[i4 << 1] == null) {
+                    return i4;
+                }
+            }
+            return i3 ^ (-1);
         }
-        return m498b;
+        return b2;
     }
 
     public V get(Object obj) {
-        int m494f = m494f(obj);
-        if (m494f >= 0) {
-            return (V) this.f2193c[(m494f << 1) + 1];
+        int f2 = f(obj);
+        if (f2 >= 0) {
+            return (V) this.f1675c[(f2 << 1) + 1];
         }
         return null;
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    /* renamed from: h */
-    public int m492h(Object obj) {
-        int i = this.f2194d * 2;
-        Object[] objArr = this.f2193c;
+    public int h(Object obj) {
+        int i2 = this.f1676d * 2;
+        Object[] objArr = this.f1675c;
         if (obj == null) {
-            for (int i2 = 1; i2 < i; i2 += 2) {
-                if (objArr[i2] == null) {
-                    return i2 >> 1;
+            for (int i3 = 1; i3 < i2; i3 += 2) {
+                if (objArr[i3] == null) {
+                    return i3 >> 1;
                 }
             }
             return -1;
         }
-        for (int i3 = 1; i3 < i; i3 += 2) {
-            if (obj.equals(objArr[i3])) {
-                return i3 >> 1;
+        for (int i4 = 1; i4 < i2; i4 += 2) {
+            if (obj.equals(objArr[i4])) {
+                return i4 >> 1;
             }
         }
         return -1;
     }
 
     public int hashCode() {
-        int[] iArr = this.f2192b;
-        Object[] objArr = this.f2193c;
-        int i = this.f2194d;
-        int i2 = 1;
-        int i3 = 0;
+        int[] iArr = this.f1674b;
+        Object[] objArr = this.f1675c;
+        int i2 = this.f1676d;
+        int i3 = 1;
         int i4 = 0;
-        while (i3 < i) {
-            Object obj = objArr[i2];
-            i4 += (obj == null ? 0 : obj.hashCode()) ^ iArr[i3];
-            i3++;
-            i2 += 2;
+        int i5 = 0;
+        while (i4 < i2) {
+            Object obj = objArr[i3];
+            i5 += (obj == null ? 0 : obj.hashCode()) ^ iArr[i4];
+            i4++;
+            i3 += 2;
         }
-        return i4;
+        return i5;
     }
 
-    /* renamed from: i */
-    public K m491i(int i) {
-        return (K) this.f2193c[i << 1];
+    public K i(int i2) {
+        return (K) this.f1675c[i2 << 1];
     }
 
     public boolean isEmpty() {
-        return this.f2194d <= 0;
+        return this.f1676d <= 0;
     }
 
-    /* renamed from: j */
-    public V m490j(int i) {
-        Object[] objArr = this.f2193c;
-        int i2 = i << 1;
-        V v = (V) objArr[i2 + 1];
-        int i3 = this.f2194d;
-        int i4 = 0;
-        if (i3 <= 1) {
-            m496d(this.f2192b, objArr, i3);
-            this.f2192b = C0449c.f2153a;
-            this.f2193c = C0449c.f2155c;
+    public V j(int i2) {
+        Object[] objArr = this.f1675c;
+        int i3 = i2 << 1;
+        V v2 = (V) objArr[i3 + 1];
+        int i4 = this.f1676d;
+        int i5 = 0;
+        if (i4 <= 1) {
+            d(this.f1674b, objArr, i4);
+            this.f1674b = c.f1635a;
+            this.f1675c = c.f1637c;
         } else {
-            int i5 = i3 - 1;
-            int[] iArr = this.f2192b;
-            if (iArr.length <= 8 || i3 >= iArr.length / 3) {
-                if (i < i5) {
-                    int i6 = i + 1;
-                    int i7 = i5 - i;
-                    System.arraycopy(iArr, i6, iArr, i, i7);
-                    Object[] objArr2 = this.f2193c;
-                    System.arraycopy(objArr2, i6 << 1, objArr2, i2, i7 << 1);
+            int i6 = i4 - 1;
+            int[] iArr = this.f1674b;
+            if (iArr.length <= 8 || i4 >= iArr.length / 3) {
+                if (i2 < i6) {
+                    int i7 = i2 + 1;
+                    int i8 = i6 - i2;
+                    System.arraycopy(iArr, i7, iArr, i2, i8);
+                    Object[] objArr2 = this.f1675c;
+                    System.arraycopy(objArr2, i7 << 1, objArr2, i3, i8 << 1);
                 }
-                Object[] objArr3 = this.f2193c;
-                int i8 = i5 << 1;
-                objArr3[i8] = null;
-                objArr3[i8 + 1] = null;
+                Object[] objArr3 = this.f1675c;
+                int i9 = i6 << 1;
+                objArr3[i9] = null;
+                objArr3[i9 + 1] = null;
             } else {
-                m499a(i3 > 8 ? i3 + (i3 >> 1) : 8);
-                if (i3 != this.f2194d) {
+                a(i4 > 8 ? i4 + (i4 >> 1) : 8);
+                if (i4 != this.f1676d) {
                     throw new ConcurrentModificationException();
                 }
-                if (i > 0) {
-                    System.arraycopy(iArr, 0, this.f2192b, 0, i);
-                    System.arraycopy(objArr, 0, this.f2193c, 0, i2);
+                if (i2 > 0) {
+                    System.arraycopy(iArr, 0, this.f1674b, 0, i2);
+                    System.arraycopy(objArr, 0, this.f1675c, 0, i3);
                 }
-                if (i < i5) {
-                    int i9 = i + 1;
-                    int i10 = i5 - i;
-                    System.arraycopy(iArr, i9, this.f2192b, i, i10);
-                    System.arraycopy(objArr, i9 << 1, this.f2193c, i2, i10 << 1);
+                if (i2 < i6) {
+                    int i10 = i2 + 1;
+                    int i11 = i6 - i2;
+                    System.arraycopy(iArr, i10, this.f1674b, i2, i11);
+                    System.arraycopy(objArr, i10 << 1, this.f1675c, i3, i11 << 1);
                 }
             }
-            i4 = i5;
+            i5 = i6;
         }
-        if (i3 == this.f2194d) {
-            this.f2194d = i4;
-            return v;
+        if (i4 == this.f1676d) {
+            this.f1676d = i5;
+            return v2;
         }
         throw new ConcurrentModificationException();
     }
 
-    /* renamed from: k */
-    public V m489k(int i, V v) {
-        int i2 = (i << 1) + 1;
-        Object[] objArr = this.f2193c;
-        V v2 = (V) objArr[i2];
-        objArr[i2] = v;
-        return v2;
+    public V k(int i2, V v2) {
+        int i3 = (i2 << 1) + 1;
+        Object[] objArr = this.f1675c;
+        V v3 = (V) objArr[i3];
+        objArr[i3] = v2;
+        return v3;
     }
 
-    /* renamed from: l */
-    public V m488l(int i) {
-        return (V) this.f2193c[(i << 1) + 1];
+    public V l(int i2) {
+        return (V) this.f1675c[(i2 << 1) + 1];
     }
 
-    public V put(K k, V v) {
-        int i;
-        int m495e;
-        int i2 = this.f2194d;
-        if (k == null) {
-            m495e = m493g();
-            i = 0;
+    public V put(K k2, V v2) {
+        int i2;
+        int e2;
+        int i3 = this.f1676d;
+        if (k2 == null) {
+            e2 = g();
+            i2 = 0;
         } else {
-            int hashCode = k.hashCode();
-            i = hashCode;
-            m495e = m495e(k, hashCode);
+            int hashCode = k2.hashCode();
+            i2 = hashCode;
+            e2 = e(k2, hashCode);
         }
-        if (m495e >= 0) {
-            int i3 = (m495e << 1) + 1;
-            Object[] objArr = this.f2193c;
-            V v2 = (V) objArr[i3];
-            objArr[i3] = v;
-            return v2;
+        if (e2 >= 0) {
+            int i4 = (e2 << 1) + 1;
+            Object[] objArr = this.f1675c;
+            V v3 = (V) objArr[i4];
+            objArr[i4] = v2;
+            return v3;
         }
-        int i4 = m495e ^ (-1);
-        int[] iArr = this.f2192b;
-        if (i2 >= iArr.length) {
-            int i5 = 4;
-            if (i2 >= 8) {
-                i5 = (i2 >> 1) + i2;
-            } else if (i2 >= 4) {
-                i5 = 8;
+        int i5 = e2 ^ (-1);
+        int[] iArr = this.f1674b;
+        if (i3 >= iArr.length) {
+            int i6 = 4;
+            if (i3 >= 8) {
+                i6 = (i3 >> 1) + i3;
+            } else if (i3 >= 4) {
+                i6 = 8;
             }
-            Object[] objArr2 = this.f2193c;
-            m499a(i5);
-            if (i2 != this.f2194d) {
+            Object[] objArr2 = this.f1675c;
+            a(i6);
+            if (i3 != this.f1676d) {
                 throw new ConcurrentModificationException();
             }
-            int[] iArr2 = this.f2192b;
+            int[] iArr2 = this.f1674b;
             if (iArr2.length > 0) {
                 System.arraycopy(iArr, 0, iArr2, 0, iArr.length);
-                System.arraycopy(objArr2, 0, this.f2193c, 0, objArr2.length);
+                System.arraycopy(objArr2, 0, this.f1675c, 0, objArr2.length);
             }
-            m496d(iArr, objArr2, i2);
+            d(iArr, objArr2, i3);
         }
-        if (i4 < i2) {
-            int[] iArr3 = this.f2192b;
-            int i6 = i4 + 1;
-            System.arraycopy(iArr3, i4, iArr3, i6, i2 - i4);
-            Object[] objArr3 = this.f2193c;
-            System.arraycopy(objArr3, i4 << 1, objArr3, i6 << 1, (this.f2194d - i4) << 1);
+        if (i5 < i3) {
+            int[] iArr3 = this.f1674b;
+            int i7 = i5 + 1;
+            System.arraycopy(iArr3, i5, iArr3, i7, i3 - i5);
+            Object[] objArr3 = this.f1675c;
+            System.arraycopy(objArr3, i5 << 1, objArr3, i7 << 1, (this.f1676d - i5) << 1);
         }
-        int i7 = this.f2194d;
-        if (i2 == i7) {
-            int[] iArr4 = this.f2192b;
-            if (i4 < iArr4.length) {
-                iArr4[i4] = i;
-                Object[] objArr4 = this.f2193c;
-                int i8 = i4 << 1;
-                objArr4[i8] = k;
-                objArr4[i8 + 1] = v;
-                this.f2194d = i7 + 1;
+        int i8 = this.f1676d;
+        if (i3 == i8) {
+            int[] iArr4 = this.f1674b;
+            if (i5 < iArr4.length) {
+                iArr4[i5] = i2;
+                Object[] objArr4 = this.f1675c;
+                int i9 = i5 << 1;
+                objArr4[i9] = k2;
+                objArr4[i9 + 1] = v2;
+                this.f1676d = i8 + 1;
                 return null;
             }
         }
@@ -446,37 +433,37 @@ public class C0462k<K, V> {
     }
 
     public V remove(Object obj) {
-        int m494f = m494f(obj);
-        if (m494f >= 0) {
-            return m490j(m494f);
+        int f2 = f(obj);
+        if (f2 >= 0) {
+            return j(f2);
         }
         return null;
     }
 
     public int size() {
-        return this.f2194d;
+        return this.f1676d;
     }
 
     public String toString() {
         if (isEmpty()) {
             return "{}";
         }
-        StringBuilder sb = new StringBuilder(this.f2194d * 28);
+        StringBuilder sb = new StringBuilder(this.f1676d * 28);
         sb.append('{');
-        for (int i = 0; i < this.f2194d; i++) {
-            if (i > 0) {
+        for (int i2 = 0; i2 < this.f1676d; i2++) {
+            if (i2 > 0) {
                 sb.append(", ");
             }
-            K m491i = m491i(i);
-            if (m491i != this) {
-                sb.append(m491i);
+            K i3 = i(i2);
+            if (i3 != this) {
+                sb.append(i3);
             } else {
                 sb.append("(this Map)");
             }
             sb.append('=');
-            V m488l = m488l(i);
-            if (m488l != this) {
-                sb.append(m488l);
+            V l2 = l(i2);
+            if (l2 != this) {
+                sb.append(l2);
             } else {
                 sb.append("(this Map)");
             }

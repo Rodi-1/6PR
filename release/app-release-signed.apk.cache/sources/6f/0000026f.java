@@ -1,4 +1,4 @@
-package p023v;
+package v;
 
 import android.content.Context;
 import android.content.ContextWrapper;
@@ -6,61 +6,57 @@ import android.content.res.AssetManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.view.LayoutInflater;
-import p020s.C0577i;
 
-/* renamed from: v.d */
 /* loaded from: classes.dex */
-public class C0588d extends ContextWrapper {
+public class d extends ContextWrapper {
 
-    /* renamed from: a */
-    private int f2639a;
+    /* renamed from: a  reason: collision with root package name */
+    private int f1896a;
 
-    /* renamed from: b */
-    private Resources.Theme f2640b;
+    /* renamed from: b  reason: collision with root package name */
+    private Resources.Theme f1897b;
 
-    /* renamed from: c */
-    private LayoutInflater f2641c;
+    /* renamed from: c  reason: collision with root package name */
+    private LayoutInflater f1898c;
 
-    /* renamed from: d */
-    private Configuration f2642d;
+    /* renamed from: d  reason: collision with root package name */
+    private Configuration f1899d;
 
-    /* renamed from: e */
-    private Resources f2643e;
+    /* renamed from: e  reason: collision with root package name */
+    private Resources f1900e;
 
-    public C0588d() {
+    public d() {
         super(null);
     }
 
-    public C0588d(Context context, int i) {
+    public d(Context context, int i2) {
         super(context);
-        this.f2639a = i;
+        this.f1896a = i2;
     }
 
-    public C0588d(Context context, Resources.Theme theme) {
+    public d(Context context, Resources.Theme theme) {
         super(context);
-        this.f2640b = theme;
+        this.f1897b = theme;
     }
 
-    /* renamed from: a */
-    private Resources m78a() {
-        if (this.f2643e == null) {
-            Configuration configuration = this.f2642d;
-            this.f2643e = configuration == null ? super.getResources() : createConfigurationContext(configuration).getResources();
+    private Resources a() {
+        if (this.f1900e == null) {
+            Configuration configuration = this.f1899d;
+            this.f1900e = configuration == null ? super.getResources() : createConfigurationContext(configuration).getResources();
         }
-        return this.f2643e;
+        return this.f1900e;
     }
 
-    /* renamed from: b */
-    private void m77b() {
-        boolean z = this.f2640b == null;
+    private void b() {
+        boolean z = this.f1897b == null;
         if (z) {
-            this.f2640b = getResources().newTheme();
+            this.f1897b = getResources().newTheme();
             Resources.Theme theme = getBaseContext().getTheme();
             if (theme != null) {
-                this.f2640b.setTo(theme);
+                this.f1897b.setTo(theme);
             }
         }
-        m76c(this.f2640b, this.f2639a, z);
+        c(this.f1897b, this.f1896a, z);
     }
 
     @Override // android.content.ContextWrapper
@@ -68,9 +64,8 @@ public class C0588d extends ContextWrapper {
         super.attachBaseContext(context);
     }
 
-    /* renamed from: c */
-    protected void m76c(Resources.Theme theme, int i, boolean z) {
-        theme.applyStyle(i, true);
+    protected void c(Resources.Theme theme, int i2, boolean z) {
+        theme.applyStyle(i2, true);
     }
 
     @Override // android.content.ContextWrapper, android.content.Context
@@ -80,42 +75,42 @@ public class C0588d extends ContextWrapper {
 
     @Override // android.content.ContextWrapper, android.content.Context
     public Resources getResources() {
-        return m78a();
+        return a();
     }
 
     @Override // android.content.ContextWrapper, android.content.Context
     public Object getSystemService(String str) {
         if ("layout_inflater".equals(str)) {
-            if (this.f2641c == null) {
-                this.f2641c = LayoutInflater.from(getBaseContext()).cloneInContext(this);
+            if (this.f1898c == null) {
+                this.f1898c = LayoutInflater.from(getBaseContext()).cloneInContext(this);
             }
-            return this.f2641c;
+            return this.f1898c;
         }
         return getBaseContext().getSystemService(str);
     }
 
     @Override // android.content.ContextWrapper, android.content.Context
     public Resources.Theme getTheme() {
-        Resources.Theme theme = this.f2640b;
+        Resources.Theme theme = this.f1897b;
         if (theme != null) {
             return theme;
         }
-        if (this.f2639a == 0) {
-            this.f2639a = C0577i.Theme_AppCompat_Light;
+        if (this.f1896a == 0) {
+            this.f1896a = s.i.Theme_AppCompat_Light;
         }
-        m77b();
-        return this.f2640b;
+        b();
+        return this.f1897b;
     }
 
     public int getThemeResId() {
-        return this.f2639a;
+        return this.f1896a;
     }
 
     @Override // android.content.ContextWrapper, android.content.Context
-    public void setTheme(int i) {
-        if (this.f2639a != i) {
-            this.f2639a = i;
-            m77b();
+    public void setTheme(int i2) {
+        if (this.f1896a != i2) {
+            this.f1896a = i2;
+            b();
         }
     }
 }

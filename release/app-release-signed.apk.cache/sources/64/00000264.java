@@ -1,8 +1,7 @@
-package p020s;
+package s;
 
-/* renamed from: s.i */
 /* loaded from: classes.dex */
-public final class C0577i {
+public final class i {
 
     /* renamed from: a */
     public static final int Animation_AppCompat_Tooltip = 2131492868;

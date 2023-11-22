@@ -349,6 +349,14 @@
     iget-object v0, p0, Lme/test/calculator/MainActivity;->mOperatorTextView:Landroid/widget/TextView;
 
     invoke-direct {p0, v0}, Lme/test/calculator/MainActivity;->backspaceImplementation(Landroid/widget/TextView;)V
+    
+    const-string v1, ""
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    sget-object v0, Lme/test/calculator/MainActivity$operator;->NULL:Lme/test/calculator/MainActivity$operator;
+    invoke-virtual {v0}, Lme/test/calculator/MainActivity$operator;->name()Ljava/lang/String;
+    move-result-object v0
+    iput-object v0, p0, Lme/test/calculator/MainActivity;->operation_string:Ljava/lang/String;
+
 
     goto :goto_0
 
@@ -586,7 +594,7 @@
 .end method
 
 .method public onEqualsClick(Landroid/view/View;)V
-    .locals 8
+    .locals 10
     .param p1, "view"    # Landroid/view/View;
 
     .line 208
@@ -667,7 +675,7 @@
 	:notEql
     invoke-static {v0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
     move-result-wide v0
-	
+
     iput-wide v0, p0, Lme/test/calculator/MainActivity;->number_one:D
 
     .line 212
@@ -691,7 +699,8 @@
 	:notEql1
     invoke-static {v0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
     move-result-wide v0
-	
+
+
     iput-wide v0, p0, Lme/test/calculator/MainActivity;->number_two:D
 
     .line 215

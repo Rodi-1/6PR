@@ -44,7 +44,6 @@
     iget-object v0, p0, Lme/test/calculator/MainActivity$1;->this$0:Lme/test/calculator/MainActivity;
 
     invoke-virtual {v0}, Lme/test/calculator/MainActivity;->clearAll()V
-
     .line 286
     const/4 v0, 0x0
 
